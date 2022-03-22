@@ -47,12 +47,9 @@ Ventoy —— 多系统镜像支持的启动盘制作器 [下载网址](https://
 <details>
     <summary>选调：键位重映射调整</summary>
 
-笔者推荐，该调整需要一段适应时间，可提高操作效率。[^链接]
+笔者推荐，该[调整](/geekbook/docs/dev/keymap)需要一段适应时间，可提高操作效率。
 
 </details>
-
-[^链接]: https://littleboyharry.gitee.io/geekbook/docs/dev/keymap
-
 
 :::caution 第一步：备份
 

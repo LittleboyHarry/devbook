@@ -20,8 +20,5 @@ yarn-debug.log*
 yarn-error.log*
 
 /.pnpm-debug.log
-/.vagrant/
-/pnpm-lock.yaml
-/package-lock.json
 
 .yarn

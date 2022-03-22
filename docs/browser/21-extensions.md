@@ -18,7 +18,9 @@ uBlock Origin：
 - [Chrome 商店](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 - [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
 
-我的过滤规则集：https://github.com/LittleboyHarry/oh-my-blockrules
+<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=create-my-dotfiles&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
+
+我的过滤规则集：[oh-my-blockrules](https://github.com/LittleboyHarry/oh-my-blockrules)
 
 适用范围：所有站点、无痕模式
 

@@ -10,9 +10,9 @@ import GetPkg from '@theme/GetPkg';
 
     git config --global core.editor nvim
 
-:::info 作者的青睐配置
+:::info 作者的推荐配置
 
-已在 zsh 文中提及 `create-my-dotfiles`
+介绍说明留意前文 `create-my-dotfiles`
 
     (cd ~/create-my-dotfiles;./deploy modules/neovim/)
 

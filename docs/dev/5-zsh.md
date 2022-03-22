@@ -33,33 +33,11 @@ compinit
 
 ## 调优
 
+推荐阅读并使用后文的 `create-my-dotfiles` 方案，调优涵盖内容不限于：
+
 ### 忽略注释
 
     echo 'setopt interactivecomments' >> ~/.zshrc
-
-:::tip 由笔者创作的综合调优的方案
-
-综上配置，且涵盖 ohmyzsh 插件等其他调优的项目 `create-my-dotfiles`。安装：
-
-```shell
-cd ~
-git clone https://github.com/LittleboyHarry/create-my-dotfiles
-cd create-my-dotfiles
-./deploy modules/zsh/
-exec zsh
-```
-
-内环境专属版：
-
-```shell
-cd ~
-git clone https://gitee.com/LittleboyHarry/create-my-dotfiles
-cd create-my-dotfiles
-./deploy modules/zsh/ atmainland
-exec zsh
-```
-
-:::
 
 ## powerlevel10k 主题
 

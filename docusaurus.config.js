@@ -25,7 +25,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://gitee.com/littleboyharry/geekbook/edit/main/',
+          editUrl: 'https://github.com/LittleboyHarry/geekbook/edit/main/',
         },
         /*
         blog: {
@@ -83,13 +83,13 @@ const config = {
             label: 'Win',
           },
           {
-            href: 'https://gitee.com/littleboyharry/geekbook/issues',
-            label: 'Gitee 反馈',
+            href: 'https://github.com/littleboyharry/geekbook/issues',
+            label: '问题反馈',
             position: 'right',
           },
           {
-            href: 'https://gitee.com/littleboyharry/geekbook/raw/main/LICENSE',
-            label: '版权保护',
+            href: 'https://github.com/littleboyharry/geekbook/raw/main/LICENSE',
+            label: '版权',
             position: 'right',
           },
         ],
@@ -131,8 +131,8 @@ const config = {
           {
             items: [
               {
-                label: '关于本站',
-                href: '/geekbook/about',
+                label: '感谢',
+                href: '/geekbook/thanks',
               },
             ],
           },
@@ -145,8 +145,8 @@ const config = {
               },
                */
               {
-                label: 'Gitee 反馈',
-                href: 'https://gitee.com/littleboyharry/geekbook/issues',
+                label: '问题反馈',
+                href: 'https://github.com/littleboyharry/geekbook/issues',
               },
             ],
           },

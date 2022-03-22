@@ -13,39 +13,22 @@
 
 ## 使用方法
 
-### 复制代码的技巧：
+### 复制代码的技巧
 
-- 区域右上角可点击一键复制
+- 代码一键复制
 - 快速三次点击，选中本行
-- 在 Linux 上选中文本会被自动复制，按鼠标中键即可粘贴
+- Linux 中键会粘贴选中的文本
 
 ### 本地开发
 
-推荐在 Linux 环境上开发浏览，建议使用 [Vagrant](./docs/dev/51-vagrant.md) 虚拟机内运行
-
-本地安全安装
+安装依赖
 
     yarn --ignore-scripts
 
-虚拟容器安装
+开发服务器
 
-    vagrant up
-    vagrant ssh
-    yarn i
+    yarn start
 
-更新文件
+作者已启动 GitHub Actions 自动集成，一般情况无需手动生成部署
 
-    vagrant rsync
-
-本地浏览 <http://localhost:3000/geekbook>
-
-    vagrant ssh
-    npm start
-
-浏览更新：`vagrant rsync` 或 `vagrant rsync-auto`
-
-部署（作者专用）
-
-    vagrant ssh
-    yarn
-    deploy
+    yarn && yarn build && ……

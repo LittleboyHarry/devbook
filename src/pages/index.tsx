@@ -126,9 +126,9 @@ export default function Home(): JSX.Element {
             <div style={{ margin: '2rem auto', width: 'fit-content' }}>
               <h3>复制代码的技巧：</h3>
               <ul>
-                <li>区域右上角可点击一键复制</li>
+                <li>代码一键复制</li>
                 <li>快速三次点击，选中本行</li>
-                <li>在 Linux 上选中文本会被自动复制，按鼠标中键即可粘贴</li>
+                <li>Linux 中键会粘贴选中的文本</li>
               </ul>
             </div>
           </div>

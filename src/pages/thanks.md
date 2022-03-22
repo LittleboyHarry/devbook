@@ -1,5 +1,5 @@
 ---
-title: 关于
+title: 感谢
 ---
 
 # Thanks To

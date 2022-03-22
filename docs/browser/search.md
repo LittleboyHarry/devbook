@@ -8,15 +8,15 @@ title: 推荐的搜索引擎
 
 自带搜索引擎，关键字修改推荐：
 
-<ul class="pills pills--block">
-  <li class="pills__item">必应 .bi</li>
-  <li class="pills__item">百度 .b</li>
-  <li class="pills__item">搜狗 .s</li>
+<ul className="pills pills--block">
+  <li className="pills__item">必应 .bi</li>
+  <li className="pills__item">百度 .b</li>
+  <li className="pills__item">搜狗 .s</li>
 </ul>
 
 推荐添加
 
-<div class="AutoSelectedTableContainer">
+<div className="AutoSelectedTableContainer">
 
 | 搜索引擎 | 关键字 | 查询网址                                                |
 | -------- |-----|-----------------------------------------------------|

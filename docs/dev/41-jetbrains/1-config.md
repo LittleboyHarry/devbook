@@ -4,29 +4,74 @@ title: 配置
 
 ### 高分辨率屏幕
 
-缩放界面尺寸，请 Edit Custom VM Options 并重启程序:
+<img
+src={require('./figures/conf-0.png').default}
+alt="Edit Custom VM Options"
+/>
+
+缩放界面尺寸，编辑后重启应用生效：
 
     -Dide.ui.scale=1.5
 
-### VSCode 集成
-
-安装插件，执行：
-
-    code --install-extension generalov.open-in-editor-vscode
-
-依赖 `scoop install nircmd` 且 `idea` 命令可用（[ToolBox 配置方法](https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox)），配置 VSCode `settings.json`:
-
-```json
-{
-    "alt-editor.binary": "cmd",
-    "alt-editor.args": "/c \"idea --line {line} --column {column} {filename} && nircmdc win activate class SunAwtFrame || nircmdc win max class SunAwtFrame || exit 0\""
-}
-```
-
-IDEA 打开 `External Tools` 设置，新建项 `code.cmd` 或 `code` 为程序 `-g $FilePath$:$LineNumber$:$ColumnNumber$` 为参数、关闭其他高级选项，确定后在 `Keymap` 中绑定快捷键 `Alt + Shift + E`
-
-这样按下快捷键就能快速切换编辑器
-
 ## 配置
 
-……
+<img
+src={require('./figures/conf-1.png').default}
+alt="config entrypoint"
+/>
+
+<img
+src={require('./figures/conf-2.png').default}
+alt="mouse wheel"
+/>
+
+<img
+src={require('./figures/conf-3.png').default}
+alt="trail"
+/>
+
+<img
+src={require('./figures/conf-4.png').default}
+alt="widescreen"
+/>
+
+<img
+src={require('./figures/conf-5.png').default}
+alt="git stage"
+/>
+
+以及 HTTP Proxy，如需的话
+
+### VSCode 集成
+
+依赖：
+
+- idea 已添加到 PATH 环境变量
+  （[ToolBox 配置方法](https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox)）
+- VSCode 插件
+
+      code --install-extension generalov.open-in-editor-vscode
+
+- nircmd (Windows)
+
+      scoop install nircmd
+
+VSCode `settings.json` (Windows):
+
+```json
+"alt-editor.binary": "cmd",
+"alt-editor.args": "/c \"idea --line {line} --column {column} {filename} && nircmdc win activate class SunAwtFrame || nircmdc win max class SunAwtFrame || exit 0\"",
+```
+
+Linux 可用 wmctrl 或 xdotool
+
+<img
+src={require('./figures/vscode-cfg.png').default}
+alt="config entrypoint"
+/>
+
+参数：
+
+    -g $FilePath$:$LineNumber$:$ColumnNumber$
+
+在 `Keymap` 中绑定快捷键 `Alt + Shift + E`，这样按下快捷键就能快速切换编辑器

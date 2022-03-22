@@ -20,4 +20,4 @@ title: 为笔记本适配
 
 针对 14 寸一下小电脑键盘，为 `jkluio7890` 映射为 1~9 0 数字键。依赖 AutoHotKey
 
-<a class="button button--primary" href="/ahk/numpad.ahk" target="_blank" download>下载脚本</a>
+<a className="button button--primary" href="/ahk/numpad.ahk" target="_blank" download>下载脚本</a>

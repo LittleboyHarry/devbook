@@ -8,10 +8,10 @@ title: 专注
 
 ## 调整动态锁屏壁纸
 
-不显示说明字幕：
+隐藏说明字幕：
 
     reg add HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v RotatingLockScreenOverlayEnabled /t REG_DWORD /d 0 /f
 
-固定锁屏壁纸不变：
+禁用此功能：
 
     reg add HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v RotatingLockScreenEnabled /t REG_DWORD /d 0 /f

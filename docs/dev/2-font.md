@@ -22,8 +22,8 @@ sed -i "/Exec/ s/=/=env QT_QPA_PLATFORM=xcb /" org.kde.kfontview.desktop
 cd -
 ```
 
+跟进：https://bugs.kde.org/show_bug.cgi?id=439470
 
-  跟进：https://bugs.kde.org/show_bug.cgi?id=439470
 </details>
 
 ### JetBrains Mono
@@ -79,8 +79,6 @@ Windows:
 为 VSCode `settings.json` 配置：
 
 ```json
-{
-  "editor.fontFamily": "Sarasa Term SC",
-  "editor.fontLigatures": true
-}
+"editor.fontFamily": "Sarasa Term SC",
+"editor.fontLigatures": true,
 ```

@@ -86,4 +86,4 @@ Q: 重装系统里没有 Office
 
 A: 如果你已经在线激活过 Office:
 
-<a class="button button--lg button--primary" href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" target="_blank">登录微软账号并下载安装</a>
+<a className="button button--lg button--primary" href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" target="_blank">登录微软账号并下载安装</a>
