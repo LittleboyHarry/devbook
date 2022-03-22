@@ -1,0 +1,47 @@
+{
+    "name": "GeekBook",
+    "short_name": "geekbook",
+    "theme_color": "#3c6eb4",
+    "background_color": "#294172",
+    "display": "standalone",
+    "scope": "./",
+    "start_url": "./index.html",
+    "related_applications": [
+      {
+        "platform": "webapp",
+        "url": "https://littleboyharry.gitee.io/geekbook/manifest.json"
+      }
+    ],
+    "icons": [
+      {
+        "src": "img/icons/icon-x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon_x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon_x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon_x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon_x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon_x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
