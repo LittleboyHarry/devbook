@@ -1,8 +1,8 @@
 <iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=create-my-dotfiles&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
 
-由笔者创作的综合调优的方案
+由笔者创作的综合调优的方案，涵盖 ohmyzsh 插件等其他调优的解决方案
 
-涵盖 ohmyzsh 插件等其他调优的解决方案，以 zsh 安装为例
+依赖：python3
 
 ## 安装
 
@@ -10,6 +10,11 @@
 cd ~
 git clone https://github.com/LittleboyHarry/create-my-dotfiles
 cd create-my-dotfiles
+```
+
+安装 zsh 模块：
+
+```
 ./deploy modules/zsh/
 exec zsh
 ```

@@ -5,6 +5,8 @@ title: Sysinternals
 安装
 
     winget install sysinternals
+    # or:
+    scoop install sysinternals
 
 | 模块            | 功能                             |
 | --------------- | -------------------------------- |

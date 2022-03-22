@@ -8,7 +8,7 @@ title: ZSH
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="zsh" dnf apt/>
+<GetPkg name="zsh" dnf apt pacman/>
 
 初始化配置，运行
 
