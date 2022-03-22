@@ -1,0 +1,93 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tileList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  column-gap: 30px;
+  row-gap: 10px;
+  padding: 0;
+  margin: 24px auto 0;
+  max-width: 960px;
+
+  li {
+    a {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      hyphens: auto;
+      padding: 20px 15px;
+      height: 100%;
+      border-radius: 7px;
+      text-decoration: none;
+
+      &:hover {
+        background: #f6f5f4;
+      }
+
+      & > img {
+        width: 64px;
+        margin-bottom: 0.7em;
+        filter: drop-shadow(0 1.3px 1.6px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 6.4px 11.2px rgba(0, 0, 0, 0.04));
+      }
+
+      b {
+        color: black;
+        align-items: center;
+        font-size: 1.2em;
+        padding-bottom: 0.2em;
+        text-overflow: ellipsis;
+        font-weight: normal;
+        word-wrap: break-word;
+        display: block;
+        justify-content: center;
+      }
+      small {
+        font-size: 16px;
+        color: gray;
+        display: -webkit-inline-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}

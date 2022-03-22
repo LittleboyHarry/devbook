@@ -1,0 +1,7 @@
+---
+title: man 中文手册
+---
+
+安装
+
+    sudo dnf in -y man-pages-zh-CN

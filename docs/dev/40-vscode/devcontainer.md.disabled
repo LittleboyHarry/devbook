@@ -1,0 +1,6 @@
+```json
+{
+    "remote.containers.executeInWSL": true
+    // podman:
+    // "remote.containers.dockerPath": "podman"
+}
