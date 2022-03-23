@@ -1,0 +1,10 @@
+services:
+  devserve:
+    image: node:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app:Z
+      - /app/.git
+    working_dir: /app
+    command: npm start
