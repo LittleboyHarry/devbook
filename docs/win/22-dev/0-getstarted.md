@@ -69,7 +69,7 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 ## 配置 SSH 密钥
 
-见[其他章节](/geekbook/docs/dev/git)
+见[其他章节](/docs/dev/git)
 
 ### 能长期记住口令的 `ssh-agent` 服务
 
@@ -99,4 +99,4 @@ VSCode:
 
 ## 字体
 
-[参见](/geekbook/docs/dev/font)
+[参见](/docs/dev/font)

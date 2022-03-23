@@ -9,32 +9,22 @@ import GetPkg from '@theme/GetPkg';
 ## Workrave
 
 支持：
+
 - Windows
-- X11-Linux only
+- Linux ( no KDE Wayland )
+
+[GNOME 依赖扩展](/docs/linux/gnome/panel#托盘图标)
 
 安装：
 
 <GetPkg name="workrave" dnf winget />
 
+:::note 自动化配置脚本
+
+笔者的作息规律：40 分钟休息，20 分钟暂停一下
+
 <details>
-    <summary>自动化配置脚本</summary>
-
-:::note BUG
-
-```
-cd ~/.local/share/applications/
-cp /usr/share/applications/workrave.desktop .
-sed -i "/Exec/ s/$/ --display=:0/" workrave.desktop
-cd -
-```
-
-Wayland 问题报告来源：https://github.com/rcaelers/workrave/issues/94
-
-:::
-
-我的作息规律：40分钟休息，20分钟暂停一下
-
-Windows:
+    <summary>Windows 注册表</summary>
 
 ```bat
 reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files (x86)\Workrave\lib\Workrave.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
@@ -56,7 +46,10 @@ reg add HKCU\Software\Workrave\general /v usage-mode /t REG_SZ /d 1 /f
 
 ```
 
-Linux:
+</details>
+
+ <details>
+<summary>Linux 脚本</summary>
 
 ```shell
 cat << END | dconf load /org/workrave/timers/
@@ -81,7 +74,18 @@ dconf write /org/workrave/gui/breaks/block-mode 0
 dconf write /org/workrave/general/usage-mode 1
 ```
 
+Wayland Bug 修复: [问题来源](https://github.com/rcaelers/workrave/issues/94)
+
+```
+cd ~/.local/share/applications/
+cp /usr/share/applications/workrave.desktop .
+sed -i "/Exec/ s/$/ --display=:0/" workrave.desktop
+cd -
+```
+
 </details>
+
+:::
 
 ## RSIBreak
 

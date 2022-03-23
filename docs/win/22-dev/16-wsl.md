@@ -61,7 +61,7 @@ sudo apt dist-upgrade -y
 
 推荐必装包 `sudo apt install`:
 
-- `zsh` 设置默认： `chsh -s /bin/zsh` 参见[配置](/geekbook/docs/dev/zsh)
+- `zsh` 设置默认： `chsh -s /bin/zsh` 参见[配置](/docs/dev/zsh)
 - `tree` 文件树打印
 - `unzip` 解压
 - `man-db` man 手册
@@ -133,7 +133,7 @@ New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEth
 
 设置代理监听 `0.0.0.0`，禁用防火墙相关规则
 
-在端口转发的基础上，配置 [proxychains](/geekbook/docs/dev/cli/network)。
+在端口转发的基础上，配置 [proxychains](/docs/dev/cli/network)。
 
 ### proxychains
 

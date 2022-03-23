@@ -30,6 +30,7 @@ sudo dnf in -y \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
+<!--
 ## 中文支持
 
 包括：
@@ -40,6 +41,7 @@ sudo dnf in -y \
 ```shell
 sudo dnf in -y libreoffice-langpack-zh-Hans
 ```
+-->
 
 ## DNF 调优
 

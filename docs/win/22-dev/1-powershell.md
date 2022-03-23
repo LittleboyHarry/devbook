@@ -67,7 +67,7 @@ echo 'Install-GuiCompletion -Key Tab' >> $profile
 
 ### zoxide
 
-记录切换的工作目录，[参见](/geekbook/docs/dev/cli/zoxide)
+记录切换的工作目录，[参见](/docs/dev/cli/zoxide)
 
 ## 内置的实用命令
 

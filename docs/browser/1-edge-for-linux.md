@@ -43,6 +43,7 @@ cd -
 ```
 
 作用：
+
 - `msedge` 为程序的缩写名，在 Shell 中输入以启动。原程序名为 `microsoft-edge`
 - 修改 `~/.local/bin/msedge` 来添加默认的启动参数。
   不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
@@ -55,11 +56,14 @@ cd -
 
 输入: `about:gpu` 看到 `Video Decode: Hardware accelerated` 字样，说明配置成功
 
-### 界面缩放
+<details>
+  <summary>高分辨率屏，界面太小？</summary>
 
-为高分辨率屏设置缩放比例，开始菜单内右键应用编辑、添加启动参数：
+添加启动参数：
 
     --force-device-scale-factor=1.15
+
+</details>
 
 ### 应用上述配置于 PWA 程序
 

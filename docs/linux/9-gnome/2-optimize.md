@@ -2,6 +2,8 @@
 title: 调优
 ---
 
+注：`&!` 是 zsh 可分离式执行的专属特性。
+
 ## 互动逻辑
 
 显示最小最大化窗口按钮
@@ -39,10 +41,16 @@ END
 
 免去开机输入用户密码
 
-    gnome-control-center user-accounts
+    gnome-control-center user-accounts &!
 
 ## 其他
 
 设置深夜护眼：点击夜灯，激活暖色效果
 
-    gnome-control-center display
+    gnome-control-center display &!
+
+## 辅助工具
+
+类 Windows 注册表编辑器：
+
+    sudo dnf in -y dconf-editor && dconf-editor &!

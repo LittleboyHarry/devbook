@@ -6,15 +6,15 @@ import GetPkg from '@theme/GetPkg';
 
 ## Shell 集成
 
-```shell
-# RPM:
-printf "source /usr/share/fzf/shell/key-bindings.bash\n" >> ~/.bashrc
-printf "source /usr/share/fzf/shell/key-bindings.zsh\n" >> ~/.zshrc
+RPM:
 
-# Debian:
-printf "source /usr/share/doc/fzf/examples/key-bindings.bash\n" >> ~/.bashrc
-printf "source /usr/share/doc/fzf/examples/key-bindings.zsh\n" >> ~/.zshrc
-```
+    printf "source /usr/share/fzf/shell/key-bindings.bash\n" >> ~/.bashrc
+    printf "source /usr/share/fzf/shell/key-bindings.zsh\n" >> ~/.zshrc
+
+Debian:
+
+    printf "source /usr/share/doc/fzf/examples/key-bindings.bash\n" >> ~/.bashrc
+    printf "source /usr/share/doc/fzf/examples/key-bindings.zsh\n" >> ~/.zshrc
 
 可以使用一下快捷键：
 

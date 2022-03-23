@@ -1,45 +1,42 @@
----
-title: ZSH
----
+<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=create-my-dotfiles&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
 
-为 GNOME 终端默认 Shell 命令设置为 `/bin/zsh`
+由笔者创作的综合调优的方案，涵盖 ohmyzsh 插件等其他调优的解决方案
+
+依赖：`git` `python3`
 
 ## 安装
 
-import GetPkg from '@theme/GetPkg';
-
-<GetPkg name="zsh" dnf apt pacman/>
-
-初始化配置，运行
-
-    zsh
-
-也可以用我的常用的配置，`vi ~/.zshrc`:
-
-```bash
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000000
-SAVEHIST=1000000
-setopt autocd beep nomatch notify
-unsetopt extendedglob
-bindkey -e
-## End of lines configured by zsh-newuser-install
-## The following lines were added by compinstall
-autoload -Uz compinit
-compinit
-## End of lines added by compinstall
+```shell
+cd ~
+git clone https://github.com/LittleboyHarry/create-my-dotfiles
+cd create-my-dotfiles
 ```
 
-## 调优
+安装 zsh 模块：
 
-推荐阅读并使用后文的 `create-my-dotfiles` 方案，调优涵盖内容不限于：
+```
+./deploy modules/zsh/
+exec zsh
+```
 
-### 忽略注释
+## 特供版安装
 
-    echo 'setopt interactivecomments' >> ~/.zshrc
+从 gitee 镜像克隆，内容无差异：
 
-## powerlevel10k 主题
+```shell
+cd ~
+git clone https://gitee.com/LittleboyHarry/create-my-dotfiles
+cd create-my-dotfiles
+
+# 特供版参数：
+./deploy modules/zsh/ atmainland
+
+exec zsh
+```
+
+## 主题
+
+推荐：powerlevel10k
 
 :::info BUG: 调整窗口大小造成排版错乱
 
@@ -82,7 +79,3 @@ exec zsh
 
     sed -i "/# os identifier/ s/^/#&/" ~/.p10k.zsh
     exec zsh
-
-## 设置为 tmux 默认终端
-
-    echo "set-option -g default-shell /bin/zsh" >> ~/.tmux.conf

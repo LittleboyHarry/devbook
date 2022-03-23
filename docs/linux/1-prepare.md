@@ -8,6 +8,8 @@ title: 安装
 
 服务器定制版安装：https://getfedora.org/en/server/download/
 
+<p><a className="button button--lg button--primary" href="https://mirrors.aliyun.com/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-boot.iso" target="_blank">CentOS Stream 9 x64 联网 ISO ( 阿里镜像 )</a></p>
+
 指纹验证：https://getfedora.org/en/security/
 
 所有哈希码：https://pagure.io/fedora-web/websites/blob/master/f/sites/getfedora.org/static/checksums
@@ -47,35 +49,44 @@ Ventoy —— 多系统镜像支持的启动盘制作器 [下载网址](https://
 <details>
     <summary>选调：键位重映射调整</summary>
 
-笔者推荐，该[调整](/geekbook/docs/dev/keymap)需要一段适应时间，可提高操作效率。
+笔者推荐，该[调整](/docs/dev/keymap)需要一段适应时间，可提高操作效率。
 
 </details>
 
-:::caution 第一步：备份
+### 第一步：备份
 
-打开终端备份系统默认的 `/etc` 配置文件：
+打开终端备份系统默认的 `/etc` 配置文件
+
 
 ```shell
-# 切换至备份目录
-mkdir ~/mybackup && cd ~/mybackup
-
-sudo tar cpzf etc.tar.gz /etc
+# 保存位置：
+mkdir backup && cd backup
 ```
 
-:::
+    sudo tar cpzf etc.tar.gz /etc
 
-:::caution 第二步：更新系统
+### 第二步：更新系统
 
-激活镜像源，加速下载
+:::tip 加速步骤
+
+激活镜像源，加速下载 [^1]
 
     echo "fastestmirror=1" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
 
-保持网络畅通，安装更新过程中避免其他操作、待其完成后自动重启
+按需删除系统组件
 
-    sudo dnf upgrade --refresh -y && sudo reboot
-
-如果镜像站发生故障，可修改 `/etc/hosts` 将其域名屏蔽 `127.0.0.1`
+    sudo dnf remove libreoffice*
+    sudo dnf remove firefox
 
 :::
 
-注意：若更新 Linux 内核后导致故障，请查阅 [FAQ 文档](./faq#新内核无法启动导致黑屏死机) 以解决
+保持网络畅通，安装更新过程中避免其他操作、待其完成后自动重启[^2]
+
+方法一：通过命令行
+
+    sudo dnf upgrade --refresh -y && sudo reboot
+
+方法二：打开 GNOME 软件中心更新
+
+[^1]: 若镜像站发生故障，可修改 `/etc/hosts` 将其域名屏蔽 `127.0.0.1`
+[^2]: 若 Linux 内核故障，请查阅 [FAQ 文档](./faq#新内核无法启动导致黑屏死机) 以解决

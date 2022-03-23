@@ -21,3 +21,23 @@ title: 小技巧
 详情分析：https://zhuanlan.zhihu.com/p/256481066
 
 <!-- todo: select text copy -->
+
+## 防火墙
+
+列出开放的端口（ 默认 1024 以上
+
+    firewall-cmd --list-ports
+
+开放端口访问
+
+    sudo firewall-cmd --permanent --add-port=22/tcp
+
+屏蔽端口访问
+
+    sudo firewall-cmd --permanent --remove-port=2017/tcp
+
+:::caution 重载以生效
+
+    sudo firewall-cmd --reload
+
+:::

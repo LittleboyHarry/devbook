@@ -44,3 +44,30 @@ git config --global rebase.autostash true
 git config --global merge.autostash true
 
 ```
+
+## GitHub
+
+ssh 协议登陆测试
+
+    ssh -T git@github.com
+
+<details>
+  <summary>指纹校验</summary>
+
+信息来源：https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
+
+RSA
+
+    SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
+
+ECDSA
+
+    SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM
+
+Ed25519
+
+    SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+
+</details>
+
+浏览器推送通知[扩展](https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn)

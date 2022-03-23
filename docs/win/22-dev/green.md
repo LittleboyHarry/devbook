@@ -14,12 +14,16 @@ title: 绿化软件制作
 
 留意：
 
+<div className="AutoSelectedTableContainer">
+
 | 文件夹                              | 作用               |
 | ----------------------------------- | ------------------ |
 | C:\Program Files (x86)              | 应用数据           |
 | C:\Users\Public\Desktop             | 桌面快捷方式       |
 | C:\Users\WDAGUtilityAccount\AppData | 数据复用、状态保存 |
 | C:\Users\WDAGUtilityAccount\Desktop | 桌面映射           |
+
+</div>
 
 最大化，拉动窗口而非点击
 

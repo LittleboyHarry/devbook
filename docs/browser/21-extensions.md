@@ -2,42 +2,52 @@
 title: 扩展
 ---
 
-### 护眼模式
+## 获取
 
-Dark Reader:
+| 扩展          | 简介               | Chrome 商店 | Edge 外接程序 |
+| ------------- | ------------------ | ----------- | ------------- |
+| Dark Reader   | 护眼模式           | [get][dd1]  | [get][dd2]    |
+| uBlock Origin | 去广告             | [get][uo1]  | [get][uo2]    |
+| Gitako        | GitHub 导航栏      | [get][g1]   | [get][g2]     |
+| Linkclump     | 框选多开           | [get][lc]   |
+| Vimium C      | 免鼠标、键盘侠专用 | [get][vc1]  | [get][vc2]    |
 
-- [Chrome 商店](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
-- [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc)
+[dd1]: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
+[dd2]: https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc
+[uo1]: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+[uo2]: https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak
+[g1]: https://chrome.google.com/webstore/detail/gitako-github-file-tree/giljefjcheohhamkjphiebfjnlphnokk
+[g2]: https://microsoftedge.microsoft.com/addons/detail/gitako-github-file-tree/alpoloddcggjhakjemghahlkofjekbca
+[lc]: https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj
+[vc1]: https://chrome.google.com/webstore/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg
+[vc2]: https://microsoftedge.microsoft.com/addons/detail/vimium-c-all-by-keyboar/aibcglbfblnogfjhbcmmpobjhnomhcdo
 
-适用范围：所有站点、无痕模式、本地文件
+## 适用范围
 
-### 去广告
+| 扩展          | 作用域                                 |
+| ------------- | -------------------------------------- |
+| Dark Reader   | 所有站点：无痕模式、本地文件           |
+| uBlock Origin | 所有站点：无痕模式、本地文件           |
+| Vimium C      | 所有站点：无痕模式、本地文件 |
 
-uBlock Origin：
+Gitako:
 
-- [Chrome 商店](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
-- [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
+- github.com
+
+Linkclump:
+
+- www.baidu.com
+- 其他搜索引擎
+
+## 配置
+
+### uBlock Origin
 
 <iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=create-my-dotfiles&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
 
 我的过滤规则集：[oh-my-blockrules](https://github.com/LittleboyHarry/oh-my-blockrules)
 
-适用范围：所有站点、无痕模式
-
-### GitHub 导航栏
-
-Gitako：
-
-- [Chrome 商店](https://chrome.google.com/webstore/detail/gitako-github-file-tree/giljefjcheohhamkjphiebfjnlphnokk)
-- [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/gitako-github-file-tree/alpoloddcggjhakjemghahlkofjekbca)
-
-适用范围：
-
-- https://github.com
-
-### 框选多开
-
-Linkclump: [Chrome 商店](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj)
+### Linkclump
 
 配置：
 
@@ -45,19 +55,7 @@ Linkclump: [Chrome 商店](https://chrome.google.com/webstore/detail/linkclump/l
 - 推荐勾选 `block repeat links in selection`
 - 推荐勾选 `open tabs at the end`
 
-适用范围：
-
-- https://www.baidu.com
-- 其他搜索引擎
-
-### 免鼠标、键盘侠专用
-
-Vimium C:
-
-- [Chrome 商店](https://chrome.google.com/webstore/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg)
-- [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/vimium-c-all-by-keyboar/aibcglbfblnogfjhbcmmpobjhnomhcdo)
-
-适用范围：所有站点、无痕模式、本地文件
+### Vimium C
 
 推荐映射：
 
