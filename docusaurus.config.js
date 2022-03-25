@@ -41,6 +41,9 @@ const config = {
             require.resolve('./src/css/my.css'),
           ],
         },
+        gtag: {
+          trackingID: 'G-6LEX3L7TYD',
+        },
       }),
     ],
   ],
@@ -151,7 +154,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `本站使用谷歌分析，仅供作者了解网站访问情况。读者需遵守“署名-相同方式共享 3.0”协议`,
       },
       prism: {
         theme: lightCodeTheme,
