@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgeekbook=self.webpackChunkgeekbook||[]).push([[9905],{7860:function(e){e.exports=JSON.parse('{"name":"Fedora","permalink":"/geekbook/docs/tags/fedora","docs":[{"id":"dev/virtual/libvirt","title":"libvirt","description":"libvirt","permalink":"/geekbook/docs/dev/virtual/libvirt"}],"allTagsPath":"/geekbook/docs/tags"}')}}]);
