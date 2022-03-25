@@ -1,0 +1,23 @@
+.AutoSelectedTableContainer td{
+    user-select: all;
+}
+
+.let-tipbg-to-yellow .alert--success{
+    --ifm-alert-background-color: var( --ifm-color-warning-contrast-background );
+    --ifm-alert-background-color-highlight: rgba(255, 186, 0, 0.15);
+    --ifm-alert-foreground-color: var( --ifm-color-warning-contrast-foreground );
+    --ifm-alert-border-color: var(--ifm-color-warning-dark);
+}
+.let-details-to-yellow {
+    --ifm-alert-background-color: var( --ifm-color-warning-contrast-background );
+    --ifm-alert-background-color-highlight: rgba(255, 186, 0, 0.15);
+    --ifm-alert-foreground-color: var( --ifm-color-warning-contrast-foreground );
+    --ifm-alert-border-color: var(--ifm-color-warning-dark);
+}
+
+.let-details-to-gray {
+    --ifm-alert-background-color: var( --ifm-color-secondary-contrast-background );
+    --ifm-alert-background-color-highlight: rgba(235, 237, 240, 0.15);
+    --ifm-alert-foreground-color: var( --ifm-color-secondary-contrast-foreground );
+    --ifm-alert-border-color: var(--ifm-color-secondary-darkest);
+}

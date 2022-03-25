@@ -2,7 +2,21 @@
 title: 安装
 ---
 
-RPM Linux 安装：[源自官方说明](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions)
+使用需同意微软产品相关条款
+
+下载安装包：
+
+<p>
+
+<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" target="_blank">Debian / Ubuntu</a>
+
+<span style={{width:16,display:'inline-block'}}> </span>
+
+<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" target="_blank">Windows</a>
+
+</p>
+
+rpm:
 
 ```shell
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -10,3 +24,5 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 dnf check-update
 sudo dnf install code
 ```
+
+from: [官方说明](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions)

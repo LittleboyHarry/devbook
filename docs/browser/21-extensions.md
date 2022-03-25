@@ -24,6 +24,8 @@ title: 扩展
 
 ## 适用范围
 
+    about:extensions
+
 | 扩展          | 作用域                                 |
 | ------------- | -------------------------------------- |
 | Dark Reader   | 所有站点：无痕模式、本地文件           |
@@ -52,7 +54,6 @@ Linkclump:
 配置：
 
 - 默认 z 键激活
-- 推荐勾选 `block repeat links in selection`
 - 推荐勾选 `open tabs at the end`
 
 ### Vimium C

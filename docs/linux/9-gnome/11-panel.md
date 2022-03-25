@@ -23,13 +23,6 @@ END
 
     gsettings set org.gnome.SessionManager logout-prompt false
 
-<details>
-    <summary>喜欢光标左上角悬停激活“概览视图”的特性吗？禁用指令：</summary>
-
-    gsettings set org.gnome.desktop enable-hot-corners false
-
-</details>
-
 ## 扩展
 
 ### [托盘图标](https://extensions.gnome.org/extension/615/appindicator-support/)
@@ -66,6 +59,24 @@ dconf write /org/gnome/shell/extensions/just-perfection/window-demands-attention
 BUG: 可能导致“顶栏超长菜单栏无法显示”，慎调
 
 :::
+
+### Hot Corners
+
+鼠标左上角悬停会触发“概览视图”
+
+<details className="let-details-to-gray">
+    <summary>Fedora 初始已激活该功能，禁用命令：</summary>
+
+    gsettings set org.gnome.desktop enable-hot-corners false
+
+</details>
+
+<details className="let-details-to-gray">
+    <summary>Ubuntu 初始已屏蔽该功能，启用需要上述 Just Perfection 插件：</summary>
+
+    dconf write /org/gnome/shell/extensions/just-perfection/hot-corner true
+
+</details>
 
 ### 隐藏标题栏
 

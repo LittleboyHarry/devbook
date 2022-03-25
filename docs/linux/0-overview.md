@@ -2,7 +2,11 @@
 title: 概述
 ---
 
-下载:
+本手册对的 Linux 适用范围：
+上网查资料、简单多媒体处理、编程开发等日常用途。
+( 游戏需求请优先考虑装 Windows 双系统 )
+
+## 下载获取
 
 import LogoCard from '@theme/LogoCard';
 
@@ -17,7 +21,7 @@ import LogoCard from '@theme/LogoCard';
 
 服务器定制版安装：https://getfedora.org/en/server/download/
 
-## Linux 硬件配置推荐
+## 推荐硬件
 
 - PC 当今的主流 CPU 架构: amd64 (x86_64)
 - 采用 GPT 分区格式、支持 EFI 启动
@@ -25,3 +29,9 @@ import LogoCard from '@theme/LogoCard';
   （ MBR 对多分区限制非常不便，BIOS 传统启动对多系统启动支持远逊 EFI ）
 
 - 非N卡类开源显卡（ N卡安装会稍多些步骤 ）
+
+---
+
+注：
+
+- Ubuntu 是 Debian 同构品，如无例外则，两术语等效或近似。Fedora 与 CentOS 等同理

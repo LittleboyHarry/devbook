@@ -2,10 +2,11 @@
 title: 扩展推荐
 ---
 
-```shell
-# 扩展管理器
-sudo dnf in -y gnome-extensions-app && gnome-extensions-app &!
-```
+## 扩展管理器
+
+import GetPkg from '@theme/GetPkg';
+
+<GetPkg name="gnome-extensions-app" apt dnf />
 
 作用于  https://extensions.gnome.org 的 Chromium 依赖[扩展](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 
@@ -14,9 +15,9 @@ sudo dnf in -y gnome-extensions-app && gnome-extensions-app &!
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/blur-my-shell/
 [/]
-blur-panel=false
 blur-appfolders=false
 blur-dash=false
+brightness=0.33
 END
 ```
 
@@ -37,12 +38,14 @@ END
 
   需要安装 `sudo dnf in -y openssl`
 
-- [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
-  ：外观微调
 - [Quick Close in Overview](https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/)
   ：在活动概览视图时，中键关闭
 - [Gesture Improvements](https://extensions.gnome.org/extension/4245/gesture-improvements/)
   ：触摸板手势强化
+
+### [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
+
+    dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 9
 
 ## 顶栏
 
@@ -76,3 +79,23 @@ https://extensions.gnome.org/extension/3952/workspace-indicator/
 https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
 https://extensions.gnome.org/extension/3733/tiling-assistant/
  -->
+
+## 版本不兼容？
+
+一种绕开系统监测的方法：
+
+1. 下载应用最新版安装包，并解压
+2. 修改 `metadata.json` 版本号
+3. 执行脚本
+4. 重新登陆
+
+```shell
+uuid=$(grep '"uuid"' metadata.json | sed 's@^[ ]*"uuid":[ ]*"\(.\+\)",[ ]*@\1@')
+target=~/.local/share/gnome-shell/extensions/$uuid/
+mkdir $target
+cp -r * $target
+```
+
+:::caution 这种方法可能引发难以预料的后果
+
+:::

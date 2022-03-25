@@ -8,8 +8,8 @@
 
 ```shell
 cd ~
-git clone https://github.com/LittleboyHarry/create-my-dotfiles
-cd create-my-dotfiles
+git clone https://github.com/LittleboyHarry/deploy-my-dotfiles
+cd deploy-my-dotfiles
 ```
 
 安装 zsh 模块：
@@ -25,8 +25,8 @@ exec zsh
 
 ```shell
 cd ~
-git clone https://gitee.com/LittleboyHarry/create-my-dotfiles
-cd create-my-dotfiles
+git clone https://gitee.com/LittleboyHarry/deploy-my-dotfiles
+cd deploy-my-dotfiles
 
 # 特供版参数：
 ./deploy modules/zsh/ atmainland
@@ -48,10 +48,10 @@ Konsole 选项在 “编辑配置方案”>“滚动” 内。
 <details>
     <summary>其他主题推荐：ohmyzsh 的 steeef</summary>
 
-`create-my-dotfiles` 支持的 `~/.zshrc` 配置：
+依赖 `deploy-my-dotfiles` 的 `~/.zshrc` 配置：
 
-    source ~/.create-my-dotfiles/zsh-plugins/ohmyzsh/lib/git.zsh
-    source ~/.create-my-dotfiles/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme
+    source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/git.zsh
+    source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme
 
 </details>
 

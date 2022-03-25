@@ -8,6 +8,12 @@ Linux 环境推荐浏览器
 
 ## 安装
 
+安装后意味着你同意微软的软件许可条款 `edge://terms`
+
+<p><a className="button button--lg button--primary" href="https://go.microsoft.com/fwlink?linkid=2149051" target="_blank">下载 Debian 安装包</a></p>
+
+RPM:
+
 ```shell
 cd $(xdg-user-dir DOWNLOAD)
 wget -c --content-disposition "https://go.microsoft.com/fwlink/?linkid=2149137"
@@ -15,9 +21,7 @@ sudo dnf in -y microsoft-edge-stable-*.rpm
 cd -
 ```
 
-安装后的同时代表你同意微软的软件许可条款: edge://terms/
-
-其他版本: https://packages.microsoft.com/yumrepos/edge/
+[历史版本 ...](https://packages.microsoft.com/yumrepos/edge/)
 
 ## 设置默认浏览器
 
@@ -42,11 +46,20 @@ chmod +x msedge
 cd -
 ```
 
-作用：
+`msedge` 为程序的缩写名，在 Shell 中输入以启动。原程序名为 `microsoft-edge`。
+若要添加默认的启动参数：
 
-- `msedge` 为程序的缩写名，在 Shell 中输入以启动。原程序名为 `microsoft-edge`
-- 修改 `~/.local/bin/msedge` 来添加默认的启动参数。
-  不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
+    xdg-open ~/.local/bin/msedge
+
+不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
+
+:::info 可能要重新登录
+
+    echo $PATH | grep --color /.local/bin
+
+如果没有显示，请重新登录
+
+:::
 
 ### 激活 GPU 视频加速
 

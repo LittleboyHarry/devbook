@@ -12,7 +12,9 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 ## 调节器
 
-    sudo dnf in -y gnome-tweaks && gnome-tweaks &!
+import GetPkg from '@theme/GetPkg';
+
+<GetPkg name="gnome-tweaks" apt dnf />
 
 ## 图标与光标
 

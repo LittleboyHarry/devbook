@@ -6,32 +6,30 @@ title: 扩展
 
 :::
 
-## 必装推荐
+## 必装
 
-### 远程开发
+Git 功能强化：
 
-    ext install ms-vscode-remote.vscode-remote-extensionpack
+    ext install eamodio.gitlens
 
-支持 SSH, WSL, container
-
-### Git 可视化
-
-分支树可视化，支持管理修改
+Git 可视化: 分支树可视化，支持管理修改
 
     ext install mhutchie.git-graph
 
-### 前端代码格式化
+前端代码格式化器：[Prettier](https://prettier.io/)
 
     ext install esbenp.prettier-vscode
 
-## 其他推荐
+## 其他
 
-### 更好看的图标
+更好看的图标：安装后，右下角 Active 按钮激活
 
     ext install vscode-icons-team.vscode-icons
 
-### 免费 AI 补全
+免费 AI 补全：( 带遥测服务，可关闭
 
     ext install tabnine.tabnine-vscode
 
-内置的遥测服务可关闭
+远程开发：支持 SSH, WSL, container
+
+    ext install ms-vscode-remote.vscode-remote-extensionpack

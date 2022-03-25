@@ -2,9 +2,39 @@
 title: 改善中文输入
 ---
 
-技术方案：fcitx5
+iBus 微调：
 
-如果觉得 Fedora GNOME 自带的 ibus 中文输入不太好用，可以考虑打开终端并安装 fcitx5: (否则跳过本文)
+```shell
+cat << END | dconf load /com/github/libpinyin/ibus-libpinyin/libpinyin/
+[/]
+lookup-table-orientation=1
+enable-cloud-input=true
+END
+```
+
+:::note 使用小鹤双拼
+
+十分推荐双拼输入，以提高中文码字效率
+
+    cat << END | dconf load /com/github/libpinyin/ibus-libpinyin/libpinyin/
+    [/]
+    double-pinyin=true
+    double-pinyin-schema=5
+    END
+
+:::
+
+:::note 使用 [GNOME 插件](https://extensions.gnome.org/extension/4112/customize-ibus/) 优化外观
+
+```shell
+dconf write /org/gnome/shell/extensions/customize-ibus/input-indicator-only-on-toggle true
+dconf write /desktop/ibus/panel/use-custom-font true
+```
+
+:::
+
+
+iBus 体验并不理想，作者经常遇到卡顿、输入无响应等问题。fcitx5 或许是更好的开源输入法：
 
     sudo dnf in -y fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool
 
@@ -12,11 +42,11 @@ KDE 环境: `sudo dnf in -y kcm-fcitx5`
 
 依赖 GNOME 扩展: https://extensions.gnome.org/extension/261/kimpanel/
 
-强烈推荐学习双拼输入，参考[知乎讨论](https://www.zhihu.com/topic/19625382/top-answers);
-
-## 配置
+## fcitx5 配置
 
 图形化配置工具：`fcitx5-configtool`
+
+<div className="let-tipbg-to-yellow">
 
 :::tip 自动配置
 
@@ -24,7 +54,7 @@ KDE 环境: `sudo dnf in -y kcm-fcitx5`
 
     sudo dnf in -y kf5-kconfig-core
 
-<details>
+<details className="let-details-to-yellow">
   <summary>若先前已配置过 fcitx5 输入法？</summary>
   本文只考虑过初始配置状态，自动二次配置难免会有 bug，
   建议备份旧配置后重置
@@ -33,6 +63,8 @@ KDE 环境: `sudo dnf in -y kcm-fcitx5`
 </details>
 
 :::
+
+</div>
 
 **注意**：配置前，请启动一次 fcitx5 输入法并退出
 
@@ -73,7 +105,7 @@ KDE 环境: `sudo dnf in -y kcm-fcitx5`
 
 :::
 
-## 笔者偏好
+### 笔者偏好
 
 仅供参考
 

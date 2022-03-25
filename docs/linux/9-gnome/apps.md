@@ -2,18 +2,20 @@
 title: 应用推荐
 ---
 
-压缩软件
+import GetPkg from '@theme/GetPkg';
 
-    sudo dnf in -y file-roller
+## 压缩软件
 
-哈希校验
+<GetPkg name="file-roller" dnf apt />
 
-    sudo dnf in -y gtkhash
+## 哈希校验
 
-分区助手
+<GetPkg name="gtkhash" dnf apt />
 
-    sudo dnf in -y gparted
+## 分区助手
 
-应用列表编辑器
+<GetPkg name="gparted" dnf apt />
 
-    sudo dnf in -y menulibre
+## 应用列表编辑器
+
+<GetPkg name="menulibre" dnf apt />

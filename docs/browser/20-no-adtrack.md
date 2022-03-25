@@ -22,7 +22,11 @@ title: 避免广告追踪
 
 首先添加多一个配置，用于个人日常网站登陆，另一个设置自动清理：
 
-    about:settings/clearBrowsingDataOnClose
+    edge://settings/clearBrowsingDataOnClose
+
+Chrome:
+
+    chrome://settings/cookies
 
 :::info 应用启动配置
 

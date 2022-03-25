@@ -1,5 +1,5 @@
 services:
-  devserve:
+  dev:
     image: node:lts-slim
     ports:
       - 3000:3000
@@ -7,6 +7,4 @@ services:
       - ./:/app:Z
       - /app/.git
     working_dir: /app
-    environment:
-      - BROWSER=none
     command: npm start

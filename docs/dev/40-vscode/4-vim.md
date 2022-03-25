@@ -2,12 +2,6 @@
 title: Vim 模式
 ---
 
-## 安装
-
-`Ctrl + P` 粘贴执行:
-
-    ext install vscodevim.vim
-
 ## 配置
 
 ```json
@@ -29,6 +23,12 @@ title: Vim 模式
   "<C-k>": false
 },
 ```
+
+## 安装
+
+`Ctrl + P` 粘贴执行:
+
+    ext install vscodevim.Vim
 
 ## 临时禁用
 

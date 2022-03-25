@@ -2,24 +2,11 @@
 title: 界面缩放
 ---
 
-我的 14 寸电脑缩放后所用的配置：大号缩放、字体字号、光标等属性
-
-```shell
-cat << END | dconf load /org/gnome/desktop/interface/
-[/]
-text-scaling-factor=1.33
-document-font-name='Cantarell 13'
-font-name='Cantarell 13'
-monospace-font-name='Source Code Pro 12'
-cursor-size=48
-END
-```
-
 :::info 减少顶栏对屏幕空间的占用？
 
 安装 [just-perfection](https://extensions.gnome.org/extension/3843/just-perfection/) 扩展进行微调，推荐大小：
 
-    dconf write /org/gnome/shell/extensions/just-perfection/panel-size 38
+    dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
 
 :::
 

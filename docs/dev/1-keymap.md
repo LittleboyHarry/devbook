@@ -13,7 +13,9 @@ title: 键位调整
 
     gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape', 'ctrl:swap_lalt_lctl_lwin']"
 
-tip: fcitx5 的 XCB 附加组件可能会与之冲突，需要 `fcitx5-configtool` 配置禁用 “允许重写系统 XKB 设置”
+如不生效，请重新登陆
+
+注意: fcitx5 的 XCB 附加组件可能会与之冲突，需要 `fcitx5-configtool` 配置禁用 “允许重写系统 XKB 设置”
 
 ## KDE
 

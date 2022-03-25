@@ -35,6 +35,7 @@ export default function GetPkg({
   scoop,
   winget,
   pacman,
+  longBanner,
 }: {
   name?: string;
   dnf?: true | string;
@@ -42,6 +43,7 @@ export default function GetPkg({
   scoop?: true | string;
   winget?: true | string;
   pacman?: true | string;
+  longBanner?: boolean;
 }) {
   const tabs: JSX.Element[] = [];
 
@@ -89,5 +91,9 @@ export default function GetPkg({
     defaultPkgName: name,
     prefix: 'yes | sudo pacman -S',
   });
-  return <Tabs groupId="package-manager">{tabs}</Tabs>;
+  return (
+    <Tabs className={longBanner && 'tabs--block'} groupId="package-manager">
+      {tabs}
+    </Tabs>
+  );
 }

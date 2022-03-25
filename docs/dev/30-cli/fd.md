@@ -2,7 +2,7 @@
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="fd" dnf="fd-find" apt scoop/>
+<GetPkg name="fd-find" dnf apt scoop="fd" />
 
 <details>
     <summary>针对 Debian</summary>

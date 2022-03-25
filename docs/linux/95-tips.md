@@ -2,7 +2,7 @@
 title: 小技巧
 ---
 
-## dnf 包管理器
+## dnf 包管理
 
 下载升级，缓存以备使用
 
@@ -11,6 +11,11 @@ title: 小技巧
 列出配置状态，方便调试或导出状态
 
     dnf config-manager --dump
+
+## dpkg 包管理
+
+日志记录：`/var/log/dpkg.log`
+
 
 ## 关机等待时间过长
 
@@ -22,22 +27,10 @@ title: 小技巧
 
 <!-- todo: select text copy -->
 
-## 防火墙
+## Debian
 
-列出开放的端口（ 默认 1024 以上
+### python 缺失
 
-    firewall-cmd --list-ports
+使用 python3 代替
 
-开放端口访问
-
-    sudo firewall-cmd --permanent --add-port=22/tcp
-
-屏蔽端口访问
-
-    sudo firewall-cmd --permanent --remove-port=2017/tcp
-
-:::caution 重载以生效
-
-    sudo firewall-cmd --reload
-
-:::
+    sudo apt install python-is-python3

@@ -22,6 +22,17 @@ scoop search nodejs
 scoop install nodejs*
 ```
 
+## 在 Debian 安装
+
+Debian 默认提供的 nodejs 12 版本太低，很多 npm 依赖包不支持。使用 nvm 安装 lts 新版：
+
+```shell
+curl -o- https://cdn.jsdelivr.net/gh/nvm-sh/nvm@v0.39.1/install.sh | bash
+exec $SHELL
+```
+
+    nvm install --lts
+
 ## 淘宝国区加速
 
     npm i -g mirror-config-china --registry=https://registry.npm.taobao.org

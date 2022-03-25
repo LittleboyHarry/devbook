@@ -2,9 +2,33 @@
 title: 调优
 ---
 
-推荐配置如下：
+## 使用 zsh
 
-### 减少启动时间
+## 文本大小
+
+为高分辨率屏调整
+
+ <details>
+  <summary>GNOME</summary>
+
+我的 14 寸电脑缩放后所用的配置：大号缩放、字体字号、光标等属性
+
+```shell
+cat << END | dconf load /org/gnome/desktop/interface/
+[/]
+text-scaling-factor=1.33
+document-font-name='Cantarell 13'
+font-name='Cantarell 13'
+monospace-font-name='DejaVu Sans Mono 12'
+cursor-size=48
+END
+```
+
+</details>
+
+KDE 设置面板可统一调整字体，14寸屏推荐 15~18 之间
+
+## Grub 菜单
 
 降低 Grub 界面等待时间为 1 秒
 
@@ -21,7 +45,13 @@ title: 调优
 
     sudo grub2-mkconfig -o /etc/grub2-efi.cfg
 
-## 导入补充性非自由软件仓
+## Debian
+
+## Fedora
+
+### 软件仓补充
+
+添加非自由软件仓
 
 ```shell
 sudo dnf in -y \
@@ -43,7 +73,7 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 ```
 -->
 
-## DNF 调优
+### DNF 调优
 
 像 apt 那样回车确认安装（系统默认会取消行为
 

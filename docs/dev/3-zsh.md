@@ -1,5 +1,5 @@
 ---
-title: ZSH
+title: Zsh
 ---
 
 :::note GNOME/KDE 终端默认命令

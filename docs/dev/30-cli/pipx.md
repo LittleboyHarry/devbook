@@ -1,4 +1,6 @@
-python >= 3.7
+隔离化安装 Python 命令行工具
+
+require: python >= 3.7
 
 ```shell
 python3 -m pip install --user pipx

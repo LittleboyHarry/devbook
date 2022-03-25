@@ -27,8 +27,10 @@
 
 开发服务器
 
-    yarn start
+-     docker-compose up
 
-作者已启动 GitHub Actions 自动集成，一般情况无需手动生成部署
+-     podman-compose up
 
-    yarn && yarn build && ……
+-     docker run --rm -it -p 3000:3000 -v ./:/app -v /app/.git -w /app -e BROWSER=none node:lts-slim /bin/bash
+
+作者已启动 GitHub Actions 自动集成

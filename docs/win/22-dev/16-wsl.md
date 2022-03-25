@@ -140,3 +140,29 @@ New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEth
 ```shell
 sudo sed -i -e "\$asocks5 $(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') <本地端口>" -e '/^socks/d' /etc/proxychains4.conf
 ```
+
+## podman 容器
+
+可不依赖 systemd 的容器化技术
+
+<!-- todo: how config no systemd -->
+
+更多版本的 podman：
+
+https://software.opensuse.org/download/package?package=podman&project=devel%3Akubic%3Alibcontainers%3Astable
+
+
+Q: 出错
+
+> exit status 2: iptables v1.8.7 (nf_tables): Couldn't load match `comment':No such file or directory
+
+A: [解决方法](https://github.com/microsoft/WSL/issues/7948#issuecomment-1043467915)
+
+```shell
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+```
+
+## 推荐阅读
+
+https://dowww.spencerwoo.com/

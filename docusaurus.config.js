@@ -38,7 +38,7 @@ const config = {
         theme: {
           customCss: [
             require.resolve('./src/css/docusaurus.css'),
-            require.resolve('./src/css/my.css'),
+            require.resolve('./src/css/utils.css'),
           ],
         },
         gtag: {
@@ -59,7 +59,7 @@ const config = {
             type: 'doc',
             docId: 'linux/overview',
             position: 'left',
-            label: '入手 Linux',
+            label: 'Linux',
           },
           {
             type: 'doc',
