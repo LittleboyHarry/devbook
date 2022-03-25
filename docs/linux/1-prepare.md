@@ -2,11 +2,7 @@
 title: 安装
 ---
 
-## 获取 Fedora
-
-其他桌面版本：https://spins.fedoraproject.org/
-
-服务器定制版安装：https://getfedora.org/en/server/download/
+## 镜像校验
 
 <p><a className="button button--lg button--primary" href="https://mirrors.aliyun.com/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-boot.iso" target="_blank">CentOS Stream 9 x64 联网 ISO ( 阿里镜像 )</a></p>
 

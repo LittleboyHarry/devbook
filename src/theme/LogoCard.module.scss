@@ -1,0 +1,36 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  color: inherit;
+
+  width: 180px;
+  height: 180px;
+  margin: 8px;
+
+  @include center;
+
+  transition: 0.1s box-shadow;
+  &:hover {
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  position: relative;
+  @at-root .cardTitle {
+    position: absolute;
+    font-size: var(--ifm-h3-font-size);
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+  }
+
+  @at-root .logoSlot {
+    @include center;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 3rem;
+  }
+}
