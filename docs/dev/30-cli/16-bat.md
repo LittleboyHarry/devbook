@@ -1,6 +1,8 @@
 ---
-title: bat
+title: 代码彩显
 ---
+
+# bat
 
 安装
 

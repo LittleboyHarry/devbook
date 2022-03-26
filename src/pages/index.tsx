@@ -109,7 +109,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="Windows"
                 description="为开发适配"
-                href="docs/win/overview"
+                href="docs/win/index"
                 imgSrc="icon_win.svg"
               />
             </ul>

@@ -11,7 +11,7 @@ export default function LogoCard({
   label,
   onClick,
 }: {
-  name: string;
+  name: ReactNode;
   to?: string;
   logo: ReactNode;
   newtab?: boolean;

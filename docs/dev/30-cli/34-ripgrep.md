@@ -1,5 +1,5 @@
 ---
-title: 查找文本
+title: 文本查找
 ---
 
 # ripgrep

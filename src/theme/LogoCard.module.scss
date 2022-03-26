@@ -29,8 +29,14 @@
 
   @at-root .logoSlot {
     @include center;
-    width: 50%;
-    height: 50%;
+    width: 38%;
+    height: 38%;
     margin-bottom: 3rem;
+
+    & > svg {
+      width: 100%;
+      height: 100%;
+      color: var(--ifm-color-emphasis-700);
+    }
   }
 }

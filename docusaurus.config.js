@@ -81,7 +81,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'win/overview',
+            docId: 'win/index',
             position: 'left',
             label: 'Win',
           },
