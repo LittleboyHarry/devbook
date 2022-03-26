@@ -110,7 +110,7 @@ about:flags/#enable-zero-copy
 
 ## 其它
 
-使启动参数作用于 PWA 程序：
+使启动参数作用于 PWA 程序：有需要还可以添加为自启动脚本
 
     for f in ~/.local/share/applications/msedge-*.desktop; do sed -i "/Exec/ s#/opt/microsoft/msedge/microsoft-edge#msedge#" "$f" ; done
 

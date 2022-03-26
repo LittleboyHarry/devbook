@@ -82,8 +82,10 @@ Vitals:
 
     dconf write /org/gnome/shell/extensions/vitals/hot-sensors "['_memory_usage_', '_processor_average_', '__network-rx_max__']"
 
-Clipboard Indicator:
+Clipboard Indicator: ( Super + V 选择 )
 
+    gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
+    dconf write /org/gnome/shell/extensions/clipboard-indicator/toggle-menu "['<Super>v']""
     dconf write /org/gnome/shell/extensions/clipboard-indicator/cache-only-favorites true
 
 </details>

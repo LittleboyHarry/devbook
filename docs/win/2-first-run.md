@@ -35,6 +35,10 @@ Win 11 安装时，系统把你登录的微软账号作为用户名，有些毛�
 
     reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /f /d 0
 
+系统时间使用了错误的时区
+
+    reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+
 :::info 上述指令需要管理员权限
 
 `Win + R` 运行对话框，可按下 `Ctrl + Shift + Enter` 提权运行

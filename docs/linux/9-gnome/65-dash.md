@@ -3,8 +3,10 @@ title: 任务栏
 ---
 
 GNOME 自定义调节扩展：[Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+（ Ubuntu 内置 ）
 
-## Ubuntu 风格
+ <details className="let-details-to-gray">
+  <summary>Ubuntu 风格</summary>
 
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/dash-to-dock/
@@ -24,6 +26,8 @@ middle-click-action='launch'
 shift-middle-click-action='minimize'
 END
 ```
+
+</details>
 
 ## 作者偏好
 

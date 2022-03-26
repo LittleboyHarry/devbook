@@ -10,7 +10,8 @@ title: Ubuntu
 ## 作者的桌面图标风格
 
 ```shell
-cat << END | dconf read /org/gnome/shell/extensions/ding/
+cat << END | dconf load /org/gnome/shell/extensions/ding/
+[/]
 icon-size='large'
 start-corner='top-right'
 sort-special-folders=true

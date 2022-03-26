@@ -14,6 +14,8 @@ title: 内核问题
 
 Linux 内核源码 by 清华镜像站：https://mirrors.tuna.tsinghua.edu.cn/kernel/
 
+Ubuntu 预编辑内核包：https://github.com/pimlie/ubuntu-mainline-kernel.sh
+
 :::
 
 ## 高级启动菜单
