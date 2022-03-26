@@ -2,12 +2,6 @@
 title: 进阶配置
 ---
 
-## rEFInd
-
-https://www.rodsbooks.com/refind/getting.html
-
-https://github.com/bobafetthotmail/refind-theme-regular
-
 ## AppImage 集成
 
 [rpm 下载](https://github.com/TheAssassin/AppImageLauncher/releases/latest#:~:text=x86_64.rpm)

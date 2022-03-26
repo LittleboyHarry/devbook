@@ -4,7 +4,7 @@ title: 开始
 
 为开发用途适配 Windows
 
-## 小技巧
+## 剪贴板收集器
 
 `Win + V` 启动剪贴板历史记录
 
@@ -46,12 +46,16 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
     reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v EnableSimplifiedTraditionalOutputSwitch /t REG_DWORD /d 0 /f
 
-其他输入法快捷键冲突自行解决
+其它输入法快捷键冲突自行解决
 
 系统捆绑，也可能默认绑定了一些快捷键需要被解除：
 
 - Nvidia/AMD 显卡设置程序
 - 各种土产软件
+
+## VSCode 开发神器
+
+<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" target="_blank" download>下载安装包</a>
 
 ## Git
 
@@ -67,9 +71,9 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 注销再登录后，Git 命令行可用
 
-## 配置 SSH 密钥
+### 配置 SSH 密钥
 
-见[其他章节](/docs/dev/git)
+见<a href="/docs/dev/git" target="_blank" >其它章节</a>
 
 ### 能长期记住口令的 `ssh-agent` 服务
 
@@ -90,12 +94,6 @@ Git 支持：
 -->
 
 详见：https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_keymanagement#user-key-generation
-
-## 开发神器
-
-VSCode:
-
-    winget install XP9KHM4BK9FZ7Q
 
 ## 字体
 

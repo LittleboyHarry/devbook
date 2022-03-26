@@ -35,6 +35,8 @@ export default function GetPkg({
   scoop,
   winget,
   pacman,
+  pipx,
+  yarn,
   longBanner,
 }: {
   name?: string;
@@ -43,6 +45,8 @@ export default function GetPkg({
   scoop?: true | string;
   winget?: true | string;
   pacman?: true | string;
+  pipx?: true | string;
+  yarn?: true | string;
   longBanner?: boolean;
 }) {
   const tabs: JSX.Element[] = [];
@@ -76,7 +80,7 @@ export default function GetPkg({
 
   addTab({
     tabs,
-    expression: scoop,
+    expression: winget,
     key: 'winget',
     label: 'winget (Windows)',
     defaultPkgName: name,
@@ -91,6 +95,25 @@ export default function GetPkg({
     defaultPkgName: name,
     prefix: 'yes | sudo pacman -S',
   });
+
+  addTab({
+    tabs,
+    expression: pipx,
+    key: 'pipx',
+    label: 'pipx (Python)',
+    defaultPkgName: name,
+    prefix: 'pipx install',
+  });
+
+  addTab({
+    tabs,
+    expression: yarn,
+    key: 'yarn',
+    label: 'yarn (Node.js)',
+    defaultPkgName: name,
+    prefix: 'yarn global add',
+  });
+
   return (
     <Tabs className={longBanner && 'tabs--block'} groupId="package-manager">
       {tabs}

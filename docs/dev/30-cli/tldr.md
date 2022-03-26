@@ -1,10 +1,14 @@
 ---
-title: tldr
+title: 速查命令用法
 ---
 
-安装
+# tldr
 
-    sudo dnf in -y tldr
+## 安装
+
+import GetPkg from '@theme/GetPkg';
+
+<GetPkg name="tldr" dnf yarn />
 
 国内缓存
 

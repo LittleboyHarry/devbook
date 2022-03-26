@@ -7,4 +7,5 @@ services:
       - ./:/app:Z
       - /app/.git
     working_dir: /app
-    command: npm start
+    command: yarn --ignore-scripts && npm start
+    tty: true

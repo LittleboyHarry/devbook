@@ -2,6 +2,12 @@
 
 require: python >= 3.7
 
+import GetPkg from '@theme/GetPkg';
+
+<GetPkg name="pipx" dnf apt />
+
+## 用 pip 安装
+
 ```shell
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath

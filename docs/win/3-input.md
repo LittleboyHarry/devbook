@@ -37,6 +37,7 @@ reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "UserDefinedDouble
 限定 `Shift` 才能切换，解除 `Ctrl + Space` 占用
 
     reg add "HKCU\Software\Microsoft\InputMethod\Settings\CHS" /v "English Switch Key" /t REG_DWORD /d "4" /f
+
 :::
 
 :::note 标点切换键
@@ -47,7 +48,7 @@ reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "UserDefinedDouble
 
 :::
 
-其他如输入法等国产软件，自行打开设置面板关闭无用快捷键。
+其它如输入法等国产软件，自行打开设置面板关闭无用快捷键。
 
 ## 改键布局
 

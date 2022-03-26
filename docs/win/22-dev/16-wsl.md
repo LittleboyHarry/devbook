@@ -21,7 +21,7 @@ dism /online /enable-feature /featurename:VirtualMachinePlatform /all
 :::note 配置内核自动更新
 
 打开更新设置 `ms-settings:windowsupdate-options`，
-启动“接收其他 Microsoft 产品的更新”。
+启动“接收其它 Microsoft 产品的更新”。
 
 :::
 
@@ -33,7 +33,7 @@ https://github.com/microsoft/wslg/releases/latest/download/wsl_graphics_support_
 
 性能测试工具 [`glxgears`](https://command-not-found.com/glxgears)
 
-附：关于 WSL2 系统需求和其他安装细节的官方说明
+附：关于 WSL2 系统需求和其它安装细节的官方说明
 https://docs.microsoft.com/zh-cn/windows/wsl/install-manual#step-2---check-requirements-for-running-wsl-2
 
 ### Debian
@@ -61,7 +61,7 @@ sudo apt dist-upgrade -y
 
 推荐必装包 `sudo apt install`:
 
-- `zsh` 设置默认： `chsh -s /bin/zsh` 参见[配置](/docs/dev/zsh)
+- `zsh` 设置默认： `chsh -s /bin/zsh` 参见<a href="/docs/dev/zsh" target="_blank" >配置</a>
 - `tree` 文件树打印
 - `unzip` 解压
 - `man-db` man 手册
@@ -70,7 +70,6 @@ sudo apt dist-upgrade -y
 - `virt-manager`: 虚拟化平台
 
 更多推荐命令参考 “开发” -> “命令行” 章节
-
 
 ### Ubuntu 20.04
 
@@ -133,7 +132,7 @@ New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEth
 
 设置代理监听 `0.0.0.0`，禁用防火墙相关规则
 
-在端口转发的基础上，配置 [proxychains](/docs/dev/cli/network)。
+在端口转发的基础上，配置 <a href="/docs/dev/cli/network" target="_blank" >proxychains</a>。
 
 ### proxychains
 
@@ -150,7 +149,6 @@ sudo sed -i -e "\$asocks5 $(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*'
 更多版本的 podman：
 
 https://software.opensuse.org/download/package?package=podman&project=devel%3Akubic%3Alibcontainers%3Astable
-
 
 Q: 出错
 

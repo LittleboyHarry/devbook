@@ -1,3 +1,9 @@
+---
+title: 比较文本
+---
+
+# delta
+
 适合命令行界面下的文件对比工具，比 diff 美观很多
 
     sudo dnf in -y git-delta

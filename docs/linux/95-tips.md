@@ -2,6 +2,8 @@
 title: 小技巧
 ---
 
+- `sudo` 时须禁用中文输入模式，否则输入密码总是错误
+
 ## dnf 包管理
 
 下载升级，缓存以备使用
@@ -15,7 +17,6 @@ title: 小技巧
 ## dpkg 包管理
 
 日志记录：`/var/log/dpkg.log`
-
 
 ## 关机等待时间过长
 
@@ -34,3 +35,9 @@ title: 小技巧
 使用 python3 代替
 
     sudo apt install python-is-python3
+
+## 其它
+
+- [Debian 包流行度调查](https://popcon.debian.org/)，数据可供参考
+
+      curl https://popcon.debian.org/by_inst | less

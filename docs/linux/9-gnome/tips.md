@@ -1,16 +1,23 @@
 ---
-title: 界面缩放
+title: 小技巧
 ---
 
-:::info 减少顶栏对屏幕空间的占用？
+## 快捷键
 
-安装 [just-perfection](https://extensions.gnome.org/extension/3843/just-perfection/) 扩展进行微调，推荐大小：
+通用
 
-    dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
+| 键          | 作用           |
+| ----------- | -------------- |
+| Alt + Tab   | 切换窗口       |
+| Super + Tab | 应用间切换窗口 |
 
-:::
+gedit 文本编辑器：
 
-:::note 为具体应用单独设置缩放的方法
+| 键       | 作用   |
+| -------- | ------ |
+| Ctrl + D | 删除行 |
+
+## 为具体应用单独设置缩放的方法
 
 从 `/usr/share/applications/*.desktop` 复制一份到 `~/.local/share/applications/` 中，
 为所有 `Exec=` 值添加前缀 `env QT_SCALE_FACTOR=0.65`
@@ -27,7 +34,3 @@ export QT_SCALE_FACTOR=0.7
 ```
 
 最后给予执行权限 `chmod +x` 即可，下次在应用菜单中运行就生效了
-
-:::
-
-安装 `gnome-tweaks` 后可调整字体大小。

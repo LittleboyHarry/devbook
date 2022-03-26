@@ -1,8 +1,11 @@
-<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=create-my-dotfiles&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=deploy-my-dotfiles&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
 
-由笔者创作的综合调优的方案，涵盖 ohmyzsh 插件等其他调优的解决方案
+由笔者创作的综合调优的方案，涵盖 ohmyzsh 插件等其它调优的解决方案
 
-依赖：`git` `python3`
+依赖：
+
+- 必须：`git` `python3`
+- 复制功能：`xclip` 或 `xsel`
 
 ## 安装
 
@@ -46,7 +49,7 @@ exec zsh
 Konsole 选项在 “编辑配置方案”>“滚动” 内。
 
 <details>
-    <summary>其他主题推荐：ohmyzsh 的 steeef</summary>
+    <summary>其它主题推荐：ohmyzsh 的 steeef</summary>
 
 依赖 `deploy-my-dotfiles` 的 `~/.zshrc` 配置：
 

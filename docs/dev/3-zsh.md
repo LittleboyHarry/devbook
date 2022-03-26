@@ -2,14 +2,6 @@
 title: Zsh
 ---
 
-:::note GNOME/KDE 终端默认命令
-
-    /bin/zsh
-
-PS: 可设置背景透明度、终端色调
-
-:::
-
 ## 安装
 
 import GetPkg from '@theme/GetPkg';
@@ -41,14 +33,31 @@ compinit
 
 :::
 
+:::note 更改 GNOME/KDE 终端默认命令
+
+还可以选择自己喜欢的背景透明度、主题色调
+
+    /bin/zsh
+
+:::
+
+<!--
+chsh -s $(which zsh)
+ -->
+
 ## 调优
 
-推荐阅读并使用后文的 `create-my-dotfiles` 方案，调优涵盖内容不限于：
+推荐阅读并使用后文的 `deploy-my-dotfiles` 方案，调优涵盖内容不限于
 
-### 忽略注释
+忽略注释:
 
     echo 'setopt interactivecomments' >> ~/.zshrc
 
+:::note 重启程序以生效
+
+    exec zsh
+
+:::
 
 ## 设置为 tmux 默认终端
 

@@ -14,7 +14,7 @@ title: 绿化软件制作
 
 留意：
 
-<div className="AutoSelectedTableContainer">
+<div className="autoselect-cell-of-table">
 
 | 文件夹                              | 作用               |
 | ----------------------------------- | ------------------ |

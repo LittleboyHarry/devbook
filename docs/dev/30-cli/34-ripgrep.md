@@ -1,4 +1,8 @@
-## 安裝
+---
+title: 查找文本
+---
+
+# ripgrep
 
 import GetPkg from '@theme/GetPkg';
 

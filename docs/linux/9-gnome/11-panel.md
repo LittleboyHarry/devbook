@@ -2,9 +2,9 @@
 title: 顶栏
 ---
 
-## 推荐设置
+## 优化
 
-显示电量百分比、星期几、周数
+显示电量百分比、星期几、周数：
 
 ```shell
 cat << END | dconf load /org/gnome/desktop/
@@ -17,17 +17,11 @@ show-weekdate=true
 END
 ```
 
-## 微调
+## 扩展推荐
 
-无需关机前 60s 等待确认
+### 托盘图标
 
-    gsettings set org.gnome.SessionManager logout-prompt false
-
-## 扩展
-
-### [托盘图标](https://extensions.gnome.org/extension/615/appindicator-support/)
-
-AppIndicator and KStatusNotifierItem Support
+非 Ubuntu 系统请安装 [支持扩展](https://extensions.gnome.org/extension/615/appindicator-support/)，作者偏好：
 
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/appindicator/
@@ -50,6 +44,9 @@ dconf write /org/gnome/shell/extensions/just-perfection/app-menu false
 
 # 自动切换至后台新产生的窗口
 dconf write /org/gnome/shell/extensions/just-perfection/window-demands-attention-focus true
+
+# 调低顶栏对屏幕空间的占用
+dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
 ```
 
 :::caution 把顶栏置于屏幕下方
@@ -92,7 +89,7 @@ BUG: 可能导致“顶栏超长菜单栏无法显示”，慎调
 https://extensions.gnome.org/extension/1732/gtk-title-bar/
 -->
 
-### 其他
+### 其它
 
 常用文件夹菜单
 

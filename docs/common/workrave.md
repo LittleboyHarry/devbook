@@ -13,7 +13,7 @@ import GetPkg from '@theme/GetPkg';
 - Windows
 - Linux ( no KDE Wayland )
 
-[GNOME 依赖扩展](/docs/linux/gnome/panel#托盘图标)
+<a href="/docs/linux/gnome/panel#托盘图标" target="_blank" >GNOME 依赖扩展</a>
 
 安装：
 

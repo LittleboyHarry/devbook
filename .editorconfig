@@ -1,0 +1,11 @@
+[*.md]
+indent_style = space
+# indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[{*.cmd,*.bat,*.reg,*.ps1,*.ini,*.ahk}]
+end_of_line = crlf
+charset = utf-16le
+trim_trailing_whitespace = true
+insert_final_newline = true

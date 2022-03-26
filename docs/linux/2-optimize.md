@@ -2,13 +2,11 @@
 title: 调优
 ---
 
-## 使用 zsh
-
 ## 文本大小
 
 为高分辨率屏调整
 
- <details>
+ <details className="let-details-to-gray">
   <summary>GNOME</summary>
 
 我的 14 寸电脑缩放后所用的配置：大号缩放、字体字号、光标等属性
@@ -24,9 +22,11 @@ cursor-size=48
 END
 ```
 
+业可以安装 `gnome-tweaks` 调整字体大小
+
 </details>
 
-KDE 设置面板可统一调整字体，14寸屏推荐 15~18 之间
+KDE 设置面板可统一调整字体，14 寸屏推荐 15~18 之间
 
 ## Grub 菜单
 
@@ -34,8 +34,8 @@ KDE 设置面板可统一调整字体，14寸屏推荐 15~18 之间
 
     sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=1/" /etc/default/grub
 
-<details>
-    <summary>选调：隐藏 Grub 菜单内的 Windows 等其他系统</summary>
+<details className="let-details-to-gray">
+    <summary>选调：隐藏 Grub 菜单内的 Windows 等其它系统</summary>
 
     echo GRUB_DISABLE_OS_PROBER=true | sudo tee -a /etc/default/grub > /dev/null
 
@@ -43,7 +43,21 @@ KDE 设置面板可统一调整字体，14寸屏推荐 15~18 之间
 
 更新 Grub 系统
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="linux-distro">
+  <TabItem value="debian" label="Ubuntu / Debian">
+
+sudo update-grub
+
+  </TabItem>
+  <TabItem value="centos" label="Fedora">
+
     sudo grub2-mkconfig -o /etc/grub2-efi.cfg
+
+  </TabItem>
+</Tabs>
 
 ## Debian
 

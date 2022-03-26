@@ -7,7 +7,7 @@ title: Node.js
 
     dnf module list nodejs
 
-Fedora 35 默认为 16 版。若要切换其他版本：
+Fedora 35 默认为 16 版。若要切换其它版本：
 
 ```shell
 sudo dnf module enable -y nodejs:X
@@ -28,23 +28,30 @@ Debian 默认提供的 nodejs 12 版本太低，很多 npm 依赖包不支持。
 
 ```shell
 curl -o- https://cdn.jsdelivr.net/gh/nvm-sh/nvm@v0.39.1/install.sh | bash
-exec $SHELL
+$SHELL -i -c "nvm install --lts"
 ```
 
-    nvm install --lts
+## 国区加速
 
-## 淘宝国区加速
+淘宝加速：
 
     npm i -g mirror-config-china --registry=https://registry.npm.taobao.org
 
 ## yarn 与 pnpm
 
-比 npm 更快速的、高效的包管理工具：[选择的理由](https://pnpm.io/zh/motivation)
+比 npm 更快速的、高效的包管理工具
 
 在 nodejs 14.19.0 和 16.9.0 以上版本已集成，开启：
 
-    sudo corepack enable
+    corepack enable
 
-更新版本，参考：https://github.com/pnpm/pnpm/tags
+<details className="let-details-to-gray">
+    <summary>其它版本</summary>
+
+参考：https://github.com/pnpm/pnpm/tags
 
     corepack prepare pnpm@<新版> --activate
+
+</details>
+
+- [PNPM 介绍](https://pnpm.io/zh/motivation)

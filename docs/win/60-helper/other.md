@@ -1,5 +1,5 @@
 ---
-title: 其他
+title: 其它
 ---
 
 ## WinXcorners

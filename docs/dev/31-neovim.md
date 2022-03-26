@@ -1,3 +1,7 @@
+---
+title: neovim
+---
+
 ## 安装
 
 import GetPkg from '@theme/GetPkg';
@@ -12,8 +16,8 @@ import GetPkg from '@theme/GetPkg';
 
 :::info 作者的推荐配置
 
-介绍说明留意前文 `create-my-dotfiles`
+介绍说明留意前文 `deploy-my-dotfiles`
 
-    (cd ~/create-my-dotfiles;./deploy modules/neovim/)
+    (cd ~/deploy-my-dotfiles;./deploy modules/neovim/)
 
 :::

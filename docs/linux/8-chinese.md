@@ -2,15 +2,18 @@
 title: 改善中文输入
 ---
 
-iBus 微调：
+## iBus 微调
 
 ```shell
-cat << END | dconf load /com/github/libpinyin/ibus-libpinyin/libpinyin/
-[/]
-lookup-table-orientation=1
-enable-cloud-input=true
-END
+# 垂直显示
+dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/lookup-table-orientation 1
+# 禁用简繁切换键
+dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/trad-switch ''
 ```
+
+使用百度云拼音：
+
+    dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/enable-cloud-input true
 
 :::note 使用小鹤双拼
 
@@ -29,12 +32,17 @@ END
 ```shell
 dconf write /org/gnome/shell/extensions/customize-ibus/input-indicator-only-on-toggle true
 dconf write /desktop/ibus/panel/use-custom-font true
+dconf write /desktop/ibus/panel/custom-font 'Sans 16'
+dconf write /org/gnome/shell/extensions/customize-ibus/custom-font 'Sans 16'
 ```
 
 :::
 
+## fcitx5
 
-iBus 体验并不理想，作者经常遇到卡顿、输入无响应等问题。fcitx5 或许是更好的开源输入法：
+iBus 体验并不理想，作者经常遇到卡顿、输入无响应等问题：尤其是非 Ubuntu 系统。
+
+或许 fcitx 是更好的开源输入法方案：
 
     sudo dnf in -y fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool
 
@@ -42,7 +50,7 @@ KDE 环境: `sudo dnf in -y kcm-fcitx5`
 
 依赖 GNOME 扩展: https://extensions.gnome.org/extension/261/kimpanel/
 
-## fcitx5 配置
+### fcitx5 配置
 
 图形化配置工具：`fcitx5-configtool`
 

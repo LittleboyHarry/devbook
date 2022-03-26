@@ -16,9 +16,9 @@ git branch -f <branch> <to>
 
 ## 录入个人提交信息
 
-使用 Git Bash 执行：
+使用 Git **Bash** 执行：
 
-```shell
+```bash
 read -p "Enter your git name: " git_name
 git config --global user.name "$git_name"
 read -p "Enter your git email: " git_email
@@ -27,8 +27,9 @@ git config --global user.email "$git_email"
 
 ## 配置 SSH 密钥
 
-```
+```shell
 ssh-keygen -t ed25519
+# 使用了 ohmyzsh copyfile 插件:
 copyfile ~/.ssh/id_ed25519.pub
 ```
 
@@ -88,7 +89,6 @@ Ed25519
 :::tip 使浏览器接受推送通知
 
 <https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn>
-
 
 :::
 

@@ -2,18 +2,23 @@
 title: 配置
 ---
 
-### 高分辨率屏幕
+<details className="let-details-to-gray">
+  <summary>高分辨率屏幕，界面太小？</summary>
+
+缩放界面尺寸，编辑后重启应用生效：
+
+    -Dide.ui.scale=1.5
 
 <img
 src={require('./figures/conf-0.png').default}
 alt="Edit Custom VM Options"
 />
 
-缩放界面尺寸，编辑后重启应用生效：
+</details>
 
-    -Dide.ui.scale=1.5
+import ClickToOpenImage from '@theme/ClickToOpenImage';
 
-## 配置
+<ClickToOpenImage>
 
 <img
 src={require('./figures/conf-1.png').default}
@@ -40,9 +45,14 @@ src={require('./figures/conf-5.png').default}
 alt="git stage"
 />
 
+</ClickToOpenImage>
+
+<br/>
+
 以及 HTTP Proxy，如需的话
 
-### VSCode 集成
+<details className="let-details-to-gray">
+  <summary>与 VSCode 集成</summary>
 
 依赖：
 
@@ -75,3 +85,5 @@ alt="config entrypoint"
     -g $FilePath$:$LineNumber$:$ColumnNumber$
 
 在 `Keymap` 中绑定快捷键 `Alt + Shift + E`，这样按下快捷键就能快速切换编辑器
+
+</details>

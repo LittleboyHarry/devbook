@@ -24,6 +24,15 @@ title: Vim 模式
 },
 ```
 
+:::note 与 neovim 集成
+
+```json
+"vim.enableNeovim": true,
+"vim.neovimPath": "nvim",
+```
+
+:::
+
 ## 安装
 
 `Ctrl + P` 粘贴执行:
@@ -37,10 +46,3 @@ title: Vim 模式
 ## 普通模式内自动切换输入法
 
 https://github.com/daipeihust/im-select
-
-## VSCodeVim 集成配置
-
-```json
-"vim.enableNeovim": true,
-"vim.neovimPath": "nvim",
-```

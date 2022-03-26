@@ -2,13 +2,17 @@
 title: 调优
 ---
 
-:::note 注：
-
-`&!` 是 zsh 可分离式执行的专属特性
-
-:::
+注：`&!` 是 zsh 可分离式执行的专属特性
 
 ## 调优
+
+:::note 自动登陆，免输密码
+
+已设全盘加密的用户推荐：
+
+    gnome-control-center user-accounts &!
+
+:::
 
 ```shell
 # 允许 Super + 右键 拖拽更改窗口大小
@@ -19,6 +23,9 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
 # 按下电源键默认会挂起系统，若要改为关机行为：
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action interactive
+
+# 无需关机前 60s 等待确认
+gsettings set org.gnome.SessionManager logout-prompt false
 
 # 显示最小最大化窗口按钮
 gsettings set org.gnome.desktop.wm.preferences button-layout appmenu:minimize,maximize,close
@@ -34,13 +41,28 @@ gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 
 # 任务管理器：使用树视图
 dconf write /org/gnome/gnome-system-monitor/show-dependencies true
+
+# 强化同应用窗口切换 Alt + ` 键
+cat << END | dconf load /org/gnome/desktop/wm/keybindings/
+[/]
+cycle-group=['<Alt>grave']
+cycle-group-backward=['<Shift><Alt>grave']
+END
 ```
+
+:::note 巧用触摸板调整窗口大小
+
+设置 `Super + Z` 触发，自行摸索适应一下~
+
+    dconf write /org/gnome/desktop/wm/keybindings/begin-resize "['<Super>z']"
+
+:::
 
 ## 推荐的快捷键
 
 Windows 风格的快捷键：
 
-<div className="AutoSelectedTableContainer">
+<div className="autoselect-cell-of-table">
 
 | 作用       | 命令                           | 按键              |
 | ---------- | ------------------------------ | ----------------- |
@@ -76,39 +98,15 @@ binding='<Shift><Super>s'
 command='gnome-screenshot --interactive'
 name='截图'
 END
+
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']"
 ```
 
 </details>
 
 \*注：GNOME 42 已移除 `gnome-screenshot` 并强化了 `PrtScr` 截图键的功能、支持录屏
 
-## 互动逻辑
-
-应用内切换窗口 Alt + \`
-
-```shell
-cat << END | dconf load /org/gnome/desktop/wm/keybindings/
-[/]
-cycle-group=['<Alt>grave']
-cycle-group-backward=['<Shift><Alt>grave']
-END
-```
-
-:::note 巧用触摸板调整窗口大小
-
-设置 `Super + Z` 触发，自行摸索适应一下~
-
-    dconf write /org/gnome/desktop/wm/keybindings/begin-resize "['<Super>z']"
-
-:::
-
-## 自动登陆
-
-免去开机输入用户密码
-
-    gnome-control-center user-accounts &!
-
-## 其他
+## 其它
 
 设置深夜护眼：点击夜灯，激活暖色效果
 

@@ -1,7 +1,6 @@
 ---
 title: tesseract
 ---
-
 图像文字识别
 
 <GetPkg dnf="tesseract tesseract-langpack-chi_sim" />

@@ -18,6 +18,13 @@ keep-arranged=true
 END
 ```
 
+<details className="let-details-to-yellow">
+  <summary>希望 Ubuntu 隐藏壁纸外的桌面图标吗？</summary>
+
+    gnome-extensions disable ding@rastersoft.com
+
+</details>
+
 ## 喜欢紫色背景的登录界面吗？
 
 作者不喜欢，作者更喜欢 GNOME 原生的灰色背景：

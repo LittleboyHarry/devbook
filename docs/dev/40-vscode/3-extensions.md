@@ -20,16 +20,26 @@ Git 可视化: 分支树可视化，支持管理修改
 
     ext install esbenp.prettier-vscode
 
-## 其他
+代码格式统一化：[EditorConfig](https://editorconfig.org/)
+
+    ext install EditorConfig.EditorConfig
+
+## 补充
 
 更好看的图标：安装后，右下角 Active 按钮激活
 
     ext install vscode-icons-team.vscode-icons
 
+远程开发：支持 SSH, WSL, container
+
+    ext install ms-vscode-remote.vscode-remote-extensionpack
+
+## 商业服务
+
 免费 AI 补全：( 带遥测服务，可关闭
 
     ext install tabnine.tabnine-vscode
 
-远程开发：支持 SSH, WSL, container
+GitHub Copilot
 
-    ext install ms-vscode-remote.vscode-remote-extensionpack
+    ext install GitHub.copilot

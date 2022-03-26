@@ -23,7 +23,7 @@ sudo dnf downgrade <package>
 
 # 方法二：
 
-# 列出其他可用版本
+# 列出其它可用版本
 dnf --showduplicates list <package>
 
 sudo dnf install <package>-<version>

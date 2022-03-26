@@ -24,22 +24,23 @@ title: 配置
 "editor.formatOnSave": true,
 ```
 
-<details>
-    <summary>如果你在 Linux 中修改过键盘映射</summary>
+:::note 如果你在 Linux 中修改过键盘映射
 
     "keyboard.dispatch": "keyCode",
 
-</details>
+:::
 
 ## 修改默认 Shell
 
 `Ctrl + Shift + P` 输入关键词 `terspro` 选择
 
-## 推荐热键
+## 推荐快捷键
 
 `Ctrl + Shift + P` 输入 `keysjson` 打开组合键可配置页
 
-`Ctrl + W` 选择词块：
+:::note 选择词块
+
+仿 JetBrains IDE，绑定 `Ctrl + W` 键
 
 ```json
 {
@@ -58,13 +59,17 @@ title: 配置
 }
 ```
 
-## Windows
+:::
 
-命令行 Ctrl + C 自动应答，
-[技术说明](https://code.visualstudio.com/updates/v1_64#_automatic-replies)
+:::note 自动应答 \*
+
+Windows 环境下，命令行 Ctrl + C 自动应答。
+[1.64 版或以上可用](https://code.visualstudio.com/updates/v1_64#_automatic-replies)
 
 ```json
 "terminal.integrated.autoReplies": {
     "终止批处理操作吗(Y/N)?": "Y\r"
 },
 ```
+
+:::
