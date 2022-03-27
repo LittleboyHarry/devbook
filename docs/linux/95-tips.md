@@ -4,6 +4,19 @@ title: 小技巧
 
 - `sudo` 时须禁用中文输入模式，否则输入密码总是错误
 
+:::info 查看包内容
+
+安装 apt-file:
+
+    sudo apt install -y apt-file
+    sudo apt-file update
+
+用法：
+
+    apt-file list <pkgname>
+
+:::
+
 ## dnf 包管理
 
 下载升级，缓存以备使用
