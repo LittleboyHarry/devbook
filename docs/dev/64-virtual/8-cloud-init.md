@@ -23,7 +23,7 @@ wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64-d
 ```
 
 编辑 `user-data` 文件，按需修改
-（ 详情参考[DigitalOcean 帮助](https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup) )
+（ 详情参考 [DigitalOcean 帮助](https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup) )
 
 适用于本例的推荐配置：
 
@@ -95,8 +95,8 @@ virt-install --connect qemu:///session \
 试用完成后，我们关闭虚拟机。打个初始备份快照
 
     # 移除没用的自配置虚拟光盘：
-    virsh --connect=qemu:///session detach-disk ubuntu-instance vdb --persistent --current
-    virsh --connect=qemu:///session snapshot-create-as ubuntu-instance --name init --atomic
+    virsh --connect=qemu:///session detach-disk "$VM_NAME" vdb --persistent
+    virsh --connect=qemu:///session snapshot-create-as "$VM_NAME" --name init --atomic
 
 :::note 解锁虚拟机 XML 编辑器
 
@@ -106,4 +106,4 @@ virt-install --connect qemu:///session \
 
 ## 克隆
 
-    virt-clone --connect=qemu:///session -o ubuntu-instance --auto-clone [-n new_vmname]
+    virt-clone --connect=qemu:///session -o "$VM_NAME" --auto-clone [-n new_vmname]
