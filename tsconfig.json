@@ -12,6 +12,6 @@
   "include": [
     "src/*.d.ts",
     "docs/*.d.ts",
-    "docs/**/*.tsx"
+    "docs/**/*.tsx",
   ]
 }

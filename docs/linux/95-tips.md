@@ -4,33 +4,6 @@ title: 小技巧
 
 - `sudo` 时须禁用中文输入模式，否则输入密码总是错误
 
-:::info 查看包内容
-
-安装 apt-file:
-
-    sudo apt install -y apt-file
-    sudo apt-file update
-
-用法：
-
-    apt-file list <pkgname>
-
-:::
-
-## dnf 包管理
-
-下载升级，缓存以备使用
-
-    dnf upgrade --downloadonly
-
-列出配置状态，方便调试或导出状态
-
-    dnf config-manager --dump
-
-## dpkg 包管理
-
-日志记录：`/var/log/dpkg.log`
-
 ## 关机等待时间过长
 
 改 90s 为 10s

@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="linux-distro">
   <TabItem value="debian" label="Ubuntu / Debian">
 
-sudo update-grub
+  sudo update-grub
 
   </TabItem>
   <TabItem value="centos" label="Fedora">
@@ -58,8 +58,6 @@ sudo update-grub
 
   </TabItem>
 </Tabs>
-
-## Debian
 
 ## Fedora
 

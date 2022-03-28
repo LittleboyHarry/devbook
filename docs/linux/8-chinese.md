@@ -9,6 +9,8 @@ title: 改善中文输入
 dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/lookup-table-orientation 1
 # 禁用简繁切换键
 dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/trad-switch ''
+# 禁用半角与全角切换
+dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/punct-switch ''
 ```
 
 使用百度云拼音：

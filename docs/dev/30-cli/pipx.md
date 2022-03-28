@@ -1,6 +1,8 @@
 隔离化安装 Python 命令行工具
 
+<div class="alert alert--warning" role="alert">
 require: python >= 3.7
+</div>
 
 import GetPkg from '@theme/GetPkg';
 

@@ -1,17 +1,18 @@
+/// <reference path="../types.d.ts" />
 import React from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 
-function addTab({
-  tabs,
+function addItem({
+  items,
   expression,
   key,
   label,
   defaultPkgName,
   prefix,
 }: {
-  tabs: JSX.Element[];
+  items: JSX.Element[];
   expression: any;
   key: string;
   label: string;
@@ -19,7 +20,7 @@ function addTab({
   prefix: string;
 }) {
   if (expression)
-    tabs.push(
+    items.push(
       <TabItem {...{ key, value: key, label }}>
         <CodeBlock className="language-shell">
           {`${prefix} ${expression === true ? defaultPkgName : expression}`}
@@ -49,10 +50,22 @@ export default function GetPkg({
   yarn?: true | string;
   longBanner?: boolean;
 }) {
-  const tabs: JSX.Element[] = [];
+  const groupId = (() => {
+    let groupId = 'getpkg-';
+    const keys = [];
+    if (dnf) keys.push('dnf');
+    if (apt) keys.push('apt');
+    if (scoop) keys.push('scoop');
+    if (winget) keys.push('winget');
+    if (pacman) keys.push('pacman');
+    if (pipx) keys.push('pipx');
+    if (yarn) keys.push('yarn');
+    return groupId + keys.join('&');
+  })();
+  const items: JSX.Element[] = [];
 
-  addTab({
-    tabs,
+  addItem({
+    items,
     expression: dnf,
     key: 'dnf',
     label: 'rpm (Linux)',
@@ -60,8 +73,8 @@ export default function GetPkg({
     prefix: 'sudo dnf install -y',
   });
 
-  addTab({
-    tabs,
+  addItem({
+    items,
     expression: apt,
     key: 'apt',
     label: 'deb (Linux)',
@@ -69,8 +82,8 @@ export default function GetPkg({
     prefix: 'sudo apt install -y',
   });
 
-  addTab({
-    tabs,
+  addItem({
+    items,
     expression: scoop,
     key: 'scoop',
     label: 'scoop (Windows)',
@@ -78,8 +91,8 @@ export default function GetPkg({
     prefix: 'scoop install',
   });
 
-  addTab({
-    tabs,
+  addItem({
+    items,
     expression: winget,
     key: 'winget',
     label: 'winget (Windows)',
@@ -87,8 +100,8 @@ export default function GetPkg({
     prefix: 'winget install',
   });
 
-  addTab({
-    tabs,
+  addItem({
+    items,
     expression: pacman,
     key: 'pacman',
     label: 'pacman',
@@ -96,8 +109,8 @@ export default function GetPkg({
     prefix: 'yes | sudo pacman -S',
   });
 
-  addTab({
-    tabs,
+  addItem({
+    items,
     expression: pipx,
     key: 'pipx',
     label: 'pipx (Python)',
@@ -105,18 +118,17 @@ export default function GetPkg({
     prefix: 'pipx install',
   });
 
-  addTab({
-    tabs,
+  addItem({
+    items,
     expression: yarn,
     key: 'yarn',
     label: 'yarn (Node.js)',
     defaultPkgName: name,
     prefix: 'yarn global add',
   });
-
   return (
-    <Tabs className={longBanner && 'tabs--block'} groupId="package-manager">
-      {tabs}
+    <Tabs className={longBanner && 'tabs--block'} groupId={groupId}>
+      {items}
     </Tabs>
   );
 }

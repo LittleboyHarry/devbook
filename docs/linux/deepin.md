@@ -89,7 +89,8 @@ sudo systemctl enable virtnetworkd # 设置自动启动
 
 虚拟机 “添加硬件” “桥接设备” 填入 virbr0 “设备名称”。在虚拟机执行：
 
-    sudo service ssh start
+    sudo systemctl start ssh
+    # sudo systemctl enable ssh
     hostname -I
 
 在主机使用 `ssh-copy-id user@ip` 复制指纹信息后，即可使用
