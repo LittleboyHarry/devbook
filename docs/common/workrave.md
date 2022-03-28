@@ -17,7 +17,7 @@ import GetPkg from '@theme/GetPkg';
 
 安装：
 
-<GetPkg name="workrave" dnf winget />
+<GetPkg name="workrave" apt dnf winget />
 
 :::note 自动化配置脚本
 

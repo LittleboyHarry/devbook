@@ -34,6 +34,10 @@ import GetPkg from '@theme/GetPkg';
 
   默认 `Ctrl + F10` 可以清除所有记录
 
+功能类：
+
+- 触摸板手势强化: [Gesture Improvements](https://extensions.gnome.org/extension/4245/gesture-improvements/)
+
 ## 推荐配置
 
  <details><summary>作者偏好</summary>
@@ -78,15 +82,28 @@ nightthemeswitcher-ondemand-keybinding=['']
 END
 ```
 
-Vitals:
-
-    dconf write /org/gnome/shell/extensions/vitals/hot-sensors "['_memory_usage_', '_processor_average_', '__network-rx_max__']"
-
 Clipboard Indicator: ( Super + V 选择 )
 
     gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
     dconf write /org/gnome/shell/extensions/clipboard-indicator/toggle-menu "['<Super>v']""
     dconf write /org/gnome/shell/extensions/clipboard-indicator/cache-only-favorites true
+
+Gesture Improvements:
+
+```shell
+cat << END | dconf load /org/gnome/shell/extensions/gestureImprovements/
+[/]
+touchpad-pinch-speed=2.0
+enable-alttab-gesture=false
+allow-minimize-window=true
+touchpad-speed-scale=1.25
+END
+
+Vitals:
+
+    dconf write /org/gnome/shell/extensions/vitals/hot-sensors "['_memory_usage_', '_processor_average_', '__network-rx_max__']"
+
+```
 
 </details>
 
@@ -97,8 +114,6 @@ Clipboard Indicator: ( Super + V 选择 )
   [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
 
   需要安装 `sudo dnf in -y openssl`
-
-- 触摸板手势强化: [Gesture Improvements](https://extensions.gnome.org/extension/4245/gesture-improvements/)
 
 <!--
 todo:

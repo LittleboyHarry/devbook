@@ -68,9 +68,13 @@ import {
 
 :::
 
-### 小技巧
+### 组管理
 
-#### 包降级
+列出包组
+
+    dnf grouplist --ids
+
+### 包降级
 
 可避免软件新版出现的 bug，摘抄自：https://unix.stackexchange.com/q/266888
 
