@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgeekbook=self.webpackChunkgeekbook||[]).push([[7779],{4393:function(e){e.exports=JSON.parse('{"name":"libvirt","permalink":"/geekbook/docs/tags/libvirt","docs":[{"id":"dev/virtual/libvirt","title":"libvirt","description":"\u5b89\u88c5","permalink":"/geekbook/docs/dev/virtual/libvirt"}],"allTagsPath":"/geekbook/docs/tags"}')}}]);

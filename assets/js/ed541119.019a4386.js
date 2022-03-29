@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgeekbook=self.webpackChunkgeekbook||[]).push([[9041],{2282:function(e){e.exports=JSON.parse('{"name":"cloud-init","permalink":"/geekbook/docs/tags/cloud-init","docs":[{"id":"dev/virtual/libvirt","title":"libvirt","description":"\u5b89\u88c5","permalink":"/geekbook/docs/dev/virtual/libvirt"}],"allTagsPath":"/geekbook/docs/tags"}')}}]);
