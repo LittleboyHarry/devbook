@@ -13,7 +13,7 @@ cat << END | dconf load /org/gnome/shell/extensions/dash-to-dock/
 [/]
 dock-position='LEFT'
 dock-fixed=true
-intellihide-mode='ALL_WINDOWS'
+intellihide-mode='MAXIMIZED_WINDOWS'
 intellihide=true
 icon-size-fixed=true
 custom-theme-shrink=true
@@ -34,6 +34,7 @@ END
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/dash-to-dock/
 [/]
+dash-max-icon-size=64
 multi-monitor=true
 isolate-workspaces=true
 isolate-monitors=true
@@ -50,7 +51,6 @@ END
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/dash-to-dock/
 [/]
-dash-max-icon-size=64
 dock-fixed=false
 autohide=false
 intellihide=true
