@@ -93,6 +93,8 @@ Gesture Improvements:
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/gestureImprovements/
 [/]
+default-overview=true
+default-session-workspace=true
 touchpad-pinch-speed=2.0
 enable-alttab-gesture=false
 allow-minimize-window=true
