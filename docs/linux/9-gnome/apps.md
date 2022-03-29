@@ -7,7 +7,17 @@ import GetPkg from '@theme/GetPkg';
 ## Fedora 必装
 
 :::note 压缩软件
-<GetPkg name="file-roller" dnf apt />
+<GetPkg name="file-roller" dnf />
+:::
+
+## Ubuntu 必装
+
+:::note 空间分析器
+<GetPkg name="baobab" dnf apt />
+:::
+
+:::note 相机
+<GetPkg name="cheese" dnf apt />
 :::
 
 ## 更多推荐

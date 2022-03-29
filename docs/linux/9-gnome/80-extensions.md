@@ -104,6 +104,7 @@ END
 Vitals:
 
     dconf write /org/gnome/shell/extensions/vitals/hot-sensors "['_memory_usage_', '_processor_average_', '__network-rx_max__']"
+    dconf write /org/gnome/shell/extensions/vitals/fixed-widths false
 
 ```
 
