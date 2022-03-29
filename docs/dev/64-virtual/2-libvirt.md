@@ -196,8 +196,17 @@ RPM:
 ```shell
 echo "fastestmirror=1" | sudo tee -a /etc/dnf/dnf.conf
 sudo dnf update --refresh --assumeno || echo
-# 下载并更新所有包：
 # sudo dnf update -y
+```
+
+Ubuntu:
+
+```shell
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+sudo sed -i 's/security.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+sudo apt update
+# sudo apt upgrade -y
 ```
 
 Arch:
@@ -206,7 +215,6 @@ Arch:
 sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch' | sudo tee /etc/pacman.d/mirrorlist
 sudo pacman -Syy
-# 下载并更新所有包：
 # sudo pacman -Syu
 ```
 
