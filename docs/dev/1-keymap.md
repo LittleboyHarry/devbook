@@ -32,8 +32,11 @@ kwriteconfig5 --file kxkbrc --group Layout --key Options ctrl:swap_lalt_lctl_lwi
 
     reg add "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 00000000000000000600000001003A003A0001001D0038005BE01D0038005BE000000000
 
-恢复：
+如果有其他需求，可以安装自定义键位映射程序 `sharpkeys` （ by winget or scoop )
+
+<details>
+  <summary>恢复方法：</summary>
 
     reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map"
 
-如果仍然不满意，可以安装自定义键位映射程序：`winget install sharpkeys`
+</details>

@@ -7,13 +7,16 @@ import React, {
 } from 'react';
 import cs from 'classnames';
 import st from './PreferPkgMgr.module.scss';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 
 type PkgMgrType = 'apt' | 'dnf';
 type Options = { [key in PkgMgrType]?: boolean };
 
+const localStorageKey = 'custom.preferPkgMgr';
+
 const PreferPkgMgrContext = createContext({
-  active: 'apt' as PkgMgrType,
-  setActive(active: PkgMgrType) {},
+  active: 'dnf',
+  setActive(_value: PkgMgrType) {},
   options: {} as Options,
 });
 
@@ -22,11 +25,24 @@ export function PreferPkgMgrScope({
   dnf,
   children,
 }: PropsWithChildren<Options>) {
-  const [active, setActive] = useState<PkgMgrType>('apt');
+  const isBrowser = useIsBrowser();
+  const [active, setActive] = useState<PkgMgrType>('dnf');
+
+  useEffect(() => {
+    if (isBrowser)
+      setActive(window.localStorage.getItem(localStorageKey) as PkgMgrType);
+  }, [isBrowser]);
 
   return (
     <PreferPkgMgrContext.Provider
-      value={{ active, setActive, options: { apt, dnf } }}
+      value={{
+        active,
+        setActive(value: PkgMgrType) {
+          window.localStorage.setItem(localStorageKey, value);
+          setActive(value);
+        },
+        options: { apt, dnf },
+      }}
     >
       {children}
     </PreferPkgMgrContext.Provider>

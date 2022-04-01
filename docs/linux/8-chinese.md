@@ -8,9 +8,9 @@ title: 改善中文输入
 # 垂直显示
 dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/lookup-table-orientation 1
 # 禁用简繁切换键
-dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/trad-switch ''
+dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/trad-switch "''"
 # 禁用半角与全角切换
-dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/punct-switch ''
+dconf write /com/github/libpinyin/ibus-libpinyin/libpinyin/punct-switch "''"
 ```
 
 使用百度云拼音：( 需要上传输入数据以供分析 )
@@ -47,10 +47,10 @@ iBus 体验并不理想，作者经常遇到卡顿、输入无响应等问题：
 或许 fcitx 是更好的开源输入法方案：
 
 import {
-  PreferPkgMgrScope,
-  PkgMgrSelector,
-  ForApt,
-  ForDnf,
+PreferPkgMgrScope,
+PkgMgrSelector,
+ForApt,
+ForDnf,
 } from '@theme/PreferPkgMgr'
 
  <PreferPkgMgrScope dnf apt>
@@ -82,13 +82,14 @@ KDE 环境:
 
 图形化配置工具：`fcitx5-configtool`
 
-:::tip 自动配置
+:::info 自动配置
 
-非 KDE 环境需要安装辅助工具：`kwriteconfig5`
+配置前，请启动一次 fcitx5 输入法并退出。
+非 KDE 环境需添加辅助程序：`kwriteconfig5`
 
     sudo dnf in -y kf5-kconfig-core
 
-<details className="let-details-to-gray">
+<details>
   <summary>若先前已配置过 fcitx5 输入法？</summary>
   本文只考虑过初始配置状态，自动二次配置难免会有 bug，
   建议备份旧配置后重置
@@ -97,8 +98,6 @@ KDE 环境:
 </details>
 
 :::
-
-**注意**：配置前，请启动一次 fcitx5 输入法并退出 ( or `pkill fcitx5` )
 
 :::caution 程序员请考虑按下文解除快捷键冲突
 
@@ -116,8 +115,10 @@ GNOME：
 # 解除 iBus 占用 Ctrl+Space
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]"
+
 # 解除 Super+V 的占用
 gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
+
 ```
 
 ---
@@ -144,6 +145,7 @@ kwriteconfig5 --file fcitx5/conf/classicui.conf --group "<default>" --key Font "
 kwriteconfig5 --file fcitx5/config --group Behavior --key ShareInputState All
 ```
 
+<!--
 :::note 改善 GNOME 外观的扩展
 
 [kimpanel](https://extensions.gnome.org/extension/261/kimpanel/)
@@ -152,12 +154,13 @@ kwriteconfig5 --file fcitx5/config --group Behavior --key ShareInputState All
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/kimpanel/
 [/]
-font='Noto Sans CJK SC 16'
+font='Noto Sans CJK SC 18'
 vertical=true
 END
 ```
 
 :::
+ -->
 
 ### 双拼
 

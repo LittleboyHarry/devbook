@@ -49,31 +49,28 @@ dconf write /org/gnome/shell/extensions/just-perfection/window-demands-attention
 dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
 ```
 
-:::caution 把顶栏置于屏幕下方
+<details className="let-details-to-gray">
+  <summary>把顶栏置于屏幕下方</summary>
+
+缺点: 可能导致“顶栏超长菜单栏无法显示” 的 BUG，慎调
 
     dconf write /org/gnome/shell/extensions/just-perfection/top-panel-position 1
 
-BUG: 可能导致“顶栏超长菜单栏无法显示”，慎调
-
-:::
+</details>
 
 ### Hot Corners
 
-鼠标左上角悬停会触发“概览视图”
+:::note 鼠标左上角悬停会触发“概览视图”
 
-<details className="let-details-to-gray">
-    <summary>Fedora 初始已激活该功能，禁用命令：</summary>
+Fedora 初始已激活该功能，若要禁用：
 
     gsettings set org.gnome.desktop enable-hot-corners false
 
-</details>
-
-<details className="let-details-to-gray">
-    <summary>Ubuntu 初始已屏蔽该功能，启用需要上述 Just Perfection 插件：</summary>
+Ubuntu 默认已屏蔽该功能。若要启用该功能，需要添加上述 Just Perfection 插件：
 
     dconf write /org/gnome/shell/extensions/just-perfection/hot-corner true
 
-</details>
+:::
 
 ### 隐藏标题栏
 
@@ -91,6 +88,10 @@ https://extensions.gnome.org/extension/1732/gtk-title-bar/
 
 ### 其它
 
-常用文件夹菜单
+:::note 常用文件夹菜单
+
+[Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/) ( Fedora 自带 )
 
     gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
+
+:::

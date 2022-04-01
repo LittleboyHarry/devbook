@@ -19,26 +19,6 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Laun
 
 ```
 
-<!--
--->
-
-## 开始菜单
-
-```powershell
-# 不要使用内置搜索服务，因为它影响性能
-#
-# 管理员权限运行：
-sc.exe stop "wsearch"
-sc.exe config "wsearch" start=disabled
-# 推荐代替品：
-# winget install -e 'Everything Lite'
-
-# 不要显示网页搜索结果
-reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /f /d 1
-# 重启 explorer.exe 生效
-
-```
-
 ## 锁屏界面
 
 动态壁纸的禁用方法
@@ -54,3 +34,25 @@ reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSug
     ms-settings:storagepolicies
 
 </div>
+
+
+## 开始菜单
+
+:::info 需要管理员权限运行
+
+:::
+
+```powershell
+icm {
+# 不使用内置搜索服务，因为它影响性能
+sc.exe stop "wsearch"
+sc.exe config "wsearch" start=disabled
+echo '' '推荐代替品：'
+echo 'winget install -e "Everything Lite"'
+
+# 不要显示网页搜索结果
+reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /f /d 1
+echo '' '重启 explorer.exe 生效' ''
+}
+
+```

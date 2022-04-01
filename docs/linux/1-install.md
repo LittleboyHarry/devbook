@@ -111,7 +111,7 @@ sudo dnf remove libreoffice*
 
 方法一：通过命令行
 
-    sudo dnf upgrade --refresh -y && sudo reboot
+    sudo dnf upgrade -y
 
 方法二：
 

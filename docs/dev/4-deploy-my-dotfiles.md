@@ -37,36 +37,20 @@ cd deploy-my-dotfiles
 exec zsh
 ```
 
-## 主题
+## 样式
 
-推荐：powerlevel10k
+目前个人偏好主题：ys ，基于 deploy-my-dotfiles 写入 `~/.zshrc` 的配置：
 
-:::info BUG: 调整窗口大小造成排版错乱
+```zsh
+source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/git.zsh
+source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/ys.zsh-theme
+```
 
-[官方解决方法](https://github.com/romkatv/powerlevel10k/blob/master/README.md#the-anatomy-of-the-problem)：
-禁止自动重排版
+<div className="alert alert--secondary" role="alert">
 
-Konsole 选项在 “编辑配置方案”>“滚动” 内。
+其他推荐：powerlevel10k
 
-<details>
-    <summary>其它主题推荐：ohmyzsh 的 steeef</summary>
-
-依赖 `deploy-my-dotfiles` 的 `~/.zshrc` 配置：
-
-    source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/git.zsh
-    source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme
-
-</details>
-
-<!-- todo: ys or zsh 重编译
-https://www.zsh.org/mla/workers//2019/msg00561.html
--->
-
-:::
-
-需要先安装好 Nerd Font 字体，[参见](./font#cascadiacode-nerdfont)
-
-安装：
+安装：依赖 Nerd Font 字体，[参见](./font#cascadiacode-nerdfont)
 
 ```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -82,3 +66,14 @@ exec zsh
 
     sed -i "/# os identifier/ s/^/#&/" ~/.p10k.zsh
     exec zsh
+
+缺点：
+调整窗口大小会造成排版错乱，
+[官方解决方法](https://github.com/romkatv/powerlevel10k/blob/master/README.md#the-anatomy-of-the-problem)
+是禁止自动重排版 （ 部分终端支持，如 Konsole ）
+
+<!-- todo: ys or zsh 重编译
+https://www.zsh.org/mla/workers//2019/msg00561.html
+-->
+
+</div>

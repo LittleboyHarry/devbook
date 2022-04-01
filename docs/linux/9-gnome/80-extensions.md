@@ -84,9 +84,11 @@ END
 
 Clipboard Indicator: ( Super + V 选择 )
 
-    gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
-    dconf write /org/gnome/shell/extensions/clipboard-indicator/toggle-menu "['<Super>v']""
-    dconf write /org/gnome/shell/extensions/clipboard-indicator/cache-only-favorites true
+```shell
+gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
+dconf write /org/gnome/shell/extensions/clipboard-indicator/toggle-menu "['<Super>v']"
+dconf write /org/gnome/shell/extensions/clipboard-indicator/cache-only-favorites true
+```
 
 Gesture Improvements:
 
@@ -100,13 +102,12 @@ enable-alttab-gesture=false
 allow-minimize-window=true
 touchpad-speed-scale=1.25
 END
+```
 
 Vitals:
 
     dconf write /org/gnome/shell/extensions/vitals/hot-sensors "['_memory_usage_', '_processor_average_', '__network-rx_max__']"
     dconf write /org/gnome/shell/extensions/vitals/fixed-widths false
-
-```
 
 </details>
 
@@ -114,9 +115,9 @@ Vitals:
 
 - 电源菜单按钮: https://extensions.gnome.org/extension/2917/bring-out-submenu-of-power-offlogout-button/
 - 适用于 GNOME 的 KDE Connect 移动设备互联互通:
-  [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
+  [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)，依赖：
 
-  需要安装 `sudo dnf in -y openssl`
+      sudo dnf in -y openssl
 
 <!--
 todo:

@@ -2,7 +2,35 @@
 title: 初始化
 ---
 
+## 第一步：系统更新
+
+:::info
+
+打开设置查看系统更新情况：
+
+    ms-settings:windowsupdate-options
+
+选调:
+
+- 勾选“接收其他 MS 产品更新”
+- 如果不介意使用 P2P 流量分享技术，可以进入“传递优化”选择 Internet 下载源以提高速度
+
+此外，更新所有应用软件：
+进入旧版 Store 商店 > 菜单 - 软件和更新  > 下载和更新
+（ 新版：库 > 获取更新
+
+:::
+
  <div class="alert alert--info" role="alert">
+
+## 第二步：备份还原点
+
+运行：
+
+    SystemPropertiesProtection
+
+配置 (Alt+O) > 启动系统保护 > 调整最大使用量 > 确定 > 创建 (Alt+C) > 为创建的还原点起名
+
 
 ## For Win11
 
@@ -25,23 +53,32 @@ title: 初始化
 
 </div>
 
-## 第一步：备份还原点
-
-      SystemPropertiesProtection
-
-配置 (Alt+O) > 启动系统保护 > 调整最大使用量 > 确定 > 创建 (Alt+C) > 为创建的还原点起名
-
-## 家庭版
-
 ## 设置登录方式
 
-设置 PIN 和指纹（如果有）
+设置 PIN 或指纹
 
-## 禁用拖慢开机的启动项
+## 配置 DNS
 
-打开任务管理器的启动面板，选择你认为没用的软件以禁用
+搜索 `ncpa.cpl` 设置 DNS 服务器地址，如微软 DNS：
+
+- `4.2.2.1`
+- `4.2.2.2`
+
+## 微软账号
+
+推荐设用双重登录验证码 App，这样可以避免重复输入登录密码。
+
+账号配置方法：https://account.live.com/proofs/EnableTfa
+
+手机客户端：
+[iOS](https://apps.apple.com/cn/app/microsoft-authenticator/id983156458)
+| Android
 
 ## 双系统
+
+:::note 需要管理员权限运行
+
+`Win + R` 运行对话框，可按下 `Ctrl + Shift + Enter` 提权运行
 
 关闭快速启动
 
@@ -50,26 +87,6 @@ title: 初始化
 系统时间使用了错误的时区
 
     reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
-
-:::info 上述指令需要管理员权限
-
-`Win + R` 运行对话框，可按下 `Ctrl + Shift + Enter` 提权运行
-
-:::
-
-## 系统更新
-
-:::info
-
-打开系统更新设置，勾选“接收其他 MS 产品更新”并返回“检查更新”
-
-    ms-settings:windowsupdate-options
-
-PS: 如果不介意使用 P2P 流量分享技术，可以进入“传递优化”选择 Internet 下载源以提高速度
-
-此外，进入 Store 商店 > 菜单 - 软件和更新 (旧版) / 库(新版)  > 获取更新
-
-我们静静等待所有的系统和软件更新
 
 :::
 

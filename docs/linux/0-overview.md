@@ -12,8 +12,8 @@ import LogoCard from '@theme/LogoCard';
 
 <LogoCard.Container>
 
-<LogoCard name="Fedora" newtab label="RPM 类 Linux 系统" to="https://getfedora.org/zh_Hans_CN/workstation/download/" logo={ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-plain.svg" /> }/>
-<LogoCard name="Ubuntu" newtab label="Debian 类 Linux 系统" to="https://cn.ubuntu.com/download/desktop" logo={ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" /> }/>
+<LogoCard name="Fedora" label="RPM 类 Linux 系统" to="https://getfedora.org/zh_Hans_CN/workstation/download/" logo={ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-plain.svg" /> }/>
+<LogoCard name="Ubuntu" label="Debian 类 Linux 系统" to="https://cn.ubuntu.com/download/desktop" logo={ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" /> }/>
 
 </LogoCard.Container>
 

@@ -6,30 +6,36 @@ import GetPkg from '@theme/GetPkg';
 
 ## Fedora 必装
 
-:::note 压缩软件
-<GetPkg name="file-roller" dnf />
-:::
+<ol>
+
+<li><p>压缩软件</p>
+<GetPkg name="file-roller" dnf /></li>
+
+</ol>
 
 ## Ubuntu 必装
 
-:::note 空间分析器
-<GetPkg name="baobab" dnf apt />
-:::
+<ol>
 
-:::note 相机
-<GetPkg name="cheese" dnf apt />
-:::
+<li><p>空间分析器</p>
+<GetPkg name="baobab" dnf apt /></li>
+
+<li><p>相机</p>
+<GetPkg name="cheese" dnf apt /></li>
+
+</ol>
 
 ## 更多推荐
 
-:::note 哈希校验
-<GetPkg name="gtkhash" dnf apt />
-:::
+<ol>
 
-:::note 分区助手
-<GetPkg name="gparted" dnf apt />
-:::
+<li><p>哈希校验</p>
+<GetPkg name="gtkhash" dnf apt /></li>
 
-:::note 应用列表编辑器
-<GetPkg name="menulibre" dnf apt />
-:::
+<li><p>分区助手</p>
+<GetPkg name="gparted" dnf apt /></li>
+
+<li><p>应用列表编辑器</p>
+<GetPkg name="menulibre" dnf apt /></li>
+
+</ol>

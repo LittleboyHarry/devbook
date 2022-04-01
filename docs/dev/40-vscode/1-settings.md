@@ -3,7 +3,7 @@ title: 配置
 ---
 
 `Ctrl + Shift + P` 搜索 `osj`，
-选择 `Preferences: Open Settings (JSON)` 打开设置
+选择 **Preferences: Open Settings (JSON)** 打开设置
 
 ```json
 // 关闭遥测
@@ -15,7 +15,8 @@ title: 配置
 // 终端快捷键冲突缓解
 "terminal.integrated.commandsToSkipShell": [
     "-workbench.action.quickOpen",
-    "-workbench.action.terminal.openNativeConsole"
+    "-workbench.action.terminal.openNativeConsole",
+    "-workbench.action.quickOpenView"
 ],
 // 自动代码格式化
 "files.insertFinalNewline": true,
@@ -38,7 +39,7 @@ title: 配置
 ## 推荐快捷键
 
 `Ctrl + Shift + P` 搜索 `oks`，
-选择 `Preferences: Open Keyboard Shortcuts (JSON)` 配置组合键
+选择 **Preferences: Open Keyboard Shortcuts (JSON)** 配置组合键
 
 :::note 选择词块
 

@@ -16,6 +16,10 @@ title: 安装器
 
 ## 配置
 
+执行
+
+    mkdir -p ~/.local/bin
+
 安装完成后，`Ctrl + ,` 设置：
 
 - `Launch Toolbox App at system startup` 可关闭

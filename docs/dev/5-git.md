@@ -2,17 +2,11 @@
 title: Git
 ---
 
- <details>
-  <summary>指令速查表</summary>
+:::info 指令速查表
 
-推荐插件 [ohmyzsh-git](https://gitee.com/mirrors/oh-my-zsh/blob/master/plugins/git/README.md)
+来源：[ohmyzsh-git 插件](https://gitee.com/mirrors/oh-my-zsh/blob/master/plugins/git/README.md) 相关别名
 
-```shell
-# 分支重定向
-git branch -f <branch> <to>
-```
-
-</details>
+:::
 
 ## 录入个人提交信息
 
@@ -29,7 +23,7 @@ git config --global user.email "$git_email"
 ## 配置 SSH 密钥
 
 ```shell
-ssh-keygen -t ed25519
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 

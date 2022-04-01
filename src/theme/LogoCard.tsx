@@ -2,28 +2,27 @@ import React, { ReactNode } from 'react';
 import cs from 'classnames';
 import st from './LogoCard.module.scss';
 import { MouseEventHandler } from 'react';
+import Link from '@docusaurus/Link';
 
 export default function LogoCard({
   name,
   to,
   logo,
-  newtab,
   label,
   onClick,
 }: {
   name: ReactNode;
   to?: string;
   logo: ReactNode;
-  newtab?: boolean;
   label?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 }) {
   return (
-    <a
+    <Link
       className={cs('card', st.card)}
       href={to || '#'}
-      {...(newtab && { target: '_blank' })}
-      {...(label && { title: label })}
+      target="_blank"
+      {...(label && { title: label, style: { cursor: 'help' } })}
       onClick={onClick}
     >
       <div className={st.logoSlot}>{logo}</div>
@@ -33,7 +32,7 @@ export default function LogoCard({
       >
         {name}
       </p>
-    </a>
+    </Link>
   );
 }
 

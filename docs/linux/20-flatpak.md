@@ -12,6 +12,12 @@ VLC
 
     flatpak install flathub org.videolan.VLC
 
+### 图像编辑
+
+GIMP
+
+    flatpak install flathub org.gimp.GIMP
+
 ### 视频剪辑
 
 Kdenlive
