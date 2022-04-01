@@ -24,11 +24,19 @@ title: 其它
 
 https://sourceforge.net/projects/imdisk-toolkit/
 
+## [硬盘空间分析](https://www.microsoft.com/store/productId/9PFXCD722M2C)
+
+KDE Filelight:
+
+    winget install 9PFXCD722M2C
+
+<!--
 ## WizTree
 
 很实用的 NTFS 磁盘空间分析器，个人非商业用途。安装：
 
     winget install wiztree
+-->
 
 ## 哈希文件校验
 

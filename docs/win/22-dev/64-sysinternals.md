@@ -14,3 +14,4 @@ title: Sysinternals
 | ProcessExplorer | 更好的任务管理器                 |
 | ProcessMonitor  | 进程监控器（开发者调试程序必备） |
 | TCPView         | TCP 流量监控                     |
+| sdelete         | 安全擦除文件                     |

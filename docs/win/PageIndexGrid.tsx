@@ -36,7 +36,7 @@ export default function Page() {
       <LogoCard.Container>
         <LogoCard
           name="开发者环境"
-          to="dev/scoop"
+          to="dev/scoop/install"
           logo={<FontAwesomeIcon icon={faCode} />}
         />
         <LogoCard

@@ -36,9 +36,14 @@ Git 可视化: 分支树可视化，支持管理修改
 
 ## 商业服务
 
-免费 AI 补全：( 带遥测服务，可关闭
+Tabnine 免费 AI 补全：
 
-    ext install tabnine.tabnine-vscode
+- 优点：离线使用、可关闭遥测服务
+- 缺点：内存消耗高、免费版仅供单行使用
+
+```
+ext install tabnine.tabnine-vscode
+```
 
 GitHub Copilot
 

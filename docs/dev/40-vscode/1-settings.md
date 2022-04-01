@@ -2,7 +2,8 @@
 title: 配置
 ---
 
-`Ctrl + Shift + P` 输入 `setjs` 可以打开配置页面
+`Ctrl + Shift + P` 搜索 `osj`，
+选择 `Preferences: Open Settings (JSON)` 打开设置
 
 ```json
 // 关闭遥测
@@ -36,7 +37,8 @@ title: 配置
 
 ## 推荐快捷键
 
-`Ctrl + Shift + P` 输入 `keysjson` 打开组合键可配置页
+`Ctrl + Shift + P` 搜索 `oks`，
+选择 `Preferences: Open Keyboard Shortcuts (JSON)` 配置组合键
 
 :::note 选择词块
 

@@ -38,6 +38,7 @@ notepad $PROFILE
 Set-PSReadLineOption -EditMode Emacs
 # 历史预测，可按下 Ctrl + F 补全
 Set-PSReadLineOption -PredictionSource History
+
 ```
 
 ### Git 集成支持
@@ -45,7 +46,7 @@ Set-PSReadLineOption -PredictionSource History
 安装 `posh-git`
 
 ```powershell
-Install-Module posh-git
+Install-Module posh-git -AllowClobber
 # 推荐手动或配置懒加载，避免拖慢启动时间：
 echo "
 if ( Test-Path -Path .git -PathType Container ) {

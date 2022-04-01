@@ -30,50 +30,57 @@ title: 开始
 
     winget install 9N0DX20HK701
 
-## 避免快捷键冲突
+## 快捷键冲突
 
-解除微软拼音对 `Ctrl + Space` 的占用：
+以默认的微软拼音输入法为例：
+
+```powershell
+# 解除 Ctrl+Shift+F 简繁切换键的占用
+reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v EnableSimplifiedTraditionalOutputSwitch /t REG_DWORD /d "0" /f
+
+# 解除 Ctrl+Space 中英切换键的占用
+reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v "English Switch Key" /t REG_DWORD /d "4" /f
+
+# 解除 Ctrl+. 标点切换键的占用
+reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v EnableChineseEnglishPunctuationSwitch /t REG_DWORD /d "0" /f
 
 ```
+
+<!--
+# 解除 Ctrl+Space 中英切换键的占用
 reg add "HKCU\Control Panel\Input Method\Hot Keys\00000010" /v "Key Modifiers" /t REG_BINARY /d 00c00000 /f
 reg add "HKCU\Control Panel\Input Method\Hot Keys\00000010" /v "Virtual Key" /t REG_BINARY /d ff000000 /f
 reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Key Modifiers" /t REG_BINARY /d 00c00000 /f
 reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t REG_BINARY /d ff000000 /f
+ -->
 
-```
+自行解除其他输入法的快捷键占用，如果还有的话。
 
-解除简繁体切换 `Ctrl + Shift + F` 的占用：
-
-    reg add HKCU\Software\Microsoft\InputMethod\Settings\CHS /v EnableSimplifiedTraditionalOutputSwitch /t REG_DWORD /d 0 /f
-
-其它输入法快捷键冲突自行解决
-
-系统捆绑，也可能默认绑定了一些快捷键需要被解除：
+系统捆绑软件，也可能绑定了一些引起冲突的快捷键：
 
 - Nvidia/AMD 显卡设置程序
 - 各种土产软件
 
-## VSCode 开发神器
+## 开发神器
 
-<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" target="_blank" download>下载安装包</a>
+- <a href="docs/dev/vscode/install" target="_blank" download>VSCode</a>
+- Visual Studio
 
-## Git
+      winget install XPDCFJDKLZJLP8
 
-下载 Git for Windows:
+## Git For Windows
 
-    https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/LatestRelease/#:~:text=64%2Dbit.exe
+<p><a className="button button--primary" href="https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/LatestRelease/#:~:text=64%2Dbit.exe">清华镜像站</a></p>
 
-:::note 自动化安装：命令行参数
+:::note 自动化安装参数：
 
 /silent /readinf=<a href="/inno-setup/git.ini" target="_blank" download>git.ini</a>
 
 :::
 
-注销再登录后，Git 命令行可用
-
 ### 配置 SSH 密钥
 
-见<a href="/docs/dev/git" target="_blank" >其它章节</a>
+参考<a href="/docs/dev/git" target="_blank" >其它章节</a>
 
 ### 能长期记住口令的 `ssh-agent` 服务
 
@@ -85,13 +92,9 @@ Start-Service ssh-agent
 
 ssh-add
 
+git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
+
 ```
-
-<!--
-Git 支持：
-
-    git config --global core.sshCommand "'C:\Windows\System32\OpenSSH\ssh.exe'"
--->
 
 详见：https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_keymanagement#user-key-generation
 

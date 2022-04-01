@@ -19,6 +19,7 @@ git branch -f <branch> <to>
 使用 Git **Bash** 执行：
 
 ```bash
+echo
 read -p "Enter your git name: " git_name
 git config --global user.name "$git_name"
 read -p "Enter your git email: " git_email
@@ -29,8 +30,7 @@ git config --global user.email "$git_email"
 
 ```shell
 ssh-keygen -t ed25519
-# 使用了 ohmyzsh copyfile 插件:
-copyfile ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub
 ```
 
 复制，然后登陆上传该公钥：
@@ -61,16 +61,15 @@ Host github.com
 
 -S 代表 socks 代理，-H 代表 http 代理，后附地址端口
 
-## GitHub
+## 登录测试
 
-ssh 协议登陆测试
+<details>
+  <summary>GitHub</summary>
 
     ssh -T git@github.com
 
-<details>
-  <summary>指纹校验</summary>
-
-信息来源：https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
+指纹校验:
+( [数据来源](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints) )
 
 RSA
 
@@ -86,11 +85,16 @@ Ed25519
 
 </details>
 
-:::tip 使浏览器接受推送通知
+<details>
+  <summary>Gitee</summary>
 
-<https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn>
+    ssh -T git@gitee.com
 
-:::
+Ed25519
+
+    SHA256:+ULzij2u99B9eWYFTw1Q4ErYG/aepHLbu96PAUCoV88
+
+</details>
 
 ## 调优
 
@@ -105,3 +109,9 @@ git config --global rebase.autostash true
 git config --global merge.autostash true
 
 ```
+
+:::tip 使浏览器接受 GitHub 推送通知
+
+<https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn>
+
+:::

@@ -1,21 +1,37 @@
 ---
-title: 开始
+title: 初始化
 ---
 
-## 家庭版
+ <div class="alert alert--info" role="alert">
 
-### 更改用户
+## For Win11
 
-Win 11 安装时，系统把你登录的微软账号作为用户名，有些毛病：
+### 家庭版：若需要更改用户
 
-- 需要麻烦的在线登录
+安装后，系统登录的微软账号名作为正式用户名，会有毛病：
+
+- 每次开机麻烦的在线登录
 - 默认目录名路径难记
+- 潜在的捆绑广告服务
 
-如果不满意，运行 `netplwiz.cpl` 创建新用户，并添加为管理员。注销切换到新用户后 `netplwiz.cpl` 可以删除老用户。操作要趁早！
+如果不满意创建新用户的方法：
 
-## 专业版
+运行 `netplwiz` 添加新的本地用户，然后设置 “属性” > “组成员” 为 “管理员”。
+如果还要删除老用户，注销切换到新用户进入 `netplwiz` 删除。
 
-设置计算机名：开始菜单搜索 `name` 关键词
+## 专业版：设置计算机名
+
+开始菜单关键词 `name` 搜索 “查看电脑名称” 进入调整
+
+</div>
+
+## 第一步：备份还原点
+
+      SystemPropertiesProtection
+
+配置 (Alt+O) > 启动系统保护 > 调整最大使用量 > 确定 > 创建 (Alt+C) > 为创建的还原点起名
+
+## 家庭版
 
 ## 设置登录方式
 
@@ -24,10 +40,6 @@ Win 11 安装时，系统把你登录的微软账号作为用户名，有些毛�
 ## 禁用拖慢开机的启动项
 
 打开任务管理器的启动面板，选择你认为没用的软件以禁用
-
-## 设置还原点备份
-
-运行 `SystemPropertiesProtection` 配置启动系统保护，预留一定的磁盘空间使用量，然后创建初始还原点
 
 ## 双系统
 
@@ -45,46 +57,27 @@ Win 11 安装时，系统把你登录的微软账号作为用户名，有些毛�
 
 :::
 
-## 删除不需要的捆绑应用
+## 系统更新
 
-打开 PowerShell
+:::info
 
-- Microsoft Teams
+打开系统更新设置，勾选“接收其他 MS 产品更新”并返回“检查更新”
 
-      Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage
+    ms-settings:windowsupdate-options
 
-- OneDrive
+PS: 如果不介意使用 P2P 流量分享技术，可以进入“传递优化”选择 Internet 下载源以提高速度
 
-      Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
+此外，进入 Store 商店 > 菜单 - 软件和更新 (旧版) / 库(新版)  > 获取更新
 
-- 语音助手
+我们静静等待所有的系统和软件更新
 
-      Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
+:::
 
-- Office 引导
+## 答疑区
 
-      Get-AppxPackage -AllUsers Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
-
-- 小组件
-
-      winget uninstall "windows web experience pack"
-
-## 答疑
-
-Q: 非 zip 的压缩文件格式不支持，打不开？
+Q: 需要打开非 zip 的压缩文件？
 
 安装广受好评的 7z 便携版解压器: https://portableapps.com/apps/utilities/7-zip_portable
-
-Q: 硬盘有必要分区？怎样分区？
-
-A:
-在我看来，2022 年已经没有故意分区的必要性，除非装双系统。
-对固态硬盘而言，软件同操作系统装在 C 盘上能得到很好的使用体验。
-定期使用云盘或[装入硬盘盒的机械硬盘](https://search.jd.com/Search?keyword=%E6%9C%BA%E6%A2%B0%E7%A1%AC%E7%9B%98%E7%9B%92&enc=utf-8)备份重要数据更加靠谱。
-
-Q: 微软商店无法联网？
-
-A: 使用 114 抗干扰 DNS
 
 Q: 重装系统里没有 Office
 

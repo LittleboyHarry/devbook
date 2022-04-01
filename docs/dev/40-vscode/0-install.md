@@ -8,11 +8,11 @@ title: 安装
 
 <p>
 
-<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" target="_blank">Debian / Ubuntu</a>
+<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" target="_blank">Debian or Ubuntu</a>
 
 <span style={{width:16,display:'inline-block'}}> </span>
 
-<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" target="_blank">Windows</a>
+<a className="button button--lg button--primary" href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" target="_blank" style={{cursor:'help'}} title="PowerShell 内置的 Start-BitsTransfer 命令支持 P2P 加速下载">Windows</a>
 
 </p>
 

@@ -6,15 +6,17 @@ title: 为笔记本适配
 
     ms-settings:devices-touchpad
 
+推荐：“三指手势”点击为“鼠标中键”
+
+## 硬件问题
+
+入手的机器 BIOS 可能不是最新版，去厂家官网安装最新的 BIOS 固件升级包，也许可以缓解硬件 bug
+
 ## 调音器
 
 源码：https://github.com/File-New-Project/EarTrumpet
 
     ms-windows-store://pdp?productId=9nblggh516xp&mode=mini
-
-## 硬件问题
-
-入手的机器 BIOS 可能不是最新版，去厂家官网安装最新的 BIOS 固件升级包，也许可以缓解硬件 bug
 
 ## 模拟数字键盘
 
