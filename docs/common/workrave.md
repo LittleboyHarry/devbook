@@ -19,11 +19,11 @@ import GetPkg from '@theme/GetPkg';
 
 <GetPkg name="workrave" apt dnf winget />
 
-:::note 自动化配置脚本
+:::note 笔者的作息规律
 
-笔者的作息规律：40 分钟休息，20 分钟暂停一下
+40 分钟休息，20 分钟暂停一下
 
-<details>
+<details className="let-details-to-gray">
     <summary>Windows 注册表</summary>
 
 ```bat
@@ -48,7 +48,7 @@ reg add HKCU\Software\Workrave\general /v usage-mode /t REG_SZ /d 1 /f
 
 </details>
 
- <details>
+ <details className="let-details-to-gray">
 <summary>Linux 脚本</summary>
 
 ```shell
@@ -73,6 +73,8 @@ dconf write /org/workrave/breaks/daily-limit/enabled false
 dconf write /org/workrave/gui/breaks/block-mode 0
 dconf write /org/workrave/general/usage-mode 1
 ```
+
+打开 gnome-tweaks 添加开机启动程序
 
 Wayland Bug 修复: [问题来源](https://github.com/rcaelers/workrave/issues/94)
 

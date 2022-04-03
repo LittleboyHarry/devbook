@@ -19,9 +19,9 @@ import LogoCard from '@theme/LogoCard';
 
 <br/>
 
-其它桌面版本：https://spins.fedoraproject.org/
+其它桌面版本：https://spins.fedoraproject.org/zh_Hans_CN/
 
-服务器定制版安装：https://getfedora.org/en/server/download/
+服务器定制版安装：https://getfedora.org/zh_Hans_CN/server/download/
 
 ## 推荐硬件
 

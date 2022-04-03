@@ -145,7 +145,6 @@ kwriteconfig5 --file fcitx5/conf/classicui.conf --group "<default>" --key Font "
 kwriteconfig5 --file fcitx5/config --group Behavior --key ShareInputState All
 ```
 
-<!--
 :::note 改善 GNOME 外观的扩展
 
 [kimpanel](https://extensions.gnome.org/extension/261/kimpanel/)
@@ -160,7 +159,6 @@ END
 ```
 
 :::
- -->
 
 ### 双拼
 

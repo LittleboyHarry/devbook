@@ -17,10 +17,13 @@ import GetPkg from '@theme/GetPkg';
 - 细节微调: [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 - 在活动概览视图时，中键关闭:
   [Quick Close in Overview](https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/)
-- 壁纸透显:
-  [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
 - 夜间自动切换:
   [Night Theme Switcher](https://extensions.gnome.org/extension/2236/night-theme-switcher/)
+
+<!--
+- 壁纸透显:
+  [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
+ -->
 
 顶栏：
 
@@ -61,6 +64,7 @@ right-click=false
 END
 ```
 
+<!--
 Blur my Shell:
 
 ```shell
@@ -71,6 +75,7 @@ blur-dash=false
 brightness=0.33
 END
 ```
+-->
 
 Night Theme Switcher:
 
@@ -79,6 +84,8 @@ cat << END | dconf load /org/gnome/shell/extensions/nightthemeswitcher/
 [time]
 always-enable-ondemand=true
 nightthemeswitcher-ondemand-keybinding=['']
+[gtk-variants]
+enabled=true
 END
 ```
 

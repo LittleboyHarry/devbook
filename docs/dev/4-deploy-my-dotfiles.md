@@ -43,6 +43,8 @@ exec zsh
 
 ```zsh
 source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/git.zsh
+source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/prompt_info_functions.zsh
+source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/theme-and-appearance.zsh
 source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/ys.zsh-theme
 ```
 

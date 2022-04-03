@@ -2,6 +2,8 @@
 title: 安装
 ---
 
+依赖：`git`
+
 官方方法：( 其过程需要畅通访问 GitHub )
 
 ```powershell

@@ -4,25 +4,21 @@ title: 键盘与输入法
 
 推荐配置
 
-:::tip 为码字需求者推荐
+## 大量码字需求
 
-<a href="/docs/dev/keymap#windows" target="_blank">更改键盘布局</a>
-
-:::
+推荐更改并习惯<a href="/docs/dev/keymap#windows" target="_blank">新的键盘布局</a>
 
 ## 微软拼音输入法
 
 ### 外观优化
 
-:::note 放大字号、限制 5 个候选词
+放大字号、限制 5 个候选词
 
-```
+```bat
 reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v MaxCandidates /t REG_DWORD /d 5 /f
 reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v FontStyleTSF3 /t REG_SZ /d "22.00pt;Regular;;Microsoft YaHei UI" /f
 
 ```
-
-:::
 
 ### 使用小鹤双拼
 

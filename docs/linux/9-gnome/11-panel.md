@@ -74,12 +74,10 @@ Ubuntu 默认已屏蔽该功能。若要启用该功能，需要添加上述 Jus
 
 ### 隐藏标题栏
 
-安装依赖
+支持部分应用的 [Pixel Saver](https://extensions.gnome.org/extension/723/pixel-saver/) 扩展，
+前置依赖：
 
     sudo dnf in -y xprop
-
-支持部分应用的 Pixel Saver 扩展: https://extensions.gnome.org/extension/723/pixel-saver/
-
 <!--
 ### gtk-title-bar
 

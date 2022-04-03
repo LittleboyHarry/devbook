@@ -6,11 +6,15 @@ title: 安装
 
 Fedora
 
-指纹验证：https://getfedora.org/en/security/
+指纹验证：https://getfedora.org/zh_Hans_CN/security/
 
 所有哈希码：https://pagure.io/fedora-web/websites/blob/master/f/sites/getfedora.org/static/checksums
 
 ## 准备
+
+:::warn 安装前，务必校验系统镜像的完整性
+
+:::
 
 [Ventoy](https://www.ventoy.net/cn/download.html):
 多系统镜像支持的启动盘制作器

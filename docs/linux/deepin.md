@@ -76,14 +76,16 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="linux-distro">
   <TabItem value="debian" label="Ubuntu / Debian">
 
+```shell
 sudo mkdir -p /etc/qemu
 echo "allow virbr0" | sudo tee -a /etc/qemu/bridge.conf
 sudo chmod u+s /usr/lib/qemu/qemu-bridge-helper
+```
 
   </TabItem>
   <TabItem value="centos" label="Fedora">
 
-```bat
+```shell
 sudo systemctl start virtnetworkd
 sudo systemctl enable virtnetworkd # 设置自动启动
 ```

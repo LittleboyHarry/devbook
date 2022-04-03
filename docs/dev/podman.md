@@ -41,4 +41,8 @@ echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/
       "docker.dockerPath": "podman",
       "docker.host": "unix:///run/user/1000/podman/podman.sock",
 
+  运行
+
+      systemctl --user enable --now podman.socket
+
 - [GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)

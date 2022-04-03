@@ -2,11 +2,26 @@
 title: 为笔记本适配
 ---
 
+## 登陆解锁方式
+
+设置 PIN 或指纹
+
 ## 触摸板设置
 
     ms-settings:devices-touchpad
 
 推荐：“三指手势”点击为“鼠标中键”
+
+## BitLocker
+
+<details>
+    <summary>错误：系统找不到制定的文件</summary>
+
+管理员运行：
+
+    mv C:\Windows\System32\Recovery\ReAgent.xml C:\Windows\System32\Recovery\ReAgent.xml.old
+
+</details>
 
 ## 硬件问题
 

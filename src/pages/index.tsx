@@ -162,7 +162,7 @@ const FeatureList: FeatureItem[] = [
       <>
         使用简易的图形化安装器和少量配置快速部署，
         <br />
-        <a href="https://getfedora.org/en/workstation/download/">下载 ISO</a>
+        <a href="https://getfedora.org/zh_Hans_CN/workstation/download/">下载 ISO</a>
         后配置时区、分区和密码即可完成安装
       </>
     ),
