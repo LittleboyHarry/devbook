@@ -1,11 +1,14 @@
 services:
   dev:
-    image: node:lts-slim
-    ports:
-      - 3000:3000
+    build: .
+    ports: [ 3000:3000 ]
     volumes:
-      - ./:/app:Z
-      - /app/.git
-    working_dir: /app
-    command: yarn --ignore-scripts && npm start
+      - ./.docusaurus:/app/.docusaurus
+      - ./docs:/app/docs:ro
+      - ./src:/app/src:ro
+      - ./static:/app/static:ro
+      - ./babel.config.js:/app/babel.config.js:ro
+      - ./docusaurus.config.js:/app/docusaurus.config.js:ro
+      - ./sidebars.js:/app/sidebars.js:ro
+      - ./tsconfig.json:/app/tsconfig.json:ro
     tty: true
