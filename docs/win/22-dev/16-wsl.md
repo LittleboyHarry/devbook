@@ -75,7 +75,7 @@ sudo apt dist-upgrade -y
 
 同理
 
-    ms-windows-store://pdp/?productid=9N6SVWS3RX71&mode=mini
+    ms-windows-store://pdp/?mode=mini&productid=9N6SVWS3RX71
 
 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
 

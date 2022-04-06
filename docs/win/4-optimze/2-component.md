@@ -56,3 +56,18 @@ echo '' '重启 explorer.exe 生效' ''
 }
 
 ```
+
+## 色彩反转
+
+```
+reg add HKCU\Software\Microsoft\ColorFiltering /v HotkeyEnabled /t REG_DWORD /d 1 /f
+reg add HKCU\Software\Microsoft\ColorFiltering /v FilterType /t REG_DWORD /d 2 /f
+
+```
+
+按下 `Win + Ctrl + C` 反转色彩为黑白色（很适用于还没适配深色模式的应用程序）
+
+
+## 字体渲染
+
+若显示器字体模糊，执行 `cttune` 进行调整
