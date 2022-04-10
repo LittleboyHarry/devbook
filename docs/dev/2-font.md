@@ -2,16 +2,15 @@
 title: 字体
 ---
 
-## 推荐
+本文精选字体来自于：主流技术企业的设计作品、开源社区高认可项目
 
-由大公司设计师精心设计出来的编程字体，或开源社区好评字体
+```powershell
+# Windows Scoop 依赖：
+scoop bucket add nerd-fonts
+```
 
-Windows Scoop 依赖安装：
-
-    scoop bucket add nerd-fonts
-
-<details>
-  <summary>KDE wayland bug</summary>
+ <details className="let-details-to-gray">
+<summary>KDE wayland 字体查看器问题修复：</summary>
 
 修复：
 
@@ -22,7 +21,7 @@ sed -i "/Exec/ s/=/=env QT_QPA_PLATFORM=xcb /" org.kde.kfontview.desktop
 cd -
 ```
 
-跟进：https://bugs.kde.org/show_bug.cgi?id=439470
+Bug 报告：[链接](https://bugs.kde.org/show_bug.cgi?id=439470)
 
 </details>
 
@@ -33,6 +32,8 @@ cd -
 import GetPkg from '@theme/GetPkg';
 
 <GetPkg name="goldendict" dnf="jetbrains-mono-fonts" scoop="JetBrains-Mono" />
+
+VSCode 的 `Font Family` 赋值：`JetBrains Mono`
 
 ### CascadiaCode NerdFont
 

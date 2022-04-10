@@ -1,8 +1,6 @@
 ---
-title: 代码比对
+title: 代码比对 delta
 ---
-
-# delta
 
 适合命令行界面下的文件对比工具，比 diff 美观很多
 

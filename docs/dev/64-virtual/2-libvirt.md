@@ -12,21 +12,18 @@ import {
   ForDnf,
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgrScope dnf apt>
+<PreferPkgMgrScope dnf apt>
 <PkgMgrSelector />
-
- <ForDnf>
+<ForDnf>
 
     sudo dnf in -y @virtualization
 
- </ForDnf>
-
- <ForApt>
+</ForDnf>
+<ForApt>
 
     sudo apt install -y virt-manager gnome-boxes
 
- </ForApt>
-
+</ForApt>
 </PreferPkgMgrScope>
 
 解锁虚拟机 XML 编辑器：

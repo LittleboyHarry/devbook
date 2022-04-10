@@ -6,7 +6,7 @@ title: Cockpit
 
 本地访问：
 
-http://localhost:9090/
+    http://localhost:9090/
 
 ## 安装
 

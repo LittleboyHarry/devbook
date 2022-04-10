@@ -4,7 +4,8 @@ title: 安装器
 
 ## 轻松管理 IDE
 
-<p><a className="button" style={{borderRadius:'50vh',background:'coral'}} href="https://www.jetbrains.com/toolbox-app/download/download-thanks.html" target="_blank">
+<p><a className="button" style={{borderRadius:'50vh',background:'coral'}} target="_blank"
+href="https://www.jetbrains.com/toolbox-app/download/download-thanks.html">
 下载 Toolbox App
 </a></p>
 

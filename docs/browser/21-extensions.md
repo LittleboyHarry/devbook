@@ -4,12 +4,12 @@ title: 扩展推荐
 
 ## 获取
 
-| 扩展          | 简介               | Chrome 商店 | Edge 外接程序 |
-| ------------- | ------------------ | ----------- | ------------- |
-| Dark Reader   | 护眼模式           | [Get][dd1]  | [Get][dd2]    |
-| uBlock Origin | 去广告             | [Get][uo1]  | [Get][uo2]    |
-| Linkclump     | 框选多开           | [Get][lc]   |
-| Vimium C      | 免鼠标、键盘侠专用 | [Get][vc1]  | [Get][vc2]    |
+| 扩展名        | 作用               | Chrome 商店 | Edge 外接程序 |
+| ------------- | ------------------ | :---------: | :-----------: |
+| Dark Reader   | 护眼模式           | [Get][dd1]  |  [Get][dd2]   |
+| uBlock Origin | 去广告             | [Get][uo1]  |  [Get][uo2]   |
+| Linkclump     | 框选多开           |  [Get][lc]  |
+| Vimium C      | 免鼠标、键盘侠专用 | [Get][vc1]  |  [Get][vc2]   |
 
 [dd1]: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
 [dd2]: https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc

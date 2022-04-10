@@ -2,10 +2,40 @@
 
 由笔者创作的综合调优的方案，涵盖 ohmyzsh 插件等其它调优的解决方案
 
-依赖：
+依赖包：
 
-- 必须：`git` `python3`
-- 复制功能：`xclip` 或 `xsel`
+import {
+  PreferPkgMgrScope,
+  PkgMgrSelector,
+  ForApt,
+  ForDnf,
+} from '@theme/PreferPkgMgr'
+
+ <PreferPkgMgrScope dnf apt>
+<PkgMgrSelector />
+<ForApt>
+
+```shell
+sudo apt install -y python-is-python3
+
+# 粘贴板：x11 or wayland
+sudo apt install -y xclip
+sudo apt install -y wl-clipboard
+```
+
+</ForApt>
+<ForDnf>
+
+```shell
+sudo dnf install -y git
+
+# 粘贴板：x11 or wayland
+sudo dnf install -y xclip
+sudo dnf install -y wl-clipboard
+```
+
+</ForDnf>
+</PreferPkgMgrScope>
 
 ## 安装
 

@@ -2,6 +2,8 @@
 title: 进阶配置
 ---
 
+import GetPkg from '@theme/GetPkg';
+
 ## AppImage 集成
 
 [rpm 下载](https://github.com/TheAssassin/AppImageLauncher/releases/latest#:~:text=x86_64.rpm)
@@ -27,3 +29,13 @@ ddcutil setvcp 10 0
 # 设置对比度
 ddcutil setvcp 12 100
 ```
+
+## D-Bus 信号调试
+
+静态分析：
+
+<GetPkg name="d-feet" apt dnf />
+
+动态分析：
+
+<GetPkg name="bustle" apt dnf />

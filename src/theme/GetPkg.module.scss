@@ -1,0 +1,6 @@
+.root::before {
+    content: "包管理器：";
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}

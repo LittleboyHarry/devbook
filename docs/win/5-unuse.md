@@ -10,15 +10,11 @@ title: 捆绑服务
 
 ## 选择性卸载
 
-打开 PowerShell
+以管理员身份运行 PowerShell
 
 - OneDrive
 
       Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
-
-- 语音助手
-
-      Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
 
 - Office 引导
 
@@ -26,13 +22,16 @@ title: 捆绑服务
 
 <div className="alert alert--secondary" role="alert">
 
+## For Win10
+
+- 语音助手 Cortana
+      Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
+
 ## For Win11
 
-卸载方法：
+- 语音助手 Cortana
 
-- 小组件
-
-      winget uninstall "windows web experience pack"
+      winget uninstall Microsoft.549981C3F5F10_8wekyb3d8bbwe
 
 - Microsoft Teams
 
@@ -42,7 +41,7 @@ title: 捆绑服务
 
 ## 检查启动项与服务
 
-:::warn 如果你熟知这些服务的功能，且知晓可能的后果
+:::caution 如果你熟知这些服务的功能，且知晓可能的后果
 
 打开任务管理器，点击“启动”面板，禁用启动影响高的无用项。
 

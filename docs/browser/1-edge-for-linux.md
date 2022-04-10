@@ -1,30 +1,40 @@
 ---
-title: 在 Linux 中的 Edge
+title: Edge for Linux
 tags:
   - linux
 ---
 
-Linux 环境推荐浏览器
+## 下载安装
 
-## 安装
+安装后意味着你同意微软的软件许可条款 `edge://terms`，
+[附：历史版本](https://packages.microsoft.com/yumrepos/edge/)
 
-安装后意味着你同意微软的软件许可条款 `edge://terms`
+import {
+  PreferPkgMgrScope,
+  PkgMgrSelector,
+  ForApt,
+  ForDnf,
+} from '@theme/PreferPkgMgr'
 
-Debian:
+ <PreferPkgMgrScope dnf apt>
+<PkgMgrSelector />
+<ForApt>
 
 ```shell
 ## Setup
+sudo apt install curl -y
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-stable.list'
 sudo rm microsoft.gpg
 ## Install
 sudo apt update
-sudo apt install microsoft-edge-stable
-sudo rm /etc/apt/sources.list.d/microsoft-edge-stable.list
+sudo apt install -y microsoft-edge-stable
+sudo rm /etc/apt/sources.list.d/microsoft-edge.list
 ```
 
-RPM:
+</ForApt>
+<ForDnf>
 
 ```shell
 cd $(xdg-user-dir DOWNLOAD)
@@ -33,17 +43,22 @@ sudo dnf in -y microsoft-edge-stable-*.rpm
 cd -
 ```
 
-附：[更多历史版本 ...](https://packages.microsoft.com/yumrepos/edge/)
+</ForDnf>
+</PreferPkgMgrScope>
 
 ## 设为默认浏览器
 
-GNOME:
+**GNOME:**
 
     gnome-control-center default-apps
 
-KDE: 搜索关键词 `compon` 进入设置
+**KDE:**
 
-## 初始化
+搜索关键词 `compon` 进入设置
+
+## 启动参数
+
+强化功能注入：
 
 ```shell
 mkdir -p ~/.local/share/applications
@@ -58,20 +73,14 @@ chmod +x msedge
 cd -
 ```
 
-`msedge` 为程序的缩写名，在 Shell 中输入以启动。原程序名为 `microsoft-edge`。
-若要添加默认的启动参数：
+说明：
+`msedge` 为具有启动参数的程序缩写名，可在 Shell 中执行 ( 原程序名为 `microsoft-edge` )
+
+使用：启动参数修改方法，即编辑可执行文件
 
     xdg-open ~/.local/bin/msedge
 
-不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
-
-:::caution 可能要重新登录
-
-    echo $PATH | grep --color /.local/bin
-
-如果没有显示，请重新登录
-
-:::
+格式：不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
 
 ### GPU 视频加速
 
@@ -79,10 +88,8 @@ cd -
 
     --enable-features=VaapiVideoDecoder,VaapiVideoEncoder
 
-输入: `about:gpu` 看到 `Video Decode: Hardware accelerated` 字样，说明配置成功
-
 <details className="let-details-to-gray">
-  <summary>高分辨率屏，界面太小？</summary>
+  <summary>方案一：解决高分辨率屏界面太小</summary>
 
 添加启动参数：
 
@@ -90,7 +97,35 @@ cd -
 
 </details>
 
-### GPU 图形加速
+方案二：触摸板可放大 (仅 wayland 支持，[与方案一互斥](https://bugs.chromium.org/p/chromium/issues/detail?id=910797))
+
+    --enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4
+
+### 作用于 PWA 应用启动器
+
+也可以添加为自启动脚本，免去每次手动执行命令：
+
+    for f in ~/.local/share/applications/msedge-*.desktop; do sed -i "/Exec/ s#/opt/microsoft/msedge/microsoft-edge#msedge#" "$f" ; done
+
+### 自定义专用启动器
+
+建议了解并使用多配置机制。作者喜欢使用两个配置身份，一个用于日常匿名浏览，另一个用于个人登陆
+
+    cd ~/.local/share/applications/
+
+我们 cp 复制一份 `microsoft-edge.desktop` 并编辑
+
+1. `Name` 为应用名称
+2. 为 `Exec=` 添加启动参数，绑定浏览器默认的启动配置名：`Default` `Profile 1` ...
+
+   ```
+   --profile-directory="Default"
+   ```
+
+3. `Actions=...` 以及下方 `[Desktop Action *]` 描述了动作菜单信息，无需可删
+
+
+## GPU 图形处理加速
 
 Win Mac 默认已经激活优化特性，但 Linux 需要手动开启：
 
@@ -104,29 +139,18 @@ about:flags/#enable-zero-copy
 
 重启浏览器完成，详细信息见 `about:gpu`
 
-## 多用户配置
+## 验证
 
-建议添加多一个配置，用于个人日常网站登陆，另一个用于匿名浏览
+下方命令执行后，如果没有显示，需重新登录：
 
-## 其它
+    echo $PATH | grep --color /.local/bin
 
-使启动参数作用于 PWA 程序：有需要还可以添加为自启动脚本
+随后打开浏览器，我们看看“命令行”里的启动参数是否存在：
 
-    for f in ~/.local/share/applications/msedge-*.desktop; do sed -i "/Exec/ s#/opt/microsoft/msedge/microsoft-edge#msedge#" "$f" ; done
+    about:vesion
 
-:::info 自定义专用启动器
+:::tip 总结
 
-cd ` ~/.local/share/applications/` 中，
-复制一份 `microsoft-edge.desktop` 并编辑
-
-- `Name` 为应用名称
-- 为 `Exec=` 添加启动参数 `--profile-directory="Default"` 或 `Profile n`
-  以绑定浏览器默认的启动配置
-- `[Desktop Action *]` 条目记录了子菜单信息，无需可删
+本篇教大家如何解锁浏览器的常用功能。通过上述配置后，我们得到了与 Win/Mac 体验相当的 Edge 浏览器。
 
 :::
-
-<!--
-互斥 bug: https://bugs.chromium.org/p/chromium/issues/detail?id=910797
-enable-features=UseOzonePlatform --ozone-platform=wayland
--->

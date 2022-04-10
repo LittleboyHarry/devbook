@@ -1,7 +1,5 @@
 ---
-title: 文本格式转换
+title: 文本格式转换 pandoc
 ---
-
-# pandoc
 
     sudo dnf in -y pandoc

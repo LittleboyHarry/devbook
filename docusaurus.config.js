@@ -41,9 +41,11 @@ const config = {
             require.resolve('./src/css/utils.css'),
           ],
         },
+        /*
         gtag: {
           trackingID: 'G-6LEX3L7TYD',
         },
+        */
       }),
     ],
   ],

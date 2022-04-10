@@ -1,8 +1,6 @@
 ---
-title: 文本查找
+title: 文本查找 ripgrep
 ---
-
-# ripgrep
 
 import GetPkg from '@theme/GetPkg';
 

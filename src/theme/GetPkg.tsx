@@ -3,12 +3,15 @@ import React from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
+import cs from 'classnames';
+import st from './GetPkg.module.scss';
 
 function addItem({
   items,
   expression,
   key,
   label,
+  hint,
   defaultPkgName,
   prefix,
 }: {
@@ -16,12 +19,13 @@ function addItem({
   expression: any;
   key: string;
   label: string;
+  hint?: string;
   defaultPkgName?: string;
   prefix: string;
 }) {
   if (expression)
     items.push(
-      <TabItem {...{ key, value: key, label }}>
+      <TabItem attributes={{ title: hint }} {...{ key, value: key, label }}>
         <CodeBlock className="language-shell">
           {`${prefix} ${expression === true ? defaultPkgName : expression}`}
         </CodeBlock>
@@ -53,8 +57,8 @@ export default function GetPkg({
   const groupId = (() => {
     let groupId = 'getpkg-';
     const keys = [];
-    if (dnf) keys.push('dnf');
     if (apt) keys.push('apt');
+    if (dnf) keys.push('dnf');
     if (scoop) keys.push('scoop');
     if (winget) keys.push('winget');
     if (pacman) keys.push('pacman');
@@ -66,27 +70,30 @@ export default function GetPkg({
 
   addItem({
     items,
-    expression: dnf,
-    key: 'dnf',
-    label: 'rpm (Linux)',
-    defaultPkgName: name,
-    prefix: 'sudo dnf install -y',
-  });
-
-  addItem({
-    items,
     expression: apt,
     key: 'apt',
-    label: 'deb (Linux)',
+    label: 'apt',
+    hint: 'debian 包管理器',
     defaultPkgName: name,
     prefix: 'sudo apt install -y',
   });
 
   addItem({
     items,
+    expression: dnf,
+    key: 'dnf',
+    label: 'dnf',
+    hint: 'RPM 包管理器',
+    defaultPkgName: name,
+    prefix: 'sudo dnf install -y',
+  });
+
+  addItem({
+    items,
     expression: scoop,
     key: 'scoop',
-    label: 'scoop (Windows)',
+    label: 'scoop',
+    hint: 'Windows 社区包管理器',
     defaultPkgName: name,
     prefix: 'scoop install',
   });
@@ -95,7 +102,8 @@ export default function GetPkg({
     items,
     expression: winget,
     key: 'winget',
-    label: 'winget (Windows)',
+    label: 'winget',
+    hint: 'Windows 官方包管理器',
     defaultPkgName: name,
     prefix: 'winget install',
   });
@@ -113,7 +121,8 @@ export default function GetPkg({
     items,
     expression: pipx,
     key: 'pipx',
-    label: 'pipx (Python)',
+    label: 'pipx',
+    hint: '改进的 pip',
     defaultPkgName: name,
     prefix: 'pipx install',
   });
@@ -122,12 +131,16 @@ export default function GetPkg({
     items,
     expression: yarn,
     key: 'yarn',
-    label: 'yarn (Node.js)',
+    label: 'yarn',
+    hint: 'Node.js 包管理器',
     defaultPkgName: name,
     prefix: 'yarn global add',
   });
   return (
-    <Tabs className={longBanner && 'tabs--block'} groupId={groupId}>
+    <Tabs
+      className={cs(longBanner && 'tabs--block', st.root)}
+      groupId={groupId}
+    >
       {items}
     </Tabs>
   );

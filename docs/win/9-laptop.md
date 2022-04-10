@@ -1,5 +1,5 @@
 ---
-title: 为笔记本适配
+title: 笔记本优化
 ---
 
 ## 登陆解锁方式
@@ -22,6 +22,14 @@ title: 为笔记本适配
     mv C:\Windows\System32\Recovery\ReAgent.xml C:\Windows\System32\Recovery\ReAgent.xml.old
 
 </details>
+
+## 节电
+
+按需调整：
+
+    ms-settings:batterysaver-settings
+
+<!-- confirm?: ms-settings:batterysaver -->
 
 ## 硬件问题
 

@@ -2,9 +2,13 @@
 title: 安装
 ---
 
-使用需同意微软产品相关条款
+## 开源社区版
 
-下载安装包：
+https://mirrorz.org/app/VSCodium
+
+## 免费商业版
+
+使用后代表你同意微软公司的相关条款。下载安装包：
 
 <p>
 
@@ -16,7 +20,7 @@ title: 安装
 
 </p>
 
-rpm:
+**RPM:**
 
 ```shell
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -25,4 +29,4 @@ dnf check-update
 sudo dnf install code -y
 ```
 
-from: [官方说明](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions)
+摘自 [官方文档](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions)

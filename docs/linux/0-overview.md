@@ -6,23 +6,6 @@ title: 概述
 上网查资料、简单多媒体处理、编程开发等日常用途。
 ( 游戏需求请优先考虑装 Windows 双系统 )
 
-## 下载获取
-
-import LogoCard from '@theme/LogoCard';
-
-<LogoCard.Container>
-
-<LogoCard name="Fedora" label="RPM 类 Linux 系统" to="https://getfedora.org/zh_Hans_CN/workstation/download/" logo={ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-plain.svg" /> }/>
-<LogoCard name="Ubuntu" label="Debian 类 Linux 系统" to="https://cn.ubuntu.com/download/desktop" logo={ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" /> }/>
-
-</LogoCard.Container>
-
-<br/>
-
-其它桌面版本：https://spins.fedoraproject.org/zh_Hans_CN/
-
-服务器定制版安装：https://getfedora.org/zh_Hans_CN/server/download/
-
 ## 推荐硬件
 
 - PC 当今的主流 CPU 架构: amd64 (x86_64)
@@ -32,8 +15,16 @@ import LogoCard from '@theme/LogoCard';
 
 - 非 N 卡类开源显卡（ N 卡安装会稍多些步骤 ）
 
----
+## 如何选择发行版？
 
-注：
+本手册考虑选择一种相对稳定的、生态成熟的、物理机安装的发行版。
+排除掉国内各种小众罕见的发行版，仅推荐两类系统：
 
-- Ubuntu 是 Debian 同构品，如无例外则，两术语等效或近似。Fedora 与 CentOS 等同理
+- Fedora ( CentOS )
+- Debian ( Ubuntu )
+
+[比较分享的参考文章](https://www.toutiao.com/article/6710056109211648523/)
+
+<!-- todo: explain -->
+
+<!-- todo: 美化 -->
