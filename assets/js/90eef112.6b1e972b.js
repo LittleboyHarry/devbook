@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgeekbook=self.webpackChunkgeekbook||[]).push([[8585],{29:function(e){e.exports=JSON.parse('{"name":"linux","permalink":"/geekbook/docs/tags/linux","docs":[{"id":"browser/edge-for-linux","title":"Edge for Linux","description":"\u4e0b\u8f7d\u5b89\u88c5","permalink":"/geekbook/docs/browser/edge-for-linux"}],"allTagsPath":"/geekbook/docs/tags"}')}}]);
