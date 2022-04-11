@@ -77,6 +77,8 @@ title: 初始化
 
 `Win + R` 运行对话框，可按下 `Ctrl + Shift + Enter` 提权运行
 
+:::
+
 关闭快速启动
 
     reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /f /d 0
@@ -85,7 +87,9 @@ title: 初始化
 
     reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 
-:::
+在“启动和故障恢复”中设置多 Windows 的系统启动的时间、默认选择
+
+    SystemPropertiesAdvanced
 
 ## 答疑区
 

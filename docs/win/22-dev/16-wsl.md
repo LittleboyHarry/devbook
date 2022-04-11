@@ -20,8 +20,9 @@ dism /online /enable-feature /featurename:VirtualMachinePlatform /all
 
 :::note 配置内核自动更新
 
-打开更新设置 `ms-settings:windowsupdate-options`，
-启动“接收其它 Microsoft 产品的更新”。
+    ms-settings:windowsupdate-options
+
+打开更新设置，启动“接收其它 Microsoft 产品的更新”。
 
 :::
 
