@@ -16,7 +16,7 @@ import {
 <ForApt>
 
 ```shell
-sudo apt install -y python-is-python3
+sudo apt install -y git python-is-python3
 
 # 粘贴板：x11 or wayland
 sudo apt install -y xclip

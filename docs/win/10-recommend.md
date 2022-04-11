@@ -4,36 +4,41 @@ title: 软件推荐
 
 <!-- winget install veracrypt -->
 
+import {HtmlA,MstoreLink} from '@theme/links';
+
 ## 自由软件
 
-微软 PowerToys
+<!-- 硬盘空间分析: [KDE Filelight](https://www.microsoft.com/store/productId/9PFXCD722M2C) -->
 
-    ms-windows-store://pdp?productId=XP89DCGQ3K6VLD&mode=mini
+<div className="simplify-table">
 
-硬盘空间分析: [KDE Filelight](https://www.microsoft.com/store/productId/9PFXCD722M2C)
+|                                                       |                        |
+| ----------------------------------------------------- | ---------------------- |
+| <MstoreLink id="XP89DCGQ3K6VLD" name="PowerToys" />   | 微软出品的系统增强工具 |
+| <MstoreLink id="9PFXCD722M2C" name="KDE Filelight" /> | 硬盘空间分析           |
 
-    ms-windows-store://pdp/?mode=mini&productid=9PFXCD722M2C
+</div>
 
-### 护眼
+护眼：
 
-自动深色模式: [Auto Dark Mode](https://github.com/AutoDarkMode/Windows-Auto-Night-Mode)
+<div className="simplify-table">
 
-    ms-windows-store://pdp/?mode=mini&productid=XP8JK4HZBVF435
+|                                                          |                    |
+| -------------------------------------------------------- | ------------------ |
+| <MstoreLink id="XP8JK4HZBVF435" name="Auto Dark Mode" /> | 自动深色模式       |
+| <MstoreLink id="9PLJWWSV01LK" name="Twinkle Tray" />     | 外接显示屏亮度调节 |
 
-外接显示屏亮度调节: [Twinkle Tray](https://github.com/xanderfrangos/twinkle-tray)
-
-    ms-windows-store://pdp/?mode=mini&productid=9PLJWWSV01LK
+</div>
 
 ## 付费软件
 
-修图: [Afinity Photo](https://www.microsoft.com/store/productId/9NBLGGH35LXN)
+<div className="simplify-table">
 
-    ms-windows-store://pdp/?mode=mini&productid=9NBLGGH35LXN
+|                                                          |      |
+| -------------------------------------------------------- | ---- |
+| <MstoreLink id="9NBLGGH35LXN" name="Afinity Photo" />    | 修图 |
+| <MstoreLink id="9NBLGGH35LRM" name="Afinity Designer" /> | 制图 |
 
-做图: [Afinity Designer](https://www.microsoft.com/store/productId/9NBLGGH35LRM)
+</div>
 
-    ms-windows-store://pdp/?mode=mini&productid=9NBLGGH35LRM
-
-### 国内正版代理商
-
-https://zhuanlan.zhihu.com/p/93284719
+国内正版代理商索引：https://zhuanlan.zhihu.com/p/93284719

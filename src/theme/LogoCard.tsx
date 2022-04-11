@@ -9,21 +9,26 @@ export default function LogoCard({
   to,
   logo,
   label,
+  noNewTab,
   onClick,
 }: {
   name: ReactNode;
   to?: string;
   logo: ReactNode;
   label?: string;
+  noNewTab?: boolean;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 }) {
   return (
     <Link
-      className={cs('card', st.card)}
-      href={to || '#'}
-      target="_blank"
-      {...(label && { title: label, style: { cursor: 'help' } })}
-      onClick={onClick}
+      {...{
+        className: cs('card', st.card),
+        href: to || '#',
+        title: label,
+        style: { cursor: label ? 'help' : 'default' },
+        target: noNewTab ? '_self' : '_blank',
+        onClick,
+      }}
     >
       <div className={st.logoSlot}>{logo}</div>
       <p

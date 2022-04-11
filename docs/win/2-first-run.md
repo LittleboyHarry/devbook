@@ -2,6 +2,8 @@
 title: 初始化
 ---
 
+import {HtmlA} from '@theme/links';
+
 ## 第一步：备份还原点
 
 运行：
@@ -12,29 +14,21 @@ title: 初始化
 
 ## 第二步：系统更新
 
-:::info
-
-连接网络，打开设置查看系统更新情况：
-
-    ms-settings:windowsupdate-options
-
-选调:
+连接网络，调整<HtmlA href="ms-settings:windowsupdate-options">更新高级选项</HtmlA>：
 
 - 勾选“接收其他 MS 产品更新”
-- 如果不介意使用 P2P 流量分享技术，可以进入“传递优化”选择 Internet 下载源以提高速度
+- 如果不介意使用 P2P 流量分享技术：进入“传递优化”选择 Internet 下载源以提高速度
 
 此外，更新所有应用软件：
 
 进入旧版 Store 商店 > 菜单 - 软件和更新  > 下载和更新
 （ 新版：库 > 获取更新
 
-:::
+ <div className="alert alert--secondary" role="alert">
 
- <div class="alert alert--info" role="alert">
+## 针对 Win11
 
-## For Win11
-
-### 家庭版：若需要更改用户
+### 家庭版
 
 安装后，系统登录的微软账号名作为正式用户名，会有毛病：
 
@@ -47,9 +41,9 @@ title: 初始化
 运行 `netplwiz` 添加新的本地用户，然后设置 “属性” > “组成员” 为 “管理员”。
 如果还要删除老用户，注销切换到新用户进入 `netplwiz` 删除。
 
-## 专业版：设置计算机名
+### 专业版
 
-开始菜单关键词 `name` 搜索 “查看电脑名称” 进入调整
+开始菜单关键词 `name` 搜索 “查看电脑名称” 设置计算机名
 
 </div>
 
@@ -87,7 +81,7 @@ title: 初始化
 
     reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 
-在“启动和故障恢复”中设置多 Windows 的系统启动的时间、默认选择
+多 Windows 的系统启动：在“启动和故障恢复”中设置的选择时间、默认选项
 
     SystemPropertiesAdvanced
 

@@ -1,15 +1,8 @@
 ---
-title: 双系统配置
+title: 双系统设置
 ---
 
-## 划分共享数据分区
-
-### 推荐格式
-
-exFAT 是一种仍对 Windows 和 Linux 兼容性均优的分区格式，尽管现代 Linux 对 NTFS 分区支持已改善很多。
-推荐设置 exFAT 格式分区用于跨系统共享存储数据
-
-### 自动挂载
+## 分区自动挂载
 
 为其它数据分区设置自动挂载，以免每次启动后需要手动挂载。
 推荐使用 `gnome-disks` 或 KDE 的图形化硬盘分区管理器，配置：
@@ -29,7 +22,7 @@ exFAT 是一种仍对 Windows 和 Linux 兼容性均优的分区格式，尽管�
 
 fstab 详细参考 [ArchWiki](<https://wiki.archlinux.org/title/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
-## [rEFInd](https://www.rodsbooks.com/refind/getting.html)
+## [rEFInd](https://www.rodsbooks.com/refind/getting.html) 引导器
 
 可用于 EFI 的多系统启动器，
 

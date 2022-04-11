@@ -37,35 +37,33 @@ title: 分区加密
       ```shell
       cryptsetup luksFormat -q /dev/$ENCRPART_NAME
       cryptsetup luksOpen /dev/$ENCRPART_NAME $MAPPER_NAME
+      mkfs /dev/mapper/$MAPPER_NAME
       ```
 
 3. 不要关闭终端窗口，运行系统安装器
 4. 其他安装流程与 Ubuntu 相同，手动分区：
 
-   1. 点击加密设备以创建分区表
-   2. 点击“空闲”创建挂载根目录的分区，文件格式推荐 `ext4` 或 `btrfs`
-   3. 添加分区：`ext4` 格式、挂载到 `/boot`
-   4. 选择安装启动器的设备
+   1. 更改已解锁的根目录分区：推荐 `ext4` 或 `btrfs` 文件格式
+   2. 更改启动分区：`ext4` 格式、挂载到 `/boot`
+   3. 选择安装启动器的设备
 
 5. **安装完成后“继续试用”**，回到终端内执行：
 
-   1. 挂载新系统根目录
+   1. 挂载新系统的根目录
 
-      普通文件系统
-
-      ```shell
-      echo && echo "RUN: mount /dev/mapper/<unlock_part> /target"
-      printf "<unlock_part>:" && ls /dev/mapper/
-      ```
-
-      BTRFS 文件系统
+      普通文件系统：
 
       ```shell
-      echo && echo "RUN: mount /dev/mapper/<unlock_part> /mnt && mount -B /mnt/@ /target"
-      printf "<unlock_part>: " && ls /dev/mapper/
+      mount /dev/mapper/$MAPPER_NAME /target
       ```
 
-   2. chroot 到新系统
+      Btrfs 文件系统：
+
+      ```shell
+      mount /dev/mapper/$MAPPER_NAME /mnt && mount -B /mnt/@ /target
+      ```
+
+   2. 特殊挂载并 chroot 至新系统
 
       ```shell
       mount /dev/$BOOTPART_NAME /target/boot
@@ -83,7 +81,6 @@ title: 分区加密
       echo $MAPPER_NAME UUID=$ROOTPART_UUID none luks > /etc/crypttab
       update-initramfs -u -k all -v > /tmp/initrd.log
       update-grub
-      exit
       ```
 
    4. ( 验证信息 )：
@@ -102,7 +99,7 @@ title: 分区加密
       echo "LOG: less /tmp/initrd.log"
       ```
 
-5. 关机，取出介质后重启
+6. 关机，取出介质后重启
 
 方法摘录自 [artmg 的文档](https://github.com/artmg/lubuild/blob/master/help/configure/LxQt-Kubuntu-Ubiqity-manual-encryption-bug.md)
 

@@ -24,11 +24,11 @@ title: 其它
 
 https://sourceforge.net/projects/imdisk-toolkit/
 
-## [硬盘空间分析](https://www.microsoft.com/store/productId/9PFXCD722M2C)
+## 硬盘空间分析
 
-KDE Filelight:
+import {MstoreButton} from '@theme/links';
 
-    winget install 9PFXCD722M2C
+<MstoreButton name="KDE Filelight" id="9PFXCD722M2C" />
 
 <!--
 ## WizTree

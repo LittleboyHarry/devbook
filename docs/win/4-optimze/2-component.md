@@ -1,5 +1,5 @@
 ---
-title: 组件调优
+title: 调整组件
 ---
 
 作者推荐的常用优化：
@@ -25,16 +25,11 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Laun
 
     reg add HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v RotatingLockScreenEnabled /t REG_DWORD /d 0 /f
 
- <div className="alert alert--secondary" role="alert">
+## 自动清理
 
-## For Win10
+import {HtmlA} from '@theme/links';
 
-配置硬盘自动清理：使用“存储感知”功能
-
-    ms-settings:storagepolicies
-
-</div>
-
+<HtmlA href="ms-settings:storagepolicies">设置“存储感知”</HtmlA>
 
 ## 开始菜单
 

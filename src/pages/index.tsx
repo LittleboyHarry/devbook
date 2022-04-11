@@ -52,6 +52,7 @@ export default function Home(): JSX.Element {
     <Layout description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
+        {/*
         <section className={styles.features}>
           <div className="container">
             <h2 style={{ textAlign: 'center', marginTop: '2rem' }}>
@@ -64,6 +65,7 @@ export default function Home(): JSX.Element {
             </div>
           </div>
         </section>
+        */}
         <section
           style={{
             display: 'flex',
@@ -130,7 +132,9 @@ export default function Home(): JSX.Element {
                 <li>快速三次点击，选中本行</li>
                 <li>Linux 中键会粘贴选中的文本</li>
               </ul>
-              <strong>内容仅供读者参考，配置前请备份好重要数据。作者不承担任何风险与后果！</strong>
+              <strong>
+                内容仅供读者参考，配置前请备份好重要数据。作者不承担任何风险与后果！
+              </strong>
             </div>
           </div>
           <div style={{ height: '1rem' }} />

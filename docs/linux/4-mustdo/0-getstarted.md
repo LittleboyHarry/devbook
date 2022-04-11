@@ -10,10 +10,9 @@ title: 初始优化
 
 ## 界面缩放与文字大小
 
-**GNOME**
+**GNOME**: 更多需求请用 `gnome-tweaks` 调整
 
-我的 14 寸电脑缩放后所用的配置 —— 大号缩放、字体字号、光标等属性。
-( 更多需求请用 `gnome-tweaks` 调整 )
+作者 14 寸显示屏缩放后所用的配置：大号缩放、字体字号、光标等属性。
 
 ```shell
 cat << END | dconf load /org/gnome/desktop/interface/
@@ -26,9 +25,9 @@ cursor-size=48
 END
 ```
 
-**KDE**
+**KDE**: 搜索关键词 `fonts` 设置
 
-搜索关键词 `fonts` 设置，选择统一调整字体、且记住合适的字号 （ 14 寸屏推荐 15~18 之间 ）重新登陆后生效
+1080p 分辨率 14\~16寸 中文界面的字体 dpi 推荐值为 144\~120 附近，重新登陆后生效
 
 <!--
 ## 中文支持
@@ -43,9 +42,9 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 ```
 -->
 
-:::note 提高操作效率的键位调整
+:::info 提高操作效率的键位调整
 
-作者推荐<a target="_blank" href="/docs/dev/keymap">改变键位映射的方法</a>，需要适应一段时间
+作者推荐 <a target="_blank" href="/docs/dev/keymap">改变键位映射的方法</a> ，需要适应一段时间
 
 :::
 

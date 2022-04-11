@@ -2,15 +2,20 @@
 title: 绿化软件制作
 ---
 
-本文以 Windows 应用沙盒化为例（专业版功能）
+本文以 Windows 应用沙盒化为例（专业版功能）。安装方法：管理员权限运行
 
-制作工具必备：
+    Dism /online /Enable-Feature /All /FeatureName:Containers-DisposableClientVM
+
+内外界交换文件或数据的方法：Ctrl + C / V 复制、粘贴
+
+最大化窗口：通过拉动置顶而非点击按钮
+
+制作工具：
 
 - [FolderChangesView](https://www.nirsoft.net/utils/folder_changes_view.html): 监控文件夹变更
-  - 监控选项推荐激活 `folder summary mode` 简化结果视图
 - [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html): 分析注册表变化
 
-内外界交换文件、数据的方法：Ctrl + C / V 复制、粘贴
+文件夹监控开始前勾选 `folder summary mode` 简化结果视图
 
 留意：
 
@@ -24,8 +29,6 @@ title: 绿化软件制作
 | C:\Users\WDAGUtilityAccount\Desktop | 桌面映射           |
 
 </div>
-
-最大化，拉动窗口而非点击
 
 ## 支持中文输入法
 
@@ -58,7 +61,7 @@ $LanguageList.Add("zh-CN")
 Set-WinUserLanguageList $LanguageList -Force
 ```
 
-官方文档：
+## 相关文档
 
 - https://docs.microsoft.com/zh-cn/windows/security/threat-protection/windows-sandbox/windows-sandbox-architecture
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-configure-using-wsb-file

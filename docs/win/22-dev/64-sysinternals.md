@@ -2,13 +2,15 @@
 title: Sysinternals
 ---
 
-安装
+安装：
 
     winget install sysinternals
-    # or:
+
+&nbsp;
+
     scoop install sysinternals
 
-| 模块            | 功能                             |
+| 程序            | 功能                             |
 | --------------- | -------------------------------- |
 | Autoruns        | 管理自动运行等加载项，优化系统   |
 | ProcessExplorer | 更好的任务管理器                 |

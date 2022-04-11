@@ -2,7 +2,7 @@
 title: 目录
 ---
 
-import {TopGrid,EditorGrid,DevEnvGrid} from './PageIndexGrid'
+import {TopGrid,EditorGrid,DevEnvGrid} from './devdocsgrid'
 
 <TopGrid/>
 

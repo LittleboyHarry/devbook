@@ -6,41 +6,12 @@ title: Fedora
 
 我们也可以在 `gnome-software` 中启动或关闭，以免更新时访问 copr 拖慢速度
 
-<details className="let-details-to-gray">
-  <summary>
-可以删除的捆绑应用
-</summary>
 
-开源版 Office:
-
-    sudo dnf remove libreoffice*
-
-已经 <a href="/docs/browser/edge-for-linux" target="_blank" >安装 Edge</a> 来代替 Firefox
-
-    sudo dnf remove firefox
-
-删除之上述大型应用后，系统更新将更快完成！
-
-</details>
-
-## 更新系统
-
-激活功能：自动选择加速镜像源的
-
-    sudo dnf config-manager --save --setopt=fastestmirror=True
-
-**保持网络畅通，安装更新过程中尽量避免其它操作、待其完成后重启[^2]**
-
-方法一：执行命令
-
-    sudo dnf upgrade -y
-
-<!-- todo:? send notify after update -->
-
+<!--
 方法二：使用“GNOME 软件”更新
 
-[^1]: 若镜像站发生故障，导致下载中断，可修改 `/etc/hosts` 将其域名屏蔽 `127.0.0.1`
 [^2]: 若经常发生 Linux 内核故障，请看[内核问题](/docs/linux/kernel#fedora)文档
+-->
 
 
 ### 软件仓补充

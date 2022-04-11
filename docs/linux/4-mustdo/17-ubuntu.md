@@ -1,34 +1,6 @@
 ---
-title: Debian or Ubuntu
+title: Ubuntu
 ---
-
-## 更改软件源
-
-使用 HTTPS 可以避免流量劫持、优化体验（ Debian 10 及以上版本内置的 `apt-transport-https` 模块支持 ）
-
-```shell
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.old
-
-# Debian 使用腾讯云镜像站:
-sudo sed -i "s#http://\(deb\|security\)\.debian\.org#https://mirrors.cloud.tencent.com#g" /etc/apt/sources.list
-# Ubuntu 使用腾讯云镜像站:
-sudo sed -i "s#http://\(cn\.archive\|security\)\.ubuntu\.com#https://mirrors.cloud.tencent.com#g" /etc/apt/sources.list
-# 不检索源码包：
-sudo sed -i "/deb-src/ s/^/#/" /etc/apt/sources.list
-
-sudo apt update
-```
-
-<details className="let-details-to-yellow">
-<summary>或用 Ubuntu 图形化界面快速完成上述操作：</summary>
-
-1. 打开 “软件和更新” ( 搜索关键词 `sof` )，选择合适的下载源
-
-   Ubuntu 下载 -> 下载自 ( 默认“中国的服务器”指的是 cn.archive.ubuntu.com )
-
-2. 打开 “软件更新器” ( 搜索关键词 `upd` ) 更新系统
-
-</details>
 
 ## Ubuntu
 
@@ -64,6 +36,8 @@ rm -rf ~/snap/
 ### Kubuntu Wayland
 
 :::caution 这是 KDE 实验性技术，仍在开发完善中
+
+例如使用连接显示器、关机时可能会触发 bug
 
 :::
 

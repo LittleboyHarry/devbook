@@ -5,7 +5,6 @@ title: Vim 模式
 ## 配置
 
 ```json
-// 顾名思义:
 "vim.startInInsertMode": true,
 "vim.useSystemClipboard": true,
 // 组合键冲突：https://github.com/VSCodeVim/Vim/issues/1437

@@ -1,9 +1,9 @@
 ---
-title: 目录
+title: 工具索引
 ---
 
-import PageIndexGrid from './PageIndexGrid';
+import CliToolsGrid from './CliToolsGrid';
 
 改善的命令行工具：
 
-<PageIndexGrid />
+<CliToolsGrid />

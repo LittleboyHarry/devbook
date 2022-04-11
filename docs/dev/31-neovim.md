@@ -14,7 +14,7 @@ import GetPkg from '@theme/GetPkg';
 
 ```shell
 git config --global core.editor nvim
-echo export SYSTEMD_EDITOR=nvim | tee -a .bashrc .zshrc
+echo export SYSTEMD_EDITOR=nvim | tee -a ~/.bashrc ~/.zshrc
 ```
 
 ## 自动配置

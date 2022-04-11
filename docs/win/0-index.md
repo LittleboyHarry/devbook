@@ -2,6 +2,6 @@
 title: 目录
 ---
 
-import PageIndexGrid from './PageIndexGrid';
+import WinDocsGrid from './WinDocsGrid';
 
-<PageIndexGrid />
+<WinDocsGrid />

@@ -1,28 +1,26 @@
 ---
-title: PowerShell 7
+title: PowerShell
 ---
 
-> PowerShell 是最好的 Windows Shell !!!
+import {MstoreButton} from '@theme/links';
 
-系统内置的第 5 版已不再更新，需要额外安装新版：（其图标色彩由蓝变黑）
+**PowerShell 是最好的 Windows Shell !!!**
 
-:::info 安装方式
+## 安装
 
-自动安装：（需要商店已登录，可自动升级）
+系统内置的第 5 版已不再更新，推荐使用 PowerShell7：其图标色彩由蓝变黑）
 
-    ms-windows-store://pdp?productId=9MZ1SNWT0N5D&mode=mini
+方法一：登录商店安装，支持自动更新
 
-命令行安装：从 GitHub 下载
+<MstoreButton id="9MZ1SNWT0N5D" name="从应用商店安装" />
+
+方法二：从 GitHub 下载
 
     winget install Microsoft.PowerShell
 
-手动安装：
-
-[清华镜像包](https://mirrors.tuna.tsinghua.edu.cn/github-release/PowerShell/PowerShell/LatestRelease/#:~:text=win%2Dx64.msi)
-
-:::
-
-确保 Windows Terminal 为最新版，然后在其里设置默认终端
+方法三：从
+[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/github-release/PowerShell/PowerShell/LatestRelease/#:~:text=win%2Dx64.msi)
+下载
 
 ## 配置
 
@@ -72,8 +70,5 @@ echo 'Install-GuiCompletion -Key Tab' >> $profile
 
 ## 内置的实用命令
 
-历史记录：
-
-`r` 重做
-
-`h` 会话输入的历史命令
+- `r` 重复上一条命令
+- `h` 历史记录（当前会话）

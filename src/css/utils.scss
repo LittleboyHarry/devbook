@@ -12,6 +12,7 @@
   --ifm-alert-foreground-color: var(--ifm-color-warning-contrast-foreground);
   --ifm-alert-border-color: var(--ifm-color-warning-dark);
 }
+
 .let-details-to-yellow {
   --ifm-alert-background-color: var(--ifm-color-warning-contrast-background);
   --ifm-alert-background-color-highlight: rgba(255, 186, 0, 0.15);
@@ -26,6 +27,19 @@
   --ifm-alert-border-color: var(--ifm-color-secondary-darkest);
 }
 
-.no-admonition-uppercase-title .admonition-heading > h5 {
+.no-admonition-uppercase-title .admonition-heading>h5 {
   text-transform: none;
+}
+
+.simplify-table {
+  &>table {
+    &>thead {
+      display: none;
+    }
+
+    td {
+      border-left: none;
+      border-right: none;
+    }
+  }
 }

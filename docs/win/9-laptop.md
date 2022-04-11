@@ -1,20 +1,18 @@
 ---
-title: 笔记本优化
+title: 为笔记本优化
 ---
 
-## 登陆解锁方式
+## 设置
 
-设置 PIN 或指纹
-
-## 触摸板设置
-
-    ms-settings:devices-touchpad
-
-推荐：“三指手势”点击为“鼠标中键”
+- 解锁方式： 设置 PIN 或指纹
+- <HtmlA href="ms-settings:devices-touchpad">配置触摸板</HtmlA>：建议“三指手势”点击作为“鼠标中键”
+- <HtmlA href="ms-settings:batterysaver-settings">节省电量</HtmlA>
 
 ## BitLocker
 
-<details>
+仅专业版可用，防盗加密。veracrypt 是开源替代品
+
+<details className="let-details-to-gray">
     <summary>错误：系统找不到制定的文件</summary>
 
 管理员运行：
@@ -23,23 +21,17 @@ title: 笔记本优化
 
 </details>
 
-## 节电
-
-按需调整：
-
-    ms-settings:batterysaver-settings
-
-<!-- confirm?: ms-settings:batterysaver -->
-
 ## 硬件问题
 
 入手的机器 BIOS 可能不是最新版，去厂家官网安装最新的 BIOS 固件升级包，也许可以缓解硬件 bug
 
 ## 调音器
 
-源码：https://github.com/File-New-Project/EarTrumpet
+import {MstoreButton} from '@theme/links';
 
-    ms-windows-store://pdp?productId=9nblggh516xp&mode=mini
+<MstoreButton id="9nblggh516xp" name="从商店安装 EarTrumpet" />
+
+*来自[开源项目](https://github.com/File-New-Project/EarTrumpet)*
 
 ## 模拟数字键盘
 

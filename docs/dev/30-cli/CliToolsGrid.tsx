@@ -14,7 +14,7 @@ import {
   faPython,
 } from '@fortawesome/free-brands-svg-icons';
 
-export default function PageIndexGrid() {
+export default function CliToolsGrid() {
   return (
     <>
       <LogoCard.Container>

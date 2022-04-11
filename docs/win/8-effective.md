@@ -25,9 +25,9 @@ title: 提高效率
 
 ## 访问键
 
+import {HtmlA} from '@theme/links';
+
 通过按 `Alt + 字母` 的组合键，触发按钮或菜单项，以避免移动鼠标、改善效率。
-设置方法，运行：
 
-    ms-settings:easeofaccess-keyboard
-
-勾选“为访问键添加下划线”后，可访问的元素都会有下划线标记的字母。
+<HtmlA href="ms-settings:easeofaccess-keyboard">设置“辅助功能>键盘”</HtmlA>，
+勾选“为访问键添加下划线”。可访问的元素都会有下划线标记的字母。

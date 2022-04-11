@@ -38,7 +38,7 @@ const config = {
         theme: {
           customCss: [
             require.resolve('./src/css/docusaurus.css'),
-            require.resolve('./src/css/utils.css'),
+            require.resolve('./src/css/utils.scss'),
           ],
         },
         /*

@@ -1,34 +1,34 @@
 ---
-title: 开始
+title: Win 开发者必做
 ---
 
 为开发用途适配 Windows
+
+import {HtmlA,DownloadButton,MstoreButton,MstoreLink} from '@theme/links';
 
 ## 剪贴板收集器
 
 `Win + V` 启动剪贴板历史记录
 
-## 解决微软商店下载困难
+## 网络问题
+
+解决微软商店下载困难的方法：
 
 1. 设置 114 抗干扰 DNS
-2. `ms-settings:delivery-optimization` 开启“传递优化”来提高下载速度
-3. 启动代理支持，管理员运行：
+2. <HtmlA href="ms-settings:delivery-optimization">开启“传递优化”</HtmlA> 提高下载速度
+3. 管理员运行：使微软商店支持全局代理
 
    ```
    CheckNetIsolation LoopbackExempt -a -n="Microsoft.WindowsStore_8wekyb3d8bbwe"
    ```
 
-## 安装 winget
+## 软件更新
 
-升级一下，激活 winget 使用能力
+<MstoreButton id="9N0DX20HK701" name="Windows Terminal" />
 
-    ms-windows-store://pdp?productId=9NBLGGH4NNS1&mode=mini
+<MstoreButton id="9NBLGGH4NNS1" name="winget" />
 
-手动升级：https://github.com/microsoft/winget-cli/releases/latest#:~:text=.msixbundle
-
-## 升级 `Windows Terminal`
-
-    winget install 9N0DX20HK701
+手动更新: [下载 winget](https://github.com/microsoft/winget-cli/releases/latest#:~:text=.msixbundle)
 
 ## 快捷键冲突
 
@@ -63,14 +63,16 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 ## 开发神器
 
-- <a href="docs/dev/vscode/install" target="_blank" download>VSCode</a>
-- Visual Studio
+<DownloadButton name="VSCode"
+ hint="P2P 加速下载方法：使用 PowerShell 的 Start-BitsTransfer 命令"
+ href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" />
 
-      winget install XPDCFJDKLZJLP8
+<MstoreButton id="XPDCFJDKLZJLP8" name="Visual Studio 安装器" />
 
 ## Git For Windows
 
-<p><a className="button button--primary" href="https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/LatestRelease/#:~:text=64%2Dbit.exe">清华镜像站</a></p>
+<DownloadButton name="从清华镜像站下载"
+ href="https://gitforwindows.org/download/releases/latest" />
 
 :::note 自动化安装参数：
 
@@ -84,7 +86,7 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 ### 能长期记住口令的 `ssh-agent` 服务
 
-管理员运行：
+提权运行：
 
 ```powershell
 Get-Service ssh-agent | Set-Service -StartupType Automatic
@@ -101,3 +103,21 @@ git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
 ## 字体
 
 [参见](/docs/dev/font)
+
+修复“管理控制台”模糊问题，提权运行：
+
+    reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v C:\Windows\System32\mmc.exe /t REG_SZ /d "~ HIGHDPIAWARE" /f
+
+## 虚拟机
+
+自由软件 VirtualBox
+
+    winget install virtualbox -i
+
+专业版 Hyper-V 虚拟机
+
+    DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+
+个人非商业版 WMware WorkstationPlayer
+
+    winget install VMware.WorkstationPlayer -i
