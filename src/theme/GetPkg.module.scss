@@ -1,6 +1,15 @@
-.root::before {
-    content: "用包管理器安装：";
+.root {
+  &::before {
+    content: '用包管理器安装：';
     display: flex;
     align-items: center;
     margin: 0 1rem;
+  }
+
+  font-weight: normal;
+  :global(.tabs__item--active) {
+    font-weight: bolder;
+
+    border: none;
+  }
 }

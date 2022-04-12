@@ -136,6 +136,7 @@ export default function GetPkg({
     defaultPkgName: name,
     prefix: 'yarn global add',
   });
+
   return (
     <Tabs
       className={cs(longBanner && 'tabs--block', st.root)}

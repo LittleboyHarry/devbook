@@ -104,7 +104,7 @@ git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
 
 [参见](/docs/dev/font)
 
-修复“管理控制台”模糊问题，提权运行：
+修复“管理控制台”模糊问题：
 
     reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v C:\Windows\System32\mmc.exe /t REG_SZ /d "~ HIGHDPIAWARE" /f
 

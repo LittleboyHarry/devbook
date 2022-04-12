@@ -2,6 +2,8 @@
 title: 为笔记本优化
 ---
 
+import {HtmlA} from '@theme/links';
+
 ## 设置
 
 - 解锁方式： 设置 PIN 或指纹
