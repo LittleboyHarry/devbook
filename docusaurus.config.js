@@ -65,27 +65,21 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'browser/intro',
+            docId: 'win/index',
             position: 'left',
-            label: '浏览器',
+            label: 'Win',
           },
           {
             type: 'doc',
-            docId: 'common/intro',
+            docId: 'software/intro',
             position: 'left',
-            label: '通用',
+            label: '实用软件',
           },
           {
             type: 'doc',
             docId: 'dev/intro',
             position: 'left',
             label: '开发',
-          },
-          {
-            type: 'doc',
-            docId: 'win/index',
-            position: 'left',
-            label: 'Win',
           },
           {
             href: 'https://github.com/littleboyharry/geekbook/issues',

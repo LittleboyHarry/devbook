@@ -52,6 +52,6 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 可选的优化：
 
 - 推荐 <a target="_blank" href="/docs/dev/zsh">使用 Zsh 作为默认 Shell</a>
-- 推荐 <a target="_blank" href="/docs/browser/edge-for-linux">使用微软 Edge 浏览器</a>
+- 推荐 <a target="_blank" href="/docs/software/browser/edge-for-linux">使用微软 Edge 浏览器</a>
 
  -->

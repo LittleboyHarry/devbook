@@ -29,7 +29,7 @@ sudo dnf upgrade -y
 
     sudo dnf remove libreoffice*
 
-计划使用 <a href="/docs/browser/edge-for-linux" target="_blank" >Edge</a> 来代替 Firefox
+计划使用 <a href="/docs/software/browser/edge-for-linux" target="_blank" >Edge</a> 来代替 Firefox
 
     sudo dnf remove firefox
 

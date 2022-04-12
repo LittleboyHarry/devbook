@@ -1,15 +1,15 @@
-import React from 'react';
-import clsx from 'clsx';
+import React, { ReactNode } from 'react';
+import cs from 'clsx';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.scss';
+import st from './index.module.scss';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={cs('hero hero--primary', st.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -18,24 +18,28 @@ function HomepageHeader() {
   );
 }
 
+function HomepageImage({ filename }: { filename: string }) {
+  const src = useBaseUrl('img/index/' + filename);
+
+  return <img src={src} alt={filename} />;
+}
+
 function Tile({
-  href,
-  imgSrc,
   title,
+  href,
+  img,
   description,
 }: {
-  href: string;
-  imgSrc: string;
   title: string;
-  description: string;
+  img: ReactNode;
+  href?: string;
+  description?: string;
 }) {
-  const src = useBaseUrl('img/index/' + imgSrc);
-
   return (
     <li>
       <a href={href}>
-        <img src={src} alt="" />
-        <div>
+        {img}
+        <div className={st.tileLabel}>
           <b dir="auto">
             <span>{title}</span>
           </b>
@@ -77,42 +81,43 @@ export default function Home(): JSX.Element {
         >
           <div className="container">
             <h2 style={{ textAlign: 'center' }}>涵盖的内容</h2>
-            <ul className={styles.tileList}>
+            <ul className={st.tileList}>
               <Tile
                 title="Linux"
                 description="为极客配置"
                 href="docs/linux/overview"
-                imgSrc="icon_linux.svg"
-              />
-              <Tile
-                title="美化"
-                description="GNOME"
-                href="docs/linux/gnome/basic"
-                imgSrc="icon_gnome.svg"
-              />
-              <Tile
-                title="浏览器"
-                description="提高工作效率"
-                href="docs/browser/intro"
-                imgSrc="icon_browser.svg"
-              />
-              <Tile
-                title="开源软件"
-                description="倾力推荐"
-                href="docs/common/intro"
-                imgSrc="icon_foss.svg"
-              />
-              <Tile
-                title="开发"
-                description="环境配置"
-                href="docs/dev/intro"
-                imgSrc="icon_dev.svg"
+                img={<HomepageImage filename="icon_linux.svg" />}
               />
               <Tile
                 title="Windows"
                 description="为开发适配"
                 href="docs/win/index"
-                imgSrc="icon_win.svg"
+                img={
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" />
+                }
+              />
+              <Tile
+                title="实用软件"
+                description="倾力推荐"
+                href="docs/software/intro"
+                img={<HomepageImage filename="icon_foss.svg" />}
+              />
+              <Tile
+                title="浏览器"
+                description="提高工作效率"
+                href="docs/software/browser/edge-for-linux"
+                img={<HomepageImage filename="icon_browser.svg" />}
+              />
+              <Tile
+                title="桌面美化"
+                description="GNOME , KDE , Win"
+                img={<HomepageImage filename="icon_gnome.svg" />}
+              />
+              <Tile
+                title="开发"
+                description="环境配置"
+                href="docs/dev/intro"
+                img={<HomepageImage filename="icon_dev.svg" />}
               />
             </ul>
           </div>
@@ -138,7 +143,7 @@ export default function Home(): JSX.Element {
             </div>
           </div>
           <div style={{ height: '1rem' }} />
-          <div className={styles.buttons}>
+          <div className={st.buttons}>
             <Link
               className="button button--secondary button--lg"
               to="docs/linux/overview"
@@ -166,7 +171,9 @@ const FeatureList: FeatureItem[] = [
       <>
         使用简易的图形化安装器和少量配置快速部署，
         <br />
-        <a href="https://getfedora.org/zh_Hans_CN/workstation/download/">下载 ISO</a>
+        <a href="https://getfedora.org/zh_Hans_CN/workstation/download/">
+          下载 ISO
+        </a>
         后配置时区、分区和密码即可完成安装
       </>
     ),
@@ -193,9 +200,9 @@ function FeatureWithImg({ title, image, description }: FeatureItem) {
   const imgSrc = useBaseUrl(image);
 
   return (
-    <div className={clsx('col col--4')}>
+    <div className={cs('col col--4')}>
       <div className="text--center">
-        <img className={styles.featureSvg} alt={title} src={imgSrc} />
+        <img className={st.featureSvg} alt={title} src={imgSrc} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
