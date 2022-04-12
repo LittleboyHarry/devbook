@@ -2,7 +2,7 @@
 title: KDE 配置
 ---
 
-:::info 从搜索开始
+:::tip 从搜索开始
 
 按下 `Alt + Space` 激活 KRunner，按本文完成基本配置：
 
@@ -29,11 +29,13 @@ title: KDE 配置
 
    右击开始菜单 > 显示备选方案… > 切换到“应用程序面板”
 
-:::info 快速访问任务栏应用
+:::note 快速访问任务栏应用
 
 Super + 数字键 类似 Windows 任务栏效果，推荐程序员固定浏览器和终端到一、二号位
 
 :::
+
+---
 
 <!--
 ## Konsole 终端
@@ -73,19 +75,18 @@ kwriteconfig5 --file kwinrc --group Plugins --key overviewEnabled true
 kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_dimscreenEnabled true
 ```
 
-:::tip
+:::note 最大化窗口隐藏标题栏
 
-上述配置完成后，请注销回话以生效
-
-:::
-
-
-:::note 最大化窗口
-
-KDE 默认切换快捷键：`Super + PageUp`。隐藏标题栏的配置：
+按 `Super + PageUp` 切换最大化窗口状态，配置：
 
     kwriteconfig5 --file ~/.config/kwinrc --group Windows --key BorderlessMaximizedWindows true
     qdbus org.kde.KWin /KWin reconfigure
+
+:::
+
+:::tip
+
+上述配置完成后，请注销回话以生效
 
 :::
 

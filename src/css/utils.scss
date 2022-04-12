@@ -27,19 +27,28 @@
   --ifm-alert-border-color: var(--ifm-color-secondary-darkest);
 }
 
-.no-admonition-uppercase-title .admonition-heading>h5 {
+.no-admonition-uppercase-title .admonition-heading > h5 {
   text-transform: none;
 }
 
-.simplify-table {
-  &>table {
-    &>thead {
-      display: none;
-    }
+.no-table-border table td {
+  border-left: none;
+  border-right: none;
+}
 
-    td {
-      border-left: none;
-      border-right: none;
-    }
+.no-table-header table > thead {
+  display: none;
+}
+
+.left-float-scope {
+  > * {
+    float: left;
+    margin-right: 3rem;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
   }
 }

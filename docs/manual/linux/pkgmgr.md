@@ -28,22 +28,20 @@ import {
 <PkgMgrSelector />
 <ForApt>
 
-## dpkg
+## debian 包管理器
 
-:::info 日志记录
+### 查看日志
 
     less /var/log/dpkg.log
 
-:::
-
-### 图形化助手 synaptic
+### 图形化助手
 
     sudo apt install -y synaptic
 
 </ForApt>
 <ForDnf>
 
-## RPM
+## RedHat 包管理器
 
 下载升级，缓存以备使用
 
@@ -54,7 +52,7 @@ import {
     dnf config-manager --dump
 
 
-:::note 远程软件仓
+### 远程软件仓
 
 枚举
 
@@ -64,8 +62,6 @@ import {
 
     sudo dnf config-manager --set-disabled <repo>
 
-:::
-
 ### 组管理
 
 列出包组
@@ -74,7 +70,7 @@ import {
 
 ### 包降级
 
-可避免软件新版出现的 bug，摘抄自：https://unix.stackexchange.com/q/266888
+可避免软件新版出现的 bug，[摘自](https://unix.stackexchange.com/q/266888)
 
 ```shell
 sudo dnf downgrade <package>

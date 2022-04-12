@@ -1,5 +1,5 @@
 ---
-title: 引言
+title: 说明
 ---
 
 - VirtualBox: 通用性

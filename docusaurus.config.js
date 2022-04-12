@@ -73,13 +73,19 @@ const config = {
             type: 'doc',
             docId: 'software/intro',
             position: 'left',
-            label: '实用软件',
+            label: '常用软件',
           },
           {
             type: 'doc',
             docId: 'dev/intro',
             position: 'left',
-            label: '开发',
+            label: '开发环境',
+          },
+          {
+            type: 'doc',
+            docId: 'manual/intro',
+            position: 'left',
+            label: '经验手册',
           },
           {
             href: 'https://github.com/littleboyharry/geekbook/issues',

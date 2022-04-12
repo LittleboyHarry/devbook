@@ -91,8 +91,8 @@ export function PkgMgrSelector({}: {}) {
 
   return (
     <div className="pills pills--block" style={{ marginBottom: '1rem' }}>
-      <RadioChoice test={apt} type="apt" label="apt" />
-      <RadioChoice test={dnf} type="dnf" label="dnf" />
+      <RadioChoice test={apt} type="apt" label="dpkg - apt" />
+      <RadioChoice test={dnf} type="dnf" label="RPM - dnf" />
     </div>
   );
 }

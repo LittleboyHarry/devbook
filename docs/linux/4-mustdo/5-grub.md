@@ -35,8 +35,10 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-## 在 KDE 中设置开机画面
+:::note 在 KDE 中设置开机画面
 
     sudo apt install -y kde-config-plymouth
 
 搜索关键词 `plymouth` 选择不同的画面
+
+:::

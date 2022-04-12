@@ -1,23 +1,31 @@
 ---
-title: GNOME 技巧
+title: 桌面环境 GNOME 技巧
 ---
 
 - 按住 Super 键 + 鼠标滚轮可以切换工作区，以方便整理多应用窗口
 
 ## 快捷键
 
-通用
+ <div className="no-table-header">
+<div className="left-float-scope">
+<div>
 
-| 键          | 作用           |
+### 通用
+
+|             |                |
 | ----------- | -------------- |
 | Alt + Tab   | 切换窗口       |
 | Super + Tab | 应用间切换窗口 |
 
-gedit 文本编辑器：
+</div><div>
 
-| 键       | 作用   |
+### gedit 文本编辑器
+
+|          |        |
 | -------- | ------ |
 | Ctrl + D | 删除行 |
+
+</div></div></div>
 
 ## 为具体应用单独设置缩放的方法
 
