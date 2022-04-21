@@ -33,9 +33,9 @@ $SHELL -i -c "nvm install --lts"
 
 ## 国区加速
 
-淘宝加速：
+`.npmrc` :
 
-    npm i -g mirror-config-china --registry=https://registry.npm.taobao.org
+    https://cdn.jsdelivr.net/gh/littleboyharry-contrib/hooks@master/example/taro/.npmrc
 
 ## yarn 与 pnpm
 

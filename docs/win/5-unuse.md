@@ -12,30 +12,38 @@ title: 捆绑服务
 
 以管理员身份运行 PowerShell
 
-- OneDrive
+```powershell
+# OneDrive
+Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
 
-      Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
+# Office 引导
+Get-AppxPackage -AllUsers Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
 
-- Office 引导
+# Powershell ISE ( VSCode 代替 )
+Dism /Online /Remove-Capability /NoRestart /CapabilityName:Microsoft.Windows.PowerShell.ISE
 
-      Get-AppxPackage -AllUsers Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
+```
 
-<div className="alert alert--secondary" role="alert">
+ <div className="alert alert--secondary" role="alert">
 
 ## For Win10
 
-- 语音助手 Cortana
-      Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
+```powershell
+# 语音助手 Cortana
+Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
+
+```
 
 ## For Win11
 
-- 语音助手 Cortana
+```powershell
+# 语音助手 Cortana
+winget uninstall Microsoft.549981C3F5F10_8wekyb3d8bbwe
 
-      winget uninstall Microsoft.549981C3F5F10_8wekyb3d8bbwe
+# Microsoft Teams
+Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage
 
-- Microsoft Teams
-
-      Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage
+```
 
 </div>
 
