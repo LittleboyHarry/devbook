@@ -6,6 +6,7 @@ import {
   faTerminal,
   faPersonWalkingLuggage,
 } from '@fortawesome/free-solid-svg-icons';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export function TopGrid() {
   return (
@@ -18,9 +19,7 @@ export function TopGrid() {
       <LogoCard
         name="Git"
         to="git"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/git.svg')} />}
       />
       <LogoCard
         name={<span style={{ fontSize: '1.125rem' }}>deploy-my-dotfiles</span>}
@@ -42,26 +41,17 @@ export function EditorGrid() {
       <LogoCard
         name="Neovim"
         to="neovim"
-        logo={
-          <img
-            src="https://cdn.jsdelivr.net/gh/neovim/neovim@master/packaging/logo.svg"
-            width="90%"
-          />
-        }
+        logo={<img src={useBaseUrl('/img/icons/neovim.svg')} width="90%" />}
       />
       <LogoCard
         name="VSCode"
         to="vscode/install"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/vscode.svg')} />}
       />
       <LogoCard
         name="JetBrains IDE"
         to="jetbrains/toolbox"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/JetBrains/intellij-community@master/platform/icons/src/idea_CE.ico" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/intellij.svg')} />}
       />
     </LogoCard.Container>
   );
@@ -73,16 +63,12 @@ export function DevEnvGrid() {
       <LogoCard
         name="Node.js"
         to="nodejs"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/nodejs.svg')} />}
       />
       <LogoCard
         name="Python"
         to="python"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/python.svg')} />}
       />
     </LogoCard.Container>
   );

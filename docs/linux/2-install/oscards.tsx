@@ -1,5 +1,6 @@
 import React, { PropsWithChildren, ReactNode } from 'react';
 import LogoCard from '@theme/LogoCard';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export const { Container } = LogoCard;
 
@@ -29,9 +30,7 @@ export const cards = {
         name="Workstation"
         label="GNOME 桌面环境"
         to="https://getfedora.org/zh_Hans_CN/workstation/download/"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-plain.svg" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/fedora.svg')} />}
       />
     );
   },
@@ -40,9 +39,7 @@ export const cards = {
       <LogoCard
         name="KDE Plasma"
         to="https://spins.fedoraproject.org/kde/download/index.html"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-original.svg" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/fedora-original.svg')} />}
       />
     );
   },
@@ -51,9 +48,7 @@ export const cards = {
       <LogoCard
         name="Ubuntu"
         to="https://cn.ubuntu.com/download/desktop"
-        logo={
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" />
-        }
+        logo={<img src={useBaseUrl('/img/icons/ubuntu.svg')} />}
       />
     );
   },

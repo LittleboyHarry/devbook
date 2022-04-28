@@ -26,10 +26,28 @@ scoop install nodejs*
 
 Debian 默认提供的 nodejs 12 版本太低，很多 npm 依赖包不支持。使用 nvm 安装 lts 新版：
 
+import {
+PreferMirror,
+FromOrigin,
+FromGitee,
+} from '@theme/PreferMirror'
+
+ <PreferMirror origin gitee>
+<FromOrigin>
+
 ```shell
-curl -o- https://cdn.jsdelivr.net/gh/nvm-sh/nvm@v0.39.1/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 $SHELL -i -c "nvm install --lts"
 ```
+</FromOrigin>
+<FromGitee>
+
+```shell
+wget -qO- https://gitee.com/mirrors/nvm/raw/v0.39.1/install.sh | bash
+$SHELL -i -c "nvm install --lts"
+```
+</FromGitee>
+</PreferMirror>
 
 ## 国区加速
 
@@ -53,5 +71,13 @@ $SHELL -i -c "nvm install --lts"
     corepack prepare pnpm@<新版> --activate
 
 </details>
+
+yarn for Windows:
+
+```powershell
+$newpath = [Environment]::GetEnvironmentVariable("PATH", "User") + ";$(yarn global bin)"
+[Environment]::SetEnvironmentVariable("PATH", $newpath, "User")
+
+```
 
 - [PNPM 介绍](https://pnpm.io/zh/motivation)

@@ -5,6 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import st from './index.module.scss';
+import Windows8Icon from '@site/static/img/icons/windows8-original.svg';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -93,7 +94,7 @@ export default function Home(): JSX.Element {
                 description="为开发适配"
                 href="docs/win/index"
                 img={
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" />
+                  <img src={useBaseUrl('/img/icons/windows8-original.svg')} />
                 }
               />
               <Tile

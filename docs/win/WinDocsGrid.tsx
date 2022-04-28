@@ -3,6 +3,7 @@ import LogoCard from '@theme/LogoCard';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToolbox, faCode } from '@fortawesome/free-solid-svg-icons';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function WinDocsGrid() {
   return (
@@ -11,16 +12,12 @@ export default function WinDocsGrid() {
         <LogoCard
           name="下载 Win10"
           to="https://www.microsoft.com/zh-cn/software-download/windows10"
-          logo={
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" />
-          }
+          logo={<img src={useBaseUrl('/img/icon/windows8-original.svg')} />}
         />
         <LogoCard
           name="下载 Win11"
           to="https://www.microsoft.com/zh-cn/software-download/windows11"
-          logo={
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" />
-          }
+          logo={<img src={useBaseUrl('/img/icon/windows8-original.svg')} />}
         />
         <LogoCard
           name="微 PE 工具箱"

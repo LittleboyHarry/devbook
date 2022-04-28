@@ -15,7 +15,7 @@ type Options = { [key in PkgMgrType]?: boolean };
 const localStorageKey = 'custom.preferPkgMgr';
 
 const PreferPkgMgrContext = createContext({
-  active: 'dnf',
+  active: 'dnf' as PkgMgrType,
   setActive(_value: PkgMgrType) {},
   options: {} as Options,
 });
@@ -49,36 +49,22 @@ export function PreferPkgMgrScope({
   );
 }
 
-function RadioChoice({
-  test,
-  type,
-  label,
-}: {
-  test?: boolean;
-  type: PkgMgrType;
-  label: string;
-}) {
+function RadioChoice({ type, label }: { type: PkgMgrType; label: string }) {
   const { active, setActive } = useContext(PreferPkgMgrContext);
   const checked = active === type;
   return (
-    test && (
-      <label
-        className={cs(
-          st.choice,
-          'pills__item',
-          checked && 'pills__item--active'
-        )}
-      >
-        <input
-          type="radio"
-          value={type}
-          name="prefer-pkgmgr"
-          checked={checked}
-          onChange={({ target: { value } }) => setActive(value as PkgMgrType)}
-        />
-        {label}
-      </label>
-    )
+    <label
+      className={cs(st.choice, 'pills__item', checked && 'pills__item--active')}
+    >
+      <input
+        type="radio"
+        value={type}
+        name="prefer-pkgmgr"
+        checked={checked}
+        onChange={({ target: { value } }) => setActive(value as PkgMgrType)}
+      />
+      {label}
+    </label>
   );
 }
 
@@ -87,12 +73,10 @@ export function PkgMgrSelector({}: {}) {
     options: { apt, dnf },
   } = useContext(PreferPkgMgrContext);
 
-  const items: JSX.Element[] = [];
-
   return (
     <div className="pills pills--block" style={{ marginBottom: '1rem' }}>
-      <RadioChoice test={apt} type="apt" label="dpkg - apt" />
-      <RadioChoice test={dnf} type="dnf" label="RPM - dnf" />
+      {apt && <RadioChoice type="apt" label="dpkg - apt" />}
+      {dnf && <RadioChoice type="dnf" label="RPM - dnf" />}
     </div>
   );
 }
