@@ -38,6 +38,7 @@ export default function GetPkg({
   dnf,
   apt,
   scoop,
+  choco,
   winget,
   pacman,
   pipx,
@@ -48,6 +49,7 @@ export default function GetPkg({
   dnf?: true | string;
   apt?: true | string;
   scoop?: true | string;
+  choco?: true | string;
   winget?: true | string;
   pacman?: true | string;
   pipx?: true | string;
@@ -96,6 +98,16 @@ export default function GetPkg({
     hint: 'Windows 社区包管理器',
     defaultPkgName: name,
     prefix: 'scoop install',
+  });
+
+  addItem({
+    items,
+    expression: choco,
+    key: 'choco',
+    label: 'choco',
+    hint: 'Windows 商服包管理器',
+    defaultPkgName: name,
+    prefix: 'choco install',
   });
 
   addItem({

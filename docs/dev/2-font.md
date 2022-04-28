@@ -43,7 +43,7 @@ Nerd Font 支持版下载: https://github.com/ryanoasis/nerd-fonts/releases/late
 
 Windows:
 
-    scoop install CascadiaCode-NF
+<GetPkg scoop="CascadiaCode-NF" choco="cascadia-code-nerd-font" />
 
 参见关于图标字体 Nerd Font 的[官方介绍](https://www.nerdfonts.com/)
 

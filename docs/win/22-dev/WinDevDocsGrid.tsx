@@ -26,8 +26,8 @@ export default function Page() {
           logo={<FontAwesomeIcon icon={faTerminal} />}
         />
         <LogoCard
-          name="Scoop 包管理"
-          to="scoop/install"
+          name="包管理"
+          to="pkgmgr/scoop"
           noNewTab
           logo={<FontAwesomeIcon icon={faCubes} />}
         />
