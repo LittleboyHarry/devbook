@@ -20,7 +20,7 @@ const PreferPkgMgrContext = createContext({
   options: {} as Options,
 });
 
-export function PreferPkgMgrScope({
+export function PreferPkgMgr({
   apt,
   dnf,
   children,
@@ -44,6 +44,10 @@ export function PreferPkgMgrScope({
         options: { apt, dnf },
       }}
     >
+      <div className="pills pills--block" style={{ marginBottom: '1rem' }}>
+        {apt && <RadioChoice type="apt" label="dpkg - apt" />}
+        {dnf && <RadioChoice type="dnf" label="RPM - dnf" />}
+      </div>
       {children}
     </PreferPkgMgrContext.Provider>
   );
@@ -65,19 +69,6 @@ function RadioChoice({ type, label }: { type: PkgMgrType; label: string }) {
       />
       {label}
     </label>
-  );
-}
-
-export function PkgMgrSelector({}: {}) {
-  const {
-    options: { apt, dnf },
-  } = useContext(PreferPkgMgrContext);
-
-  return (
-    <div className="pills pills--block" style={{ marginBottom: '1rem' }}>
-      {apt && <RadioChoice type="apt" label="dpkg - apt" />}
-      {dnf && <RadioChoice type="dnf" label="RPM - dnf" />}
-    </div>
   );
 }
 

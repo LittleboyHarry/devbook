@@ -18,14 +18,12 @@ title: 包管理器
  -->
 
 import {
-  PreferPkgMgrScope,
-  PkgMgrSelector,
+  PreferPkgMgr,
   ForApt,
   ForDnf,
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgrScope dnf apt>
-<PkgMgrSelector />
+ <PreferPkgMgr dnf apt>
 <ForApt>
 
 ## debian 包管理器
@@ -84,4 +82,4 @@ sudo dnf install <package>-<version>
 ```
 
 </ForDnf>
-</PreferPkgMgrScope>
+</PreferPkgMgr>

@@ -5,14 +5,12 @@
 依赖包：
 
 import {
-  PreferPkgMgrScope,
-  PkgMgrSelector,
+  PreferPkgMgr,
   ForApt,
   ForDnf,
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgrScope dnf apt>
-<PkgMgrSelector />
+ <PreferPkgMgr dnf apt>
 <ForApt>
 
 ```shell
@@ -35,7 +33,7 @@ sudo dnf install -y wl-clipboard
 ```
 
 </ForDnf>
-</PreferPkgMgrScope>
+</PreferPkgMgr>
 
 ## 安装
 

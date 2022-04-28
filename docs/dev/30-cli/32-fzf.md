@@ -11,14 +11,12 @@ import GetPkg from '@theme/GetPkg';
 ## Shell 集成
 
 import {
-  PreferPkgMgrScope,
-  PkgMgrSelector,
+  PreferPkgMgr,
   ForApt,
   ForDnf,
 } from '@theme/PreferPkgMgr'
 
-<PreferPkgMgrScope dnf apt>
-<PkgMgrSelector />
+<PreferPkgMgr dnf apt>
 <ForDnf>
 
     printf "source /usr/share/fzf/shell/key-bindings.bash\n" >> ~/.bashrc
@@ -31,7 +29,7 @@ import {
     printf "source /usr/share/doc/fzf/examples/key-bindings.zsh\n" >> ~/.zshrc
 
 </ForApt>
-</PreferPkgMgrScope>
+</PreferPkgMgr>
 
 可以使用一下快捷键：
 

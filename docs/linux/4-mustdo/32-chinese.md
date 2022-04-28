@@ -52,14 +52,12 @@ dconf write /org/gnome/shell/extensions/customize-ibus/custom-font 'Sans 16'
 ## fcitx5
 
 import {
-PreferPkgMgrScope,
-PkgMgrSelector,
+PreferPkgMgr,
 ForApt,
 ForDnf,
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgrScope dnf apt>
-<PkgMgrSelector />
+ <PreferPkgMgr dnf apt>
 <ForDnf>
 
 ```shell
@@ -78,7 +76,7 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 ```
 
 </ForApt>
-</PreferPkgMgrScope>
+</PreferPkgMgr>
 
 ### 自动配置
 

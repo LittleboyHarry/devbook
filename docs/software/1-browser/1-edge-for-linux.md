@@ -10,14 +10,12 @@ tags:
 [附：历史版本](https://packages.microsoft.com/yumrepos/edge/)
 
 import {
-  PreferPkgMgrScope,
-  PkgMgrSelector,
+  PreferPkgMgr,
   ForApt,
   ForDnf,
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgrScope dnf apt>
-<PkgMgrSelector />
+ <PreferPkgMgr dnf apt>
 <ForApt>
 
 ```shell
@@ -44,7 +42,7 @@ cd -
 ```
 
 </ForDnf>
-</PreferPkgMgrScope>
+</PreferPkgMgr>
 
 ## 设为默认浏览器
 

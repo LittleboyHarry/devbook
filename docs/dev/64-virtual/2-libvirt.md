@@ -5,14 +5,12 @@ title: libvirt
 ## 安装
 
 import {
-  PreferPkgMgrScope,
-  PkgMgrSelector,
+  PreferPkgMgr,
   ForApt,
   ForDnf,
 } from '@theme/PreferPkgMgr'
 
-<PreferPkgMgrScope dnf apt>
-<PkgMgrSelector />
+ <PreferPkgMgr dnf apt>
 <ForDnf>
 
     sudo dnf in -y @virtualization
@@ -23,7 +21,7 @@ import {
     sudo apt install -y virt-manager gnome-boxes
 
 </ForApt>
-</PreferPkgMgrScope>
+</PreferPkgMgr>
 
 解锁虚拟机 XML 编辑器：
 
