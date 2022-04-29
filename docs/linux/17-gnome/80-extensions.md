@@ -41,9 +41,9 @@ import GetPkg from '@theme/GetPkg';
 
 - 触摸板手势强化: [Gesture Improvements](https://extensions.gnome.org/extension/4245/gesture-improvements/)
 
-## 推荐配置
+## 作者偏好的配置
 
- <details><summary>作者偏好</summary>
+ <details className="let-details-to-gray"><summary>仅供参考，点击展开 </summary>
 
 Just Perfection:
 
@@ -111,16 +111,10 @@ touchpad-speed-scale=1.25
 END
 ```
 
-Vitals:
-
-    dconf write /org/gnome/shell/extensions/vitals/hot-sensors "['_memory_usage_', '_processor_average_', '__network-rx_max__']"
-    dconf write /org/gnome/shell/extensions/vitals/fixed-widths false
-
 </details>
 
 ## 其它推荐
 
-- 电源菜单按钮: https://extensions.gnome.org/extension/2917/bring-out-submenu-of-power-offlogout-button/
 - 适用于 GNOME 的 KDE Connect 移动设备互联互通:
   [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)，依赖：
 

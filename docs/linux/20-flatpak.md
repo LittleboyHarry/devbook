@@ -1,3 +1,9 @@
+## 安装
+
+import GetPkg from '@theme/GetPkg';
+
+<GetPkg name="flatpak" apt pacman />
+
 ## 添加源
 
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

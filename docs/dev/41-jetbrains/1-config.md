@@ -18,7 +18,7 @@ alt="Edit Custom VM Options"
 
 import ClickToOpenImage from '@theme/ClickToOpenImage';
 
-<ClickToOpenImage>
+ <ClickToOpenImage>
 
 <img
 src={require('./figures/conf-1.png').default}
@@ -35,10 +35,12 @@ src={require('./figures/conf-3.png').default}
 alt="trail"
 />
 
+<!--
 <img
 src={require('./figures/conf-4.png').default}
 alt="widescreen"
 />
+-->
 
 <img
 src={require('./figures/conf-5.png').default}

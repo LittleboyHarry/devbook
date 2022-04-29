@@ -13,7 +13,7 @@ title: 分区加密
 [^1]: https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1066480
 [^2]: https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1510731
 
-1. 进入“试用 Ubuntu”模式，打开 KDE 分区管理器（ 搜索 `part` ）执行分区规划
+1. 进入“试用 Ubuntu”模式，打开 KDE 分区管理器（ 搜索 `parti` ）执行分区规划
 
    - 至少创建一个的加密分区、一个启动分区
    - 文件系统都先选“未格式化”（ 列表内快捷键 `End` ）

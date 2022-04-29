@@ -2,7 +2,13 @@
 title: 进阶配置
 ---
 
-import GetPkg from '@theme/GetPkg';
+## 关机等待时间过长
+
+改 90s 为 10s
+
+    sudo sed -i '/DefaultTimeoutStopSec/{s/#//;s/=90s/=10s/}' /etc/systemd/system.conf
+
+详情分析：https://zhuanlan.zhihu.com/p/256481066
 
 ## AppImage 集成
 
@@ -29,13 +35,3 @@ ddcutil setvcp 10 0
 # 设置对比度
 ddcutil setvcp 12 100
 ```
-
-## D-Bus 信号调试
-
-静态分析：
-
-<GetPkg name="d-feet" apt dnf />
-
-动态分析：
-
-<GetPkg name="bustle" apt dnf />

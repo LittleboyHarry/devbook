@@ -17,11 +17,19 @@ show-weekdate=true
 END
 ```
 
+## 活动热区
+
+鼠标左上角悬停会触发“概览视图” Hot Corners，按需使用：
+
+    gnome-control-center multitasking &!
+
+推荐的功能强化扩展：[Custom Hot Corners Extended](https://extensions.gnome.org/extension/4167/custom-hot-corners-extended/)
+
 ## 扩展推荐
 
-### 托盘图标
+:::note 非 Ubuntu 系统需要显示的[托盘图标](https://extensions.gnome.org/extension/615/appindicator-support/)
 
-非 Ubuntu 系统请安装 [支持扩展](https://extensions.gnome.org/extension/615/appindicator-support/)，作者偏好：
+作者偏好：
 
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/appindicator/
@@ -31,9 +39,28 @@ tray-pos='left'
 END
 ```
 
-### [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
+:::
 
-可调各种细节，推荐：
+:::note 调整电源菜单按钮
+
+从二级菜单中移出的扩展：
+[Bring Out Submenu Of Power Off Logout Button](https://extensions.gnome.org/extension/2917/bring-out-submenu-of-power-offlogout-button/)
+
+:::
+
+:::note 常用文件夹菜单
+
+[Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
+，Fedora 自带的激活方法：
+
+    gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
+
+:::
+
+:::note 调整细节用
+
+[Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
+可调各种细节，推荐配置：
 
 ```shell
 # 使原在中间弹出的通知信息固定在右边位置
@@ -49,6 +76,8 @@ dconf write /org/gnome/shell/extensions/just-perfection/window-demands-attention
 dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
 ```
 
+:::
+
 <details className="let-details-to-gray">
   <summary>把顶栏置于屏幕下方</summary>
 
@@ -58,38 +87,18 @@ dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
 
 </details>
 
-### Hot Corners
-
-:::note 鼠标左上角悬停会触发“概览视图”
-
-Fedora 初始已激活该功能，若要禁用：
-
-    gsettings set org.gnome.desktop enable-hot-corners false
-
-Ubuntu 默认已屏蔽该功能。若要启用该功能，需要添加上述 Just Perfection 插件：
-
-    dconf write /org/gnome/shell/extensions/just-perfection/hot-corner true
-
-:::
-
+<!--
 ### 隐藏标题栏
 
 支持部分应用的 [Pixel Saver](https://extensions.gnome.org/extension/723/pixel-saver/) 扩展，
 前置依赖：
 
     sudo dnf in -y xprop
+-->
+
+
 <!--
 ### gtk-title-bar
 
 https://extensions.gnome.org/extension/1732/gtk-title-bar/
 -->
-
-### 其它
-
-:::note 常用文件夹菜单
-
-[Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/) ( Fedora 自带 )
-
-    gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
-
-:::

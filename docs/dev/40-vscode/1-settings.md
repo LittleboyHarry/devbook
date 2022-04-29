@@ -38,10 +38,14 @@ title: 配置
 
 ## 推荐快捷键
 
+:::note
+
 `Ctrl + Shift + P` 搜索 `oks`，
 选择 **Preferences: Open Keyboard Shortcuts (JSON)** 配置组合键
 
-:::note 选择词块
+:::
+
+### 选择词块
 
 仿 JetBrains IDE，绑定 `Ctrl + W` 键
 
@@ -62,9 +66,7 @@ title: 配置
 }
 ```
 
-:::
-
-:::note 自动应答 \*
+### Windows 自动应答
 
 Windows 环境下，命令行 Ctrl + C 自动应答。
 [1.64 版或以上可用](https://code.visualstudio.com/updates/v1_64#_automatic-replies)
@@ -74,5 +76,3 @@ Windows 环境下，命令行 Ctrl + C 自动应答。
     "终止批处理操作吗(Y/N)?": "Y\r"
 },
 ```
-
-:::

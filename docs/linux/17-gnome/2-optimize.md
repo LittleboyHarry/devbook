@@ -60,7 +60,7 @@ END
 
 ## 推荐的快捷键
 
-Windows 风格的快捷键：
+来自 Windows 风格的快捷键：
 
 <div className="autoselect-cell-of-table">
 
@@ -73,8 +73,10 @@ Windows 风格的快捷键：
 
 </div>
 
+\*注：GNOME 42 已移除 `gnome-screenshot` 并强化了 `PrtScr` 截图键的功能、支持录屏
+
  <details className="let-details-to-gray">
-    <summary>对应的指令：</summary>
+    <summary>对应的配置指令</summary>
 
 ```shell
 cat << END | dconf load /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/
@@ -103,8 +105,6 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['
 ```
 
 </details>
-
-\*注：GNOME 42 已移除 `gnome-screenshot` 并强化了 `PrtScr` 截图键的功能、支持录屏
 
 ## 其它
 

@@ -10,20 +10,24 @@ title: 初始优化
 
 ## 界面缩放与文字大小
 
-**GNOME**: 更多需求请用 `gnome-tweaks` 调整
+**GNOME**: 使用 `gnome-tweaks` 调整
 
-作者 14 寸显示屏缩放后所用的配置：大号缩放、字体字号、光标等属性。
+ <details className="let-details-to-gray">
+<summary>14 寸笔记本显示屏的作者建议配置</summary>
+
+打开 `gnome-tweaks` 的“字体”面板，字号推荐增加 2 或 3 磅
+
+加大缩放比例、光标尺寸：
 
 ```shell
 cat << END | dconf load /org/gnome/desktop/interface/
 [/]
 text-scaling-factor=1.33
-document-font-name='Cantarell 13'
-font-name='Cantarell 13'
-monospace-font-name='DejaVu Sans Mono 12'
-cursor-size=48
+cursor-size=32
 END
 ```
+
+</details>
 
 **KDE**: 搜索关键词 `fonts` 设置
 
@@ -44,7 +48,7 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 
 :::info 提高操作效率的键位调整
 
-作者推荐 <a target="_blank" href="/docs/dev/keymap">改变键位映射的方法</a> ，需要适应一段时间
+作者推荐改变 <a target="_blank" href="/docs/dev/keymap">键位映射</a> ，需要适应一段时间
 
 :::
 

@@ -49,7 +49,7 @@ dconf write /org/gnome/shell/extensions/customize-ibus/custom-font 'Sans 16'
 
 </details>
 
-## fcitx5
+## 获取 fcitx5
 
 import {
 PreferPkgMgr,
@@ -78,7 +78,7 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 </ForApt>
 </PreferPkgMgr>
 
-### 自动配置
+## 自动配置
 
 :::info 请确保启动过一次输入法后退出
 
@@ -93,17 +93,24 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 
 :::
 
-程序开发必做：解除快捷键冲突
+### 解除快捷键冲突
+
+程序开发者请注意：
 
 - 以 Super+Space 代替 Ctrl+Space
 - 解除 Ctrl+Shift+F 简繁体切换键
+
+对应的自动配置脚本：
 
 ```shell
 kwriteconfig5 --file fcitx5/config --group Hotkey/TriggerKeys --key 0 Super+space
 kwriteconfig5 --file fcitx5/conf/chttrans.conf --group Hotkey --key 0 ''
 ```
 
-笔者偏好，可供参考：
+### 笔者偏好配置
+
+ <details className="let-details-to-gray">
+<summary>仅供参考，因人而异</summary>
 
 ```shell
 # 不因应用而切换语言：
@@ -114,17 +121,21 @@ kwriteconfig5 --file fcitx5/conf/pinyin.conf --group "<default>" --key PageSize 
 kwriteconfig5 --file fcitx5/conf/classicui.conf --group "<default>" --key "Vertical Candidate List" True
 kwriteconfig5 --file fcitx5/conf/classicui.conf --group "<default>" --key Font "Noto Sans CJK SC 22"
 
-# 小鹤双拼：
+# Super+V 弹出剪贴板：
+kwriteconfig5 --file fcitx5/conf/clipboard.conf --group TriggerKey --key 0 "Super+V"
+```
+
+使用小鹤双拼：
+
+```shell
 kwriteconfig5 --file fcitx5/profile --group Groups/0 --key DefaultIM shuangpin
 kwriteconfig5 --file fcitx5/profile --group Groups/0/Items/1 --key Name shuangpin
 kwriteconfig5 --file fcitx5/conf/pinyin.conf --group "<default>" --key ShuangpinProfile Xiaohe
 ```
 
-<div className="alert alert--warning">
-所有 kwriteconfig5 配置后，再次启动输入法以生效
-</div>
+</details>
 
-#### 在 GNOME 中使用
+### 在 GNOME 中使用
 
 ```shell
 # 解除 iBus 占用 Ctrl+Space
@@ -136,7 +147,8 @@ gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
 
 ```
 
-改善 GNOME 外观的[扩展](https://extensions.gnome.org/extension/261/kimpanel/)：
+:::note 改善 GNOME 外观的[扩展](https://extensions.gnome.org/extension/261/kimpanel/)：
+
 大号字体竖排候选框
 
 ```shell
@@ -147,10 +159,14 @@ vertical=true
 END
 ```
 
-:::caution 在 GNOME 中更改过键位重映射
+:::
+
+:::caution 若在 GNOME 中更改过键位重映射：
 
     kwriteconfig5 --file ~/.config/fcitx5/conf/xcb.conf --group "<default>" --key 'Allow Overriding System XKB Settings' False
 
-执行后，可能需要重启系统以消除 bug
-
 :::
+
+<div className="alert alert--warning">
+所有 kwriteconfig5 配置后，再次启动输入法甚至重启系统得以生效
+</div>

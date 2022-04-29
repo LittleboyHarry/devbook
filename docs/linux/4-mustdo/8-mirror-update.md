@@ -4,13 +4,39 @@ title: 从镜像源更新
 
 :::caution 更新过程中保持网络畅通
 
-安装过程中应避免其他操作、安装后尽快重启
+- 推荐使用 HTTPS 协议：可以避免国内流量劫持，优化连接稳定性
+- 安装过程中应避免其他操作、安装后尽快重启
 
 :::
 
+## Ubuntu
+
+ <details className="let-details-to-gray">
+<summary>方法一：图形界面的更新器</summary>
+
+1. 搜索关键词 `sof`，选择 “软件和更新”，更改合适的“下载自”来源
+
+<!-- ( 默认“中国的服务器”指的是 cn.archive.ubuntu.com ) -->
+
+2. 搜索关键词 `upd`，打开 “软件更新器”，更新系统
+
+</details>
+
+方法二：命令行
+
+```shell
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.old # 备份
+
+# 使用腾讯云 Ubuntu 镜像源:
+sudo sed -i -E "s#http://((cn.)?archive|security).ubuntu.com#https://mirrors.cloud.tencent.com#g" /etc/apt/sources.list
+
+sudo apt update     # 更新源
+sudo apt upgrade -y # 更新系统
+```
+
 ## Debian
 
-使用 HTTPS 可以避免流量劫持、优化体验（ Debian 10 及以上版本内置的 `apt-transport-https` 模块支持 ）
+与 Ubuntu 命令行方法同理，Debian 10 及以上版本内置的 `apt-transport-https` 模块支持 HTTPS 协议
 
 ```shell
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.old # 备份
@@ -19,31 +45,6 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.old # 备份
 sudo sed -i -E "s#http://(deb|security|ftp).debian.org#https://mirrors.cloud.tencent.com#g" /etc/apt/sources.list
 # 不需要检索源码包
 sudo sed -i "/deb-src/ s/^/#/" /etc/apt/sources.list
-
-sudo apt update     # 更新源
-sudo apt upgrade -y # 更新系统
-```
-
-## Ubuntu
-
-<details className="let-details-to-gray">
-<summary>方法一：图形化更新器</summary>
-
-1. 打开 “软件和更新” ( 搜索关键词 `sof` )，选择合适的下载源
-
-   Ubuntu 下载 -> 下载自 ( 默认“中国的服务器”指的是 cn.archive.ubuntu.com )
-
-2. 打开 “软件更新器” ( 搜索关键词 `upd` ) 更新系统
-
-</details>
-
-方法二：与 Debian 同理
-
-```shell
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.old # 备份
-
-# 使用腾讯云 Ubuntu 镜像源:
-sudo sed -i -E "s#http://((cn.)?archive|security).ubuntu.com#https://mirrors.cloud.tencent.com#g" /etc/apt/sources.list
 
 sudo apt update     # 更新源
 sudo apt upgrade -y # 更新系统

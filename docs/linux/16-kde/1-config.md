@@ -90,6 +90,25 @@ kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_dimscreenEnabled 
 
 :::
 
+### Kubuntu Wayland
+
+:::caution KDE Wayland 尚在实验开发阶段
+
+常见 bug: 连接外接显示器、重新登陆会话时，界面残缺
+
+:::
+
+```shell
+sudo apt install -y plasma-workspace-wayland
+
+# 相关推荐：
+sudo apt install -y wl-clipboard
+```
+
+设置为自动登陆：搜索 `sddm` 打开“登陆画面”的 `行为设置`，更改 `使用会话`
+
+然后注销会话，左下角选择 wayland 登陆以生效。
+
 <!-- 热区设置 -->
 
 <!--

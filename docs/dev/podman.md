@@ -12,17 +12,16 @@ import GetPkg from '@theme/GetPkg';
 
 ## 初始配置
 
-对于非 Fedoar 系统，默认配置是空的、无法使用：
-
-    sed "/^#/d" /etc/containers/registries.conf
-
 配置腾讯云镜像：
 
 ```shell
 echo 'unqualified-search-registries = ["docker.io"]' | sudo tee -a /etc/containers/registries.conf > /dev/null
 echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/containers/registries.conf > /dev/null
-
 ```
+
+输出有效内容：
+
+    sed "/^#/d" /etc/containers/registries.conf
 
 :::caution 挂载卷的文件访问权限被拦截
 

@@ -86,18 +86,32 @@ cd -
 
     --enable-features=VaapiVideoDecoder,VaapiVideoEncoder
 
-<details className="let-details-to-gray">
-  <summary>方案一：解决高分辨率屏界面太小</summary>
+### 是否使用 wayland？
 
-添加启动参数：
+:::note 不使用 wayland
+
+优点：可放大界面缩放比例，启动参数
 
     --force-device-scale-factor=1.15
 
-</details>
+缺点：暂时不支持笔记本触摸板手势动作
 
-方案二：触摸板可放大 (仅 wayland 支持，[与方案一互斥](https://bugs.chromium.org/p/chromium/issues/detail?id=910797))
+:::
+
+:::note 使用 wayland
+
+配置方法：
 
     --enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4
+
+优点：支持笔记本触摸板手势动作
+
+缺点：
+
+- 输入法可用但兼容性有待改进，依赖 GNOME [kimpanel](https://extensions.gnome.org/extension/261/kimpanel/) 扩展
+- 界面缩放比率仅为整数，只能通过 “设置 > 外观 > 页面缩放” 补救调整
+
+:::
 
 ### 作用于 PWA 应用启动器
 
