@@ -29,19 +29,19 @@ echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/
 
 :::
 
-## 推荐
+## VSCode
 
-- VSCode 扩展
+import {GetButtons} from './vscode-ext'
 
-      ext install ms-azuretools.vscode-docker
+<GetButtons id="ms-azuretools.vscode-docker" />
 
-  配置
+配置
 
-      "docker.dockerPath": "podman",
-      "docker.host": "unix:///run/user/1000/podman/podman.sock",
+    "docker.dockerPath": "podman",
+    "docker.host": "unix:///run/user/1000/podman/podman.sock",
 
-  运行
+运行
 
-      systemctl --user enable --now podman.socket
+    systemctl --user enable --now podman.socket
 
 - [GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)

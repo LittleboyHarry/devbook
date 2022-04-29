@@ -1,11 +1,12 @@
 import React, { CSSProperties, PropsWithChildren } from 'react';
+import cs from 'classnames';
 
 export function MstoreLink({ id, name }: { id: string; name: string }) {
   return <HtmlA href={msStoreLink(id)}>{name}</HtmlA>;
 }
 
 export function MstoreButton({ id, name }: { id: string; name: string }) {
-  return <AbstractButton name={name} href={msStoreLink(id)} />;
+  return <LinkButton name={name} href={msStoreLink(id)} />;
 }
 
 function msStoreLink(id: string) {
@@ -21,26 +22,37 @@ export function DownloadButton({
   href: string;
   hint?: string;
 }) {
-  return <AbstractButton {...{ name, href, hint }} attr={{ download: true }} />;
+  return <LinkButton {...{ name, href, hint }} attr={{ download: true }} />;
 }
 
-function AbstractButton({
+export function LinkButton({
   name,
   href,
+  outline,
   hint,
   attr,
 }: {
   name: string;
   href: string;
+  outline?: boolean;
   hint?: string;
   attr?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
 }) {
   return (
     <a
       href={href}
-      className="button button--lg button--primary"
+      className={cs(
+        'button',
+        outline
+          ? 'button--outline button--secondary'
+          : ' button--lg button--primary'
+      )}
       title={hint}
-      style={{ cursor: hint ? 'help' : 'auto', margin: '1rem' }}
+      style={{
+        cursor: hint ? 'help' : 'pointer',
+        verticalAlign: 'baseline',
+        margin: '0 1rem 1rem 0',
+      }}
       {...attr}
     >
       {name}

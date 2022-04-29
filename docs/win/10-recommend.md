@@ -2,8 +2,6 @@
 title: 推荐软件
 ---
 
-<!-- winget install veracrypt -->
-
 import {HtmlA,MstoreLink} from '@theme/links';
 
 ## 自由软件
@@ -19,6 +17,29 @@ import {HtmlA,MstoreLink} from '@theme/links';
 | <MstoreLink id="9PFXCD722M2C" name="KDE Filelight" /> | 硬盘空间分析           |
 
 </div>
+
+ <details className="let-details-to-gray">
+<summary>qbittorrent-enhanced BT下载器</summary>
+
+Chocolatey:
+
+    choco install qbittorrent-enhanced
+
+Scoop:
+
+    scoop bucket add dorado https://github.com/chawyehsu/dorado
+    scoop install qbittorrent-enhanced
+
+[GitHub Releases](https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases)
+
+</details>
+
+ <details className="let-details-to-gray">
+<summary>veracrypt 数据加密</summary>
+
+    winget install veracrypt
+
+</details>
 
 护眼：
 

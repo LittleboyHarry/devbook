@@ -70,8 +70,9 @@ test -n "$KDE_FULL_SESSION" && sudo dnf in -y kcm-fcitx5                  # KDE 
 <ForApt>
 
 ```shell
-sudo apt install -y fcitx5-chinese-addons fcitx5-config-qt \         # 核心包
-                    libkf5config-bin                                 # 自动脚本配置工具
+sudo apt install -y fcitx5-chinese-addons fcitx5-config-qt           # 核心包
+sudo apt install -y libkf5config-bin                                 # 自动脚本配置工具
+
 test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依赖模块
 ```
 

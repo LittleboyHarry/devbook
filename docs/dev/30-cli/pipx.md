@@ -22,6 +22,8 @@ import GetPkg from '@theme/GetPkg';
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
 
-# 自动补全指导：
-pipx completions | less
 ```
+
+UNIX 环境自动补全指引：
+
+    pipx completions | less

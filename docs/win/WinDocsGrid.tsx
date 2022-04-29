@@ -12,12 +12,12 @@ export default function WinDocsGrid() {
         <LogoCard
           name="下载 Win10"
           to="https://www.microsoft.com/zh-cn/software-download/windows10"
-          logo={<img src={useBaseUrl('/img/icon/windows8-original.svg')} />}
+          logo={<img src={useBaseUrl('/img/icons/windows8-original.svg')} />}
         />
         <LogoCard
           name="下载 Win11"
           to="https://www.microsoft.com/zh-cn/software-download/windows11"
-          logo={<img src={useBaseUrl('/img/icon/windows8-original.svg')} />}
+          logo={<img src={useBaseUrl('/img/icons/windows8-original.svg')} />}
         />
         <LogoCard
           name="微 PE 工具箱"
@@ -27,7 +27,7 @@ export default function WinDocsGrid() {
       </LogoCard.Container>
       <LogoCard.Container>
         <LogoCard
-          name="开发者环境"
+          name="开发环境"
           to="dev/index"
           noNewTab
           logo={<FontAwesomeIcon icon={faCode} />}

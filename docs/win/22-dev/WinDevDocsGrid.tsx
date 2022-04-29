@@ -20,28 +20,37 @@ export default function Page() {
           noNewTab
           logo={<FontAwesomeIcon icon={faRocket} />}
         />
+      </LogoCard.Container>
+      <LogoCard.Container>
         <LogoCard
           name="PowerShell"
           to="pwsh"
           logo={<FontAwesomeIcon icon={faTerminal} />}
         />
         <LogoCard
-          name="包管理"
-          to="pkgmgr/scoop"
-          noNewTab
-          logo={<FontAwesomeIcon icon={faCubes} />}
+          name="Sysinternals"
+          to="sysinternals"
+          logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
-      </LogoCard.Container>
-      <LogoCard.Container>
         <LogoCard
           name="WSL"
           to="wsl/install"
           logo={<FontAwesomeIcon icon={faLinux} />}
         />
+      </LogoCard.Container>
+      <h3>包管理器：</h3>
+      <LogoCard.Container>
         <LogoCard
-          name="Sysinternals"
-          to="sysinternals"
-          logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
+          name="Scoop"
+          to="pkgmgr/scoop"
+          noNewTab
+          logo={<FontAwesomeIcon icon={faCubes} />}
+        />
+        <LogoCard
+          name="Chocolatey"
+          to="pkgmgr/choco"
+          noNewTab
+          logo={<FontAwesomeIcon icon={faCubes} />}
         />
       </LogoCard.Container>
     </>

@@ -6,33 +6,32 @@ title: 扩展
 
 :::
 
+import {GetLinks,GetButtons} from '../vscode-ext'
+
 ## 必装
 
-Git 功能强化：
+扩展名 - 作用，安装到：
 
-    ext install eamodio.gitlens
+<div className="no-table-header no-table-border">
 
-Git 可视化: 分支树可视化，支持管理修改
+|              |                |                                            |
+| ------------ | -------------- | ------------------------------------------ |
+| GitLens      | Git 功能强化   | <GetLinks id="eamodio.gitlens" />           |
+| Git Graph    | Git 树可视化   | <GetLinks id="mhutchie.git-graph" />        |
+| Prettier     | 前端代码格式化 | <GetLinks id="esbenp.prettier-vscode" />    |
+| EditorConfig | 格式统一化     | <GetLinks id="EditorConfig.EditorConfig" /> |
 
-    ext install mhutchie.git-graph
-
-前端代码格式化器：[Prettier](https://prettier.io/)
-
-    ext install esbenp.prettier-vscode
-
-代码格式统一化：[EditorConfig](https://editorconfig.org/)
-
-    ext install EditorConfig.EditorConfig
+</div>
 
 ## 补充
 
-更好看的图标：安装后，右下角 Active 按钮激活
+**vscode-icons** 更好看的图标：安装后，右下角 Active 按钮激活
 
-    ext install vscode-icons-team.vscode-icons
+<GetButtons id="vscode-icons-team.vscode-icons"/>
 
-远程开发：支持 SSH, WSL, container
+**Remote Development** 远程开发：支持 SSH, WSL, container
 
-    ext install ms-vscode-remote.vscode-remote-extensionpack
+<GetButtons id="ms-vscode-remote.vscode-remote-extensionpack"/>
 
 ## 商业服务
 
@@ -41,10 +40,8 @@ Tabnine 免费 AI 补全：
 - 优点：离线使用、可关闭遥测服务
 - 缺点：内存消耗高、免费版仅供单行使用
 
-```
-ext install tabnine.tabnine-vscode
-```
+<GetButtons id="tabnine.tabnine-vscode"/>
 
 GitHub Copilot
 
-    ext install GitHub.copilot
+<GetButtons id="GitHub.copilot"/>
