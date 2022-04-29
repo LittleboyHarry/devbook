@@ -78,12 +78,39 @@ dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
 
 :::
 
-<details className="let-details-to-gray">
-  <summary>把顶栏置于屏幕下方</summary>
+## 置于屏幕底部
 
-缺点: 可能导致“顶栏超长菜单栏无法显示” 的 BUG，慎调
+依赖扩展：[Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)，
+推荐扩展：[Custom Hot Corners Extended](https://extensions.gnome.org/extension/4167/custom-hot-corners-extended/)
 
-    dconf write /org/gnome/shell/extensions/just-perfection/top-panel-position 1
+```shell
+dconf write /org/gnome/shell/extensions/just-perfection/top-panel-position 1
+dconf write /org/gnome/shell/extensions/just-perfection/notification-banner-position 4
+dconf write /org/gnome/desktop/enable-hot-corners false
+dconf write /org/gnome/shell/extensions/dash-to-dock/show-apps-at-top true
+dconf write /org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-0/action "'toggle-overview'"
+dconf write /org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-0/action "'open-panel-aggregate-menu'"
+gnome-extensions list | grep -q babar@fthx && gnome-extensions disable babar@fthx
+```
+
+:::note 置于底部的缺点
+
+可能导致使用 Vitals 扩展这种具有“超长菜单栏” 无法显示的 bug
+
+:::
+
+ <details className="let-details-to-gray">
+<summary>恢复方法</summary>
+
+```shell
+dconf write /org/gnome/shell/extensions/just-perfection/top-panel-position 0
+dconf write /org/gnome/shell/extensions/just-perfection/notification-banner-position 2
+dconf reset /org/gnome/shell/extensions/dash-to-dock/show-apps-at-top
+dconf reset /org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-0/action
+dconf reset /org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-0/action
+dconf reset /org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-0/action
+gnome-extensions list | grep -q babar@fthx && gnome-extensions enable babar@fthx
+```
 
 </details>
 
