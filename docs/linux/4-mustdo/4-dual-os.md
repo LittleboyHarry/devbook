@@ -24,13 +24,14 @@ fstab 详细参考 [ArchWiki](<https://wiki.archlinux.org/title/Fstab_(%E7%AE%80
 
 ## [rEFInd](https://www.rodsbooks.com/refind/getting.html) 引导器
 
-可用于 EFI 的多系统启动器，
+如果不满意 Grub。可选择性安装：用于 EFI 的多系统启动器
 
 ### 下载
 
-下载 Windows 版：https://sourceforge.net/projects/refind/files/latest/download
+import { LinkButton } from '@theme/links';
 
-其他版本：https://sourceforge.net/projects/refind/files/
+<LinkButton outline href="https://sourceforge.net/projects/refind/files/latest/download" name="Windows 格式的安装包" />
+<LinkButton outline href="https://sourceforge.net/projects/refind/files/" name="其他格式的安装包" />
 
 ### 安装
 
@@ -57,6 +58,13 @@ RPM 安装方法：
 
 推荐主题：https://github.com/littleboyharry-like/refind-theme-regular
 
+<details className="let-details-to-gray">
+    <summary>隐藏 Grub 菜单内的其它系统</summary>
+
+    echo GRUB_DISABLE_OS_PROBER=true | sudo tee -a /etc/default/grub > /dev/null
+
+</details>
+
 ## 注意事项
 
 - 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/win/first-run#双系统" target="_blank" >详情方法</a>
@@ -72,15 +80,21 @@ RPM 安装方法：
 
 如果还用了 rEFInd 启动器, 请注意修改配置或删除
 
-附：[Windows EFI 分区挂载方法](https://jingyan.baidu.com/article/fc07f9893bef4353fee51905.html)
-其它分区可使用 `diskmgmt.msc` 删除卷操作
+Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：
+（ 仅管理员身份可操作该分区 ）
+
+    mountvol x: /s
 
 <details className="let-details-to-yellow">
-  <summary>efibootmgr 命令用法</summary>
+  <summary>Linux 下 efibootmgr 命令用法</summary>
 
 列出启动顺序：
 
     efibootmgr
+
+调整启动顺序
+
+    sudo efibootmgr -o 1,2,3,...
 
 删除启动项：
 

@@ -4,18 +4,16 @@ title: Grub
 
 ## 降低自动选择时间
 
+记住上次的选择
+
+```bash
+sudo sed -i "/GRUB_DEFAULT/ s/=.*/=saved/" /etc/default/grub
+echo GRUB_SAVEDEFAULT=true | sudo tee -a /etc/default/grub
+```
+
 降低等待时间为 1 秒
 
     sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=1/" /etc/default/grub
-
-<details className="let-details-to-gray">
-    <summary>使用 rEFInd 等其他引导器：</summary>
-
-可隐藏 Grub 菜单内的 Windows 等其它系统
-
-    echo GRUB_DISABLE_OS_PROBER=true | sudo tee -a /etc/default/grub > /dev/null
-
-</details>
 
 ## 更新 Grub
 

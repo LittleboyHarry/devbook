@@ -1,5 +1,5 @@
 import React, { CSSProperties, PropsWithChildren } from 'react';
-import cs from 'classnames';
+import cs from 'clsx';
 import st from './links.module.scss';
 
 export function MstoreLink({ id, name }: { id: string; name: string }) {
@@ -32,13 +32,15 @@ export function LinkButton({
   outline,
   hint,
   attr,
+  style,
   small,
 }: {
-  name: string;
+  name: React.ReactNode;
   href: string;
   outline?: boolean;
   hint?: string;
   attr?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  style?: CSSProperties;
   small?: boolean;
 }) {
   return (
@@ -51,11 +53,12 @@ export function LinkButton({
         outline ? 'button--outline button--secondary' : 'button--primary'
       )}
       title={hint}
+      {...attr}
       style={{
         cursor: hint ? 'help' : 'pointer',
         verticalAlign: 'baseline',
+        ...style,
       }}
-      {...attr}
     >
       {name}
     </a>

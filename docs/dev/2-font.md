@@ -27,8 +27,6 @@ Bug 报告：[链接](https://bugs.kde.org/show_bug.cgi?id=439470)
 
 ### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
 
-import GetPkg from '@theme/GetPkg';
-
 <GetPkg apt="fonts-jetbrains-mono" dnf="jetbrains-mono-fonts" scoop="JetBrains-Mono" choco="jetbrainsmono" />
 
 VSCode 的 `Font Family` 赋值：`JetBrains Mono`
@@ -37,11 +35,13 @@ VSCode 的 `Font Family` 赋值：`JetBrains Mono`
 > [Debian 11](https://packages.debian.org/bullseye/source/fonts-jetbrains-mono)
 > 和
 > [Ubuntu 21.04](https://launchpad.net/ubuntu/+source/fonts-jetbrains-mono)
-> 以上版本的系统才有提供
+> 以上版本的系统，仓库源才开始提供
 
 ### CascadiaCode
 
-微软出品，适用于终端
+微软出品的 Windows 终端内置默认字体，Linux 安装：
+
+<GetPkg apt="fonts-cascadia-code" dnf="cascadia-code-fonts" pacman="ttf-cascadia-code" />
 
 VSCode `settings.json` 设置：
 
@@ -85,3 +85,5 @@ https://mirrorz.org/font/SarasaGothic
 "editor.fontFamily": "Sarasa Term SC",
 "editor.fontLigatures": true,
 ```
+
+import GetPkg from '@theme/GetPkg';

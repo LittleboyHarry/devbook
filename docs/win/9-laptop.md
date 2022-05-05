@@ -33,10 +33,15 @@ import {MstoreButton} from '@theme/links';
 
 <MstoreButton id="9nblggh516xp" name="从商店安装 EarTrumpet" />
 
-*来自[开源项目](https://github.com/File-New-Project/EarTrumpet)*
+_来自[开源项目](https://github.com/File-New-Project/EarTrumpet)_
 
 ## 模拟数字键盘
 
 针对 14 寸一下小电脑键盘，为 `jkluio7890` 映射为 1~9 0 数字键。依赖 AutoHotKey
 
-<a className="button button--primary" href="/ahk/numpad.ahk" target="_blank" download>下载脚本</a>
+import {faScroll} from '@fortawesome/free-solid-svg-icons'
+
+<FileItem name="numpad.ahk" path="/ahk/numpad.ahk" icon={<FontAwesomeIcon icon={faScroll} />}/>
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FileItem from '@theme/FileItem'

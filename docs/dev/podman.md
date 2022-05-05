@@ -1,7 +1,5 @@
 ## 安装
 
-import GetPkg from '@theme/GetPkg';
-
 <GetPkg name="podman" dnf apt />
 
     pipx install podman-compose
@@ -44,4 +42,5 @@ echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/
 
 - [GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)
 
+import GetPkg from '@theme/GetPkg';
 import { LinkButton } from '@theme/links';

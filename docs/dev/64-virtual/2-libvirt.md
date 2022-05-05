@@ -23,12 +23,36 @@ import {
 </ForApt>
 </PreferPkgMgr>
 
+## 配置
+
 解锁虚拟机 XML 编辑器：
 
     dconf write /org/virt-manager/virt-manager/xmleditor-enabled true
 
-:::tip 创建 Linux 虚拟机有什么门道？
+配置 virbr0 虚拟桥接网卡，打通宿主机与虚拟机通讯：
 
-看[巧用云镜像快速部署虚拟机](/docs/manual/linux/cloud-init)
+ <Tabs groupId="linux-distro">
+<TabItem value="debian" label="Ubuntu / Debian">
+
+```shell
+sudo mkdir -p /etc/qemu
+echo "allow virbr0" | sudo tee -a /etc/qemu/bridge.conf
+sudo chmod u+s /usr/lib/qemu/qemu-bridge-helper
+```
+
+  </TabItem>
+  <TabItem value="centos" label="Fedora">
+
+    sudo systemctl enable --now virtnetworkd
+
+  </TabItem>
+</Tabs>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+:::tip 创建 Linux 虚拟机的门道
+
+[巧用云镜像机制，快速部署虚拟机！](/docs/manual/linux/cloud-init)
 
 :::

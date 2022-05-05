@@ -48,7 +48,7 @@ compinit
 
 :::info 推荐的自动配置
 
-使用[后文的方案](deploy-my-dotfiles)，包含下文配置：
+推荐使用作者编写的 [deploy-my-dotfiles](deploy-my-dotfiles)，包含下文配置：
 
 :::
 

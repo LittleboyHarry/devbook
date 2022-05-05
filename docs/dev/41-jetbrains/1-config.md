@@ -60,13 +60,11 @@ alt="git stage"
 
 - idea 已添加到 PATH 环境变量
   （[ToolBox 配置方法](https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox)）
-- VSCode 插件
-
-      code --install-extension generalov.open-in-editor-vscode
-
 - nircmd (Windows)
 
       scoop install nircmd
+
+- <GetVscExt id="generalov.open-in-editor-vscode" msOnly/>
 
 VSCode `settings.json` (Windows):
 
@@ -89,3 +87,5 @@ alt="config entrypoint"
 在 `Keymap` 中绑定快捷键 `Alt + Shift + E`，这样按下快捷键就能快速切换编辑器
 
 </details>
+
+import GetVscExt from '@theme/GetVscExt';

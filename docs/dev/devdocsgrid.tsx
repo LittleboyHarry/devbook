@@ -5,33 +5,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTerminal,
   faPersonWalkingLuggage,
+  faScrewdriverWrench,
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export function TopGrid() {
   return (
-    <LogoCard.Container>
-      <LogoCard
-        name="Zsh"
-        to="zsh"
-        logo={<FontAwesomeIcon icon={faTerminal} style={{ width: '75%' }} />}
-      />
-      <LogoCard
-        name="Git"
-        to="git"
-        logo={<img src={useBaseUrl('/img/icons/git.svg')} />}
-      />
-      <LogoCard
-        name={<span style={{ fontSize: '1.125rem' }}>deploy-my-dotfiles</span>}
-        to="deploy-my-dotfiles"
-        logo={
-          <FontAwesomeIcon
-            icon={faPersonWalkingLuggage}
-            style={{ width: '75%' }}
-          />
-        }
-      />
-    </LogoCard.Container>
+    <>
+      <LogoCard.Container>
+        <LogoCard
+          name="Zsh"
+          to="zsh"
+          logo={<FontAwesomeIcon icon={faTerminal} style={{ width: '75%' }} />}
+        />
+        <LogoCard
+          name="Git"
+          to="git"
+          logo={<img src={useBaseUrl('/img/icons/git.svg')} />}
+        />
+      </LogoCard.Container>
+      <LogoCard.Container>
+        <LogoCard
+          name={
+            <span style={{ fontSize: '1.125rem' }}>deploy-my-dotfiles</span>
+          }
+          to="deploy-my-dotfiles"
+          logo={
+            <FontAwesomeIcon
+              icon={faPersonWalkingLuggage}
+              style={{ width: '75%' }}
+            />
+          }
+        />
+        <LogoCard
+          name="摩登命令行"
+          to="/docs/dev/modern-cli/index"
+          logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
+        />
+      </LogoCard.Container>
+    </>
   );
 }
 
@@ -45,7 +57,7 @@ export function EditorGrid() {
       />
       <LogoCard
         name="VSCode"
-        to="vscode/install"
+        to="vscode/download"
         logo={<img src={useBaseUrl('/img/icons/vscode.svg')} />}
       />
       <LogoCard

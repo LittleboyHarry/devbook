@@ -38,13 +38,12 @@ double-pinyin-schema=5
 END
 ```
 
-改变外观：大号字体竖排候选框，需要 [GNOME 插件](https://extensions.gnome.org/extension/4112/customize-ibus/)
+进一步改变外观需要 [GNOME 插件](https://extensions.gnome.org/extension/4112/customize-ibus/)
 
 ```shell
 dconf write /org/gnome/shell/extensions/customize-ibus/input-indicator-only-on-toggle true
 dconf write /desktop/ibus/panel/use-custom-font true
-dconf write /desktop/ibus/panel/custom-font 'Sans 16'
-dconf write /org/gnome/shell/extensions/customize-ibus/custom-font 'Sans 16'
+gnome-extensions prefs customize-ibus@hollowman.ml
 ```
 
 </details>
@@ -75,6 +74,8 @@ sudo apt install -y libkf5config-bin                                 # 自动脚
 
 test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依赖模块
 ```
+
+搜索 `inp` 打开“语言支持”，更改输入法为 fcitx5
 
 </ForApt>
 </PreferPkgMgr>

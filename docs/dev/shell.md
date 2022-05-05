@@ -10,6 +10,6 @@
 
     shfmt -w -l .
 
-VSCode 扩展支持
+<GetVscExt id="foxundermoon.shell-format"/>
 
-    code --install-extension foxundermoon.shell-format --force
+import GetVscExt from '@theme/GetVscExt';

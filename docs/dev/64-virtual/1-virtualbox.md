@@ -2,9 +2,17 @@
 title: VirtualBox
 ---
 
-## Windows 安装
+## 下载
 
-<p><a className="button button--primary" href="https://mirrors.tuna.tsinghua.edu.cn/virtualbox/virtualbox-Win-latest.exe" target="_blank" download>安装器下载 by 清华镜像站</a></p>
+清华镜像站：
+
+<LinkButton outline href="https://mirrors.tuna.tsinghua.edu.cn/virtualbox/virtualbox-Win-latest.exe" name="Windows 版" />
+
+<LinkButton outline href="https://mirrors.tuna.tsinghua.edu.cn/virtualbox/virtualbox-osx-latest.dmg" name="OSX 版" />
+
+[其他镜像站](https://mirrorz.org/list/virtualbox)、[官网下载](https://www.virtualbox.org/wiki/Downloads)
+
+## 配置
 
 注册 VBoxManage.exe 到 PATH 中以便自动化：
 

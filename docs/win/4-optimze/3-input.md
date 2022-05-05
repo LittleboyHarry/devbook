@@ -4,10 +4,6 @@ title: 键盘与输入法
 
 推荐配置
 
-## 大量码字需求
-
-推荐更改并习惯<a href="/docs/dev/keymap#windows" target="_blank">新的键盘布局</a>
-
 ## 微软拼音输入法
 
 ### 外观优化
@@ -33,3 +29,9 @@ reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "DoublePinyinSchem
 reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "UserDefinedDoublePinyinScheme0" /t REG_SZ /f /d "小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt"
 
 ```
+
+:::note 大量码字需求
+
+推荐更改并习惯<a href="/docs/dev/keymap" target="_blank">新的键盘布局</a>
+
+:::

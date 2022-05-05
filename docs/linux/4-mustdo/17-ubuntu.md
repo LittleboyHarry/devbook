@@ -4,15 +4,12 @@ title: Ubuntu
 
 ## 防火墙
 
-对个人或家用设备，强烈建议开启
-
-    sudo ufw enable
-
-可视化配置器：gufw
+对个人或家用设备，强烈建议配置开启。
+使用可视化配置器：
 
     sudo apt install -y gufw
 
-我们打开 gufw 进行添加，搜索一些常用的如：KDE Connect
+打开 gufw 激活防火墙，随后添加条目，常用的如：KDE Connect
 
 ## 喜欢 Snap 吗？
 

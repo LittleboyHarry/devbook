@@ -9,6 +9,10 @@ href="https://www.jetbrains.com/toolbox-app/download/download-thanks.html">
 下载 Toolbox App
 </a></p>
 
+Ubuntu 运行依赖：
+
+    sudo apt install -y fuse libfuse2
+
 :::note GNOME 支持
 
 非 Ubuntu 系统需要安装支持 [扩展](https://extensions.gnome.org/extension/615/appindicator-support/)

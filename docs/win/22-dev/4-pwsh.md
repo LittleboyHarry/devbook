@@ -66,7 +66,7 @@ echo 'Install-GuiCompletion -Key Tab' >> $profile
 
 ### zoxide
 
-记录切换的工作目录，<a href="/docs/dev/cli/zoxide" target="_blank" >参见</a>
+记录切换的工作目录，<a href="/docs/dev/modern-cli/zoxide" target="_blank" >参见</a>
 
 ## 内置的实用命令
 

@@ -10,7 +10,7 @@ title: 捆绑服务
 
 ## 选择性卸载
 
-以管理员身份运行 PowerShell
+**以管理员身份运行 PowerShell**
 
 ```powershell
 # OneDrive

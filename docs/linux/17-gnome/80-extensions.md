@@ -4,11 +4,17 @@ title: GNOME 推荐扩展
 
 ## 扩展管理器
 
-import GetPkg from '@theme/GetPkg';
-
 <GetPkg name="gnome-extensions-app" apt dnf />
 
 作用于 https://extensions.gnome.org 的 Chromium 依赖[扩展](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+
+:::note 新型管理器，仅[新仓库](https://repology.org/badge/vertical-allrepos/extension-manager.svg)提供
+
+无需借助浏览器来安装扩展：
+
+<GetPkg name="gnome-shell-extension-manager" apt />
+
+:::
 
 ## 推荐插件
 
@@ -147,3 +153,5 @@ target=~/.local/share/gnome-shell/extensions/$uuid/
 mkdir $target
 cp -r * $target
 ```
+
+import GetPkg from '@theme/GetPkg';
