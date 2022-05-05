@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import cs from 'classnames';
+import cs from 'clsx';
 import st from './LogoCard.module.scss';
 import { MouseEventHandler } from 'react';
 import Link from '@docusaurus/Link';

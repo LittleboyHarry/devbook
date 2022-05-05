@@ -71,12 +71,23 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 ## Git For Windows
 
-<DownloadButton name="从清华镜像站下载"
- href="https://gitforwindows.org/download/releases/latest" />
+[GitHub 官方发行版](https://github.com/git-for-windows/git/releases/latest#:~:text=64%2Dbit.exe)，或从阿里镜像站下载到桌面：
 
-:::note 自动化安装参数：
+```powershell
+$g4w_metainfo = (Invoke-WebRequest https://registry.npmmirror.com/-/binary/git-for-windows/).Content | ConvertFrom-Json
+$g4w_latest_info = (Invoke-WebRequest ($g4w_metainfo | Sort-Object -p name | Select-Object -l 1).url).Content | ConvertFrom-Json
+$g4w_latest_binary = ($g4w_latest_info | Where-Object { $_.name -match "64-bit.exe" }).url
+Start-BitsTransfer $g4w_latest_binary -dest ([Environment]::GetFolderPath("Desktop"))
 
-/silent /readinf=<a href="/inno-setup/git.ini" target="_blank" download>git.ini</a>
+```
+
+:::note 作者推荐的自动安装配置
+
+放到与安装器同一目录： <FileItem button name="install-git.ini" path="/inno-setup/install-git.ini"/>
+
+```powershell
+& (Get-ChildItem "$([Environment]::GetFolderPath("Desktop"))\Git-*-64-bit.exe").FullName /silent /readinf=install-git.ini
+```
 
 :::
 
@@ -121,3 +132,6 @@ git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
 个人非商业版 WMware WorkstationPlayer
 
     winget install VMware.WorkstationPlayer -i
+
+import { LinkButton } from '@theme/links';
+import FileItem from '@theme/FileItem'

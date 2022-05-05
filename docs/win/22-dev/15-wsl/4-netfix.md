@@ -38,7 +38,7 @@ New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEth
 
 设置代理监听 `0.0.0.0`，禁用防火墙相关规则
 
-在端口转发的基础上，配置 <a href="/docs/dev/cli/network" target="_blank" >proxychains</a>。
+在端口转发的基础上，配置 <a href="/docs/dev/modern-cli/network" target="_blank" >proxychains</a>。
 
 ## proxychains
 

@@ -20,19 +20,19 @@ export default function RecommendCli() {
         <LogoCard
           name="bat"
           label="代码彩显"
-          to="/docs/dev/cli/bat"
+          to="/docs/dev/modern-cli/bat"
           logo={<FontAwesomeIcon icon={faPaintRoller} />}
         />
         <LogoCard
           name="delta"
           label="代码比对"
-          to="/docs/dev/cli/delta"
+          to="/docs/dev/modern-cli/delta"
           logo={<FontAwesomeIcon icon={faCodeCompare} />}
         />
         <LogoCard
           name="pandoc"
           label="文本格式转换"
-          to="/docs/dev/cli/pandoc"
+          to="/docs/dev/modern-cli/pandoc"
           logo={<FontAwesomeIcon icon={faMarkdown} />}
         />
       </LogoCard.Container>
@@ -40,13 +40,13 @@ export default function RecommendCli() {
         <LogoCard
           name="fd"
           label="文件查找"
-          to="/docs/dev/cli/fd"
+          to="/docs/dev/modern-cli/fd"
           logo={<FontAwesomeIcon icon={faMagnifyingGlass} />}
         />
         <LogoCard
           name="rg"
           label="文本查找"
-          to="/docs/dev/cli/ripgrep"
+          to="/docs/dev/modern-cli/ripgrep"
           logo={<FontAwesomeIcon icon={faSearchengin} />}
         />
       </LogoCard.Container>
@@ -54,7 +54,7 @@ export default function RecommendCli() {
         <LogoCard
           name="pipx"
           label="隔离环境"
-          to="/docs/dev/cli/pipx"
+          to="/docs/dev/modern-cli/pipx"
           logo={<FontAwesomeIcon icon={faPython} />}
         />
       </LogoCard.Container>

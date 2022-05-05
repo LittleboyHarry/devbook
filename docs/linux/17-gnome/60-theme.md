@@ -10,12 +10,6 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 激活后可以保存样式到用户的 `~/.themes` 目录下
 
-## 调节器
-
-import GetPkg from '@theme/GetPkg';
-
-<GetPkg name="gnome-tweaks" apt dnf />
-
 ## 图标与光标
 
 保存位置: `~/.icons`

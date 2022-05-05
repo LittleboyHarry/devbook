@@ -68,32 +68,7 @@ virt-manager 管理方法：
 
 ## SSH
 
-宿主机：
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs groupId="linux-distro">
-  <TabItem value="debian" label="Ubuntu / Debian">
-
-```shell
-sudo mkdir -p /etc/qemu
-echo "allow virbr0" | sudo tee -a /etc/qemu/bridge.conf
-sudo chmod u+s /usr/lib/qemu/qemu-bridge-helper
-```
-
-  </TabItem>
-  <TabItem value="centos" label="Fedora">
-
-```shell
-sudo systemctl start virtnetworkd
-sudo systemctl enable virtnetworkd # 设置自动启动
-```
-
-  </TabItem>
-</Tabs>
-
-虚拟机 “添加硬件” “桥接设备” 填入 virbr0 “设备名称”。在虚拟机执行：
+虚拟机 “添加硬件” “桥接设备” “设备名称” 填入 `virbr0` 。在虚拟机内执行：
 
     sudo systemctl start ssh
     # sudo systemctl enable ssh
@@ -103,6 +78,7 @@ sudo systemctl enable virtnetworkd # 设置自动启动
 
 ## 其它
 
-[修改键盘映射](https://wiki.deepin.org/index.php?title=%E4%BF%AE%E6%94%B9%E9%94%AE%E7%9B%98%E6%98%A0%E5%B0%84&language=zh):
+[修改键盘映射](https://wiki.deepin.org/zh/%E4%BF%AE%E6%94%B9%E9%94%AE%E7%9B%98%E6%98%A0%E5%B0%84):
+[作者专用映射](/docs/dev/keymap)
 
-    gsettings set com.deepin.dde.keyboard layout-options ""
+    gsettings set com.deepin.dde.keyboard layout-options ...

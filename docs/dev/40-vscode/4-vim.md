@@ -34,8 +34,7 @@ title: Vim 模式
 
 ## 安装
 
-<LinkButton outline href="vscode:extension/vscodevim.Vim" name="VSCode" />
-<LinkButton outline href="vscodium:extension/vscodevim.Vim" name="VSCodium" />
+<GetVscExt id="vscodevim.Vim" noTitle />
 
 ## 临时禁用的方法
 
@@ -46,3 +45,4 @@ title: Vim 模式
 https://github.com/daipeihust/im-select
 
 import { LinkButton } from '@theme/links';
+import GetVscExt from '@theme/GetVscExt';

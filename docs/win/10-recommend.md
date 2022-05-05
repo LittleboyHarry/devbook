@@ -6,17 +6,17 @@ import {HtmlA,MstoreLink} from '@theme/links';
 
 ## 自由软件
 
+必装：
+
+- 7zip
+
+  <GetPkg name="7zip" choco winget="7zip.7zip" />
+
 <!-- 硬盘空间分析: [KDE Filelight](https://www.microsoft.com/store/productId/9PFXCD722M2C) -->
 
- <div className="no-table-border">
-<div className="no-table-header">
+ <div className="no-table-border no-table-header">
 
-|                                                       |                        |
-| ----------------------------------------------------- | ---------------------- |
-| <MstoreLink id="XP89DCGQ3K6VLD" name="PowerToys" />   | 微软出品的系统增强工具 |
-| <MstoreLink id="9PFXCD722M2C" name="KDE Filelight" /> | 硬盘空间分析           |
-
-</div>
+推荐：
 
  <details className="let-details-to-gray">
 <summary>qbittorrent-enhanced BT下载器</summary>
@@ -37,18 +37,18 @@ Scoop:
  <details className="let-details-to-gray">
 <summary>veracrypt 数据加密</summary>
 
-    winget install veracrypt
+<GetPkg name="veracrypt" choco winget />
 
 </details>
 
-护眼：
+商店提供：
 
-<div className="no-table-header">
-
-|                                                          |                    |
-| -------------------------------------------------------- | ------------------ |
-| <MstoreLink id="XP8JK4HZBVF435" name="Auto Dark Mode" /> | 自动深色模式       |
-| <MstoreLink id="9PLJWWSV01LK" name="Twinkle Tray" />     | 外接显示屏亮度调节 |
+|                                                       |                        |
+| ----------------------------------------------------- | ---------------------- |
+| <MstoreLink id="XP89DCGQ3K6VLD" name="PowerToys" />   | 微软出品的系统增强工具 |
+| <MstoreLink id="9PFXCD722M2C" name="KDE Filelight" /> | 硬盘空间分析           |
+| <MstoreLink id="XP8JK4HZBVF435" name="Auto Dark Mode" /> | 护眼：自动深色模式       |
+| <MstoreLink id="9PLJWWSV01LK" name="Twinkle Tray" />     | 护眼：调节外接显示屏亮度 |
 
 </div>
 
@@ -59,8 +59,6 @@ Scoop:
 |                     |          |
 | ------------------- | -------- |
 | [Everything][linke] | 全盘搜索 |
-
-</div>
 
 [linke]: https://www.voidtools.com/zh-cn/downloads/#:~:text=%E4%B8%8B%E8%BD%BD%E7%B2%BE%E7%AE%80%E7%89%88%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC%2064%20%E4%BD%8D
 
@@ -77,3 +75,5 @@ Scoop:
 </div>
 
 国内正版代理商索引：https://zhuanlan.zhihu.com/p/93284719
+
+import GetPkg from '@theme/GetPkg';

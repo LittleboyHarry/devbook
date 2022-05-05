@@ -3,7 +3,7 @@ import React from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
-import cs from 'classnames';
+import cs from 'clsx';
 import st from './GetPkg.module.scss';
 
 function addItem({
@@ -148,6 +148,10 @@ export default function GetPkg({
     defaultPkgName: name,
     prefix: 'yarn global add',
   });
+
+  if (items.length <= 0) throw 'Empty GetPkg';
+
+  if (items.length == 1) return items[0];
 
   return (
     <Tabs

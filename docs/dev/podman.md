@@ -1,14 +1,16 @@
 ## 安装
 
-import GetPkg from '@theme/GetPkg';
+- 无 root 权限的 docker 代替品
 
-<GetPkg name="podman" dnf apt />
+  <GetPkg name="podman" apt dnf pacman />
 
-    pipx install podman-compose
+- docker-compose 代替品：
 
-代替 docker 的脚本：
+  <GetPkg name="podman-compose" dnf pacman pipx />
 
-<GetPkg name="podman-docker" dnf apt />
+- 替换 docker：
+
+  <GetPkg name="podman-docker" dnf apt pacman />
 
 ## 初始配置
 
@@ -44,4 +46,5 @@ echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/
 
 - [GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)
 
+import GetPkg from '@theme/GetPkg';
 import { LinkButton } from '@theme/links';

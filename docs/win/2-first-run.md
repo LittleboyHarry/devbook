@@ -2,8 +2,6 @@
 title: 初始化
 ---
 
-import {HtmlA} from '@theme/links';
-
 ## 第一步：备份还原点
 
 运行：
@@ -24,36 +22,34 @@ import {HtmlA} from '@theme/links';
 进入旧版 Store 商店 > 菜单 - 软件和更新  > 下载和更新
 （ 新版：库 > 获取更新
 
- <div className="alert alert--secondary" role="alert">
+## 第三步：更改计算机名
 
-## 针对 Win11
+开始菜单关键词 `name` 搜索 “查看电脑名称” 设置
 
-### 家庭版
+:::note 创建自定义用户
 
-安装后，系统登录的微软账号名作为正式用户名，会有毛病：
+若 Windows 11 登录的微软账号联网安装，系统有如下毛病：
 
+- 账号名作为目录名
 - 每次开机麻烦的在线登录
-- 默认目录名路径难记
 - 潜在的捆绑广告服务
 
-如果不满意创建新用户的方法：
+自 Windows 10 开始，微软弱化了多用户账号管理的功能。若要创建新用户：
 
 运行 `netplwiz` 添加新的本地用户，然后设置 “属性” > “组成员” 为 “管理员”。
 如果还要删除老用户，注销切换到新用户进入 `netplwiz` 删除。
 
-### 专业版
+:::
 
-开始菜单关键词 `name` 搜索 “查看电脑名称” 设置计算机名
+## 第四步：配置 DNS
 
-</div>
-
-## 配置 DNS
+如果运行商提供的默认 DNS 服务不满意（ 如部分网站无法访问 ），可强制绑定：
 
 搜索 `ncpa.cpl` 设置 DNS 服务器地址，如
 
 微软 DNS：`4.2.2.1` `4.2.2.2`
 
-114 DNS：`114.114.114.114` `114.114.115.115`
+[114 DNS](https://www.114dns.com/)：`114.114.114.114` `114.114.115.115`
 
 ## 微软账号
 
@@ -65,13 +61,13 @@ import {HtmlA} from '@theme/links';
 [iOS](https://apps.apple.com/cn/app/microsoft-authenticator/id983156458)
 | Android
 
-## 双系统
-
-:::note 需要管理员权限运行
+:::info 以下指令需要管理员权限运行
 
 `Win + R` 运行对话框，可按下 `Ctrl + Shift + Enter` 提权运行
 
 :::
+
+:::note 双系统问题
 
 关闭快速启动
 
@@ -85,6 +81,8 @@ import {HtmlA} from '@theme/links';
 
     SystemPropertiesAdvanced
 
+:::
+
 ## 答疑区
 
 Q: 需要打开非 zip 的压缩文件？
@@ -96,3 +94,5 @@ Q: 重装系统里没有 Office
 A: 如果你已经在线激活过 Office:
 
 <a className="button button--lg button--primary" href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" target="_blank">登录微软账号并下载安装</a>
+
+import {HtmlA} from '@theme/links';

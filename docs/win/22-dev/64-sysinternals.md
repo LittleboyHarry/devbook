@@ -2,18 +2,60 @@
 title: Sysinternals
 ---
 
-安装：
+由微软出品的一组用于 Windows 的专业小程序。见[官方文档](https://docs.microsoft.com/zh-cn/sysinternals/)
 
-    winget install sysinternals
+## 管理面板类
 
-&nbsp;
+### 自动加载管理
 
-    scoop install sysinternals
+<GetPkg choco="autoruns" />
 
-| 程序            | 功能                             |
-| --------------- | -------------------------------- |
-| Autoruns        | 管理自动运行等加载项，优化系统   |
-| ProcessExplorer | 更好的任务管理器                 |
-| ProcessMonitor  | 进程监控器（开发者调试程序必备） |
-| TCPView         | TCP 流量监控                     |
-| sdelete         | 安全擦除文件                     |
+### 进程管理器
+
+<GetPkg choco="procexp" />
+
+---
+
+## 监控视图类
+
+### 进程监控器
+
+<GetPkg choco="procmon" />
+
+### TCP 连接监控
+
+<GetPkg choco="tcpview" />
+
+---
+
+## 实用工具类
+
+### 自动登录器
+
+<GetPkg choco="autologon" />
+
+### 虚拟桌面
+
+为 XP 和 Win7 老系统桌面添加多工作空间支持
+
+<GetPkg choco="desktops" />
+
+---
+
+## 命令工具类
+
+### 注册表跳转
+
+<GetPkg choco="regjump" />
+
+### 安全擦除文件
+
+<GetPkg choco="sdelete" />
+
+:::note 全量安装
+
+<GetPkg name="sysinternals" winget choco scoop />
+
+:::
+
+import GetPkg from '@theme/GetPkg';

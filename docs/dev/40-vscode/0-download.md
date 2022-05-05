@@ -4,7 +4,9 @@ title: 下载安装
 
 ## 免费商业版
 
-使用后代表你同意微软公司的相关条款。下载安装包：
+使用后代表你同意微软公司的相关条款。[从官方网站下载](https://code.visualstudio.com/)
+
+:::note 从世纪互联国区 CDN 下载
 
 Windows: 保存到下载文件夹
 
@@ -24,6 +26,8 @@ RPM:
 wget -c $(curl -ILsw %{url_effective} -o /dev/null "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64" | sed "s#//az764295.vo.msecnd.net/#//vscode.cdn.azure.cn/#")
 ```
 
+:::
+
 <!--
 **RPM:**
 
@@ -41,7 +45,7 @@ sudo dnf install code -y
 
 <LinkButton outline href="https://mirrorz.org/app/VSCodium" name="从国内镜像站下载" />
 
-[不兼容的插件](https://hub.fastgit.xyz/VSCodium/vscodium/wiki/Extensions-Compatibility):
-远程开发类插件基本不支持
+缺点：[部分插件](https://github.com/VSCodium/vscodium/wiki/Extensions-Compatibility)
+不受支持（如微软 VSCode 远程连接服务）
 
 import { LinkButton } from '@theme/links';

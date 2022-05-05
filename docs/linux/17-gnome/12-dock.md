@@ -2,7 +2,7 @@
 title: GNOME 任务栏
 ---
 
-# dock 任务栏
+# dock-to-dash
 
 Ubuntu 已内置的 GNOME 自定义调节扩展：[Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 
@@ -75,7 +75,7 @@ dconf write /org/gnome/shell/extensions/ding/start-corner "'top-left'"
 dconf write /org/gnome/desktop/wm/preferences/button-layout "'close,minimize,maximize:appmenu'"
 ```
 
-## MacOS 悬浮风格
+## MacOS 程序坞风格
 
 ```shell
 cat << END | dconf load /org/gnome/shell/extensions/dash-to-dock/

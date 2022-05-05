@@ -10,12 +10,14 @@ title: 初始优化
 
 ## 界面缩放与文字大小
 
-**GNOME**: 使用 `gnome-tweaks` 调整
+:::note 对于 GNOME
+
+使用 `gnome-tweaks` 的“字体”面板，14 寸笔记本显示屏推荐增大 **2~3 磅**
+
+<GetPkg name="gnome-tweaks" apt dnf />
 
  <details className="let-details-to-gray">
 <summary>14 寸笔记本显示屏的作者建议配置</summary>
-
-打开 `gnome-tweaks` 的“字体”面板，字号推荐增加 2 或 3 磅
 
 加大缩放比例、光标尺寸：
 
@@ -29,9 +31,15 @@ END
 
 </details>
 
-**KDE**: 搜索关键词 `fonts` 设置
+:::
 
-1080p 分辨率 14\~16寸 中文界面的字体 dpi 推荐值为 144\~120 附近，重新登陆后生效
+:::note 对于 KDE
+
+搜索关键词 `fonts` 设置，重新登陆后生效
+
+1080p 分辨率 14\~16寸 中文界面的字体大小推荐为 **16\~14 磅**
+
+:::
 
 <!--
 ## 中文支持
@@ -59,3 +67,5 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 - 推荐 <a target="_blank" href="/docs/software/browser/edge-for-linux">使用微软 Edge 浏览器</a>
 
  -->
+
+import GetPkg from '@theme/GetPkg';

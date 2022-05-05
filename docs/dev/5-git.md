@@ -8,6 +8,20 @@ title: Git
 
 :::
 
+## 调优
+
+更改默认主分支名
+
+    git config --global init.defaultBranch main
+
+合并变基时自动暂存当前修改：[问题来源](https://stackoverflow.com/questions/30208928/can-git-pull-automatically-stash-and-pop-pending-changes)
+
+```
+git config --global rebase.autostash true
+git config --global merge.autostash true
+
+```
+
 ## 录入个人提交信息
 
 使用 Git **Bash** 执行：
@@ -89,20 +103,6 @@ Ed25519
     SHA256:+ULzij2u99B9eWYFTw1Q4ErYG/aepHLbu96PAUCoV88
 
 </details>
-
-## 调优
-
-更改默认主分支名
-
-    git config --global init.defaultBranch main
-
-合并变基时自动暂存当前修改：[问题来源](https://stackoverflow.com/questions/30208928/can-git-pull-automatically-stash-and-pop-pending-changes)
-
-```
-git config --global rebase.autostash true
-git config --global merge.autostash true
-
-```
 
 :::tip 使浏览器接受 GitHub 推送通知
 

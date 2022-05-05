@@ -2,13 +2,11 @@
 title: 提高效率
 ---
 
-## 库机制
+## [库机制](https://sspai.com/post/41297)
 
 快速激活代码：（激活后重新打开文件管理器，左方列表可见）
 
     reg add "HKCU\Software\Classes\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}" /v System.IsPinnedToNameSpaceTree /t REG_DWORD /d 1 /f
-
-[“库”有什么用？](https://sspai.com/post/41297)
 
 ### 管理开始菜单应用
 

@@ -9,6 +9,7 @@ import {
   faTerminal,
 } from '@fortawesome/free-solid-svg-icons';
 import { faLinux } from '@fortawesome/free-brands-svg-icons';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function Page() {
   return (
@@ -51,6 +52,19 @@ export default function Page() {
           to="pkgmgr/choco"
           noNewTab
           logo={<FontAwesomeIcon icon={faCubes} />}
+        />
+      </LogoCard.Container>
+      <h3>其他推荐：</h3>
+      <LogoCard.Container>
+        <LogoCard
+          name="摩登命令行"
+          to="/docs/dev/modern-cli/index"
+          logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
+        />
+        <LogoCard
+          name="JetBrains IDE"
+          to="/docs/dev/jetbrains/toolbox"
+          logo={<img src={useBaseUrl('/img/icons/intellij.svg')} />}
         />
       </LogoCard.Container>
     </>

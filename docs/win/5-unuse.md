@@ -2,15 +2,17 @@
 title: 捆绑服务
 ---
 
-:::caution 请等待系统与应用升级完成
+等待所有系统与应用升级完成后，会安装上一些你不太需要的捆绑内容
 
-在所有应用更新和系统升级完成后，会安装上一些你不太需要的捆绑内容
+:::caution 以管理员权限运行
+
+执行如下指令
 
 :::
 
 ## 选择性卸载
 
-以管理员身份运行 PowerShell
+**以管理员身份运行 PowerShell**
 
 ```powershell
 # OneDrive
@@ -38,7 +40,7 @@ Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
 
 ```powershell
 # 语音助手 Cortana
-winget uninstall Microsoft.549981C3F5F10_8wekyb3d8bbwe
+Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppxPackage
 
 # Microsoft Teams
 Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage

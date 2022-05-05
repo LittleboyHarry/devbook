@@ -109,6 +109,19 @@ sudo apt install -y wl-clipboard
 
 然后注销会话，左下角选择 wayland 登陆以生效。
 
+:::note KDE 字体查看器问题
+
+wayland [bug](https://bugs.kde.org/show_bug.cgi?id=439470) 修复：
+
+```
+cd ~/.local/share/applications/
+cp /usr/share/applications/org.kde.kfontview.desktop .
+sed -i "/Exec/ s/=/=env QT_QPA_PLATFORM=xcb /" org.kde.kfontview.desktop
+cd -
+```
+
+:::
+
 <!-- 热区设置 -->
 
 <!--

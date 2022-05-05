@@ -22,7 +22,7 @@ title: Cockpit
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs groupId="linux-distro">
+<Tabs className="tabs--block" groupId="linux-distro">
   <TabItem value="debian" label="Ubuntu / Debian">
 
 ```shell

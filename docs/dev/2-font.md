@@ -2,32 +2,11 @@
 title: 字体
 ---
 
-本文精选字体来自于：主流技术企业的设计作品、开源社区高认可项目
+本文精选字体来自于：主流技术企业的设计作品、开源社区高认可项目。B站科普：
 
-```powershell
-# Windows Scoop 依赖：
-scoop bucket add nerd-fonts
-```
-
- <details className="let-details-to-gray">
-<summary>KDE wayland 字体查看器问题修复：</summary>
-
-修复：
-
-```
-cd ~/.local/share/applications/
-cp /usr/share/applications/org.kde.kfontview.desktop .
-sed -i "/Exec/ s/=/=env QT_QPA_PLATFORM=xcb /" org.kde.kfontview.desktop
-cd -
-```
-
-Bug 报告：[链接](https://bugs.kde.org/show_bug.cgi?id=439470)
-
-</details>
+<BPlayer id="BV19r4y1W74d" />
 
 ### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
-
-import GetPkg from '@theme/GetPkg';
 
 <GetPkg apt="fonts-jetbrains-mono" dnf="jetbrains-mono-fonts" scoop="JetBrains-Mono" choco="jetbrainsmono" />
 
@@ -37,11 +16,13 @@ VSCode 的 `Font Family` 赋值：`JetBrains Mono`
 > [Debian 11](https://packages.debian.org/bullseye/source/fonts-jetbrains-mono)
 > 和
 > [Ubuntu 21.04](https://launchpad.net/ubuntu/+source/fonts-jetbrains-mono)
-> 以上版本的系统才有提供
+> 以上版本的系统，仓库源才开始提供
 
 ### CascadiaCode
 
-微软出品，适用于终端
+微软出品的 Windows 终端内置默认字体，Linux 安装：
+
+<GetPkg apt="fonts-cascadia-code" dnf="cascadia-code-fonts" pacman="ttf-cascadia-code" />
 
 VSCode `settings.json` 设置：
 
@@ -55,6 +36,11 @@ VSCode `settings.json` 设置：
 
 支持更多 Nerd Font 符号的字体版本，
 见[官方介绍](https://www.nerdfonts.com/)
+
+```powershell
+# Scoop 依赖：
+scoop bucket add nerd-fonts
+```
 
 <GetPkg scoop="CascadiaCode-NF" choco="cascadia-code-nerd-font" />
 
@@ -77,7 +63,7 @@ Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 
 优点：中英等宽、可选连体、窄字
 
-https://mirrorz.org/font/SarasaGothic
+下载：https://mirrorz.org/font/SarasaGothic 推荐选择 ttc 版本
 
 为 VSCode `settings.json` 配置：
 
@@ -85,3 +71,6 @@ https://mirrorz.org/font/SarasaGothic
 "editor.fontFamily": "Sarasa Term SC",
 "editor.fontLigatures": true,
 ```
+
+import GetPkg from '@theme/GetPkg';
+import BPlayer from '@theme/BPlayer';

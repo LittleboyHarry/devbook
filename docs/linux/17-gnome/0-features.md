@@ -17,3 +17,11 @@ title: GNOME 特性
 - 工作区 Workspace
 
 <!-- todo: introduce -->
+
+## 选择发行版
+
+不适合的发行版：
+
+滚动更新类的发行版 —— GNOME 版本更新导致旧插件失效、令人难以接受的新特性，如 OpenSUSE、Arch
+
+适合的发行版：Fedora, Ubuntu LTS, Debian Stable

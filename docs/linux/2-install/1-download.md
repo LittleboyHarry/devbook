@@ -2,9 +2,6 @@
 title: 下载发行版
 ---
 
-import {Container,cards} from './oscards';
-import { LinkButton } from '@theme/links';
-
 ## 获取镜像
 
 **国内综合镜像站：https://mirrorz.org/**
@@ -12,6 +9,14 @@ import { LinkButton } from '@theme/links';
 <div className="alert alert--warning">
 非官方 https 渠道下载后，务必校验文件完整性
 </div>
+
+### Arch Linux
+
+<LinkButton href="https://mirrorz.org/os/archlinux" name="系统镜像"/>
+<HtmlA href="https://archlinux.org/iso/latest/sha256sums.txt">校验信息</HtmlA>
+<br/>
+<LinkButton outline href="https://mirrorz.org/os/ArchLinuxGUI" name="图形化版安装器" hint="Arch Linux GUI"/>
+<HtmlA href="https://osdn.net/projects/arch-linux-gui/releases/">校验信息</HtmlA>
 
 ### Fedora
 
@@ -36,22 +41,17 @@ import { LinkButton } from '@theme/links';
     <cards.Kubuntu />
 </Container>
 
-### Arch Linux
-
-<LinkButton href="https://mirrorz.org/os/archlinux" name="系统镜像"/>
-<LinkButton outline href="https://archlinux.org/iso/latest/sha256sums.txt" name="校验信息" />
 <br/>
-<LinkButton href="https://mirrorz.org/os/ArchLinuxGUI" name="图形化版安装器" hint="Arch Linux GUI"/>
-<LinkButton outline href="https://osdn.net/projects/arch-linux-gui/releases/" name="校验信息"/>
 
-## 指纹信息
-
-其他发行版数据：
-
-- [Kubuntu](https://kubuntu.org/alternative-downloads/#:~:text=Checksums)
+[Kubuntu 指纹信息](https://kubuntu.org/alternative-downloads/#:~:text=Checksums)
+、
+[镜像站的所有 Ubuntu 衍生版](https://mirrorz.org/os/Ubuntu%E8%A1%8D%E7%94%9F%E7%89%88)
 
 ---
 
 注：
 
 - Ubuntu 是 Debian 同构品，如无例外则，两术语等效或近似。Fedora 与 CentOS 等同理
+
+import { Container, cards } from './oscards';
+import { HtmlA, LinkButton } from '@theme/links';

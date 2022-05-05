@@ -28,7 +28,7 @@ kwriteconfig5 --file kxkbrc --group Layout --key Options ctrl:swap_lalt_lctl_lwi
 
 ## Windows
 
-管理员身份执行，注销后以生效：
+**管理员身份**执行，注销后以生效：
 
     reg add "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 00000000000000000600000001003A003A0001001D0038005BE01D0038005BE000000000
 

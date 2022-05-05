@@ -11,7 +11,7 @@ title: WSL 使用技巧
 - unzip: 解压
 - man: 帮助手册
 
-更多工具在[开发章节内](/docs/dev/cli/index)
+更多工具在[开发章节内](/docs/dev/modern-cli/index)
 
 ## 建议
 

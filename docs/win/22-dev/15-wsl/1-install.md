@@ -12,7 +12,7 @@ import {HtmlA,MstoreLink,MstoreButton} from '@theme/links';
 
     ```
 
-2.  重启后，管理员身份运行更新：
+2.  重启后，更新：
 
         wsl --update
 
@@ -32,8 +32,12 @@ import {HtmlA,MstoreLink,MstoreButton} from '@theme/links';
 
 启动 Debian，初始化用户名密码
 
-镜像源若要使用 HTTPS 协议，先添加可信证书：
-
-    sudo apt install -y ca-certificates
-
 随后[配置镜像源并更新](/docs/linux/mustdo/mirror-update#Debian)
+
+:::note 使用 HTTPS 协议的镜像源
+
+Debian WSL 缺少需要手动下载安装的
+[可信证书](https://packages.debian.org/search?keywords=ca-certificates&exact=1)
+及 [openssl](https://packages.debian.org/search?keywords=openssl&exact=1) 依赖
+
+:::
