@@ -37,14 +37,16 @@ FromGitee,
 
 ```shell
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-$SHELL -i -c "nvm install --lts"
+bash -i -c "nvm install --lts"
+exec $SHELL
 ```
 </FromOrigin>
 <FromGitee>
 
 ```shell
 wget -qO- https://gitee.com/mirrors/nvm/raw/v0.39.1/install.sh | bash
-$SHELL -i -c "nvm install --lts"
+bash -i -c "nvm install --lts"
+exec $SHELL
 ```
 </FromGitee>
 </PreferMirror>

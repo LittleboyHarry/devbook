@@ -42,8 +42,6 @@ icm {
 # 不使用内置搜索服务，因为它影响性能
 sc.exe stop "wsearch"
 sc.exe config "wsearch" start=disabled
-echo '' '推荐代替品：'
-echo 'winget install -e "Everything Lite"'
 
 # 不要显示网页搜索结果
 reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /f /d 1

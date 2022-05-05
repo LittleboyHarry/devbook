@@ -107,7 +107,7 @@ export default function GetPkg({
     label: 'choco',
     hint: 'Windows 商服包管理器',
     defaultPkgName: name,
-    prefix: 'choco install',
+    prefix: 'sudo choco install',
   });
 
   addItem({

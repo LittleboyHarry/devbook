@@ -34,14 +34,15 @@ title: Vim 模式
 
 ## 安装
 
-`Ctrl + P` 粘贴执行:
+<LinkButton outline href="vscode:extension/vscodevim.Vim" name="VSCode" />
+<LinkButton outline href="vscodium:extension/vscodevim.Vim" name="VSCodium" />
 
-    ext install vscodevim.Vim
-
-## 临时禁用
+## 临时禁用的方法
 
 `Ctrl + Shift + P` 输入 `vimt` 回车
 
 ## 普通模式内自动切换输入法
 
 https://github.com/daipeihust/im-select
+
+import { LinkButton } from '@theme/links';

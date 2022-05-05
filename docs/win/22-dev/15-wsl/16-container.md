@@ -17,6 +17,8 @@ sudo apt update
 sudo apt install -y podman
 ```
 
+[下载速度过慢？请更改下载源](https://mirrorcache.opensuse.org/download/repositories/devel:/kubic:/libcontainers:/stable/Debian_11/Packages.mirrorlist)
+
 ## 问题
 
 Q exit status 2: iptables v1.8.7 (nf_tables): Couldn't load match `comment':No such file or directory

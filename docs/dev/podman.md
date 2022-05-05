@@ -31,9 +31,7 @@ echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/
 
 ## VSCode
 
-import {GetButtons} from './vscode-ext'
-
-<GetButtons id="ms-azuretools.vscode-docker" />
+<LinkButton outline href="vscode:extension/ms-azuretools.vscode-docker" name="安装" />
 
 配置
 
@@ -45,3 +43,5 @@ import {GetButtons} from './vscode-ext'
     systemctl --user enable --now podman.socket
 
 - [GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)
+
+import { LinkButton } from '@theme/links';

@@ -1,5 +1,6 @@
 import React, { CSSProperties, PropsWithChildren } from 'react';
 import cs from 'classnames';
+import st from './links.module.scss';
 
 export function MstoreLink({ id, name }: { id: string; name: string }) {
   return <HtmlA href={msStoreLink(id)}>{name}</HtmlA>;
@@ -31,27 +32,28 @@ export function LinkButton({
   outline,
   hint,
   attr,
+  small,
 }: {
   name: string;
   href: string;
   outline?: boolean;
   hint?: string;
   attr?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  small?: boolean;
 }) {
   return (
     <a
       href={href}
       className={cs(
+        st.linkButton,
         'button',
-        outline
-          ? 'button--outline button--secondary'
-          : ' button--lg button--primary'
+        !small && 'button--lg',
+        outline ? 'button--outline button--secondary' : 'button--primary'
       )}
       title={hint}
       style={{
         cursor: hint ? 'help' : 'pointer',
         verticalAlign: 'baseline',
-        margin: '0 1rem 1rem 0',
       }}
       {...attr}
     >

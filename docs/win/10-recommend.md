@@ -52,6 +52,18 @@ Scoop:
 
 </div>
 
+## 免费软件
+
+ <div className="no-table-border no-table-header">
+
+|                     |          |
+| ------------------- | -------- |
+| [Everything][linke] | 全盘搜索 |
+
+</div>
+
+[linke]: https://www.voidtools.com/zh-cn/downloads/#:~:text=%E4%B8%8B%E8%BD%BD%E7%B2%BE%E7%AE%80%E7%89%88%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC%2064%20%E4%BD%8D
+
 ## 付费软件
 
 <div className="no-table-header">

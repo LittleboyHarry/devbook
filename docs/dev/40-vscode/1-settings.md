@@ -2,6 +2,12 @@
 title: 配置
 ---
 
+## 修改默认 Shell
+
+`Ctrl + Shift + P` 输入关键词 `terspro` 选择
+
+## 配置文件
+
 `Ctrl + Shift + P` 搜索 `osj`，
 选择 **Preferences: Open Settings (JSON)** 打开设置
 
@@ -32,22 +38,25 @@ title: 配置
 
 :::
 
-## 修改默认 Shell
+:::note 自动应答
 
-`Ctrl + Shift + P` 输入关键词 `terspro` 选择
+Windows 环境下，命令行 Ctrl + C 自动应答。
+[1.64 版或以上可用](https://code.visualstudio.com/updates/v1_64#_automatic-replies)
+
+```json
+"terminal.integrated.autoReplies": {
+    "终止批处理操作吗(Y/N)?": "Y\r"
+},
+```
+
+:::
 
 ## 推荐快捷键
-
-:::note
 
 `Ctrl + Shift + P` 搜索 `oks`，
 选择 **Preferences: Open Keyboard Shortcuts (JSON)** 配置组合键
 
-:::
-
-### 选择词块
-
-仿 JetBrains IDE，绑定 `Ctrl + W` 键
+仿 JetBrains IDE，绑定 `Ctrl + W` 键的选择词块
 
 ```json
 {
@@ -64,15 +73,4 @@ title: 配置
   "key": "ctrl+f4",
   "command": "workbench.action.closeActiveEditor"
 }
-```
-
-### Windows 自动应答
-
-Windows 环境下，命令行 Ctrl + C 自动应答。
-[1.64 版或以上可用](https://code.visualstudio.com/updates/v1_64#_automatic-replies)
-
-```json
-"terminal.integrated.autoReplies": {
-    "终止批处理操作吗(Y/N)?": "Y\r"
-},
 ```

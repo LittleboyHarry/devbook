@@ -25,57 +25,59 @@ Bug 报告：[链接](https://bugs.kde.org/show_bug.cgi?id=439470)
 
 </details>
 
-### JetBrains Mono
-
-介绍 <https://www.jetbrains.com/zh-cn/lp/mono/> 安装：
+### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="goldendict" dnf="jetbrains-mono-fonts" scoop="JetBrains-Mono" />
+<GetPkg apt="fonts-jetbrains-mono" dnf="jetbrains-mono-fonts" scoop="JetBrains-Mono" choco="jetbrainsmono" />
 
 VSCode 的 `Font Family` 赋值：`JetBrains Mono`
 
-### CascadiaCode NerdFont
+> 注：对 apt 包管理器而言，
+> [Debian 11](https://packages.debian.org/bullseye/source/fonts-jetbrains-mono)
+> 和
+> [Ubuntu 21.04](https://launchpad.net/ubuntu/+source/fonts-jetbrains-mono)
+> 以上版本的系统才有提供
+
+### CascadiaCode
 
 微软出品，适用于终端
 
-Nerd Font 支持版下载: https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip
+VSCode `settings.json` 设置：
 
-Windows:
+```json
+"terminal.integrated.fontFamily": "Cascadia Mono",
+"editor.fontFamily": "Cascadia Code",
+```
+
+ <details className="let-details-to-gray" role="alert">
+<summary>Nerd Font 版</summary>
+
+支持更多 Nerd Font 符号的字体版本，
+见[官方介绍](https://www.nerdfonts.com/)
 
 <GetPkg scoop="CascadiaCode-NF" choco="cascadia-code-nerd-font" />
 
-参见关于图标字体 Nerd Font 的[官方介绍](https://www.nerdfonts.com/)
+[或手动下载](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip)
 
 VSCode `settings.json` 设置：
 
-- Linux
+```json
+// Linux:
+"terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font"
+// Windows:
+"terminal.integrated.fontFamily": "CaskaydiaCove NF"
+```
 
-      "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font"
+Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 
-- Windows
-
-      "terminal.integrated.fontFamily": "CaskaydiaCove NF"
-
-Windows Terminal: `settings.json` `.profiles.defaults.fontFace` = `"CaskaydiaCove NF"`
+</details>
 
 ### 等距更纱
 
 优点：中英等宽、可选连体、窄字
 
-```shell
-sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/M17N:fonts/openSUSE_Tumbleweed/M17N:fonts.repo
-dnf download sarasa-gothic-fonts
-sudo dnf config-manager --set-disabled M17N_fonts
-sudo dnf in -y sarasa-gothic-fonts-*.rpm
-```
-
-Windows:
-
-    winget install 7zip.7zip
-    scoop install SarasaGothic-SC
-
-清华镜像：https://mirrors.tuna.tsinghua.edu.cn/github-release/be5invis/Sarasa-Gothic/LatestRelease/ 选**不带** unhinted 的 ttc 版安装
+https://mirrorz.org/font/SarasaGothic
 
 为 VSCode `settings.json` 配置：
 
