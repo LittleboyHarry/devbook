@@ -193,7 +193,6 @@ const config = {
         ],
       },
     ],
-    /*
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
@@ -201,7 +200,6 @@ const config = {
         language: ['en', 'zh'],
       },
     ],
-     */
   ],
 };
 
