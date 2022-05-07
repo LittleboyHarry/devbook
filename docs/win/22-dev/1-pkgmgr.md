@@ -1,6 +1,30 @@
 ---
-title: 使用 Scoop
+title: Windows 包管理器
 ---
+
+## **winget**
+
+Win 11 已内置：仅需在商店中更新可用
+
+Win 10 安装方法：<MstoreButton id="9NBLGGH4NNS1" name="从商店获取" />
+or&nbsp;<a href="https://github.com/microsoft/winget-cli/releases/latest#:~:text=.msixbundle">从 Github 获取</a>
+
+## **Chocolatey**
+
+安装：以管理员权限运行
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# 信任所有安装程序的脚本
+choco feature enable -n allowGlobalConfirmation
+```
+
+包搜索：https://community.chocolatey.org/packages
+
+## **Scoop**
+
+### Scoop 安装
 
 依赖：`git`
 
@@ -12,7 +36,8 @@ iwr -useb get.scoop.sh | iex
 
 ```
 
-## 手动安装
+<details>
+  <summary>手动安装</summary>
 
 通过各种途径，获取到 scoop 的源码包：
 
@@ -31,7 +56,9 @@ curl -L https://cdn.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1 | 
 rm install.ps1
 ```
 
-## 下载代理
+</details>
+
+### 代理下载配置
 
 ```
 # 配置网络代理
@@ -41,10 +68,35 @@ scoop update
 
 ```
 
+### 自动补全支持
+
+```powershell
+scoop bucket add extras
+scoop install scoop-completion
+echo "Import-Module '$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion'" >> $PROFILE
+
+```
+
+### 搜索优化
+
+加快 `scoop search` 查询速度
+
+```powershell
+scoop install scoop-search
+echo "Invoke-Expression (&scoop-search --hook)" >> $PROFILE
+
+```
+
+:::caution 重启终端后生效
+
+:::
+
+### 获取内容
+
 全网包索引：https://rasa.github.io/scoop-directory/
 
 <details>
-  <summary>手动下载并安装的方法</summary>
+  <summary>手动装包</summary>
 
 首先，列出包的下载地址：
 
@@ -74,29 +126,4 @@ cp (Read-Host "下载的文件路径（可拖入）") (cache_path $app $metadata
 
 </details>
 
-## sudo 提权指令
-
-    scoop install sudo
-
-### scoop 自动补全
-
-```powershell
-scoop bucket add extras
-scoop install scoop-completion
-echo "Import-Module '$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion'" >> $PROFILE
-
-```
-
-### scoop 搜索优化
-
-默认的搜索算法反应很慢
-
-```powershell
-scoop install scoop-search
-echo "Invoke-Expression (&scoop-search --hook)" >> $PROFILE
-
-```
-
-:::info 重启终端后生效
-
-:::
+import { MstoreButton } from '@theme/links';

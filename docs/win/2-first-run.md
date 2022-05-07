@@ -19,7 +19,7 @@ title: 初始化
 
 此外，更新所有应用软件：
 
-进入旧版 Store 商店 > 菜单 - 软件和更新  > 下载和更新
+进入旧版 Store 商店 > 菜单 - 软件和更新 > 下载和更新
 （ 新版：库 > 获取更新
 
 ## 第三步：更改计算机名
@@ -51,23 +51,21 @@ title: 初始化
 
 [114 DNS](https://www.114dns.com/)：`114.114.114.114` `114.114.115.115`
 
-## 微软账号
-
-推荐设用双重登录验证码 App，这样可以避免重复输入登录密码。
-
-账号配置方法：https://account.live.com/proofs/EnableTfa
-
-手机客户端：
-[iOS](https://apps.apple.com/cn/app/microsoft-authenticator/id983156458)
-| Android
-
+<!--
 :::info 以下指令需要管理员权限运行
 
 `Win + R` 运行对话框，可按下 `Ctrl + Shift + Enter` 提权运行
 
 :::
+ -->
 
-:::note 双系统问题
+## 双系统问题
+
+:::caution 以下指令需要管理员权限
+
+`Win + X` > `A` 在系统菜单中，打开具有管理员权限的 PowerShell 终端
+
+:::
 
 关闭快速启动
 
@@ -81,18 +79,25 @@ title: 初始化
 
     SystemPropertiesAdvanced
 
+## 缺少 Office？
+
+如果你的微软账号已激活了 Office，登录并获取：
+
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
+<LinkButton outline href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" name="在线官方安装器" icon={<FontAwesomeIcon icon={faGlobe} />} />
+
+:::info 使用验证码登录微软账号
+
+推荐使用微软登录验证 App，避免重复输入登录密码。
+[配置方法](https://account.live.com/proofs/EnableTfa)
+
+手机客户端：
+[iOS](https://apps.apple.com/cn/app/microsoft-authenticator/id983156458)
+| Android
+
 :::
 
-## 答疑区
-
-Q: 需要打开非 zip 的压缩文件？
-
-安装广受好评的 7z 便携版解压器: https://portableapps.com/apps/utilities/7-zip_portable
-
-Q: 重装系统里没有 Office
-
-A: 如果你已经在线激活过 Office:
-
-<a className="button button--lg button--primary" href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" target="_blank">登录微软账号并下载安装</a>
-
-import {HtmlA} from '@theme/links';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { LinkButton } from '@theme/links';
+import { HtmlA } from '@theme/links';

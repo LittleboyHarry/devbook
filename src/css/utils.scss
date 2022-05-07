@@ -52,3 +52,12 @@
     clear: both;
   }
 }
+
+.no-link-underline {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -2,14 +2,16 @@
 title: 目录
 ---
 
-import {TopGrid,EditorGrid,DevEnvGrid} from './devdocsgrid'
+## 命令行工具
 
-<TopGrid/>
+<CliToolsGrid/>
+
+## 开发环境
+
+<DevEnvGrid/>
 
 ## 编辑器
 
 <EditorGrid/>
 
-## 开发环境
-
-<DevEnvGrid/>
+import { CliToolsGrid, EditorGrid, DevEnvGrid } from './devdocsgrid';

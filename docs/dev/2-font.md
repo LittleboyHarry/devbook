@@ -2,7 +2,7 @@
 title: 字体
 ---
 
-本文精选字体来自于：主流技术企业的设计作品、开源社区高认可项目。B站科普：
+本文精选字体来自于：主流技术企业的设计作品、开源社区高认可项目。逼站科普：
 
 <BPlayer id="BV19r4y1W74d" />
 
@@ -10,13 +10,20 @@ title: 字体
 
 <GetPkg apt="fonts-jetbrains-mono" dnf="jetbrains-mono-fonts" scoop="JetBrains-Mono" choco="jetbrainsmono" />
 
-VSCode 的 `Font Family` 赋值：`JetBrains Mono`
+为 VSCode `settings.json` 配置：
+
+```json
+"editor.fontFamily": "JetBrains Mono",
+"editor.fontLigatures": true,
+```
 
 > 注：对 apt 包管理器而言，
 > [Debian 11](https://packages.debian.org/bullseye/source/fonts-jetbrains-mono)
 > 和
 > [Ubuntu 21.04](https://launchpad.net/ubuntu/+source/fonts-jetbrains-mono)
 > 以上版本的系统，仓库源才开始提供
+
+<br/>
 
 ### CascadiaCode
 
@@ -29,6 +36,7 @@ VSCode `settings.json` 设置：
 ```json
 "terminal.integrated.fontFamily": "Cascadia Mono",
 "editor.fontFamily": "Cascadia Code",
+"editor.fontLigatures": true,
 ```
 
  <details className="let-details-to-gray" role="alert">
@@ -58,6 +66,8 @@ VSCode `settings.json` 设置：
 Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 
 </details>
+
+<br/>
 
 ### 等距更纱
 

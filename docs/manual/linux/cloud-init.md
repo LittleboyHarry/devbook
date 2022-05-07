@@ -1,25 +1,41 @@
 ---
 title: 云镜像与虚拟机
-tags: [cloud-init,libvirt]
+tags: [cloud-init, libvirt]
 ---
 
-环境配置：采用 KVM 集成的 [libvirt](/docs/dev/virtual/libvirt) 平台
+:::note 请阅读前文
 
-大多数发行版的支持 [cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html) 云技术，
+libvirt-QEMU/KVM 虚拟化平台在 Linux 上的[安装方法](/docs/linux/libvirt)
+
+:::
+
+云技术 [cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html) 视频介绍：
+[去bilibili观看](https://www.bilibili.com/video/BV1Cf4y1U7pQ?p=3&zw)后续分集
+
+<BPlayer id="BV1Cf4y1U7pQ" page="2" />
+
+import BPlayer from '@theme/BPlayer';
+
+`cloud-init` 受到大多数发行版的支持，
 根据配置文件即可快速生成可 SSH 直连的虚拟机。
 
-## 相关链接
+:::note 下载云镜像
 
-[B站中文讲解视频](https://www.bilibili.com/video/BV1Cf4y1U7pQ)
+ <div className="no-link-underline" >
 
-云镜像 cloudimage 下载：
+- **[Debian 云镜像](https://mirrorz.org/list/debian-cdimage)**，例如：
 
-- [Debian 云镜像](https://mirrorz.org/list/debian-cdimage):
-  例如 https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-genericcloud-amd64.qcow2
-- [Ubuntu 云镜像](https://mirrorz.org/list/ubuntu-cloud-images):
-  例如 https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/jammy/current/jammy-server-cloudimg-amd64-disk-kvm.img
-- [Arch 云镜像](https://mirrorz.org/list/archlinux):
-  例如 https://mirrors.tuna.tsinghua.edu.cn/archlinux/images/latest/Arch-Linux-x86_64-cloudimg.qcow2
+  https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-genericcloud-amd64.qcow2
+- **[Ubuntu 云镜像](https://mirrorz.org/list/ubuntu-cloud-images)**，例如：
+
+  https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/jammy/current/jammy-server-cloudimg-amd64-disk-kvm.img
+- **[Arch 云镜像](https://mirrorz.org/list/archlinux)**，例如：
+
+  https://mirrors.tuna.tsinghua.edu.cn/archlinux/images/latest/Arch-Linux-x86_64-cloudimg.qcow2
+
+</div>
+
+:::
 
 ## 制作工具
 
@@ -85,7 +101,6 @@ users:
 把 <a href="/docs/linux/mustdo/mirror-update" target="_blank">这些脚本</a> 按 yaml 数组格式
 添加到 `user-data` 的 `runcmd:` 内，系统初始化时会自动执行
 
-
 :::note 校验代码正确性
 
     cloud-init devel schema -c user-data --annotate
@@ -117,13 +132,14 @@ virt-install --connect qemu:///session \
 - `--vcpu` 配置 CPU 核心数
 - `--memory` 内存大小 (MB)
 
+&nbsp;
 
  <details className="let-details-to-yellow">
 <summary>
 
 当出现 `Cloud-init v. ... finished` 字样或 `cloud-init status` 执行结果为 `status: done`
 
-  </summary>
+</summary>
 
 **🎉 配置完成！登陆在虚拟控制台或 SSH 登陆试试～ ✨**
 

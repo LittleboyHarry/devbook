@@ -1,5 +1,5 @@
 ---
-title: 配置
+title: VSC 配置
 ---
 
 ## 修改默认 Shell

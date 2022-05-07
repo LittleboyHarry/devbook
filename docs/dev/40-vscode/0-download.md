@@ -1,5 +1,5 @@
 ---
-title: 下载安装
+title: VSC 下载
 ---
 
 ## 免费商业版
@@ -7,12 +7,6 @@ title: 下载安装
 使用后代表你同意微软公司的相关条款。[从官方网站下载](https://code.visualstudio.com/)
 
 :::note 从世纪互联国区 CDN 下载
-
-Windows: 保存到下载文件夹
-
-```powershell
-Start-BitsTransfer "https://vscode.cdn.azure.cn$((iwr "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" -method head).BaseResponse.RequestMessage.RequestUri.AbsolutePath)" -dest [Environment]::GetFolderPath("MyDocuments") + "\Downloads"
-```
 
 Debian:
 

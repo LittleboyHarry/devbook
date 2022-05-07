@@ -19,11 +19,16 @@ sudo apt install -y podman
 
 [下载速度过慢？请更改下载源](https://mirrorcache.opensuse.org/download/repositories/devel:/kubic:/libcontainers:/stable/Debian_11/Packages.mirrorlist)
 
-## 问题
+## 问题修复
 
-Q exit status 2: iptables v1.8.7 (nf_tables): Couldn't load match `comment':No such file or directory
+ <details className="let-details-to-gray" role="alert">
+<summary>bug 说明：</summary>
 
-A [解决方法](https://github.com/microsoft/WSL/issues/7948#issuecomment-1043467915):
+> exit status 2: iptables v1.8.7 (nf_tables): Couldn't load match `comment':No such file or directory
+
+</details>
+
+-> [解决方法](https://github.com/microsoft/WSL/issues/7948#issuecomment-1043467915):
 
 ```shell
 sudo update-alternatives --set iptables /usr/sbin/iptables-legacy

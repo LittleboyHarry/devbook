@@ -1,5 +1,5 @@
 ---
-title: 小技巧
+title: JetBrains IDE 技巧
 ---
 
 ## 快捷键

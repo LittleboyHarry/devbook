@@ -10,6 +10,8 @@ import {HtmlA} from '@theme/links';
 - <HtmlA href="ms-settings:devices-touchpad">配置触摸板</HtmlA>：建议“三指手势”点击作为“鼠标中键”
 - <HtmlA href="ms-settings:batterysaver-settings">节省电量</HtmlA>
 
+<!--
+
 ## BitLocker
 
 仅专业版可用，防盗加密。veracrypt 是开源替代品
@@ -22,6 +24,7 @@ import {HtmlA} from '@theme/links';
     mv C:\Windows\System32\Recovery\ReAgent.xml C:\Windows\System32\Recovery\ReAgent.xml.old
 
 </details>
+ -->
 
 ## 硬件问题
 

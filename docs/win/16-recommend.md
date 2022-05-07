@@ -2,24 +2,34 @@
 title: 推荐软件
 ---
 
-import {HtmlA,MstoreLink} from '@theme/links';
+:::note 借助包管理器安装
+
+推荐 Chocolatey, 以管理员权限运行 PowerShell 安装方法：
+
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+:::
 
 ## 自由软件
 
-必装：
+### 必装类
 
-- 7zip
+压缩软件：
 
-  <GetPkg name="7zip" choco winget="7zip.7zip" />
+    choco install 7zip
+
+&nbsp;
+
+    winget install 7zip.7zip
 
 <!-- 硬盘空间分析: [KDE Filelight](https://www.microsoft.com/store/productId/9PFXCD722M2C) -->
 
  <div className="no-table-border no-table-header">
 
-推荐：
+### 推荐类
 
  <details className="let-details-to-gray">
-<summary>qbittorrent-enhanced BT下载器</summary>
+<summary>BT下载器：qbittorrent-enhanced</summary>
 
 Chocolatey:
 
@@ -35,13 +45,13 @@ Scoop:
 </details>
 
  <details className="let-details-to-gray">
-<summary>veracrypt 数据加密</summary>
+<summary>硬盘数据防盗加密：veracrypt</summary>
 
 <GetPkg name="veracrypt" choco winget />
 
 </details>
 
-商店提供：
+### 商店提供
 
 |                                                       |                        |
 | ----------------------------------------------------- | ---------------------- |
@@ -77,3 +87,4 @@ Scoop:
 国内正版代理商索引：https://zhuanlan.zhihu.com/p/93284719
 
 import GetPkg from '@theme/GetPkg';
+import {HtmlA,MstoreLink} from '@theme/links';

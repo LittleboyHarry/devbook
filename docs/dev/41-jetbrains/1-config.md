@@ -1,5 +1,5 @@
 ---
-title: 配置
+title: JBS 配置
 ---
 
 <details className="let-details-to-gray">

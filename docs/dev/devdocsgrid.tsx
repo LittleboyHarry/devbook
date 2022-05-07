@@ -6,11 +6,10 @@ import {
   faTerminal,
   faPersonWalkingLuggage,
   faScrewdriverWrench,
-  faNetworkWired,
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export function TopGrid() {
+export function CliToolsGrid() {
   return (
     <>
       <LogoCard.Container>
@@ -73,11 +72,6 @@ export function EditorGrid() {
 export function DevEnvGrid() {
   return (
     <LogoCard.Container>
-      <LogoCard
-        name="虚拟化"
-        to="virtual/intro"
-        logo={<FontAwesomeIcon icon={faNetworkWired} />}
-      />
       <LogoCard
         name="Node.js"
         to="nodejs"

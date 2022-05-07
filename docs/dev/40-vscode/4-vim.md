@@ -1,5 +1,5 @@
 ---
-title: Vim 模式
+title: VSC vim 模式
 ---
 
 ## 配置

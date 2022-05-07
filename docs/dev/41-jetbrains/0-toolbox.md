@@ -1,5 +1,5 @@
 ---
-title: 安装器
+title: JBS 安装器
 ---
 
 ## 轻松管理 IDE

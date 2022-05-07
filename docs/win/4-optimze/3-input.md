@@ -16,11 +16,16 @@ reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v FontStyleTS
 
 ```
 
+ <details className="let-details-to-gray" ><summary>
+
 ### 使用小鹤双拼
 
-双拼作用: https://www.zhihu.com/question/21449398
+</summary>
 
-练习方法: https://www.zhihu.com/question/311394000
+来自知乎知识分享：
+[双拼的好处](https://www.zhihu.com/question/21449398)
+与
+[练习方法](https://www.zhihu.com/question/311394000)
 
 ```bat
 reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "EnableExtraDomainType" /t REG_DWORD /f /d 1
@@ -30,8 +35,11 @@ reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "UserDefinedDouble
 
 ```
 
-:::note 大量码字需求
+</details>
 
-推荐更改并习惯<a href="/docs/dev/keymap" target="_blank">新的键盘布局</a>
+:::note 作者推荐的 <a href="/docs/dev/keymap#windows" target="_blank">新键盘布局</a>
+
+- 仿 Mac 修饰键顺序：Win, Alt, Ctrl
+- 交换 Esc 与 CapsLock
 
 :::

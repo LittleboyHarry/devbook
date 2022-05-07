@@ -65,7 +65,7 @@ const config = {
             type: 'doc',
             docId: 'win/index',
             position: 'left',
-            label: 'Win',
+            label: 'Windows',
           },
           {
             type: 'doc',

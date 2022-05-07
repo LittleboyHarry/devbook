@@ -1,13 +1,34 @@
 import React, { CSSProperties, PropsWithChildren } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import cs from 'clsx';
 import st from './links.module.scss';
 
 export function MstoreLink({ id, name }: { id: string; name: string }) {
-  return <HtmlA href={msStoreLink(id)}>{name}</HtmlA>;
+  return (
+    <HtmlA href={msStoreLink(id)}>
+      <FontAwesomeIcon icon={faBagShopping} />
+      &nbsp;
+      {name}
+    </HtmlA>
+  );
 }
 
 export function MstoreButton({ id, name }: { id: string; name: string }) {
-  return <LinkButton name={name} href={msStoreLink(id)} />;
+  return (
+    <LinkButton
+      name={
+        <>
+          <FontAwesomeIcon
+            icon={faBagShopping}
+            style={{ margin: '0 0.5rem 0 -0.5rem' }}
+          />
+          {name}
+        </>
+      }
+      href={msStoreLink(id)}
+    />
+  );
 }
 
 function msStoreLink(id: string) {
@@ -34,6 +55,7 @@ export function LinkButton({
   attr,
   style,
   small,
+  icon,
 }: {
   name: React.ReactNode;
   href: string;
@@ -42,6 +64,7 @@ export function LinkButton({
   attr?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
   style?: CSSProperties;
   small?: boolean;
+  icon?: React.ReactNode;
 }) {
   return (
     <a
@@ -60,6 +83,7 @@ export function LinkButton({
         ...style,
       }}
     >
+      {icon && <span className={st.icon}>{icon}</span>}
       {name}
     </a>
   );

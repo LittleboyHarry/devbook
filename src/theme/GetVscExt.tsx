@@ -14,7 +14,9 @@ export default function GetVscExt({
 }) {
   return (
     <>
-      {!noTitle && '安装到：'}
+      {!noTitle && (
+        <span style={{ margin: '0 1rem' }}>{msOnly ? '仅供于' : '安装到'}</span>
+      )}
       <span style={{ display: 'inline-block' }}>
         <LinkButton
           outline
@@ -37,7 +39,7 @@ export default function GetVscExt({
         style={{ marginRight: '1rem', display: 'inline-block' }}
         href={'https://marketplace.visualstudio.com/items?itemName=' + id}
       >
-        插件详情
+        (插件详情)
       </a>
     </>
   );

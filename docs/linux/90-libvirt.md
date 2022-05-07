@@ -1,6 +1,8 @@
 ---
-title: libvirt
+title: 虚拟化平台
 ---
+
+# libvirt
 
 ## 安装
 
@@ -25,11 +27,13 @@ import {
 
 ## 配置
 
-解锁虚拟机 XML 编辑器：
+### 解锁虚拟机 XML 编辑器
 
     dconf write /org/virt-manager/virt-manager/xmleditor-enabled true
 
-配置 virbr0 虚拟桥接网卡，打通宿主机与虚拟机通讯：
+### 桥接网卡
+
+为了宿主机与虚拟机通讯，配置 `virbr0` 虚拟桥接网卡：
 
  <Tabs className="tabs--block" groupId="linux-distro">
 <TabItem value="debian" label="Ubuntu / Debian">
