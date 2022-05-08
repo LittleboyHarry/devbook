@@ -6,16 +6,21 @@ title: WSL 使用技巧
 
 ```bash
 # 开发必装
-sudo apt install -y git curl wget python3 man
+sudo apt install -y git curl wget python3 man neovim
 
 # 转换 Windows 格式的换行符
 sudo apt install -y dos2unix
 
+# 命令缺失提示
+sudo apt install -y command-not-found
+sudo apt update
+exec $SHELL
+
 # 其他推荐
-sudo apt install -y tree unzip
+sudo apt install -y tree unzip tig
 ```
 
-zsh, git, deploy-my-dotfiles, bat, fzf, rg, fd, pipx 等请见：
+zsh, git, deploy-my-dotfiles, neovim, bat, fzf, rg, fd, pipx 等请见：
 
 <a target="_blank"
 href="/docs/dev/intro#命令行工具">开发环境 - 命令行工具</a>

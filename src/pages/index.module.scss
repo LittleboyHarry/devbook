@@ -22,6 +22,14 @@
   justify-content: center;
 }
 
+.session {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  background: var(--ifm-color-emphasis-100);
+}
+
 .tileList {
   list-style: none;
   display: grid;
@@ -31,54 +39,63 @@
   padding: 0;
   margin: 24px auto 0;
   max-width: 960px;
+}
 
-  li {
-    a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+.tileItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-      box-sizing: border-box;
-      text-align: center;
-      hyphens: auto;
-      padding: 20px 15px;
-      height: 100%;
-      border-radius: 7px;
-      text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
+  hyphens: auto;
+  padding: 20px 15px;
+  height: 100%;
+  border-radius: 7px;
 
-      &:hover {
-        background: #f6f5f4;
-      }
-
-      >img {
-        width: 64px;
-        margin-bottom: 0.7em;
-        filter: drop-shadow(0 1.3px 1.6px rgba(0, 0, 0, 0.15))
-          drop-shadow(0 6.4px 11.2px rgba(0, 0, 0, 0.04));
-      }
-
-      b {
-        color: black;
-        align-items: center;
-        font-size: 1.2em;
-        padding-bottom: 0.2em;
-        text-overflow: ellipsis;
-        font-weight: normal;
-        word-wrap: break-word;
-        display: block;
-        justify-content: center;
-      }
-      small {
-        font-size: 16px;
-        color: gray;
-        display: -webkit-inline-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 2;
-      }
+  @at-root .hoverable {
+    transition: background-color 0.1s;
+    &:hover {
+      background: var(--ifm-color-emphasis-200);
     }
+  }
+
+  > a {
+    text-decoration: none;
+    > img,
+    > svg {
+      width: 64px;
+      height: 64px;
+      color: var(--ifm-color-emphasis-800);
+      margin-bottom: 0.7em;
+      filter: drop-shadow(0 1.3px 1.6px rgba(0, 0, 0, 0.25))
+        drop-shadow(0 6.4px 11.2px rgba(0, 0, 0, 0.04));
+    }
+  }
+}
+
+.tileLabel {
+  > b {
+    color: var(--ifm-font-color-base);
+    align-items: center;
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    word-wrap: break-word;
+    display: block;
+    justify-content: center;
+  }
+
+  > small {
+    font-size: 16px;
+    color: gray;
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
   }
 }
 

@@ -5,29 +5,33 @@
 依赖包：
 
 import {
-  PreferPkgMgr,
-  ForApt,
-  ForDnf,
+PreferPkgMgr,
+ForApt,
+ForDnf,
 } from '@theme/PreferPkgMgr'
 
  <PreferPkgMgr dnf apt>
 <ForApt>
 
-```shell
-sudo apt install -y git python-is-python3
+    sudo apt install -y git python-is-python3
 
-# 粘贴板：x11 or wayland
+x 剪贴板相关支持依赖：
+
+```bash
 sudo apt install -y xclip
-sudo apt install -y wl-clipboard
+if dpkg -l libwayland-client0 &> /dev/null; then
+  sudo apt install -y wl-clipboard
+fi
 ```
 
 </ForApt>
 <ForDnf>
 
-```shell
-sudo dnf install -y git
+    sudo dnf install -y git
 
-# 粘贴板：x11 or wayland
+x 剪贴板相关支持依赖：
+
+```bash
 sudo dnf install -y xclip
 sudo dnf install -y wl-clipboard
 ```

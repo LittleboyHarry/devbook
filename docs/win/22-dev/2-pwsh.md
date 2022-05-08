@@ -23,26 +23,53 @@ import {MstoreButton} from '@theme/links';
 
 </details>
 
-## 配置
+## 基本配置
 
-编辑配置文件
+`$PROFILE` 推荐配置：
 
 ```powershell
 mkdir ~\Documents\PowerShell
-notepad $PROFILE
-```
 
-```powershell
-# Emacs 模式
+# 使用 Emacs 键盘模式 & 历史预测
+echo "
 Set-PSReadLineOption -EditMode Emacs
-# 历史预测，可按下 Ctrl + F 补全
 Set-PSReadLineOption -PredictionSource History
-
+" >> $PROFILE
 ```
 
-### Git 集成支持
+## psutils
 
-安装 `posh-git`
+为开发者强烈推荐的[开源工具集](https://github.com/lukesampson/psutils)
+
+<GetPkg name="psutils" choco scoop />
+
+介绍：
+
+- 由 scoop 包管理器作者 lukesampson 出品
+- `sudo` - **仿 Unix 实现的 sudo 命令**
+- `ln` - 仿 Unix 实现，创建链接
+- `touch` - 仿 Unix 实现，创建文件
+- `shasum` - 仿 Unix 实现
+- `gitignore` - 从 gitignore.io 获取 .gitignore 文件模板，标准输出
+- `say` - 仿 MacOS 实现的文本转语音指令
+
+<!--
+- `runat` - 微软已经废弃并在 Windows 2012 中删除的 at 命令的替代品
+- `time` - Unix 时间命令的近似值
+- `vimtutor` - Vim for Windows 附带的 vimtutor 不能与 Scoop 一起使用。这个可以
+-->
+
+## PSGallery 社区项目
+
+:::info 信任社区代码源
+
+激活 PSGallery:
+
+    Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+
+:::
+
+Git 支持，请安装 `posh-git`
 
 ```powershell
 Install-Module posh-git -AllowClobber
@@ -51,27 +78,30 @@ echo "
 if ( Test-Path -Path .git -PathType Container ) {
     Import-Module posh-git
 }
-" >> $profile
+" >> $PROFILE
 
 ```
 
-### Tab 键补全菜单
+<details className="let-details-to-gray">
+    <summary>增强的补全菜单</summary>
 
-安装 `GuiCompletion` [项目](https://github.com/nightroman/PS-GuiCompletion)：
+来自社区[开源项目 `GuiCompletion`](https://github.com/nightroman/PS-GuiCompletion),
+增强 Tab 键弹出菜单
 
 ```powershell
 Install-Module GuiCompletion
-echo 'Install-GuiCompletion -Key Tab' >> $profile
+echo 'Install-GuiCompletion -Key Tab' >> $PROFILE
 
 ```
 
-### zoxide
+</details>
+
+ <details className="let-details-to-gray">
+<summary>zoxide</summary>
 
 记录切换的工作目录，<a href="/docs/dev/modern-cli/zoxide" target="_blank" >参见</a>
 
-## psutil
-
-<GetPkg name="psutils" choco scoop />
+</details>
 
 import GetPkg from '@theme/GetPkg';
 import { LinkButton } from '@theme/links';

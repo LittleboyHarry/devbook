@@ -8,8 +8,7 @@ title: VSC 配置
 
 ## 配置文件
 
-`Ctrl + Shift + P` 搜索 `osj`，
-选择 **Preferences: Open Settings (JSON)** 打开设置
+编辑方法：`Ctrl + ,` 点击右上角图标跳转到 JSON 文件
 
 ```json
 // 关闭遥测
@@ -53,8 +52,7 @@ Windows 环境下，命令行 Ctrl + C 自动应答。
 
 ## 推荐快捷键
 
-`Ctrl + Shift + P` 搜索 `oks`，
-选择 **Preferences: Open Keyboard Shortcuts (JSON)** 配置组合键
+编辑方法：`Ctrl + K` `Ctrl + S` 点击右上角图标跳转到 JSON 文件
 
 仿 JetBrains IDE，绑定 `Ctrl + W` 键的选择词块
 

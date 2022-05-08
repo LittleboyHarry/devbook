@@ -6,6 +6,13 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import st from './index.module.scss';
 import Windows8Icon from '@site/static/img/icons/windows8-original.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHammer,
+  faPalette,
+  faScrewdriverWrench,
+} from '@fortawesome/free-solid-svg-icons';
+import { faLinux } from '@fortawesome/free-brands-svg-icons';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -37,7 +44,7 @@ function Tile({
   description?: string;
 }) {
   return (
-    <li>
+    <li className={cs(st.tileItem, href && st.hoverable)}>
       <a href={href}>
         {img}
         <div className={st.tileLabel}>
@@ -57,29 +64,7 @@ export default function Home(): JSX.Element {
     <Layout description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
-        {/*
-        <section className={styles.features}>
-          <div className="container">
-            <h2 style={{ textAlign: 'center', marginTop: '2rem' }}>
-              本书采用 Fedora 作为 Linux 发行版
-            </h2>
-            <div className="row">
-              {FeatureList.map((props, idx) => (
-                <FeatureWithImg key={idx} {...props} />
-              ))}
-            </div>
-          </div>
-        </section>
-        */}
-        <section
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '2rem 0',
-            width: '100%',
-            background: '#fcfcfb',
-          }}
-        >
+        <section className={st.session}>
           <div className="container">
             <h2 style={{ textAlign: 'center' }}>涵盖的内容</h2>
             <ul className={st.tileList}>
@@ -98,27 +83,39 @@ export default function Home(): JSX.Element {
                 }
               />
               <Tile
-                title="实用软件"
-                description="倾力推荐"
-                href="docs/software/intro"
-                img={<HomepageImage filename="icon_foss.svg" />}
-              />
-              <Tile
                 title="浏览器"
                 description="提高工作效率"
                 href="docs/software/browser/edge-for-linux"
                 img={<HomepageImage filename="icon_browser.svg" />}
               />
               <Tile
+                title="实用软件"
+                description="倾力推荐"
+                href="docs/software/intro"
+                img={<FontAwesomeIcon icon={faHammer} />}
+              />
+              <Tile
+                title="WSL"
+                description="开发环境"
+                href="docs/win/dev/wsl/install"
+                img={<FontAwesomeIcon icon={faLinux} />}
+              />
+              <Tile
                 title="桌面美化"
                 description="GNOME , KDE , Win"
-                img={<HomepageImage filename="icon_gnome.svg" />}
+                img={<FontAwesomeIcon icon={faPalette} />}
               />
               <Tile
                 title="开发"
                 description="环境配置"
                 href="docs/dev/intro"
-                img={<HomepageImage filename="icon_dev.svg" />}
+                img={<img src={useBaseUrl('/img/icons/git.svg')} />}
+              />
+              <Tile
+                title="摩登命令行"
+                description="new unix cli"
+                href="docs/dev/modern-cli/index"
+                img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
               />
             </ul>
           </div>
