@@ -1,0 +1,13 @@
+#__docusaurus {
+  .slick-prev,
+  .slick-next {
+    $size: 36px;
+    width: $size;
+    height: $size;
+    z-index: 1;
+    &:before {
+      font-size: $size;
+      color: var(--ifm-color-emphasis-700);
+    }
+  }
+}

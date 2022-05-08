@@ -17,6 +17,8 @@ title: 捆绑服务
 ```powershell
 # OneDrive
 Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
+if (Test-Path "$env:systemroot\System32\OneDriveSetup.exe") { & "$env:systemroot\System32\OneDriveSetup.exe" /uninstall }
+if (Test-Path "$env:systemroot\SysWOW64\OneDriveSetup.exe") { & "$env:systemroot\SysWOW64\OneDriveSetup.exe" /uninstall }
 
 # Office 引导
 Get-AppxPackage -AllUsers Microsoft.MicrosoftOfficeHub | Remove-AppxPackage

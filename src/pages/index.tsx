@@ -8,9 +8,11 @@ import st from './index.module.scss';
 import Windows8Icon from '@site/static/img/icons/windows8-original.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faDownload,
   faHammer,
   faPalette,
   faScrewdriverWrench,
+  faPersonWalkingLuggage,
 } from '@fortawesome/free-solid-svg-icons';
 import { faLinux } from '@fortawesome/free-brands-svg-icons';
 
@@ -69,10 +71,22 @@ export default function Home(): JSX.Element {
             <h2 style={{ textAlign: 'center' }}>涵盖的内容</h2>
             <ul className={st.tileList}>
               <Tile
+                title="下载发行版"
+                description="推荐的 Linux"
+                href="docs/linux/install/download"
+                img={<FontAwesomeIcon icon={faDownload} />}
+              />
+              <Tile
                 title="Linux"
                 description="为极客配置"
                 href="docs/linux/overview"
                 img={<HomepageImage filename="icon_linux.svg" />}
+              />
+              <Tile
+                title="WSL"
+                description="开发环境"
+                href="docs/win/dev/wsl/install"
+                img={<FontAwesomeIcon icon={faLinux} />}
               />
               <Tile
                 title="Windows"
@@ -83,10 +97,10 @@ export default function Home(): JSX.Element {
                 }
               />
               <Tile
-                title="浏览器"
-                description="提高工作效率"
-                href="docs/software/browser/edge-for-linux"
-                img={<HomepageImage filename="icon_browser.svg" />}
+                title="开发"
+                description="环境配置"
+                href="docs/dev/intro"
+                img={<img src={useBaseUrl('/img/icons/git.svg')} />}
               />
               <Tile
                 title="实用软件"
@@ -95,27 +109,27 @@ export default function Home(): JSX.Element {
                 img={<FontAwesomeIcon icon={faHammer} />}
               />
               <Tile
-                title="WSL"
-                description="开发环境"
-                href="docs/win/dev/wsl/install"
-                img={<FontAwesomeIcon icon={faLinux} />}
-              />
-              <Tile
                 title="桌面美化"
                 description="GNOME , KDE , Win"
                 img={<FontAwesomeIcon icon={faPalette} />}
               />
               <Tile
-                title="开发"
-                description="环境配置"
-                href="docs/dev/intro"
-                img={<img src={useBaseUrl('/img/icons/git.svg')} />}
+                title="浏览器"
+                description="提高工作效率"
+                href="docs/software/browser/edge-for-linux"
+                img={<HomepageImage filename="icon_browser.svg" />}
               />
               <Tile
                 title="摩登命令行"
                 description="new unix cli"
                 href="docs/dev/modern-cli/index"
                 img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
+              />
+              <Tile
+                title="自动工具集"
+                description="deploy-my-dotfiles"
+                href="docs/dev/deploy-my-dotfiles"
+                img={<FontAwesomeIcon icon={faPersonWalkingLuggage} />}
               />
             </ul>
           </div>

@@ -23,6 +23,12 @@ import {MstoreButton} from '@theme/links';
 
 </details>
 
+:::caution 允许执行本地脚本，管理员权限运行：
+
+    Set-ExecutionPolicy RemoteSigned
+
+:::
+
 ## 基本配置
 
 `$PROFILE` 推荐配置：

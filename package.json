@@ -27,6 +27,7 @@
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "@types/node": "^14.14.22",
+    "@types/react-slick": "^0.23.8",
     "ahooks": "^3.1.14",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.2.1",
@@ -35,8 +36,10 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-slick": "^0.29.0",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
+    "slick-carousel": "^1.8.1",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {

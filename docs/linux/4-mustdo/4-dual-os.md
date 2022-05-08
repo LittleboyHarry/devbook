@@ -1,6 +1,48 @@
 ---
-title: 双系统设置
+title: 双系统
 ---
+
+:::caution 多系统的卸载方法
+
+卸载 GPT/UEFI 的 Linux 系统，满足条件为：
+
+- EFI 分区下的相关文件夹
+- EFI 启动项
+- grub 引导分区
+- Linux 相关数据分区
+
+如果还用了 rEFInd 启动器, 请注意修改配置或删除
+
+Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：
+（ 仅管理员身份可操作该分区 ）
+
+    mountvol x: /s
+
+ <details className="let-details-to-yellow">
+<summary>Linux 下 efibootmgr 命令用法</summary>
+
+列出启动顺序：
+
+    efibootmgr
+
+调整启动顺序
+
+    sudo efibootmgr -o 1,2,3,...
+
+删除启动项：
+
+    sudo efibootmgr -b <id> -B
+
+</details>
+
+:::
+
+## 注意事项
+
+- 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/win/first-run#双系统" target="_blank" >详情方法</a>
+- VeraCrypt 用户打开主界面菜单“设置” > “系统加密 ...” > “高级选项” >
+
+  关闭 “强制 VeraCrypt 引导项作为 EFI 固件启动菜单的第一项” ，确定
 
 ## 分区自动挂载
 
@@ -22,85 +64,9 @@ title: 双系统设置
 
 fstab 详细参考 [ArchWiki](<https://wiki.archlinux.org/title/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
-## [rEFInd](https://www.rodsbooks.com/refind/getting.html) 引导器
+:::note 需要引导苹果操作系统？
 
-如果不满意 Grub。可选择性安装：用于 EFI 的多系统启动器
-
-### 下载
-
-import { LinkButton } from '@theme/links';
-
-<LinkButton outline href="https://sourceforge.net/projects/refind/files/latest/download" name="Windows 格式的安装包" />
-<LinkButton outline href="https://sourceforge.net/projects/refind/files/" name="其他格式的安装包" />
-
-### 安装
-
-Windows 安装方法：https://www.rodsbooks.com/refind/installing.html#windows
-
-RPM 安装方法：
-
-    rpm -Uvh refind-*.x86_64.rpm
-
-### 配置
-
-    sudo vi /boot/efi/EFI/refind/refind.conf
-
-<div className="autoselect-cell-of-table">
-
-| 选项    | 说明         | 推荐值 | 作用           |
-| ------- | ------------ | ------ | -------------- |
-| timeout | 停留时间(秒) | 1      | 不要停留       |
-| scanfor | 扫描启动项   | manual | 手动配置启动项 |
-
-</div>
-
-默认的自动扫描常常失败，推荐通过手动配置 menuentry 来配置启动项
-
-推荐主题：https://github.com/littleboyharry-like/refind-theme-regular
-
-<details className="let-details-to-gray">
-    <summary>隐藏 Grub 菜单内的其它系统</summary>
-
-    echo GRUB_DISABLE_OS_PROBER=true | sudo tee -a /etc/default/grub > /dev/null
-
-</details>
-
-## 注意事项
-
-- 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/win/first-run#双系统" target="_blank" >详情方法</a>
-
-:::caution 双系统的卸载方法
-
-卸载 GPT/UEFI 的 Linux 系统，满足条件为：
-
-- EFI 分区下的 fedora 文件夹
-- EFI 启动项
-- grub 引导分区
-- Linux 相关数据分区
-
-如果还用了 rEFInd 启动器, 请注意修改配置或删除
-
-Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：
-（ 仅管理员身份可操作该分区 ）
-
-    mountvol x: /s
-
-<details className="let-details-to-yellow">
-  <summary>Linux 下 efibootmgr 命令用法</summary>
-
-列出启动顺序：
-
-    efibootmgr
-
-调整启动顺序
-
-    sudo efibootmgr -o 1,2,3,...
-
-删除启动项：
-
-    sudo efibootmgr -b <id> -B
-
-</details>
+推荐使用 [rEFInd](/docs/manual/win/refind) 引导器
 
 :::
 
