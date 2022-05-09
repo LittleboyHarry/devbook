@@ -1,7 +1,7 @@
 services:
   dev:
-    build: .
-    ports: [ 3000:3000 ]
+    image: localhost/geekbook-devserver
+    ports: [3000:3000]
     volumes:
       - ./.docusaurus:/app/.docusaurus
       - ./docs:/app/docs:ro

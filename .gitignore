@@ -22,4 +22,5 @@ yarn-error.log*
 /.pnpm-debug.log
 
 .yarn
+
 /.idea/

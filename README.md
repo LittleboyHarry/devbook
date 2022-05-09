@@ -23,16 +23,15 @@
 
 ### 本地开发
 
-安装依赖
+依赖: buildah
 
-    yarn --ignore-scripts
+构建：
 
-开发服务器
+    ./buildah
 
--     docker-compose up
+开发服务器：
 
--     podman-compose up
-
--     docker run --rm -it -p 3000:3000 -v ./:/app -v /app/.git -w /app -e BROWSER=none node:lts-slim /bin/bash
+- docker-compose restart
+- podman-compose restart
 
 作者已启动 GitHub Actions 自动集成
