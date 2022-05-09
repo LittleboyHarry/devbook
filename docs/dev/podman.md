@@ -4,7 +4,8 @@
 
   <GetPkg name="podman" apt dnf pacman />
 
-- docker-compose 代替品：
+- <p>docker-compose 代替品:
+  ( <a href="/docs/dev/modern-cli/pipx" target="_blank">pipx 的安装</a> )</p>
 
   <GetPkg name="podman-compose" dnf pacman pipx />
 

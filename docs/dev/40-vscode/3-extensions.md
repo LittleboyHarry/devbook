@@ -1,10 +1,10 @@
 ---
-title: VSC 扩展
+title: VSC 扩展推荐
 ---
 
 ## 必装推荐
 
-扩展名 - 作用，安装到：
+扩展名 - 作用 安装到：
 
 <div className="no-table-header no-table-border">
 
@@ -24,15 +24,15 @@ title: VSC 扩展
 
 ## 补充推荐
 
-**vscode-icons** 更好看的图标：安装后，右下角 Active 按钮激活
+ <div className="no-table-header no-table-border">
 
-<GetVscExt id="vscode-icons-team.vscode-icons" />
+|              |                |                                                         |
+| ------------ | -------------- | ------------------------------------------------------- |
+| Git Graph    | 图形化的 `tig` | <GetVscExt small id="mhutchie.git-graph" />             |
+| vscode-icons | 更好看的图标   | <GetVscExt small id="vscode-icons-team.vscode-icons" /> |
+| change-case  | 大小写转换     | <GetVscExt small id="wmaurer.change-case" />            |
 
-<div className="no-table-header no-table-border">
-
-|           |                |                                             |
-| --------- | -------------- | ------------------------------------------- |
-| Git Graph | 图形化的 `tig` | <GetVscExt small id="mhutchie.git-graph" /> |
+<!-- vscode-icons 安装后，右下角 Active 按钮激活 -->
 
 </div>
 

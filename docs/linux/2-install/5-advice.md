@@ -7,10 +7,19 @@ title: 安装 Linux
 
 ## 手动分区
 
-- 保留 Windows MSR 恢复分区：微软建议每个系统分区后都保留着一个，不要删除
-- 使用 EFI 分区：Ubiquity, Calamares 称为“引导器”，Ananconda 则挂载到 `/boot/efi`
-- 若手动挂载过分区：别忘了在安装系统前先手动卸载
-- 双系统数据共享分区：推荐使用 exFAT 格式
+双系统、多系统需要手动分区
+
+- 保留 Windows MSR 恢复分区：
+
+  微软建议每块含 Windows 系统的硬盘都保留一个 MSR 分区，至少 16~128 MB
+
+- 使用或挂载 EFI 分区：
+
+  Ubuntu, Calamares 安装器称之为“引导器”，其他安装器挂载到 `/boot/efi`
+
+- Win 与 Linux 系统间共享数据：
+
+  推荐 exFAT 格式分区
 
 ## 各发行版注意事项
 

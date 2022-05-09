@@ -51,6 +51,8 @@ title: Windows 推荐软件
 
 ```powershell
 sudo choco install imdisk imdisk-toolkit
+
+# 修复界面模糊的问题
 foreach ($_ in @("config", "MountImg", "RamDiskUI")) {
     reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files\ImDisk\$_.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
 }

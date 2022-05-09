@@ -2,8 +2,20 @@
 title: Node.js
 ---
 
-列出可选版本号
-（ nodejs 规定偶数代表稳定版，软件仓库只提供偶数版 ）
+nodejs 偶数版号代表稳定性，我们应该选择偶数版。
+请见[发行时间表](https://nodejs.org/en/about/releases/)
+
+## 安装到 Linux
+
+import {
+PreferPkgMgr,
+ForApt,
+ForDnf,
+ForPacman
+} from '@theme/PreferPkgMgr'
+
+ <PreferPkgMgr dnf apt pacman>
+<ForDnf>
 
     dnf module list nodejs
 
@@ -14,23 +26,13 @@ sudo dnf module enable -y nodejs:X
 sudo dnf in -y nodejs
 ```
 
-Windows:
+</ForDnf>
 
-```bat
-scoop bucket add versions
-scoop search nodejs
-scoop install nodejs*
-```
+ <ForApt>
 
-## 在 Debian 安装
+Debian 默认提供的 nodejs 12 版本太低，很多 npm 依赖包不支持。
 
-Debian 默认提供的 nodejs 12 版本太低，很多 npm 依赖包不支持。使用 nvm 安装 lts 新版：
-
-import {
-PreferMirror,
-FromOrigin,
-FromGitee,
-} from '@theme/PreferMirror'
+在 Debian 中，推荐使用 nvm 安装 LTS 新版：
 
  <PreferMirror origin gitee>
 <FromOrigin>
@@ -40,22 +42,48 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 bash -i -c "nvm install --lts"
 exec $SHELL
 ```
+
 </FromOrigin>
 <FromGitee>
 
 ```shell
 wget -qO- https://gitee.com/mirrors/nvm/raw/v0.39.1/install.sh | bash
-bash -i -c "nvm install --lts"
+( source ~/.nvm/nvm.sh && nvm install --lts )
 exec $SHELL
 ```
+
 </FromGitee>
 </PreferMirror>
 
-## 国区加速
+</ForApt>
 
-`.npmrc` :
+ <ForPacman>
 
-    https://cdn.jsdelivr.net/gh/littleboyharry-contrib/hooks@master/example/taro/.npmrc
+LTS 16:
+
+ <GetPkg pacman="nodejs-lts-gallium"/>
+
+LTS 14:
+
+ <GetPkg pacman="nodejs-lts-fermium	"/>
+
+最新版：
+
+ <GetPkg pacman="nodejs"/>
+
+</ForPacman>
+
+</PreferPkgMgr>
+
+<br/>
+
+## 安装到 Windows
+
+```bat
+scoop bucket add versions
+scoop search nodejs
+scoop install nodejs*
+```
 
 ## yarn 与 pnpm
 
@@ -65,8 +93,8 @@ exec $SHELL
 
     corepack enable
 
-<details className="let-details-to-gray">
-    <summary>其它版本</summary>
+ <details className="let-details-to-gray">
+<summary>其它版本</summary>
 
 参考：https://github.com/pnpm/pnpm/tags
 
@@ -83,3 +111,17 @@ $newpath = [Environment]::GetEnvironmentVariable("PATH", "User") + ";$(yarn glob
 ```
 
 - [PNPM 介绍](https://pnpm.io/zh/motivation)
+
+## 国区加速
+
+`.npmrc` :
+
+    https://cdn.jsdelivr.net/gh/littleboyharry-contrib/hooks@master/example/taro/.npmrc
+
+import {
+PreferMirror,
+FromOrigin,
+FromGitee,
+} from '@theme/PreferMirror'
+
+import GetPkg from '@theme/GetPkg';

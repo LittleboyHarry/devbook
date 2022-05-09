@@ -54,9 +54,10 @@ import {
 PreferPkgMgr,
 ForApt,
 ForDnf,
+ForPacman
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgr dnf apt>
+ <PreferPkgMgr dnf apt pacman>
 <ForDnf>
 
 ```shell
@@ -78,6 +79,11 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 搜索 `inp` 打开“语言支持”，更改输入法为 fcitx5
 
 </ForApt>
+<ForPacman>
+
+    yes | sudo pacman -S fcitx5-im fcitx5-chinese-addons
+
+</ForPacman>
 </PreferPkgMgr>
 
 ## 自动配置

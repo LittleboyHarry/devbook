@@ -50,9 +50,13 @@
   box-sizing: border-box;
   text-align: center;
   hyphens: auto;
-  padding: 20px 15px;
-  height: 100%;
   border-radius: 7px;
+
+  > a {
+    height: 100%;
+    width: 100%;
+    padding: 20px 15px;
+  }
 
   @at-root .hoverable {
     transition: background-color 0.1s;

@@ -5,14 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleQuestion,
   faCodeCompare,
+  faFilter,
   faMagnifyingGlass,
   faPaintRoller,
 } from '@fortawesome/free-solid-svg-icons';
-import {
-  faMarkdown,
-  faSearchengin,
-  faPython,
-} from '@fortawesome/free-brands-svg-icons';
+import { faPython } from '@fortawesome/free-brands-svg-icons';
 
 export default function CliToolsGrid() {
   return (
@@ -30,39 +27,33 @@ export default function CliToolsGrid() {
           to="delta"
           logo={<FontAwesomeIcon icon={faCodeCompare} />}
         />
-        <LogoCard
-          name="文本格式转换"
-          label="pandoc"
-          to="pandoc"
-          logo={<FontAwesomeIcon icon={faMarkdown} />}
-        />
       </LogoCard.Container>
       <LogoCard.Container>
         <LogoCard
-          name="文件查找"
+          name="文件过滤"
           label="fd"
           to="fd"
-          logo={<FontAwesomeIcon icon={faMagnifyingGlass} />}
+          logo={<FontAwesomeIcon icon={faFilter} />}
         />
         <LogoCard
           name="文本查找"
           label="rg"
           to="ripgrep"
-          logo={<FontAwesomeIcon icon={faSearchengin} />}
+          logo={<FontAwesomeIcon icon={faMagnifyingGlass} />}
         />
       </LogoCard.Container>
       <LogoCard.Container>
-        <LogoCard
-          name="隔离环境"
-          label="pipx"
-          to="pipx"
-          logo={<FontAwesomeIcon icon={faPython} />}
-        />
         <LogoCard
           name="命令速查"
           label="tldr"
           to="tldr"
           logo={<FontAwesomeIcon icon={faCircleQuestion} />}
+        />
+        <LogoCard
+          name="pip 隔离"
+          label="pipx"
+          to="pipx"
+          logo={<FontAwesomeIcon icon={faPython} />}
         />
       </LogoCard.Container>
     </>

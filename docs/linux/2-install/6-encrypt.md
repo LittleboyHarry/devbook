@@ -1,10 +1,29 @@
 ---
-title: 分区加密
+title: 分区加密事项
 ---
 
-对于空分区表的硬盘，各种安装器都支持自动分区，填写密码后无需手工介入。
+对于空分区表的硬盘，全盘加密的自动分区模式是不需要手动介入的：
+各种安装器都支持自动处理。本文可略过
 
-但对保留多分区的分区加密操作，除了 Fedora 安装器做得好外，很多安装器均需要手工执行命令来介入操作：
+但手动分区模式下，除了 Fedora 安装器适配好，其他安装器分区加密均需要手动介入。
+
+## Calamares
+
+> 直到 `v3.2.57` 后，
+> 无加密启动分区无法启动系统的 bug 才
+> [得已解决](https://github.com/calamares/calamares/pull/1931)。
+>
+> 所以 2022 上半年前的多数发行版镜像，若手动挂载 `/boot` 分区，都需要手工介入操作
+
+请用 sudo vi 或 kate 等文本编辑器检查该脚本文件：
+
+    /usr/lib/calamares/modules/fstab/main.py
+
+定位到该函数：
+
+    def print_crypttab_line
+
+修改 `dct["password"]`, `dct["options"]` 为 `'none'`, `'luks'`
 
 ## Kubuntu
 

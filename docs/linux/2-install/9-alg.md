@@ -1,0 +1,88 @@
+---
+title: Arch Linux GUI
+---
+
+## 下载
+
+基于 Calamares 的
+[Arch Linux GUI](https://archlinuxgui.in/)
+提供多种桌面环境版本
+
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
+<LinkButton href="https://mirrorz.org/os/ArchLinuxGUI" name="从镜像站获取" outline icon={<FontAwesomeIcon icon={faGlobe} />} />
+<HtmlA href="https://osdn.net/projects/arch-linux-gui/releases/">校验信息</HtmlA>
+
+## 准备
+
+:::info 安装过程需要联网
+
+截至 2022 年上旬，镜像
+[不含有](https://github.com/search?q=org%3Aarch-linux-gui+noto-fonts-cjk&type=issues)
+[中文字体](https://archlinux.org/packages/extra/any/noto-fonts-cjk)
+。需要联网下载
+
+:::
+
+以作者更青睐的版本 `plasma-pure` 为例
+
+1. [制作启动盘](./bootable)
+2. 重启、进入启动菜单，选择 U 盘启动
+3. 进入系统后按下 `Win` 键搜索 `konsole` 打开终端
+4. `sudo -i` 提权执行：
+
+:::note 镜像源择优
+
+    reflector -c cn -p https -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+
+:::
+
+:::note 安装中文字体
+
+    pacman -Sy noto-fonts-cjk
+
+:::
+
+## 安装
+
+执行 Install Arch List:
+
+    calamares
+
+:::caution 手动分区的注意事项
+
+- [如何分区？](./advice#手动分区)
+- 分区加密有 BUG, 请留意前文的[处理方法](./encrypt#calamares)
+
+:::
+
+:::caution 安装后不要确定“现在重启”
+
+请留意下面的操作
+
+:::
+
+```bash
+# 切换到安装目录
+cd /tmp/calamares-root*/
+# 更新镜像源
+pacstrap .
+```
+
+安装中文支持
+
+```bash
+# 字体
+pacstrap -c . noto-fonts-cjk
+# 输入法
+pacstrap . fcitx5-im fcitx5-chinese-addons
+```
+
+:::info 切入新系统的方法
+
+    arch-chroot .
+
+:::
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { HtmlA, LinkButton } from '@theme/links';

@@ -1,5 +1,5 @@
 /// <reference path="../types.d.ts" />
-import React from 'react';
+import React, { useMemo } from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
@@ -56,7 +56,7 @@ export default function GetPkg({
   yarn?: true | string;
   longBanner?: boolean;
 }) {
-  const groupId = (() => {
+  const gid = useMemo(() => {
     let groupId = 'getpkg-';
     const keys = [];
     if (apt) keys.push('apt');
@@ -67,7 +67,8 @@ export default function GetPkg({
     if (pipx) keys.push('pipx');
     if (yarn) keys.push('yarn');
     return groupId + keys.join('&');
-  })();
+  }, [apt, dnf, scoop, winget, pacman, pipx, yarn]);
+
   const items: JSX.Element[] = [];
 
   addItem({
@@ -151,13 +152,10 @@ export default function GetPkg({
 
   if (items.length <= 0) throw 'Empty GetPkg';
 
-  if (items.length == 1) return items[0];
+  if (items.length == 1) return <div className={st.sole}>{items[0]}</div>;
 
   return (
-    <Tabs
-      className={cs(longBanner && 'tabs--block', st.root)}
-      groupId={groupId}
-    >
+    <Tabs className={cs(longBanner && 'tabs--block', st.root)} groupId={gid}>
       {items}
     </Tabs>
   );

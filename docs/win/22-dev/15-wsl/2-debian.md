@@ -1,8 +1,23 @@
 ---
-title: WSL 使用技巧
+title: Debian for WSL
 ---
 
-## 安装推荐
+## 初始化
+
+输入用户名密码来初始化，推荐 `me` : `'`
+
+:::note 使用 HTTPS 协议的镜像源
+
+Debian for WSL 缺少需下载安装的依赖：
+[可信证书](https://packages.debian.org/search?keywords=ca-certificates&exact=1)
+及 [openssl](https://packages.debian.org/search?keywords=openssl&exact=1)
+
+    wsl sudo apt install -y ./ca-certificates_*.deb ./openssl_*.deb
+
+随后<a href="/docs/linux/mustdo/mirror-update#debian" target="_blank">
+设置镜像源并更新</a>
+
+:::
 
 ```bash
 # 开发必装
