@@ -18,7 +18,7 @@
     "@docusaurus/core": "2.0.0-beta.20",
     "@docusaurus/plugin-pwa": "2.0.0-beta.20",
     "@docusaurus/preset-classic": "2.0.0-beta.20",
-    "@easyops-cn/docusaurus-search-local": "^0.21.4",
+    "@easyops-cn/docusaurus-search-local": "^0.23.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
