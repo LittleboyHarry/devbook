@@ -38,7 +38,9 @@ RPM 安装方法：
 
 推荐主题：https://github.com/littleboyharry-like/refind-theme-regular
 
-:::note 隐藏 Grub 菜单内的其它系统
+:::note 隐藏菜单内的其它系统
+
+自动修改：随后更新 Grub
 
     echo GRUB_DISABLE_OS_PROBER=true | sudo tee -a /etc/default/grub > /dev/null
 

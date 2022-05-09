@@ -4,21 +4,25 @@ title: 下载发行版
 
 ## 获取镜像
 
-**国内综合镜像站：https://mirrorz.org/**
+:::note 发行版解释
+
+- Fedora 是 RedHat 牵头的社区操作系统试验田，
+  是 CentOS stream 的上游源码、最终沉淀为 RHEL 系统
+- [Debian 和 Ubuntu 的对比](https://www.toutiao.com/article/7003371708354658852/),
+  简言之：前者是开放社区的产物，后者是免费开源的商业技术
+- Debian 与 [Ubuntu LTS](https://www.toutiao.com/article/6872706707538051588/) 交替迭代提供三到五年的稳定支持服务
+
+:::
+
+**国内高校综合镜像站：https://mirrorz.org/**
 
 <div className="alert alert--warning">
 非官方 https 渠道下载后，务必校验文件完整性
 </div>
 
-### Arch Linux
-
-<LinkButton href="https://mirrorz.org/os/archlinux" name="系统镜像"/>
-<HtmlA href="https://archlinux.org/iso/latest/sha256sums.txt">校验信息</HtmlA>
-<br/>
-<LinkButton outline href="https://mirrorz.org/os/ArchLinuxGUI" name="图形化版安装器" hint="Arch Linux GUI"/>
-<HtmlA href="https://osdn.net/projects/arch-linux-gui/releases/">校验信息</HtmlA>
-
 ### Fedora
+
+[Workstation 版验证信息](https://getfedora.org/zh_Hans_CN/security/)
 
 <Container>
     <cards.FedoraWorkstation />
@@ -30,9 +34,7 @@ title: 下载发行版
 更多版本:
 [多种桌面](https://spins.fedoraproject.org/zh_Hans_CN/) +
 [服务器及其他版本 ...](https://getfedora.org/zh_Hans_CN/server/download/)
-
-:::note [校验信息](https://getfedora.org/zh_Hans_CN/security/) ( [其他版本 ...](https://pagure.io/fedora-web/websites/blob/master/f/sites/getfedora.org/static/checksums) )
-:::
+( [所有校验信息](https://pagure.io/fedora-web/websites/blob/master/f/sites/getfedora.org/static/checksums) )
 
 ### Ubuntu
 

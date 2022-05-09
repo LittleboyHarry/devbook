@@ -64,4 +64,13 @@ export const cards = {
       />
     );
   },
+  Arch(): ReactNode {
+    return (
+      <LogoCard
+        name="从镜像站获取"
+        to="https://mirrorz.org/os/archlinux"
+        logo={<img src={useBaseUrl('/img/icons/arch.svg')} />}
+      />
+    );
+  },
 };

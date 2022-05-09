@@ -1,8 +1,10 @@
 ---
-title: 推荐的搜索引擎
+title: 搜索引擎推荐
 ---
 
-搜索引擎设置页，经常需要更改的推荐收藏
+绝大部分网站都会自动添加搜索引擎，访问网站后输入网址 + `Tab` or `Space` 即可搜索。
+
+这里收录一些需要手动收录的搜索引擎：
 
     about:settings/searchEngines
 <!--
@@ -15,7 +17,9 @@ title: 推荐的搜索引擎
 </ul>
 -->
 
-推荐添加
+可参考前文 Vimium-C 扩展添加其它搜索引擎
+
+## 国内推荐
 
 <div className="autoselect-cell-of-table">
 
@@ -26,5 +30,3 @@ title: 推荐的搜索引擎
 | 京东     | .jd    | `https://search.jd.com/Search?enc=utf-8&keyword=%s` |
 
 </div>
-
-可参考前文 Vimium-C 扩展添加其它搜索引擎
