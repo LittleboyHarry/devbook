@@ -44,12 +44,13 @@ sudo dnf install -y wl-clipboard
 ```shell
 cd ~
 git clone https://github.com/LittleboyHarry/deploy-my-dotfiles
-cd deploy-my-dotfiles
+
 ```
 
 安装 zsh 模块：
 
 ```
+cd ~/deploy-my-dotfiles
 ./deploy modules/zsh/
 exec zsh
 ```
@@ -61,9 +62,9 @@ exec zsh
 ```shell
 cd ~
 git clone https://gitee.com/LittleboyHarry/deploy-my-dotfiles
-cd deploy-my-dotfiles
 
-# 特供版参数：
+# 特供版 zsh：
+cd ~/deploy-my-dotfiles
 ./deploy modules/zsh/ atmainland
 
 exec zsh
