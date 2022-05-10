@@ -33,7 +33,7 @@ import GetPkg from '@theme/GetPkg';
 <GetPkg name="gtkhash" dnf apt /></li>
 
 <li><p>分区助手</p>
-<GetPkg name="gparted" dnf apt /></li>
+<GetPkg name="gparted" dnf apt pacman /></li>
 
 <li><p>应用列表编辑器</p>
 <GetPkg name="menulibre" dnf apt /></li>

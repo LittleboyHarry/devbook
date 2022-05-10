@@ -6,7 +6,7 @@ title: 命令用法速查 tldr
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="tldr" dnf yarn />
+<GetPkg name="tldr" dnf pacman yarn />
 
 国内缓存
 

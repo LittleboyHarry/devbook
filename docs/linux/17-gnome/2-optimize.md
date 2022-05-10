@@ -118,4 +118,4 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="dconf-editor" apt dnf />
+<GetPkg name="dconf-editor" apt dnf pacman />

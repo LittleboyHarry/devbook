@@ -80,9 +80,8 @@ source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/theme-and-appearance.zsh
 source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/ys.zsh-theme
 ```
 
-<div className="alert alert--secondary" role="alert">
-
-其他推荐：powerlevel10k
+ <details className="let-details-to-gray" role="alert">
+<summary>powerlevel10k 主题</summary>
 
 安装：依赖 Nerd Font 字体，[参见](./font#cascadiacode-nerdfont)
 
@@ -102,12 +101,67 @@ exec zsh
     exec zsh
 
 缺点：
-调整窗口大小会造成排版错乱，
-[官方解决方法](https://github.com/romkatv/powerlevel10k/blob/master/README.md#the-anatomy-of-the-problem)
+调整窗口大小会造成排版错乱
+
+[解决方法](https://github.com/romkatv/powerlevel10k/blob/master/README.md#the-anatomy-of-the-problem):
 是禁止自动重排版 （ 部分终端支持，如 Konsole ）
 
 <!-- todo: ys or zsh 重编译
 https://www.zsh.org/mla/workers//2019/msg00561.html
 -->
+
+</details>
+
+## ohmyzsh 插件说明
+
+<div style={{float:'left',marginRight:'2rem'}}>
+
+别名管理：
+
+- [aliases](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/aliases)
+- [alias-finder](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/alias-finder)
+
+功能增强类，含 alias：
+
+- [sudo](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/sudo)
+- [history](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/history)
+- [systemd](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/systemd)
+- [git](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/git)
+- [rsync](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/rsync)
+
+</div>
+<div style={{float:'left',marginRight:'2rem'}}>
+
+剪贴板：
+
+- [copybuffer](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/copybuffer)
+- [copypath](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/copypath)
+- [copyfile](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/copyfile)
+
+实用功能：
+
+- [extract](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/extract)
+  &nbsp; `x` 一键解压
+- [z](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/z)
+  &nbsp; `z` 一键跳转
+- [dirhistory](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/dirhistory)
+  &nbsp; `Alt` 键切换目录
+- [shell-proxy](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/shell-proxy)
+- [.gitignore](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/gitignore) 模板
+
+</div>
+<div style={{float:'left',marginRight:'2  rem'}}>
+
+操作系统类：
+
+- [archlinux](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/archlinux)
+- [debian](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/debian)
+- [RHEL](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/dnf)
+
+开发专用：
+
+- [shell-proxy](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/shell-proxy)
+- [yarn](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/yarn)
+- [nvm](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/nvm)
 
 </div>

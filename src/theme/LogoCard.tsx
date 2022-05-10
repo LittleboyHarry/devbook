@@ -25,7 +25,7 @@ export default function LogoCard({
         className: cs('card', st.card),
         href: to || '#',
         title: label,
-        style: { cursor: label ? 'help' : 'default' },
+        style: { cursor: label ? 'help' : 'pointer' },
         target: noNewTab ? '_self' : '_blank',
         onClick,
       }}

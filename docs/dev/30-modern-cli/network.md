@@ -6,7 +6,7 @@ title: 网络问题
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="proxychains-ng" dnf apt/>
+<GetPkg name="proxychains-ng" dnf apt pacman/>
 
 配置:
 

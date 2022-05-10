@@ -17,6 +17,7 @@ import GetPkg from '@theme/GetPkg';
 
 <GetPkg
     apt="gnome-boxes virt-manager"
+    pacman="gnome-boxes virt-manager"
     dnf="gnome-boxes @virtualization"
 />
 

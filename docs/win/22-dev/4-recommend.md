@@ -59,4 +59,16 @@ foreach ($_ in @("config", "MountImg", "RamDiskUI")) {
 
 ```
 
+:::note 来自前文
+
+[商店可获取的应用](../store):
+
+<GetPkg name="auto-dark-mode" choco />
+
+其他：
+
+- <a href="/docs/software/workrave" target="_blank">workrave</a>
+
+:::
+
 import GetPkg from '@theme/GetPkg';

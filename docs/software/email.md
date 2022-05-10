@@ -6,7 +6,9 @@ title: 电子邮件
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="thunderbird" dnf winget />
+<GetPkg name="thunderbird" dnf winget
+pacman="thunderbird thunderbird-i18n-zh-cn"
+flatpak="org.mozilla.Thunderbird" />
 
 ## 设置
 

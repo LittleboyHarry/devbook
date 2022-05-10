@@ -24,6 +24,7 @@ Fedora 35 默认为 16 版。若要切换其它版本：
 ```shell
 sudo dnf module enable -y nodejs:X
 sudo dnf in -y nodejs
+corepack enable
 ```
 
 </ForDnf>
@@ -79,10 +80,20 @@ LTS 14:
 
 ## 安装到 Windows
 
-```bat
+```powershell
 scoop bucket add versions
 scoop search nodejs
-scoop install nodejs*
+```
+
+    scoop install nodejs?
+
+激活 yarn
+
+```powershell
+corepack enable
+$newpath = [Environment]::GetEnvironmentVariable("PATH", "User") + ";$(yarn global bin)"
+[Environment]::SetEnvironmentVariable("PATH", $newpath, "User")
+
 ```
 
 ## yarn 与 pnpm
@@ -105,8 +116,6 @@ scoop install nodejs*
 yarn for Windows:
 
 ```powershell
-$newpath = [Environment]::GetEnvironmentVariable("PATH", "User") + ";$(yarn global bin)"
-[Environment]::SetEnvironmentVariable("PATH", $newpath, "User")
 
 ```
 

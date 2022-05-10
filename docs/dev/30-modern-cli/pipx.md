@@ -4,7 +4,7 @@
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="pipx" dnf apt />
+<GetPkg name="pipx" dnf apt pacman="python-pipx" />
 
 <div className="no-admonition-uppercase-title">
 

@@ -1,8 +1,14 @@
 ---
-title: WSL 网络问题
+title: WSL 小技巧
 ---
 
-## 端口转发
+## 虚拟硬盘瘦身
+
+https://www.cnblogs.com/enrio/p/14222648.html
+
+## 端口
+
+### 端口转发
 
 安装 `socat`
 
@@ -23,7 +29,7 @@ forwardport(){
 这样每次打开 WSL 时，（或写入 `.zshrc` 自动执行）
 执行一下 `forwardport` 即可转发虚拟机内的指定端口到宿主机 `127.0.0.1` 上
 
-## 端口代理
+### 代理
 
 确保端口监听 `0.0.0.0`
 
@@ -40,7 +46,7 @@ New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEth
 
 在端口转发的基础上，配置 <a href="/docs/dev/modern-cli/network" target="_blank" >proxychains</a>。
 
-## proxychains
+### proxychains
 
 ```shell
 sudo sed -i -e "\$asocks5 $(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') <本地端口>" -e '/^socks/d' /etc/proxychains4.conf

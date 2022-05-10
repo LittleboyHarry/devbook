@@ -8,7 +8,13 @@ title: 字体
 
 ### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
 
-<GetPkg apt="fonts-jetbrains-mono" dnf="jetbrains-mono-fonts" scoop="JetBrains-Mono" choco="jetbrainsmono" />
+<GetPkg
+apt="fonts-jetbrains-mono"
+dnf="jetbrains-mono-fonts"
+scoop="JetBrains-Mono"
+choco="jetbrainsmono"
+pacman="ttf-jetbrains-mono"
+/>
 
 为 VSCode `settings.json` 配置：
 
@@ -74,6 +80,8 @@ Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 优点：中英等宽、可选连体、窄字
 
 下载：https://mirrorz.org/font/SarasaGothic 推荐选择 ttc 版本
+
+<GetPkg pacman="ttf-sarasa-gothic" />
 
 为 VSCode `settings.json` 配置：
 

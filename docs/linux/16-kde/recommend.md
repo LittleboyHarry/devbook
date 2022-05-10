@@ -14,7 +14,7 @@ import GetPkg from '@theme/GetPkg';
 
 ### 特殊字符与 emoji 检索器
 
-<GetPkg name="gnome-characters" apt dnf />
+<GetPkg name="gnome-characters" apt dnf pacman/>
 
 ### 深色主题
 
@@ -28,4 +28,4 @@ gtk 标准深色主题：( GNOME >= 42
 
 ### 磁盘占用分析
 
-<GetPkg name="baobab" apt dnf />
+<GetPkg name="baobab" apt dnf pacman />

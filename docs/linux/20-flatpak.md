@@ -2,7 +2,7 @@
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="flatpak" apt pacman />
+<GetPkg name="flatpak" apt dnf pacman />
 
 ## 添加源
 

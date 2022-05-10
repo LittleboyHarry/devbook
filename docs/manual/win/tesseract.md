@@ -2,7 +2,8 @@
 title: 截图识字 tesseract
 ---
 
-<GetPkg name="tesseract" scoop choco />
+<GetPkg name="tesseract" scoop choco
+pacman="tesseract tesseract-data-chi_sim"/>
 
 默认仅支持英文
 

@@ -2,22 +2,16 @@
 title: 休息提醒
 ---
 
-推荐两款开源软件
-
-import GetPkg from '@theme/GetPkg';
-
-## Workrave
+# Workrave
 
 支持：
 
 - Windows
-- Linux ( no KDE Wayland )
+- Linux
+  - <a href="/docs/linux/gnome/panel#托盘图标" target="_blank" >GNOME 依赖</a>
+  - 除了 KDE Wayland
 
-<a href="/docs/linux/gnome/panel#托盘图标" target="_blank" >GNOME 依赖扩展</a>
-
-安装：
-
-<GetPkg name="workrave" apt dnf winget />
+<GetPkg name="workrave" apt dnf choco winget pacman />
 
 :::note 笔者的作息规律
 
@@ -89,8 +83,12 @@ cd -
 
 :::
 
-## RSIBreak
+:::note KDE 代替品
 
-<GetPkg name="rsibreak" dnf />
+<GetPkg name="rsibreak" apt pacman dnf />
 
 搜索关键词 `auto` 设置应用自启动
+
+:::
+
+import GetPkg from '@theme/GetPkg';

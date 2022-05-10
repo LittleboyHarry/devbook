@@ -8,7 +8,7 @@ title: Vagrant
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="vagrant" dnf winget />
+<GetPkg name="vagrant" dnf winget pacman apt />
 
 方法二：官方安装包 https://releases.hashicorp.com/vagrant
 

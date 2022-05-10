@@ -90,8 +90,8 @@ export default function Home(): JSX.Element {
               />
               <Tile
                 title="Windows"
-                description="为开发适配"
-                href="docs/win/index"
+                description="开发者指南"
+                href="docs/win/dev/index"
                 img={
                   <img src={useBaseUrl('/img/icons/windows8-original.svg')} />
                 }

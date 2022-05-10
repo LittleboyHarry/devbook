@@ -6,7 +6,7 @@ title: 代码彩显 bat
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="bat" dnf scoop/>
+<GetPkg name="bat" dnf scoop pacman/>
 
 ## Debian 安装
 

@@ -8,6 +8,8 @@ import GetPkg from '@theme/GetPkg';
 
 <GetPkg name="timeshift" apt dnf />
 
+AUR: `timeshift`
+
 ---
 
 对于其他普通文件系统，我们打开终端备份系统默认的 `/etc` 配置文件

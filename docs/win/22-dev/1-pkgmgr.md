@@ -24,11 +24,9 @@ choco feature enable -n allowGlobalConfirmation
 
 ## **Scoop**
 
-### Scoop 安装
+### 安装
 
-依赖：`git`
-
-官方方法：( 其过程需要畅通访问 GitHub )
+前置依赖 `git`，从官方渠道：
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
@@ -36,37 +34,7 @@ iwr -useb get.scoop.sh | iex
 
 ```
 
-<details>
-  <summary>手动安装</summary>
-
-通过各种途径，获取到 scoop 的源码包：
-
-- https://github.com/ScoopInstaller/Scoop/archive/master.zip 保存名为 `scoop.zip`
-- https://github.com/ScoopInstaller/Main/archive/master.zip 保存名为 `scoop-main.zip`
-
-```powershell
-$to="$env:USERPROFILE\scoop\apps\scoop\current"
-mkdir -f $to
-cp scoop.zip $to
-$to="$env:USERPROFILE\scoop\buckets\main"
-mkdir -f $to
-cp scoop-main.zip $to
-curl -L https://cdn.jsdelivr.net/gh/scoopinstaller/install@master/install.ps1 | sls -Pattern '$downloader.downloadFile($SCOOP_' -SimpleMatch -NotMatch > install.ps1
-./install.ps1
-rm install.ps1
-```
-
-</details>
-
-### 代理下载配置
-
-```
-# 配置网络代理
-scoop config proxy 127.0.0.1:<http_proxy_port>
-# 升级以测试网络状态
-scoop update
-
-```
+**从国内渠道获取见[下文](#国服版)**
 
 ### 自动补全支持
 
@@ -87,7 +55,9 @@ echo "Invoke-Expression (&scoop-search --hook)" >> $PROFILE
 
 ```
 
-:::caution 重启终端后生效
+:::note 重启终端以生效，或：
+
+    . $profile
 
 :::
 
@@ -125,5 +95,41 @@ cp (Read-Host "下载的文件路径（可拖入）") (cache_path $app $metadata
 ```
 
 </details>
+
+### 国服版
+
+<p><a href="https://gitcode.net">gitcode.net</a> 提供国内镜像服务。</p>
+
+安装方法：
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+
+$scoopdir="$env:USERPROFILE\scoop\apps\scoop\current"
+mkdir -f $scoopdir | Out-Null
+iwr -useb https://gitcode.net/mirrors/ScoopInstaller/Scoop/-/archive/master/Scoop-master.zip -o "$scoopdir\scoop.zip"
+
+$maindir="$env:USERPROFILE\scoop\buckets\main"
+mkdir -f $maindir | Out-Null
+iwr -useb https://gitcode.net/mirrors/ScoopInstaller/Main/-/archive/master/Main-master.zip -o "$maindir\scoop-main.zip"
+
+(iwr -useb https://gitcode.net/mirrors/ScoopInstaller/Install/-/raw/master/install.ps1).Content -creplace '\s*\$downloader\.downloadFile\(\$SCOOP_.+','' | iex
+
+```
+
+若要使用原版 github 上游仓库源，请<a href="/docs/dev/git#网络问题" target="_blank">设置 git 代理</a>
+
+否则使用国内镜像仓库源：( 只镜像元数据、加快升级和检索速度，不含二进制文件镜像 )
+
+```shell
+scoop bucket rm main
+scoop bucket add main https://gitcode.net/mirrors/ScoopInstaller/Main
+
+# 其它 scoop 官方镜像源：
+scoop bucket add versions https://gitcode.net/mirrors/ScoopInstaller/Versions
+scoop bucket add java https://gitcode.net/mirrors/ScoopInstaller/Java
+scoop bucket add extras https://gitcode.net/mirrors/ScoopInstaller/Extras
+
+```
 
 import { MstoreButton } from '@theme/links';

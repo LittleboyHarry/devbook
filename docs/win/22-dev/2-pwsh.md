@@ -84,6 +84,7 @@ echo "
 if ( Test-Path -Path .git -PathType Container ) {
     Import-Module posh-git
 }
+
 " >> $PROFILE
 
 ```

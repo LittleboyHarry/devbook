@@ -1,5 +1,5 @@
 ---
-title: 小工具 AltSnap
+title: AltSnap
 ---
 
 来自[开源项目](https://github.com/RamonUnch/AltSnap)

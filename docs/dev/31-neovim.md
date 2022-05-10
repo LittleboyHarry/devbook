@@ -6,7 +6,7 @@ title: neovim
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="neovim" dnf apt scoop/>
+<GetPkg name="neovim" dnf apt scoop pacman />
 
 ## 配置
 

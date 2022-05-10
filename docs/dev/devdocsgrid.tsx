@@ -6,10 +6,11 @@ import {
   faTerminal,
   faPersonWalkingLuggage,
   faScrewdriverWrench,
+  faLanguage,
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export function CliToolsGrid() {
+export function TopGrid() {
   return (
     <>
       <LogoCard.Container>
@@ -22,6 +23,16 @@ export function CliToolsGrid() {
           name="Git"
           to="git"
           logo={<img src={useBaseUrl('/img/icons/git.svg')} />}
+        />
+        <LogoCard
+          name="字体"
+          to="font"
+          logo={
+            <FontAwesomeIcon
+              icon={faLanguage}
+              style={{ translate: 'scale(2)' }}
+            />
+          }
         />
       </LogoCard.Container>
       <LogoCard.Container>
@@ -77,11 +88,13 @@ export function DevEnvGrid() {
         to="nodejs"
         logo={<img src={useBaseUrl('/img/icons/nodejs.svg')} />}
       />
+      {/*
       <LogoCard
         name="Python"
         to="python"
         logo={<img src={useBaseUrl('/img/icons/python.svg')} />}
       />
+      */}
     </LogoCard.Container>
   );
 }

@@ -35,23 +35,25 @@ function addItem({
 
 export default function GetPkg({
   name,
-  dnf,
-  apt,
-  scoop,
   choco,
+  scoop,
   winget,
+  flatpak,
+  apt,
   pacman,
+  dnf,
   pipx,
   yarn,
   longBanner,
 }: {
   name?: string;
-  dnf?: true | string;
-  apt?: true | string;
-  scoop?: true | string;
   choco?: true | string;
+  scoop?: true | string;
   winget?: true | string;
+  flatpak?: string;
+  apt?: true | string;
   pacman?: true | string;
+  dnf?: true | string;
   pipx?: true | string;
   yarn?: true | string;
   longBanner?: boolean;
@@ -59,17 +61,28 @@ export default function GetPkg({
   const gid = useMemo(() => {
     let groupId = 'getpkg-';
     const keys = [];
-    if (apt) keys.push('apt');
-    if (dnf) keys.push('dnf');
+    if (choco) keys.push('choco');
     if (scoop) keys.push('scoop');
     if (winget) keys.push('winget');
+    if (flatpak) keys.push('flatpak');
+    if (apt) keys.push('apt');
     if (pacman) keys.push('pacman');
+    if (dnf) keys.push('dnf');
     if (pipx) keys.push('pipx');
     if (yarn) keys.push('yarn');
     return groupId + keys.join('&');
   }, [apt, dnf, scoop, winget, pacman, pipx, yarn]);
 
   const items: JSX.Element[] = [];
+
+  addItem({
+    items,
+    expression: flatpak,
+    key: 'flatpak',
+    label: 'Flatpak',
+    hint: 'Linux 开放应用分发技术',
+    prefix: 'flatpak install flathub ',
+  });
 
   addItem({
     items,

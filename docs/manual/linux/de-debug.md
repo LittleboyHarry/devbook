@@ -8,8 +8,8 @@ import GetPkg from '@theme/GetPkg';
 
 静态分析：
 
-<GetPkg name="d-feet" apt dnf />
+<GetPkg name="d-feet" apt dnf pacman />
 
 动态分析：
 
-<GetPkg name="bustle" apt dnf />
+<GetPkg name="bustle" apt dnf pacman />

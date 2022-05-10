@@ -24,6 +24,7 @@ export default function Page() {
         <LogoCard
           name="PowerShell"
           to="pwsh"
+          noNewTab
           logo={<FontAwesomeIcon icon={faTerminal} />}
         />
         <LogoCard
@@ -37,11 +38,13 @@ export default function Page() {
         <LogoCard
           name="Sysinternals"
           to="sysinternals"
+          noNewTab
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
         <LogoCard
           name="WSL"
           to="wsl/install"
+          noNewTab
           logo={<FontAwesomeIcon icon={faLinux} />}
         />
       </LogoCard.Container>

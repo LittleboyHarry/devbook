@@ -104,8 +104,9 @@ Ed25519
 
 </details>
 
-:::tip 使浏览器接受 GitHub 推送通知
+:::tip [浏览器扩展](https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn)
 
-<https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn>
+使浏览器接受 GitHub 推送通知。
+( [firefox 版](https://addons.mozilla.org/zh-CN/firefox/addon/notifier-for-github) )
 
 :::

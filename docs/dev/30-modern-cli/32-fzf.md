@@ -6,7 +6,7 @@ title: fzf
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="fzf" dnf apt scoop/>
+<GetPkg name="fzf" dnf apt scoop pacman/>
 
 ## Shell 集成
 
@@ -14,21 +14,38 @@ import {
   PreferPkgMgr,
   ForApt,
   ForDnf,
+  ForPacman
 } from '@theme/PreferPkgMgr'
 
-<PreferPkgMgr dnf apt>
+<PreferPkgMgr dnf apt pacman>
 <ForDnf>
 
-    printf "source /usr/share/fzf/shell/key-bindings.bash\n" >> ~/.bashrc
-    printf "source /usr/share/fzf/shell/key-bindings.zsh\n" >> ~/.zshrc
+```bash
+printf "source /usr/share/fzf/shell/key-bindings.bash\n" >> ~/.bashrc
+printf "source /usr/share/fzf/shell/key-bindings.zsh\n" >> ~/.zshrc
+exec $SHELL
+```
 
 </ForDnf>
 <ForApt>
 
-    printf "source /usr/share/doc/fzf/examples/key-bindings.bash\n" >> ~/.bashrc
-    printf "source /usr/share/doc/fzf/examples/key-bindings.zsh\n" >> ~/.zshrc
+```bash
+printf "source /usr/share/doc/fzf/examples/key-bindings.bash\n" >> ~/.bashrc
+printf "source /usr/share/doc/fzf/examples/key-bindings.zsh\n" >> ~/.zshrc
+exec $SHELL
+```
 
 </ForApt>
+<ForPacman>
+
+```bash
+printf "source /usr/share/fzf/key-bindings.bash\n" >> ~/.bashrc
+printf "source /usr/share/fzf/key-bindings.zsh\n" >> ~/.zshrc
+exec $SHELL
+```
+
+</ForPacman>
+
 </PreferPkgMgr>
 
 可以使用一下快捷键：

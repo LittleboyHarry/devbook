@@ -14,7 +14,7 @@ title: 初始优化
 
 使用 `gnome-tweaks` 的“字体”面板，14 寸笔记本显示屏推荐增大 **2~3 磅**
 
-<GetPkg name="gnome-tweaks" apt dnf />
+<GetPkg name="gnome-tweaks" apt dnf pacman />
 
  <details className="let-details-to-gray">
 <summary>14 寸笔记本显示屏的作者建议配置</summary>
