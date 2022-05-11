@@ -12,9 +12,11 @@ import GetPkg from '@theme/GetPkg';
 
 ## 来自 GNOME 的软件
 
+<!--
 ### 特殊字符与 emoji 检索器
 
 <GetPkg name="gnome-characters" apt dnf pacman/>
+-->
 
 ### 深色主题
 

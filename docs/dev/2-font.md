@@ -8,6 +8,8 @@ title: 字体
 
 ### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
 
+用途：编程
+
 <GetPkg
 apt="fonts-jetbrains-mono"
 dnf="jetbrains-mono-fonts"
@@ -32,6 +34,8 @@ pacman="ttf-jetbrains-mono"
 <br/>
 
 ### CascadiaCode
+
+用途：终端命令行、编程
 
 微软出品的 Windows 终端内置默认字体，Linux 安装：
 
@@ -76,6 +80,8 @@ Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 <br/>
 
 ### 等距更纱
+
+用途：中英文排版、编程
 
 优点：中英等宽、可选连体、窄字
 

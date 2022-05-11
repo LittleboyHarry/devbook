@@ -143,6 +143,8 @@ kwriteconfig5 --file fcitx5/conf/pinyin.conf --group "<default>" --key Shuangpin
 
 </details>
 
+稍后需要重启输入法
+
 ### 在 GNOME 中使用
 
 ```shell
@@ -173,8 +175,30 @@ END
 
     kwriteconfig5 --file ~/.config/fcitx5/conf/xcb.conf --group "<default>" --key 'Allow Overriding System XKB Settings' False
 
+稍后需要重新登陆
+
 :::
 
-<div className="alert alert--warning">
-所有 kwriteconfig5 配置后，再次启动输入法甚至重启系统得以生效
+ <div className="no-admonition-uppercase-title">
+
+### 在 Arch Linux 中启动
+
+:::info
+
+```bash
+cat << END | sudo tee /etc/profile.d/fcitx5.sh > /dev/null
+if [ ! "$XDG_SESSION_TYPE" = "tty" ]   # if this is a gui session (not tty)
+then
+    export INPUT_METHOD=fcitx
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+fi
+END
+```
+
+需要重启以生效
+
+:::
+
 </div>

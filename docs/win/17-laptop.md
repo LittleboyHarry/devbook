@@ -44,7 +44,7 @@ _来自[开源项目](https://github.com/File-New-Project/EarTrumpet)_
 
 import {faScroll} from '@fortawesome/free-solid-svg-icons'
 
-<FileItem name="numpad.ahk" path="/ahk/numpad.ahk" icon={<FontAwesomeIcon icon={faScroll} />}/>
+<FileItem name="numpad.ahk" path="/scripts/numpad.ahk" icon={<FontAwesomeIcon icon={faScroll} />}/>
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FileItem from '@theme/FileItem'

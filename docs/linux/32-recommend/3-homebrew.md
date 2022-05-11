@@ -1,5 +1,5 @@
 ---
-title: nixpkgs
+title: 添加 homebrew
 ---
 
 安装：

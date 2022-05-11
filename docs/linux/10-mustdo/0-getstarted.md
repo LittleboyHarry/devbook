@@ -8,6 +8,15 @@ title: 初始优化
 
 **KDE:** 开始菜单，选择 “Konsole”
 
+:::info 使用下拉式终端
+
+<GetPkg name="yakuake" apt pacman dnf />
+
+安装后，搜索 `autostart` 设置自动启动 ( 添加 | 添加应用程序 )。
+随后打开程序设置全局快捷键即可
+
+:::
+
 ## 界面缩放与文字大小
 
 :::note 对于 GNOME

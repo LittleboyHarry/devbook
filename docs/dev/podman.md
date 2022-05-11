@@ -26,6 +26,19 @@ echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/
 
     sed "/^#/d" /etc/containers/registries.conf
 
+ <details className="let-details-to-gray">
+<summary>在 Arch Linux 中使用</summary>
+
+摘自 [ArchWiki](https://wiki.archlinux.org/title/Podman#Rootless_Podman):
+
+```bash
+sudo touch /etc/subuid /etc/subgid
+sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 `whoami`
+podman system migrate
+```
+
+</details>
+
 :::caution 挂载卷的文件访问权限被拦截
 
 对于含有 SELinux 的红帽类系统。请向参数添加 `:z` 标记，如 `-v ~/data:/data:z`

@@ -1,5 +1,5 @@
 ---
-title: 虚拟化平台
+title: libvirt 虚拟化平台
 ---
 
 # libvirt
@@ -10,9 +10,10 @@ import {
   PreferPkgMgr,
   ForApt,
   ForDnf,
+  ForPacman
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgr dnf apt>
+ <PreferPkgMgr dnf apt pacman>
 <ForDnf>
 
     sudo dnf in -y @virtualization
@@ -23,6 +24,11 @@ import {
     sudo apt install -y virt-manager gnome-boxes
 
 </ForApt>
+<ForPacman>
+
+    yes | sudo pacman -S virt-manager gnome-boxes
+
+</ForPacman>
 </PreferPkgMgr>
 
 ## 配置

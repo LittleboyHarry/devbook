@@ -2,7 +2,7 @@
 title: 下载发行版
 ---
 
-## 获取镜像
+# 获取镜像
 
 :::note 发行版解释
 
@@ -20,7 +20,7 @@ title: 下载发行版
 非官方 https 渠道下载后，务必校验文件完整性
 </div>
 
-### Fedora
+## Fedora
 
 [Workstation 版验证信息](https://getfedora.org/zh_Hans_CN/security/)
 
@@ -36,7 +36,7 @@ title: 下载发行版
 [服务器及其他版本 ...](https://getfedora.org/zh_Hans_CN/server/download/)
 ( [所有校验信息](https://pagure.io/fedora-web/websites/blob/master/f/sites/getfedora.org/static/checksums) )
 
-### Ubuntu
+## Ubuntu
 
 <Container>
     <cards.Ubuntu />
@@ -54,6 +54,7 @@ title: 下载发行版
 注：
 
 - Ubuntu 是 Debian 同构品，如无例外则，两术语等效或近似。Fedora 与 CentOS 等同理
+- Arch 系统安装请见左侧目录的专栏
 
 import { Container, cards } from './oscards';
 import { HtmlA, LinkButton } from '@theme/links';

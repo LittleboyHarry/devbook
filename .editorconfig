@@ -4,7 +4,7 @@ indent_style = space
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[{*.cmd,*.bat,*.reg,*.ps1,*.ini,*.ahk}]
+[{*.cmd,*.bat,*.reg,*.ps1,*.ahk,static/scripts/install-*.ini}]
 end_of_line = crlf
 charset = utf-16le
 trim_trailing_whitespace = true

@@ -51,9 +51,7 @@ cd -
 
     gnome-control-center default-apps
 
-**KDE:**
-
-搜索关键词 `compon` 进入设置
+**KDE:** 搜索关键词 `compon` 进入设置
 
 ## 启动参数
 
@@ -77,7 +75,7 @@ cd -
 
 使用：启动参数修改方法，即编辑可执行文件
 
-    xdg-open ~/.local/bin/msedge
+    nano +m ~/.local/bin/msedge
 
 格式：不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
 
@@ -109,7 +107,10 @@ cd -
 
 缺点：
 
-- 输入法可用但兼容性有待改进，依赖 GNOME [kimpanel](https://extensions.gnome.org/extension/261/kimpanel/) 扩展
+- 输入法可用但兼容性有待改进：
+  1. GNOME 依赖安装扩展 [kimpanel](https://extensions.gnome.org/extension/261/kimpanel/)
+  2. 只能在其他窗口内切换输入法
+  3. 若仍无反应，切换或关闭所有浏览器窗口重试
 - 界面缩放比率仅为整数，只能通过 “设置 > 外观 > 页面缩放” 补救调整
 
 :::
@@ -143,10 +144,6 @@ cd -
 Win Mac 默认已经激活优化特性，但 Linux 需要手动开启：
 
 ```
-about:flags/#enable-gpu-rasterization
-```
-
-```
 about:flags/#enable-zero-copy
 ```
 
@@ -164,6 +161,6 @@ about:flags/#enable-zero-copy
 
 :::tip 总结
 
-本篇教大家如何解锁浏览器的常用功能。通过上述配置后，我们得到了与 Win/Mac 体验相当的 Edge 浏览器。
+本篇教大家如何配置好 Chromium，完成后我们得到了可日常使用的浏览器。
 
 :::

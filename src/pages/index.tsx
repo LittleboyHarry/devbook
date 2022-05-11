@@ -97,8 +97,8 @@ export default function Home(): JSX.Element {
                 }
               />
               <Tile
-                title="开发"
-                description="环境配置"
+                title="开发环境"
+                description="配置"
                 href="docs/dev/intro"
                 img={<img src={useBaseUrl('/img/icons/git.svg')} />}
               />

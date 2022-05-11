@@ -28,3 +28,13 @@ title: 概述
 <!-- todo: explain -->
 
 <!-- todo: 美化 -->
+
+作者推荐意见
+
+Fedora (no SELinux): 初学者
+
+Arch: 程序员、工程师
+
+Debian, Ubuntu: 服务器、中间件、WSL
+
+Deepin: 普通电脑用户

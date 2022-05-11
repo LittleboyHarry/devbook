@@ -1,5 +1,5 @@
 ---
-title: deepin 虚拟机
+title: virtual 深度系统
 ---
 
 :::info 推荐在专用虚拟机内安装国产软件，兼容性好、折腾少！
@@ -11,15 +11,7 @@ deepin 深度系统是一款优秀的国产图形化操作系统，本文适用�
 清华镜像站下载：https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/
 （[官方来源](https://www.deepin.org/zh/download/)
 
-安装虚拟环境
-
-import GetPkg from '@theme/GetPkg';
-
-<GetPkg
-    apt="gnome-boxes virt-manager"
-    pacman="gnome-boxes virt-manager"
-    dnf="gnome-boxes @virtualization"
-/>
+**依赖前文的 [libvirt 虚拟化基础平台](libvirt)**
 
 打开 `gnome-boxes` 创建虚拟机：
 

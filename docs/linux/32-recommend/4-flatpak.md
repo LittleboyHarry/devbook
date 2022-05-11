@@ -1,3 +1,9 @@
+:::info 推荐理由
+
+对依赖复杂、无需频繁更新的软件，可以选择 Flatpak 来安装。
+
+:::
+
 ## 安装
 
 import GetPkg from '@theme/GetPkg';
@@ -7,10 +13,6 @@ import GetPkg from '@theme/GetPkg';
 ## 添加源
 
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-## 推荐软件
-
-对依赖复杂、无需频繁更新的软件，可以选择 Flatpak 来安装。
 
 ### 视频播放
 

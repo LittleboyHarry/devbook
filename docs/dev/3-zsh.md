@@ -25,7 +25,7 @@ import GetPkg from '@theme/GetPkg';
 
 :::note 作者的配置
 
-    touch ~/.zshrc && vi +star ~/.zshrc
+    touch ~/.zshrc && nano -m ~/.zshrc
 
 ```bash
 # Lines configured by zsh-newuser-install

@@ -71,38 +71,39 @@ Host github.com
 
 ## 登录测试
 
-<details>
-  <summary>GitHub</summary>
+<div className="no-admonition-uppercase-title">
+
+:::info GitHub
 
     ssh -T git@github.com
 
-指纹校验:
-( [数据来源](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints) )
+[官方认证](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)：
 
+```
 RSA
-
-    SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
+SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
 
 ECDSA
-
-    SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM
+SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM
 
 Ed25519
+SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+```
 
-    SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+:::
 
-</details>
-
-<details>
-  <summary>Gitee</summary>
+:::info Gitee
 
     ssh -T git@gitee.com
 
+```
 Ed25519
+SHA256:+ULzij2u99B9eWYFTw1Q4ErYG/aepHLbu96PAUCoV88
+```
 
-    SHA256:+ULzij2u99B9eWYFTw1Q4ErYG/aepHLbu96PAUCoV88
+:::
 
-</details>
+</div>
 
 :::tip [浏览器扩展](https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn)
 

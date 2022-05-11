@@ -1,20 +1,31 @@
 ---
-title: 进阶配置
+title: 设备适配
 ---
+
+## 笔记本省电
+
+<GetPkg name="tlp" apt dnf pacman="tlp tlp-rdw" />
+
+```bash
+sudo tlp start
+
+# 可能需要禁用：
+sudo systemctl mask systemd-rfkill.service --now
+```
 
 ## 关机等待时间过长
 
-改 90s 为 10s
+[改 90s 为 10s 的命令](https://zhuanlan.zhihu.com/p/256481066):
 
     sudo sed -i '/DefaultTimeoutStopSec/{s/#//;s/=90s/=10s/}' /etc/systemd/system.conf
 
-详情分析：https://zhuanlan.zhihu.com/p/256481066
-
+<!--
 ## AppImage 集成
 
 [rpm 下载](https://github.com/TheAssassin/AppImageLauncher/releases/latest#:~:text=x86_64.rpm)
 |
 [deb 下载](https://github.com/TheAssassin/AppImageLauncher/releases/latest#:~:text=bionic_amd64.deb)
+-->
 
 ## 外界显示器亮度
 
@@ -35,3 +46,5 @@ ddcutil setvcp 10 0
 # 设置对比度
 ddcutil setvcp 12 100
 ```
+
+import GetPkg from '@theme/GetPkg';

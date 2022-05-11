@@ -24,7 +24,6 @@ Fedora 35 默认为 16 版。若要切换其它版本：
 ```shell
 sudo dnf module enable -y nodejs:X
 sudo dnf in -y nodejs
-corepack enable
 ```
 
 </ForDnf>
@@ -87,45 +86,37 @@ scoop search nodejs
 
     scoop install nodejs?
 
-激活 yarn
+## npmmirror 中国镜像站
+
+    wget -qO- https://cdn.jsdelivr.net/gh/littleboyharry-contrib/hooks@master/example/taro/.npmrc >> ~/.npmrc
+
+一次性参数：
+
+    --registry=https://registry.npmmirror.com
+
+## 使用 yarn
+
+比 npm 更好的包管理工具
+
+<GetPkg name="yarn" pacman choco scoop />
+
+或者使用 npm 全局安装：
+
+    sudo npm install --global yarn
+
+手动 Windows 安装配置:
 
 ```powershell
-corepack enable
 $newpath = [Environment]::GetEnvironmentVariable("PATH", "User") + ";$(yarn global bin)"
 [Environment]::SetEnvironmentVariable("PATH", $newpath, "User")
 
 ```
 
-## yarn 与 pnpm
+## 使用 [PNPM](https://pnpm.io/zh/motivation)
 
-比 npm 更快速的、高效的包管理工具
+比 npm 更好的包管理工具
 
-在 nodejs 14.19.0 和 16.9.0 以上版本已集成，开启：
-
-    corepack enable
-
- <details className="let-details-to-gray">
-<summary>其它版本</summary>
-
-参考：https://github.com/pnpm/pnpm/tags
-
-    corepack prepare pnpm@<新版> --activate
-
-</details>
-
-yarn for Windows:
-
-```powershell
-
-```
-
-- [PNPM 介绍](https://pnpm.io/zh/motivation)
-
-## 国区加速
-
-`.npmrc` :
-
-    https://cdn.jsdelivr.net/gh/littleboyharry-contrib/hooks@master/example/taro/.npmrc
+    sudo npm install -g pnpm
 
 import {
 PreferMirror,

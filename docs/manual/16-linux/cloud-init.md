@@ -5,7 +5,7 @@ tags: [cloud-init, libvirt]
 
 :::note 请阅读前文
 
-libvirt-QEMU/KVM 虚拟化平台在 Linux 上的[安装方法](/docs/linux/libvirt)
+libvirt-QEMU/KVM 虚拟化平台在 Linux 上的[安装方法](/docs/linux/recommend/libvirt)
 
 :::
 

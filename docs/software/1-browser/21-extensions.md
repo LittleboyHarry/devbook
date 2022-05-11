@@ -28,27 +28,13 @@ title: 扩展推荐
 [g1]: https://chrome.google.com/webstore/detail/gitako-github-file-tree/giljefjcheohhamkjphiebfjnlphnokk
 [g2]: https://microsoftedge.microsoft.com/addons/detail/gitako-github-file-tree/alpoloddcggjhakjemghahlkofjekbca
 
-## Vimium C 配置
+*附：高级篇 - [自编译打包扩展](https://gitee.com/littleboyharry-crx/ohmycrx/blob/master/README.md)*
 
-推荐映射：
+## 配置文件
 
-```vim
-" 复制当前标签页
-map yt duplicateTab active=false
+import {faScroll} from '@fortawesome/free-solid-svg-icons'
 
-" 键盘打开多条链接
-map f LinkHints.activateWithQueue
-" 单次点击模拟
-map F LinkHints.activate
-" 在新标签页打开
-map <a-f> LinkHints.activateOpenInNewForegroundTab
-
-" 分离当前标签页到新窗口
-map w moveTabToNewWindow
-
-" 复制链接标题文本
-map <a-c> LinkHints.activateCopyLinkText
-```
+可导入：<FileItem button name="vimium_c.json" path="/config/vimium_c.json" icon={<FontAwesomeIcon icon={faScroll} />}/>
 
 ## 适用范围
 
@@ -100,3 +86,6 @@ uBlock Origin:
 
 - 默认 z 键激活
 - 推荐勾选 `open tabs at the end`
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FileItem from '@theme/FileItem'

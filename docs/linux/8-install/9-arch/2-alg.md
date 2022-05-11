@@ -26,7 +26,7 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 以作者更青睐的版本 `plasma-pure` 为例
 
-1. [制作启动盘](./bootable)
+1. [制作启动盘](/docs/linux/install/bootable)
 2. 重启、进入启动菜单，选择 U 盘启动
 3. 进入系统后按下 `Win` 键搜索 `konsole` 打开终端
 4. `sudo -i` 提权执行：
@@ -51,8 +51,8 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 :::caution 手动分区的注意事项
 
-- [如何分区？](./advice#手动分区)
-- 分区加密有 BUG, 请留意前文的[处理方法](./encrypt#calamares)
+- [如何分区？](/docs/linux/install/advice#手动分区)
+- 分区加密有 BUG, 请留意前文的[处理方法](/docs/linux/install/encrypt#calamares)
 
 :::
 

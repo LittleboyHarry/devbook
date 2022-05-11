@@ -12,7 +12,7 @@ vbox 会根据系统名称猜测发行版
 
 import { faScroll } from '@fortawesome/free-solid-svg-icons';
 
-<FileItem button name="vboxpaste.ahk" path="/ahk/vboxpaste.ahk" icon={<FontAwesomeIcon icon={faScroll} />}/>
+<FileItem button name="vboxpaste.ahk" path="/scripts/vboxpaste.ahk" icon={<FontAwesomeIcon icon={faScroll} />}/>
 
 使用方法：
 

@@ -60,9 +60,10 @@ Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指
 
 5.  重启文件服务以生效
 
+        sudo systemctl daemon-reload
         sudo systemctl restart local-fs.target
 
-fstab 详细参考 [ArchWiki](<https://wiki.archlinux.org/title/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
+附：`/etc/fstab` 详细参考 [ArchWiki](https://wiki.archlinux.org/title/Fstab)
 
 :::note 需要引导苹果操作系统？
 

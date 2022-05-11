@@ -1,0 +1,44 @@
+{
+	"name": "Vimium C",
+	"autoReduceMotion": 2,
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":https://mail.google.com/"
+		},
+		{
+			"passKeys": "c j k o ",
+			"pattern": ":https://www.zhihu.com/"
+		}
+	],
+	"grabBackFocus": true,
+	"ignoreKeyboardLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"\" 复制当前标签页",
+		"map yt duplicateTab active=false",
+		"",
+		"\" 键盘打开多条链接",
+		"map f LinkHints.activateWithQueue",
+		"\" 单次点击模拟",
+		"map F LinkHints.activate",
+		"\" 在新标签页打开",
+		"map <a-f> LinkHints.activateOpenInNewForegroundTab",
+		"",
+		"\" 分离当前标签页到新窗口",
+		"map w moveTabToNewWindow",
+		"",
+		"\" 复制链接标题文本",
+		"map <a-c> LinkHints.activateCopyLinkText",
+		"",
+		"unmap zH",
+		"unmap zL"
+	],
+	"keyupTime": 100,
+	"linkHintCharacters": "sfweraqt",
+	"newTabUrl": "pages/blank.html",
+	"regexFindMode": true,
+	"scrollStepSize": 120,
+	"searchUrl": "https://cn.bing.com/search?q=$s 必应",
+	"showActionIcon": false
+}

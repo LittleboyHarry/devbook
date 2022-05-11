@@ -75,8 +75,8 @@ import { faFileLines,faGears } from '@fortawesome/free-solid-svg-icons';
 由作者编写的自动安装脚本，
 放到同安装器目录下：
 
-<FileItem button name="install-git.ini" path="/inno-setup/install-git.ini" icon={<FontAwesomeIcon icon={faFileLines} />}/>
-<FileItem button name="install-git.bat" path="/inno-setup/install-git.bat" icon={<FontAwesomeIcon icon={faGears} />}/>
+<FileItem button name="install-git.ini" path="/scripts/install-git.ini" icon={<FontAwesomeIcon icon={faFileLines} />}/>
+<FileItem button name="install-git.bat" path="/scripts/install-git.bat" icon={<FontAwesomeIcon icon={faGears} />}/>
 
 :::
 
@@ -169,7 +169,7 @@ VMware Workstation Pro :
 
 :::tip 建议
 
-Linux 系统内有 libvrit-qemu-KVM 更好的[虚拟化开源方案](/docs/linux/libvirt)
+Linux 系统内有 libvrit-qemu-KVM 更好的[虚拟化开源方案](/docs/linux/recommend/libvirt)
 
 :::
 
