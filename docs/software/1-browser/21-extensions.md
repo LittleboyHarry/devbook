@@ -23,12 +23,12 @@ title: 扩展推荐
 
 | 扩展名 | 作用          |    Chrome 商店    |    Edge 外接程序    |
 | ------ | ------------- | :---------------: | :-----------------: |
-| Gitako | GitHub 导航栏 | [Chrome 商店][g1] | [Edge 外接程序][g2] |
+| Gitako | GitHub 导航栏 | [Get][g1] | [Get][g2] |
 
 [g1]: https://chrome.google.com/webstore/detail/gitako-github-file-tree/giljefjcheohhamkjphiebfjnlphnokk
 [g2]: https://microsoftedge.microsoft.com/addons/detail/gitako-github-file-tree/alpoloddcggjhakjemghahlkofjekbca
 
-*附：高级篇 - [自编译打包扩展](https://gitee.com/littleboyharry-crx/ohmycrx/blob/master/README.md)*
+> 附：高级篇 - [自编译打包扩展](https://gitee.com/littleboyharry-crx/ohmycrx/blob/master/README.md)，可省去下文手动配置的部分过程
 
 ## 配置文件
 

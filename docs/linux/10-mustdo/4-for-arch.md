@@ -1,5 +1,5 @@
 ---
-title: Arch
+title: for Arch
 ---
 
 ## zsh

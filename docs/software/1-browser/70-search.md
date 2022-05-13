@@ -7,6 +7,7 @@ title: 搜索引擎推荐
 这里收录一些需要手动收录的搜索引擎：
 
     about:settings/searchEngines
+
 <!--
 自带搜索引擎，关键字修改推荐：
 
@@ -25,6 +26,7 @@ title: 搜索引擎推荐
 
 | 搜索引擎 | 关键字 | 查询网址                                            |
 | -------- | ------ | --------------------------------------------------- |
+| 必应     | .bing  | `https://www.bing.com/search?q=%s`                  |
 | 知乎     | .z     | `https://www.zhihu.com/search?type=content&q=%s`    |
 | BiliBili | .bl    | `https://search.bilibili.com/all?keyword=%s`        |
 | 京东     | .jd    | `https://search.jd.com/Search?enc=utf-8&keyword=%s` |

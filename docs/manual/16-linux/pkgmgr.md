@@ -1,5 +1,5 @@
 ---
-title: 包管理器
+title: 包管理器速查表
 ---
 
 <!--
@@ -16,6 +16,8 @@ title: 包管理器
 
 :::
  -->
+
+部分摘自：<LinkButton icon name="Arch Wiki 文档" href="https://wiki.archlinux.org/title/Pacman/Rosetta" />
 
 import {
   PreferPkgMgr,
@@ -83,3 +85,5 @@ sudo dnf install <package>-<version>
 
 </ForDnf>
 </PreferPkgMgr>
+
+import { LinkButton } from '@theme/links';

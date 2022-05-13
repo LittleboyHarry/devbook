@@ -46,15 +46,21 @@ compinit
 
 ## 调优
 
-:::info 推荐的自动配置
+:::info 一键调优
 
-推荐使用作者编写的 [deploy-my-dotfiles](deploy-my-dotfiles)，包含下文配置：
+推荐使用作者编写的 deploy-my-dotfiles, 见后文
 
 :::
 
-忽略注释:
+ <details className="let-details-to-gray">
+<summary>手动调优</summary>
 
-    echo 'setopt interactivecomments' >> ~/.zshrc
+```shell
+# 忽略注释
+echo 'setopt interactivecomments' >> ~/.zshrc
+```
+
+</details>
 
 :::caution 重启程序以生效
 

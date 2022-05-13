@@ -17,6 +17,10 @@ title: 初始优化
 
 :::
 
+## 使用 Z shell
+
+<a href="/docs/dev/zsh" target="_blank" >见此</a>
+
 ## 界面缩放与文字大小
 
 :::note 对于 GNOME

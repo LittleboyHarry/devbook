@@ -22,7 +22,7 @@ keep-arranged=true
 END
 ```
 
-<details className="let-details-to-yellow">
+<details className="alert--warning">
   <summary>希望 Ubuntu 隐藏壁纸外的桌面图标吗？</summary>
 
     gnome-extensions disable ding@rastersoft.com

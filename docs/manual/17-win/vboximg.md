@@ -77,7 +77,7 @@ import { faScroll } from '@fortawesome/free-solid-svg-icons';
     ```
 
 4.  `reboot` 重启后登录
-5.  <a target="_blank" href="/docs/linux/mustdo/mirror-update#ubuntu">更改镜像源</a>
+5.  <a target="_blank" href="/docs/linux/mustdo/for-debian#国内镜像软件仓">更改镜像源</a>
 6.  升级
 
     ```bash
@@ -90,6 +90,20 @@ import { faScroll } from '@fortawesome/free-solid-svg-icons';
 7.  `hostname -I` 查看 ip，使用 git bash 的 `ssh-copy-id` 可以配置免密登录
 8.  关闭虚拟机后，回到主界面，按下 `Ctrl + D` 打开“虚拟介质管理器”
 9.  类型改为“多重加载”应用
+
+<!--
+## Arch
+
+使用清华镜像站
+
+```shell
+sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch' | sudo tee /etc/pacman.d/mirrorlist
+
+sudo pacman -Syy # 更新数据
+sudo pacman -Syu # 更新系统
+```
+ -->
 
 ok，我们获得了可以不断克隆的虚拟机模板。
 

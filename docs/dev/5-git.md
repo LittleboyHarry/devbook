@@ -10,13 +10,12 @@ title: Git
 
 ## 调优
 
-更改默认主分支名
+```shell
+# 更改默认主分支名
+git config --global init.defaultBranch main
 
-    git config --global init.defaultBranch main
-
-合并变基时自动暂存当前修改：[问题来源](https://stackoverflow.com/questions/30208928/can-git-pull-automatically-stash-and-pop-pending-changes)
-
-```
+# 合并变基时自动暂存当前修改，参考：
+# https://stackoverflow.com/questions/30208928
 git config --global rebase.autostash true
 git config --global merge.autostash true
 
@@ -28,9 +27,9 @@ git config --global merge.autostash true
 
 ```bash
 echo &&
-read -p "Enter your git name: " git_name &&
+printf "Enter your git name: " && read git_name &&
 git config --global user.name "$git_name" &&
-read -p "Enter your git email: " git_email &&
+printf "Enter your git email: " && read git_email &&
 git config --global user.email "$git_email"
 ```
 
@@ -41,7 +40,7 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 
-复制，然后登陆上传该公钥：
+复制公钥信息，随后上传：
 
 - https://github.com/settings/ssh/new
 - https://gitee.com/profile/sshkeys

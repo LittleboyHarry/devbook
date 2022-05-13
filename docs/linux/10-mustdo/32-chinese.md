@@ -187,7 +187,7 @@ END
 
 ```bash
 cat << END | sudo tee /etc/profile.d/fcitx5.sh > /dev/null
-if [ ! "$XDG_SESSION_TYPE" = "tty" ]   # if this is a gui session (not tty)
+if [ ! "$XDG_SESSION_TYPE" = "tty" ]
 then
     export INPUT_METHOD=fcitx
     export GTK_IM_MODULE=fcitx

@@ -2,36 +2,36 @@
 title: Grub
 ---
 
-## 降低自动选择时间
+## 推荐配置
 
-记住上次的选择
-
-```bash
+```shell
+# 记住上次选择的启动项
 sudo sed -i "/GRUB_DEFAULT/ s/=.*/=saved/" /etc/default/grub
 echo GRUB_SAVEDEFAULT=true | sudo tee -a /etc/default/grub
+
+# 降低等待时间为 2 秒
+sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=2/" /etc/default/grub
 ```
-
-降低等待时间为 2 秒
-
-    sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=2/" /etc/default/grub
 
 ## 更新 Grub
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs className="tabs--block" groupId="linux-distro">
+<Tabs className="tabs--block" groupId="is-debian">
   <TabItem value="debian" label="Ubuntu / Debian">
 
     sudo update-grub
 
   </TabItem>
-  <TabItem value="centos" label="Fedora">
+  <TabItem value="other" label="其他发行版">
 
     sudo grub2-mkconfig -o /etc/grub2-efi.cfg
 
   </TabItem>
 </Tabs>
+
+<br/>
 
 :::note 在 KDE 中设置开机画面
 

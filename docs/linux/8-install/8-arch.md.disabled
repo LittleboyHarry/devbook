@@ -30,6 +30,16 @@ title: Arch Linux 安装
 
     archinstall
 
+:::info 界面字体太小？
+
+```
+ls /usr/share/kbd/consolefonts/ter-v*b*
+setfont ter-v24b
+showconsolefont
+```
+
+:::
+
 配置关键点：
 
 - `Select mirror region` 软件源：

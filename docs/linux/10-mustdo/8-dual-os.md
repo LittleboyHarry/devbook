@@ -1,5 +1,5 @@
 ---
-title: 双系统
+title: for 多系统
 ---
 
 :::caution 多系统的卸载方法
@@ -18,7 +18,7 @@ Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指
 
     mountvol x: /s
 
- <details className="let-details-to-yellow">
+ <details className="alert--warning">
 <summary>Linux 下 efibootmgr 命令用法</summary>
 
 列出启动顺序：

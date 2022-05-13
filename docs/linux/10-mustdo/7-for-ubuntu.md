@@ -1,6 +1,31 @@
 ---
-title: Ubuntu
+title: for Ubuntu
 ---
+
+## 国内镜像软件仓
+
+ <details className="let-details-to-gray">
+<summary>方法一：图形界面的更新器</summary>
+
+1. 搜索关键词 `sof`，选择 “软件和更新”，更改合适的“下载自”来源
+
+<!-- ( 默认“中国的服务器”指的是 cn.archive.ubuntu.com ) -->
+
+2. 搜索关键词 `upd`，打开 “软件更新器”，更新系统
+
+</details>
+
+方法二：命令行
+
+```shell
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.old # 备份
+
+# 使用腾讯云 Ubuntu 镜像源:
+sudo sed -i -E "s#http://((cn.)?archive|security).ubuntu.com#https://mirrors.cloud.tencent.com#g" /etc/apt/sources.list
+
+sudo apt update     # 更新源
+sudo apt upgrade -y # 更新系统
+```
 
 ## 防火墙
 

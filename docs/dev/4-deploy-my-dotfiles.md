@@ -47,7 +47,20 @@ git clone https://github.com/LittleboyHarry/deploy-my-dotfiles
 
 ```
 
-安装 zsh 模块：
+:::note 国服安装渠道
+
+从 gitee 镜像克隆，内容无差异：
+
+```shell
+cd ~
+git clone https://gitee.com/LittleboyHarry/deploy-my-dotfiles
+```
+
+:::
+
+## 使用 Zsh 模块
+
+模块部署：
 
 ```
 cd ~/deploy-my-dotfiles
@@ -55,31 +68,32 @@ cd ~/deploy-my-dotfiles
 exec zsh
 ```
 
-## 特供版安装
-
-从 gitee 镜像克隆，内容无差异：
+:::note 国服部署渠道
 
 ```shell
-cd ~
-git clone https://gitee.com/LittleboyHarry/deploy-my-dotfiles
-
-# 特供版 zsh：
 cd ~/deploy-my-dotfiles
 ./deploy modules/zsh/ atmainland
-
 exec zsh
 ```
 
-## 样式
+:::
 
-目前个人偏好主题：ys ，基于 deploy-my-dotfiles 写入 `~/.zshrc` 的配置：
+<br/>
 
-```zsh
-source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/git.zsh
-source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/prompt_info_functions.zsh
-source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/lib/theme-and-appearance.zsh
-source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/ys.zsh-theme
-```
+推荐使用 steeef 主题
+
+    echo 'source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme' >> ~/.zshrc
+    exec zsh
+
+ <details className="let-details-to-gray" role="alert">
+<summary>常用命令行缩写表</summary>
+
+ohmyzsh 社区提供，仅作[参考](https://gitee.com/mirrors/ohmyzsh/blob/master/plugins/common-aliases/README.md)
+
+    echo 'source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/plugins/common-aliases/common-aliases.plugin.zsh' >> ~/.zshrc
+    exec zsh
+
+</details>
 
  <details className="let-details-to-gray" role="alert">
 <summary>powerlevel10k 主题</summary>
@@ -113,7 +127,7 @@ https://www.zsh.org/mla/workers//2019/msg00561.html
 
 </details>
 
-## ohmyzsh 插件说明
+## ohmyzsh 插件说明页
 
 <div style={{float:'left',marginRight:'2rem'}}>
 
