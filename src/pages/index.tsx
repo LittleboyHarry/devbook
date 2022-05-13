@@ -116,8 +116,8 @@ export default function Home(): JSX.Element {
               <Tile
                 title="浏览器"
                 description="提高工作效率"
-                href="docs/software/browser/edge-for-linux"
-                img={<HomepageImage filename="icon_browser.svg" />}
+                href="docs/software/browser/chromium"
+                img={<HomepageImage filename="../icons/chromium.svg" />}
               />
               <Tile
                 title="摩登命令行"

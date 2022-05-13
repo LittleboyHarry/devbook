@@ -39,7 +39,7 @@ const config = {
           customCss: [
             require.resolve('./src/css/docusaurus.css'),
             require.resolve('./src/css/rules.scss'),
-            require.resolve('./src/css/utils.scss'),
+            require.resolve('./src/css/global.scss'),
           ],
         },
         gtag: {
