@@ -1,5 +1,5 @@
 ---
-title: archinstall
+title: Arch Linux 安装
 ---
 
 ## 获取安装镜像
@@ -15,8 +15,6 @@ title: archinstall
 
 启动盘的制作方法见 [前文](./bootable)
 
-## 安装方法
-
 :::caution 注意事项
 
 - 本教程仅适用于 GPT 分区 + EFI 启动，以配置桌面开发机为例
@@ -25,6 +23,8 @@ title: archinstall
 - **请备份好硬盘重要资料，以免丢失**
 
 :::
+
+## 使用 archinstall
 
 插入 U 盘，进入安装系统执行：
 
@@ -68,7 +68,7 @@ mkfs.btrfs /dev/... # 数据分区的新格式，支持快照备份
 
 ```bash
 cryptsetup luksFormat -q /dev/...
-cryptsetup luksOpen /dev/... eroot
+cryptsetup open /dev/... eroot
 
 # ?: ext4 btrfs
 mkfs.? /dev/mapper/eroot
@@ -89,12 +89,10 @@ mount /dev/... .
 # OR: mount /dev/mapper/eroot
 
 mkdir boot
-cd boot
-mount /dev/... .
+mount /dev/... ./boot
 
-mkdir efi
-cd efi
-mount /dev/... .
+mkdir boot/efi
+mount /dev/... ./boot/efi
 
 ```
 

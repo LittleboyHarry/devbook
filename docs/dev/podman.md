@@ -49,14 +49,14 @@ podman system migrate
 
 <LinkButton outline href="vscode:extension/ms-azuretools.vscode-docker" name="安装" />
 
+运行
+
+    systemctl --user enable --now podman.socket
+
 配置
 
     "docker.dockerPath": "podman",
     "docker.host": "unix:///run/user/1000/podman/podman.sock",
-
-运行
-
-    systemctl --user enable --now podman.socket
 
 - [GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)
 

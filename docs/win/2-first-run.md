@@ -83,9 +83,7 @@ title: 初始化
 
 如果你的微软账号已激活了 Office，登录并获取：
 
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-
-<LinkButton outline href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" name="在线官方安装器" icon={<FontAwesomeIcon icon={faGlobe} />} />
+<LinkButton icon outline href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" name="在线官方安装器" />} />
 
 :::info 使用验证码登录微软账号
 
@@ -98,6 +96,5 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 :::
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LinkButton } from '@theme/links';
 import { HtmlA } from '@theme/links';

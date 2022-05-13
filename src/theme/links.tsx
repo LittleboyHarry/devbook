@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import cs from 'clsx';
 import st from './links.module.scss';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 export function MstoreLink({ id, name }: { id: string; name: string }) {
   return (
@@ -64,8 +65,9 @@ export function LinkButton({
   attr?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
   style?: CSSProperties;
   small?: boolean;
-  icon?: React.ReactNode;
+  icon?: boolean | React.ReactNode;
 }) {
+  if (icon === true) icon = <FontAwesomeIcon icon={faGlobe} />;
   return (
     <a
       href={href}
