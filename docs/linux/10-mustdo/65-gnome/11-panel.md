@@ -78,6 +78,13 @@ dconf write /org/gnome/shell/extensions/just-perfection/panel-size 36
 
 :::
 
+:::info 转顶栏为任务栏
+
+实际上，我用了 [dash-to-panel](https://extensions.gnome.org/extension/1160/dash-to-panel/) 提供的任务栏后，
+后面的很多程序坞相关的扩展和配置就不需要了
+
+:::
+
 ## 置于屏幕底部
 
 依赖扩展：[Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)，

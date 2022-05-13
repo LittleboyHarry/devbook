@@ -29,6 +29,21 @@ title: for Fedora
 echo "defaultyes=1" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
 ```
 
+:::info 更换安全组件
+
+Fedora 内置了 RHEL 采用的 SELinux 和 firewalld 技术，
+这两项安全技术复杂繁琐。对于个人电脑，作者推荐关闭并换用 AppArmor 和 ufw
+
+```shell
+sudo sed -i "/SELINUX/ s/=enforcing/=disabled/" /etc/sysconfig/selinux
+sudo dnf install -y ufw
+sudo ufw enable
+sudo systemctl disable --now firewalld
+# 完成后记得重启
+```
+
+:::
+
 ## 自动镜像源
 
 让系统寻找访问速度最快的镜像源
@@ -46,6 +61,7 @@ sudo dnf upgrade -y # 更新系统
 
 :::
 
+<!--
 <details className="let-details-to-gray">
   <summary>
 如果不需要内置的大体积应用，更新过程会更快：
@@ -60,6 +76,7 @@ sudo dnf upgrade -y # 更新系统
     sudo dnf remove firefox
 
 </details>
+-->
 
 <!-- todo:? send notify after update -->
 

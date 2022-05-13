@@ -1,6 +1,6 @@
 :::info 推荐理由
 
-对依赖复杂、无需频繁更新的软件，可以选择 Flatpak 来安装。
+对依赖复杂、无需频繁更新的软件，可以选择 Flatpak 来安装
 
 :::
 
@@ -8,7 +8,9 @@
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="flatpak" apt dnf pacman />
+<GetPkg name="flatpak" apt pacman />
+
+Fedora 已内置
 
 ## 添加源
 

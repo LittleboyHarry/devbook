@@ -1,5 +1,5 @@
 ---
-title: GNOME 任务栏
+title: GNOME 程序坞
 ---
 
 # dock-to-dash
