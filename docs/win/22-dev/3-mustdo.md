@@ -62,7 +62,7 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
   ```powershell
   $g4w_metainfo = (Invoke-WebRequest https://registry.npmmirror.com/-/binary/git-for-windows/).Content | ConvertFrom-Json
-  $g4w_latest_info = (Invoke-WebRequest ($g4w_metainfo | Sort-Object -p name | Select-Object -l 1).url).Content | ConvertFrom-Json
+  $g4w_latest_info = (Invoke-WebRequest ($g4w_metainfo | Where-Object name -NotMatch 'rc|pre' | Sort-Object -p name -b 1).url).Content | ConvertFrom-Json
   $g4w_latest_binary = ($g4w_latest_info | Where-Object { $_.name -match "64-bit.exe" }).url
   iwr -o "$([Environment]::GetFolderPath("Desktop"))\install-git.exe" $g4w_latest_binary
 
