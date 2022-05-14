@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: '极客手册',
   tagline: '写给技术爱好者的公益指南',
-  url: 'https://littleboyharry.gitee.io/',
+  url: 'https://littleboyharry.me/',
   baseUrl: '/geekbook/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
