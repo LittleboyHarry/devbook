@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: '开发手册',
   tagline: '写给程序员的开发文档',
-  url: 'https://littleboyharry.me/',
-  baseUrl: '/devbook/',
+  url: 'https://devbook.littleboyharry.me/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
