@@ -34,7 +34,7 @@ title: Arch Linux 安装
 
 ```
 ls /usr/share/kbd/consolefonts/ter-v*b*
-setfont ter-v24b
+setfont ter-i24b
 showconsolefont
 ```
 
@@ -78,10 +78,11 @@ mkfs.btrfs /dev/... # 数据分区的新格式，支持快照备份
 
 ```bash
 cryptsetup luksFormat -q /dev/...
-cryptsetup open /dev/... eroot
+cryptsetup open /dev/... cryptlvm
+# cryptlvm 是约定的名称，不一定需要 LVM
 
 # ?: ext4 btrfs
-mkfs.? /dev/mapper/eroot
+mkfs.? /dev/mapper/cryptlvm
 ```
 
 评估其它算法的速度：`cryptsetup benchmark`
@@ -95,8 +96,9 @@ mkfs.? /dev/mapper/eroot
 ```bash
 mkdir /mnt/archinstall
 cd /mnt/archinstall
-mount /dev/... .
-# OR: mount /dev/mapper/eroot
+mount /dev/mapper/cryptlvm .
+# OR: mount /dev/... .
+cd .
 
 mkdir boot
 mount /dev/... ./boot
@@ -105,6 +107,16 @@ mkdir boot/efi
 mount /dev/... ./boot/efi
 
 ```
+
+:::note bug
+
+检查文件：
+
+    vim -c '/efi-dir' /usr/lib/python*/site-packages/archinstall/lib/installer.py
+
+<!-- cryptlvm -->
+
+:::
 
 开始安装
 

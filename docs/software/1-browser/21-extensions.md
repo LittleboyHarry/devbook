@@ -38,6 +38,8 @@ import {faScroll} from '@fortawesome/free-solid-svg-icons'
 
 ## 适用范围
 
+    about:extensions
+
 | 扩展          | 作用域                       |
 | ------------- | ---------------------------- |
 | Dark Reader   | 所有站点：无痕模式、本地文件 |
