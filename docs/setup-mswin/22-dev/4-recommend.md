@@ -67,7 +67,7 @@ foreach ($_ in @("config", "MountImg", "RamDiskUI")) {
 
 其他：
 
-- <a href="/docs/software/rsi" target="_blank">workrave</a>
+- <a href="/docs/goodsoft/rsi" target="_blank">workrave</a>
 
 :::
 

@@ -73,25 +73,25 @@ export default function Home(): JSX.Element {
               <Tile
                 title="下载发行版"
                 description="推荐的 Linux"
-                href="docs/linux/install/download"
+                href="docs/setup-linux/install/download"
                 img={<FontAwesomeIcon icon={faDownload} />}
               />
               <Tile
                 title="Linux"
                 description="为极客配置"
-                href="docs/linux/overview"
+                href="docs/setup-linux/overview"
                 img={<HomepageImage filename="icon_linux.svg" />}
               />
               <Tile
                 title="WSL"
                 description="开发环境"
-                href="docs/win/dev/wsl/install"
+                href="docs/setup-mswin/dev/wsl/install"
                 img={<FontAwesomeIcon icon={faLinux} />}
               />
               <Tile
                 title="Windows"
                 description="开发者指南"
-                href="docs/win/dev/index"
+                href="docs/setup-mswin/dev/index"
                 img={
                   <img src={useBaseUrl('/img/icons/windows8-original.svg')} />
                 }
@@ -99,13 +99,13 @@ export default function Home(): JSX.Element {
               <Tile
                 title="开发环境"
                 description="配置"
-                href="docs/dev/intro"
+                href="docs/devenv/intro"
                 img={<img src={useBaseUrl('/img/icons/git.svg')} />}
               />
               <Tile
                 title="实用软件"
                 description="倾力推荐"
-                href="docs/software/intro"
+                href="docs/goodsoft/intro"
                 img={<FontAwesomeIcon icon={faHammer} />}
               />
               <Tile
@@ -116,19 +116,19 @@ export default function Home(): JSX.Element {
               <Tile
                 title="浏览器"
                 description="提高工作效率"
-                href="docs/software/browser/chromium"
+                href="docs/goodsoft/browser/chromium"
                 img={<HomepageImage filename="../icons/chromium.svg" />}
               />
               <Tile
                 title="摩登命令行"
                 description="new unix cli"
-                href="docs/dev/modern-cli/index"
+                href="docs/devenv/modern-cli/index"
                 img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
               />
               <Tile
                 title="自动工具集"
                 description="deploy-my-dotfiles"
-                href="docs/dev/deploy-my-dotfiles"
+                href="docs/devenv/deploy-my-dotfiles"
                 img={<FontAwesomeIcon icon={faPersonWalkingLuggage} />}
               />
             </ul>
@@ -158,7 +158,7 @@ export default function Home(): JSX.Element {
           <div className={st.buttons}>
             <Link
               className="button button--secondary button--lg"
-              to="docs/linux/overview"
+              to="docs/setup-linux/overview"
             >
               开始 🚲
             </Link>

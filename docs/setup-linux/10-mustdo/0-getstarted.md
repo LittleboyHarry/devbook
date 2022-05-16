@@ -19,7 +19,7 @@ title: 初始优化
 
 ## 使用 Z shell
 
-<a href="/docs/dev/zsh" target="_blank" >见此</a>
+<a href="/docs/devenv/zsh" target="_blank" >见此</a>
 
 ## 界面缩放与文字大小
 
@@ -69,15 +69,15 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 
 :::info 提高操作效率的键位调整
 
-作者推荐改变 <a target="_blank" href="/docs/dev/keymap">键位映射</a> ，需要适应一段时间
+作者推荐改变 <a target="_blank" href="/docs/devenv/keymap">键位映射</a> ，需要适应一段时间
 
 :::
 
 <!--
 可选的优化：
 
-- 推荐 <a target="_blank" href="/docs/dev/zsh">使用 Zsh 作为默认 Shell</a>
-- 推荐 <a target="_blank" href="/docs/software/browser/edge-for-linux">使用微软 Edge 浏览器</a>
+- 推荐 <a target="_blank" href="/docs/devenv/zsh">使用 Zsh 作为默认 Shell</a>
+- 推荐 <a target="_blank" href="/docs/goodsoft/browser/edge-for-linux">使用微软 Edge 浏览器</a>
 
  -->
 

@@ -77,7 +77,7 @@ import { faScroll } from '@fortawesome/free-solid-svg-icons';
     ```
 
 4.  `reboot` 重启后登录
-5.  <a target="_blank" href="/docs/linux/mustdo/for-debian#国内镜像软件仓">更改镜像源</a>
+5.  <a target="_blank" href="/docs/setup-linux/mustdo/for-debian#国内镜像软件仓">更改镜像源</a>
 6.  升级
 
     ```bash

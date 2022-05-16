@@ -50,7 +50,7 @@ export function TopGrid() {
         />
         <LogoCard
           name="摩登命令行"
-          to="/docs/dev/modern-cli/index"
+          to="/docs/devenv/modern-cli/index"
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
       </LogoCard.Container>

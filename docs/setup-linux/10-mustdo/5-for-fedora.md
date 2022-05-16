@@ -19,7 +19,7 @@ title: for Fedora
 <!--
 方法二：使用“GNOME 软件”更新
 
-[^2]: 若经常发生 Linux 内核故障，请看[内核问题](/docs/linux/kernel#fedora)文档
+[^2]: 若经常发生 Linux 内核故障，请看[内核问题](/docs/setup-linux/kernel#fedora)文档
 -->
 
 ### 调优
@@ -71,7 +71,7 @@ sudo dnf upgrade -y # 更新系统
 
     sudo dnf remove libreoffice*
 
-计划使用 <a href="/docs/software/browser/edge-for-linux" target="_blank" >Edge</a> 来代替 Firefox
+计划使用 <a href="/docs/goodsoft/browser/edge-for-linux" target="_blank" >Edge</a> 来代替 Firefox
 
     sudo dnf remove firefox
 

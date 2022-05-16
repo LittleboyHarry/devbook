@@ -72,6 +72,6 @@ virt-manager 管理方法：
 ## 其它
 
 [修改键盘映射](https://wiki.deepin.org/zh/%E4%BF%AE%E6%94%B9%E9%94%AE%E7%9B%98%E6%98%A0%E5%B0%84):
-[作者专用映射](/docs/dev/keymap)
+[作者专用映射](/docs/devenv/keymap)
 
     gsettings set com.deepin.dde.keyboard layout-options ...

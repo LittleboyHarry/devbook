@@ -19,6 +19,6 @@ echo export SYSTEMD_EDITOR=nvim | tee -a ~/.bashrc ~/.zshrc
 
 ## 自动配置
 
-使用作者的自动脚本：[`deploy-my-dotfiles`](/docs/dev/deploy-my-dotfiles)
+使用作者的自动脚本：[`deploy-my-dotfiles`](/docs/devenv/deploy-my-dotfiles)
 
     (cd ~/deploy-my-dotfiles;./deploy modules/neovim/)

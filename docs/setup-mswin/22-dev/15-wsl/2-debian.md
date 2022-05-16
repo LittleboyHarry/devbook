@@ -14,7 +14,7 @@ Debian for WSL 缺少需下载安装的依赖：
 
     wsl sudo apt install -y ./ca-certificates_*.deb ./openssl_*.deb
 
-随后<a href="/docs/linux/mustdo/for-debian#国内镜像软件仓" target="_blank">
+随后<a href="/docs/setup-linux/mustdo/for-debian#国内镜像软件仓" target="_blank">
 设置镜像源并更新</a>
 
 :::
@@ -38,7 +38,7 @@ sudo apt install -y tree unzip tig
 zsh, git, deploy-my-dotfiles, neovim, bat, fzf, rg, fd, pipx 等请见：
 
 <a target="_blank"
-href="/docs/dev/intro#命令行工具">开发环境 - 命令行工具</a>
+href="/docs/devenv/intro#命令行工具">开发环境 - 命令行工具</a>
 
 ## 建议
 

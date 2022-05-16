@@ -52,12 +52,12 @@ export default function Page() {
       <LogoCard.Container>
         <LogoCard
           name="摩登命令行"
-          to="/docs/dev/modern-cli/index"
+          to="/docs/devenv/modern-cli/index"
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
         <LogoCard
           name="JetBrains IDE"
-          to="/docs/dev/jetbrains/toolbox"
+          to="/docs/devenv/jetbrains/toolbox"
           logo={<img src={useBaseUrl('/img/icons/intellij.svg')} />}
         />
       </LogoCard.Container>

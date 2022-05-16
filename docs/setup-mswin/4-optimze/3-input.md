@@ -37,7 +37,7 @@ reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "UserDefinedDouble
 
 </details>
 
-:::note 作者推荐的 <a href="/docs/dev/keymap#windows" target="_blank">新键盘布局</a>
+:::note 作者推荐的 <a href="/docs/devenv/keymap#windows" target="_blank">新键盘布局</a>
 
 - 仿 Mac 修饰键顺序：Win, Alt, Ctrl
 - 交换 Esc 与 CapsLock

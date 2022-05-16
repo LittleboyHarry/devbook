@@ -8,7 +8,7 @@ title: 休息提醒
 
 - Windows
 - Linux
-  - 非 Ubuntu 系统需要安装<a href="/docs/linux/mustdo/gnome/panel#扩展推荐" target="_blank" >GNOME 托盘图标依赖</a>
+  - 非 Ubuntu 系统需要安装<a href="/docs/setup-linux/mustdo/gnome/panel#扩展推荐" target="_blank" >GNOME 托盘图标依赖</a>
   - 除了 KDE Wayland
 
 <GetPkg name="workrave" apt dnf choco winget pacman />

@@ -58,25 +58,25 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'linux/overview',
+            docId: 'setup-linux/overview',
             position: 'left',
-            label: 'Linux',
+            label: '配 Linux',
           },
           {
             type: 'doc',
-            docId: 'win/index',
+            docId: 'setup-mswin/index',
             position: 'left',
-            label: 'Windows',
+            label: '配 Windows',
           },
           {
             type: 'doc',
-            docId: 'dev/intro',
+            docId: 'devenv/intro',
             position: 'left',
-            label: '开发环境',
+            label: '配开发环境',
           },
           {
             type: 'doc',
-            docId: 'software/intro',
+            docId: 'goodsoft/intro',
             position: 'left',
             label: '常用软件',
           },

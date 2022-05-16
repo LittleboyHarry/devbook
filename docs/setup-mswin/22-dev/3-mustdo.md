@@ -82,7 +82,7 @@ import { faFileLines,faGears } from '@fortawesome/free-solid-svg-icons';
 
 :::note 配置 SSH 密钥
 
-参考<a href="/docs/dev/git" target="_blank" >其它章节</a>
+参考<a href="/docs/devenv/git" target="_blank" >其它章节</a>
 
 :::
 
@@ -120,7 +120,7 @@ iwr "https://vscode.cdn.azure.cn$((iwr "https://code.visualstudio.com/sha/downlo
 
 <MstoreButton id="XPDCFJDKLZJLP8" name="在线安装器" />
 
-## [字体](/docs/dev/font)
+## [字体](/docs/devenv/font)
 
 修复“管理控制台”模糊问题：
 
@@ -169,7 +169,7 @@ VMware Workstation Pro :
 
 :::tip 建议
 
-Linux 系统内有 libvrit-qemu-KVM 更好的[虚拟化开源方案](/docs/linux/recommend/libvirt)
+Linux 系统内有 libvrit-qemu-KVM 更好的[虚拟化开源方案](/docs/setup-linux/recommend/libvirt)
 
 :::
 
