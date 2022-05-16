@@ -27,7 +27,7 @@ jobs:
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
-        if: ${{ github.repository == 'LittleboyHarry/geekbook' }}
+        if: ${{ github.repository == 'LittleboyHarry/devbook' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

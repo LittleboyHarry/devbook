@@ -6,16 +6,30 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '极客手册',
-  tagline: '写给技术爱好者的公益指南',
+  title: '开发手册',
+  tagline: '写给程序员的开发文档',
   url: 'https://littleboyharry.me/',
-  baseUrl: '/geekbook/',
+  baseUrl: '/devbook/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'littleboyharry',
-  projectName: 'geekbook',
-
+  projectName: 'devbook',
+  i18n: {
+    defaultLocale: 'cn',
+    locales: ['cn'],
+    localeConfigs: {
+      cn: {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+        calendar: 'roc',
+      },
+      en: {
+        label: 'English',
+      },
+    },
+  },
   trailingSlash: false,
   presets: [
     [
@@ -25,7 +39,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/LittleboyHarry/geekbook/edit/main/',
+          editUrl: 'https://github.com/LittleboyHarry/devbook/edit/main/',
         },
         /*
         blog: {
@@ -87,12 +101,12 @@ const config = {
             label: '知识与经验',
           },
           {
-            href: 'https://github.com/littleboyharry/geekbook/issues',
+            href: 'https://github.com/littleboyharry/devbook/issues',
             label: '问题反馈',
             position: 'right',
           },
           {
-            href: 'https://github.com/littleboyharry/geekbook/raw/main/LICENSE',
+            href: 'https://github.com/littleboyharry/devbook/raw/main/LICENSE',
             label: '版权',
             position: 'right',
           },
@@ -136,7 +150,7 @@ const config = {
             items: [
               {
                 label: '感谢',
-                href: '/geekbook/thanks',
+                href: '/devbook/thanks',
               },
             ],
           },
@@ -150,7 +164,7 @@ const config = {
                */
               {
                 label: '问题反馈',
-                href: 'https://github.com/littleboyharry/geekbook/issues',
+                href: 'https://github.com/littleboyharry/devbook/issues',
               },
             ],
           },
