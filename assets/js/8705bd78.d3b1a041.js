@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgeekbook=self.webpackChunkgeekbook||[]).push([[193],{2776:function(e){e.exports=JSON.parse('{"name":"@easyops-cn/docusaurus-search-local","id":"default"}')}}]);

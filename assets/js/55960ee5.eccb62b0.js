@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdevbook=self.webpackChunkdevbook||[]).push([[4121],{8070:function(o){o.exports=JSON.parse('[{"label":"linux","permalink":"/devbook/docs/tags/linux","count":1},{"label":"cloud-init","permalink":"/devbook/docs/tags/cloud-init","count":1},{"label":"libvirt","permalink":"/devbook/docs/tags/libvirt","count":1}]')}}]);
