@@ -150,7 +150,7 @@ const config = {
             items: [
               {
                 label: '感谢',
-                href: '/devbook/thanks',
+                href: '/thanks',
               },
             ],
           },
