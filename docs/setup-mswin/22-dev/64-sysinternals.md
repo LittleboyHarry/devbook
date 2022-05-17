@@ -10,6 +10,8 @@ title: Sysinternals
 
 <GetPkg choco="autoruns" />
 
+    reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\ProgramData\chocolatey\lib\AutoRuns\tools\Autoruns.exe" /t REG_SZ /d "~ HIGHDPIAWARE" /f
+
 ### 进程管理器
 
 <GetPkg choco="procexp" />
@@ -25,6 +27,8 @@ title: Sysinternals
 ### TCP 连接监控
 
 <GetPkg choco="tcpview" />
+
+    reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\ProgramData\chocolatey\lib\TcpView\Tools\tcpview.exe" /t REG_SZ /d "~ HIGHDPIAWARE" /f
 
 ---
 

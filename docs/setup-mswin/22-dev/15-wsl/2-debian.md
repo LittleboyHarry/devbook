@@ -14,7 +14,7 @@ Debian for WSL 缺少需下载安装的依赖：
 
     wsl sudo apt install -y ./ca-certificates_*.deb ./openssl_*.deb
 
-随后<a href="/docs/setup-linux//for-debian#国内镜像软件仓" target="_blank">
+随后<a href="/docs/setup-linux/for-debian#国内镜像软件仓" target="_blank">
 设置镜像源并更新</a>
 
 :::
