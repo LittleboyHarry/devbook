@@ -44,7 +44,7 @@ export function TopGrid() {
           logo={
             <FontAwesomeIcon
               icon={faPersonWalkingLuggage}
-              style={{ width: '75%' }}
+              style={{ transform: 'scale(0.75)' }}
             />
           }
         />

@@ -1,0 +1,14 @@
+.root {
+  display: inline-block;
+  > a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    > svg {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.title {
+  margin-right: 0.5rem;
+}

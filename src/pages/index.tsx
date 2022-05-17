@@ -109,15 +109,15 @@ export default function Home(): JSX.Element {
                 img={<FontAwesomeIcon icon={faHammer} />}
               />
               <Tile
+                title="浏览器"
+                description="查资料"
+                href="docs/goodsoft/browser/chromium"
+                img={<HomepageImage filename="../icons/firefox.svg" />}
+              />
+              <Tile
                 title="桌面美化"
                 description="GNOME , KDE , Win"
                 img={<FontAwesomeIcon icon={faPalette} />}
-              />
-              <Tile
-                title="浏览器"
-                description="提高工作效率"
-                href="docs/goodsoft/browser/chromium"
-                img={<HomepageImage filename="../icons/chromium.svg" />}
               />
               <Tile
                 title="摩登命令行"
@@ -129,7 +129,12 @@ export default function Home(): JSX.Element {
                 title="自动工具集"
                 description="deploy-my-dotfiles"
                 href="docs/devenv/deploy-my-dotfiles"
-                img={<FontAwesomeIcon icon={faPersonWalkingLuggage} />}
+                img={
+                  <FontAwesomeIcon
+                    style={{ transform: 'scale(0.99)' }}
+                    icon={faPersonWalkingLuggage}
+                  />
+                }
               />
             </ul>
           </div>

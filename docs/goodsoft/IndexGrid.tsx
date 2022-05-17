@@ -14,8 +14,14 @@ export default function IndexGrid() {
     <>
       <LogoCard.Container>
         <LogoCard
-          name="浏览器"
-          to="browser/chromium"
+          name="Firefox"
+          to="browser/firefox"
+          noNewTab
+          logo={<img src={useBaseUrl('/img/icons/firefox.svg')} alt="icon" />}
+        />
+        <LogoCard
+          name="Chromium"
+          to="browser/chromium-for-linux"
           noNewTab
           logo={<img src={useBaseUrl('/img/icons/chromium.svg')} alt="icon" />}
         />

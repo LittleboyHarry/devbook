@@ -1,8 +1,8 @@
 ---
-title: 防追踪
+title: Chromium 防追踪
 ---
 
-## 隐私设置
+## 拦截不安全的 HTTPS 请求
 
     about:settings/privacy
 

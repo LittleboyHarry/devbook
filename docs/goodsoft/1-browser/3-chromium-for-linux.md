@@ -1,19 +1,28 @@
 ---
-title: Edge for Linux
+title: Chromium for Linux
 tags:
   - linux
 ---
 
 ## 下载安装
 
+:::note 原版
+
+<GetPkg name="chromium" pacman dnf />
+
+Windows PowerShell:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope Process
+iwr https://gitee.com/littleboyharry-crx/ohmycrx/raw/master/install-chromium.ps1 | iex
+```
+
+:::
+
+:::note 微软浏览器
+
 安装后意味着你同意微软的软件许可条款 `edge://terms`，
 [附：历史版本](https://packages.microsoft.com/yumrepos/edge/)
-
-import {
-  PreferPkgMgr,
-  ForApt,
-  ForDnf,
-} from '@theme/PreferPkgMgr'
 
  <PreferPkgMgr dnf apt>
 <ForApt>
@@ -45,6 +54,8 @@ cd -
 </ForDnf>
 </PreferPkgMgr>
 
+:::
+
 ## 设为默认浏览器
 
 **GNOME:**
@@ -54,6 +65,8 @@ cd -
 **KDE:** 搜索关键词 `compon` 进入设置
 
 ## 启动参数
+
+:::note 微软浏览器
 
 强化功能注入：
 
@@ -78,6 +91,13 @@ cd -
     nano +m ~/.local/bin/msedge
 
 格式：不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
+
+作用于 PWA 应用启动器：
+（可以添加为自启动脚本，免去每次手动执行命令）
+
+    for f in ~/.local/share/applications/msedge-*.desktop; do sed -i "/Exec/ s#/opt/microsoft/msedge/microsoft-edge#msedge#" "$f" ; done
+
+:::
 
 ### GPU 视频加速
 
@@ -115,19 +135,13 @@ cd -
 
 :::
 
-### 作用于 PWA 应用启动器
-
-也可以添加为自启动脚本，免去每次手动执行命令：
-
-    for f in ~/.local/share/applications/msedge-*.desktop; do sed -i "/Exec/ s#/opt/microsoft/msedge/microsoft-edge#msedge#" "$f" ; done
-
 ### 自定义专用启动器
 
 建议了解并使用多配置机制。作者喜欢使用两个配置身份，一个用于日常匿名浏览，另一个用于个人登陆
 
     cd ~/.local/share/applications/
 
-我们 cp 复制一份 `microsoft-edge.desktop` 并编辑
+我们 cp 复制一份 `chromium.desktop` 或 `microsoft-edge.desktop` 并编辑
 
 1. `Name` 为应用名称
 2. 为 `Exec=` 添加启动参数，绑定浏览器默认的启动配置名：`Default` `Profile 1` ...
@@ -164,3 +178,10 @@ about:flags/#enable-zero-copy
 本篇教大家如何配置好 Chromium，完成后我们得到了可日常使用的浏览器。
 
 :::
+
+import GetPkg from '@theme/GetPkg';
+import {
+  PreferPkgMgr,
+  ForApt,
+  ForDnf,
+} from '@theme/PreferPkgMgr'

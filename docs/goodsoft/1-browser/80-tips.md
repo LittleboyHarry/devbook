@@ -3,7 +3,7 @@ title: 小技巧
 ---
 
 <details className="let-details-to-gray">
-  <summary>可选功能</summary>
+  <summary>Chromium 可选功能</summary>
 
 开启标签页鼠标悬浮浏览
 

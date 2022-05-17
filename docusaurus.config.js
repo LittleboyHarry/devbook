@@ -67,26 +67,26 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '首页',
+        title: '🛠️',
         hideOnScroll: true,
         items: [
           {
             type: 'doc',
             docId: 'setup-linux/overview',
             position: 'left',
-            label: '配 Linux',
+            label: 'Linux',
           },
           {
             type: 'doc',
             docId: 'setup-mswin/index',
             position: 'left',
-            label: '配 Windows',
+            label: 'Windows',
           },
           {
             type: 'doc',
             docId: 'devenv/intro',
             position: 'left',
-            label: '配开发环境',
+            label: '开发环境',
           },
           {
             type: 'doc',

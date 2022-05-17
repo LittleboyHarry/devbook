@@ -1,34 +1,109 @@
 ---
-title: 扩展推荐
+title: 推荐扩展
 ---
 
 ## 获取
 
-| 扩展名        | 作用               | Chrome 商店 | Edge 外接程序 |
-| ------------- | ------------------ | :---------: | :-----------: |
-| Vimium C      | 免鼠标、键盘侠专用 | [Get][vc1]  |  [Get][vc2]   |
-| Dark Reader   | 护眼模式           | [Get][dd1]  |  [Get][dd2]   |
-| uBlock Origin | 去广告             | [Get][uo1]  |  [Get][uo2]   |
-| Linkclump     | 框选多开           |  [Get][lc]  |
+### 操作类
 
-[dd1]: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
-[dd2]: https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc
-[uo1]: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
-[uo2]: https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak
-[lc]: https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj
-[vc1]: https://chrome.google.com/webstore/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg
-[vc2]: https://microsoftedge.microsoft.com/addons/detail/vimium-c-all-by-keyboar/aibcglbfblnogfjhbcmmpobjhnomhcdo
+- 免鼠标、全键盘操作
 
-专用类：
+  <ExtStoreLink name='Vimium C'
+  chrome='https://chrome.google.com/webstore/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg'
+  edge='https://microsoftedge.microsoft.com/addons/detail/vimium-c-all-by-keyboar/aibcglbfblnogfjhbcmmpobjhnomhcdo'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/vimium-c/'
+  />
 
-| 扩展名 | 作用          |    Chrome 商店    |    Edge 外接程序    |
-| ------ | ------------- | :---------------: | :-----------------: |
-| Gitako | GitHub 导航栏 | [Get][g1] | [Get][g2] |
+- 鼠标手势
 
-[g1]: https://chrome.google.com/webstore/detail/gitako-github-file-tree/giljefjcheohhamkjphiebfjnlphnokk
-[g2]: https://microsoftedge.microsoft.com/addons/detail/gitako-github-file-tree/alpoloddcggjhakjemghahlkofjekbca
+  <ExtStoreLink name='Gesturefy'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/gesturefy/' />
+  &nbsp;
+  <ExtStoreLink name='smartUp'
+  chrome='https://chrome.google.com/webstore/detail/smartup-gestures/bgjfekefhjemchdeigphccilhncnjldn?hl=zh'
+  edge='https://microsoftedge.microsoft.com/addons/detail/smartup%E6%89%8B%E5%8A%BF/elponhbfjjjihgeijofonnflefhcbckp'
+  />
 
-> 附：高级篇 - [自编译打包扩展](https://gitee.com/littleboyharry-crx/ohmycrx/blob/master/README.md)，可省去下文手动配置的部分过程
+- 框选多开
+
+  <ExtStoreLink name='Snap Links Plus'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/snaplinksplus/' />
+  &nbsp;
+  <ExtStoreLink name='Linkclump'
+  chrome='https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj' />
+
+### 体验类
+
+- 本地优化 CDN
+
+  <ExtStoreLink name='Decentraleyes'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/decentraleyes/'
+  chrome='https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj'
+  edge='https://microsoftedge.microsoft.com/addons/detail/lmijmgnfconjockjeepmlmkkibfgjmla'
+  />
+
+- 对条款自动处理 Cookies
+
+  <ExtStoreLink name="I don't care about cookies"
+  firefox='https://addons.mozilla.org/addon/i-dont-care-about-cookies/'
+  chrome='https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja'
+  edge='https://microsoftedge.microsoft.com/addons/detail/oholpbloipjbbhlhohaebmieiiieioal'
+  />
+
+- 按规则自动清理 Cookies ( 推荐搭配火狐身份容器使用 )
+
+  <ExtStoreLink name="Cookie AutoDelete"
+  firefox='https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/'
+  chrome='https://chrome.google.com/webstore/detail/cookie-autodelete/fhcgjolkccmbidfldomjliifgaodjagh'
+  edge='https://microsoftedge.microsoft.com/addons/detail/djkjpnciiommncecmdefpdllknjdmmmo'
+  />
+
+- 跟踪器智能拦截
+
+  <ExtStoreLink name='Privacy Badger'
+  firefox='https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/'
+  chrome='https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp'
+  edge='https://microsoftedge.microsoft.com/addons/detail/mkejgcgkdlddbggjhhflekkondicpnop'
+  />
+
+- 广告规则拦截
+
+  <ExtStoreLink name='uBlock Origin'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/'
+  chrome='https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm'
+  edge='https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak'
+  />
+
+### 显示类
+
+- 护眼模式
+
+  <ExtStoreLink name='Dark Reader'
+  chrome='https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh'
+  edge='https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/darkreader/'
+  />
+
+### 专用类
+
+- GitHub 文件树视图
+
+  <ExtStoreLink name='Gitako'
+  chrome='https://chrome.google.com/webstore/detail/gitako-github-file-tree/giljefjcheohhamkjphiebfjnlphnokk'
+  edge='https://microsoftedge.microsoft.com/addons/detail/gitako-github-file-tree/alpoloddcggjhakjemghahlkofjekbca'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/gitako-github-file-tree/'
+  />
+
+- Chromium 插件管理助手
+
+  <ExtStoreLink name='Extension Manager'
+  chrome='https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco'
+  edge='https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb'
+  />
+
+---
+
+附：[自编译打包扩展](https://gitee.com/littleboyharry-crx/ohmycrx/blob/master/README.md)，可省去下文手动配置的部分过程
 
 ## 配置文件
 
@@ -38,13 +113,17 @@ import {faScroll} from '@fortawesome/free-solid-svg-icons'
 
 ## 适用范围
 
-    about:extensions
+打开扩展设置：
 
-| 扩展          | 作用域                       |
+<div className="no-table-header no-table-border">
+
+|               |                              |
 | ------------- | ---------------------------- |
 | Dark Reader   | 所有站点：无痕模式、本地文件 |
 | uBlock Origin | 所有站点：无痕模式、本地文件 |
 | Vimium C      | 所有站点：无痕模式、本地文件 |
+
+</div>
 
 <div className="autoselect-item-of-list">
 
@@ -62,12 +141,18 @@ Linkclump:
 
 ## 绑定快捷键
 
+ <div className="left-float-scope">
+<div>
+
 Dark Reader:
 
 `Alt + Shift + A` 激活扩展
 
 `Alt + Shift + D` 切换当前网站
 
+</div>
+
+<div>
 Vimium C:
 
 `Alt + V` 激活扩展
@@ -75,6 +160,9 @@ Vimium C:
 uBlock Origin:
 
 `Alt + Delete` 进入临时移除元素模式
+
+</div>
+</div>
 
 ## 其它配置
 
@@ -91,3 +179,4 @@ uBlock Origin:
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FileItem from '@theme/FileItem'
+import ExtStoreLink from './ExtStoreLink'
