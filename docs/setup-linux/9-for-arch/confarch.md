@@ -1,5 +1,5 @@
 ---
-title: for Arch
+title: 配置 Arch
 ---
 
 ## zsh

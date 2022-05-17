@@ -41,6 +41,7 @@ export default function GetPkg({
   flatpak,
   apt,
   pacman,
+  aur,
   dnf,
   pipx,
   yarn,
@@ -52,6 +53,7 @@ export default function GetPkg({
   winget?: true | string;
   flatpak?: string;
   apt?: true | string;
+  aur?: true | string;
   pacman?: true | string;
   dnf?: true | string;
   pipx?: true | string;
@@ -70,6 +72,7 @@ export default function GetPkg({
     if (dnf) keys.push('dnf');
     if (pipx) keys.push('pipx');
     if (yarn) keys.push('yarn');
+    if (aur) keys.push('aur');
     return groupId + keys.join('&');
   }, [apt, dnf, scoop, winget, pacman, pipx, yarn]);
 
@@ -141,6 +144,15 @@ export default function GetPkg({
     label: 'pacman',
     defaultPkgName: name,
     prefix: 'yes | sudo pacman -S',
+  });
+
+  addItem({
+    items,
+    expression: aur,
+    key: 'aur',
+    label: 'aur',
+    defaultPkgName: name,
+    prefix: 'paru',
   });
 
   addItem({

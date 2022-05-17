@@ -1,5 +1,5 @@
 ---
-title: for 多系统
+title: 对于双系统
 ---
 
 :::caution 多系统的卸载方法

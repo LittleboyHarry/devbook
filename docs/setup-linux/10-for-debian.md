@@ -1,5 +1,5 @@
 ---
-title: for Debian
+title: 配置 Debian
 ---
 
 :::caution 推荐使用 HTTPS 协议

@@ -6,7 +6,7 @@ title: 系统备份
 
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="timeshift" apt dnf />
+<GetPkg name="timeshift" apt dnf aur />
 
 AUR: `timeshift`
 

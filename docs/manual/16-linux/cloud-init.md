@@ -98,7 +98,7 @@ users:
 
 镜像加速与更新：
 
-把 <a href="/docs/setup-linux/mustdo/for-debian#国内镜像软件仓" target="_blank">Debian 镜像设置</a> 按 yaml 数组格式
+把 <a href="/docs/setup-linux//for-debian#国内镜像软件仓" target="_blank">Debian 镜像设置</a> 按 yaml 数组格式
 添加到 `user-data` 的 `runcmd:` 内，系统初始化时会自动执行
 
 :::note 校验代码正确性

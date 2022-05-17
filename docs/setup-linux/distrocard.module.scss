@@ -1,0 +1,56 @@
+%logo {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+%card {
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: fit-content;
+
+  display: flex;
+  > img,
+  > svg {
+    @extend %logo;
+  }
+  > div {
+    > strong {
+      display: block;
+    }
+  }
+
+  margin: 0 1rem 1rem 0;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.arch {
+  @extend %card;
+  background-color: rgb(62, 105, 118);
+}
+
+.fedora {
+  @extend %card;
+  background-color: #3c6eb4;
+}
+
+.deepin {
+  @extend %card;
+  background-color: #444;
+}
+
+.fydeos {
+  @extend %card;
+  background-color: #444;
+}
+
+.debian {
+  @extend %card;
+  background-color: #a80030;
+}

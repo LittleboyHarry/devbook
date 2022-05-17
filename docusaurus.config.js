@@ -72,15 +72,15 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'setup-linux/overview',
-            position: 'left',
-            label: 'Linux',
-          },
-          {
-            type: 'doc',
             docId: 'setup-mswin/index',
             position: 'left',
             label: 'Windows',
+          },
+          {
+            type: 'doc',
+            docId: 'setup-linux/require',
+            position: 'left',
+            label: 'Linux',
           },
           {
             type: 'doc',

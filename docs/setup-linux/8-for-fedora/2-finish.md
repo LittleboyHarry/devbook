@@ -1,6 +1,10 @@
 ---
-title: for Fedora
+title: 完成 Fedora 安装
 ---
+
+安装系统前可以卸载一些不需要的捆绑应用，如 LibreOffice 以加快速度
+
+    sudo dnf remove -y libreoffice*
 
  <details className="let-details-to-gray" role="alert">
 <summary>欢迎向导中的 “第三方软件源“ 是什么？</summary>

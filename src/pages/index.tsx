@@ -5,7 +5,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import st from './index.module.scss';
-import Windows8Icon from '@site/static/img/icons/windows8-original.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faDownload,
@@ -79,7 +78,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="Linux"
                 description="为极客配置"
-                href="docs/setup-linux/overview"
+                href="docs/setup-linux/require"
                 img={<HomepageImage filename="icon_linux.svg" />}
               />
               <Tile
@@ -163,7 +162,7 @@ export default function Home(): JSX.Element {
           <div className={st.buttons}>
             <Link
               className="button button--secondary button--lg"
-              to="docs/setup-linux/overview"
+              to="docs/setup-linux/require"
             >
               开始 🚲
             </Link>
