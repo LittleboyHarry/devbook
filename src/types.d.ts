@@ -1,4 +1,4 @@
-/// <reference path="../node_modules/@docusaurus/theme-classic/src/theme-classic.d.ts" />
+/// <reference path="@docusaurus/module-type-aliases" />
 
 declare module '*.scss' {
   const content: { [key: string]: any };

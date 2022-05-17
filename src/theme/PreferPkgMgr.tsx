@@ -1,103 +1,34 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
-import cs from 'clsx';
-import st from './PreferPkgMgr.module.scss';
-import useIsBrowser from '@docusaurus/useIsBrowser';
+import React from 'react';
+import {
+  createScopeComponent,
+  createScopeContext,
+  PreferScope,
+  ScopeOf,
+} from './PreferScope';
 
-type PkgMgrType = 'apt' | 'dnf' | 'pacman';
-type Options = { [key in PkgMgrType]?: boolean };
-
-const PreferPkgMgrContext = createContext({
-  active: 'dnf' as PkgMgrType,
-  setActive(_value: PkgMgrType) {},
-  options: {} as Options,
-});
+type Value = 'apt' | 'dnf' | 'pacman';
+const _defaultValue = 'pacman' as Value;
+const context = createScopeContext(_defaultValue);
 
 export function PreferPkgMgr({
+  pacman,
   apt,
   dnf,
-  pacman,
+  defaultValue,
   children,
-}: PropsWithChildren<Options>) {
-  const isBrowser = useIsBrowser();
-  const [active, setActive] = useState<PkgMgrType>('dnf');
-  const gid = useMemo(() => {
-    let gid = 'cpreferPkgMgr-';
-    const keys = [];
-    if (apt) keys.push('apt');
-    if (dnf) keys.push('dnf');
-    if (pacman) keys.push('pacman');
-    return gid + keys.join('&');
-  }, [apt, dnf, pacman]);
-
-  useEffect(() => {
-    if (isBrowser) setActive(window.localStorage.getItem(gid) as PkgMgrType);
-  }, [isBrowser, gid]);
-
+}: ScopeOf<Value> & { defaultValue?: Value }) {
+  if (!defaultValue) defaultValue = _defaultValue;
   return (
-    <PreferPkgMgrContext.Provider
-      value={{
-        active,
-        setActive: useCallback(
-          (value: PkgMgrType) => {
-            window.localStorage.setItem(gid, value);
-            setActive(value);
-          },
-          [gid]
-        ),
-        options: { apt, dnf, pacman },
-      }}
-    >
-      <div className="pills pills--block" style={{ marginBottom: '1rem' }}>
-        {apt && <RadioChoice type="apt" label="dpkg - apt" />}
-        {dnf && <RadioChoice type="dnf" label="RPM - dnf" />}
-        {pacman && <RadioChoice type="pacman" label="pacman" />}
-      </div>
-      {children}
-    </PreferPkgMgrContext.Provider>
+    <PreferScope
+      storeNamePrefix="preferPkgMgr"
+      storeFlags={[pacman, apt, dnf]}
+      storeKeywords={['pacman', 'apt', 'dnf']}
+      keywords={['pacman', 'apt', 'dnf']}
+      {...{ defaultValue, context, children }}
+    />
   );
 }
 
-function RadioChoice({ type, label }: { type: PkgMgrType; label: string }) {
-  const { active, setActive } = useContext(PreferPkgMgrContext);
-  const checked = active === type;
-  return (
-    <label
-      className={cs(st.choice, 'pills__item', checked && 'pills__item--active')}
-    >
-      <input
-        type="radio"
-        value={type}
-        name="prefer-pkgmgr"
-        checked={checked}
-        onChange={({ target: { value } }) => setActive(value as PkgMgrType)}
-      />
-      {label}
-    </label>
-  );
-}
-
-export function ForApt({ children }: PropsWithChildren<{}>) {
-  const { active } = useContext(PreferPkgMgrContext);
-
-  return active === 'apt' && children;
-}
-
-export function ForDnf({ children }: PropsWithChildren<{}>) {
-  const { active } = useContext(PreferPkgMgrContext);
-
-  return active === 'dnf' && children;
-}
-
-export function ForPacman({ children }: PropsWithChildren<{}>) {
-  const { active } = useContext(PreferPkgMgrContext);
-
-  return active === 'pacman' && children;
-}
+export const ForPacman = createScopeComponent(context, 'pacman');
+export const ForApt = createScopeComponent(context, 'apt');
+export const ForDnf = createScopeComponent(context, 'dnf');

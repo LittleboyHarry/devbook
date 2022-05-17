@@ -1,4 +1,4 @@
-<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=deploy-my-dotfiles&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=deploy-my-dotfiles&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
 
 由笔者创作的综合调优的方案，涵盖 ohmyzsh 插件等其它调优的解决方案
 
@@ -10,7 +10,7 @@ ForApt,
 ForDnf,
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgr dnf apt>
+ <PreferPkgMgr dnf apt defaultValue='apt' >
 <ForApt>
 
     sudo apt install -y git python-is-python3
