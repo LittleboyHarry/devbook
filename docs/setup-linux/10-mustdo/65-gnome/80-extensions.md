@@ -20,7 +20,10 @@ title: GNOME 推荐扩展
 
 外观类：
 
-- 细节微调: [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
+- 自动细节调整:
+  [Gnome 4x UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
+- 手动细节微调:
+  [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 - 在活动概览视图时，中键关闭:
   [Quick Close in Overview](https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/)
 - 夜间自动切换:
@@ -33,8 +36,13 @@ title: GNOME 推荐扩展
 
 顶栏：
 
-- 系统信息监视器: [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
-- 活动窗口列表: [BaBar Task Bar](https://extensions.gnome.org/extension/4000/babar/)
+- 系统信息监视器:
+  [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
+- 活动窗口列表:
+  [BaBar Task Bar](https://extensions.gnome.org/extension/4000/babar/)
+- 调整电源菜单按钮：
+  [Bring Out Submenu Of Power Off Logout Button](https://extensions.gnome.org/extension/2917/bring-out-submenu-of-power-offlogout-button/)
+
 
 程序员：
 

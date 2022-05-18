@@ -8,14 +8,32 @@ import {
 PreferPkgMgr,
 ForApt,
 ForDnf,
+ForPacman,
 } from '@theme/PreferPkgMgr'
 
- <PreferPkgMgr dnf apt defaultValue='apt' >
+ <PreferPkgMgr dnf apt pacman >
 <ForApt>
 
-    sudo apt install -y git python-is-python3
+```shell
+sudo apt install -y git python-is-python3
+```
+</ForApt><ForDnf>
 
-x 剪贴板相关支持依赖：
+```shell
+sudo dnf install -y git
+```
+
+</ForDnf><ForPacman>
+
+```shell
+sudo pacman -S git lsb-release
+```
+
+</ForPacman>
+
+X 剪贴板支持：
+
+<ForApt>
 
 ```bash
 sudo apt install -y xclip
@@ -23,20 +41,21 @@ if dpkg -l libwayland-client0 &> /dev/null; then
   sudo apt install -y wl-clipboard
 fi
 ```
+</ForApt><ForDnf>
 
-</ForApt>
-<ForDnf>
-
-    sudo dnf install -y git
-
-x 剪贴板相关支持依赖：
-
-```bash
+```shell
 sudo dnf install -y xclip
 sudo dnf install -y wl-clipboard
 ```
 
-</ForDnf>
+</ForDnf><ForPacman>
+
+```bash
+sudo pacman -S xclip
+sudo pacman -S wl-clipboard
+```
+
+</ForPacman>
 </PreferPkgMgr>
 
 ## 安装
@@ -58,7 +77,7 @@ git clone https://gitee.com/LittleboyHarry/deploy-my-dotfiles
 
 :::
 
-## 使用 Zsh 模块
+## 适配 Zsh
 
 模块部署：
 
@@ -80,25 +99,42 @@ exec zsh
 
 <br/>
 
+### Zsh 主题
+
 推荐使用 steeef 主题
 
     echo 'source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme' >> ~/.zshrc
     exec zsh
 
- <details className="let-details-to-gray" role="alert">
-<summary>常用命令行缩写表</summary>
+:::note 常用命令行缩写集
 
-ohmyzsh 社区提供，仅作[参考](https://gitee.com/mirrors/ohmyzsh/blob/master/plugins/common-aliases/README.md)
+ohmyzsh 社区提供，仅作[参考](https://gitee.com/mirrors/ohmyzsh/blob/master/plugins/common-aliases/README.md)。
+请考虑是否使用？
 
     echo 'source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/plugins/common-aliases/common-aliases.plugin.zsh' >> ~/.zshrc
     exec zsh
 
-</details>
+:::
 
- <details className="let-details-to-gray" role="alert">
-<summary>powerlevel10k 主题</summary>
+:::note 其他主题推荐
 
-安装：依赖 Nerd Font 字体，[参见](./font#cascadiacode-nerdfont)
+请考虑是否使用 **powerlevel10k**？
+
+- 优点: 美观清晰、可自定性强
+- 缺点：
+  调整窗口大小会造成排版错乱
+
+  [解决方法](https://github.com/romkatv/powerlevel10k/blob/master/README.md#the-anatomy-of-the-problem):
+  禁止自动重排版。部分终端支持，如 Konsole
+
+<details className="let-details-to-gray" role="alert">
+<summary>安装方法</summary>
+
+<!-- todo: ys or zsh 重编译
+https://www.zsh.org/mla/workers//2019/msg00561.html
+-->
+
+依赖 [Nerd Font 字体](./font#cascadiacode-nerdfont)
 
 ```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -106,26 +142,19 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 # git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+sed -i '/steeef.zsh-theme/d' ~/.zshrc
 # 开始配置
 exec zsh
 ```
 
-选调：隐藏系统图标
+隐藏系统图标?:
 
     sed -i "/# os identifier/ s/^/#&/" ~/.p10k.zsh
     exec zsh
 
-缺点：
-调整窗口大小会造成排版错乱
-
-[解决方法](https://github.com/romkatv/powerlevel10k/blob/master/README.md#the-anatomy-of-the-problem):
-是禁止自动重排版 （ 部分终端支持，如 Konsole ）
-
-<!-- todo: ys or zsh 重编译
-https://www.zsh.org/mla/workers//2019/msg00561.html
--->
-
 </details>
+
+:::
 
 ## ohmyzsh 插件说明页
 

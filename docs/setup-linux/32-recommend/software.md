@@ -8,6 +8,10 @@ GNOME 待办事项
 
     sudo apt install -y gnome-todo
 
+系统清理
+
+<GetPkg name='bleachbit' pacman apt dnf winget choco />
+
 摘自其他章节：
 
 - <a href="/docs/goodsoft/email" target="_blank">thunderbird 电子邮件</a>
@@ -18,3 +22,5 @@ GNOME 待办事项
 数据可供参考：
 
     curl https://popcon.debian.org/by_inst | less
+
+import GetPkg from '@theme/GetPkg';

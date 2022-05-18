@@ -16,7 +16,7 @@ showconsolefont
 
 ## 自动安装
 
-执行，[配置选项](#配置选项)
+执行，[配置选项](#推荐的选项配置)
 
     archinstall
 
@@ -86,47 +86,67 @@ mount /dev/... ./boot/efi
 
     archinstall --script swiss --mode only_os
 
-## 配置选项
+## 推荐的选项配置
 
-- `Select mirror region`
+1. **Select mirror region**
 
-  软件源：
-  按 / 搜索 China 选择
+   软件源：按 `/` 键搜索选择 China
 
-- `Select harddrives`
+2. **Select harddrives**
 
-  选择目标硬盘
+   选择目标硬盘
 
-- `Select disk layout`
+3. **Select disk layout**
 
-  如果不保留硬盘数据，全盘安装 Arch，则可以选择 wipe all ...
+   如果不保留硬盘数据，全盘安装 Arch，则可以选择 `wipe all ...`
 
-- `Select bootloader`
+4. **Select bootloader**
 
-  推荐输入 yes 使用 GRUB
+   选择 yes 使用 GRUB
 
-- `Specify superuser account`
+5. **Specify superuser account**
 
-  录入管理员帐号密码
+   录入管理员帐号密码
 
-- `Specify profile`
+6. **Specify profile**
 
-  选择安装内容，如桌面、显卡等
+   选择安装内容，如桌面、显卡等
 
-- `Select audio`
+7. **Select audio**
 
-  推荐 pipewire, 是后者的改进版
+   选择 `pipewire`, 是后者的改进版
 
-- `Select kernels`
+8. **Select kernels**
 
-  推荐 linux-lts, 若新设备不兼容则改用 linux (最新版)
+   选择 `linux-lts`, 若新设备不兼容则改用 linux (最新版)
 
-- `Configure network`
+9. **Configure network**
 
-  推荐 NetworkManager，用于图形化系统
+   选择 `NetworkManager`，用于图形化系统
 
-- `Select timezone`
+10. **Select timezone**
 
-  搜索 hai 选择 Asia/Shanghai
+    搜索 `hai` 选择 Asia/Shanghai
 
 完成配置后，可选择保存配置。随后安装
+
+## 备份系统
+
+安装完成后，切入新系统
+
+    arch-chroot /mnt/archinstall
+
+对于 btrfs 文件系统，备份非常简单：
+
+```shell
+# 先备份一下启动分区
+cd /boot
+tar -zcvf boot.tgz .
+cd -
+
+# 利用子卷快照机制
+btrfs subvolume snapshot -r / /.bakroot
+# 恢复命令：btrfs subvolume snapshot /.bakroot /
+```
+
+非 btrfs 文件系统，只能使用 tar 全量备份

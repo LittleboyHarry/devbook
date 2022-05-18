@@ -61,17 +61,18 @@ ForPacman
 <ForDnf>
 
 ```shell
-sudo dnf in -y fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool \ # 核心包
-               kf5-kconfig-core                                           # 自动脚本配置工具
-test -n "$KDE_FULL_SESSION" && sudo dnf in -y kcm-fcitx5                  # KDE 依赖模块
+sudo dnf in -y fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool # 核心包
+sudo dnf in -y kf5-kconfig-core # 自动脚本配置工具
+
+test -n "$KDE_FULL_SESSION" && sudo dnf in -y kcm-fcitx5                # KDE 依赖模块
 ```
 
 </ForDnf>
 <ForApt>
 
 ```shell
-sudo apt install -y fcitx5-chinese-addons fcitx5-config-qt           # 核心包
-sudo apt install -y libkf5config-bin                                 # 自动脚本配置工具
+sudo apt install -y fcitx5-chinese-addons fcitx5-config-qt # 核心包
+sudo apt install -y libkf5config-bin # 自动脚本配置工具
 
 test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依赖模块
 ```
@@ -81,7 +82,10 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 </ForApt>
 <ForPacman>
 
-    yes | sudo pacman -S fcitx5-im fcitx5-chinese-addons
+```shell
+yes | sudo pacman -S fcitx5-im fcitx5-chinese-addons # 核心包
+yes | sudo pacman -S kcm-fcitx5 # 自动脚本配置工具
+```
 
 </ForPacman>
 </PreferPkgMgr>
@@ -183,7 +187,7 @@ END
 
 ### 在 Arch Linux 中启动
 
-:::info
+:::info 执行：重启后输入法生效
 
 ```bash
 cat << END | sudo tee /etc/profile.d/fcitx5.sh > /dev/null
@@ -196,8 +200,6 @@ then
 fi
 END
 ```
-
-需要重启以生效
 
 :::
 

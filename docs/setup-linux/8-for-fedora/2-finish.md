@@ -1,13 +1,9 @@
 ---
-title: 完成 Fedora 安装
+title: 完成 Fedora 的安装
 ---
 
-安装系统前可以卸载一些不需要的捆绑应用，如 LibreOffice 以加快速度
-
-    sudo dnf remove -y libreoffice*
-
  <details className="let-details-to-gray" role="alert">
-<summary>欢迎向导中的 “第三方软件源“ 是什么？</summary>
+<summary>欢迎向导中的 “第三方软件源” 是什么？</summary>
 
   包括：
 
@@ -26,6 +22,12 @@ title: 完成 Fedora 安装
 [^2]: 若经常发生 Linux 内核故障，请看[内核问题](/docs/setup-linux/kernel#fedora)文档
 -->
 
+:::info 打开终端
+
+光标置于左上角，激活活动概览后，搜索 `terminal` 打开
+
+:::
+
 ### 调优
 
 ```shell
@@ -36,7 +38,7 @@ echo "defaultyes=1" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
 :::info 更换安全组件
 
 Fedora 内置了 RHEL 采用的 SELinux 和 firewalld 技术，
-这两项安全技术复杂繁琐。对于个人电脑，作者推荐关闭并换用 AppArmor 和 ufw
+这两项安全技术复杂繁琐。对于个人电脑，作者推荐关闭并换用 ufw
 
 ```shell
 sudo sed -i "/SELINUX/ s/=enforcing/=disabled/" /etc/sysconfig/selinux
@@ -47,6 +49,21 @@ sudo systemctl disable --now firewalld
 ```
 
 :::
+
+## Grub
+
+```shell
+# 记住上次选择的启动项
+sudo sed -i "/GRUB_DEFAULT/ s/=.*/=saved/" /etc/default/grub
+echo GRUB_SAVEDEFAULT=true | sudo tee -a /etc/default/grub
+
+# 降低等待时间为 2 秒
+sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=2/" /etc/default/grub
+```
+
+更新 Grub：
+
+    sudo update-grub
 
 ## 自动镜像源
 
@@ -84,18 +101,6 @@ sudo dnf upgrade -y # 更新系统
 
 <!-- todo:? send notify after update -->
 
-## 软件仓补充
-
-添加非自由软件仓：不同于第三方软件源，前者指如 ffmpeg 等具有版权争议软件仓
-
-```shell
-sudo dnf in -y \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf in -y \
-  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf makecache
-```
-
 :::caution 留意 [bug](https://github.com/PackageKit/PackageKit/issues/201)
 
 若 Fedora <= 35 且磁盘空间紧张且频繁卸载大型软件，
@@ -105,11 +110,15 @@ sudo dnf makecache
     sudo sed -i '/^SingleInstall/ s/=ask/=warn/' /etc/PackageKit/CommandNotFound.conf
 
 <details className="alert--warning">
-  <summary>复杂解释</summary>
+  <summary>内部技术解释</summary>
   在 Fedora 中、CommandNotFound 模块使用 PackageKit 自动安装时，不会恰当处理 DNF 依赖关系，导致包移除时无法处理依赖而有效释放磁盘空间，推荐 dnf 命令行手动安装。
 </details>
 
 :::
+
+## 使用 Zsh
+
+<p><strong><a href="/docs/devenv/zsh" target="_blank" >见文档</a></strong></p>
 
 <!--
 ### 使用 KDE
@@ -120,3 +129,15 @@ sudo dnf makecache
 
 或者推荐改用 [Fedora Spins - KDE Plasma 桌面环境版](https://spins.fedoraproject.org/zh_Hans_CN/kde/) 系统
  -->
+
+## 软件仓补充
+
+添加非自由软件仓：不同于第三方软件源，前者指如 ffmpeg 等具有版权争议软件仓
+
+```shell
+sudo dnf in -y \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf in -y \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf check-update
+```

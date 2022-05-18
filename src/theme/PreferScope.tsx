@@ -4,6 +4,7 @@ import React, {
   ReactNode,
   useCallback,
   useContext,
+  useEffect,
   useLayoutEffect,
   useMemo,
   useState,
@@ -38,6 +39,9 @@ export function PreferScope<T extends string>({
   storeKeywords,
   context,
   keywords,
+  hint,
+  triggers,
+  hideSelector,
 }: PropsWithChildren<{
   defaultValue: T;
   storeNamePrefix: string;
@@ -45,6 +49,9 @@ export function PreferScope<T extends string>({
   storeKeywords: T[];
   context: Context<T>;
   keywords: string[];
+  hint?: string;
+  triggers: Set<(value: T) => void>;
+  hideSelector?: boolean;
 }>) {
   const isBrowser = useIsBrowser();
   const [currentValue, setCurrentValue] = useState<T>(defaultValue);
@@ -67,10 +74,17 @@ export function PreferScope<T extends string>({
     }
   }, [isBrowser, gid]);
 
-  const setter = useCallback(
+  useEffect(() => {
+    triggers.add(setCurrentValue);
+    return () => {
+      triggers.delete(setCurrentValue);
+    };
+  }, []);
+
+  const _setCurrentValue = useCallback(
     (value: T) => {
       window.localStorage.setItem(gid, value);
-      setCurrentValue(value);
+      triggers.forEach((trigger) => trigger(value));
     },
     [gid]
   );
@@ -83,23 +97,26 @@ export function PreferScope<T extends string>({
       <ContextProvider
         value={{
           currentValue,
-          setCurrentValue: setter,
+          setCurrentValue: _setCurrentValue,
         }}
       >
-        <div className="pills pills--block" style={{ marginBottom: '1rem' }}>
-          {storeFlags.map(
-            (flag, i) =>
-              flag && (
-                <RadioChoice
-                  key={i}
-                  group={storeNamePrefix}
-                  value={storeKeywords[i]}
-                  label={keywords[i]}
-                  context={context}
-                />
-              )
-          )}
-        </div>
+        {!hideSelector && (
+          <div className={cs('pills', 'pills--block', st.selector)}>
+            {hint && <div className={st.hint}>{hint}</div>}
+            {storeFlags.map(
+              (flag, i) =>
+                flag && (
+                  <RadioChoice
+                    key={i}
+                    group={storeNamePrefix}
+                    value={storeKeywords[i]}
+                    label={keywords[i]}
+                    context={context}
+                  />
+                )
+            )}
+          </div>
+        )}
         {children}
       </ContextProvider>
     )

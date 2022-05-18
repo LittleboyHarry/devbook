@@ -1,6 +1,26 @@
-.choice{
-    padding: 1rem 0;
-    >input[type=radio] {
-        visibility: hidden;
+.selector{
+    margin-bottom: 1rem;
+
+    @media (max-width: 996px)  {
+        &{
+            flex-direction: row;
+        }
     }
+}
+
+%padding{
+    padding: 1rem 0;
+
+}
+
+.choice{
+    @extend %padding;
+    >input[type=radio] {
+        display: none;
+    }
+}
+
+.hint{
+    @extend %padding;
+    margin-right:1rem;
 }

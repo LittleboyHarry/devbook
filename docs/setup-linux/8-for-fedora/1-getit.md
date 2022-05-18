@@ -1,6 +1,8 @@
 ---
-title: 获取 Fedora
+title: 获取 Fedora 并安装
 ---
+
+## 下载
 
 <Container>
     <cards.FedoraWorkstation />
@@ -39,6 +41,18 @@ title: 获取 Fedora
  -->
 
 <!-- - Ubuntu 是 Debian 同构品，如无例外则，两术语等效或近似。Fedora 与 CentOS 等同理 -->
+
+## 安装
+
+见前文内容：
+
+1. [制作启动盘](../bootable)
+2. [规划硬盘分区](../part)
+3. [相关建议](../advice)
+
+安装系统前可以卸载一些不需要的捆绑应用，如 LibreOffice 以加快速度。打开终端执行：
+
+    sudo dnf remove -y libreoffice*
 
 import { Container, cards } from './oscards';
 import { HtmlA, LinkButton } from '@theme/links';

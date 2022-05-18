@@ -8,24 +8,13 @@ import GetPkg from '@theme/GetPkg';
 
 <GetPkg name="zsh" dnf apt pacman/>
 
-更改 GNOME/KDE 终端默认命令为 `/bin/zsh`：
-还可以选择自己喜欢的背景透明度、主题色调
+## 初始化配置
 
-设置为登录 Shell:
-
-    chsh -s $(which zsh)
-
-设置为 tmux 默认终端：
-
-    echo "set-option -g default-shell /bin/zsh" >> ~/.tmux.conf
-
-初始化配置，运行
-
-    zsh
-
-:::note 作者的配置
+:::note 方案一：采用作者的配置
 
     touch ~/.zshrc && nano -m ~/.zshrc
+
+粘贴一下内容
 
 ```bash
 # Lines configured by zsh-newuser-install
@@ -43,6 +32,29 @@ compinit
 ```
 
 :::
+
+:::note 方案二
+
+    zsh # 配置引导
+
+:::
+
+## 默认 Shell
+
+Level 1:
+更改 GNOME/KDE 终端默认命令为 `/bin/zsh`，
+并选择自己喜欢的背景透明度、主题色调
+
+Level 2: 为应用设置
+
+```shell
+# tmux:
+echo "set-option -g default-shell /bin/zsh" >> ~/.tmux.conf
+```
+
+Level 3: 设置为登录 Shell，这会适用于 tty
+
+    chsh -s $(which zsh)
 
 ## 调优
 
