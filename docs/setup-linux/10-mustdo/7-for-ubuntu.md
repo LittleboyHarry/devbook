@@ -48,7 +48,7 @@ sudo apt upgrade -y # 更新系统
 
 :::note 完全卸载 Snap 的方法
 
-对于 Snap 版 Firefox，请<a target="_blank" href="/docs/goodsoft/browser/edge-for-linux">先安装 Edge</a> 或选择其他浏览器代替
+对于 Snap 版 Firefox，请<a target="_blank" href="/docs/goodsoft/browser/chromium-for-linux">先安装 Edge</a> 或选择其他浏览器代替
 
 ```shell
 sudo apt autoremove --purge snapd

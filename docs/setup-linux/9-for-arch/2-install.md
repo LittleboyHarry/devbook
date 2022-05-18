@@ -24,7 +24,7 @@ showconsolefont
 
 适用于：双系统多分区、数据加密
 
-启动分区管理器，参考 <a href="./advice#手动分区" target="_blank" >前文的分区建议</a>
+启动分区管理器，参考 <a href="../part" target="_blank" >前文的分区建议</a>
 
     lsblk && cgdisk
     # 输入硬盘设备名：/dev/...
