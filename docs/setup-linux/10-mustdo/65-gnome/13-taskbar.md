@@ -15,14 +15,14 @@ cat << END | dconf load /org/gnome/shell/extensions/dash-to-panel/
 isolate-monitors=true
 isolate-workspaces=true
 panel-positions='{"0":"LEFT"}'
-panel-sizes='{"0":76}'
+panel-sizes='{"0":80}'
 dot-position='LEFT'
 dot-style-focused='DASHES'
 dot-style-unfocused='DOTS'
 dot-size=5
 trans-use-custom-opacity=true
 trans-use-dynamic-opacity=true
-appicon-padding=8
+appicon-padding=12
 appicon-margin=2
 middle-click-action='QUIT'
 shift-click-action='LAUNCH'

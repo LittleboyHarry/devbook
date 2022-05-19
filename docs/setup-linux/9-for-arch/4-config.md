@@ -11,7 +11,7 @@ sudo pacman -S reflector
 echo "-c cn" | sudo tee -a /etc/xdg/reflector/reflector.conf
 sudo systemctl restart reflector
 
-sudo pacman -Sy
+yes | sudo pacman -Sy
 ```
 
 <PreferXde gnome kde hideSelector>
@@ -33,40 +33,47 @@ sudo pacman -Sy
 
 对个人或家用设备，强烈建议配置开启
 
-    sudo pacman -S gufw
+    yes | sudo pacman -S gufw
 
 打开 gufw 激活防火墙，随后添加条目，常用的如：KDE Connect
 
 ## 安装开发工具包
 
-    yes | sudo pacman -S base-devel git
-
-## 网络问题
-
-```shell
-sudo pacman -S v2ray v2ray-domain-list-community v2ray-geoip
-paru v2raya-bin
-sudo systemctl enable v2raya --now
-```
+    sudo pacman -S base-devel git wget vi --noconfirm
 
 ## AUR 助手 yay
 
 ```bash
 yes | sudo pacman -S gcc-go
 # go 镜像站：
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.cn,direct
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn,direct
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
 
+## 网络问题
+
+```shell
+sudo pacman -S v2ray v2ray-domain-list-community v2ray-geoip
+yay v2raya-bin
+sudo systemctl enable v2raya --now
+```
+
 ## 备份工具
 
-推荐：
+推荐使用 timeshift：
 
-    yay -S cronie timeshift --noconfirm
+```shell
+yes | sudo pacman -S cronie
+sudo systemctl enable --now cronie
+
+git clone https://aur.archlinux.org/timeshift.git
+cd timeshift
+makepkg -si
+```
 
 ## 使用 Zsh
 
@@ -75,7 +82,7 @@ makepkg -si
 为找不到的命令查询可能匹配的包名
 
 ```bash
-sudo pacman -S pkgfile
+yes | sudo pacman -S pkgfile
 sudo pkgfile -u
 echo source /usr/share/doc/pkgfile/command-not-found.zsh >> ~/.zshrc
 exec zsh
@@ -93,7 +100,7 @@ sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=2/" /etc/default/grub
 
 # 自动添加其他系统启动项
 sudo pacman -S os-prober
-
+sudo sed -i '/#GRUB_DISABLE_OS_PROBER/ s/^#//' /etc/default/grub
 
 # 提交 Grub 修改
 sudo grub-mkconfig -o /boot/grub/grub.cfg

@@ -74,10 +74,11 @@ mkfs.? /dev/mapper/cryptlvm
 
 ```shell
 # 创建卷
-mkdir /mnt/btrfs && cd /mnt/btrfs
+mkdir /mnt/btrfs
+cd /mnt/btrfs
 mount /dev/mapper/cryptlvm .
-btrfs subvolume create @
-btrfs subvolume create @home
+btrfs subvol create @
+btrfs subvol create @home
 
 # 挂载
 mkdir /mnt/archinstall
@@ -86,6 +87,7 @@ mount -o relatime,compress=zstd:1,space_cache=v2,subvol=@ /dev/mapper/cryptlvm .
 cd .
 mkdir home
 mount -o relatime,compress=zstd:1,space_cache=v2,subvol=@home /dev/mapper/cryptlvm home
+umount /mnt/btrfs
 ```
 
 </details>
@@ -181,10 +183,8 @@ tar -zcvf boot.tgz .
 
 非 btrfs 文件系统，只能使用 tar 全量备份跟文件系统
 
-对于 btrfs 文件系统，使用 timeshift 备份比较简单，安装方法：
+:::note 对于 btrfs 文件系统
 
-```shell
-git clone https://aur.archlinux.org/timeshift.git
-cd timeshift
-makepkg -si
-```
+可使用更简单的 timeshift 备份，需要修改一下文件表 `/etc/fstab` 删除 `subvolid` 字段
+
+:::

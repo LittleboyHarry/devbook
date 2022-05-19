@@ -83,7 +83,8 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 <ForPacman>
 
 ```shell
-yes | sudo pacman -S fcitx5-im fcitx5-chinese-addons # 核心包
+sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm # 核心包
+
 yes | sudo pacman -S fcitx5-pinyin-zhwiki # 维基词库
 yes | sudo pacman -S kcm-fcitx5 # 自动脚本配置工具
 ```
@@ -93,18 +94,16 @@ yes | sudo pacman -S kcm-fcitx5 # 自动脚本配置工具
 
 ## 自动配置
 
-:::info 请确保启动过一次输入法后退出
-
 <details>
   <summary>
-自动配置仅考虑初始化环境。若自定义过的配置信息，请备份重置：
+本文只考虑新装输入法。备份重置的方法：
 </summary>
 
     mv ~/.config/fcitx5 backupcfg-fcitx
 
 </details>
 
-:::
+    pkill fcitx5; timeout 3s fcitx5
 
 ### 解除快捷键冲突
 

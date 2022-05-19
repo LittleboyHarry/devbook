@@ -64,15 +64,15 @@ id me
 
 安装常用开发工具
 
-    yes | sudo pacman -S base-devel git wget nano vi
+    sudo pacman -S base-devel git wget nano vi --noconfirm
 
 安装 AUR 助手 yay
 
 ```shell
 yes | sudo pacman -S gcc-go
 # go 镜像站：
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.cn,direct
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn,direct
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -82,7 +82,7 @@ makepkg -si
 为找不到的命令查询可能匹配的包名：
 
 ```bash
-sudo pacman -S pkgfile
+yes | sudo pacman -S pkgfile
 sudo pkgfile -u
 echo source /usr/share/doc/pkgfile/command-not-found.zsh >> ~/.zshrc
 exec zsh

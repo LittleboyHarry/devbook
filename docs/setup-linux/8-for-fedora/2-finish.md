@@ -28,7 +28,7 @@ title: 完成 Fedora 的安装
 
 :::
 
-### 调优
+## 调优
 
 ```shell
 # 让 dnf 回车确认安装
@@ -73,6 +73,12 @@ sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=2/" /etc/default/grub
 sudo dnf config-manager --save --setopt=fastestmirror=True
 sudo dnf makecache
 ```
+
+## 调整桌面环境
+
+import Content from '../_common/startde.md';
+
+<Content />
 
 ## 锁定内核版本
 

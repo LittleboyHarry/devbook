@@ -8,9 +8,10 @@ title: 设备适配
 
 ```bash
 sudo tlp start
+systemctl enable tlp.service --now
 
 # 可能需要禁用：
-sudo systemctl mask systemd-rfkill.service --now
+sudo systemctl mask systemd-rfkill.{service,socket} --now
 ```
 
 ## 关机等待时间过长

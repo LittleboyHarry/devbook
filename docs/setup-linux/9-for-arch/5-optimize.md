@@ -13,9 +13,9 @@ title: 优化 Arch
 ## 安装火狐浏览器
 
 ```shell
-sudo pacman -S firefox
+yes | sudo pacman -S firefox
 # 推荐插件：
-sudo pacman -S firefox-dark-reader firefox-decentraleyes firefox-ublock-origin
+yes | sudo pacman -S firefox-dark-reader firefox-decentraleyes firefox-ublock-origin
 ```
 
  <PreferXde gnome kde hideSelector>
@@ -41,6 +41,16 @@ sudo pacman -S gnome-shell-extension-appindicator
 
 </ForGnome>
 </PreferXde>
+
+## Qt 主题修改器
+
+```shell
+yes |sudo pacman -S qt5ct
+mkdir -p ~/.config/environment.d/
+echo 'QT_QPA_PLATFORMTHEME=qt5ct' > ~/.config/environment.d/use-qt5ct.conf
+```
+
+重新登录后生效
 
 ## AUR 软件推荐
 

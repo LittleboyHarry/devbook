@@ -50,7 +50,7 @@ title: 推荐扩展
   edge='https://microsoftedge.microsoft.com/addons/detail/oholpbloipjbbhlhohaebmieiiieioal'
   />
 
-- 按规则自动清理 Cookies ( 推荐搭配火狐身份容器使用 )
+- 按规则自动清理 Cookies ( 推荐搭配[火狐身份容器](https://addons.mozilla.org/zh-CN/firefox/addon/multi-account-containers/)使用 )
 
   <ExtStoreLink name="Cookie AutoDelete"
   firefox='https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/'
