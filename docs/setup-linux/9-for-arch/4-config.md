@@ -37,6 +37,37 @@ sudo pacman -Sy
 
 打开 gufw 激活防火墙，随后添加条目，常用的如：KDE Connect
 
+## 安装开发工具包
+
+    yes | sudo pacman -S base-devel git
+
+## 网络问题
+
+```shell
+sudo pacman -S v2ray v2ray-domain-list-community v2ray-geoip
+paru v2raya-bin
+sudo systemctl enable v2raya --now
+```
+
+## AUR 助手 yay
+
+```bash
+yes | sudo pacman -S gcc-go
+# go 镜像站：
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+## 备份工具
+
+推荐：
+
+    yay -S cronie timeshift --noconfirm
+
 ## 使用 Zsh
 
 <p><strong><a href="/docs/devenv/zsh" target="_blank" >说明文档</a></strong></p>
@@ -101,17 +132,6 @@ sudo locale-gen
 2. <a target="_blank" href="../mustdo/kernel">内核问题</a>
 3. <a target="_blank" href="../mustdo/device">设备问题</a>
 4. <a target="_blank" href="../mustdo/chinese">中文输入法</a>
-
-## 安装 AUR 助手
-
-推荐使用网红工具 paru：( [使用方法](https://linux.cn/article-13122-1.html) )
-
-```bash
-sudo pacman -S --needed base-devel rust
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-```
 
 import {
 PreferXde,

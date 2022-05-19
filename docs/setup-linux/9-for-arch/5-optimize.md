@@ -56,14 +56,6 @@ sudo pacman -S gnome-shell-extension-appindicator
 
       paru visual-studio-code-bin
 
-## 网络问题
-
-```shell
-paru v2raya-bin
-sudo systemctl enable v2raya --now
-sudo pacman -S v2ray v2ray-domain-list-community v2ray-geoip
-```
-
 import {
 PreferXde,
 ForGnome,

@@ -71,6 +71,22 @@ sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=2/" /etc/default/grub
 
 ```shell
 sudo dnf config-manager --save --setopt=fastestmirror=True
+sudo dnf makecache
+```
+
+## 锁定内核版本
+
+使用一段时间的 Fedora 后，如果显示、声音、键鼠、待机等硬件不出问题，
+可以锁定 Linux 内核版本，避免不必要的升级。
+
+```shell
+sudo dnf in -y 'dnf-command(versionlock)'
+sudo dnf versionlock add kernel{,-core,-headers} linux-firmware
+```
+
+## 更新系统
+
+```shell
 sudo dnf upgrade -y # 更新系统
 ```
 

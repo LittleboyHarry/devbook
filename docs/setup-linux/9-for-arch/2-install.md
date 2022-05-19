@@ -6,10 +6,20 @@ title: 使用 archinstall
 
 :::info 界面字体太小？
 
-```
+```shell
 ls /usr/share/kbd/consolefonts/ter-v*b*
 setfont ter-i24b
 showconsolefont
+```
+
+:::
+
+:::info 提升下载速度
+
+```shell
+sed -i '/#Para/ s/^#//' /etc/pacman.conf
+echo '-c cn' >>/etc/xdg/reflector/reflector.conf
+systemctl restart reflector
 ```
 
 :::
@@ -36,7 +46,7 @@ showconsolefont
 mkfs.ext4 /dev/... # boot 与数据分区通用格式
 mkfs.btrfs /dev/... # 数据分区的新格式，支持快照备份
 
-# 重置 EFI 分区并清除所有启动项，请使用 mkfs.fat /dev/...
+# 重置 EFI 分区并清除所有启动项，请使用 mkfs.vfat /dev/...
 ```
 
  <details className="let-details-to-gray">
@@ -57,15 +67,41 @@ mkfs.? /dev/mapper/cryptlvm
 
 </details>
 
-挂载分区
+ <details className="let-details-to-gray">
+<summary>timeshift 支持的 Btrfs 分区方法</summary>
 
-```bash
+假设加密的 Btrfs 分区路径为 `/dev/mapper/cryptlvm`
+
+```shell
+# 创建卷
+mkdir /mnt/btrfs && cd /mnt/btrfs
+mount /dev/mapper/cryptlvm .
+btrfs subvolume create @
+btrfs subvolume create @home
+
+# 挂载
 mkdir /mnt/archinstall
 cd /mnt/archinstall
-mount /dev/mapper/cryptlvm .
-# OR: mount /dev/... .
+mount -o relatime,compress=zstd:1,space_cache=v2,subvol=@ /dev/mapper/cryptlvm .
 cd .
+mkdir home
+mount -o relatime,compress=zstd:1,space_cache=v2,subvol=@home /dev/mapper/cryptlvm home
+```
 
+</details>
+
+ext4 分区的挂载
+
+```shell
+mkdir /mnt/archinstall
+cd /mnt/archinstall
+mount /dev/... .
+cd .
+```
+
+挂载启动分区和 EFI 分区
+
+```shell
 mkdir boot
 mount /dev/... ./boot
 
@@ -136,17 +172,19 @@ mount /dev/... ./boot/efi
 
     arch-chroot /mnt/archinstall
 
-对于 btrfs 文件系统，备份非常简单：
+备份一下启动分区：
 
 ```shell
-# 先备份一下启动分区
 cd /boot
 tar -zcvf boot.tgz .
-cd -
-
-# 利用子卷快照机制
-btrfs subvolume snapshot -r / /.bakroot
-# 恢复命令：btrfs subvolume snapshot /.bakroot /
 ```
 
-非 btrfs 文件系统，只能使用 tar 全量备份
+非 btrfs 文件系统，只能使用 tar 全量备份跟文件系统
+
+对于 btrfs 文件系统，使用 timeshift 备份比较简单，安装方法：
+
+```shell
+git clone https://aur.archlinux.org/timeshift.git
+cd timeshift
+makepkg -si
+```

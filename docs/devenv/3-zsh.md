@@ -54,7 +54,7 @@ echo "set-option -g default-shell /bin/zsh" >> ~/.tmux.conf
 
 Level 3: 设置为登录 Shell，这会适用于 tty
 
-    chsh -s $(which zsh)
+    chsh -s /bin/zsh
 
 ## 调优
 

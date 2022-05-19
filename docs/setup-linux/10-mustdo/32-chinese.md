@@ -84,6 +84,7 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 
 ```shell
 yes | sudo pacman -S fcitx5-im fcitx5-chinese-addons # 核心包
+yes | sudo pacman -S fcitx5-pinyin-zhwiki # 维基词库
 yes | sudo pacman -S kcm-fcitx5 # 自动脚本配置工具
 ```
 

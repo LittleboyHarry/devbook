@@ -37,5 +37,7 @@ import { faFingerprint } from '@fortawesome/free-solid-svg-icons';
 
 </HtmlA>
 
+[参考资料](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
+
 import { HtmlA } from '@theme/links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

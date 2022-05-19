@@ -26,7 +26,7 @@ import {
 </ForApt>
 <ForPacman>
 
-    yes | sudo pacman -S virt-manager gnome-boxes
+    sudo pacman -S virt-manager gnome-boxes qemu-emulators-full
 
 </ForPacman>
 </PreferPkgMgr>

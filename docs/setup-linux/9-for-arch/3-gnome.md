@@ -14,6 +14,10 @@ import Content from '../_common/gnome-mustdo.md';
 
 <Content />
 
+## KDE 软件推荐
+
+    yes | sudo pacman -S kate konsole dolphin yakuake
+
 import {
 PreferXde,
 ForGnome,

@@ -7,6 +7,7 @@ import {
   faPersonWalkingLuggage,
   faScrewdriverWrench,
   faLanguage,
+  faServer,
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
@@ -52,6 +53,11 @@ export function TopGrid() {
           name="摩登命令行"
           to="/docs/devenv/modern-cli/index"
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
+        />
+        <LogoCard
+          name="虚拟化"
+          to="/docs/devenv/virtual/intro"
+          logo={<FontAwesomeIcon icon={faServer} />}
         />
       </LogoCard.Container>
     </>
