@@ -58,7 +58,7 @@ sudo pacman -S wl-clipboard
 </ForPacman>
 </PreferPkgMgr>
 
-## 安装
+## 安装方法
 
 ```shell
 cd ~

@@ -65,18 +65,7 @@ Just Perfection:
 
 BaBar Task Bar:
 
-```shell
-cat << END | dconf load /org/gnome/shell/extensions/babar/
-[/]
-display-activities=true
-display-app-grid=false
-display-favorites=false
-favorites-first=true
-icon-size=38
-reduce-padding=false
-right-click=false
-END
-```
+    ./gnome/ext/4taskbar.sh
 
 <!--
 Blur my Shell:
@@ -93,15 +82,7 @@ END
 
 Night Theme Switcher:
 
-```shell
-cat << END | dconf load /org/gnome/shell/extensions/nightthemeswitcher/
-[time]
-always-enable-ondemand=true
-nightthemeswitcher-ondemand-keybinding=['']
-[gtk-variants]
-enabled=true
-END
-```
+    ./gnome/ext/4dark.sh
 
 Clipboard Indicator: ( Super + V 选择 )
 
@@ -113,17 +94,7 @@ dconf write /org/gnome/shell/extensions/clipboard-indicator/cache-only-favorites
 
 Gesture Improvements:
 
-```shell
-cat << END | dconf load /org/gnome/shell/extensions/gestureImprovements/
-[/]
-default-overview=true
-default-session-workspace=true
-touchpad-pinch-speed=2.0
-enable-alttab-gesture=false
-allow-minimize-window=true
-touchpad-speed-scale=1.25
-END
-```
+    ./gnome/ext/4gesture.sh
 
 </details>
 

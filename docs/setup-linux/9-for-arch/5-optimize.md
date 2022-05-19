@@ -12,28 +12,22 @@ title: 优化 Arch
 
 ## 安装火狐浏览器
 
-```shell
-yes | sudo pacman -S firefox
-# 推荐插件：
-yes | sudo pacman -S firefox-dark-reader firefox-decentraleyes firefox-ublock-origin
-```
+    ./arch/getfirefox.sh
 
  <PreferXde gnome kde hideSelector>
 <ForGnome>
 
-## 启用 GNOME 扩展
+## 启用 GNOME 扩展支持
 
-```shell
-git clone https://aur.archlinux.org/chrome-gnome-shell.git
-cd chrome-gnome-shell
-makepkg -si
-```
+    ./arch/aur-gnome-webext
 
 ## GNOME 推荐扩展
 
 ```shell
 sudo pacman -S gnome-shell-extension-appindicator
 ```
+
+重启生效
 
 ## GNOME 优化
 
@@ -44,11 +38,7 @@ sudo pacman -S gnome-shell-extension-appindicator
 
 ## Qt 主题修改器
 
-```shell
-yes |sudo pacman -S qt5ct
-mkdir -p ~/.config/environment.d/
-echo 'QT_QPA_PLATFORMTHEME=qt5ct' > ~/.config/environment.d/use-qt5ct.conf
-```
+    ./arch/qtingnome.sh
 
 重新登录后生效
 

@@ -7,19 +7,23 @@ title: 使用 archinstall
 :::info 界面字体太小？
 
 ```shell
+# 展示
 ls /usr/share/kbd/consolefonts/ter-v*b*
-setfont ter-i24b
 showconsolefont
+
+# 设置
+setfont ter-i24b
 ```
 
 :::
 
-:::info 提升下载速度
+:::info 改进国内下载速度
 
 ```shell
 sed -i '/#Para/ s/^#//' /etc/pacman.conf
-echo '-c cn' >>/etc/xdg/reflector/reflector.conf
+echo '-c cn' >> /etc/xdg/reflector/reflector.conf
 systemctl restart reflector
+pacman -Sy
 ```
 
 :::
@@ -34,6 +38,14 @@ systemctl restart reflector
 
 适用于：双系统多分区、数据加密
 
+推荐脚本：
+
+```shell
+yes | pacman -S git
+git clone https://gitcode.net/littleboyharry/deploy-workenv
+cd deploy-workenv/script
+```
+
 启动分区管理器，参考 <a href="../part" target="_blank" >前文的分区建议</a>
 
     lsblk && cgdisk
@@ -42,55 +54,22 @@ systemctl restart reflector
 
 格式化分区
 
-```bash
-mkfs.ext4 /dev/... # boot 与数据分区通用格式
-mkfs.btrfs /dev/... # 数据分区的新格式，支持快照备份
+    # boot 与数据分区通用格式
+    mkfs.ext4 /dev/...
 
-# 重置 EFI 分区并清除所有启动项，请使用 mkfs.vfat /dev/...
-```
+重置 EFI 分区并清除所有启动项，请使用 `mkfs.vfat /dev/...`
 
- <details className="let-details-to-gray">
-<summary>加密分区的方法</summary>
+:::info 加密分区
 
-```bash
-cryptsetup luksFormat -q /dev/...
-cryptsetup open /dev/... cryptlvm
-# cryptlvm 是约定的名称，不一定需要 LVM
+自动配置脚本：若不要加密，配置 `export noEncrypt=1`
 
-# ?: ext4 btrfs
-mkfs.? /dev/mapper/cryptlvm
-```
+    ./arch/_btrfs.sh
 
-评估其它算法的速度：`cryptsetup benchmark`
+评估各种算法的速度：`cryptsetup benchmark`
 
 更多细节和参数请见资料：[Arch Wiki](https://wiki.archlinux.org/title/Dm-crypt/Device_encryption)
 
-</details>
-
- <details className="let-details-to-gray">
-<summary>timeshift 支持的 Btrfs 分区方法</summary>
-
-假设加密的 Btrfs 分区路径为 `/dev/mapper/cryptlvm`
-
-```shell
-# 创建卷
-mkdir /mnt/btrfs
-cd /mnt/btrfs
-mount /dev/mapper/cryptlvm .
-btrfs subvol create @
-btrfs subvol create @home
-
-# 挂载
-mkdir /mnt/archinstall
-cd /mnt/archinstall
-mount -o relatime,compress=zstd:1,space_cache=v2,subvol=@ /dev/mapper/cryptlvm .
-cd .
-mkdir home
-mount -o relatime,compress=zstd:1,space_cache=v2,subvol=@home /dev/mapper/cryptlvm home
-umount /mnt/btrfs
-```
-
-</details>
+:::
 
 ext4 分区的挂载
 
@@ -104,15 +83,16 @@ cd .
 挂载启动分区和 EFI 分区
 
 ```shell
+mkdir /mnt/archinstall
+
 mkdir boot
 mount /dev/... ./boot
 
 mkdir boot/efi
 mount /dev/... ./boot/efi
-
 ```
 
-:::note [检查 GRUB 安装器 BUG](https://github.com/archlinux/archinstall/issues/1189)
+:::caution [检查 GRUB 安装器 BUG](https://github.com/archlinux/archinstall/issues/1189)
 
     nano +837 /usr/lib/python*/site-packages/archinstall/lib/installer.py
 

@@ -1,12 +1,22 @@
 ---
-title: 初始化 GNOME
+title: 完成安装
 ---
+
+重新启动机器，进入 Arch 系统
 
 :::note 打开终端的方法
 
 点击左上角 “活动” 按钮，输入 “terminal” 打开
 
 :::
+
+## 自动配置脚本
+
+```shell
+yes | pacman -S git lsb-release packagekit
+git clone https://gitcode.net/littleboyharry/deploy-workenv
+cd deploy-workenv/script
+```
 
 ## 基本配置
 

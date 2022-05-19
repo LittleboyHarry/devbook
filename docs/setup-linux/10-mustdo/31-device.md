@@ -2,17 +2,9 @@
 title: 设备适配
 ---
 
-## 笔记本省电
+## tlp 笔记本节电
 
-<GetPkg name="tlp" apt dnf pacman="tlp tlp-rdw" />
-
-```bash
-sudo tlp start
-systemctl enable tlp.service --now
-
-# 可能需要禁用：
-sudo systemctl mask systemd-rfkill.{service,socket} --now
-```
+    ./pkd-tlp.sh
 
 ## 关机等待时间过长
 
