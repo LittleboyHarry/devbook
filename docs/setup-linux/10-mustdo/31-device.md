@@ -4,7 +4,7 @@ title: 设备适配
 
 ## tlp 笔记本节电
 
-    ./pkd-tlp.sh
+    ./pkginst/tlp
 
 ## 关机等待时间过长
 

@@ -12,7 +12,7 @@ title: 优化 Arch
 
 ## 安装火狐浏览器
 
-    ./arch/getfirefox.sh
+    ./arch/getfirefox
 
  <PreferXde gnome kde hideSelector>
 <ForGnome>
@@ -38,7 +38,7 @@ sudo pacman -S gnome-shell-extension-appindicator
 
 ## Qt 主题修改器
 
-    ./arch/qtingnome.sh
+    ./arch/qtingnome
 
 重新登录后生效
 

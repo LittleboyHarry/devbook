@@ -65,7 +65,7 @@ Just Perfection:
 
 BaBar Task Bar:
 
-    ./gnome/ext/4taskbar.sh
+    ./gnome/ext/babar
 
 <!--
 Blur my Shell:
@@ -82,7 +82,7 @@ END
 
 Night Theme Switcher:
 
-    ./gnome/ext/4dark.sh
+    ./gnome/ext/autonight
 
 Clipboard Indicator: ( Super + V 选择 )
 
@@ -94,7 +94,7 @@ dconf write /org/gnome/shell/extensions/clipboard-indicator/cache-only-favorites
 
 Gesture Improvements:
 
-    ./gnome/ext/4gesture.sh
+    ./gnome/ext/bettergesture
 
 </details>
 

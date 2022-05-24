@@ -6,28 +6,28 @@ title: GNOME 程序坞
 
 Ubuntu 已内置的 GNOME 自定义调节扩展：[Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 
-`deploy-workenv` 推荐配置：
+`deployworkenv` 推荐配置：
 
 ## Ubuntu 风格
 
-    ./gnome/ext/dash/like-ubuntu.sh
+    ./gnome/ext/dockstyl/likeubuntu
 
 ## 作者偏好
 
-    ./gnome/ext/dash/recommend.sh
+    ./gnome/ext/dockstyl/recommend
 
 ## 固定在左侧
 
-    ./gnome/ext/dash/fixed2l.sh
+    ./gnome/ext/dockstyl/fixedleft
 
 ## 固定在右侧
 
-    ./gnome/ext/dash/fixed2r.sh
+    ./gnome/ext/dockstyl/fixedright
 
 ## MacOS 程序坞风格
 
-    ./gnome/ext/dash/like-mac.sh
+    ./gnome/ext/dockstyl/likemac
 
 ## 仅总览视图中显示
 
-    ./gnome/ext/dash/hide.sh
+    ./gnome/ext/dockstyl/hide

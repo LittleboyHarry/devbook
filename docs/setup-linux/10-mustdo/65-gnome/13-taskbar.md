@@ -9,7 +9,7 @@ Dash to Panel
 
  <div className="limit-code-height">
 
-    ./gnome/ext/use-taskbar.sh
+    ./gnome/ext/taskbar
 
 </div>
 

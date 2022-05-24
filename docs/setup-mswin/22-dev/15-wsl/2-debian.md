@@ -35,7 +35,7 @@ exec $SHELL
 sudo apt install -y tree unzip tig
 ```
 
-zsh, git, deploy-my-dotfiles, neovim, bat, fzf, rg, fd, pipx 等请见：
+zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
 
 <a target="_blank"
 href="/docs/devenv/intro#命令行工具">开发环境 - 命令行工具</a>

@@ -14,8 +14,8 @@ title: 完成安装
 
 ```shell
 yes | pacman -S git lsb-release packagekit
-git clone https://gitcode.net/littleboyharry/deploy-workenv
-cd deploy-workenv/script
+git clone https://gitcode.net/littleboyharry/deployworkenv
+cd deployworkenv
 ```
 
 ## 基本配置
@@ -27,7 +27,7 @@ import Content1 from '../_common/startde.md';
 
 <Content1 />
 
-<p>额外推荐：<strong><a href="/docs/devenv/zsh" target="_blank" >Zsh 与 deploy-my-dotfiles</a></strong></p>
+<p>额外推荐：<strong><a href="/docs/devenv/zsh" target="_blank" >Zsh 与 deploydotfile</a></strong></p>
 
 ## 推荐优化
 

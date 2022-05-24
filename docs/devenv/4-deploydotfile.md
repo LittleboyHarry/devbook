@@ -1,4 +1,4 @@
-<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=deploy-my-dotfiles&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=deploydotfile&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
 
 由笔者创作的综合调优的方案，涵盖 ohmyzsh 插件等其它调优的解决方案
 
@@ -62,7 +62,7 @@ sudo pacman -S wl-clipboard
 
 ```shell
 cd ~
-git clone https://github.com/LittleboyHarry/deploy-my-dotfiles
+git clone https://github.com/LittleboyHarry/deploydotfile
 
 ```
 
@@ -72,7 +72,7 @@ git clone https://github.com/LittleboyHarry/deploy-my-dotfiles
 
 ```shell
 cd ~
-git clone https://gitee.com/LittleboyHarry/deploy-my-dotfiles
+git clone https://gitcode.net/lbh/deploydotfile
 ```
 
 :::

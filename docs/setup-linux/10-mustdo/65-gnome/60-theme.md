@@ -4,9 +4,7 @@ title: GNOME 外观
 
 ## 保存样式
 
-```shell
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-```
+    ./gnome/ext/themesupport
 
 激活后可以保存样式到用户的 `~/.themes` 目录下
 

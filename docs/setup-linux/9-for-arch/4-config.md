@@ -10,7 +10,7 @@ echo 'Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch' | sudo tee -
 
 # 安装 reflector 并自动加速
 sudo pacman -S reflector
-./cn/arch-reflector.sh
+./cn/arch-reflector
 ```
 
 <PreferXde gnome kde hideSelector>
@@ -52,7 +52,7 @@ makepkg -si
 
 国内 goproxy.cn 加速：
 
-    ./cn/arch-yay.sh
+    ./cn/arch-yay
 
 ## 网络问题
 
@@ -66,7 +66,7 @@ sudo systemctl enable v2raya --now
 
 推荐使用 timeshift：
 
-    ./arch/aur-timeshift.sh
+    ./arch/aur-timeshift
 
 ## 使用 Zsh
 
@@ -75,11 +75,11 @@ sudo systemctl enable v2raya --now
 为找不到的命令查询可能匹配的包名
 
 ```shell
-./arch/betterfindcmd.sh
+./arch/betterfindcmd
 exec $SHELL
 ```
 
-## `deploy-workenv`
+## `deployworkenv`
 
 ### 调整 Grub
 
@@ -88,12 +88,12 @@ exec $SHELL
 - 自动添加其他系统启动项
 - 推荐皮肤
 
-    ./arch/bettergrub.sh
-    # 换肤：yes | ./arch-bettergrub.sh
+    ./arch/bettergrub
+    # 换肤：yes | ./arch-bettergrub
 
 ## 中文支持
 
-    ./cn/arch-locale.sh
+    ./cn/arch-locale
 
 <PreferXde gnome kde hideSelector>
 <ForGnome>随后打开“语言与区域”设置，改为中文。注销生效</ForGnome>

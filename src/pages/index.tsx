@@ -126,8 +126,8 @@ export default function Home(): JSX.Element {
               />
               <Tile
                 title="自动工具集"
-                description="deploy-my-dotfiles"
-                href="docs/devenv/deploy-my-dotfiles"
+                description="deploydotfile"
+                href="docs/devenv/deploydotfile"
                 img={
                   <FontAwesomeIcon
                     style={{ transform: 'scale(0.99)' }}

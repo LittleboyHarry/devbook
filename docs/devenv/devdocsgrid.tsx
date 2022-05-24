@@ -39,9 +39,9 @@ export function TopGrid() {
       <LogoCard.Container>
         <LogoCard
           name={
-            <span style={{ fontSize: '1.125rem' }}>deploy-my-dotfiles</span>
+            <span style={{ fontSize: '1.125rem' }}>deploydotfile</span>
           }
-          to="deploy-my-dotfiles"
+          to="deploydotfile"
           logo={
             <FontAwesomeIcon
               icon={faPersonWalkingLuggage}

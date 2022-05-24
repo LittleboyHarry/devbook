@@ -60,7 +60,7 @@ Level 3: 设置为登录 Shell，这会适用于 tty
 
 :::info 一键调优
 
-推荐使用作者编写的 deploy-my-dotfiles, 见后文
+推荐使用作者编写的 deploydotfile, 见后文
 
 :::
 

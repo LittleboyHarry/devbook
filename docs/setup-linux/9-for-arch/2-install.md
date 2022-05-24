@@ -42,8 +42,8 @@ pacman -Sy
 
 ```shell
 yes | pacman -S git
-git clone https://gitcode.net/littleboyharry/deploy-workenv
-cd deploy-workenv/script
+git clone https://gitcode.net/littleboyharry/deployworkenv
+cd deployworkenv
 ```
 
 启动分区管理器，参考 <a href="../part" target="_blank" >前文的分区建议</a>
@@ -63,7 +63,7 @@ cd deploy-workenv/script
 
 自动配置脚本：若不要加密，配置 `export noEncrypt=1`
 
-    ./arch/_btrfs.sh
+    ./arch/_btrfs
 
 评估各种算法的速度：`cryptsetup benchmark`
 

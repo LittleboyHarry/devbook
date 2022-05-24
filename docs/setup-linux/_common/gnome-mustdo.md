@@ -1,8 +1,8 @@
-`deploy-workenv` 自动部署
+`deployworkenv` 自动部署
 
 ```shell
-./gnome/optimize-cn.sh
-# 默认部署：yes | ./gnome/optimize-cn.sh
+./gnome/optimize-cn
+# 默认部署：yes | ./gnome/optimize-cn
 ```
 
 :::note 巧用触摸板调整窗口大小
@@ -30,4 +30,4 @@
 
 \*注：GNOME 42 已移除 `gnome-screenshot` 并强化了 `PrtScr` 截图键的功能、支持录屏
 
-    ./gnome/winkey.sh
+    ./gnome/winkey
