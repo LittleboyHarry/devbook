@@ -29,6 +29,8 @@ title: VSC 配置
 "files.trimTrailingWhitespace": true,
 "editor.formatOnSaveMode": "modificationsIfAvailable",
 "editor.formatOnSave": true,
+// 自动换行
+"editor.wordWrap": "bounded",
 ```
 
 :::note 如果你在 Linux 中修改过键盘映射
