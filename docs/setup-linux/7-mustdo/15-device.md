@@ -2,15 +2,15 @@
 title: 设备适配
 ---
 
-## tlp 笔记本节电
-
-    ./pkginst/tlp
-
 ## 关机等待时间过长
 
 [改 90s 为 10s 的命令](https://zhuanlan.zhihu.com/p/256481066):
 
     sudo sed -i '/DefaultTimeoutStopSec/{s/#//;s/=90s/=10s/}' /etc/systemd/system.conf
+
+## tlp 笔记本节电
+
+    pkginst/tlp
 
 <!--
 ## AppImage 集成

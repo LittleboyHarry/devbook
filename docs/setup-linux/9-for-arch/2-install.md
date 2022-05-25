@@ -17,14 +17,22 @@ setfont ter-i24b
 
 :::
 
-:::info 改进国内下载速度
+:::info 作者推荐脚本
 
 ```shell
-sed -i '/#Para/ s/^#//' /etc/pacman.conf
-echo '-c cn' >> /etc/xdg/reflector/reflector.conf
-systemctl restart reflector
-pacman -Sy
+curl -L https://gitcode.net/lbh/dwe/-/archive/main/dwe-main.tar.gz | tar xz --strip 1
+# 上游版：
+# curl -L https://github.com/LittleboyHarry/deployworkenv/tarball/main | tar xz --strip 1
+
+# 审查代码 ( :n 查看下一文件 )
+less archinst/*
 ```
+
+:::
+
+:::info 改进国内下载速度
+
+    cn/arch-faster
 
 :::
 
@@ -37,14 +45,6 @@ pacman -Sy
 ## 手动安装
 
 适用于：双系统多分区、数据加密
-
-推荐脚本：
-
-```shell
-yes | pacman -S git
-git clone https://gitcode.net/littleboyharry/deployworkenv
-cd deployworkenv
-```
 
 启动分区管理器，参考 <a href="../part" target="_blank" >前文的分区建议</a>
 
@@ -63,7 +63,7 @@ cd deployworkenv
 
 自动配置脚本：若不要加密，配置 `export noEncrypt=1`
 
-    ./arch/_btrfs
+    archinst/makebtrfs
 
 评估各种算法的速度：`cryptsetup benchmark`
 
@@ -71,38 +71,27 @@ cd deployworkenv
 
 :::
 
-ext4 分区的挂载
+挂载分区
 
-```shell
-mkdir /mnt/archinstall
-cd /mnt/archinstall
-mount /dev/... .
-cd .
-```
-
-挂载启动分区和 EFI 分区
-
-```shell
-mkdir /mnt/archinstall
-
-mkdir boot
-mount /dev/... ./boot
-
-mkdir boot/efi
-mount /dev/... ./boot/efi
-```
+    archinst/mount
 
 :::caution [检查 GRUB 安装器 BUG](https://github.com/archlinux/archinstall/issues/1189)
 
-    nano +837 /usr/lib/python*/site-packages/archinstall/lib/installer.py
-
-`--efi-directory=/boot` 改为 `--efi-directory=/boot/efi`
+    archinst/fixbug
 
 :::
 
+:::info 安装
+
+检查分区挂载点，确保 EFI 分区、启动分区、根分区已挂载
+
+    mount | grep /mnt
+
 开始安装
 
-    archinstall --script swiss --mode only_os
+    archinst/start
+
+:::
 
 ## 推荐的选项配置
 
@@ -138,11 +127,15 @@ mount /dev/... ./boot/efi
 
    选择 `linux-lts`, 若新设备不兼容则改用 linux (最新版)
 
-9. **Configure network**
+9. **Additional packages to install**
 
-   选择 `NetworkManager`，用于图形化系统
+   对需要防火墙的个人或家用设备，建议填入 ufw ( 或图形化版 gufw )
 
-10. **Select timezone**
+10. **Configure network**
+
+    选择 `NetworkManager`，用于图形化系统
+
+11. **Select timezone**
 
     搜索 `hai` 选择 Asia/Shanghai
 
@@ -150,21 +143,13 @@ mount /dev/... ./boot/efi
 
 ## 备份系统
 
-安装完成后，切入新系统
+安装完成后，不要进入子系统。执行：
 
-    arch-chroot /mnt/archinstall
+    archinst/postfix
 
-备份一下启动分区：
+作用：
 
-```shell
-cd /boot
-tar -zcvf boot.tgz .
-```
+- 备份 /boot 启动分区到 boot.tgz
+- 为 btrfs 调整以支持 timeshift
 
-非 btrfs 文件系统，只能使用 tar 全量备份跟文件系统
-
-:::note 对于 btrfs 文件系统
-
-可使用更简单的 timeshift 备份，需要修改一下文件表 `/etc/fstab` 删除 `subvolid` 字段
-
-:::
+对非 btrfs 文件系统，想要备份，只能使用 tar 全量备份根文件系统

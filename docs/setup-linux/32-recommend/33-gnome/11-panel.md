@@ -27,7 +27,7 @@ END
 
 :::note 非 Ubuntu 系统需要显示的[托盘图标](https://extensions.gnome.org/extension/615/appindicator-support/)
 
-    ./gnome/ext/apptray
+    gnome/ext/apptray
 
 :::
 
@@ -36,7 +36,7 @@ END
 从二级菜单中移出的扩展：
 [Bring Out Submenu Of Power Off Logout Button](https://extensions.gnome.org/extension/2917/bring-out-submenu-of-power-offlogout-button/)
 
-    ./gnome/ext/showsysbtn
+    gnome/ext/showsysbtn
 
 :::
 
@@ -45,7 +45,7 @@ END
 [Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
 
 
-    ./gnome/ext/showplaces
+    gnome/ext/showplaces
 
 :::
 
@@ -54,7 +54,7 @@ END
 [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 可调各种细节，推荐配置：
 
-    ./gnome-justopti
+    cn/gnome-justopti
 
 :::
 
@@ -72,7 +72,7 @@ END
 - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)，
 - （可选）热区强化 [Custom Hot Corners Extended](https://extensions.gnome.org/extension/4167/custom-hot-corners-extended/)
 
-    ./gnome/ext/bottompanel
+    gnome/ext/bottompanel
 
 :::note 置于底部的缺点
 
@@ -83,7 +83,7 @@ END
  <details className="let-details-to-gray">
 <summary>恢复方法</summary>
 
-    ./gnome/ext/bottompanel-recover
+    gnome/ext/bottompanel-recover
 
 </details>
 

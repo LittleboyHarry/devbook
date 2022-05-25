@@ -82,7 +82,7 @@ git clone https://gitcode.net/lbh/deploydotfile
 模块部署：
 
 ```
-cd ~/deploy-my-dotfiles
+cd ~/deploydotfile
 ./deploy modules/zsh/
 exec zsh
 ```
@@ -90,7 +90,7 @@ exec zsh
 :::note 国服部署渠道
 
 ```shell
-cd ~/deploy-my-dotfiles
+cd ~/deploydotfile
 ./deploy modules/zsh/ atmainland
 exec zsh
 ```
@@ -103,7 +103,7 @@ exec zsh
 
 推荐使用 steeef 主题
 
-    echo 'source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme' >> ~/.zshrc
+    echo 'source ~/.deploydotfile/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme' >> ~/.zshrc
     exec zsh
 
 :::note 常用命令行缩写集
@@ -111,7 +111,7 @@ exec zsh
 ohmyzsh 社区提供，仅作[参考](https://gitee.com/mirrors/ohmyzsh/blob/master/plugins/common-aliases/README.md)。
 请考虑是否使用？
 
-    echo 'source ~/.deploy-my-dotfiles/zsh-plugins/ohmyzsh/plugins/common-aliases/common-aliases.plugin.zsh' >> ~/.zshrc
+    echo 'source ~/.deploydotfile/zsh-plugins/ohmyzsh/plugins/common-aliases/common-aliases.plugin.zsh' >> ~/.zshrc
     exec zsh
 
 :::

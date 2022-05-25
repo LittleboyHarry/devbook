@@ -2,41 +2,6 @@
 title: 对于双系统
 ---
 
-:::caution 多系统的卸载方法
-
-卸载 GPT/UEFI 的 Linux 系统，满足条件为：
-
-- EFI 分区下的相关文件夹
-- EFI 启动项
-- grub 引导分区
-- Linux 相关数据分区
-
-如果还用了 rEFInd 启动器, 请注意修改配置或删除
-
-Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：
-（ 仅管理员身份可操作该分区 ）
-
-    mountvol x: /s
-
- <details className="alert--warning">
-<summary>Linux 下 efibootmgr 命令用法</summary>
-
-列出启动顺序：
-
-    efibootmgr
-
-调整启动顺序
-
-    sudo efibootmgr -o 1,2,3,...
-
-删除启动项：
-
-    sudo efibootmgr -b <id> -B
-
-</details>
-
-:::
-
 ## 注意事项
 
 - 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/setup-mswin/first-run#双系统" target="_blank" >详情方法</a>
@@ -68,6 +33,40 @@ Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指
 :::note 需要引导苹果操作系统？
 
 推荐使用 [rEFInd](/docs/manual/win/refind) 引导器
+
+:::
+
+## 多系统的卸载方法
+
+卸载 GPT/UEFI 的 Linux 系统，满足条件为：
+
+- EFI 分区下的相关文件夹
+- EFI 启动项
+- grub 引导分区
+- Linux 相关数据分区
+
+如果还用了 rEFInd 启动器, 请注意修改配置或删除
+
+Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：
+（ 仅管理员身份可操作该分区 ）
+
+    mountvol x: /s
+
+:::note 命令行用法
+
+Linux 下 efibootmgr 使用
+
+- 列出启动顺序
+
+      efibootmgr
+
+- 调整启动顺序
+
+      sudo efibootmgr -o 1,2,3,...
+
+- 删除启动项
+
+      sudo efibootmgr -b <id> -B
 
 :::
 

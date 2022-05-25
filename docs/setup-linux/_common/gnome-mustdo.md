@@ -1,9 +1,22 @@
 `deployworkenv` 自动部署
 
 ```shell
-./gnome/optimize-cn
-# 默认部署：yes | ./gnome/optimize-cn
+gnome/optimize
+# 默认部署：yes | gnome/optimize
 ```
+
+内容翻译：
+
+1. 激活触摸板轻触点击
+2. 显示最小最大化窗口按钮
+3. 跳过 60s 关机前确认
+4. 按下键盘电源键关机
+5. 允许 `Super + 右键` 拖拽更改窗口大小
+6. 限制应用切换器作用于当前工作区
+7. 关闭干扰的字符搜索支持
+8. `Super + D` 键显示桌面
+9. 使用树视图的任务管理器
+10. 强化同应用窗口切换 Alt + \` 键
 
 :::note 巧用触摸板调整窗口大小
 
@@ -21,7 +34,6 @@
 
 | 作用       | 命令                           | 按键              |
 | ---------- | ------------------------------ | ----------------- |
-| 打开终端   | gnome-terminal                 | Super + X         |
 | 文件管理器 | nautilus                       | Super + E         |
 | 设置       | gnome-control-center           | Super + I         |
 | 截图 \*    | gnome-screenshot --interactive | Super + Shift + S |
@@ -30,4 +42,4 @@
 
 \*注：GNOME 42 已移除 `gnome-screenshot` 并强化了 `PrtScr` 截图键的功能、支持录屏
 
-    ./gnome/winkey
+    gnome/addkeymap

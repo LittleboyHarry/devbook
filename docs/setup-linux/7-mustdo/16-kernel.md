@@ -50,7 +50,7 @@ ls /boot/vmlinuz-*
 sudo grubby --set-default <kernel_path>
 ```
 
-[详见](https://ask.fedoraproject.org/t/fedora-new-kernel-not-working-after-dnf-upgrade-refresh/2222/3)
+[详见这里](https://ask.fedoraproject.org/t/fedora-new-kernel-not-working-after-dnf-upgrade-refresh/2222/3)
 
 ```shell
 # 列出历史版本

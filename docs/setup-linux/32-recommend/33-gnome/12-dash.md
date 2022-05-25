@@ -10,24 +10,24 @@ Ubuntu 已内置的 GNOME 自定义调节扩展：[Dash to Dock](https://extensi
 
 ## Ubuntu 风格
 
-    ./gnome/ext/dockstyl/likeubuntu
+    gnome/ext/dockstyl/likeubuntu
 
 ## 作者偏好
 
-    ./gnome/ext/dockstyl/recommend
+    gnome/ext/dockstyl/recommend
 
 ## 固定在左侧
 
-    ./gnome/ext/dockstyl/fixedleft
+    gnome/ext/dockstyl/fixedleft
 
 ## 固定在右侧
 
-    ./gnome/ext/dockstyl/fixedright
+    gnome/ext/dockstyl/fixedright
 
 ## MacOS 程序坞风格
 
-    ./gnome/ext/dockstyl/likemac
+    gnome/ext/dockstyl/likemac
 
 ## 仅总览视图中显示
 
-    ./gnome/ext/dockstyl/hide
+    gnome/ext/dockstyl/hide
