@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
-@import "../css/utils";
+@import '../css/utils';
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -23,12 +23,35 @@
   justify-content: center;
 }
 
-.session {
+.session1 {
   display: flex;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
   background: var(--ifm-color-emphasis-100);
+  & > h2 {
+    text-align: center;
+  }
+}
+
+.container {
+  & > h2 {
+    text-align: center;
+  }
+}
+
+.autotools {
+  list-style-type: none;
+  text-align: center;
+  > li {
+    margin: 1rem;
+    width: 31vw;
+    font-size: 1.62rem;
+    display: inline-block;
+    > a {
+      display: block;
+    }
+  }
 }
 
 .tileList {
@@ -61,7 +84,7 @@
   hyphens: auto;
   border-radius: 7px;
 
-  >a {
+  > a {
     height: 100%;
     width: 100%;
     padding: 20px 15px;
@@ -75,22 +98,23 @@
     }
   }
 
-    >a {
+  > a {
     text-decoration: none;
 
-    >img,
-      >svg {
+    > img,
+    > svg {
       width: 64px;
       height: 64px;
       color: var(--ifm-color-emphasis-800);
       margin-bottom: 0.7em;
-      filter: drop-shadow(0 1.3px 1.6px rgba(0, 0, 0, 0.25)) drop-shadow(0 6.4px 11.2px rgba(0, 0, 0, 0.04));
+      filter: drop-shadow(0 1.3px 1.6px rgba(0, 0, 0, 0.25))
+        drop-shadow(0 6.4px 11.2px rgba(0, 0, 0, 0.04));
     }
   }
 }
 
 .tileLabel {
-  >b {
+  > b {
     color: var(--ifm-font-color-base);
     align-items: center;
     font-size: 1.2em;
@@ -102,7 +126,7 @@
     justify-content: center;
   }
 
-    >small {
+  > small {
     font-size: 16px;
     color: gray;
     display: -webkit-inline-box;
@@ -111,6 +135,11 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
   }
+}
+
+.session2 {
+  padding: 2rem 0;
+  width: 100%;
 }
 
 .features {

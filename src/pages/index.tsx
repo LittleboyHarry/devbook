@@ -65,9 +65,32 @@ export default function Home(): JSX.Element {
     <Layout description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
-        <section className={st.session}>
-          <div className="container">
-            <h2 style={{ textAlign: 'center' }}>涵盖的内容</h2>
+        <section className={st.session1}>
+          <div className={cs('container', st.container)}>
+            <h2>
+              自动工具集 &nbsp;
+              <FontAwesomeIcon
+                style={{ transform: 'scale(0.99)' }}
+                icon={faPersonWalkingLuggage}
+              />
+            </h2>
+            <ul className={st.autotools}>
+              <li>
+                <a href="docs/devenv/deploydotfile">deploydotfile</a>
+              </li>
+              <li>
+                <a href="docs/devenv/deployworkenv">deployworkenv</a>
+              </li>
+            </ul>
+            {/*
+              <Tile
+                title="自动工具集"
+                description="deploydotfile"
+                href=
+                img={
+                }
+              /> */}
+            <h2>涵盖的内容</h2>
             <ul className={st.tileList}>
               <Tile
                 title="下载发行版"
@@ -124,28 +147,12 @@ export default function Home(): JSX.Element {
                 href="docs/devenv/modern-cli/index"
                 img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
               />
-              <Tile
-                title="自动工具集"
-                description="deploydotfile"
-                href="docs/devenv/deploydotfile"
-                img={
-                  <FontAwesomeIcon
-                    style={{ transform: 'scale(0.99)' }}
-                    icon={faPersonWalkingLuggage}
-                  />
-                }
-              />
             </ul>
           </div>
         </section>
-        <section
-          style={{
-            padding: '2rem 0',
-            width: '100%',
-          }}
-        >
-          <div className="container">
-            <h2 style={{ textAlign: 'center' }}>使用方法</h2>
+        <section className={st.session2}>
+          <div className={cs('container', st.container)}>
+            <h2>使用方法</h2>
             <div style={{ margin: '2rem auto', width: 'fit-content' }}>
               <div style={{ margin: '2rem auto', width: 'fit-content' }}>
                 <h3 style={{ fontWeight: 'normal' }}>复制代码的方法：</h3>
