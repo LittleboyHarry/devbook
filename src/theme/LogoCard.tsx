@@ -42,5 +42,5 @@ export default function LogoCard({
 }
 
 LogoCard.Container = ({ children }: { children: ReactNode }) => {
-  return <div style={{ display: 'flex', flexWrap: 'wrap' }}>{children}</div>;
+  return <div className={st.container}>{children}</div>;
 };

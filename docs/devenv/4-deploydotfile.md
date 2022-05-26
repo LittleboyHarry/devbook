@@ -17,6 +17,7 @@ ForPacman,
 ```shell
 sudo apt install -y git python-is-python3
 ```
+
 </ForApt><ForDnf>
 
 ```shell
@@ -41,6 +42,7 @@ if dpkg -l libwayland-client0 &> /dev/null; then
   sudo apt install -y wl-clipboard
 fi
 ```
+
 </ForApt><ForDnf>
 
 ```shell
@@ -106,15 +108,16 @@ exec zsh
     echo 'source ~/.deploydotfile/zsh-plugins/ohmyzsh/themes/steeef.zsh-theme' >> ~/.zshrc
     exec zsh
 
-:::note 常用命令行缩写集
+<details className="let-details-to-gray">
+<summary>使用 ohmyzsh 常用命令行缩写集吗？</summary>
 
-ohmyzsh 社区提供，仅作[参考](https://gitee.com/mirrors/ohmyzsh/blob/master/plugins/common-aliases/README.md)。
-请考虑是否使用？
+[由社区提供](https://gitee.com/mirrors/ohmyzsh/blob/master/plugins/common-aliases/README.md)
+，请考虑是否使用。
 
     echo 'source ~/.deploydotfile/zsh-plugins/ohmyzsh/plugins/common-aliases/common-aliases.plugin.zsh' >> ~/.zshrc
     exec zsh
 
-:::
+</details>
 
 :::note 其他主题推荐
 

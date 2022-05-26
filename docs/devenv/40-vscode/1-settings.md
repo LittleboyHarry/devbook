@@ -31,6 +31,8 @@ title: VSC 配置
 "editor.formatOnSave": true,
 // 自动换行
 "editor.wordWrap": "bounded",
+// 样式
+"terminal.integrated.fontSize": 16,
 ```
 
 :::note 如果你在 Linux 中修改过键盘映射

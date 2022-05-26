@@ -18,8 +18,8 @@ import {MstoreLink} from '@theme/links';
 要想从国内镜像源加速 apt 获取：
 
 1. 获取缺失的软件包：
-   [可信证书](https://packages.debian.org/search?keywords=ca-certificates&exact=1)
-   及 [openssl](https://packages.debian.org/search?keywords=openssl&exact=1)
+   [可信证书](https://packages.debian.org/stable/all/ca-certificates/download)
+   及 [openssl](https://packages.debian.org/stable/amd64/openssl/download)
 2. ```shell
    wsl sudo apt install -y ./ca-certificates_*.deb ./openssl_*.deb
    ```
@@ -28,31 +28,41 @@ import {MstoreLink} from '@theme/links';
 
 </details>
 
+获取系统镜像：( 查看[国内 Arch 镜像站](https://mirrorz.org/os/archlinux) )
+
 ```shell
+ARCH_SRC=https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest
+
 sudo apt install -y wget fakeroot
 cd `mktemp -d`
 wget https://geo.mirror.pkgbuild.com/iso/latest/sha256sums.txt
 sed -ni '/gz$/p' sha256sums.txt
-wget -c "https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/$(tr -s ' ' < sha256sums.txt | cut -d' ' -f2)"
+wget -c "$ARCH_SRC/$(tr -s ' ' < sha256sums.txt | cut -d' ' -f2)"
 sha256sum -c sha256sums.txt
 ```
 
 下载比检验成功后，开始制作并安装：
 
 ```shell
+MIRROR='https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch'
+
 fakeroot tar -zxf archlinux-bootstrap-*-x86_64.tar.gz
 cd root.x86_64
-# 写入镜像站
-echo 'Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch' | sudo tee -a etc/pacman.d/mirrorlist
+echo "Server = $MIRROR" | sudo tee -a etc/pacman.d/mirrorlist
+vi + etc/pacman.d/mirrorlist
 fakeroot tar -czf ../wsl-arch.tar.gz *
 cd ..
+[ -x "$(command -v explorer.exe)" ] && explorer.exe .
+```
 
-# 安装：
-if [ -x "$(command -v wsl.exe)" ]; then
-    powershell.exe -c 'wsl --import arch $(mkdir $env:USERPROFILE\wsl-arch) wsl-arch.tar.gz'
-    wsl --setdefault arch
-    explorer.exe .
-fi
+在 WSL Debian 中安装
+
+```shell
+NAME=arch
+DIR='$env:USERPROFILE\wsl-arch'
+
+powershell.exe -c 'wsl --import '$NAME' $(mkdir -f '$DIR') wsl-arch.tar.gz'
+wsl.exe --setdefault "$NAME"
 ```
 
 进入系统，初始化：
@@ -60,15 +70,26 @@ fi
     wsl
 
 ```shell
+# 使用国内镜像
+CMIRROR=1
+
 pacman-key --init
 pacman-key --populate archlinux
 
-# 切换镜像并更新系统
+# 智能选镜像，快速更新系统
 yes | pacman -Sy reflector
-(cd /etc/pacman.d;cp -n mirrorlist mirrorlist.old;reflector -c cn -p https --sort rate -l 5 --save mirrorlist)
-sed -i '/#Para/ s/^#//' /etc/pacman.conf
+pushd /etc/pacman.d
+cp -n mirrorlist mirrorlist.old
+if [[ -z ${CMIRROR} ]]; then
+    reflector --sort rate -l 8 --save mirrorlist
+else
+    reflector -c cn -p https --sort rate -l 5 --save mirrorlist
+fi
+popd > /dev/null
+sed -i '/^#ParallelDownloads/ s/^#//' /etc/pacman.conf
 yes | pacman -Syyu
 
+# 语言问题
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 
@@ -80,7 +101,7 @@ passwd me
 id me
 ```
 
-然后打开注册表管理器，编辑：
+然后在 `regedit` 注册表编辑器中转到：
 
     HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss
 
@@ -89,9 +110,11 @@ id me
 安装常用开发工具
 
 ```shell
-sudo pacman -S base-devel wget nano vi git tig unzip tree --noconfirm
-yes | sudo pacman -S dos2unix # 转换 Windows 格式的换行符
+pacman -S base-devel wget nano vi git tig unzip tree --noconfirm
+yes | pacman -S dos2unix # 转换 Windows 格式的换行符
 ```
+
+`Ctrl + D` 退出 Arch，打开 WSL 重新以普通用户方式登陆
 
 zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
 
@@ -99,20 +122,27 @@ zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
   开发环境 - 命令行工具
 </a>
 
+<br/>
+
 安装 AUR 助手 yay
 
 ```shell
 yes | sudo pacman -S gcc-go
-# go 镜像站：
-export GO111MODULE=on
-export GOPROXY=https://goproxy.cn,direct
 
+if [[ -v CMIRROR ]]; then
+    # 使用 goproxy.cn 镜像站
+    export GO111MODULE=on
+    export GOPROXY=https://goproxy.cn,direct
+fi
+
+cd ~
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+yay --save --editmenu
 ```
 
-为找不到的命令查询可能匹配的包名：
+在 zsh 找不到的命令时，输出建议的提供包：
 
 ```bash
 yes | sudo pacman -S pkgfile

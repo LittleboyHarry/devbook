@@ -1,15 +1,39 @@
+@import '../css/utils';
+
+$size: 180px;
+$gap: 8px;
+
 @mixin center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include for-phone-only {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $gap * 2;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
+
 .card {
   color: inherit;
 
-  width: 180px;
-  height: 180px;
-  margin: 8px;
+  width: $size;
+  height: $size;
+  margin: $gap;
+
+  @include for-phone-only {
+    margin: 0;
+    width: auto;
+    height: calc(50vw - 16px - $gap);
+  }
 
   @include center;
 

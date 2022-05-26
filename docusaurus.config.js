@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '开发手册',
+  title: '开发指南',
   tagline: '写给程序员的开发文档',
   url: 'https://devbook.littleboyharry.me/',
   baseUrl: '/',
@@ -57,7 +57,7 @@ const config = {
           ],
         },
         gtag: {
-          trackingID: 'G-6LEX3L7TYD',
+          trackingID: 'G-TNSZ2YVE4G',
         },
       }),
     ],

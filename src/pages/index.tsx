@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
         <section className={st.session1}>
           <div className={cs('container', st.container)}>
             <h2>
-              自动工具集 &nbsp;
+              自动部署工具 &nbsp;
               <FontAwesomeIcon
                 style={{ transform: 'scale(0.99)' }}
                 icon={faPersonWalkingLuggage}
@@ -76,10 +76,14 @@ export default function Home(): JSX.Element {
             </h2>
             <ul className={st.autotools}>
               <li>
-                <a href="docs/devenv/deploydotfile">deploydotfile</a>
+                <a title="deploydotfile" href="docs/devenv/deploydotfile">
+                  Deploy Dotfile
+                </a>
               </li>
               <li>
-                <a href="docs/devenv/deployworkenv">deployworkenv</a>
+                <a title="deployworkenv" href="docs/devenv/deployworkenv">
+                  Deploy Work Env
+                </a>
               </li>
             </ul>
             <h2>涵盖的内容</h2>
@@ -165,7 +169,7 @@ export default function Home(): JSX.Element {
               className="button button--secondary button--lg"
               to="docs/setup-linux/require"
             >
-              开始 🚲
+              开始&nbsp;🚀
             </Link>
           </div>
         </section>

@@ -153,6 +153,7 @@ exec $SHELL
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+yay --editmenu --save
 ```
 
 国内 goproxy.cn 加速：

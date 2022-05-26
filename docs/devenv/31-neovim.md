@@ -13,9 +13,9 @@ import GetPkg from '@theme/GetPkg';
 作为首选文本编辑器
 
 ```shell
-echo "export EDITOR='vim'" | tee -a ~/.zshrc ~/.bashrc
+echo "export EDITOR='nvim'" | tee -a ~/.zshrc ~/.bashrc
 git config --global core.editor nvim
-echo export SYSTEMD_EDITOR=nvim | tee -a ~/.bashrc ~/.zshrc
+# echo export SYSTEMD_EDITOR=nvim | tee -a ~/.bashrc ~/.zshrc
 ```
 
 ## 自动配置
