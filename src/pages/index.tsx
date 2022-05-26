@@ -82,14 +82,6 @@ export default function Home(): JSX.Element {
                 <a href="docs/devenv/deployworkenv">deployworkenv</a>
               </li>
             </ul>
-            {/*
-              <Tile
-                title="自动工具集"
-                description="deploydotfile"
-                href=
-                img={
-                }
-              /> */}
             <h2>涵盖的内容</h2>
             <ul className={st.tileList}>
               <Tile

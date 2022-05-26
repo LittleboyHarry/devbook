@@ -88,7 +88,7 @@ cd -
 
 使用：启动参数修改方法，即编辑可执行文件
 
-    nano +m ~/.local/bin/msedge
+    nano -m ~/.local/bin/msedge
 
 格式：不同的参数间以空格分开、可以 ` \` 换行、注意 bash 的解析格式
 
@@ -152,7 +152,6 @@ cd -
 
 3. `Actions=...` 以及下方 `[Desktop Action *]` 描述了动作菜单信息，无需可删
 
-
 ## GPU 图形处理加速
 
 Win Mac 默认已经激活优化特性，但 Linux 需要手动开启：
@@ -181,7 +180,7 @@ about:flags/#enable-zero-copy
 
 import GetPkg from '@theme/GetPkg';
 import {
-  PreferPkgMgr,
-  ForApt,
-  ForDnf,
+PreferPkgMgr,
+ForApt,
+ForDnf,
 } from '@theme/PreferPkgMgr'

@@ -10,7 +10,7 @@ libvirt-QEMU/KVM 虚拟化平台在 Linux 上的[安装方法](/docs/setup-linux
 :::
 
 云技术 [cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html) 视频介绍：
-[去bilibili观看](https://www.bilibili.com/video/BV1Cf4y1U7pQ?p=3&zw)后续分集
+[去 bilibili 观看](https://www.bilibili.com/video/BV1Cf4y1U7pQ?p=3&zw)后续分集
 
 <BPlayer id="BV1Cf4y1U7pQ" page="2" />
 
@@ -23,15 +23,22 @@ import BPlayer from '@theme/BPlayer';
 
  <div className="no-link-underline" >
 
-- **[Debian 云镜像](https://mirrorz.org/list/debian-cdimage)**，例如：
+- **[Arch 云镜像](https://mirrorz.org/list/archlinux)**，例如：
 
-  https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-genericcloud-amd64.qcow2
+  ```shell
+  wget -c https://mirrors.tuna.tsinghua.edu.cn/archlinux/images/latest/Arch-Linux-x86_64-cloudimg.qcow2
+  wget https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qcow2.SHA256
+  sed -i 's/cloudimg-.*qcow2/cloudimg.qcow2/' *.SHA256
+  sha256sum -c *.SHA256
+  ```
+
 - **[Ubuntu 云镜像](https://mirrorz.org/list/ubuntu-cloud-images)**，例如：
 
   https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/jammy/current/jammy-server-cloudimg-amd64-disk-kvm.img
-- **[Arch 云镜像](https://mirrorz.org/list/archlinux)**，例如：
 
-  https://mirrors.tuna.tsinghua.edu.cn/archlinux/images/latest/Arch-Linux-x86_64-cloudimg.qcow2
+- **[Debian 云镜像](https://mirrorz.org/list/debian-cdimage)**，例如：
+
+  https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-genericcloud-amd64.qcow2
 
 </div>
 
@@ -41,7 +48,7 @@ import BPlayer from '@theme/BPlayer';
 
 <GetPkg name="cloud-image-utils cloud-init" apt pacman/>
 
-本文以 debian11 安装为例
+本文以 Arch Linux 安装为例
 
 ## 配置虚拟机
 
@@ -54,18 +61,19 @@ import BPlayer from '@theme/BPlayer';
 配置虚拟机参数：
 
 ```shell
-cat << END > ./vmcfg
-VM_OS=debian11
-VM_NAME=debian-master
-IMG_BASE=debian-11-genericcloud-amd64.qcow2
-IMG_SIZE=64G
+cat << END > vmcfg
+VM_OS=archlinux
+VM_NAME=arch-master
+IMG_BASE=Arch-Linux-x86_64-cloudimg.qcow2
+IMG_SIZE=16G
 END
+nano -m vmcfg
 ```
 
 默认的网络拓扑：（ netplan 格式 ）
 
 ```shell
-cat << END > ./netcfg
+cat << END > netcfg
 version: 2
 ethernets:
     enp1s0:
@@ -80,7 +88,8 @@ END
 
 [^about_user-data]: [DigitalOcean 帮助](https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup)
 
-```xml
+```shell
+cat << END > user-data
 #cloud-config
 hostname: <your_vmname>
 chpasswd:
@@ -89,16 +98,18 @@ chpasswd:
     <your_user>:<your_pass>
 users:
   - name: <your_name>
-    ssh-authorized-keys:
-      - <your_key>
+    #ssh-authorized-keys:
+    #  - <your_key>
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     groups: sudo
     shell: /bin/bash
+END
+nano -m user-data
 ```
 
 镜像加速与更新：
 
-把 <a href="/docs/setup-linux/for-debian#国内镜像软件仓" target="_blank">Debian 镜像设置</a> 按 yaml 数组格式
+参考镜像设置： <a href="https://gitcode.net/lbh/dwe/-/raw/main/cn/arch-faster" target="_blank">Debian 镜像设置</a> 按 yaml 数组格式
 添加到 `user-data` 的 `runcmd:` 内，系统初始化时会自动执行
 
 :::note 校验代码正确性
@@ -110,7 +121,7 @@ users:
 ### 生成虚拟机
 
 ```shell
-source ./vmcfg
+source vmcfg
 
 # 生成自配置虚拟光盘
 cloud-localds -N netcfg user-data.img user-data
@@ -123,8 +134,8 @@ virt-install --connect qemu:///session \
   -n "$VM_NAME" --osinfo=$VM_OS \
   --import --disk "$VM_NAME.qcow2" \
   --import --disk user-data.img,format=raw,readonly=on \
-  -w user -w bridge=virbr0 \
-  --graphics none # 注：Arch 不支持
+  -w user -w bridge=virbr0
+# 注：其他发行版参数 --graphics none
 ```
 
 提高性能的控制参数：可后期修改

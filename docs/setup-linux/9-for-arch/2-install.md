@@ -20,9 +20,11 @@ setfont ter-i24b
 :::info 作者推荐脚本
 
 ```shell
-curl -L https://gitcode.net/lbh/dwe/-/archive/main/dwe-main.tar.gz | tar xz --strip 1
+# 国内镜像：
+bash -c "$(curl -fsSL https://gitcode.net/lbh/dwe/-/raw/main/archinst/_gitcode)"
+
 # 上游版：
-# curl -L https://github.com/LittleboyHarry/deployworkenv/tarball/main | tar xz --strip 1
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/archinst/_github)"
 
 # 审查代码 ( :n 查看下一文件 )
 less archinst/*
@@ -32,7 +34,7 @@ less archinst/*
 
 :::info 改进国内下载速度
 
-    cn/arch-faster
+    archinst/cn-accer
 
 :::
 

@@ -83,7 +83,7 @@ echo 'Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch' | sudo tee -
 
 ```shell
 sudo pacman -S reflector
-cn/arch-reflector
+cn/arch-pacman
 ```
 
 <PreferXde gnome kde hideSelector>
@@ -197,7 +197,7 @@ sudo systemctl enable v2raya --now
 
 ## 结束配置
 
-推荐安装并使用 timeshift：
+推荐安装并使用 timeshift: ( 依赖[#安装开发工具] )
 
     arch/aur-timeshift
 

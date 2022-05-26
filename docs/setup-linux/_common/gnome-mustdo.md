@@ -32,14 +32,20 @@ gnome/optimize
 
 <div className="autoselect-cell-of-table">
 
-| 作用       | 命令                           | 按键              |
-| ---------- | ------------------------------ | ----------------- |
-| 文件管理器 | nautilus                       | Super + E         |
-| 设置       | gnome-control-center           | Super + I         |
-| 截图 \*    | gnome-screenshot --interactive | Super + Shift + S |
+| 作用       | 按键               |
+| ---------- | ------------------ |
+| 文件管理器 | Super + E          |
+| 设置       | Super + I          |
+| 系统监视器 | Ctrl + Shift + Esc |
+| 截图 \*    | Super + Shift + S  |
 
 </div>
 
-\*注：GNOME 42 已移除 `gnome-screenshot` 并强化了 `PrtScr` 截图键的功能、支持录屏
+\*注：
 
-    gnome/addkeymap
+- F1 打开终端
+- GNOME 42 已移除 `gnome-screenshot` 并强化了 `PrtScr` 截图键的功能、支持录屏
+
+```shell
+gnome/addkeymap
+```

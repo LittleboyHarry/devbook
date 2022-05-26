@@ -5,9 +5,9 @@ title: 完成 Fedora 的安装
  <details className="let-details-to-gray" role="alert">
 <summary>欢迎向导中的 “第三方软件源” 是什么？</summary>
 
-  包括：
+包括：
 
-- N卡闭源驱动
+- N 卡闭源驱动
 - Chrome 浏览器
 - PyCharm
 - Steam
@@ -52,14 +52,9 @@ sudo systemctl disable --now firewalld
 
 ## Grub
 
-```shell
-# 记住上次选择的启动项
-sudo sed -i "/GRUB_DEFAULT/ s/=.*/=saved/" /etc/default/grub
-echo GRUB_SAVEDEFAULT=true | sudo tee -a /etc/default/grub
+import ContentGrub from '../\_common/grub.md';
 
-# 降低等待时间为 2 秒
-sudo sed -i "/GRUB_TIMEOUT/ s/=.*/=2/" /etc/default/grub
-```
+<ContentGrub />
 
 更新 Grub：
 
@@ -76,9 +71,9 @@ sudo dnf makecache
 
 ## 调整桌面环境
 
-import Content from '../_common/startde.md';
+import ContentDe from '../\_common/startde.md';
 
-<Content />
+<ContentDe />
 
 ## 锁定内核版本
 

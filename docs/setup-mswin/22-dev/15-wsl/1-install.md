@@ -1,8 +1,8 @@
 ---
-title: WSL 安装
+title: 启用 WSL
 ---
 
-import {HtmlA,MstoreLink,MstoreButton} from '@theme/links';
+import {HtmlA} from '@theme/links';
 
 1.  添加 Linux 内核虚拟化组件：需要管理员权限
 
@@ -15,9 +15,6 @@ import {HtmlA,MstoreLink,MstoreButton} from '@theme/links';
 2.  重启后安装
 
         wsl --install
-
-3.  <a href="https://aka.ms/wslstore">点我挑选发行版</a>
-    ，笔者最喜欢 <MstoreLink id="9MSVKQC78PK6" name="Debian"/>
 
 <!-- <MstoreLink id="9PDXGNCFSCZV" name="Ubuntu" /> -->
 

@@ -7,10 +7,10 @@ title: libvirt 虚拟化平台
 ## 安装
 
 import {
-  PreferPkgMgr,
-  ForApt,
-  ForDnf,
-  ForPacman
+PreferPkgMgr,
+ForApt,
+ForDnf,
+ForPacman
 } from '@theme/PreferPkgMgr'
 
  <PreferPkgMgr dnf apt pacman>
@@ -26,7 +26,7 @@ import {
 </ForApt>
 <ForPacman>
 
-    sudo pacman -S virt-manager gnome-boxes qemu-emulators-full
+    sudo pacman -S virt-manager gnome-boxes virt-viewer
 
 </ForPacman>
 </PreferPkgMgr>
@@ -54,6 +54,14 @@ sudo chmod u+s /usr/lib/qemu/qemu-bridge-helper
   <TabItem value="centos" label="Fedora">
 
     sudo systemctl enable --now virtnetworkd
+
+  </TabItem>
+  <TabItem value="arch" label="Arch Linux">
+
+```shell
+sudo virsh net-autostart default
+sudo virsh net-start default
+```
 
   </TabItem>
 </Tabs>
