@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faPython } from '@fortawesome/free-brands-svg-icons';
 
-export default function CliToolsGrid() {
+export default function ModernCliCatalog() {
   return (
     <>
       <LogoCard.Container>

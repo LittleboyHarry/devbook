@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export function TopGrid() {
+export function TopLevelCatalog() {
   return (
     <>
       <LogoCard.Container>
@@ -38,9 +38,7 @@ export function TopGrid() {
       </LogoCard.Container>
       <LogoCard.Container>
         <LogoCard
-          name={
-            <span style={{ fontSize: '1.125rem' }}>deploydotfile</span>
-          }
+          name={<span style={{ fontSize: '1.125rem' }}>deploydotfile</span>}
           to="deploydotfile"
           logo={
             <FontAwesomeIcon
@@ -51,7 +49,7 @@ export function TopGrid() {
         />
         <LogoCard
           name="摩登命令行"
-          to="/docs/devenv/modern-cli/index"
+          to="/docs/devenv/modern-cli/catalog"
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
         <LogoCard
@@ -64,7 +62,7 @@ export function TopGrid() {
   );
 }
 
-export function EditorGrid() {
+export function EditorCatalog() {
   return (
     <LogoCard.Container>
       <LogoCard
@@ -86,7 +84,7 @@ export function EditorGrid() {
   );
 }
 
-export function DevEnvGrid() {
+export function DevEnvCatalog() {
   return (
     <LogoCard.Container>
       <LogoCard

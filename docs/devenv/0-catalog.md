@@ -12,4 +12,4 @@ title: 目录
 
 <DevEnvGrid/>
 
-import { TopGrid, EditorGrid, DevEnvGrid } from './devdocsgrid';
+import { TopLevelCatalog, EditorCatalog, DevEnvCatalog } from './Catalog';

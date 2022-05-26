@@ -105,7 +105,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="Windows"
                 description="开发者指南"
-                href="docs/setup-mswin/dev/index"
+                href="docs/setup-mswin/dev/catalog"
                 img={
                   <img src={useBaseUrl('/img/icons/windows8-original.svg')} />
                 }
@@ -113,7 +113,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="开发环境"
                 description="配置"
-                href="docs/devenv/intro"
+                href="docs/devenv/catalog"
                 img={<img src={useBaseUrl('/img/icons/git.svg')} />}
               />
               <Tile
@@ -136,7 +136,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="摩登命令行"
                 description="new unix cli"
-                href="docs/devenv/modern-cli/index"
+                href="docs/devenv/modern-cli/catalog"
                 img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
               />
             </ul>

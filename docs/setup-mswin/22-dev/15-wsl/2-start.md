@@ -95,7 +95,7 @@ yes | sudo pacman -S dos2unix # 转换 Windows 格式的换行符
 
 zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
 
-<a target="_blank" href="/docs/devenv/intro#命令行工具">
+<a target="_blank" href="/docs/devenv/catalog#命令行工具">
   开发环境 - 命令行工具
 </a>
 

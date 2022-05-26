@@ -72,7 +72,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'setup-mswin/index',
+            docId: 'setup-mswin/catalog',
             position: 'left',
             label: 'Windows',
           },
@@ -84,7 +84,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'devenv/intro',
+            docId: 'devenv/catalog',
             position: 'left',
             label: '开发环境',
           },
