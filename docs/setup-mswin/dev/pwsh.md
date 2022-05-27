@@ -11,7 +11,10 @@ import {MstoreButton} from '@theme/links';
 
 系统内置的第 5 版已不再更新，推荐使用 PowerShell7：其图标色彩由蓝变黑）
 
-<MstoreButton id="9MZ1SNWT0N5D" name="从应用商店安装" />&lt; 支持自动更新
+<p>
+<MstoreButton id="9MZ1SNWT0N5D" name="从应用商店安装" />
+&nbsp; ← 支持自动更新
+</p>
 
  <details className="let-details-to-gray" role="alert">
 <summary>其他渠道</summary>

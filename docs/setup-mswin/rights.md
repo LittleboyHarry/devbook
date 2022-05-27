@@ -56,12 +56,12 @@ import FileItem from '@theme/FileItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 
-:::info 推荐使用火狐浏览器
+## 推荐火狐浏览器
 
-[使用说明](/docs/goodsoft/browser/firefox)
+:::info [使用说明](/docs/goodsoft/browser/firefox)
 
 <MstoreButton id="9NZVDKPMR9RD" name="从商店安装" />
-or &nbsp;
+&nbsp;或&nbsp;
 <FileItem name="下载安装包" path="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN" button icon={<FontAwesomeIcon icon={faBox} />}/>
 
 :::
