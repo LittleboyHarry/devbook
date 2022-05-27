@@ -11,7 +11,7 @@ import {
 import { faLinux } from '@fortawesome/free-brands-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export default function WinDevCatalog() {
+export default function WinDevIndexer() {
   return (
     <>
       <LogoCard.Container>
@@ -43,7 +43,7 @@ export default function WinDevCatalog() {
         />
         <LogoCard
           name="WSL"
-          to="wsl/install"
+          to="dev/wsl"
           noNewTab
           logo={<FontAwesomeIcon icon={faLinux} />}
         />
@@ -52,7 +52,7 @@ export default function WinDevCatalog() {
       <LogoCard.Container>
         <LogoCard
           name="摩登命令行"
-          to="/docs/devenv/modern-cli/catalog"
+          to="/docs/devenv/modern-cli"
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
         <LogoCard

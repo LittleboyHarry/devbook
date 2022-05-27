@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faPython } from '@fortawesome/free-brands-svg-icons';
 
-export default function ModernCliCatalog() {
+export default function ModernCliIndexer() {
   return (
     <>
       <LogoCard.Container>

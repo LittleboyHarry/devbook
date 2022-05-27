@@ -91,7 +91,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="下载发行版"
                 description="推荐的 Linux"
-                href="docs/setup-linux/install/download"
+                href="docs/setup-linux/distros"
                 img={<FontAwesomeIcon icon={faDownload} />}
               />
               <Tile
@@ -103,13 +103,13 @@ export default function Home(): JSX.Element {
               <Tile
                 title="WSL"
                 description="开发环境"
-                href="docs/setup-mswin/dev/wsl/install"
+                href="docs/setup-mswin/dev/wsl"
                 img={<FontAwesomeIcon icon={faLinux} />}
               />
               <Tile
                 title="Windows"
                 description="开发者指南"
-                href="docs/setup-mswin/dev/catalog"
+                href="docs/setup-mswin/dev"
                 img={
                   <img src={useBaseUrl('/img/icons/windows8-original.svg')} />
                 }
@@ -117,13 +117,13 @@ export default function Home(): JSX.Element {
               <Tile
                 title="开发环境"
                 description="配置"
-                href="docs/devenv/catalog"
+                href="docs/devenv"
                 img={<img src={useBaseUrl('/img/icons/git.svg')} />}
               />
               <Tile
                 title="实用软件"
                 description="倾力推荐"
-                href="docs/goodsoft/intro"
+                href="docs/goodsoft"
                 img={<FontAwesomeIcon icon={faHammer} />}
               />
               <Tile
@@ -140,7 +140,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="摩登命令行"
                 description="new unix cli"
-                href="docs/devenv/modern-cli/catalog"
+                href="docs/devenv/modern-cli"
                 img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
               />
             </ul>

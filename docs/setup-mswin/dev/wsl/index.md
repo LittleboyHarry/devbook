@@ -1,6 +1,5 @@
 ---
-title: 启用 WSL
-sidebar_position: 1
+title: 使用 WSL
 ---
 
 import {HtmlA} from '@theme/links';

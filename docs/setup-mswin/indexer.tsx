@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToolbox, faCode } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export default function SetupMswinCatalog() {
+export default function SetupMswinIndexer() {
   return (
     <>
       <LogoCard.Container>
@@ -28,7 +28,7 @@ export default function SetupMswinCatalog() {
       <LogoCard.Container>
         <LogoCard
           name="开发环境"
-          to="dev/catalog"
+          to="setup-mswin/dev"
           noNewTab
           logo={<FontAwesomeIcon icon={faCode} />}
         />

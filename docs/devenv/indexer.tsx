@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export function TopLevelCatalog() {
+export function TopLevelIndexer() {
   return (
     <>
       <LogoCard.Container>
@@ -49,7 +49,7 @@ export function TopLevelCatalog() {
         />
         <LogoCard
           name="摩登命令行"
-          to="/docs/devenv/modern-cli/catalog"
+          to="/docs/devenv/modern-cli"
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
         <LogoCard
@@ -62,7 +62,7 @@ export function TopLevelCatalog() {
   );
 }
 
-export function EditorCatalog() {
+export function EditorIndexer() {
   return (
     <LogoCard.Container>
       <LogoCard
@@ -84,7 +84,7 @@ export function EditorCatalog() {
   );
 }
 
-export function DevEnvCatalog() {
+export function DevEnvIndexer() {
   return (
     <LogoCard.Container>
       <LogoCard

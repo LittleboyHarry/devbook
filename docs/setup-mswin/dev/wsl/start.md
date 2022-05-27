@@ -1,5 +1,5 @@
 ---
-title: 安装 WSL 发行版
+title: WSL 安装发行版
 sidebar_position: 2
 ---
 
@@ -139,7 +139,7 @@ wsl --export $wslName arch.tar
 
 zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
 
-<a target="_blank" href="/docs/devenv/catalog#命令行工具">
+<a target="_blank" href="/docs/devenv#命令行工具">
   开发环境 - 命令行工具
 </a>
 
