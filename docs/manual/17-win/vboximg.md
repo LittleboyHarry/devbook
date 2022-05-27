@@ -10,9 +10,9 @@ vbox 会根据系统名称猜测发行版
 
 由于字符串界面支持共享剪切板数据。为了方便把代码粘贴到虚拟机，这里提供 AHK 辅助小脚本：
 
-import { faScroll } from '@fortawesome/free-solid-svg-icons';
+import { ScriptIcon } from '@theme/fai';
 
-<FileItem button name="vboxpaste.ahk" path="/scripts/vboxpaste.ahk" icon={<FontAwesomeIcon icon={faScroll} />}/>
+<FileItem button name="vboxpaste.ahk" path="/scripts/vboxpaste.ahk" icon={<ScriptIcon />}/>
 
 使用方法：
 
@@ -117,10 +117,10 @@ ok，我们获得了可以不断克隆的虚拟机模板。
 
 ## Arch 云镜像
 
-import { faCompactDisc, faFingerprint } from '@fortawesome/free-solid-svg-icons';
+import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
 
-<FileItem name="from TUNA" path="https://mirrors.tuna.tsinghua.edu.cn/archlinux/images/latest/Arch-Linux-x86_64-basic.qcow2" icon={<FontAwesomeIcon icon={faCompactDisc} />}/>
-<FileItem name="验证信息" path="https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-basic.qcow2.SHA256" icon={<FontAwesomeIcon icon={faFingerprint} />}/>
+<FileItem name="from TUNA" path="https://mirrors.tuna.tsinghua.edu.cn/archlinux/images/latest/Arch-Linux-x86_64-basic.qcow2" icon={<DiskImageIcon />}/>
+<FileItem name="验证信息" path="https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-basic.qcow2.SHA256" icon={<ChecksumIcon />}/>
 
 <!--
 跟 Debian 差不太多：
@@ -129,6 +129,5 @@ import { faCompactDisc, faFingerprint } from '@fortawesome/free-solid-svg-icons'
  -->
 <!-- https://www.onitroad.com/jc/linux/otherlinux/sysadmin/passwd/how-to-reset-root-password-in-arch-linux.html -->
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FileItem from '@theme/FileItem'
 import { HtmlA, LinkButton } from '@theme/links';

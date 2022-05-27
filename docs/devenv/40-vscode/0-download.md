@@ -37,9 +37,12 @@ sudo dnf install code -y
 
 ## 开源社区版
 
-<LinkButton outline href="https://mirrorz.org/app/VSCodium" name="从国内镜像站下载" />
+缺点：[部分插件（ 如微软 VSCode 远程连接服务 ）](https://github.com/VSCodium/vscodium/wiki/Extensions-Compatibility)
+不受支持
 
-缺点：[部分插件](https://github.com/VSCodium/vscodium/wiki/Extensions-Compatibility)
-不受支持（如微软 VSCode 远程连接服务）
+<GetPkg pacman="code" />
+
+[... 从国内镜像站下载](https://mirrorz.org/app/VSCodium)
 
 import { LinkButton } from '@theme/links';
+import GetPkg from '@theme/GetPkg';

@@ -2,14 +2,14 @@
 title: 目录
 ---
 
-<TopGrid/>
+<TopLevelCatalog />
 
 ## 编辑器
 
-<EditorGrid/>
+<EditorCatalog />
 
 ## 开发环境
 
-<DevEnvGrid/>
+<DevEnvCatalog />
 
 import { TopLevelCatalog, EditorCatalog, DevEnvCatalog } from './Catalog';

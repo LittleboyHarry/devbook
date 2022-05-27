@@ -31,31 +31,34 @@ import {MstoreLink} from '@theme/links';
 获取系统镜像：( 查看[国内 Arch 镜像站](https://mirrorz.org/os/archlinux) )
 
 ```shell
-ARCH_SRC=https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest
+ARCH_MIRROR=https://mirrors.ustc.edu.cn/archlinux
 
 sudo apt install -y wget fakeroot
 cd `mktemp -d`
 wget https://geo.mirror.pkgbuild.com/iso/latest/sha256sums.txt
 sed -ni '/gz$/p' sha256sums.txt
-wget -c "$ARCH_SRC/$(tr -s ' ' < sha256sums.txt | cut -d' ' -f2)"
+wget -c "$ARCH_MIRROR/iso/latest/$(tr -s ' ' < sha256sums.txt | cut -d' ' -f2)"
 sha256sum -c sha256sums.txt
 ```
 
 下载比检验成功后，开始制作并安装：
 
 ```shell
-MIRROR='https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch'
+ARCH_MIRROR=https://mirrors.ustc.edu.cn/archlinux
 
 fakeroot tar -zxf archlinux-bootstrap-*-x86_64.tar.gz
 cd root.x86_64
-echo "Server = $MIRROR" | sudo tee -a etc/pacman.d/mirrorlist
+echo "Server = $ARCH_MIRROR/"'$repo/os/$arch' | sudo tee -a etc/pacman.d/mirrorlist
 vi + etc/pacman.d/mirrorlist
 fakeroot tar -czf ../wsl-arch.tar.gz *
 cd ..
-[ -x "$(command -v explorer.exe)" ] && explorer.exe .
 ```
 
-在 WSL Debian 中安装
+<!--
+[ -x "$(command -v explorer.exe)" ] && explorer.exe .
+-->
+
+在 WSL Debian 中安装：
 
 ```shell
 NAME=arch
@@ -65,13 +68,13 @@ powershell.exe -c 'wsl --import '$NAME' $(mkdir -f '$DIR') wsl-arch.tar.gz'
 wsl.exe --setdefault "$NAME"
 ```
 
-进入系统，初始化：
+`Ctrl + D` 退出 Debian WSL, 进入 Arch:
 
     wsl
 
 ```shell
 # 使用国内镜像
-CMIRROR=1
+USE_CN_MIRROR=1
 
 pacman-key --init
 pacman-key --populate archlinux
@@ -80,7 +83,7 @@ pacman-key --populate archlinux
 yes | pacman -Sy reflector
 pushd /etc/pacman.d
 cp -n mirrorlist mirrorlist.old
-if [[ -z ${CMIRROR} ]]; then
+if [[ -z ${USE_CN_MIRROR} ]]; then
     reflector --sort rate -l 8 --save mirrorlist
 else
     reflector -c cn -p https --sort rate -l 5 --save mirrorlist
@@ -110,11 +113,28 @@ id me
 安装常用开发工具
 
 ```shell
-pacman -S base-devel wget nano vi git tig unzip tree --noconfirm
+pacman -S base-devel wget nano vi git tig unzip tree man-db --noconfirm
 yes | pacman -S dos2unix # 转换 Windows 格式的换行符
 ```
 
-`Ctrl + D` 退出 Arch，打开 WSL 重新以普通用户方式登陆
+找不到的命令时，输出提供包的建议：
+
+```bash
+arch/autofindcmd
+exec $SHELL
+```
+
+退出 Arch，执行 PowerShell 命令备份一下子系统：
+
+```powershell
+$wslName="arch"
+$dir="$env:USERPROFILE\wsl-arch"
+
+cd $dir
+wsl --export $wslName arch.tar
+```
+
+重新进入 WSL, 将以普通用户方式登陆
 
 zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
 
@@ -129,7 +149,7 @@ zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
 ```shell
 yes | sudo pacman -S gcc-go
 
-if [[ -v CMIRROR ]]; then
+if [[ -v USE_CN_MIRROR ]]; then
     # 使用 goproxy.cn 镜像站
     export GO111MODULE=on
     export GOPROXY=https://goproxy.cn,direct
@@ -142,15 +162,6 @@ makepkg -si
 yay --save --editmenu
 ```
 
-在 zsh 找不到的命令时，输出建议的提供包：
-
-```bash
-yes | sudo pacman -S pkgfile
-sudo pkgfile -u
-echo source /usr/share/doc/pkgfile/command-not-found.zsh >> ~/.zshrc
-exec zsh
-```
-
 systemd 模拟器：https://github.com/arkane-systems/genie/releases/tag/v2.2
 
 ## 建议
@@ -161,6 +172,4 @@ systemd 模拟器：https://github.com/arkane-systems/genie/releases/tag/v2.2
 
 <!-- printf "\n-c cn\n" >> /etc/xdg/reflector/reflector.conf -->
 
-import { faFingerprint } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LinkButton } from '@theme/links';

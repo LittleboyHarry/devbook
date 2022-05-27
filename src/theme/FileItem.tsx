@@ -1,9 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile } from '@fortawesome/free-solid-svg-icons';
 import st from './FileItem.module.scss';
 import cs from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { FileIcon } from './fai';
 
 export default function FileItem({
   name,
@@ -39,9 +38,7 @@ export default function FileItem({
         );
       }}
     >
-      <span className={st.icon}>
-        {icon ? icon : <FontAwesomeIcon icon={faFile} />}
-      </span>
+      <span className={st.icon}>{icon ? icon : <FileIcon />}</span>
       <span className={st.name}>{name}</span>
     </a>
   );

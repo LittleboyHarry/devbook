@@ -101,15 +101,24 @@ title: 推荐扩展
   edge='https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb'
   />
 
+- URL 自定重定向
+
+  <ExtStoreLink name='Gooreplacer'
+  chrome='https://chrome.google.com/webstore/detail/gooreplacer/jnlkjeecojckkigmchmfoigphmgkgbip'
+  edge='https://microsoftedge.microsoft.com/addons/detail/gooreplacer/cidbonnpjopamnhfjdgfcmjmlmehjnej'
+  firefox='https://addons.mozilla.org/firefox/addon/gooreplacer/'
+  />
+
 ---
 
 附：[自编译打包扩展](https://gitee.com/littleboyharry-crx/ohmycrx/blob/master/README.md)，可省去下文手动配置的部分过程
 
 ## 配置文件
 
-import {faScroll} from '@fortawesome/free-solid-svg-icons'
+import { ScriptIcon } from '@theme/fai';
 
-可导入：<FileItem button name="vimium_c.json" path="/config/vimium_c.json" icon={<FontAwesomeIcon icon={faScroll} />}/>
+可导入：
+<FileItem button name="vimium_c.json" path="/config/vimium_c.json" icon={<ScriptIcon />}/>
 
 ## 适用范围
 
@@ -177,6 +186,5 @@ uBlock Origin:
 - 默认 z 键激活
 - 推荐勾选 `open tabs at the end`
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FileItem from '@theme/FileItem'
 import ExtStoreLink from './ExtStoreLink'

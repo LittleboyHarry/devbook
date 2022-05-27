@@ -30,6 +30,11 @@ python3 -m pipx ensurepath
 
 ```
 
-UNIX 环境自动补全指引：
+自动补全指引：
 
-    pipx completions | less
+```shell
+echo 'eval "$(register-python-argcomplete pipx)"' >> ~/.zshrc
+
+# 其他 UNIX 环境：
+# pipx completions | less
+```

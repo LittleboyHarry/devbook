@@ -51,21 +51,25 @@ export function DownloadButton({
 export function LinkButton({
   name,
   href,
+  className,
   outline,
   hint,
   attr,
   style,
   small,
   icon,
+  noNewTab,
 }: {
   name: React.ReactNode;
   href: string;
+  className?: string;
   outline?: boolean;
   hint?: string;
   attr?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
   style?: CSSProperties;
   small?: boolean;
   icon?: boolean | React.ReactNode;
+  noNewTab?: boolean;
 }) {
   if (icon === true) icon = <FontAwesomeIcon icon={faGlobe} />;
   return (
@@ -75,15 +79,17 @@ export function LinkButton({
         st.linkButton,
         'button',
         !small && 'button--lg',
-        outline ? 'button--outline button--secondary' : 'button--primary'
+        outline ? 'button--outline button--secondary' : 'button--primary',
+        className
       )}
       title={hint}
-      {...attr}
+      target={noNewTab && '_blank'}
       style={{
         cursor: hint ? 'help' : 'pointer',
         verticalAlign: 'baseline',
         ...style,
       }}
+      {...attr}
     >
       {icon && <span className={st.icon}>{icon}</span>}
       {name}

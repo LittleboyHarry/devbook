@@ -42,9 +42,7 @@ _来自[开源项目](https://github.com/File-New-Project/EarTrumpet)_
 
 针对 14 寸一下小电脑键盘，为 `jkluio7890` 映射为 1~9 0 数字键。依赖 AutoHotKey
 
-import {faScroll} from '@fortawesome/free-solid-svg-icons'
+<FileItem name="numpad.ahk" path="/scripts/numpad.ahk" icon={<ScriptIcon />}/>
 
-<FileItem name="numpad.ahk" path="/scripts/numpad.ahk" icon={<FontAwesomeIcon icon={faScroll} />}/>
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ScriptIcon } from '@theme/fai';
 import FileItem from '@theme/FileItem'

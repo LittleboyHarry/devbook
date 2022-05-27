@@ -135,7 +135,10 @@ sudo dnf upgrade -y # 更新系统
 
 ## 使用 Zsh
 
-<p><strong><a href="/docs/devenv/zsh" target="_blank" >见文档</a></strong></p>
+import { LinkButton } from '@theme/links';
+import { NewTabLinkIcon } from '@theme/fai';
+
+<LinkButton outline icon={<NewTabLinkIcon />} name="见文档" href="/docs/devenv/zsh" noNewTab />
 
 <!--
 ### 使用 KDE

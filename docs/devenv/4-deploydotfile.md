@@ -27,7 +27,7 @@ sudo dnf install -y git
 </ForDnf><ForPacman>
 
 ```shell
-sudo pacman -S git lsb-release
+yes | sudo pacman -S git lsb-release
 ```
 
 </ForPacman>
@@ -53,8 +53,8 @@ sudo dnf install -y wl-clipboard
 </ForDnf><ForPacman>
 
 ```bash
-sudo pacman -S xclip
-sudo pacman -S wl-clipboard
+yes | sudo pacman -S xclip
+yes | sudo pacman -S wl-clipboard
 ```
 
 </ForPacman>
@@ -159,7 +159,7 @@ exec zsh
 
 :::
 
-## ohmyzsh 插件说明页
+## 推荐的 ohmyzsh 插件说明
 
 <div style={{float:'left',marginRight:'2rem'}}>
 

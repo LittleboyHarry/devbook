@@ -16,11 +16,17 @@ title: 配置 Arch
 
 :::
 
-:::note GNOME 暗色终端主题
+<PreferXde gnome kde>
+<ForGnome>
+
+:::note 使用暗色终端主题
 
     dconf write /org/gnome/terminal/legacy/theme-variant "'dark'"
 
 :::
+
+</ForGnome>
+</PreferXde>
 
 ### 安装自动配置集
 
@@ -63,15 +69,6 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cus
 
 ## 关键配置
 
-### 调整 Grub
-
-- 记住上次选择的启动项
-- 降低等待时间为 2 秒
-- 自动添加其他系统启动项
-- 推荐皮肤
-
-      arch/bettergrub
-
 ### 镜像源加速
 
 <!--
@@ -107,12 +104,21 @@ cn/arch-pacman
 
 <a href="/docs/devenv/zsh" target="_blank" >参考内容</a>
 
-自动提供包安装建议：
+找不到的命令时，输出提供包的建议：
 
-```shell
-arch/betterfindcmd
-exec $SHELL
+```bash
+arch/autofindcmd
+exec zsh
 ```
+
+### 调整 Grub
+
+- 记住上次选择的启动项
+- 降低等待时间为 2 秒
+- 自动添加其他系统启动项
+- 推荐皮肤
+
+      arch/bettergrub
 
 ### 引用内容
 
@@ -131,11 +137,14 @@ exec $SHELL
 
     sudo pacman -Rns gnome-weather gnome-maps
 
-### 安装火狐浏览器
+### 安装 Firefox 浏览器
 
     arch/getfirefox
-    timeout 2s firefox
-    conf/firefox
+
+<LinkButton outline icon={<ScriptIcon />} name="推荐配置" href="https://gitcode.net/lbh/dwe/-/blob/main/cn/conf/firefox/README.md" />
+
+import { ScriptIcon } from '@theme/fai';
+import { LinkButton } from '@theme/links';
 
 ### 使用 Neovim
 
@@ -153,12 +162,17 @@ exec $SHELL
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-yay --editmenu --save
 ```
 
-国内 goproxy.cn 加速：
+:::note 国服加速安装：
+
+由 https://goproxy.cn 提供代理
 
     cn/arch-yay
+
+为下载构建源码，[fastgit](https://doc.fastgit.org/zh-cn/guide.html) 提供 GitHub 镜像服务
+
+:::
 
  <PreferXde gnome kde hideSelector>
 <ForGnome>
@@ -191,7 +205,8 @@ Qt 主题修改器：
 ### 网络问题
 
 ```shell
-sudo pacman -S v2ray v2ray-domain-list-community v2ray-geoip
+yes | sudo pacman -S v2ray v2ray-domain-list-community v2ray-geoip
+
 yay v2raya-bin
 sudo systemctl enable v2raya --now
 ```

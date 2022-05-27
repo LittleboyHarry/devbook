@@ -64,7 +64,9 @@ ForPacman
 sudo dnf in -y fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool # 核心包
 sudo dnf in -y kf5-kconfig-core # 自动脚本配置工具
 
-test -n "$KDE_FULL_SESSION" && sudo dnf in -y kcm-fcitx5                # KDE 依赖模块
+if [ -n "$KDE_FULL_SESSION" ];then
+    sudo dnf in -y kcm-fcitx5
+fi
 ```
 
 </ForDnf>
@@ -74,7 +76,9 @@ test -n "$KDE_FULL_SESSION" && sudo dnf in -y kcm-fcitx5                # KDE �
 sudo apt install -y fcitx5-chinese-addons fcitx5-config-qt # 核心包
 sudo apt install -y libkf5config-bin # 自动脚本配置工具
 
-test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依赖模块
+if [ -n "$KDE_FULL_SESSION" ];then
+    sudo dnf in -y kde-config-fcitx5
+fi
 ```
 
 搜索 `inp` 打开“语言支持”，更改输入法为 fcitx5
@@ -86,7 +90,9 @@ test -n "$KDE_FULL_SESSION" && sudo apt install -y kde-config-fcitx5 # KDE 依�
 sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm # 核心包
 
 yes | sudo pacman -S fcitx5-pinyin-zhwiki # 维基词库
-yes | sudo pacman -S kcm-fcitx5 # 自动脚本配置工具
+if [ -n "$KDE_FULL_SESSION" ];then
+    sudo dnf in -y kcm-fcitx5
+fi
 ```
 
 </ForPacman>
@@ -102,6 +108,8 @@ yes | sudo pacman -S kcm-fcitx5 # 自动脚本配置工具
     mv ~/.config/fcitx5 backupcfg-fcitx
 
 </details>
+
+先让 fcitx5 自动生成默认配置文件：
 
     pkill fcitx5; timeout 3s fcitx5
 
