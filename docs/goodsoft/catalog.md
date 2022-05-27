@@ -5,6 +5,6 @@ sidebar_position: 0
 
 这里会推荐一些优秀的开源软件
 
-<Indexer />
+<Catalog />
 
-import Indexer from './indexer'
+import Catalog from './Catalog.tsx'

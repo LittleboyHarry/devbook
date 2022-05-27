@@ -72,7 +72,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'setup-mswin/index',
+            docId: 'setup-mswin/catalog',
             position: 'left',
             label: 'Windows',
           },
@@ -84,13 +84,13 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'devenv/index',
+            docId: 'devenv/catalog',
             position: 'left',
             label: '开发环境',
           },
           {
             type: 'doc',
-            docId: 'goodsoft/index',
+            docId: 'goodsoft/catalog',
             position: 'left',
             label: '常用软件',
           },

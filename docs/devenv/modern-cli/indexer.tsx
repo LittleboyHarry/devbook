@@ -11,6 +11,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faPython } from '@fortawesome/free-brands-svg-icons';
 
+function link(id: string) {
+  return 'modern-cli/' + id;
+}
+
 export default function ModernCliIndexer() {
   return (
     <>
@@ -18,13 +22,13 @@ export default function ModernCliIndexer() {
         <LogoCard
           name="代码彩显"
           label="bat"
-          to="bat"
+          to={link('bat')}
           logo={<FontAwesomeIcon icon={faPaintRoller} />}
         />
         <LogoCard
           name="代码比对"
           label="delta"
-          to="delta"
+          to={link('delta')}
           logo={<FontAwesomeIcon icon={faCodeCompare} />}
         />
       </LogoCard.Container>
@@ -32,13 +36,13 @@ export default function ModernCliIndexer() {
         <LogoCard
           name="文件过滤"
           label="fd"
-          to="fd"
+          to={link('fd')}
           logo={<FontAwesomeIcon icon={faFilter} />}
         />
         <LogoCard
           name="文本查找"
           label="rg"
-          to="ripgrep"
+          to={link('ripgrep')}
           logo={<FontAwesomeIcon icon={faMagnifyingGlass} />}
         />
       </LogoCard.Container>
@@ -46,13 +50,13 @@ export default function ModernCliIndexer() {
         <LogoCard
           name="命令速查"
           label="tldr"
-          to="tldr"
+          to={link('tldr')}
           logo={<FontAwesomeIcon icon={faCircleQuestion} />}
         />
         <LogoCard
           name="pip 隔离"
           label="pipx"
-          to="pipx"
+          to={link('pipx')}
           logo={<FontAwesomeIcon icon={faPython} />}
         />
       </LogoCard.Container>

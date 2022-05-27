@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export default function Indexer() {
+export default function Catalog() {
   return (
     <>
       <LogoCard.Container>

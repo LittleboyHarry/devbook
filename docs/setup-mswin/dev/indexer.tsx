@@ -11,25 +11,29 @@ import {
 import { faLinux } from '@fortawesome/free-brands-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+function link(id: string) {
+  return 'dev/' + id;
+}
+
 export default function WinDevIndexer() {
   return (
     <>
       <LogoCard.Container>
         <LogoCard
           name="包管理器"
-          to="pkgmgr"
+          to={link('pkgmgr')}
           noNewTab
           logo={<FontAwesomeIcon icon={faCubes} />}
         />
         <LogoCard
           name="PowerShell"
-          to="pwsh"
+          to={link('pwsh')}
           noNewTab
           logo={<FontAwesomeIcon icon={faTerminal} />}
         />
         <LogoCard
           name="必做事项"
-          to="mustdo"
+          to={link('mustdo')}
           noNewTab
           logo={<FontAwesomeIcon icon={faRocket} />}
         />
@@ -37,13 +41,13 @@ export default function WinDevIndexer() {
       <LogoCard.Container>
         <LogoCard
           name="Sysinternals"
-          to="sysinternals"
+          to={link('sysinternals')}
           noNewTab
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
         <LogoCard
           name="WSL"
-          to="dev/wsl"
+          to={link('wsl')}
           noNewTab
           logo={<FontAwesomeIcon icon={faLinux} />}
         />

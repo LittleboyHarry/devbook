@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export function TopLevelIndexer() {
+export function TopLevelCatalog() {
   return (
     <>
       <LogoCard.Container>
@@ -54,7 +54,7 @@ export function TopLevelIndexer() {
         />
         <LogoCard
           name="虚拟化"
-          to="/docs/devenv/virtual/intro"
+          to="/docs/devenv/virtual"
           logo={<FontAwesomeIcon icon={faServer} />}
         />
       </LogoCard.Container>
@@ -62,7 +62,7 @@ export function TopLevelIndexer() {
   );
 }
 
-export function EditorIndexer() {
+export function EditorCatalog() {
   return (
     <LogoCard.Container>
       <LogoCard
@@ -84,7 +84,7 @@ export function EditorIndexer() {
   );
 }
 
-export function DevEnvIndexer() {
+export function DevEnvCatalog() {
   return (
     <LogoCard.Container>
       <LogoCard
