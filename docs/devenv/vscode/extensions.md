@@ -3,11 +3,11 @@ title: VSC 扩展推荐
 sidebar_position: 3
 ---
 
+ <div className="no-table-header no-table-border">
+
 ## 必装推荐
 
 扩展名 - 作用 安装到：
-
-<div className="no-table-header no-table-border">
 
 |              |                |                                                    |
 | ------------ | -------------- | -------------------------------------------------- |
@@ -15,23 +15,25 @@ sidebar_position: 3
 | Prettier     | 前端代码格式化 | <GetVscExt small id="esbenp.prettier-vscode" />    |
 | EditorConfig | 格式统一化     | <GetVscExt small id="EditorConfig.EditorConfig" /> |
 
-<br/>
+## 编程语言支持
 
-**Remote Development**：支持 SSH, WSL, container
-
-<GetVscExt id="ms-vscode-remote.vscode-remote-extensionpack" msOnly />
-
-</div>
+|        |                                           |     |
+| ------ | ----------------------------------------- | --- |
+| Python | <GetVscExt small id="ms-python.python" /> |
 
 ## 补充推荐
-
- <div className="no-table-header no-table-border">
 
 |              |                |                                                         |
 | ------------ | -------------- | ------------------------------------------------------- |
 | Git Graph    | 图形化的 `tig` | <GetVscExt small id="mhutchie.git-graph" />             |
 | vscode-icons | 更好看的图标   | <GetVscExt small id="vscode-icons-team.vscode-icons" /> |
 | change-case  | 大小写转换     | <GetVscExt small id="wmaurer.change-case" />            |
+
+<br/>
+
+**Remote Development**：支持 SSH, WSL, container
+
+<GetVscExt id="ms-vscode-remote.vscode-remote-extensionpack" msOnly />
 
 <!-- vscode-icons 安装后，右下角 Active 按钮激活 -->
 

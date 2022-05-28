@@ -58,11 +58,11 @@ import { faBox } from '@fortawesome/free-solid-svg-icons';
 
 ## 推荐火狐浏览器
 
-:::info [使用说明](/docs/goodsoft/browser/firefox)
-
 <MstoreButton id="9NZVDKPMR9RD" name="从商店安装" />
 &nbsp;或&nbsp;
 <FileItem name="下载安装包" path="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN" button icon={<FontAwesomeIcon icon={faBox} />}/>
+
+:::info [使用说明](/docs/goodsoft/browser/firefox)
 
 :::
 

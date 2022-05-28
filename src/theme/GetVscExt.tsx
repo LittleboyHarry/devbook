@@ -23,7 +23,7 @@ export default function GetVscExt({
           href={'vscode:extension/' + id}
           name="VSCode"
           small={small}
-          style={{ marginTop: '2px' }}
+          style={{ margin: '2px 4px 0 0' }}
         />
         {!msOnly && (
           <>
@@ -32,14 +32,14 @@ export default function GetVscExt({
               href={'code-oss:extension/' + id}
               name="OSS"
               small={small}
-              style={{ marginTop: '2px' }}
+              style={{ margin: '2px 4px 0 0' }}
             />
             <LinkButton
               outline
               href={'vscodium:extension/' + id}
               name="VSCodium"
               small={small}
-              style={{ marginTop: '2px' }}
+              style={{ margin: '2px 4px 0 0' }}
             />
           </>
         )}

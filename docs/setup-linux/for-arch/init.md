@@ -160,9 +160,11 @@ import { LinkButton } from '@theme/links';
 原版：
 
 ```shell
+cd ~
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+cd -
 ```
 
 :::note 国服加速安装：

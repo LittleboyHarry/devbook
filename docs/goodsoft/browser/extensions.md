@@ -33,7 +33,11 @@ sidebar_position: 21
   <ExtStoreLink name='Linkclump'
   chrome='https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj' />
 
-### 体验类
+- 标签树视图
+  <ExtStoreLink name='Snap Links Plus'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/tree-style-tab/' />
+
+### 网络类
 
 - 本地优化 CDN
 
@@ -41,14 +45,6 @@ sidebar_position: 21
   firefox='https://addons.mozilla.org/zh-CN/firefox/addon/decentraleyes/'
   chrome='https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj'
   edge='https://microsoftedge.microsoft.com/addons/detail/lmijmgnfconjockjeepmlmkkibfgjmla'
-  />
-
-- 对条款自动处理 Cookies
-
-  <ExtStoreLink name="I don't care about cookies"
-  firefox='https://addons.mozilla.org/addon/i-dont-care-about-cookies/'
-  chrome='https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja'
-  edge='https://microsoftedge.microsoft.com/addons/detail/oholpbloipjbbhlhohaebmieiiieioal'
   />
 
 - 按规则自动清理 Cookies ( 推荐搭配[火狐身份容器](https://addons.mozilla.org/zh-CN/firefox/addon/multi-account-containers/)使用 )
@@ -73,6 +69,14 @@ sidebar_position: 21
   firefox='https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/'
   chrome='https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm'
   edge='https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak'
+  />
+
+- CDN 国内线路优化
+
+  <ExtStoreLink name='Replace Google CDN'
+  firefox='https://addons.mozilla.org/zh-CN/firefox/addon/google-cdn-replace/'
+  chrome='https://chrome.google.com/webstore/detail/replace-google-cdn/kpampjmfiopfpkkepbllemkibefkiice'
+  edge='https://microsoftedge.microsoft.com/addons/detail/replace-google-cdn/cojepngjobmaiajphkijbdcdjnnjhpjc'
   />
 
 ### 显示类
@@ -114,12 +118,32 @@ sidebar_position: 21
 
 附：[自编译打包扩展](https://gitee.com/littleboyharry-crx/ohmycrx/blob/master/README.md)，可省去下文手动配置的部分过程
 
-## 配置文件
+## 自动配置
 
 import { ScriptIcon } from '@theme/fai';
 
 可导入：
 <FileItem button name="vimium_c.json" path="/config/vimium_c.json" icon={<ScriptIcon />}/>
+
+## 手动配置
+
+### uBlock Origin
+
+<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=oh-my-blockrules&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
+
+自动忽略 Cookies 许可协议：
+
+    https://www.i-dont-care-about-cookies.eu/abp/
+
+我的过滤规则集：[oh-my-blockrules](https://github.com/LittleboyHarry/oh-my-blockrules)
+
+### Linkclump
+
+- 默认 z 键激活
+- 推荐勾选 `open tabs at the end`
+
+import FileItem from '@theme/FileItem'
+import ExtStoreLink from './ExtStoreLink'
 
 ## 适用范围
 
@@ -173,19 +197,3 @@ uBlock Origin:
 
 </div>
 </div>
-
-## 其它配置
-
-### uBlock Origin
-
-<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=oh-my-blockrules&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
-
-我的过滤规则集：[oh-my-blockrules](https://github.com/LittleboyHarry/oh-my-blockrules)
-
-### Linkclump
-
-- 默认 z 键激活
-- 推荐勾选 `open tabs at the end`
-
-import FileItem from '@theme/FileItem'
-import ExtStoreLink from './ExtStoreLink'

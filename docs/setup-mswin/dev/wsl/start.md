@@ -125,7 +125,7 @@ arch/autofindcmd
 exec $SHELL
 ```
 
-退出 Arch，执行 PowerShell 命令备份一下子系统：
+退出 Arch，执行 PowerShell 命令备份一下子系统：( 约占 1G 多空间 )
 
 ```powershell
 $wslName="arch"
@@ -133,6 +133,7 @@ $dir="$env:USERPROFILE\wsl-arch"
 
 cd $dir
 wsl --export $wslName arch.tar
+
 ```
 
 重新进入 WSL, 将以普通用户方式登陆
@@ -161,6 +162,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay --save --editmenu
+cd -
 ```
 
 systemd 模拟器：https://github.com/arkane-systems/genie/releases/tag/v2.2
