@@ -105,13 +105,6 @@ cn/arch-pacman
 
 <a href="/docs/devenv/zsh" target="_blank" >参考内容</a>
 
-找不到的命令时，输出提供包的建议：
-
-```bash
-arch/autofindcmd
-exec zsh
-```
-
 ### 调整 Grub
 
 - 记住上次选择的启动项

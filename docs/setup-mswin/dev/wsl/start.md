@@ -133,13 +133,6 @@ wsl --export $wslName arch.tar
 
 使用 <a href="/docs/devenv/deployworkenv" target="_blank">deployworkenv</a> 自动配置如下内容：
 
-找不到的命令时，输出提供包的建议：
-
-```bash
-arch/autofindcmd
-exec $SHELL
-```
-
 zsh, git, neovim, bat, fzf, rg, fd, pipx 等请见：
 
 <a target="_blank" href="/docs/devenv/catalog#命令行工具">
