@@ -21,6 +21,6 @@ git config --global core.editor nvim
 
 ## 自动配置
 
-使用作者的自动脚本：[`deploydotfile`](/docs/devenv/deploydotfile)
+使用作者的自动脚本：[`deployworkenv`](/docs/devenv/deployworkenv)
 
-    (cd ~/deploydotfile;./deploy modules/neovim/)
+    nvim/cfg

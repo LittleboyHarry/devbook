@@ -3,9 +3,11 @@ title: deployworkenv
 sidebar_position: 5
 ---
 
-在 Linux 章节中介绍过
+快速部署开发环境的脚本集
 
 ## 安装方法
+
+使用 git 工具克隆安装：
 
 ```shell
 git clone https://github.com/LittleboyHarry/deployworkenv

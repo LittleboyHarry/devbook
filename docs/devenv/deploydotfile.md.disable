@@ -163,7 +163,13 @@ exec zsh
 
 :::
 
-## 推荐的 ohmyzsh 插件说明
+## 推荐的 ohmyzsh 说明
+
+必知：
+
+- https://github.com/ohmyzsh/wiki/blob/main/Cheatsheet.md
+
+插件：
 
 <div style={{float:'left',marginRight:'2rem'}}>
 

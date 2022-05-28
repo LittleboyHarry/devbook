@@ -67,6 +67,7 @@ export default function Home(): JSX.Element {
       <main>
         <section className={st.session1}>
           <div className={cs('container', st.container)}>
+            {/*
             <h2>
               自动部署工具 &nbsp;
               <FontAwesomeIcon
@@ -86,6 +87,7 @@ export default function Home(): JSX.Element {
                 </a>
               </li>
             </ul>
+            */}
             <h2>涵盖的内容</h2>
             <ul className={st.tileList}>
               <Tile
@@ -117,13 +119,13 @@ export default function Home(): JSX.Element {
               <Tile
                 title="开发环境"
                 description="配置"
-                href="docs/devenv"
+                href="docs/devenv/catalog"
                 img={<img src={useBaseUrl('/img/icons/git.svg')} />}
               />
               <Tile
                 title="实用软件"
                 description="倾力推荐"
-                href="docs/goodsoft"
+                href="docs/goodsoft/catalog"
                 img={<FontAwesomeIcon icon={faHammer} />}
               />
               <Tile
@@ -142,6 +144,17 @@ export default function Home(): JSX.Element {
                 description="new unix cli"
                 href="docs/devenv/modern-cli"
                 img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
+              />
+              <Tile
+                title="自动工具集"
+                description="deployworkenv"
+                href="docs/devenv/deployworkenv"
+                img={
+                  <FontAwesomeIcon
+                    style={{ transform: 'scale(0.99)' }}
+                    icon={faPersonWalkingLuggage}
+                  />
+                }
               />
             </ul>
           </div>

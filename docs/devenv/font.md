@@ -1,6 +1,6 @@
 ---
 title: 字体
-sidebar_position: 2
+sidebar_position: 7
 ---
 
 本文精选字体来自于：主流技术企业的设计作品、开源社区高认可项目。逼站科普：

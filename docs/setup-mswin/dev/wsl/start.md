@@ -114,15 +114,8 @@ id me
 安装常用开发工具
 
 ```shell
-pacman -S base-devel wget nano vi git tig unzip tree man-db --noconfirm
+pacman -S base-devel wget nano vi git tig unzip tree man-db zsh --noconfirm
 yes | pacman -S dos2unix # 转换 Windows 格式的换行符
-```
-
-找不到的命令时，输出提供包的建议：
-
-```bash
-arch/autofindcmd
-exec $SHELL
 ```
 
 退出 Arch，执行 PowerShell 命令备份一下子系统：( 约占 1G 多空间 )
@@ -138,7 +131,16 @@ wsl --export $wslName arch.tar
 
 重新进入 WSL, 将以普通用户方式登陆
 
-zsh, git, deploydotfile, neovim, bat, fzf, rg, fd, pipx 等请见：
+使用 <a href="/docs/devenv/deployworkenv" target="_blank">deployworkenv</a> 自动配置如下内容：
+
+找不到的命令时，输出提供包的建议：
+
+```bash
+arch/autofindcmd
+exec $SHELL
+```
+
+zsh, git, neovim, bat, fzf, rg, fd, pipx 等请见：
 
 <a target="_blank" href="/docs/devenv/catalog#命令行工具">
   开发环境 - 命令行工具

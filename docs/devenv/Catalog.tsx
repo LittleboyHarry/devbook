@@ -38,8 +38,8 @@ export function TopLevelCatalog() {
       </LogoCard.Container>
       <LogoCard.Container>
         <LogoCard
-          name={<span style={{ fontSize: '1.125rem' }}>deploydotfile</span>}
-          to="deploydotfile"
+          name={<span style={{ fontSize: '1.125rem' }}>deployworkenv</span>}
+          to="deployworkenv"
           logo={
             <FontAwesomeIcon
               icon={faPersonWalkingLuggage}

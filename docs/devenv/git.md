@@ -1,6 +1,6 @@
 ---
 title: Git
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 :::info 指令速查表
