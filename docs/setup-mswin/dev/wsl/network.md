@@ -52,32 +52,27 @@ exec $SHELL
 
 <GetPkg name='socat' apt pacman />
 
-写入 `.bashrc` 或 `.zshrc`
-
 ```shell
-cat << END | tee -a ~/.bashrc ~/.zshrc
+printf '主机端口(空格分开): '
+read YOUR_PORTS
+cat << END | tee -a ~/.zshrc ~/.bashrc
 
 wslfp(){
     for port in \${WIN_HOST_PORTS[@]}; do
         socat TCP4-LISTEN:\$port,fork TCP4:\$WSL_HOST_IP:\$port & disown
     done
 }
-WIN_HOST_PORTS=()
+WIN_HOST_PORTS=($YOUR_PORTS)
 END
-nano +-2,17 ~/.zshrc
 exec $SHELL
 ```
 
-这样每次打开 WSL 时，（或写入 `.zshrc` 自动执行）
-执行一下 `forwardport` 即可转发虚拟机内的指定端口到宿主机 `127.0.0.1` 上
+这样每次打开 WSL 时，
+执行一下 `wslfp` 即固定监听虚拟机 `127.0.0.1` 端口，转发报文到宿主机对应的端口上
 
-### 代理
+## proxychains
 
-确保端口监听到 `0.0.0.0`
-
-在端口转发的基础上，配置 <a href="/docs/devenv/modern-cli/network" target="_blank" >proxychains</a>。
-
-### proxychains
+确保宿主机端口监听到 `0.0.0.0`，在端口转发的基础上配置：
 
 <GetPkg name="proxychains-ng" apt pacman/>
 
@@ -90,12 +85,16 @@ printf '主机代理端口：'
 read WIN_HOST_PORT
 ```
 
-SOCKS5:
+SOCKS5 代理：
 
-    echo "socks5 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+```shell
+echo "socks5 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+```
 
-HTTP:
+HTTP 代理：
 
-    echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+```shell
+echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+```
 
 import GetPkg from '@theme/GetPkg'

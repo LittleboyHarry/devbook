@@ -42,5 +42,5 @@ exec $SHELL
 使用 <a href="/docs/devenv/deployworkenv" target="_blank">deployworkenv</a> 自动配置
 
 zsh, git, neovim, bat, fzf, rg, fd, pipx 等请见：<a
-  target="_blank" href="/docs/devenv#命令行工具">
+  target="_blank" href="/docs/devenv/modern-cli">
 开发环境 - 命令行工具</a>
