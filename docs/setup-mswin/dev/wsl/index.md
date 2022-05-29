@@ -24,3 +24,16 @@ import {HtmlA} from '@theme/links';
 启动“接收其它 Microsoft 产品的更新”。</p>
 
 :::
+
+## 建议
+
+尽量把文件存储在 WSL 文件系统内。若非必要，开发时尽量不使用 Windows 文件系统。
+
+目前兼容机制 BUG 多不完善：不能监听文件修改、文件管理器交换文件时产生碎片文件等
+
+---
+
+附：
+
+- [虚拟硬盘瘦身方法](https://www.cnblogs.com/enrio/p/14222648.html)
+- [扩展阅读](https://dowww.spencerwoo.com/)

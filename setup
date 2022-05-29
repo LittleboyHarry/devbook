@@ -1,0 +1,3 @@
+#!/bin/bash
+yarn --ignore-scripts
+buildah bud -v "$(yarn cache dir):/usr/local/share/.cache/yarn/v6":O -t devbook-serve .

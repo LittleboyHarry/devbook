@@ -42,6 +42,14 @@ sidebar_position: 1
 
 :::
 
+:::note 终端主题配色
+
+挑选一款喜欢的固定终端配色，不会随编辑器主题切换而变化：
+
+https://glitchbone.github.io/vscode-base16-term/
+
+:::
+
 :::note 自动应答
 
 Windows 环境下，命令行 Ctrl + C 自动应答。

@@ -1,2 +1,0 @@
-#!/bin/bash
-buildah bud -v ~/.cache/yarn:/usr/local/share/.cache/yarn:O -t devbook-serve .

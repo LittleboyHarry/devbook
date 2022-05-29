@@ -32,8 +32,7 @@ echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/
 摘自 [ArchWiki](https://wiki.archlinux.org/title/Podman#Rootless_Podman):
 
 ```bash
-sudo touch /etc/subuid /etc/subgid
-sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 `whoami`
+echo `whoami`:10000:65536 | sudo tee -a /etc/subuid /etc/subgid
 podman system migrate
 ```
 

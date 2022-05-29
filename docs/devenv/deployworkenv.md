@@ -10,6 +10,7 @@ sidebar_position: 5
 使用 git 工具克隆安装：
 
 ```shell
+cd ~
 git clone https://github.com/LittleboyHarry/deployworkenv
 cd deployworkenv
 ```
@@ -17,6 +18,7 @@ cd deployworkenv
 :::note 国服安装渠道
 
 ```shell
+cd ~
 git clone https://gitcode.net/lbh/deployworkenv
 cd deployworkenv
 ```

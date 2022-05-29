@@ -11,35 +11,15 @@ sidebar_position: 8
 
 ## 调优
 
-```shell
-# 更改默认主分支名
-git config --global init.defaultBranch main
-
-# 合并变基时自动暂存当前修改，参考：
-# https://stackoverflow.com/questions/30208928
-git config --global rebase.autostash true
-git config --global merge.autostash true
-
-```
+    git/optimze
 
 ## 录入个人提交信息
 
-使用 Git **Bash** 执行：
-
-```bash
-echo &&
-printf "Enter your git name: " && read git_name &&
-git config --global user.name "$git_name" &&
-printf "Enter your git email: " && read git_email &&
-git config --global user.email "$git_email"
-```
+    git/newuser
 
 ## 配置 SSH 密钥
 
-```shell
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
-cat ~/.ssh/id_ed25519.pub
-```
+    git/newkey
 
 复制公钥信息，随后上传：
 
@@ -58,7 +38,7 @@ Windows:
 
 ### 代理 SSH 协议
 
-    code %homepath%/.ssh/config
+    nano -m ~/.ssh/config
 
 输入内容并保存：
 

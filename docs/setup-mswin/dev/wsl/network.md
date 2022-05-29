@@ -1,0 +1,101 @@
+---
+title: WSL 网络问题
+sidebar_position: 16
+---
+
+## DNS 问题
+
+WSL 默认会自动选择 DNS 服务器，可能存在 DNS 干扰问题。若要固定，执行：
+
+```shell
+DNS_SERVERS=(8.8.8.8 8.8.4.4)
+
+cat << END | sudo tee -a /etc/wsl.conf
+[network]
+generateResolvConf = false
+END
+sudo rm /etc/resolv.conf
+for DNS_SERVER in ${DNS_SERVERS[@]}; do
+    echo "nameserver $DNS_SERVER" | sudo tee -a /etc/resolv.conf
+done
+sudo chattr +i /etc/resolv.conf
+```
+
+## 解除防火墙拦截
+
+<!--
+Disable-NetFirewallRule -DisplayName "<进程名>.exe"
+ -->
+
+先以管理员身份 PowerShell 运行：重启失效
+
+    New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+
+:::info [重启后自动激活的推荐办法](https://github.com/microsoft/WSL/issues/4139#issuecomment-778428577)
+
+见：`Automate adjusting of firewall rule (only works if you have admin rights):`
+
+:::
+
+## 自动获取主机 IP
+
+```shell
+echo 'export WSL_HOST_IP=`cat /etc/resolv.conf | grep nameserver | cut -d" " -f 2`' | tee -a ~/.bashrc ~/.zshrc
+exec $SHELL
+```
+
+在解除防火墙拦截后，测试连通性：
+
+    bash -ic 'sudo timeout 2s ping $WSL_HOST_IP'
+
+## 端口转发
+
+<GetPkg name='socat' apt pacman />
+
+写入 `.bashrc` 或 `.zshrc`
+
+```shell
+cat << END | tee -a ~/.bashrc ~/.zshrc
+
+wslfp(){
+    for port in \${WIN_HOST_PORTS[@]}; do
+        socat TCP4-LISTEN:\$port,fork TCP4:\$WSL_HOST_IP:\$port & disown
+    done
+}
+WIN_HOST_PORTS=()
+END
+nano +-2,17 ~/.zshrc
+exec $SHELL
+```
+
+这样每次打开 WSL 时，（或写入 `.zshrc` 自动执行）
+执行一下 `forwardport` 即可转发虚拟机内的指定端口到宿主机 `127.0.0.1` 上
+
+### 代理
+
+确保端口监听到 `0.0.0.0`
+
+在端口转发的基础上，配置 <a href="/docs/devenv/modern-cli/network" target="_blank" >proxychains</a>。
+
+### proxychains
+
+<GetPkg name="proxychains-ng" apt pacman/>
+
+```shell
+CONFIG=/etc/proxychains.conf
+[ -f "$CONFIG" ] || CONFIG=/etc/proxychains4.conf
+
+sudo sed -i '/^\[ProxyList\]$/,/^[^#]/ s/^[^\[#].*//' "$CONFIG"
+printf '主机代理端口：'
+read WIN_HOST_PORT
+```
+
+SOCKS5:
+
+    echo "socks5 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+
+HTTP:
+
+    echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+
+import GetPkg from '@theme/GetPkg'

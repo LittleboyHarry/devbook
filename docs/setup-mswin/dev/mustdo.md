@@ -56,6 +56,12 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 安装或检查更新：<MstoreButton id="9N0DX20HK701" name="Get" />
 
+推荐设置：
+
+- 配置文件 | 默认值 > 外观 >
+  - 背景不透明度：推荐 85 左右
+  - 光标形状：实心框
+
 ## Git For Windows
 
 - [GitHub 官方源](https://github.com/git-for-windows/git/releases/latest#:~:text=64%2Dbit.exe)

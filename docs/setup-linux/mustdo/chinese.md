@@ -59,7 +59,7 @@ fi
 <ForPacman>
 
 ```shell
-sudo pacman -S fcitx5-im fcitx5-chinese-addons --noconfirm # 核心包
+sudo pacman -S --noconfirm fcitx5-im fcitx5-chinese-addons # 核心包
 
 yes | sudo pacman -S fcitx5-pinyin-zhwiki # 维基词库
 if [ -n "$KDE_FULL_SESSION" ];then
@@ -74,7 +74,7 @@ fi
 
 <details className='let-details-to-gray'>
   <summary>
-本文只考虑新装输入法。备份重置的方法：
+本文只考虑新装好的输入法。备份配置并重置的方法：
 </summary>
 
     mv ~/.config/fcitx5 backupcfg-fcitx

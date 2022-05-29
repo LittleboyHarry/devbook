@@ -1,6 +1,6 @@
 ---
 title: WSL 开发容器
-sidebar_position: 4
+sidebar_position: 8
 ---
 
 推荐使用 `podman`: 不依赖 systemd 的无 root 容器技术

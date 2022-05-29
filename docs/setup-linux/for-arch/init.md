@@ -146,7 +146,7 @@ import { LinkButton } from '@theme/links';
 
 ### 安装开发工具
 
-    sudo pacman -S base-devel git wget vi --noconfirm
+    sudo pacman -S --noconfirm base-devel git wget vi
 
 ### AUR 助手 yay
 
