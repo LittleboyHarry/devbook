@@ -1,5 +1,5 @@
 ---
-title: JBS 配置
+title: JetBrains 配置
 sidebar_position: 1
 ---
 

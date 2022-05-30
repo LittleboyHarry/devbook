@@ -10,7 +10,7 @@ sidebar_position: 64
 使用阿里云镜像：
 
 ```bash
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' | tee -a ~/.bash_profile ~/.zshrc
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' | tee -a ~/.bash_profile ~/.zshrc > /dev/null
 exec $SHELL
 ```
 

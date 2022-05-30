@@ -1,5 +1,5 @@
 ---
-title: 使用 archinstall
+title: archinstall 安装器
 sidebar_position: 2
 ---
 
@@ -132,7 +132,8 @@ less archinst/*
 
 9. **Additional packages to install**
 
-   对需要防火墙的个人或家用设备，建议填入 ufw ( 或图形化版 gufw )
+   - 填入 `git` 稍后用到
+   - 对需要防火墙的个人或家用设备，建议填入 ufw ( 或图形化版 gufw )
 
 10. **Configure network**
 

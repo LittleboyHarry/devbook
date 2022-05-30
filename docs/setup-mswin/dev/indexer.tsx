@@ -61,7 +61,7 @@ export default function WinDevIndexer() {
         />
         <LogoCard
           name="JetBrains IDE"
-          to="/docs/devenv/jetbrains/toolbox"
+          to="/docs/devenv/jetbrains"
           logo={<img src={useBaseUrl('/img/icons/intellij.svg')} />}
         />
       </LogoCard.Container>

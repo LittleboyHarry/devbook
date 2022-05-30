@@ -1,5 +1,5 @@
 ---
-title: VSC 扩展推荐
+title: VSCode 扩展推荐
 sidebar_position: 3
 ---
 

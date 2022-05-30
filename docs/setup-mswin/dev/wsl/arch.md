@@ -27,7 +27,7 @@ ARCH_MIRROR=https://mirrors.ustc.edu.cn/archlinux
 
 fakeroot tar -zxf archlinux-bootstrap-*-x86_64.tar.gz
 cd root.x86_64
-echo "Server = $ARCH_MIRROR/"'$repo/os/$arch' | sudo tee -a etc/pacman.d/mirrorlist
+echo "Server = $ARCH_MIRROR/"'$repo/os/$arch' | sudo tee -a etc/pacman.d/mirrorlist > /dev/null
 vi + etc/pacman.d/mirrorlist
 fakeroot tar -czf ../wsl-arch.tar.gz *
 cd ..
@@ -89,11 +89,17 @@ id me
 
 找到对应发行版的 `DefaultUid`，以 **十进制** 基数形式设置。完成设置
 
-安装常用开发工具
+安装常用包：
 
 ```shell
-pacman -S --noconfirm base-devel wget nano vi git tig unzip tree man-db zsh openssh shadow
-yes | pacman -S dos2unix # 转换 Windows 格式的换行符
+# 基础必备
+pacman -S --noconfirm wget unzip tree lsb-release shadow
+
+# 开发工具
+pacman -S --noconfirm zsh base-devel nano vi git tig man-db openssh
+
+# 转换 Windows 格式的换行符
+pacman -S --noconfirm dos2unix
 ```
 
 退出 Arch，执行 PowerShell 命令备份一下子系统：( 约占 1G 多空间 )
@@ -111,17 +117,21 @@ wsl --export $wslName arch.tar
 
 ## 配置
 
-使用 <a href="/docs/devenv/deployworkenv" target="_blank">deployworkenv</a> 自动配置
+import Require from '/docs/_common/deployworkenv.md'
+
+<Require />
 
 例如：安装 AUR 助手 yay
 
     arch/getyay
     cn/arch-yay # 使用国内 goproxy 镜像
 
-zsh, git, neovim, bat, fzf, rg, fd, pipx 等请见：<a
-    target="_blank" href="/docs/devenv/catalog#命令行工具">
-开发环境 - 命令行工具</a>
-
 systemd 模拟器：https://github.com/arkane-systems/genie/releases/tag/v2.2
 
-<!-- printf "\n-c cn\n" >> /etc/xdg/reflector/reflector.conf -->
+import {CommandlineCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
+
+### 开发环境
+
+<CommandlineCatalog />
+
+<DevEnvCatalog />

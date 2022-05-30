@@ -10,13 +10,13 @@ WSL 默认会自动选择 DNS 服务器，可能存在 DNS 干扰问题。若要
 ```shell
 DNS_SERVERS=(8.8.8.8 8.8.4.4)
 
-cat << END | sudo tee -a /etc/wsl.conf
+cat << END | sudo tee -a /etc/wsl.conf > /dev/null
 [network]
 generateResolvConf = false
 END
 sudo rm /etc/resolv.conf
 for DNS_SERVER in ${DNS_SERVERS[@]}; do
-    echo "nameserver $DNS_SERVER" | sudo tee -a /etc/resolv.conf
+    echo "nameserver $DNS_SERVER" | sudo tee -a /etc/resolv.conf > /dev/null
 done
 sudo chattr +i /etc/resolv.conf
 ```
@@ -40,7 +40,7 @@ Disable-NetFirewallRule -DisplayName "<进程名>.exe"
 ## 自动获取主机 IP
 
 ```shell
-echo 'export WSL_HOST_IP=`cat /etc/resolv.conf | grep nameserver | cut -d" " -f 2`' | tee -a ~/.bashrc ~/.zshrc
+echo 'export WSL_HOST_IP=`cat /etc/resolv.conf | grep nameserver | cut -d" " -f 2`' | tee -a ~/.bashrc ~/.zshrc > /dev/null
 exec $SHELL
 ```
 
@@ -55,7 +55,7 @@ exec $SHELL
 ```shell
 printf '主机端口(空格分开): '
 read YOUR_PORTS
-cat << END | tee -a ~/.zshrc ~/.bashrc
+cat << END | tee -a ~/.zshrc ~/.bashrc > /dev/null
 
 wslfp(){
     for port in \${WIN_HOST_PORTS[@]}; do
@@ -88,13 +88,13 @@ read WIN_HOST_PORT
 SOCKS5 代理：
 
 ```shell
-echo "socks5 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+echo "socks5 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf > /dev/null
 ```
 
 HTTP 代理：
 
 ```shell
-echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf
+echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf > /dev/null
 ```
 
 import GetPkg from '@theme/GetPkg'

@@ -1,5 +1,5 @@
 ---
-title: VSC 下载
+title: 安装 VSCode
 sidebar_position: 0
 ---
 

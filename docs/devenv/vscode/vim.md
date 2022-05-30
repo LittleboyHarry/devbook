@@ -1,5 +1,5 @@
 ---
-title: VSC vim 模式
+title: VSCode vi 编辑模式
 sidebar_position: 4
 ---
 

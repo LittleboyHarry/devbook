@@ -3,7 +3,9 @@ title: 目录
 sidebar_position: 0
 ---
 
-<TopLevelCatalog />
+## 命令行
+
+<CommandlineCatalog />
 
 ## 编辑器
 
@@ -13,4 +15,4 @@ sidebar_position: 0
 
 <DevEnvCatalog />
 
-import { TopLevelCatalog, EditorCatalog, DevEnvCatalog } from './Catalog.tsx';
+import { CommandlineCatalog, EditorCatalog, DevEnvCatalog } from './Catalog.tsx';

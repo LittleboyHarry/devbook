@@ -3,11 +3,15 @@ title: Git
 sidebar_position: 8
 ---
 
-:::info 指令速查表
+:::note 推荐的指令缩写表
 
-来源：[ohmyzsh-git 插件](https://gitee.com/mirrors/oh-my-zsh/blob/master/plugins/git/README.md) 相关别名
+来自于 [ohmyzsh-git 插件](https://gitee.com/mirrors/oh-my-zsh/blob/master/plugins/git/README.md)
 
 :::
+
+import Require from '/docs/_common/deployworkenv.md'
+
+<Require />
 
 ## 调优
 

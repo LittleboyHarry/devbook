@@ -14,13 +14,29 @@ import GetPkg from '@theme/GetPkg';
 作为首选文本编辑器
 
 ```shell
-echo "export EDITOR='nvim'" | tee -a ~/.zshrc ~/.bashrc
+echo "export EDITOR='nvim'" | tee -a ~/.zshrc ~/.bashrc > /dev/null
 git config --global core.editor nvim
-# echo export SYSTEMD_EDITOR=nvim | tee -a ~/.bashrc ~/.zshrc
+# echo export SYSTEMD_EDITOR=nvim | tee -a ~/.bashrc ~/.zshrc > /dev/null
 ```
 
-## 自动配置
+## 推荐配置
 
-使用作者的自动脚本：[`deployworkenv`](/docs/devenv/deployworkenv)
+Windows 对应所在目录:
 
-    nvim/cfg
+```powershell
+explorer (mkdir -f $env:LOCALAPPDATA/nvim)
+```
+
+Linux 对应所在目录：
+
+```shell
+mkdir -p ~/.config/nvim
+cd ~/.config/nvim
+
+[ -x "$(command -v xdg-open)" ] && xdg-open . || echo "复制下载链接，使用 wget 下载"
+```
+
+下载该配置：<FileItem button name="init.vim" path="/config/nvim.vim" icon={<ScriptIcon />} />
+
+import { ScriptIcon } from '@theme/fai';
+import FileItem from '@theme/FileItem'

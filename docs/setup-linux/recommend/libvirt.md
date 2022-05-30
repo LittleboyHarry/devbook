@@ -47,7 +47,7 @@ ForPacman
 
 ```shell
 sudo mkdir -p /etc/qemu
-echo "allow virbr0" | sudo tee -a /etc/qemu/bridge.conf
+echo "allow virbr0" | sudo tee -a /etc/qemu/bridge.conf > /dev/null
 sudo chmod u+s /usr/lib/qemu/qemu-bridge-helper
 ```
 

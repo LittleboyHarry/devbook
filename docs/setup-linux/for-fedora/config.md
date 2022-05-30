@@ -1,5 +1,5 @@
 ---
-title: 完成 Fedora 的安装
+title: 配置 Fedora
 sidebar_position: 2
 ---
 
@@ -137,9 +137,8 @@ sudo dnf upgrade -y # 更新系统
 ## 使用 Zsh
 
 import { LinkButton } from '@theme/links';
-import { NewTabLinkIcon } from '@theme/fai';
 
-<LinkButton outline icon={<NewTabLinkIcon />} name="见文档" href="/docs/devenv/zsh" noNewTab />
+<LinkButton outline name="见文档" href="/docs/devenv/zsh" newTab />
 
 <!--
 ### 使用 KDE

@@ -1,9 +1,8 @@
 ---
-title: 获取 Fedora 并安装
-sidebar_position: 1
+title: 安装 Fedora Linux
 ---
 
-## 下载
+## 下载获取
 
 <Container>
     <cards.FedoraWorkstation />
@@ -12,8 +11,8 @@ sidebar_position: 1
 
 <br/>
 
-<LinkButton outline icon name="镜像站下载汇表" href="https://mirrorz.org/os/fedora"/>
-含有:
+<p><LinkButton outline icon name="镜像站下载汇表" href="https://mirrorz.org/os/fedora"/>
+&nbsp;含有:</p>
 
 - [其他桌面环境](https://spins.fedoraproject.org/zh_Hans_CN/)
 - [服务器、非主流 CPU 版](https://getfedora.org/zh_Hans_CN/server/download/)
@@ -47,9 +46,9 @@ sidebar_position: 1
 
 见前文内容：
 
-1. [制作启动盘](../bootable)
-2. [规划硬盘分区](../part)
-3. [相关建议](../advice)
+1. [制作启动盘](bootable)
+2. [规划硬盘分区](part)
+3. [相关建议](advice)
 
 安装系统前可以卸载一些不需要的捆绑应用，如 LibreOffice 以加快速度。打开终端执行：
 

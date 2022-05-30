@@ -18,25 +18,30 @@
 配置腾讯云镜像：
 
 ```shell
-echo 'unqualified-search-registries = ["docker.io"]' | sudo tee -a /etc/containers/registries.conf > /dev/null
+grep -qv '^unqualified-search-registries' /etc/containers/registries.conf && echo 'unqualified-search-registries = ["docker.io"]' | sudo tee -a /etc/containers/registries.conf > /dev/null
 echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/containers/registries.conf > /dev/null
 ```
 
-输出有效内容：
+:::note 检查配置结果
 
     sed "/^#/d" /etc/containers/registries.conf
 
- <details className="let-details-to-gray">
-<summary>在 Arch Linux 中使用</summary>
+:::
 
-摘自 [ArchWiki](https://wiki.archlinux.org/title/Podman#Rootless_Podman):
+<div className="no-admonition-uppercase-title">
+
+:::note 在 Arch Linux 中使用
 
 ```bash
-echo `whoami`:10000:65536 | sudo tee -a /etc/subuid /etc/subgid
+echo `whoami`:10000:65536 | sudo tee -a /etc/subuid /etc/subgid > /dev/null
 podman system migrate
 ```
 
-</details>
+具体见 [ArchWiki](https://wiki.archlinux.org/title/Podman#Rootless_Podman)
+
+:::
+
+</div>
 
 :::caution 挂载卷的文件访问权限被拦截
 
@@ -46,9 +51,7 @@ podman system migrate
 
 ## VSCode
 
-<LinkButton outline href="vscode:extension/ms-azuretools.vscode-docker" name="安装" />
-
-运行
+启动接口
 
     systemctl --user enable --now podman.socket
 
@@ -57,7 +60,9 @@ podman system migrate
     "docker.dockerPath": "podman",
     "docker.host": "unix:///run/user/1000/podman/podman.sock",
 
-- [GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)
+<p><LinkButton outline href="vscode:extension/ms-azuretools.vscode-docker" name="安装" /></p>
+
+附：[GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)
 
 import GetPkg from '@theme/GetPkg';
 import { LinkButton } from '@theme/links';

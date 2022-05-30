@@ -29,15 +29,11 @@ sidebar_position: 3
 </ForGnome>
 </PreferXde>
 
-### 安装自动配置集
+### 作者推荐工具
 
-```shell
-mkdir deployworkenv
-cd deployworkenv
-curl -L https://gitcode.net/lbh/dwe/-/archive/main/dwe-main.tar.gz | tar xz --strip 1
-# 上游版：
-# curl -L https://github.com/LittleboyHarry/deployworkenv/tarball/main | tar xz --strip 1
-```
+import Require from '/docs/_common/deployworkenv.md'
+
+<Require />
 
 ### 中文支持
 
@@ -87,7 +83,6 @@ cn/arch-pacman
 <PreferXde gnome kde hideSelector>
 <ForKde>
 
-<!--
 :::note 喜欢下拉式终端吗？
 
 <GetPkg name="yakuake" apt pacman dnf />
@@ -96,7 +91,6 @@ cn/arch-pacman
 随后打开程序设置全局快捷键即可
 
 :::
--->
 
 </ForKde>
 </PreferXde>
@@ -135,7 +129,7 @@ cn/arch-pacman
 
     arch/getfirefox
 
-<LinkButton outline icon={<ScriptIcon />} name="推荐配置" href="https://gitcode.net/lbh/dwe/-/blob/main/cn/conf/firefox/README.md" />
+<LinkButton outline name="推荐的配置" href="/docs/goodsoft/browser/firefox" newTab />
 
 import { ScriptIcon } from '@theme/fai';
 import { LinkButton } from '@theme/links';

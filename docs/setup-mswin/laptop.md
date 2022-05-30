@@ -33,11 +33,7 @@ import {HtmlA} from '@theme/links';
 
 ## 调音器
 
-import {MstoreButton} from '@theme/links';
-
-<MstoreButton id="9nblggh516xp" name="从商店安装 EarTrumpet" />
-
-_来自[开源项目](https://github.com/File-New-Project/EarTrumpet)_
+[EarTrumpet](https://github.com/File-New-Project/EarTrumpet): <MstoreButton id="9nblggh516xp" name="从商店安装" />
 
 ## 模拟数字键盘
 
@@ -47,3 +43,4 @@ _来自[开源项目](https://github.com/File-New-Project/EarTrumpet)_
 
 import { ScriptIcon } from '@theme/fai';
 import FileItem from '@theme/FileItem'
+import {MstoreButton} from '@theme/links';

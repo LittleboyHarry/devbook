@@ -1,6 +1,5 @@
 ---
-title: 获取 Arch
-sidebar_position: 1
+title: 安装 Arch Linux
 ---
 
 :::caution 准备好流畅的网络环境
@@ -32,13 +31,13 @@ import { LinkButton } from '@theme/links';
 
 <LinkButton outline href="https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" name="安装 Wiki" icon />
 
-<HtmlA href="../bootable" target="_blank">
+<HtmlA href="bootable" target="_blank">
 
 :::note 下一步，见制作启动盘
 :::
 
 </HtmlA>
 
-[参考资料](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
+附：[参考资料](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
 
 import { HtmlA } from '@theme/links';

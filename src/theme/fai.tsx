@@ -4,7 +4,6 @@ import {
   FontAwesomeIconProps,
 } from '@fortawesome/react-fontawesome';
 import {
-  faArrowUpRightFromSquare,
   faCompactDisc,
   faFile,
   faFingerprint,
@@ -27,8 +26,4 @@ export function DiskImageIcon(props: Props) {
 
 export function ChecksumIcon(props: Props) {
   return <FontAwesomeIcon {...props} icon={faFingerprint} />;
-}
-
-export function NewTabLinkIcon(props: Props) {
-  return <FontAwesomeIcon {...props} icon={faArrowUpRightFromSquare} />;
 }

@@ -4,6 +4,7 @@ import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import cs from 'clsx';
 import st from './links.module.scss';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export function MstoreLink({ id, name }: { id: string; name: string }) {
   return (
@@ -58,7 +59,7 @@ export function LinkButton({
   style,
   small,
   icon,
-  noNewTab,
+  newTab,
 }: {
   name: React.ReactNode;
   href: string;
@@ -69,9 +70,12 @@ export function LinkButton({
   style?: CSSProperties;
   small?: boolean;
   icon?: boolean | React.ReactNode;
-  noNewTab?: boolean;
+  newTab?: boolean;
 }) {
   if (icon === true) icon = <FontAwesomeIcon icon={faGlobe} />;
+  if (icon === undefined && newTab)
+    icon = <FontAwesomeIcon icon={faArrowUpRightFromSquare} />;
+
   return (
     <a
       href={href}
@@ -83,7 +87,7 @@ export function LinkButton({
         className
       )}
       title={hint}
-      target={noNewTab && '_blank'}
+      target={newTab && '_blank'}
       style={{
         cursor: hint ? 'help' : 'pointer',
         verticalAlign: 'baseline',

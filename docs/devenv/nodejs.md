@@ -39,7 +39,7 @@ Debian 默认提供的 nodejs 12 版本太低，很多 npm 依赖包不支持。
 
 ```shell
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-bash -i -c "nvm install --lts"
+( source ~/.nvm/nvm.sh && nvm install --lts )
 exec $SHELL
 ```
 
@@ -47,7 +47,7 @@ exec $SHELL
 <FromGitee>
 
 ```shell
-wget -qO- https://gitee.com/mirrors/nvm/raw/v0.39.1/install.sh | bash
+cn/nvm
 ( source ~/.nvm/nvm.sh && nvm install --lts )
 exec $SHELL
 ```

@@ -14,7 +14,13 @@ import {MstoreLink} from '@theme/links';
 1. 获取缺失的软件包：
    [可信证书](https://packages.debian.org/stable/all/ca-certificates/download)
    及 [openssl](https://packages.debian.org/stable/amd64/openssl/download)
-2. ```shell
+2. 执行：
+
+   ```powershell
+   # 验证 SHA256 校验码
+   get-filehash -a sha256 *.deb |%{$_.Hash=$_.Hash.ToLower();$_.Path=(ls $_.Path).Name;;$_}| fl path,hash
+
+   # 安装
    wsl sudo apt install -y ./ca-certificates_*.deb ./openssl_*.deb
    ```
 3. <a href="/docs/setup-linux/for-debian#国内镜像软件仓" target="_blank">
@@ -39,8 +45,14 @@ sudo apt install -y tree unzip tig
 exec $SHELL
 ```
 
-使用 <a href="/docs/devenv/deployworkenv" target="_blank">deployworkenv</a> 自动配置
+import Require from '/docs/_common/deployworkenv.md'
 
-zsh, git, neovim, bat, fzf, rg, fd, pipx 等请见：<a
-  target="_blank" href="/docs/devenv/modern-cli">
-开发环境 - 命令行工具</a>
+<Require />
+
+import {CommandlineCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
+
+配置开发环境：
+
+<CommandlineCatalog />
+
+<DevEnvCatalog />

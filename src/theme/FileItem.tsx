@@ -22,7 +22,7 @@ export default function FileItem({
 
   return (
     <a
-      download
+      download={name}
       href={href}
       className={cs(
         button ? st.button : st.card,

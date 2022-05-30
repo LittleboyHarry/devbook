@@ -3,7 +3,7 @@
 ```shell
 # 记住上次选择的启动项
 sudo sed -i "s/^GRUB_DEFAULT=.*$/GRUB_DEFAULT=saved/" /etc/default/grub
-echo GRUB_SAVEDEFAULT=true | sudo tee -a /etc/default/grub
+echo GRUB_SAVEDEFAULT=true | sudo tee -a /etc/default/grub > /dev/null
 
 # 降低等待时间为 2 秒
 sudo sed -i "s/^GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=2/" /etc/default/grub

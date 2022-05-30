@@ -1,5 +1,5 @@
 ---
-title: JBS 推荐插件
+title: JetBrains 推荐插件
 ---
 
 https://plugins.jetbrains.com/plugin/9615-ideavimextension

@@ -1,5 +1,5 @@
 ---
-title: VSC 配置
+title: VSCode 配置
 sidebar_position: 1
 ---
 
