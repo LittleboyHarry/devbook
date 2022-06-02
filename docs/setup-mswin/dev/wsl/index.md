@@ -14,7 +14,7 @@ import {HtmlA} from '@theme/links';
 
 2.  重启后安装
 
-        wsl --install
+        wsl --update
 
 <!-- <MstoreLink id="9PDXGNCFSCZV" name="Ubuntu" /> -->
 

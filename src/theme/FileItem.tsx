@@ -18,7 +18,8 @@ export default function FileItem({
   button?: boolean;
 }) {
   const href = useBaseUrl(path);
-  const title = (hint ? hint + '，' : '') + '点击或拖拽下载文件';
+  const isChromium = !!window['chrome'];
+  const title = (hint ? hint + '，' : '') + isChromium?'点击或拖拽下载文件':'点击下载文件';
 
   return (
     <a

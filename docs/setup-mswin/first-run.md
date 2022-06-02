@@ -5,18 +5,15 @@ sidebar_position: 2
 
 ## 第一步：备份还原点
 
-运行：
-
-    SystemPropertiesProtection
-
-配置 (Alt+O) > 启动系统保护 > 调整最大使用量 > 确定 > 创建 (Alt+C) > 为创建的还原点起名
+1. 设置 > 系统信息 > 系统保护
+2. 配置 (Alt+O) > 启动系统保护 > 调整最大使用量，确定
+3. 创建 (Alt+C) > 为创建的还原点起名
 
 ## 第二步：系统更新
 
-连接网络，调整<HtmlA href="ms-settings:windowsupdate-options">更新高级选项</HtmlA>：
+连接网络，调整<HtmlA href="ms-settings:windowsupdate-options">更新高级选项</HtmlA>：勾选“接收其他 MS 产品更新”
 
-- 勾选“接收其他 MS 产品更新”
-- 如果不介意使用 P2P 流量分享技术：进入“传递优化”选择 Internet 下载源以提高速度
+<!-- 如果不介意使用 P2P 流量分享技术：进入“传递优化”选择 Internet 下载源以提高速度 -->
 
 此外，更新所有应用软件：
 
@@ -25,7 +22,7 @@ sidebar_position: 2
 
 ## 第三步：更改计算机名
 
-开始菜单关键词 `name` 搜索 “查看电脑名称” 设置
+设置 > 重命名
 
 :::note 创建自定义用户
 
@@ -51,6 +48,13 @@ sidebar_position: 2
 微软 DNS：`4.2.2.1` `4.2.2.2`
 
 [114 DNS](https://www.114dns.com/)：`114.114.114.114` `114.114.115.115`
+
+阿里 DOH, 管理员权限运行：
+
+```bat
+netsh dns add encryption server=223.5.5.5 dohtemplate=https://dns.alidns.com/dns-query autoupgrade=no udpfallback=no
+netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns-query autoupgrade=no udpfallback=no
+```
 
 <!--
 :::info 以下指令需要管理员权限运行

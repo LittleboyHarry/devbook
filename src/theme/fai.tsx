@@ -8,6 +8,7 @@ import {
   faFile,
   faFingerprint,
   faScroll,
+  faDownload
 } from '@fortawesome/free-solid-svg-icons';
 
 type Props = Omit<FontAwesomeIconProps, 'icon'>;
@@ -26,4 +27,8 @@ export function DiskImageIcon(props: Props) {
 
 export function ChecksumIcon(props: Props) {
   return <FontAwesomeIcon {...props} icon={faFingerprint} />;
+}
+
+export function DownloadIcon(props: Props) {
+  return <FontAwesomeIcon {...props} icon={faDownload} />;
 }

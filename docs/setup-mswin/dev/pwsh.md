@@ -38,13 +38,12 @@ import {MstoreButton} from '@theme/links';
 `$PROFILE` 推荐配置：
 
 ```powershell
-mkdir ~\Documents\PowerShell
+mkdir -p ~\Documents\PowerShell
 
-# 使用 Emacs 键盘模式 & 历史预测
-echo "
-Set-PSReadLineOption -EditMode Emacs
-Set-PSReadLineOption -PredictionSource History
-" >> $PROFILE
+# Github
+iwr -useb https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/win/profile.ps1 >> $PROFILE
+# GitCode
+iwr -useb https://gitcode.net/lbh/deployworkenv/-/raw/main/win/profile.ps1 >> $PROFILE
 ```
 
 ## psutils

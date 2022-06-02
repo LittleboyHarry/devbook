@@ -59,8 +59,10 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 推荐设置：
 
 - 配置文件 | 默认值 > 外观 >
-  - 背景不透明度：推荐 85 左右
+  - 配色方案：推荐 `One Half Dark`
+  - 字号
   - 光标形状：实心框
+  - 背景不透明度：推荐 80 左右
 
 ## Git For Windows
 
@@ -69,7 +71,7 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
   ```powershell
   $g4w_metainfo = (Invoke-WebRequest https://registry.npmmirror.com/-/binary/git-for-windows/).Content | ConvertFrom-Json
-  $g4w_latest_info = (Invoke-WebRequest ($g4w_metainfo | Where-Object name -NotMatch 'rc|pre' | Sort-Object -p name -b 1).url).Content | ConvertFrom-Json
+  $g4w_latest_info = (Invoke-WebRequest ($g4w_metainfo | Where-Object name -NotMatch 'rc|pre' | Sort-Object -p date -b 1).url).Content | ConvertFrom-Json
   $g4w_latest_binary = ($g4w_latest_info | Where-Object { $_.name -match "64-bit.exe" }).url
   iwr -o "$([Environment]::GetFolderPath("Desktop"))\install-git.exe" $g4w_latest_binary
 

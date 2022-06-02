@@ -11,9 +11,11 @@ import GetPkg from '@theme/GetPkg';
 
 ## 调优
 
-:::info 一键安装并配置
+import Require from '/docs/_common/deployworkenv.md'
 
-推荐使用作者编写的 `deployworkenv`, 见前文：含 ohmyzsh
+<Require />
+
+:::info 一键安装并配置
 
     zsh/setup
 

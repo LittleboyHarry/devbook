@@ -11,13 +11,6 @@ tags:
 
 <GetPkg name="chromium" pacman dnf />
 
-Windows PowerShell:
-
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope Process
-iwr https://gitee.com/littleboyharry-crx/ohmycrx/raw/master/install-chromium.ps1 | iex
-```
-
 :::
 
 :::note 微软浏览器

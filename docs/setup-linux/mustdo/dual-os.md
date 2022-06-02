@@ -6,9 +6,11 @@ sidebar_position: 8
 ## 注意事项
 
 - 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/setup-mswin/first-run#双系统" target="_blank" >详情方法</a>
-- VeraCrypt 用户打开主界面菜单“设置” > “系统加密 ...” > “高级选项” >
 
-  关闭 “强制 VeraCrypt 引导项作为 EFI 固件启动菜单的第一项” ，确定
+<!--
+- VeraCrypt 用户打开主界面菜单“设置” > “系统加密 ...” > “高级选项” >
+ver  关闭 “强制 VeraCrypt 引导项作为 EFI 固件启动菜单的第一项” ，确定
+ -->
 
 ## 分区自动挂载
 

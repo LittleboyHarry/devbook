@@ -11,23 +11,11 @@ sidebar_position: 4
 
 <GetPkg name="7zip" choco scoop winget="7zip.7zip" />
 
-## 数据防盗
-
-使用 [VeraCrypt](https://www.veracrypt.fr/en/Downloads.html) 加密
-
-<GetPkg name="veracrypt" choco winget />
-
 ## 哈希文件校验
 
 开源软件 [openhashtab](https://github.com/namazso/OpenHashTab)
 
 <GetPkg name="openhashtab" winget choco />
-
-## 全盘搜索
-
-使用 [Everything](https://www.voidtools.com/zh-cn/downloads/#:~:text=%E4%B8%8B%E8%BD%BD%E7%B2%BE%E7%AE%80%E7%89%88%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC%2064%20%E4%BD%8D)
-
-<GetPkg winget="voidtools.Everything.Lite" choco="everything" />
 
 ## 文件传输
 

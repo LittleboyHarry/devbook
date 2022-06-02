@@ -4,6 +4,7 @@ user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 2);
 user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 3);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", true);
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", true);
 
 // HTTPS Only

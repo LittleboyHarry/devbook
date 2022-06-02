@@ -17,8 +17,6 @@ sidebar_position: 64
 
 <GetPkg choco="procexp" />
 
----
-
 ## 监控视图类
 
 ### 进程监控器
@@ -31,22 +29,6 @@ sidebar_position: 64
 
     reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\ProgramData\chocolatey\lib\TcpView\Tools\tcpview.exe" /t REG_SZ /d "~ HIGHDPIAWARE" /f
 
----
-
-## 实用工具类
-
-### 自动登录器
-
-<GetPkg choco="autologon" />
-
-### 虚拟桌面
-
-为 XP 和 Win7 老系统桌面添加多工作空间支持
-
-<GetPkg choco="desktops" />
-
----
-
 ## 命令工具类
 
 ### 注册表跳转
@@ -56,6 +38,17 @@ sidebar_position: 64
 ### 安全擦除文件
 
 <GetPkg choco="sdelete" />
+
+## 实用工具类
+
+### [虚拟桌面](https://docs.microsoft.com/zh-cn/sysinternals/downloads/desktops)
+
+为 XP 和 Win7 老系统桌面添加多工作空间支持
+
+<p><LinkButton name="下载" icon={<DownloadIcon/>} href="https://download.sysinternals.com/files/Desktops.zip" outline /></p>
+
+import { DownloadIcon } from '@theme/fai'
+import { LinkButton } from '@theme/links';
 
 :::note 全量安装
 

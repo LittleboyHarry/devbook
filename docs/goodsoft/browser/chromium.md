@@ -17,3 +17,10 @@ sidebar_position: 2
 问题：
 
 - 不支持谷歌同步服务
+
+## Windows 安装
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope Process
+iwr https://gitcode.net/lbh/ohmycrx/-/raw/master/install-chromium.ps1 | iex
+```

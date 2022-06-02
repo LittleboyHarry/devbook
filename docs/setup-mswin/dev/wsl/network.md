@@ -88,13 +88,13 @@ read WIN_HOST_PORT
 SOCKS5 代理：
 
 ```shell
-echo "socks5 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf > /dev/null
+echo "socks5 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a "$CONFIG" > /dev/null
 ```
 
 HTTP 代理：
 
 ```shell
-echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a /etc/proxychains.conf > /dev/null
+echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a "$CONFIG" > /dev/null
 ```
 
 import GetPkg from '@theme/GetPkg'

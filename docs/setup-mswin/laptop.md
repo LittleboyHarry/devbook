@@ -31,9 +31,21 @@ import {HtmlA} from '@theme/links';
 
 入手的机器 BIOS 可能不是最新版，去厂家官网安装最新的 BIOS 固件升级包，也许可以缓解硬件 bug
 
-## 调音器
+## 数据防盗
 
-[EarTrumpet](https://github.com/File-New-Project/EarTrumpet): <MstoreButton id="9nblggh516xp" name="从商店安装" />
+使用 [VeraCrypt](https://www.veracrypt.fr/en/Downloads.html) 加密
+
+<GetPkg name="veracrypt" choco winget />
+
+:::note 附：[自动登录器](https://docs.microsoft.com/zh-cn/sysinternals/downloads/autologon)
+
+Autologon 是微软官方提供的非自由软件，可设置免输入密码
+
+<GetPkg choco="autologon" />
+
+:::
+
+## 调音器
 
 ## 模拟数字键盘
 

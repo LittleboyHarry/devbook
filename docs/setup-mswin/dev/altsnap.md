@@ -14,7 +14,7 @@ import AltSnapScreenshot from './AltSnapScreenshot';
 
 :::caution BUG
 
-截至 2021/12/14 WSLg 窗口还不受支持，需要添加到排除列表
+截至 2021/12/14 WSLg 窗口还不受支持，需要添加 `mstsc.exe` 到排除列表
 
 :::
 

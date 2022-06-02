@@ -25,7 +25,7 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Mult
 
 打开<HtmlA href="ms-settings:regionlanguage">“语言和区域”设置</HtmlA>，
 更改“国家或地区”为美国[^1]，
-然后安装<MstoreLink id="9NJHK44TTKSX" name="亚马逊应用商店" />即可安装子系统
+然后<MstoreLink id="9P3395VX91NR" name="从应用商店安装" />
 
 [^1]: 从列表末 `PageUp` 上翻约 9\~10 次可以找到
 
