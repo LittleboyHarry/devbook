@@ -36,17 +36,24 @@ sidebar_position: 1
 "terminal.integrated.fontSize": 16,
 ```
 
-:::note 如果你在 Linux 中修改过键盘映射
+<a href="../font" target="_blank" >
 
-    "keyboard.dispatch": "keyCode",
-
+:::note 推荐字体
 :::
+
+</a>
 
 :::note 终端主题配色
 
 挑选一款喜欢的固定终端配色，不会随编辑器主题切换而变化：
 
 https://glitchbone.github.io/vscode-base16-term/
+
+:::
+
+:::note 如果你在 Linux 中修改过键盘映射
+
+    "keyboard.dispatch": "keyCode",
 
 :::
 

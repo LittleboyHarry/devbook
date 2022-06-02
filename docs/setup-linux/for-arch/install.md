@@ -5,7 +5,7 @@ sidebar_position: 2
 
 插入 U 盘，进入启动盘
 
-:::info 界面字体太小？
+:::note 界面字体太小？
 
 ```shell
 # 展示
@@ -18,7 +18,7 @@ setfont ter-i24b
 
 :::
 
-:::info 作者推荐脚本
+:::note 作者推荐脚本
 
 ```shell
 # 国内镜像：
@@ -33,19 +33,19 @@ less archinst/*
 
 :::
 
-:::info 改进国内下载速度
+:::note 改进国内下载速度
 
     archinst/cn-accer
 
 :::
 
-## 自动安装
+## 向导分区安装
 
 执行，[配置选项](#推荐的选项配置)
 
     archinstall
 
-## 手动安装
+## 手动分区安装
 
 适用于：双系统多分区、数据加密
 
@@ -62,7 +62,7 @@ less archinst/*
 
 重置 EFI 分区并清除所有启动项，请使用 `mkfs.vfat /dev/...`
 
-:::info 加密分区
+:::note 加密分区
 
 自动配置脚本：若不要加密，配置 `export noEncrypt=1`
 
@@ -106,9 +106,9 @@ less archinst/*
 
    选择目标硬盘
 
-3. **Select disk layout**
+3. **Select disk layout** \*
 
-   如果不保留硬盘数据，全盘安装 Arch，则可以选择 `wipe all ...`
+   （ 仅“向导分区安装”时可见 ）如果不保留硬盘数据，全盘安装 Arch，则可以选择 `wipe all ...`
 
 4. **Select bootloader**
 
@@ -141,7 +141,7 @@ less archinst/*
 
 11. **Select timezone**
 
-    搜索 `hai` 选择 Asia/Shanghai
+    搜索 `hai` 选择 `Asia/Shanghai`
 
 完成配置后，可选择保存配置。随后安装
 
@@ -153,7 +153,7 @@ less archinst/*
 
 作用：
 
-- 备份 /boot 启动分区到 boot.tgz
+- 备份 `/boot` 启动分区到 boot.tgz
 - 为 btrfs 调整以支持 timeshift
 
 对非 btrfs 文件系统，想要备份，只能使用 tar 全量备份根文件系统

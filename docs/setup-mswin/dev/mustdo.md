@@ -115,9 +115,9 @@ git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
 
 ## 开发神器
 
-### VSCode
+### <a href="/docs/devenv/vscode/settings" target="_blank">VSCode</a>
 
-<FileItem name="从官网下载安装包" path="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" button icon={<FontAwesomeIcon icon={faBox} />}/>
+安装包：<FileItem name="官网下载" path="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" button icon={<FontAwesomeIcon icon={faBox} />}/>
 
 或从国内 CDN 下载 VSCode 安装包到桌面：
 
@@ -149,9 +149,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import { faCircleNodes } from '@fortawesome/free-solid-svg-icons';
 
-<FileItem name="安装包 ( by TUNA )" path="https://mirrors.tuna.tsinghua.edu.cn/virtualbox/virtualbox-Win-latest.exe" button icon={<FontAwesomeIcon icon={faCircleNodes} />}/>
-or
-&nbsp;<HtmlA href="https://mirrorz.org/list/virtualbox">其他镜像站</HtmlA>
+从镜像站下载：<FileItem name="清华镜像站" path="https://mirrors.tuna.tsinghua.edu.cn/virtualbox/virtualbox-Win-latest.exe" button icon={<FontAwesomeIcon icon={faCircleNodes} />}/>
+或
+&nbsp;<HtmlA href="https://mirrorz.org/list/virtualbox">其他</HtmlA>
 
 :::note 自动化管理 vbox
 

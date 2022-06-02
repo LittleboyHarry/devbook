@@ -36,11 +36,11 @@ reg add HKCU\Software\Microsoft\ColorFiltering /v FilterType /t REG_DWORD /d 2 /
 
 ```
 
-## 字体模糊？
+## 字体
 
-若渲染效果不满，使用调整工具：
+<p><a href="/docs/devenv/font" target="_blank">更多推荐字体</a></p>
 
-    cttune
+若字体模糊不清晰，使用 `cttune` 工具调整
 
 ## 开始菜单
 
@@ -62,5 +62,6 @@ reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSug
 :::
 
 推荐代替品：[安装 Everything](https://www.voidtools.com/zh-cn/downloads/#:~:text=%E4%B8%8B%E8%BD%BD%E7%B2%BE%E7%AE%80%E7%89%88%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC%2064%20%E4%BD%8D)
+（ 精简版安装版本 64 位 ）
 
 <GetPkg winget="voidtools.Everything.Lite" choco="everything" />

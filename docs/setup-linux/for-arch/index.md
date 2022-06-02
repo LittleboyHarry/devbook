@@ -9,8 +9,6 @@ title: 安装 Arch Linux
 
 :::
 
-## 下载镜像
-
 import LogoCard from '@theme/LogoCard';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
@@ -24,12 +22,12 @@ logo={<img src={useBaseUrl('/img/icons/arch.svg')} />}
 
 import FileItem from '@theme/FileItem'
 import { ChecksumIcon } from '@theme/fai';
-
-<FileItem button name="校验信息" path="https://archlinux.org/iso/latest/sha256sums.txt" icon={<ChecksumIcon />}/>
-
 import { LinkButton } from '@theme/links';
 
+<p>
+<FileItem button name="校验信息" path="https://archlinux.org/iso/latest/sha256sums.txt" icon={<ChecksumIcon />}/>
 <LinkButton outline href="https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" name="安装 Wiki" icon />
+</p>
 
 <HtmlA href="bootable" target="_blank">
 

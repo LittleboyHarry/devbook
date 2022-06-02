@@ -7,32 +7,16 @@ sidebar_position: 7
 
 <BPlayer id="BV19r4y1W74d" />
 
-### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
+## 出版字体
 
-用途：编程
+### Noto Sans
 
-<GetPkg
-apt="fonts-jetbrains-mono"
-dnf="jetbrains-mono-fonts"
-scoop="JetBrains-Mono"
-choco="jetbrainsmono"
-pacman="ttf-jetbrains-mono"
-/>
+推荐使用思源宋体，Windows 下载链接:（ 又名 Noto Font, 来自清华镜像站 ）
 
-为 VSCode `settings.json` 配置：
+- [通用字体集](https://mirrors.tuna.tsinghua.edu.cn/github-release/googlefonts/noto-cjk/LatestRelease/03_NotoSansCJK-OTC.zip)
+- [等宽版](https://mirrors.tuna.tsinghua.edu.cn/github-release/googlefonts/noto-cjk/LatestRelease/13_NotoSansMonoCJKsc.zip)
 
-```json
-"editor.fontFamily": "JetBrains Mono",
-"editor.fontLigatures": true,
-```
-
-> 注：对 apt 包管理器而言，
-> [Debian 11](https://packages.debian.org/bullseye/source/fonts-jetbrains-mono)
-> 和
-> [Ubuntu 21.04](https://launchpad.net/ubuntu/+source/fonts-jetbrains-mono)
-> 以上版本的系统，仓库源才开始提供
-
-<br/>
+## 编程字体
 
 ### CascadiaCode
 
@@ -41,14 +25,6 @@ pacman="ttf-jetbrains-mono"
 微软出品的 Windows 终端内置默认字体，Linux 安装：
 
 <GetPkg apt="fonts-cascadia-code" dnf="cascadia-code-fonts" pacman="ttf-cascadia-code" />
-
-VSCode `settings.json` 设置：
-
-```json
-"terminal.integrated.fontFamily": "Cascadia Mono",
-"editor.fontFamily": "Cascadia Code",
-"editor.fontLigatures": true,
-```
 
  <details className="let-details-to-gray" role="alert">
 <summary>Nerd Font 版</summary>
@@ -80,6 +56,26 @@ Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 
 <br/>
 
+### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
+
+用途：编程
+
+<GetPkg
+apt="fonts-jetbrains-mono"
+dnf="jetbrains-mono-fonts"
+scoop="JetBrains-Mono"
+choco="jetbrainsmono"
+pacman="ttf-jetbrains-mono"
+/>
+
+> 注：对 apt 包管理器而言，
+> [Debian 11](https://packages.debian.org/bullseye/source/fonts-jetbrains-mono)
+> 和
+> [Ubuntu 21.04](https://launchpad.net/ubuntu/+source/fonts-jetbrains-mono)
+> 以上版本的系统，仓库源才开始提供
+
+<br/>
+
 ### 等距更纱
 
 用途：中英文排版、编程
@@ -90,11 +86,20 @@ Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 
 <GetPkg pacman="ttf-sarasa-gothic" />
 
-为 VSCode `settings.json` 配置：
+## VSCode 设置
+
+综合设置：
+
+```json
+"terminal.integrated.fontFamily": "'Cascadia Mono'",
+"editor.fontFamily": "'Cascadia Code','Noto Sans CJK SC'",
+"editor.fontLigatures": true,
+```
+
+等距更纱：
 
 ```json
 "editor.fontFamily": "Sarasa Term SC",
-"editor.fontLigatures": true,
 ```
 
 import GetPkg from '@theme/GetPkg';
