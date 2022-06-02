@@ -22,10 +22,10 @@ setfont ter-i24b
 
 ```shell
 # 国内镜像：
-bash -c "$(curl -fsSL https://gitcode.net/lbh/dwe/-/raw/main/archinst/_gitcode)"
+curl -L https://s.nxw.so/arc | bash -
 
 # 上游版：
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/archinst/_github)"
+curl -L https://t.ly/Fud- | bash -
 
 # 审查代码 ( :n 查看下一文件 )
 less archinst/*

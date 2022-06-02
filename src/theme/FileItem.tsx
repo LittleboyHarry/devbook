@@ -3,6 +3,7 @@ import st from './FileItem.module.scss';
 import cs from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { FileIcon } from './fai';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 
 export default function FileItem({
   name,
@@ -18,7 +19,8 @@ export default function FileItem({
   button?: boolean;
 }) {
   const href = useBaseUrl(path);
-  const isChromium = !!window['chrome'];
+  const isBrowser = useIsBrowser();
+  const isChromium = isBrowser && !!window['chrome'];
   const title =
     (hint ? hint + '，' : '') +
     (isChromium ? '点击或拖拽下载文件' : '点击下载文件');

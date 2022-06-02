@@ -65,3 +65,5 @@ reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSug
 （ 精简版安装版本 64 位 ）
 
 <GetPkg winget="voidtools.Everything.Lite" choco="everything" />
+
+import GetPkg from '@theme/GetPkg';

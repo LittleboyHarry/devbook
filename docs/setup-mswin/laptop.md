@@ -56,3 +56,4 @@ Autologon 是微软官方提供的非自由软件，可设置免输入密码
 import { ScriptIcon } from '@theme/fai';
 import FileItem from '@theme/FileItem'
 import {MstoreButton} from '@theme/links';
+import GetPkg from '@theme/GetPkg';
