@@ -34,6 +34,7 @@ kwriteconfig5 --file kwinrc --group Plugins --key kwin4_effect_dimscreenEnabled 
 
 :::
 
+<!--
  <details className="let-details-to-gray" role="alert">
 <summary>Kubuntu Wayland</summary>
 
@@ -53,3 +54,4 @@ sudo apt install -y wl-clipboard
 然后注销会话，左下角选择 wayland 登陆以生效。
 
 </details>
+ -->

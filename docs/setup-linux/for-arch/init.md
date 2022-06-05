@@ -34,7 +34,8 @@ import OpenTerminal from '../\_common/openterminal.md'
 
 <OpenTerminal />
 
-<PreferXde gnome kde noSelector><ForGnome>
+<PreferXde gnome kde noSelector>
+<ForGnome>
 
 :::note 使用暗色终端主题
 
@@ -42,7 +43,18 @@ import OpenTerminal from '../\_common/openterminal.md'
 
 :::
 
-</ForGnome></PreferXde>
+</ForGnome>
+<ForKde>
+
+:::info 喜欢下拉式终端吗？
+
+搜索 `autostart` 设置自动启动 ( 添加 | 添加应用程序 )。
+随后搜索 `yakuake` 打开程序设置全局快捷键可用
+
+:::
+
+</ForKde>
+</PreferXde>
 
 ### 作者推荐工具
 
@@ -64,34 +76,10 @@ import KdeMustDo from '../\_common/kde-mustdo.md';
     <ForKde><KdeMustDo /></ForKde>
 </PreferXde>
 
-<PreferXde gnome kde noSelector>
-<ForKde>
-
-:::note 喜欢下拉式终端吗？
-
-<GetPkg name="yakuake" apt pacman dnf />
-
-安装后，搜索 `autostart` 设置自动启动 ( 添加 | 添加应用程序 )。
-随后打开程序设置全局快捷键即可
-
-:::
-
-</ForKde>
-</PreferXde>
-
 :::caution 注销并重新登录以生效
 :::
 
 <br/>
-
-### 调整 Grub
-
-- 记住上次选择的启动项
-- 降低等待时间为 2 秒
-- 自动添加其他系统启动项
-- 推荐皮肤
-
-      arch/bettergrub
 
 ### 引用内容
 
@@ -110,29 +98,23 @@ export function OptimizeDe(){
 
 ## 推荐配置
 
-<PreferXde gnome kde noSelector><ForGnome>
-
-:::note 卸载不需要的应用
-
-    sudo pacman -Rns gnome-weather gnome-maps
-
-:::
-
-</ForGnome></PreferXde>
-
 ### Firefox 浏览器
 
 import { LinkButton } from '@theme/links';
 
-<LinkButton outline name="推荐的配置" href="/docs/goodsoft/browser/firefox" newTab />
+<p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/browser/firefox" newTab /></p>
 
 打开设置，找到语言，选择“简体中文”
 
+### VLC 播放器
+
+<GetPkg name='vlc' pacman />
+
 ### 开发环境
 
-必装：
+安装 ohmyzsh:
 
-    sudo pacman -S --noconfirm base-devel
+    cn/setup-zsh
 
 <BasicCatalog />
 

@@ -22,13 +22,17 @@ setfont ter-i24b
 
 ```shell
 # 国内镜像：
-curl -fsSL https://s.nxw.so/arc | bash -
+curl -fsSL https://s.nxw.so/arc > a
+# cat a
+bash -
 
 # 上游版：
-curl -fsSL https://t.ly/Fud- | bash -
+curl -fsSL https://t.ly/Fud- > a
+# cat a
+bash -
 
-# 审查代码 ( :n 查看下一文件 )
-less ais/*
+# 代码审查
+find ais -type f -exec less {} \;
 ```
 
 :::

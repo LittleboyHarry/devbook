@@ -1,6 +1,6 @@
-:::info 使用环境自动部署脚本集
+:::tip 使用环境自动部署脚本集
 
- <details>
+ <details className='let-details-to-gray'>
 <summary><code>deployworkenv</code> 的获取方法</summary>
 
 使用 git 工具克隆：

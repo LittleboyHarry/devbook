@@ -27,3 +27,14 @@ sidebar_position: 1
 ## 建议
 
 - 游戏需求请优先考虑装 Windows 双系统
+
+## 安装教程
+
+<LogoCard
+    name="Arch Linux"
+    noNewTab to="for-arch"
+    logo={<img src={useBaseUrl('/img/icons/arch.svg')} />}
+/>
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import LogoCard from '@theme/LogoCard';
