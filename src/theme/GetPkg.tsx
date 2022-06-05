@@ -143,7 +143,7 @@ export default function GetPkg({
     key: 'pacman',
     label: 'pacman',
     defaultPkgName: name,
-    prefix: 'yes | sudo pacman -S',
+    prefix: 'sudo pacman -S --noconfirm',
   });
 
   addItem({

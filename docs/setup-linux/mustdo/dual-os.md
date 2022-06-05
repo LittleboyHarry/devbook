@@ -6,16 +6,17 @@ sidebar_position: 8
 ## 注意事项
 
 - 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/setup-mswin/first-run#双系统" target="_blank" >详情方法</a>
-
-<!--
-- VeraCrypt 用户打开主界面菜单“设置” > “系统加密 ...” > “高级选项” >
-ver  关闭 “强制 VeraCrypt 引导项作为 EFI 固件启动菜单的第一项” ，确定
- -->
+- 对于 VeraCrypt, 打开主界面菜单“设置” > “系统加密 ...” >
+  “高级选项” |  “强制 VeraCrypt 引导项作为 EFI 固件启动菜单的第一项” 关闭确定
 
 ## 分区自动挂载
 
+<PreferXde gnome kde noSelector><ForKde>
+      <GetPkg name='gnome-disk-utility' pacman dnf />
+</ForKde></PreferXde>
+
 为其它数据分区设置自动挂载，以免每次启动后需要手动挂载。
-推荐搜索关键此 `disk` 或 `part` 分别打开 GNOME 或 KDE 的图形化分区助手，配置：
+推荐搜索关键词 `disk` 打开 GNOME 硬盘，配置：
 
 1.  关闭“用户会话默认值”
 2.  禁用“显示用户界面”
@@ -79,3 +80,10 @@ Linux 下 efibootmgr 使用
 启动切换助手 [Inokinoki/QEFIEntryManager](https://github.com/Inokinoki/QEFIEntryManager)
 [下载](https://github.com/Inokinoki/QEFIEntryManager/releases/latest)
 -->
+
+import {
+PreferXde,
+ForGnome,
+ForKde
+} from '@theme/PreferXde';
+import GetPkg from '@theme/GetPkg';

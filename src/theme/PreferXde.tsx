@@ -15,8 +15,8 @@ export function PreferXde({
   gnome,
   kde,
   children,
-  hideSelector,
-}: ScopeOf<Value> & { hideSelector?: boolean }) {
+  noSelector,
+}: ScopeOf<Value> & { noSelector?: boolean }) {
   return (
     <PreferScope
       storeNamePrefix="preferXde"
@@ -24,7 +24,7 @@ export function PreferXde({
       storeKeywords={['gnome', 'kde']}
       keywords={['GNOME', 'KDE']}
       hint="选择 X 桌面环境："
-      {...{ defaultValue, context, children, triggers, hideSelector }}
+      {...{ defaultValue, context, children, triggers, noSelector }}
     />
   );
 }

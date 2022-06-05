@@ -12,15 +12,20 @@ Firefox 推荐的配置：
 
 :::note 使用方法
 
-1.  ```shell
+1.  打开配置文件信息页：
+    ```shell
     firefox about:profiles
     ```
-2.  找到 “正在使用此配置文件” 对应表格的 “根目录” 行上点击“打开目录” （ MSIX 版目录：
+2.  找到 “正在使用此配置文件” 对应表格的 “根目录” 行上点击“打开目录”
 
-        %LOCALAPPDATA%\Packages\Mozilla.Firefox_n80bbvh6b1yt2\LocalCache\Roaming\Mozilla\Firefox\Profiles
-
-3.  下载 <FileItem button name="user.js" path="/config/firefox.js" icon={<ScriptIcon />}/> 到该目录中
+3.  下载&nbsp;<FileItem button name="user.js" path="/config/firefox/user.js" icon={<ScriptIcon />}/> 到该目录中
 4.  重启 Firefox 生效
+
+<details className="let-details-to-gray" role="alert">
+<summary>附：Windows MSIX 版目录</summary>
+
+    %LOCALAPPDATA%\Packages\Mozilla.Firefox_n80bbvh6b1yt2\LocalCache\Roaming\Mozilla\Firefox\Profiles
+</details>
 
 :::
 

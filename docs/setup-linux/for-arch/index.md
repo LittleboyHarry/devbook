@@ -26,6 +26,7 @@ import { LinkButton } from '@theme/links';
 
 <p>
 <FileItem button name="校验信息" path="https://archlinux.org/iso/latest/sha256sums.txt" icon={<ChecksumIcon />}/>
+&nbsp;
 <LinkButton outline href="https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" name="安装 Wiki" icon />
 </p>
 

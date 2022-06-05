@@ -5,12 +5,6 @@ sidebar_position: 8
 
 import GetPkg from '@theme/GetPkg';
 
-## 自动登陆
-
-搜索关键词 `sddm` 点击“行为设置”按钮可激活自动登陆
-
-缺点：不支持 kwallet 密码本自动解锁
-
 ## 来自 GNOME 的软件
 
 <!--

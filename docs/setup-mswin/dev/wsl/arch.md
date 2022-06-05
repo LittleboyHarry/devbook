@@ -59,7 +59,7 @@ pacman-key --init
 pacman-key --populate archlinux
 
 # 智能选镜像，快速更新系统
-yes | pacman -Sy reflector
+pacman -Sy --noconfirm reflector
 pushd /etc/pacman.d
 cp -n mirrorlist mirrorlist.old
 if [[ -z ${USE_CN_MIRROR} ]]; then
@@ -128,10 +128,10 @@ import Require from '/docs/_common/deployworkenv.md'
 
 systemd 模拟器：https://github.com/arkane-systems/genie/releases/tag/v2.2
 
-import {CommandlineCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
+import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
 ### 开发环境
 
-<CommandlineCatalog />
+<BasicCatalog />
 
 <DevEnvCatalog />

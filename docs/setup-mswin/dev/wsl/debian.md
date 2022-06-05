@@ -49,10 +49,10 @@ import Require from '/docs/_common/deployworkenv.md'
 
 <Require />
 
-import {CommandlineCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
+import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
 配置开发环境：
 
-<CommandlineCatalog />
+<BasicCatalog />
 
 <DevEnvCatalog />

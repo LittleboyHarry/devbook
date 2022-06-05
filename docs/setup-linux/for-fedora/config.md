@@ -3,7 +3,11 @@ title: 配置 Fedora
 sidebar_position: 2
 ---
 
- <details className="let-details-to-gray" role="alert">
+<PreferXde gnome kde />
+
+ <PreferXde gnome kde noSelector>
+<ForGnome>
+<details className="let-details-to-gray" role="alert">
 <summary>欢迎向导中的 “第三方软件源” 是什么？</summary>
 
 包括：
@@ -16,6 +20,8 @@ sidebar_position: 2
 不建议开启，因为上游源 copr 下载速度很慢。可以在 GNOME 商店中关闭
 
 </details>
+</ForGnome>
+</PreferXde>
 
 <!--
 方法二：使用“GNOME 软件”更新
@@ -23,11 +29,9 @@ sidebar_position: 2
 [^2]: 若经常发生 Linux 内核故障，请看[内核问题](/docs/setup-linux/kernel#fedora)文档
 -->
 
-:::info 打开终端
+import OpenTerminal from '../\_common/openterminal.md'
 
-光标置于左上角，激活活动概览后，搜索 `terminal` 打开
-
-:::
+<OpenTerminal />
 
 ## 调优
 
@@ -72,7 +76,7 @@ sudo dnf makecache
 
 ## 调整桌面环境
 
-import ContentDe from '../\_common/startde.md';
+import ContentDe from '../\_common/preparede.md';
 
 <ContentDe />
 
@@ -161,3 +165,9 @@ sudo dnf in -y \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf check-update
 ```
+
+import {
+PreferXde,
+ForGnome,
+ForKde
+} from '@theme/PreferXde';

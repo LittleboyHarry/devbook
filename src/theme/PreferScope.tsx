@@ -41,7 +41,7 @@ export function PreferScope<T extends string>({
   keywords,
   hint,
   triggers,
-  hideSelector,
+  noSelector,
 }: PropsWithChildren<{
   defaultValue: T;
   storeNamePrefix: string;
@@ -51,7 +51,7 @@ export function PreferScope<T extends string>({
   keywords: string[];
   hint?: string;
   triggers: Set<(value: T) => void>;
-  hideSelector?: boolean;
+  noSelector?: boolean;
 }>) {
   const isBrowser = useIsBrowser();
   const [currentValue, setCurrentValue] = useState<T>(defaultValue);
@@ -100,7 +100,7 @@ export function PreferScope<T extends string>({
           setCurrentValue: _setCurrentValue,
         }}
       >
-        {!hideSelector && (
+        {!noSelector && (
           <div className={cs('pills', 'pills--block', st.selector)}>
             {hint && <div className={st.hint}>{hint}</div>}
             {storeFlags.map(

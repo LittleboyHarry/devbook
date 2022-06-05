@@ -13,15 +13,9 @@ sidebar_position: 15
 
     pkginst/tlp
 
-<!--
-## AppImage 集成
 
-[rpm 下载](https://github.com/TheAssassin/AppImageLauncher/releases/latest#:~:text=x86_64.rpm)
-|
-[deb 下载](https://github.com/TheAssassin/AppImageLauncher/releases/latest#:~:text=bionic_amd64.deb)
--->
-
-## 外界显示器亮度
+ <details className="let-details-to-gray" role="alert">
+<summary>外接显示器亮度</summary>
 
     sudo dnf in -y ddcutil
 
@@ -40,5 +34,7 @@ ddcutil setvcp 10 0
 # 设置对比度
 ddcutil setvcp 12 100
 ```
+
+</details>
 
 import GetPkg from '@theme/GetPkg';

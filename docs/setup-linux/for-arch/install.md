@@ -22,20 +22,20 @@ setfont ter-i24b
 
 ```shell
 # 国内镜像：
-curl -L https://s.nxw.so/arc | bash -
+curl -fsSL https://s.nxw.so/arc | bash -
 
 # 上游版：
-curl -L https://t.ly/Fud- | bash -
+curl -fsSL https://t.ly/Fud- | bash -
 
 # 审查代码 ( :n 查看下一文件 )
-less archinst/*
+less ais/*
 ```
 
 :::
 
 :::note 改进国内下载速度
 
-    archinst/cn-accer
+    ais/cn/preinit
 
 :::
 
@@ -66,7 +66,7 @@ less archinst/*
 
 自动配置脚本：若不要加密，配置 `export noEncrypt=1`
 
-    archinst/makebtrfs
+    ais/makebtrfs
 
 评估各种算法的速度：`cryptsetup benchmark`
 
@@ -76,11 +76,11 @@ less archinst/*
 
 挂载分区
 
-    archinst/mount
+    ais/mount
 
 :::caution [检查 GRUB 安装器 BUG](https://github.com/archlinux/archinstall/issues/1189)
 
-    archinst/fixbug
+    ais/fixbug
 
 :::
 
@@ -92,7 +92,7 @@ less archinst/*
 
 开始安装
 
-    archinst/start
+    ais/start
 
 :::
 
@@ -130,16 +130,11 @@ less archinst/*
 
    选择 `linux-lts`, 若新设备不兼容则改用 linux (最新版)
 
-9. **Additional packages to install**
+9. **Configure network**
 
-   - 填入 `git` 稍后用到
-   - 对需要防火墙的个人或家用设备，建议填入 ufw ( 或图形化版 gufw )
+   选择 `NetworkManager`，用于图形化系统
 
-10. **Configure network**
-
-    选择 `NetworkManager`，用于图形化系统
-
-11. **Select timezone**
+10. **Select timezone**
 
     搜索 `hai` 选择 `Asia/Shanghai`
 
@@ -147,9 +142,10 @@ less archinst/*
 
 ## 备份系统
 
-安装完成后，不要进入子系统。执行：
+安装完成后，退出子系统。执行：
 
-    archinst/postfix
+    ais/postinit
+    ais/cn/postinit # 中文支持
 
 作用：
 

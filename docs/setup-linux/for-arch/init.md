@@ -5,20 +5,36 @@ sidebar_position: 3
 
 重新启动机器，进入 Arch 系统
 
-## 先决配置
+<PreferXde gnome kde><ForKde>
 
-### 考虑启用防火墙
+:::note 搜索方法
 
-若需要开发防火墙：打开 gufw 激活防火墙，随后添加条目，常用的如：KDE Connect
-
-:::note 打开终端的方法
-
-点击左上角 “活动” 按钮，输入 “terminal” 打开
+`Alt + Space` 启动 KRunner 以搜索
 
 :::
 
-<PreferXde gnome kde>
-<ForGnome>
+</ForKde></PreferXde>
+
+## 重要配置
+
+### 启用防火墙
+
+搜索 `gufw` 打开防火墙：除非在虚拟机内，建议家宿主用设备均激活防火墙。添加常见白名单条目，如：KDE Connect
+
+### 中文支持
+
+<p><PreferXde gnome kde noSelector>
+<ForGnome>随后打开“语言与区域”设置，改为中文。注销生效</ForGnome>
+<ForKde>搜索 "lang", 点击右下角按钮添加列表底部的“简体中文”并置顶</ForKde>
+</PreferXde></p>
+
+<br/>
+
+import OpenTerminal from '../\_common/openterminal.md'
+
+<OpenTerminal />
+
+<PreferXde gnome kde noSelector><ForGnome>
 
 :::note 使用暗色终端主题
 
@@ -26,61 +42,29 @@ sidebar_position: 3
 
 :::
 
-</ForGnome>
-</PreferXde>
+</ForGnome></PreferXde>
 
 ### 作者推荐工具
 
-import Require from '/docs/_common/deployworkenv.md'
+import Require from '/docs/\_common/deployworkenv.md'
 
 <Require />
 
-### 中文支持
+### 配置桌面环境
 
-    cn/arch-locale
+import PrepareDe from '../\_common/preparede.md';
 
-<PreferXde gnome kde hideSelector>
-<ForGnome>随后打开“语言与区域”设置，改为中文。注销生效</ForGnome>
+<PrepareDe />
+
+import GnomeMustDo from '../\_common/gnome-mustdo.md';
+import KdeMustDo from '../\_common/kde-mustdo.md';
+
+<PreferXde gnome kde noSelector>
+    <ForGnome><GnomeMustDo /></ForGnome>
+    <ForKde><KdeMustDo /></ForKde>
 </PreferXde>
 
-## 配置桌面环境
-
-- 程序坞调整固定程序
-
-import Content1 from '../\_common/startde.md';
-
-<Content1 />
-
-import Content2 from '../\_common/gnome-mustdo.md';
-
-<Content2 />
-
-<!--
-## KDE 软件推荐
-
-```shell
-sudo pacman -S breeze-icons adwaita-qt5 yakuake dolphin
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command 'yakuake'
-```
- -->
-
-## 关键配置
-
-### 镜像源加速
-
-<!--
-# 如果默认 mirrorlist 无法下载，可先改用阿里云：
-echo 'Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch' | sudo tee -a etc/pacman.d/mirrorlist
- -->
-
-安装 reflector 并自动加速
-
-```shell
-sudo pacman -S reflector
-cn/arch-pacman
-```
-
-<PreferXde gnome kde hideSelector>
+<PreferXde gnome kde noSelector>
 <ForKde>
 
 :::note 喜欢下拉式终端吗？
@@ -95,9 +79,10 @@ cn/arch-pacman
 </ForKde>
 </PreferXde>
 
-### Zsh
+:::caution 注销并重新登录以生效
+:::
 
-<a href="/docs/devenv/zsh" target="_blank" >参考内容</a>
+<br/>
 
 ### 调整 Grub
 
@@ -110,49 +95,54 @@ cn/arch-pacman
 
 ### 引用内容
 
-见后文内容：
+1. <a target="_blank" href="../mustdo/dual-os">双系统</a>
+2. <a target="_blank" href="../mustdo/device">设备问题</a>
+3. <a target="_blank" href="../mustdo/kernel">内核问题</a>
+4. <OptimizeDe />
+5. <a target="_blank" href="../mustdo/chinese">中文输入法</a>
 
-1. <a target="_blank" href="../mustdo/chinese">中文输入法</a>
-2. <a target="_blank" href="../mustdo/dual-os">双系统的配置</a>
-3. <a target="_blank" href="../mustdo/device">设备问题</a>
-4. <a target="_blank" href="../mustdo/kernel">内核问题</a>
+export function OptimizeDe(){
+    return <PreferXde gnome kde noSelector>
+       <ForGnome><a href='../mustdo/gnome' target='_blank'>GNOME 配置</a></ForGnome>
+       <ForKde><a href='../mustdo/kde' target='_blank'>KDE 配置</a></ForKde>
+   </PreferXde>
+}
 
 ## 推荐配置
 
-### 卸载不需要的应用
+<PreferXde gnome kde noSelector><ForGnome>
 
-国内用不上的：
+:::note 卸载不需要的应用
 
     sudo pacman -Rns gnome-weather gnome-maps
 
-### 安装 Firefox 浏览器
+:::
 
-    arch/getfirefox
+</ForGnome></PreferXde>
+
+### Firefox 浏览器
+
+import { LinkButton } from '@theme/links';
 
 <LinkButton outline name="推荐的配置" href="/docs/goodsoft/browser/firefox" newTab />
 
-import { ScriptIcon } from '@theme/fai';
-import { LinkButton } from '@theme/links';
+打开设置，找到语言，选择“简体中文”
 
-### 使用 Neovim
+### 开发环境
 
-见<a href="/docs/devenv/neovim" target="_blank">文章</a>
+必装：
 
-### 安装开发工具
+    sudo pacman -S --noconfirm base-devel
 
-    sudo pacman -S --noconfirm base-devel git wget vi
+<BasicCatalog />
+
+<DevEnvCatalog hidePl />
 
 ### AUR 助手 yay
 
 原版：
 
-```shell
-cd ~
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd -
-```
+    arch/getyay
 
 :::note 国服加速安装：
 
@@ -164,10 +154,10 @@ cd -
 
 :::
 
- <PreferXde gnome kde hideSelector>
+ <PreferXde gnome kde noSelector>
 <ForGnome>
 
-### GNOME 优化
+:::note GNOME 优化
 
 打开设置，激活自动登录
 
@@ -182,6 +172,8 @@ cd -
 Qt 主题修改器：
 
     arch/qtingnome
+
+:::
 
 </ForGnome>
 </PreferXde>
@@ -210,6 +202,7 @@ sudo systemctl enable v2raya --now
 :::caution 重启计算机后完成更改
 :::
 
+import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 import {
 PreferXde,
 ForGnome,

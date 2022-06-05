@@ -23,3 +23,6 @@ user_pref("browser.urlbar.placeholderName.private", "Bing");
 // ECH 技术：https://www.cnbeta.com/articles/tech/1075619.htm
 user_pref("network.dns.echconfig.enabled", true);
 user_pref("network.dns.http3_echconfig.enabled", true);
+
+// 禁用
+user_pref("extensions.pocket.enabled", false);

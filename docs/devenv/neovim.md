@@ -36,7 +36,7 @@ cd ~/.config/nvim
 [ -x "$(command -v xdg-open)" ] && xdg-open . || echo "复制下载链接，使用 wget 下载"
 ```
 
-下载该配置：<FileItem button name="init.vim" path="/config/nvim.vim" icon={<ScriptIcon />} />
+下载该配置：<FileItem button name="init.vim" path="/config/neovim/init.vim" icon={<ScriptIcon />} />
 
 import { ScriptIcon } from '@theme/fai';
 import FileItem from '@theme/FileItem'

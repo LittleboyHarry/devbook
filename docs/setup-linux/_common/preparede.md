@@ -1,6 +1,7 @@
 :::note 界面缩放与文字大小
 
-**对于 GNOME：**
+ <PreferXde gnome kde noSelector>
+<ForGnome>
 
 使用 `gnome-tweaks` 的“字体”面板，14 寸笔记本显示屏推荐增大 **2~3 磅**
 
@@ -21,13 +22,15 @@ END
 
 </details>
 
----
+</ForGnome><ForKde>
 
-**对于 KDE：**
+搜索关键词 `fonts` 进入设置，点击上方“调整所有字体…”的按钮
 
-搜索关键词 `fonts` 设置，重新登陆后生效
+- 字体推荐选择 `Noto Sans CJK SC`
+- 1080p 分辨率 14\~16寸 中文界面的字体大小推荐加多 **5\~3 磅**
 
-1080p 分辨率 14\~16寸 中文界面的字体大小推荐为 **4\~3 磅**
+</ForKde>
+</PreferXde>
 
 :::
 
@@ -59,3 +62,8 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
  -->
 
 import GetPkg from '@theme/GetPkg';
+import {
+PreferXde,
+ForGnome,
+ForKde
+} from '@theme/PreferXde';

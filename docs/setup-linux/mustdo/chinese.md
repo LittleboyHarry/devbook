@@ -36,7 +36,7 @@ ForPacman
 sudo dnf in -y fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool # 核心包
 sudo dnf in -y kf5-kconfig-core # 自动脚本配置工具
 
-if [ -n "$KDE_FULL_SESSION" ];then
+if [ "$XDG_CURRENT_DESKTOP" == "KDE" ]; then
     sudo dnf in -y kcm-fcitx5
 fi
 ```
@@ -48,7 +48,7 @@ fi
 sudo apt install -y fcitx5-chinese-addons fcitx5-config-qt # 核心包
 sudo apt install -y libkf5config-bin # 自动脚本配置工具
 
-if [ -n "$KDE_FULL_SESSION" ];then
+if [ "$XDG_CURRENT_DESKTOP" == "KDE" ]; then
     sudo dnf in -y kde-config-fcitx5
 fi
 ```
@@ -60,10 +60,9 @@ fi
 
 ```shell
 sudo pacman -S --noconfirm fcitx5-im fcitx5-chinese-addons # 核心包
-
-yes | sudo pacman -S fcitx5-pinyin-zhwiki # 维基词库
-if [ -n "$KDE_FULL_SESSION" ];then
-    sudo dnf in -y kcm-fcitx5
+sudo pacman -S --noconfirm fcitx5-pinyin-zhwiki # 维基词库
+if [ "$XDG_CURRENT_DESKTOP" == "KDE" ]; then
+    sudo pacman -S --noconfirm kcm-fcitx5
 fi
 ```
 
@@ -83,7 +82,7 @@ fi
 
 :::note 自动生成默认所需的配置文件：
 
-    pkill fcitx5; timeout 3s fcitx5
+    pkill fcitx5; timeout 2s fcitx5
 
 :::
 

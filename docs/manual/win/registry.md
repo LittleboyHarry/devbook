@@ -23,6 +23,8 @@ scoop install registrychangesview
 
 ```
 
+<GetPkg choco="registrychangesview" />
+
 导出格式转换
 
 ```
@@ -30,3 +32,5 @@ scoop install https://cdn.jsdelivr.net/gh/littleboyharry-contrib/scoop-zapps@9f1
 cmd /c reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "%USERPROFILE%\scoop\apps\RegConvert\current\RegConvert.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
 
 ```
+
+import GetPkg from '@theme/GetPkg';
