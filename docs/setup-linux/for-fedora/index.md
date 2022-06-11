@@ -11,7 +11,7 @@ title: 安装 Fedora Linux
 
 <br/>
 
-<p><LinkButton outline icon name="镜像站下载汇表" href="https://mirrorz.org/os/fedora"/>
+<p><LinkButton outline icon={<WebIcon />} name="镜像站下载汇表" href="https://mirrorz.org/os/fedora"/>
 &nbsp;含有:</p>
 
 - [其他桌面环境](https://spins.fedoraproject.org/zh_Hans_CN/)
@@ -54,5 +54,6 @@ title: 安装 Fedora Linux
 
     sudo dnf remove -y libreoffice*
 
+import { WebIcon } from '@theme/fai';
 import { Container, cards } from './oscards';
 import { HtmlA, LinkButton } from '@theme/links';

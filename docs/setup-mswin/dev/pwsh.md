@@ -3,7 +3,7 @@ title: PowerShell
 sidebar_position: 2
 ---
 
-import {MstoreButton} from '@theme/links';
+import { StoreButton, mslink } from '@theme/links';
 
 **PowerShell 是最好的 Windows Shell !!!**
 
@@ -12,7 +12,7 @@ import {MstoreButton} from '@theme/links';
 系统内置的第 5 版已不再更新，推荐使用 PowerShell7：其图标色彩由蓝变黑）
 
 <p>
-<MstoreButton id="9MZ1SNWT0N5D" name="从应用商店安装" />
+<StoreButton to={mslink`9MZ1SNWT0N5D`} text='从应用商店安装' />
 &nbsp; ← 支持自动更新
 </p>
 
@@ -44,6 +44,8 @@ mkdir -p ~\Documents\PowerShell
 iwr -useb https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/win/profile.ps1 >> $PROFILE
 # GitCode
 iwr -useb https://gitcode.net/lbh/deployworkenv/-/raw/main/win/profile.ps1 >> $PROFILE
+
+notepad $profile
 ```
 
 ## psutils

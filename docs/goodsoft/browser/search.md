@@ -30,16 +30,18 @@ sidebar_position: 70
 
 <div className="autoselect-cell-of-table">
 
-| 搜索引擎 | 关键字 | 查询网址                                            |
-| -------- | ------ | --------------------------------------------------- |
-| BiliBili | .b     | `https://search.bilibili.com/all?keyword=%s`        |
-| 京东     | .jd    | `https://search.jd.com/Search?enc=utf-8&keyword=%s` |
+对于 Firefox 请在关键字末尾补 `/`，输入时按右方向键补全域名、按空格后填入搜索词
+
+| 搜索引擎 | 关键字       | 查询网址                                            |
+| -------- | ------------ | --------------------------------------------------- |
+| BiliBili | bilibili.com | `https://search.bilibili.com/all?keyword=%s`        |
+| 京东     | jd.com       | `https://search.jd.com/Search?enc=utf-8&keyword=%s` |
 
 对于 Chromium 类，还有：
 
-| 搜索引擎 | 关键字 | 查询网址                                         |
-| -------- | ------ | ------------------------------------------------ |
-| 必应     | .bing  | `https://www.bing.com/search?q=%s`               |
-| 知乎     | .z     | `https://www.zhihu.com/search?type=content&q=%s` |
+| 搜索引擎 | 关键字    | 查询网址                                         |
+| -------- | --------- | ------------------------------------------------ |
+| 必应     | bing.com  | `https://www.bing.com/search?q=%s`               |
+| 知乎     | zhihu.com | `https://www.zhihu.com/search?type=content&q=%s` |
 
 </div>

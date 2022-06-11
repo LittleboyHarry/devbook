@@ -3,36 +3,36 @@ title: 配置 Arch
 sidebar_position: 3
 ---
 
-重新启动机器，进入 Arch 系统
+import {
+PreferXde,
+ForGnome,
+ForKde
+} from '@theme/PreferXde';
 
-<PreferXde gnome kde><ForKde>
+<PreferXde gnome kde />
 
-:::note 搜索方法
+import SearchMethod from '/docs/setup-linux/\_common/de/base.md'
 
-`Alt + Space` 启动 KRunner 以搜索
+<SearchMethod />
 
-:::
-
-</ForKde></PreferXde>
-
-## 重要配置
+## 基础配置
 
 ### 启用防火墙
 
-搜索 `gufw` 打开防火墙：除非在虚拟机内，建议家宿主用设备均激活防火墙。添加常见白名单条目，如：KDE Connect
+:::caution 除非在虚拟机内，建议家宿主用设备均激活防火墙
+
+搜索 "gufw" 打开防火墙：添加常见白名单条目，如：KDE Connect
+
+:::
 
 ### 中文支持
 
 <p><PreferXde gnome kde noSelector>
 <ForGnome>随后打开“语言与区域”设置，改为中文。注销生效</ForGnome>
-<ForKde>搜索 "lang", 点击右下角按钮添加列表底部的“简体中文”并置顶</ForKde>
+<ForKde>搜索 "lang", 点击右下角按钮添加列表底部的“简体中文”并置顶。注销生效</ForKde>
 </PreferXde></p>
 
 <br/>
-
-import OpenTerminal from '../\_common/openterminal.md'
-
-<OpenTerminal />
 
 <PreferXde gnome kde noSelector>
 <ForGnome>
@@ -44,16 +44,6 @@ import OpenTerminal from '../\_common/openterminal.md'
 :::
 
 </ForGnome>
-<ForKde>
-
-:::info 喜欢下拉式终端吗？
-
-搜索 `autostart` 设置自动启动 ( 添加 | 添加应用程序 )。
-随后搜索 `yakuake` 打开程序设置全局快捷键可用
-
-:::
-
-</ForKde>
 </PreferXde>
 
 ### 作者推荐工具
@@ -64,16 +54,16 @@ import Require from '/docs/\_common/deployworkenv.md'
 
 ### 配置桌面环境
 
-import PrepareDe from '../\_common/preparede.md';
+import BaseDeCfg from '/docs/setup-linux/\_common/de/base.md';
 
-<PrepareDe />
+<BaseDeCfg />
 
-import GnomeMustDo from '../\_common/gnome-mustdo.md';
-import KdeMustDo from '../\_common/kde-mustdo.md';
+import GnomeCfg from '/docs/setup-linux/\_common/de/gnome.md';
+import KdeCfg from '/docs/setup-linux/\_common/de/kde.md';
 
 <PreferXde gnome kde noSelector>
-    <ForGnome><GnomeMustDo /></ForGnome>
-    <ForKde><KdeMustDo /></ForKde>
+    <ForGnome><GnomeCfg /></ForGnome>
+    <ForKde><KdeCfg /></ForKde>
 </PreferXde>
 
 :::caution 注销并重新登录以生效
@@ -90,13 +80,22 @@ import KdeMustDo from '../\_common/kde-mustdo.md';
 5. <a target="_blank" href="../mustdo/chinese">中文输入法</a>
 
 export function OptimizeDe(){
-    return <PreferXde gnome kde noSelector>
-       <ForGnome><a href='../mustdo/gnome' target='_blank'>GNOME 配置</a></ForGnome>
-       <ForKde><a href='../mustdo/kde' target='_blank'>KDE 配置</a></ForKde>
-   </PreferXde>
+return <PreferXde gnome kde noSelector>
+<ForGnome><a href='../mustdo/gnome' target='_blank'>GNOME 配置</a></ForGnome>
+<ForKde><a href='../mustdo/kde' target='_blank'>KDE 配置</a></ForKde>
+</PreferXde>
 }
 
 ## 推荐配置
+
+import {
+PreferAppstream,
+WithAppstream,
+WithoutAppstream
+} from '@theme/PreferAppstream';
+import { StoreButton, mslink } from '@theme/links';
+
+<PreferAppstream appstream pkgmgr />
 
 ### Firefox 浏览器
 
@@ -108,7 +107,15 @@ import { LinkButton } from '@theme/links';
 
 ### VLC 播放器
 
-<GetPkg name='vlc' pacman />
+ <PreferAppstream appstream pkgmgr noSelector>
+<WithAppstream>
+<StoreButton to='appstream://org.videolan.vlc' text='一键安装' /> </WithAppstream>
+<WithoutAppstream>
+
+    sudo pacman -S --noconfirm vlc
+
+</WithoutAppstream>
+</PreferAppstream>
 
 ### 开发环境
 
@@ -116,8 +123,9 @@ import { LinkButton } from '@theme/links';
 
     cn/setup-zsh
 
-<BasicCatalog />
+import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
+<BasicCatalog />
 <DevEnvCatalog hidePl />
 
 ### AUR 助手 yay
@@ -141,8 +149,6 @@ import { LinkButton } from '@theme/links';
 
 :::note GNOME 优化
 
-打开设置，激活自动登录
-
 启用扩展支持：
 
     arch/aur-gnome-webext
@@ -162,11 +168,18 @@ Qt 主题修改器：
 
 ### AUR 软件
 
-- VSCode 微软版
+:::note 离线安装
 
-      yay visual-studio-code-bin
+在网络通常的 VPS 内构建，其产物安装包是可迁移的
 
-### 网络问题
+:::
+
+#### VSCode 微软版
+
+    yay visual-studio-code-bin
+
+ <details className='let-details-to-gray'>
+<summary>网络问题</summary>
 
 ```shell
 yes | sudo pacman -S v2ray v2ray-domain-list-community v2ray-geoip
@@ -175,19 +188,13 @@ yay v2raya-bin
 sudo systemctl enable v2raya --now
 ```
 
+</details>
+
 ## 结束配置
 
-推荐安装并使用 timeshift: ( 依赖[#安装开发工具] )
+推荐安装并使用 timeshift 备份系统：（ [依赖](#开发环境) ）
 
     arch/aur-timeshift
 
-:::caution 重启计算机后完成更改
+:::caution 可能需要重启以完成更改
 :::
-
-import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
-import {
-PreferXde,
-ForGnome,
-ForKde
-} from '@theme/PreferXde';
-import GetPkg from '@theme/GetPkg';

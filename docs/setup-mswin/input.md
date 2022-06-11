@@ -1,6 +1,6 @@
 ---
 title: 键盘与输入法
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 推荐配置

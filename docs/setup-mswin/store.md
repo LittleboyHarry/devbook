@@ -7,26 +7,38 @@ sidebar_position: 16
 
 ## 自由软件
 
-|                                                          |                          |
-| -------------------------------------------------------- | ------------------------ |
-| <MstoreLink id="XP8JK4HZBVF435" name="Auto Dark Mode" /> | 护眼：自动深色模式       |
-| <MstoreLink id="9PLJWWSV01LK" name="Twinkle Tray" />     | 护眼：调节外接显示屏亮度 |
-| <MstoreLink id="9nblggh516xp" name="EarTrumpet" />       | 更好的音量调节器         |
-| <MstoreLink id="XPDM1ZW6815MQM" name="VLC" />       | 播放器         |
-| <MstoreLink id="9n93mrmsxbf0" name="KDE Connect" />      | 连接手机                 |
-| <MstoreLink id="9PFXCD722M2C" name="KDE Filelight" />    | 硬盘空间分析             |
-| <MstoreLink id="XP89DCGQ3K6VLD" name="PowerToys" />      | 微软出品的系统增强工具   |
+|                                                                   |                          |
+| ----------------------------------------------------------------- | ------------------------ |
+| <StoreLink to={mslink`XP8JK4HZBVF435`} text='Auto Dark Mode' /> | 护眼：自动深色模式       |
+| <StoreLink to={mslink`9PLJWWSV01LK`} text='Twinkle Tray' />     | 护眼：调节外接显示屏亮度 |
+| <StoreLink to={mslink`9NBLGGH516XP`} text='EarTrumpet' />       | 更好的音量调节器         |
+| <StoreLink to={mslink`XPDM1ZW6815MQM`} text='VLC' />            | 播放器                   |
+| <StoreLink to={mslink`9N93MRMSXBF0`} text='KDE Connect' />      | 连接手机                 |
+| <StoreLink to={mslink`9PFXCD722M2C`} text='KDE Filelight' />    | 硬盘空间分析             |
+| <StoreLink to={mslink`XP89DCGQ3K6VLD`} text='PowerToys' />      | 微软出品的系统增强工具   |
 
 ## 付费软件
 
-|                                                          |      |
-| -------------------------------------------------------- | ---- |
-| <MstoreLink id="9NBLGGH35LXN" name="Afinity Photo" />    | 修图 |
-| <MstoreLink id="9NBLGGH35LRM" name="Afinity Designer" /> | 制图 |
+|                                                                   |      |
+| ----------------------------------------------------------------- | ---- |
+| <StoreLink to={mslink`9NBLGGH35LXN`} text='Afinity Photo' />    | 修图 |
+| <StoreLink to={mslink`9NBLGGH35LRM`} text='Afinity Designer' /> | 制图 |
 
 </div>
 
 附：[国内正版代理商索引](https://zhuanlan.zhihu.com/p/93284719)
 
+ <details><summary>Win 11 安卓子系统</summary>
+
+截至 2022 年，子系统仅在美区可以安装
+
+打开<HtmlA href="ms-settings:regionlanguage">“语言和区域”设置</HtmlA>，
+更改“国家或地区”为美国[^1]，
+然后 <StoreLink to={mslink`9P3395VX91NR`} text="从应用商店安装" />
+
+[^1]: 从列表末 `PageUp` 上翻约 9\~10 次可以找到
+
+</details>
+
 import GetPkg from '@theme/GetPkg';
-import { HtmlA, MstoreLink } from '@theme/links';
+import { HtmlA, StoreLink, mslink } from '@theme/links';

@@ -6,6 +6,7 @@ import {
   faCircleQuestion,
   faCodeCompare,
   faFilter,
+  faListUl,
   faMagnifyingGlass,
   faPaintRoller,
 } from '@fortawesome/free-solid-svg-icons';
@@ -20,43 +21,56 @@ export default function ModernCliIndexer() {
     <>
       <LogoCard.Container>
         <LogoCard
-          name="代码彩显"
-          label="bat"
-          to={link('bat')}
+          name="bat"
+          label="代码彩显"
+          noNewTab
+          to="#bat"
           logo={<FontAwesomeIcon icon={faPaintRoller} />}
         />
         <LogoCard
-          name="代码比对"
-          label="delta"
-          to={link('delta')}
+          name="delta"
+          label="代码比对"
+          noNewTab
+          to="#delta"
           logo={<FontAwesomeIcon icon={faCodeCompare} />}
         />
       </LogoCard.Container>
       <LogoCard.Container>
         <LogoCard
-          name="文件过滤"
-          label="fd"
-          to={link('fd')}
+          name="fuzzy finder"
+          label="查找菜单"
+          noNewTab
+          to="#fzf"
+          logo={<FontAwesomeIcon icon={faListUl} />}
+        />
+        <LogoCard
+          name="fd"
+          label="文件过滤"
+          noNewTab
+          to="#fd"
           logo={<FontAwesomeIcon icon={faFilter} />}
         />
         <LogoCard
-          name="文本查找"
-          label="rg"
-          to={link('ripgrep')}
+          name="ripgrep"
+          label="文本查找"
+          noNewTab
+          to="#ripgrep"
           logo={<FontAwesomeIcon icon={faMagnifyingGlass} />}
         />
       </LogoCard.Container>
       <LogoCard.Container>
         <LogoCard
-          name="命令速查"
-          label="tldr"
-          to={link('tldr')}
+          name="tldr"
+          label="命令速查"
+          noNewTab
+          to="#tldr"
           logo={<FontAwesomeIcon icon={faCircleQuestion} />}
         />
         <LogoCard
-          name="pip 隔离"
-          label="pipx"
-          to={link('pipx')}
+          name="pipx"
+          label="pip 环境隔离"
+          noNewTab
+          to="#pipx"
           logo={<FontAwesomeIcon icon={faPython} />}
         />
       </LogoCard.Container>

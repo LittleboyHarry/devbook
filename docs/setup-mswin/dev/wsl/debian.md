@@ -3,11 +3,12 @@ title: Debian on WSL
 sidebar_position: 4
 ---
 
-import {MstoreLink} from '@theme/links';
+import { StoreLink, mslink } from '@theme/links';
 
-作者推荐 <MstoreLink id="9MSVKQC78PK6" name="安装 Debian on WSL"/>，其他发行版均可在<a href="https://aka.ms/wslstore">微软商店</a>下载
+推荐安装 <StoreLink to={mslink('9MSVKQC78PK6')} text="Debian on WSL" />，
+其他发行版均可在 <a href="https://aka.ms/wslstore">微软商店</a> 下载
 
-初始化时输入用户名密码，如 `me` - `'`
+初始化时输入用户名密码，如 `me` `'`
 
 :::info 配置国内加速镜像源
 

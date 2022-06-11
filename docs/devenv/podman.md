@@ -5,7 +5,7 @@
   <GetPkg name="podman" apt dnf pacman />
 
 - <p>docker-compose 代替品:
-  ( <a href="/docs/devenv/modern-cli/pipx" target="_blank">pipx 的安装</a> )</p>
+  ( <a href="/docs/devenv/modern-cli#pipx" target="_blank">pipx 的安装</a> )</p>
 
   <GetPkg name="podman-compose" dnf pacman pipx />
 
@@ -18,7 +18,7 @@
 配置腾讯云镜像：
 
 ```shell
-grep -qv '^unqualified-search-registries' /etc/containers/registries.conf && echo 'unqualified-search-registries = ["docker.io"]' | sudo tee -a /etc/containers/registries.conf > /dev/null
+grep -q '^unqualified-search-registries' /etc/containers/registries.conf || echo 'unqualified-search-registries = ["docker.io"]' | sudo tee -a /etc/containers/registries.conf > /dev/null
 echo -e '[[registry]]\nlocation="mirror.ccs.tencentyun.com"' | sudo tee -a /etc/containers/registries.conf > /dev/null
 ```
 

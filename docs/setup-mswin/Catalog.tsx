@@ -21,7 +21,7 @@ export default function SetupMswinCatalog() {
         />
         <LogoCard
           name="微 PE 工具箱"
-          to="https://www.wepe.com.cn/download.html"
+          to="https://www.wepe.com.cn/ubook/start.html"
           logo={<FontAwesomeIcon icon={faToolbox} />}
         />
       </LogoCard.Container>

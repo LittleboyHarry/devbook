@@ -7,7 +7,7 @@ import {
 } from './PreferScope';
 
 type Value = 'gnome' | 'kde';
-const defaultValue = 'gnome';
+const defaultValue: Value = 'gnome';
 const context = createScopeContext<Value>(defaultValue);
 const triggers = new Set<(value: Value) => void>();
 

@@ -68,7 +68,7 @@ find ais -type f -exec less {} \;
 
 :::note 加密分区
 
-自动配置脚本：若不要加密，配置 `export noEncrypt=1`
+自动配置脚本：若不要加密，配置 `export NOENCRYPT=y`
 
     ais/makebtrfs
 
@@ -157,3 +157,5 @@ find ais -type f -exec less {} \;
 - 为 btrfs 调整以支持 timeshift
 
 对非 btrfs 文件系统，想要备份，只能使用 tar 全量备份根文件系统
+
+重启机器后正式进入 Arch 系统

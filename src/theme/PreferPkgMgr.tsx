@@ -7,7 +7,7 @@ import {
 } from './PreferScope';
 
 type Value = 'apt' | 'dnf' | 'pacman';
-const _defaultValue = 'pacman' as Value;
+const _defaultValue: Value = 'pacman' as Value;
 const context = createScopeContext(_defaultValue);
 const triggers = new Set<(value: Value) => void>();
 

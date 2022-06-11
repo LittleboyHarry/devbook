@@ -36,7 +36,9 @@ export default function FileItem({
       title={title}
       onDragStartCapture={(e) => {
         if (!(e.target instanceof HTMLAnchorElement)) return;
-        const url = toAbsoluteUrl(e.target.getAttribute('href'));
+        const href = e.target.getAttribute('href');
+        if (href === null) throw 'bad target';
+        const url = toAbsoluteUrl(href);
         e.dataTransfer.setData(
           'DownloadURL',
           `:${getFileName(e.target, url)}:${url.href}`
@@ -69,7 +71,9 @@ function getFileName(el: HTMLAnchorElement, url: URL) {
   if (download) {
     return download;
   }
-  const text = el.textContent.trim().replace(/\:/g, '');
+  const { textContent } = el;
+  if (textContent === null) throw 'bad element';
+  const text = textContent.trim().replace(/\:/g, '');
   if (text && fileExtensionRegex.test(text)) {
     return text;
   }

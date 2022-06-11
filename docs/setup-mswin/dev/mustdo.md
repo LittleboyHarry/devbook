@@ -54,7 +54,7 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 ## Windows Terminal
 
-安装或检查更新：<MstoreButton id="9N0DX20HK701" name="Get" />
+安装或检查更新：<StoreButton to={mslink`9N0DX20HK701`} text='Get' />
 
 推荐设置：
 
@@ -127,7 +127,7 @@ iwr "https://vscode.cdn.azure.cn$((iwr "https://code.visualstudio.com/sha/downlo
 
 ### Visual Studio
 
-<MstoreButton id="XPDCFJDKLZJLP8" name="在线安装器" />
+<StoreButton to={mslink`XPDCFJDKLZJLP8`} text='在线安装器' />
 
 ## [字体](/docs/devenv/font)
 
@@ -186,4 +186,4 @@ import { LinkButton } from '@theme/links';
 import FileItem from '@theme/FileItem'
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DownloadButton, HtmlA, MstoreButton, MstoreLink } from '@theme/links';
+import { DownloadButton, HtmlA, StoreButton, mslink } from '@theme/links';

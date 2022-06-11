@@ -1,26 +1,38 @@
-.selector{
-    margin-bottom: 1rem;
+@import '/src/css/utils';
 
-    @media (max-width: 996px)  {
-        &{
-            flex-direction: row;
-        }
+.selector {
+  margin-bottom: 1rem;
+
+  @include for-mobile-screen {
+    & {
+      flex-direction: row;
     }
-}
+  }
 
-%padding{
-    padding: 1rem 0;
-
-}
-
-.choice{
-    @extend %padding;
-    >input[type=radio] {
-        display: none;
+  @include for-phone-only {
+    display: block;
+    > label {
+      padding: {
+        left: 2rem;
+        right: 2rem;
+      }
+      margin-left: 0.5rem;
     }
+  }
 }
 
-.hint{
-    @extend %padding;
-    margin-right:1rem;
+%padding {
+  padding: 1rem 0;
+}
+
+.choice {
+  @extend %padding;
+  > input[type='radio'] {
+    display: none;
+  }
+}
+
+.hint {
+  @extend %padding;
+  margin-right: 1rem;
 }

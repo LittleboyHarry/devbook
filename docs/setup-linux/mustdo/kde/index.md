@@ -3,10 +3,7 @@ title: KDE 配置
 sidebar_position: 1
 ---
 
-:::tip 从搜索开始
-
-按下 `Alt + Space` 激活 KRunner，按本文完成基本配置：
-
+:::tip 按徽标键或点击开始菜单进行搜索
 :::
 
 1. 打开设置，默认显示“快捷设置”：
@@ -70,8 +67,6 @@ kwriteconfig5 --file konsolerc --group "Desktop Entry" --key DefaultProfile cust
 如使用字体查看器：
 
     QT_QPA_PLATFORM=xcb kcmshell5 fontinst
-
-<!-- todo -->
 
 :::
 

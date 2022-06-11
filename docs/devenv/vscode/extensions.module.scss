@@ -1,0 +1,26 @@
+@import '/src/css/utils';
+
+.root {
+  h2 {
+    margin: 2rem 0;
+  }
+
+  h3 {
+    margin-top: 4rem;
+  }
+
+  @include for-phone-only {
+    table > tbody > tr {
+      padding-top: 0.5rem;
+      display: block;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      > td {
+        &:last-child {
+          display: block;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}

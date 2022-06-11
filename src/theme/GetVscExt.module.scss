@@ -1,0 +1,28 @@
+@import '../css/utils';
+
+.buttons {
+  display: inline-block;
+  @include for-phone-only {
+    display: inline;
+  }
+
+  > * {
+    padding: 0.5rem 1rem;
+    margin: 0.3rem 0.5rem !important;
+
+    @include for-mobile-screen {
+      padding: 0.4rem 0.75rem;
+      margin: 0.15rem 0.4rem !important;
+    }
+
+    @include for-phone-only {
+      padding: 0.3rem 0.5rem;
+      margin: 0 0.3rem !important;
+    }
+  }
+
+  table & > :global(.button) {
+    --ifm-button-background-color: transparent;
+    color: var(--ifm-font-color-base);
+  }
+}

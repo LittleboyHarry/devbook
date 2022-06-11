@@ -7,7 +7,7 @@ sidebar_position: 1
 
 Win 11 已内置：仅需在商店中更新可用
 
-Win 10 安装方法：<MstoreButton id="9NBLGGH4NNS1" name="从商店获取" />
+Win 10 安装方法：<StoreButton to={mslink`9NBLGGH4NNS1`} text='从商店获取' />
 or&nbsp;<a href="https://github.com/microsoft/winget-cli/releases/latest#:~:text=.msixbundle">从 Github 获取</a>
 
 ## **Chocolatey**
@@ -133,4 +133,4 @@ scoop bucket add extras https://gitcode.net/mirrors/ScoopInstaller/Extras
 
 ```
 
-import { MstoreButton } from '@theme/links';
+import { StoreButton, mslink } from '@theme/links';

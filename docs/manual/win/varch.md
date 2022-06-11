@@ -24,9 +24,9 @@ import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
 
 4. 启动前配置虚拟机：CPU 数、虚拟盘加密等
 
-:::note 如何向虚拟机粘贴代码？
+:::note 如何向无图形化界面的虚拟机粘贴代码？
 
-为了把代码粘贴到仅字符串界面的虚拟机，提供 AHK 辅助脚本：
+方法一：使用 AHK 辅助脚本，为了把代码粘贴到仅字符串界面的虚拟机
 
 <p>
     <FileItem button name="vboxpaste.ahk" path="/scripts/vboxpaste.ahk" icon={<ScriptIcon />}/>
@@ -34,6 +34,10 @@ import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
 
 - 使用前，请先在“全局设定”中关闭“热键”的“自动独占键盘”。
 - 下载后打开脚本执行，右键托盘图标 `suspend` 挂起。
+
+方法二：安装无图形化增强工具
+
+    pacman -S --noconfirm virtualbox-guest-utils-nox
 
 :::
 
@@ -59,11 +63,6 @@ import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
    reflector -c cn -p https --sort rate -l 3 --save mirrorlist
    yes | pacman -Syyu
    ```
-<!--
-### 多 CPU 支持
-
-关机后可设置虚拟机多 CPU
--->
 
 ### 开发环境
 
@@ -86,6 +85,8 @@ import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 ```
 sudo pacman -S --noconfirm plasma-meta yakuake
 sudo systemctl enable sddm
+
+pacman -S --noconfirm virtualbox-guest-utils # 增强工具
 ```
 
 关机后，配置虚拟机：增加显存、CPU 数

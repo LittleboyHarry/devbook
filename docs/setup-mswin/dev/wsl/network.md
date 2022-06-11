@@ -37,7 +37,16 @@ Disable-NetFirewallRule -DisplayName "<进程名>.exe"
 
 :::
 
-## 自动获取主机 IP
+## 方法一：使用 ohmyzsh 的 `shell-proxy` 插件
+
+    echo 'export SHELLPROXY_URL="http://`cat /etc/resolv.conf | grep nameserver | cut -d" " -f 2`:20172"' >> ~/.zshrc
+    exec $SHELL
+
+输入 `proxy enable` 激活
+
+## 方法二：使用 proxychains
+
+### 自动获取主机 IP
 
 ```shell
 echo 'export WSL_HOST_IP=`cat /etc/resolv.conf | grep nameserver | cut -d" " -f 2`' | tee -a ~/.bashrc ~/.zshrc > /dev/null
@@ -48,7 +57,7 @@ exec $SHELL
 
     bash -ic 'sudo timeout 2s ping $WSL_HOST_IP'
 
-## 端口转发
+### 端口转发
 
 <GetPkg name='socat' apt pacman />
 
@@ -70,7 +79,7 @@ exec $SHELL
 这样每次打开 WSL 时，
 执行一下 `wslfp` 即固定监听虚拟机 `127.0.0.1` 端口，转发报文到宿主机对应的端口上
 
-## proxychains
+### 配置代理
 
 确保宿主机端口监听到 `0.0.0.0`，在端口转发的基础上配置：
 

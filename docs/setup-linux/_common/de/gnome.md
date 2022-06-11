@@ -1,11 +1,10 @@
-`deployworkenv` 自动部署
+:::note 自动部署
 
-```shell
-gnome/optimize
-# 默认部署：yes | gnome/optimize
-```
+使用 `deployworkenv`
 
-内容翻译：
+    gnome/optimize
+
+内容：
 
 1. 激活触摸板轻触点击
 2. 显示最小最大化窗口按钮
@@ -17,6 +16,8 @@ gnome/optimize
 8. `Super + D` 键显示桌面
 9. 使用树视图的任务管理器
 10. 强化同应用窗口切换 Alt + \` 键
+
+:::
 
 :::note 巧用触摸板调整窗口大小
 
@@ -30,7 +31,7 @@ gnome/optimize
 
 来自 Windows 风格的快捷键：
 
-<div className="autoselect-cell-of-table">
+<div className="autoselect-cell-of-table no-table-border">
 
 | 作用       | 按键               |
 | ---------- | ------------------ |

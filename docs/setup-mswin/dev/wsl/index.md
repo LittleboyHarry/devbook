@@ -31,8 +31,6 @@ import {HtmlA} from '@theme/links';
 
         wsl --update
 
-<!-- <MstoreLink id="9PDXGNCFSCZV" name="Ubuntu" /> -->
-
 :::note 自动更新
 
 <p><HtmlA href="ms-settings:windowsupdate-options">设置更新</HtmlA>，

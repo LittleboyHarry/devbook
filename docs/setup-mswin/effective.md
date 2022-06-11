@@ -32,3 +32,9 @@ import {HtmlA} from '@theme/links';
 
 <HtmlA href="ms-settings:easeofaccess-keyboard">设置“辅助功能>键盘”</HtmlA>，
 勾选“为访问键添加下划线”。可访问的元素都会有下划线标记的字母。
+
+## 粘滞键
+
+    reg add "HKCU\Control Panel\Accessibility\StickyKeys" /v Flags /t REG_SZ /d 190 /f
+
+连按 5 次，激活粘滞键功能。1 次激活修饰键，2 次 锁定修饰键，3 次代替原来的单次按修饰键

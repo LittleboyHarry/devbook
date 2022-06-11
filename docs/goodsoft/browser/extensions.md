@@ -37,6 +37,14 @@ sidebar_position: 21
   <ExtStoreLink name='Snap Links Plus'
   firefox='https://addons.mozilla.org/zh-CN/firefox/addon/tree-style-tab/' />
 
+- 标签收藏管理器
+
+  <ExtStoreLink name='Tab Session Manager'
+  chrome='https://chrome.google.com/webstore/detail/tab-session-manager/iaiomicjabeggjcfkbimgmglanimpnae/'
+  edge='https://microsoftedge.microsoft.com/addons/detail/jkjjclfiflhpjangefhgfjhgfbhajadk/'
+  firefox='https://addons.mozilla.org/firefox/addon/tab-session-manager/'
+  />
+
 ### 网络类
 
 - 本地优化 CDN
@@ -129,13 +137,13 @@ import { ScriptIcon } from '@theme/fai';
 
 ### uBlock Origin
 
-<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=oh-my-blockrules&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=adbrules&type=star&count=true&size=large" frameborder="0" scrolling="0" width="180" height="32" title="GitHub" style={{float:'right'}}></iframe>
 
 自动忽略 Cookies 许可协议：
 
     https://www.i-dont-care-about-cookies.eu/abp/
 
-我的过滤规则集：[oh-my-blockrules](https://github.com/LittleboyHarry/oh-my-blockrules)
+我的过滤规则集：[adbrules](https://github.com/LittleboyHarry/adbrules)
 
 ### Linkclump
 
@@ -180,9 +188,11 @@ Linkclump:
 
 Dark Reader:
 
-`Alt + Shift + A` 激活扩展
+`Alt + Shift + A` 切换当前网站
 
-`Alt + Shift + D` 切换当前网站
+`Alt + Shift + S` 弹出调整面板 ( Chrome Only )
+
+<!-- `Alt + Shift + D` 全局禁用 -->
 
 </div>
 

@@ -24,21 +24,6 @@ sidebar_position: 2
 
 设置 > 重命名
 
-:::note 创建自定义用户
-
-若 Windows 11 登录的微软账号联网安装，系统有如下毛病：
-
-- 账号名作为目录名
-- 每次开机麻烦的在线登录
-- 潜在的捆绑广告服务
-
-自 Windows 10 开始，微软弱化了多用户账号管理的功能。若要创建新用户：
-
-运行 `netplwiz` 添加新的本地用户，然后设置 “属性” > “组成员” 为 “管理员”。
-如果还要删除老用户，注销切换到新用户进入 `netplwiz` 删除。
-
-:::
-
 ## 第四步：配置 DNS
 
 如果运行商提供的默认 DNS 服务不满意（ 如部分网站无法访问 ），可强制绑定：
@@ -78,7 +63,7 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 
 系统时间使用了错误的时区
 
-    reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+    reg add HKLM\System\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 
 多 Windows 的系统启动：在“启动和故障恢复”中设置的选择时间、默认选项
 
@@ -89,7 +74,7 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 如果你的微软账号已激活了 Office，登录并获取：
 
 <p>
-<LinkButton icon outline href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" name="在线官方安装器" />
+<LinkButton icon={<WebIcon />} outline href="https://account.microsoft.com/services#:~:text=%E5%B7%B2%E8%B4%AD%E4%B9%B0%E7%9A%84%E4%BA%A7%E5%93%81" name="在线官方安装器" />
 </p>
 
 :::info 使用验证码登录微软账号
@@ -103,5 +88,6 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 
 :::
 
+import { WebIcon } from '@theme/fai';
 import { LinkButton } from '@theme/links';
 import { HtmlA } from '@theme/links';

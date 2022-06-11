@@ -1,19 +1,24 @@
 ---
 title: 个人数字权利
-sidebar_position: 5
+sidebar_position: 7
 ---
 
 等待所有系统与应用升级完成后，部分功能会与您签订商业契约、收集您的隐私以继续提供服务。
 
 以管理员权限运行执行如下指令，解决问题：
 
-## 微软内置应用
+## 微软内置服务
 
 :::note 如果读者选择不需要这些服务
 
 以管理员身份运行 PowerShell 执行：
 
+:::
+
 ```powershell
+# 禁用客户体验改善计划
+reg add HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows /v CEIPEnable /t REG_DWORD /d 0 /f
+
 # OneDrive
 Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
 Stop-Process -Name OneDrive
@@ -28,26 +33,29 @@ Dism /Online /Remove-Capability /NoRestart /CapabilityName:Microsoft.Windows.Pow
 
 ```
 
-- For Win10
+ <PreferWinVer win10 win11 >
+<ForWin10>
 
-  ```powershell
-  # 语音助手 Cortana
-  Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
+```powershell
+# 语音助手 Cortana
+Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
 
-  ```
+```
 
-- For Win11
+</ForWin10>
+<ForWin11>
 
-  ```powershell
-  # 语音助手 Cortana
-  Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppxPackage
+```powershell
+# 语音助手 Cortana
+Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppxPackage
 
-  # Microsoft Teams
-  Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage
+# Microsoft Teams
+Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage
 
-  ```
+```
 
-:::
+</ForWin11>
+</PreferWinVer>
 
 打开 “安全中心” > “病毒和威胁防护” 关闭自动提交样本
 
@@ -57,16 +65,16 @@ import { faBox } from '@fortawesome/free-solid-svg-icons';
 
 ## 推荐火狐浏览器
 
-<MstoreButton id="9NZVDKPMR9RD" name="从商店安装" />
-&nbsp;或&nbsp;
+<p>
+<StoreButton to={mslink`9NZVDKPMR9RD`} text="从商店安装" />
+&emsp;或&emsp;
 <FileItem name="下载安装包" path="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN" button icon={<FontAwesomeIcon icon={faBox} />}/>
+</p>
 
-:::info 附：
+附：
 
 1. <a href="/docs/goodsoft/browser/firefox" target="_blank">使用说明</a>
 2. <a href="/docs/goodsoft/browser/chromium#windows-安装" target="_blank">Chromium</a>
-
-:::
 
 ## 屏蔽启动项与服务
 
@@ -91,4 +99,9 @@ Set-Service "DiagTrack" -StartupType Disabled
 
 :::
 
-import {MstoreButton} from '@theme/links';
+import {
+PreferWinVer,
+ForWin10,
+ForWin11
+} from '@theme/PreferWinVer'
+import { StoreButton, mslink } from '@theme/links'

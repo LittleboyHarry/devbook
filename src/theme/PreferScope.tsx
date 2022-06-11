@@ -45,11 +45,11 @@ export function PreferScope<T extends string>({
 }: PropsWithChildren<{
   defaultValue: T;
   storeNamePrefix: string;
-  storeFlags: boolean[];
+  storeFlags: (boolean | undefined)[];
   storeKeywords: T[];
   context: Context<T>;
   keywords: string[];
-  hint?: string;
+  hint?: ReactNode;
   triggers: Set<(value: T) => void>;
   noSelector?: boolean;
 }>) {
@@ -57,7 +57,7 @@ export function PreferScope<T extends string>({
   const [currentValue, setCurrentValue] = useState<T>(defaultValue);
   const gid = useMemo(() => {
     let gid = storeNamePrefix + '-';
-    const keys = [];
+    const keys: T[] = [];
     for (let i = 0; i < storeFlags.length; i++)
       if (storeFlags[i]) {
         keys.push(storeKeywords[i]);
@@ -92,35 +92,33 @@ export function PreferScope<T extends string>({
 
   const show = !isBrowser || (isBrowser && loaded);
 
-  return (
-    show && (
-      <ContextProvider
-        value={{
-          currentValue,
-          setCurrentValue: _setCurrentValue,
-        }}
-      >
-        {!noSelector && (
-          <div className={cs('pills', 'pills--block', st.selector)}>
-            {hint && <div className={st.hint}>{hint}</div>}
-            {storeFlags.map(
-              (flag, i) =>
-                flag && (
-                  <RadioChoice
-                    key={i}
-                    group={storeNamePrefix}
-                    value={storeKeywords[i]}
-                    label={keywords[i]}
-                    context={context}
-                  />
-                )
-            )}
-          </div>
-        )}
-        {children}
-      </ContextProvider>
-    )
-  );
+  return show ? (
+    <ContextProvider
+      value={{
+        currentValue,
+        setCurrentValue: _setCurrentValue,
+      }}
+    >
+      {!noSelector && (
+        <div className={cs('pills', 'pills--block', st.selector)}>
+          {hint && <div className={st.hint}>{hint}</div>}
+          {storeFlags.map(
+            (flag, i) =>
+              flag && (
+                <RadioChoice
+                  key={i}
+                  group={storeNamePrefix}
+                  value={storeKeywords[i]}
+                  label={keywords[i]}
+                  context={context}
+                />
+              )
+          )}
+        </div>
+      )}
+      {children}
+    </ContextProvider>
+  ) : null;
 }
 
 function RadioChoice<T extends string>({
@@ -156,9 +154,9 @@ export function createScopeComponent<T extends string>(
   context: Context<T>,
   scopeValue: T
 ) {
-  return ({ children }: { children: ReactNode }) => {
+  return ({ children }: { children?: ReactNode }) => {
     const { currentValue } = useContext(context);
 
-    return currentValue === scopeValue && children;
+    return (currentValue === scopeValue && children) ?? null;
   };
 }

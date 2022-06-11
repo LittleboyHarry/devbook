@@ -1,19 +1,31 @@
+@import '/src/css/utils';
 .root {
   &::before {
-    content: '用包管理器安装：';
+    content: '$ 用包管理器安装：';
     display: flex;
     align-items: center;
-    margin: 0 1rem;
   }
 
-  font-weight: normal;
-  :global(.tabs__item--active) {
-    font-weight: bolder;
+  @include for-phone-only {
+    display: block;
+    &::before {
+      margin-bottom: 1rem;
+    }
+  }
 
-    border: none;
+  user-select: none;
+
+  :global(.tabs__item){
+    font-weight: normal;
+  }
+
+  margin-bottom: calc(-1rem + (-3px));
+
+  li:first-child{
+    margin-left:6px;
   }
 }
 
-.sole {
+.solo {
   margin-bottom: var(--ifm-leading);
 }

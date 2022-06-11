@@ -1,55 +1,45 @@
 import React from 'react';
 import { LinkButton } from './links';
+import st from './GetVscExt.module.scss';
 
 export default function GetVscExt({
   id,
   msOnly,
-  small,
   noTitle,
 }: {
   id: string;
   msOnly?: boolean;
-  small?: boolean;
   noTitle?: boolean;
 }) {
   return (
     <>
       {!noTitle && (
-        <span style={{ margin: '0 1rem' }}>{msOnly ? '仅供于' : '安装到'}</span>
+        <span className={st.label}>{msOnly ? '仅供于：' : '安装到：'}</span>
       )}
-      <span style={{ display: 'inline-block' }}>
+      <span className={st.buttons}>
         <LinkButton
-          outline
           href={'vscode:extension/' + id}
           name="VSCode"
-          small={small}
-          style={{ margin: '2px 4px 0 0' }}
+          className="button--secondary"
+          small={true}
         />
         {!msOnly && (
           <>
             <LinkButton
-              outline
               href={'code-oss:extension/' + id}
               name="OSS"
-              small={small}
-              style={{ margin: '2px 4px 0 0' }}
+              className="button--secondary"
+              small={true}
             />
             <LinkButton
-              outline
               href={'vscodium:extension/' + id}
               name="VSCodium"
-              small={small}
-              style={{ margin: '2px 4px 0 0' }}
+              className="button--secondary"
+              small={true}
             />
           </>
         )}
       </span>
-      <a
-        style={{ marginRight: '1rem', display: 'inline-block' }}
-        href={'https://marketplace.visualstudio.com/items?itemName=' + id}
-      >
-        详情介绍
-      </a>
     </>
   );
 }

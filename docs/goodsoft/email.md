@@ -5,11 +5,27 @@ sidebar_position: 2
 
 推荐 Mozilla 出品的通用客户端
 
+import {
+PreferAppstream,
+WithAppstream,
+WithoutAppstream
+} from '@theme/PreferAppstream';
+import { StoreButton } from '@theme/links';
 import GetPkg from '@theme/GetPkg';
 
-<GetPkg name="thunderbird" dnf winget
+<PreferAppstream appstream pkgmgr>
+
+<WithAppstream>
+    <StoreButton to='appstream://net.thunderbird.Thunderbird' text='一键安装' />
+</WithAppstream>
+
+<WithoutAppstream>
+    <GetPkg name="thunderbird" dnf winget
 pacman="thunderbird thunderbird-i18n-zh-cn"
 flatpak="org.mozilla.Thunderbird" />
+</WithoutAppstream>
+
+</PreferAppstream>
 
 ## 设置
 

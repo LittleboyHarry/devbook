@@ -7,27 +7,29 @@ sidebar_position: 8
 
 - 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/setup-mswin/first-run#双系统" target="_blank" >详情方法</a>
 - 对于 VeraCrypt, 打开主界面菜单“设置” > “系统加密 ...” >
-  “高级选项” |  “自动修复引导配置问题……” 关闭确定
+  “高级选项” | “自动修复引导配置问题……” 关闭确定
 
 ## 分区自动挂载
 
 <PreferXde gnome kde noSelector><ForKde>
-      <GetPkg name='gnome-disk-utility' pacman dnf />
+<GetPkg name='gnome-disk-utility' pacman dnf />
 </ForKde></PreferXde>
 
 为其它数据分区设置自动挂载，以免每次启动后需要手动挂载。
 推荐搜索关键词 `disk` 打开 GNOME 硬盘，配置：
 
-1.  关闭“用户会话默认值”
-2.  禁用“显示用户界面”
-3.  命名挂载点路径
-4.  添加挂载参数
+1.  选择对应分区
+2.  菜单按钮 > 编辑挂载选项
+3.  关闭“用户会话默认值”
+4.  禁用“显示用户界面”
+5.  命名挂载点路径
+6.  添加挂载参数
 
     推荐一种保守的权限参数：允许默认用户读写文件（ 仅 root 可执行文件，拒绝无关用户访问 ）
 
         ,uid=1000,fmask=107
 
-5.  重启文件服务以生效
+7.  重启文件服务以生效
 
         sudo systemctl daemon-reload
         sudo systemctl restart local-fs.target

@@ -17,7 +17,10 @@ title: 包管理器速查表
 :::
  -->
 
-部分摘自：<LinkButton icon name="Arch Wiki 文档" href="https://wiki.archlinux.org/title/Pacman/Rosetta" />
+<p>部分摘自：
+<LinkButton icon={<WebIcon />} name="Arch Wiki 文档" href="https://wiki.archlinux.org/title/Pacman/Rosetta" /></p>
+
+import { WebIcon } from '@theme/fai';
 
 import {
   PreferPkgMgr,

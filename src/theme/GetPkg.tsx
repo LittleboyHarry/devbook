@@ -41,6 +41,7 @@ export default function GetPkg({
   flatpak,
   apt,
   pacman,
+  pkcon,
   aur,
   dnf,
   pipx,
@@ -55,6 +56,7 @@ export default function GetPkg({
   apt?: true | string;
   aur?: true | string;
   pacman?: true | string;
+  pkcon?: true | string;
   dnf?: true | string;
   pipx?: true | string;
   yarn?: true | string;
@@ -62,19 +64,20 @@ export default function GetPkg({
 }) {
   const gid = useMemo(() => {
     let groupId = 'getpkg-';
-    const keys = [];
-    if (choco) keys.push('choco');
-    if (scoop) keys.push('scoop');
-    if (winget) keys.push('winget');
-    if (flatpak) keys.push('flatpak');
-    if (apt) keys.push('apt');
-    if (pacman) keys.push('pacman');
-    if (dnf) keys.push('dnf');
-    if (pipx) keys.push('pipx');
-    if (yarn) keys.push('yarn');
-    if (aur) keys.push('aur');
-    return groupId + keys.join('&');
-  }, [apt, dnf, scoop, winget, pacman, pipx, yarn]);
+    const l: string[] = [];
+    if (choco) l.push('choco');
+    if (scoop) l.push('scoop');
+    if (winget) l.push('winget');
+    if (flatpak) l.push('flatpak');
+    if (apt) l.push('apt');
+    if (pacman) l.push('pacman');
+    if (dnf) l.push('dnf');
+    if (pipx) l.push('pipx');
+    if (yarn) l.push('yarn');
+    if (aur) l.push('aur');
+    if (pkcon) l.push('pkcon');
+    return groupId + l.join('&');
+  }, [apt, dnf, scoop, winget, pacman, pipx, yarn, pkcon]);
 
   const items: JSX.Element[] = [];
 
@@ -109,41 +112,20 @@ export default function GetPkg({
 
   addItem({
     items,
-    expression: scoop,
-    key: 'scoop',
-    label: 'scoop',
-    hint: 'Windows 社区包管理器',
-    defaultPkgName: name,
-    prefix: 'scoop install',
-  });
-
-  addItem({
-    items,
-    expression: choco,
-    key: 'choco',
-    label: 'choco',
-    hint: 'Windows 商服包管理器',
-    defaultPkgName: name,
-    prefix: 'sudo choco install',
-  });
-
-  addItem({
-    items,
-    expression: winget,
-    key: 'winget',
-    label: 'winget',
-    hint: 'Windows 官方包管理器',
-    defaultPkgName: name,
-    prefix: 'winget install',
-  });
-
-  addItem({
-    items,
     expression: pacman,
     key: 'pacman',
     label: 'pacman',
     defaultPkgName: name,
     prefix: 'sudo pacman -S --noconfirm',
+  });
+
+  addItem({
+    items,
+    expression: pkcon,
+    key: 'pkcon',
+    label: 'pkcon',
+    defaultPkgName: name,
+    prefix: 'pkcon install -y',
   });
 
   addItem({
@@ -175,9 +157,39 @@ export default function GetPkg({
     prefix: 'yarn global add',
   });
 
+  addItem({
+    items,
+    expression: scoop,
+    key: 'scoop',
+    label: 'scoop',
+    hint: 'Windows 社区包管理器',
+    defaultPkgName: name,
+    prefix: 'scoop install',
+  });
+
+  addItem({
+    items,
+    expression: choco,
+    key: 'choco',
+    label: 'choco',
+    hint: 'Windows 商服包管理器',
+    defaultPkgName: name,
+    prefix: 'sudo choco install',
+  });
+
+  addItem({
+    items,
+    expression: winget,
+    key: 'winget',
+    label: 'winget',
+    hint: 'Windows 官方包管理器',
+    defaultPkgName: name,
+    prefix: 'winget install',
+  });
+
   if (items.length <= 0) throw 'Empty GetPkg';
 
-  if (items.length == 1) return <div className={st.sole}>{items[0]}</div>;
+  if (items.length == 1) return <div className={st.solo}>{items[0]}</div>;
 
   return (
     <Tabs className={cs(longBanner && 'tabs--block', st.root)} groupId={gid}>

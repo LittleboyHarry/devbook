@@ -1,0 +1,19 @@
+.root {
+  > h2 {
+    margin-top: 3rem;
+  }
+
+  > :global(.alert--info) {
+    margin-top: 3rem;
+    display: flex;
+
+    > h3,
+    > p {
+      margin-bottom: 0;
+    }
+  }
+
+  > :global(.tabs-container) {
+    margin-top: 8px;
+  }
+}

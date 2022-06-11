@@ -3,7 +3,7 @@ title: 安装系统
 sidebar_position: 1
 ---
 
-免去联网登录微软账号：仅 Win11 初代安装镜像的专业版可以
+<PreferWinVer win10 win11 />
 
 ## 硬盘有必要分区？怎样分区？
 
@@ -20,8 +20,44 @@ sidebar_position: 1
 
 > 语言选择时，按 `End` 键跳转到底部，再按 3~4 次 `PageUp` 就能找到“英语(美国)”
 
-## Win11 不联网安装
+## 联网激活
 
-`Shift + F10` 打开命令提示符，执行：
+:::caution 新机器验机确认前不可以联网
+
+联网会激活系统，意味着你通过验机
+
+:::
+
+ <PreferWinVer win10 win11 noSelector >
+<ForWin10>
+
+直接点击左下角按钮可以跳过
+
+</ForWin10>
+<ForWin11>
+
+早期专业版可以跳过联网。家庭版要跳过联网过程，请 `Shift + F10` 打开命令提示符执行：
 
     taskkill /f /im oobe*
+
+</ForWin11>
+</PreferWinVer>
+
+<br/>
+
+:::note 联网注册时，系统自动把网络账号名作为默认用户名
+
+ <details className='let-details-to-gray'><summary>更改用户的方法</summary>
+
+登陆系统后运行 `netplwiz` 添加新的本地用户，然后设置 “属性” > “组成员” 为 “管理员”。
+如果还要删除老用户，注销切换到新用户进入 `netplwiz` 删除。
+
+</details>
+
+:::
+
+import {
+PreferWinVer,
+ForWin10,
+ForWin11
+} from '@theme/PreferWinVer'

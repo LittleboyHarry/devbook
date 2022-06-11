@@ -3,20 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import cs from 'clsx';
 import st from './links.module.scss';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { WebIcon } from './fai';
 
-export function MstoreLink({ id, name }: { id: string; name: string }) {
+export function StoreLink({ to, text }: { to: string; text: string }) {
   return (
-    <HtmlA href={msStoreLink(id)}>
+    <HtmlA href={to}>
       <FontAwesomeIcon icon={faBagShopping} />
       &nbsp;
-      {name}
+      {text}
     </HtmlA>
   );
 }
 
-export function MstoreButton({ id, name }: { id: string; name: string }) {
+export function StoreButton({ to, text }: { to: string; text: string }) {
   return (
     <LinkButton
       name={
@@ -25,16 +25,16 @@ export function MstoreButton({ id, name }: { id: string; name: string }) {
             icon={faBagShopping}
             style={{ margin: '0 0.5rem 0 -0.5rem' }}
           />
-          {name}
+          {text}
         </>
       }
-      href={msStoreLink(id)}
+      href={to}
     />
   );
 }
 
-function msStoreLink(id: string) {
-  return 'ms-windows-store://pdp?mode=mini&productId=' + id;
+export function mslink(content: TemplateStringsArray) {
+  return 'ms-windows-store://pdp?mode=mini&productId=' + content;
 }
 
 export function DownloadButton({
@@ -72,7 +72,7 @@ export function LinkButton({
   icon?: boolean | React.ReactNode;
   newTab?: boolean;
 }) {
-  if (icon === true) icon = <FontAwesomeIcon icon={faGlobe} />;
+  if (icon === true) icon = <WebIcon />;
   if (icon === undefined && newTab)
     icon = <FontAwesomeIcon icon={faArrowUpRightFromSquare} />;
 
@@ -87,7 +87,7 @@ export function LinkButton({
         className
       )}
       title={hint}
-      target={newTab && '_blank'}
+      {...(newTab && { target: '_blank' })}
       style={{
         cursor: hint ? 'help' : 'pointer',
         verticalAlign: 'baseline',

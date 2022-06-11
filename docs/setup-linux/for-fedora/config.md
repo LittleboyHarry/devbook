@@ -3,9 +3,13 @@ title: 配置 Fedora
 sidebar_position: 2
 ---
 
-<PreferXde gnome kde />
+import {
+PreferXde,
+ForGnome,
+ForKde
+} from '@theme/PreferXde';
 
- <PreferXde gnome kde noSelector>
+ <PreferXde gnome kde>
 <ForGnome>
 <details className="let-details-to-gray" role="alert">
 <summary>欢迎向导中的 “第三方软件源” 是什么？</summary>
@@ -23,23 +27,21 @@ sidebar_position: 2
 </ForGnome>
 </PreferXde>
 
+## 基础配置
+
 <!--
 方法二：使用“GNOME 软件”更新
 
 [^2]: 若经常发生 Linux 内核故障，请看[内核问题](/docs/setup-linux/kernel#fedora)文档
 -->
 
-import OpenTerminal from '../\_common/openterminal.md'
+import SearchMethod from '/docs/setup-linux/\_common/de/search.md'
 
-<OpenTerminal />
+<SearchMethod />
 
-## 调优
+### 调优
 
-```shell
-# 让 dnf 回车确认安装
-echo "defaultyes=1" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
-```
-
+<!--
 :::info 更换安全组件
 
 Fedora 内置了 RHEL 采用的 SELinux 和 firewalld 技术，
@@ -54,43 +56,9 @@ sudo systemctl disable --now firewalld
 ```
 
 :::
+-->
 
-## Grub
-
-import ContentGrub from '../\_common/grub.md';
-
-<ContentGrub />
-
-更新 Grub：
-
-    sudo update-grub
-
-## 自动镜像源
-
-让系统寻找访问速度最快的镜像源
-
-```shell
-sudo dnf config-manager --save --setopt=fastestmirror=True
-sudo dnf makecache
-```
-
-## 调整桌面环境
-
-import ContentDe from '../\_common/preparede.md';
-
-<ContentDe />
-
-## 锁定内核版本
-
-使用一段时间的 Fedora 后，如果显示、声音、键鼠、待机等硬件不出问题，
-可以锁定 Linux 内核版本，避免不必要的升级。
-
-```shell
-sudo dnf in -y 'dnf-command(versionlock)'
-sudo dnf versionlock add kernel{,-core,-headers} linux-firmware
-```
-
-## 更新系统
+### 更新系统
 
 ```shell
 sudo dnf upgrade -y # 更新系统
@@ -103,6 +71,53 @@ sudo dnf upgrade -y # 更新系统
   可修改 `/etc/hosts` 将相关域名映射为 `127.0.0.1` 以屏蔽
 
 :::
+
+<details className="alert--warning">
+  <summary>若 Fedora &lt;= 35 且磁盘空间紧张且频繁卸载大型软件</summary>
+
+不要使用 PackageKit， 不要使用 Discover 和 GNOME 商店安装软件
+
+<details className="alert--warning">
+  <summary>内部技术解释</summary>
+
+在 Fedora 中、CommandNotFound 模块使用 PackageKit 自动安装时，不会恰当处理 DNF 依赖关系，导致包移除时无法处理依赖而有效释放磁盘空间，推荐 dnf 命令行手动安装。
+[bug](https://github.com/PackageKit/PackageKit/issues/201)
+
+</details>
+
+</details>
+
+### 作者推荐工具
+
+import Require from '/docs/\_common/deployworkenv.md'
+
+<Require />
+
+### 自动优化
+
+    fedora/optimze
+
+1. 锁定内核版本？
+
+   使用一段时间的 Fedora 后，如果显示、声音、键鼠、待机等硬件不出问题，
+   可以锁定 Linux 内核版本，避免不必要的升级。
+
+2. Grub 调整：记住上次选择的启动项、降低等待时间
+3. 让系统寻找访问速度最快的镜像源
+
+### 调整桌面环境
+
+import BaseDeCfg from '/docs/setup-linux/\_common/de/base.md';
+
+<BaseDeCfg />
+
+import GnomeCfg from '/docs/setup-linux/\_common/de/gnome.md';
+import KdeCfg from '/docs/setup-linux/\_common/de/kde.md';
+
+<PreferXde gnome kde noSelector>
+    <ForGnome><GnomeCfg /></ForGnome>
+    <ForKde><KdeCfg /></ForKde>
+</PreferXde>
 
 <!--
 <details className="let-details-to-gray">
@@ -123,38 +138,33 @@ sudo dnf upgrade -y # 更新系统
 
 <!-- todo:? send notify after update -->
 
-:::caution 留意 [bug](https://github.com/PackageKit/PackageKit/issues/201)
+### 引用内容
 
-若 Fedora <= 35 且磁盘空间紧张且频繁卸载大型软件，
+1. <a target="_blank" href="../mustdo/dual-os">双系统</a>
+2. <a target="_blank" href="../mustdo/device">设备问题</a>
+3. <a target="_blank" href="../mustdo/kernel">内核问题</a>
+4. <OptimizeDe />
+5. <a target="_blank" href="../mustdo/chinese">中文输入法</a>
 
-请不要使用 PackageKit， 不要使用 Discover 和 GNOME 商店安装软件
+export function OptimizeDe(){
+return <PreferXde gnome kde noSelector>
+<ForGnome><a href='../mustdo/gnome' target='_blank'>GNOME 配置</a></ForGnome>
+<ForKde><a href='../mustdo/kde' target='_blank'>KDE 配置</a></ForKde>
+</PreferXde>
+}
 
-    sudo sed -i '/^SingleInstall/ s/=ask/=warn/' /etc/PackageKit/CommandNotFound.conf
+## 推荐配置
 
-<details className="alert--warning">
-  <summary>内部技术解释</summary>
-  在 Fedora 中、CommandNotFound 模块使用 PackageKit 自动安装时，不会恰当处理 DNF 依赖关系，导致包移除时无法处理依赖而有效释放磁盘空间，推荐 dnf 命令行手动安装。
-</details>
+import {
+PreferAppstream,
+WithAppstream,
+WithoutAppstream
+} from '@theme/PreferAppstream';
+import { StoreButton, mslink } from '@theme/links';
 
-:::
+<PreferAppstream appstream pkgmgr />
 
-## 使用 Zsh
-
-import { LinkButton } from '@theme/links';
-
-<LinkButton outline name="见文档" href="/docs/devenv/zsh" newTab />
-
-<!--
-### 使用 KDE
-
-对于 Fedora Workspace 版，安装 KDE 的命令：
-
-    sudo dnf in -y @kde-desktop-environment
-
-或者推荐改用 [Fedora Spins - KDE Plasma 桌面环境版](https://spins.fedoraproject.org/zh_Hans_CN/kde/) 系统
- -->
-
-## 软件仓补充
+### 软件仓补充
 
 添加非自由软件仓：不同于第三方软件源，前者指如 ffmpeg 等具有版权争议软件仓
 
@@ -166,8 +176,53 @@ sudo dnf in -y \
 sudo dnf check-update
 ```
 
-import {
-PreferXde,
-ForGnome,
-ForKde
-} from '@theme/PreferXde';
+### Firefox 浏览器
+
+import { LinkButton } from '@theme/links';
+
+<p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/browser/firefox" newTab /></p>
+
+打开设置，找到语言，选择“简体中文”
+
+### VLC 播放器
+
+ <PreferAppstream appstream pkgmgr noSelector>
+<WithAppstream>
+  <StoreButton to='appstream://org.videolan.vlc' text='一键安装' />
+</WithAppstream>
+<WithoutAppstream>
+
+    sudo dnf install -y vlc
+
+</WithoutAppstream>
+</PreferAppstream>
+
+### 开发环境
+
+安装 ohmyzsh:
+
+    cn/setup-zsh
+
+import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
+
+<BasicCatalog />
+<DevEnvCatalog hidePl />
+
+<!--
+### 使用 KDE
+
+对于 Fedora Workspace 版，安装 KDE 的命令：
+
+    sudo dnf in -y @kde-desktop-environment
+
+或者推荐改用 [Fedora Spins - KDE Plasma 桌面环境版](https://spins.fedoraproject.org/zh_Hans_CN/kde/) 系统
+ -->
+
+## 结束配置
+
+系统备份工具：
+
+    sudo dnf install -y timeshift
+
+:::caution 可能需要重启以完成更改
+:::

@@ -7,7 +7,7 @@ import {
 } from './PreferScope';
 
 type Value = 'origin' | 'gitee';
-const defaultValue = 'origin';
+const defaultValue: Value = 'origin';
 const context = createScopeContext<Value>(defaultValue);
 const triggers = new Set<(value: Value) => void>();
 
