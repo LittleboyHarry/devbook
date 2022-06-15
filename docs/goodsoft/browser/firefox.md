@@ -25,6 +25,9 @@ Firefox 推荐的配置：
 <summary>附：Windows MSIX 版目录</summary>
 
     %LOCALAPPDATA%\Packages\Mozilla.Firefox_n80bbvh6b1yt2\LocalCache\Roaming\Mozilla\Firefox\Profiles
+
+默认在 `.default-release` 内
+
 </details>
 
 :::

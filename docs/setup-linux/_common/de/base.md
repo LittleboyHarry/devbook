@@ -24,10 +24,11 @@ END
 
 </ForGnome><ForKde>
 
-搜索关键词 `fonts` 进入设置，点击上方“调整所有字体…”的按钮
+搜索关键词 `fonts` 进入设置，点击上方 “调整所有字体…” 的按钮
 
-- 字体推荐选择 `Noto Sans CJK SC`
-- 1080p 分辨率 14\~16寸 中文界面的字体大小推荐加多 **5\~3 磅**，窗口标题栏字号可小
+- 字体推荐 <a href='/docs/devenv/font#noto-sans-cjk-sc' target='_blank'>Noto Sans CJK SC</a>
+- 等宽推荐 <a href='/docs/devenv/font#cascadia-code' target='_blank'>Cascadia Mono</a>（ 连体版：`Cascadia Code` ）
+- 1080p 分辨率 14\~16寸 中文界面的字体大小推荐加多 **5\~3 磅**，窗口标题栏字号 **3\~1 磅**
 
 </ForKde>
 </PreferXde>
@@ -57,6 +58,9 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 
 作者推荐改变 <a target="_blank" href="/docs/devenv/keymap">键位映射</a> ，需要适应一段时间
 
+:::
+
+:::caution 注销并重新登录以生效
 :::
 
 <!--

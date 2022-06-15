@@ -1,0 +1,9 @@
+---
+title: 杂项
+---
+<!--
+## 使用内存文件系统
+
+    mkdir ~/ramdir
+    sudo mount -t ramfs -o mode=0777 ramfs ~/ramdir
+-->

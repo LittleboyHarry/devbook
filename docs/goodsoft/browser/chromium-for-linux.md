@@ -150,9 +150,11 @@ cd -
 
 Win Mac 默认已经激活优化特性，但 Linux 需要手动开启：
 
-```
-about:flags/#enable-zero-copy
-```
+    about:flags/#enable-zero-copy
+
+&nbsp;
+
+    about:flags/#enable-gpu-rasterization
 
 重启浏览器完成，详细信息见 `about:gpu`
 

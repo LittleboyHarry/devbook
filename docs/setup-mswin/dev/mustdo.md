@@ -56,6 +56,8 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
 安装或检查更新：<StoreButton to={mslink`9N0DX20HK701`} text='Get' />
 
+推荐固定到任务栏，以便可以通过 Win + 数字键打开终端
+
 推荐设置：
 
 - 配置文件 | 默认值 > 外观 >
@@ -77,7 +79,8 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
 
   ```
 
-import { faFileLines,faGears } from '@fortawesome/free-solid-svg-icons';
+import { faFileLines } from '@fortawesome/free-solid-svg-icons';
+import { ConfigIcon } from '@theme/fai';
 
 :::note 自动安装
 
@@ -85,7 +88,7 @@ import { faFileLines,faGears } from '@fortawesome/free-solid-svg-icons';
 放到同安装器目录下：
 
 <FileItem button name="install-git.ini" path="/scripts/install-git.ini" icon={<FontAwesomeIcon icon={faFileLines} />}/>
-<FileItem button name="install-git.bat" path="/scripts/install-git.bat" icon={<FontAwesomeIcon icon={faGears} />}/>
+<FileItem button name="install-git.bat" path="/scripts/install-git.bat" icon={<ConfigIcon />}/>
 
 :::
 

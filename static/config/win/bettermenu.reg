@@ -1,0 +1,281 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\Software\Classes\*\shell\CopyContent]
+"MUIVerb"="复制内容到剪切板"
+"Icon"="DxpTaskSync.dll,-52"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\*\shell\CopyContent\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"cmd.exe\",\"/c clip < \"\"%1\"\"\",\"\",\"open\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\*\shell\GetHash]
+"MUIVerb"="获取哈希值"
+"Icon"="imageres.dll,-5372"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\*\shell\GetHash\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"powershell.exe\",\"-noexit write-host '\"\"%1\"\"';$args = 'md5', 'sha1', 'sha256', 'sha384', 'sha512', 'mactripledes', 'ripemd160'; foreach($arg in $args){get-filehash '\"\"%1\"\"' -algorithm $arg | select-object algorithm, hash | format-table -wrap}\",\"\",\"open\",3)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\*\shell\TakeOwnerShip]
+"MUIVerb"="管理员取得所有权限"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\*\shell\TakeOwnerShip\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"takeown.exe\",\"/f \"\"%1\"\" /a\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\CopyAsPath]
+"MUIVerb"="@shell32.dll,-30329"
+"Icon"="imageres.dll,-5302"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\CopyAsPath\Command]
+@="mshta vbscript:clipboarddata.setdata(\"text\",\"%1\")(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes]
+"Position"="bottom"
+"Icon"="imageres.dll,-5314"
+"MUIVerb"="隐藏属性"
+"SubCommands"=""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes\Shell]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes\Shell\Item0]
+"MUIVerb"="显示"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes\Shell\Item0\Command]
+@="attrib -s -h \"%1\""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes\Shell\Item1]
+"MUIVerb"="隐藏"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes\Shell\Item1\Command]
+@="attrib -s +h \"%1\""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes\Shell\Item2]
+"MUIVerb"="系统隐藏"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\HideAttributes\Shell\Item2\Command]
+@="attrib +s +h \"%1\""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\Windows.SlideShow]
+"VerbToInvoke"="slideshow"
+"CommandStateHandler"="{880ac964-2e34-4425-8cf2-86ada2c3a019}"
+"CanonicalName"="{73BCE053-3BBC-4AD7-9FE7-7A7C212C98E6}"
+"Description"="@shell32.dll,-31288"
+"CommandStateSync"=""
+"Icon"="imageres.dll,-5347"
+"MediaTypeFlags"=dword:00000005
+"MUIVerb"="@shell32.dll,-31287"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shell\Windows.SlideShow\Command]
+@=""
+"DelegateExecute"="{80c68d96-366b-11dc-9eaa-00161718cf63}"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo]
+@="{c2fbb630-2971-11d1-a18c-00c04fd75d13}"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo]
+@="{c2fbb631-2971-11d1-a18c-00c04fd75d13}"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\BatteryReport]
+"Icon"="powercpl.dll,0"
+"MUIVerb"="电池使用报告"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\BatteryReport\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"cmd.exe\",\"/c cd C:\\Users\\my\\AppData\\Local\\Temp & del BatteryReport.html & powercfg /batteryreport /output BatteryReport.html & start BatteryReport.html\",\"\",\"open\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\EditHosts]
+"MUIVerb"="编辑 Hosts"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\EditHosts\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"notepad.exe\",\"C:\\Windows\\system32\\drivers\\etc\\hosts\",\"\",\"runas\",1)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\FlushDNS]
+"MUIVerb"="刷新DNS缓存"
+"Icon"="shell32.dll,238"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\FlushDNS\Command]
+@="ipconfig /flushdns"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\SystemInfo]
+"MUIVerb"="系统信息"
+"Icon"="msinfo32.exe,0"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\SystemInfo\Command]
+@="msinfo32.exe"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\UserAccountControlSettings]
+"MUIVerb"="用户账户控制设置"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\UserAccountControlSettings\Command]
+@="UserAccountControlSettings.exe"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\AppColorMode]
+"MUIVerb"="颜色模式"
+"Position"="bottom"
+"SubCommands"=""
+"Icon"="themecpl.dll,-1"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\AppColorMode\Shell]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\AppColorMode\Shell\Item0]
+"Icon"="imageres.dll,-5411"
+"MUIVerb"="浅色应用"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\AppColorMode\Shell\Item0\Command]
+@="Reg Add HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\AppColorMode\Shell\Item1]
+"MUIVerb"="深色应用"
+"Icon"="imageres.dll,-5412"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\AppColorMode\Shell\Item1\Command]
+@="Reg Add HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\DesktopIcon]
+"MUIVerb"="桌面图标设置"
+"Icon"="desk.cpl,0"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\DesktopIcon\Command]
+@="control desk.cpl,,0"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan]
+"SubCommands"=""
+"Position"="bottom"
+"Icon"="powercpl.dll,0"
+"MUIVerb"="电源计划"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan\Shell]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan\Shell\Item0]
+"MUIVerb"="节能"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan\Shell\Item0\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"powercfg.exe\",\"/setactive a1841308-3541-4fab-bc81-f71556f20b4a\",\"\",\"open\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan\Shell\Item1]
+"MUIVerb"="平衡"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan\Shell\Item1\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"powercfg.exe\",\"/setactive 381b4222-f694-41f0-9685-ff5bb260df2e\",\"\",\"open\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan\Shell\Item2]
+"MUIVerb"="高性能"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\PowerPlan\Shell\Item2\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"powercfg.exe\",\"/setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c\",\"\",\"open\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\RestartExplorer]
+"MUIVerb"="重启资源管理器"
+"Icon"="shell32.dll,238"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\RestartExplorer\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"cmd.exe\",\"/c taskkill /f /im explorer.exe & start explorer.exe\",\"\",\"open\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\ScreenSaver]
+"MUIVerb"="屏幕保护设置"
+"Icon"="desk.cpl,0"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\DesktopBackground\Shell\ScreenSaver\Command]
+@="control desk.cpl,,1"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\background\shell\OpenNewWindow]
+"MUIVerb"="@windows.storage.dll,-8517"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\background\shell\OpenNewWindow\Command]
+@="explorer.exe \"%v\""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\background\shell\Windows.NewFolder]
+"Position"="top"
+"Icon"="shell32.dll,-319"
+"MUIVerb"="@shell32.dll,-31236"
+"InvokeCommandOnSelection"=dword:00000000
+"ImpliedSelectionModel"=dword:00000004
+"CanonicalName"="{E44616AD-6DF1-4B94-85A4-E465AE8A19DB}"
+"CommandStateHandler"="{3756e7f5-e514-4776-a32b-eb24bc1efe7a}"
+"CommandStateSync"=""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\shell\TakeOwnerShip]
+"HasLUAShield"=""
+"AppliesTo"="System.ParsingName:<>\"::{645FF040-5081-101B-9F08-00AA002F954E}\""
+"NoWorkingDirectory"=""
+"MUIVerb"="管理员取得所有权限"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\shell\TakeOwnerShip\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"takeown.exe\",\"/f \"\"%v\"\" /a /r /d y\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Drive\shell\OptimizeDrives]
+"Icon"="dfrgui.exe,0"
+"MUIVerb"="@dfrgui.exe,-106"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Drive\shell\OptimizeDrives\Command]
+@="dfrgui.exe"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Drive\shell\Windows.CleanUp]
+"MUIVerb"="@shell32.dll,-22026"
+"ImpliedSelectionModel"=dword:00000001
+"ExplorerCommandHandler"="{9cca66bb-9c78-4e59-a76f-a5e9990b8aa0}"
+"CommandStateSync"=""
+"Icon"="cleanmgr.exe,-104"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.dll\shell\Register]
+"MUIVerb"="注册 DLL"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.dll\shell\Register\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"regsvr32.exe\",\"\"\"%1\"\"\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.dll\shell\UnRegister]
+"MUIVerb"="注销 DLL"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.dll\shell\UnRegister\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"regsvr32.exe\",\"/u \"\"%1\"\"\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules]
+"SubCommands"=""
+"Icon"="FirewallControlPanel.dll,0"
+"MUIVerb"="防火墙规则"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item0]
+"MUIVerb"="禁止入站"
+"Icon"="imageres.dll,-105"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item0\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"netsh.exe\",\"advfirewall firewall add rule name = \"\"%1\"\" dir = in program = \"\"%1\"\" action = block\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item1]
+"MUIVerb"="禁止出站"
+"Icon"="imageres.dll,-105"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item1\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"netsh.exe\",\"advfirewall firewall add rule name = \"\"%1\"\" dir = out program = \"\"%1\"\" action = block\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item2]
+"MUIVerb"="允许入站"
+"Icon"="imageres.dll,-106"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item2\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"netsh.exe\",\"advfirewall firewall delete rule name = \"\"%1\"\" dir = in program = \"\"%1\"\"\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item3]
+"Icon"="imageres.dll,-106"
+"MUIVerb"="允许出站"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.exe\shell\FirewallRules\Shell\Item3\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"netsh.exe\",\"advfirewall firewall delete rule name = \"\"%1\"\" dir = out program = \"\"%1\"\"\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.ocx\shell\Register]
+"MUIVerb"="注册 OCX"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.ocx\shell\Register\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"regsvr32.exe\",\"\"\"%1\"\"\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.ocx\shell\UnRegister]
+"MUIVerb"="注销 OCX"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SystemFileAssociations\.ocx\shell\UnRegister\Command]
+@="mshta vbscript:createobject(\"shell.application\").shellexecute(\"regsvr32.exe\",\"/u \"\"%1\"\"\",\"\",\"runas\",0)(close)"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\shell\AnyCode]
+"ProgrammaticAccessOnly"=""
+"HideBasedOnVelocityId"=dword:00639bc8
+"LegacyDisable"=""

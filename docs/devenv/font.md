@@ -9,7 +9,7 @@ sidebar_position: 7
 
 ## 出版字体
 
-### Noto Sans
+### Noto Sans CJK SC
 
 推荐使用思源宋体，Windows 下载链接:（ 又名 Noto Font, 来自清华镜像站 ）
 
@@ -18,16 +18,18 @@ sidebar_position: 7
 
 ## 编程字体
 
-### CascadiaCode
+### Cascadia Code
+
+<GetPkg apt="fonts-cascadia-code" dnf="cascadia-code-fonts" pacman="ttf-cascadia-code" />
 
 用途：终端命令行、编程
 
 微软出品的 Windows 终端内置默认字体，Linux 安装：
 
-<GetPkg apt="fonts-cascadia-code" dnf="cascadia-code-fonts" pacman="ttf-cascadia-code" />
-
  <details className="let-details-to-gray" role="alert">
 <summary>Nerd Font 版</summary>
+
+<GetPkg scoop="CascadiaCode-NF" choco="cascadia-code-nerd-font" />
 
 支持更多 Nerd Font 符号的字体版本，
 见[官方介绍](https://www.nerdfonts.com/)
@@ -36,8 +38,6 @@ sidebar_position: 7
 # Scoop 依赖：
 scoop bucket add nerd-fonts
 ```
-
-<GetPkg scoop="CascadiaCode-NF" choco="cascadia-code-nerd-font" />
 
 [或手动下载](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip)
 
@@ -58,8 +58,6 @@ Windows Terminal: `settings.json` > `.profiles.defaults.fontFace`
 
 ### [JetBrains Mono](https://www.jetbrains.com/zh-cn/lp/mono/)
 
-用途：编程
-
 <GetPkg
 apt="fonts-jetbrains-mono"
 dnf="jetbrains-mono-fonts"
@@ -67,6 +65,8 @@ scoop="JetBrains-Mono"
 choco="jetbrainsmono"
 pacman="ttf-jetbrains-mono"
 />
+
+用途：编程
 
 > 注：对 apt 包管理器而言，
 > [Debian 11](https://packages.debian.org/bullseye/source/fonts-jetbrains-mono)
@@ -78,13 +78,13 @@ pacman="ttf-jetbrains-mono"
 
 ### 等距更纱
 
+<GetPkg pacman="ttf-sarasa-gothic" />
+
 用途：中英文排版、编程
 
 优点：中英等宽、可选连体、窄字
 
-下载：https://mirrorz.org/font/SarasaGothic 推荐选择 ttc 版本
-
-<GetPkg pacman="ttf-sarasa-gothic" />
+国内镜像站下载：https://mirrorz.org/font/SarasaGothic 推荐选择 ttc 版本
 
 ## VSCode 设置
 

@@ -86,8 +86,6 @@ yes | sudo pacman -S wl-clipboard
 https://www.zsh.org/mla/workers//2019/msg00561.html
 -->
 
-依赖 [Nerd Font 字体](./font#cascadiacode-nerdfont)
-
 ```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 # 国内:

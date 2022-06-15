@@ -22,14 +22,14 @@ setfont ter-i24b
 
 ```shell
 # 国内镜像：
-curl -fsSL https://s.nxw.so/arc > a
-# cat a
-bash -
+curl -fsSL https://s.nxw.so/arc > i
+# cat i
+bash i
 
 # 上游版：
-curl -fsSL https://t.ly/Fud- > a
-# cat a
-bash -
+curl -fsSL https://t.ly/Fud- > i
+# cat i
+bash i
 
 # 代码审查
 find ais -type f -exec less {} \;
@@ -102,43 +102,43 @@ find ais -type f -exec less {} \;
 
 ## 推荐的选项配置
 
-1. **Select mirror region**
+1. **Mirror region**
 
    软件源：按 `/` 键搜索选择 China
 
-2. **Select harddrives**
+2. **Drive(s)**
 
    选择目标硬盘
 
-3. **Select disk layout** \*
+3. **Disk layout** \*
 
    （ 仅“向导分区安装”时可见 ）如果不保留硬盘数据，全盘安装 Arch，则可以选择 `wipe all ...`
 
-4. **Select bootloader**
+4. **Bootloader**
 
    选择 yes 使用 GRUB
 
-5. **Specify superuser account**
+5. **User account**
 
    录入管理员帐号密码
 
-6. **Specify profile**
+6. **Profile**
 
    选择安装内容，如桌面、显卡等
 
-7. **Select audio**
+7. **Audio**
 
    选择 `pipewire`, 是后者的改进版
 
-8. **Select kernels**
+8. **Kernels**
 
    选择 `linux-lts`, 若新设备不兼容则改用 linux (最新版)
 
-9. **Configure network**
+9. **Network configuration**
 
    选择 `NetworkManager`，用于图形化系统
 
-10. **Select timezone**
+10. **Timezone**
 
     搜索 `hai` 选择 `Asia/Shanghai`
 

@@ -11,7 +11,7 @@ ForKde
 
 <PreferXde gnome kde />
 
-import SearchMethod from '/docs/setup-linux/\_common/de/base.md'
+import SearchMethod from '/docs/setup-linux/\_common/de/search.md'
 
 <SearchMethod />
 
@@ -29,7 +29,14 @@ import SearchMethod from '/docs/setup-linux/\_common/de/base.md'
 
 <p><PreferXde gnome kde noSelector>
 <ForGnome>随后打开“语言与区域”设置，改为中文。注销生效</ForGnome>
-<ForKde>搜索 "lang", 点击右下角按钮添加列表底部的“简体中文”并置顶。注销生效</ForKde>
+<ForKde>
+
+1. 搜索 "lang", 进入语言设置
+2. 点击右下角按钮添加列表底部的“简体中文”并置顶
+3. 选择 "format" 修改区域格式，搜索 "cn" 设置简中
+4. 注销生效
+
+</ForKde>
 </PreferXde></p>
 
 <br/>
@@ -46,12 +53,6 @@ import SearchMethod from '/docs/setup-linux/\_common/de/base.md'
 </ForGnome>
 </PreferXde>
 
-### 作者推荐工具
-
-import Require from '/docs/\_common/deployworkenv.md'
-
-<Require />
-
 ### 配置桌面环境
 
 import BaseDeCfg from '/docs/setup-linux/\_common/de/base.md';
@@ -65,9 +66,6 @@ import KdeCfg from '/docs/setup-linux/\_common/de/kde.md';
     <ForGnome><GnomeCfg /></ForGnome>
     <ForKde><KdeCfg /></ForKde>
 </PreferXde>
-
-:::caution 注销并重新登录以生效
-:::
 
 <br/>
 

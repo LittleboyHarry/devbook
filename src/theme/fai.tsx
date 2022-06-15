@@ -10,6 +10,7 @@ import {
   faScroll,
   faDownload,
   faGlobe,
+  faGears,
 } from '@fortawesome/free-solid-svg-icons';
 
 type Props = Omit<FontAwesomeIconProps, 'icon'>;
@@ -36,4 +37,8 @@ export function DownloadIcon(props: Props) {
 
 export function WebIcon(props: Props) {
   return <FontAwesomeIcon {...props} icon={faGlobe} />;
+}
+
+export function ConfigIcon(props: Props) {
+  return <FontAwesomeIcon {...props} icon={faGears} />;
 }

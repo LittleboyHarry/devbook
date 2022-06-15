@@ -4,32 +4,46 @@ title: 使用 WSL
 
 import {HtmlA} from '@theme/links';
 
-:::caution 需要管理员权限
+:::caution 以下指令需要管理员权限
 :::
 
-1.  添加 Linux 内核虚拟化组件
+1\. 添加 Linux 内核虚拟化组件
 
-    ```powershell
-    dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-    dism /online /enable-feature /featurename:VirtualMachinePlatform /all
+```powershell
+dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism /online /enable-feature /featurename:VirtualMachinePlatform /all
+```
 
-    ```
+2\. 编辑系统启动菜单
 
-2. \* 设置为系统特殊启动选项，默认不启动 WSL
+```powershell
+# 降低选择等待时间
+bcdedit /timeout 2
+# 使用传统菜单
+bcdedit /set '{current}' bootmenupolicy legacy
 
-    ```shell
-    bcdedit /set '{current}' bootmenupolicy legacy
-    bcdedit /set '{current}' hypervisorlaunchtype off
-    bcdedit /copy '{current}' /d 'no HyperV'
-    bcdedit /set '{current}' hypervisorlaunchtype auto
-    # 推荐配置：
-    # 降低选择等待时间：
-    bcdedit /timeout 2
-    ```
+```
 
-2.  重启后安装
+默认激活 HyperV 的启动方案：
 
-        wsl --update
+```powershell
+bcdedit /set "{current}" hypervisorlaunchtype off
+bcdedit /copy "{current}" /d "disable HyperV"
+bcdedit /set "{current}" hypervisorlaunchtype auto
+
+```
+
+默认禁用 HyperV 的启动方案：
+
+```powershell
+bcdedit /copy "{current}" /d "enable HyperV"
+bcdedit /set "{current}" hypervisorlaunchtype off
+
+```
+
+3\. 重启后安装
+
+    wsl --update
 
 :::note 自动更新
 

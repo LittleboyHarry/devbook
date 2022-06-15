@@ -25,16 +25,49 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons
 ## reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel /v "{031E4825-7B94-4dc3-B131-E946B44C8DD5}" /t REG_DWORD /d 0 /f > $null
 ## reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel /v "{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}" /t REG_DWORD /d 0 /f > $null
 
-# 创建快捷方式省去废话
+# 创建快捷方式省去“快捷方式”字样
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer /v link /t REG_BINARY /d 00000000 /f
+# 复制文件省去“副本”字样
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\NamingTemplates" /v "CopyNameTemplate" /t REG_SZ /d "%%s" /f
 
 # 右键菜单优化
 foreach ($it in 'exefile', 'Msi.Package', 'lnkfile', 'batfile', 'cmdfile') {
     reg add HKCU\Software\Classes\$it\shellex\ContextMenuHandlers\Compatibility /ve /d '""' /f > $null
 }
 
+# 自动添加旧版截图工具
+if (Test-Path C:\windows\system32\SnippingTool.exe) {
+    reg add HKLM\Software\Classes\DesktopBackground\Shell\SnippingTool /v MUIVerb /t REG_SZ /d 截图工具 /f
+    reg add HKLM\Software\Classes\DesktopBackground\Shell\SnippingTool /v Icon /t REG_SZ /d "snippingTool.exe,0" /f
+    reg add HKLM\Software\Classes\DesktopBackground\Shell\SnippingTool\Command /ve /t REG_SZ /d snippingTool.exe /f
+}
+
+# 优化打开方式列表
+foreach ($it in 'VSLauncher.exe', 'WINWORD.EXE', 'wmplayer.exe') {
+    reg add HKLM\Software\Classes\Applications\$it /v NoOpenWith /t REG_SZ /d '""' /f > $null
+}
+
 kill -n explorer
 ```
+
+import FileItem from '@theme/FileItem'
+import { ConfigIcon } from '@theme/fai';
+
+:::note 增强传统文件菜单
+
+<p>
+    <FileItem button name='bettermenu.reg' path="/config/win/bettermenu.reg" icon={<ConfigIcon />}/>
+    ，包含内容：
+</p>
+
+- 文件：复制内容、哈希、获取权限、编辑隐藏属性
+- 桌面壁纸右键菜单：重启资源管理器、深色模式、电源计划、图标设置、屏保设置
+- 电脑图标右键菜单：显示系统信息、UAC、编辑 HOSTS、刷新 DNS、电池报告
+- 特殊：编辑程序的防火墙规则、图片幻灯片播放、分区垃圾删除、分区碎片整理、注册 DLL/OCX
+
+更多设置请下载 [菜单管理器](https://gitee.com/BluePointLilac/ContextMenuManager)
+
+:::
 
 ## 锁屏界面
 
@@ -61,25 +94,6 @@ reg add HKCU\Software\Microsoft\ColorFiltering /v FilterType /t REG_DWORD /d 2 /
 
 若字体模糊不清晰，使用 `cttune` 工具调整
 
-## 后台服务
-
-```powershell
-function Disable-Service {
-    param([String]$name)
-    if ((Get-Service $name -ea si) -and ((Get-Service $name).StartType -ne 'Disabled')) {
-        & sc stop $name > $null
-        & sc config $name start=disabled > $null
-        echo $name
-    }
-}
-
-# 禁用：兼容性助手、诊断、跟踪、错误报告
-'PcaSvc', 'DPS', 'DiagTrack', 'WerSvc' | % { Disable-Service $_ }
-# 禁用 XBox
-'XblAuthManager', 'XblGameSave', 'XboxGipSvc', 'XboxNetApiSvc' | % { Disable-Service $_ }
-
-```
-
 ## 开始菜单
 
 ```powershell
@@ -99,6 +113,8 @@ reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSug
 （ 精简版安装版本 64 位 ）
 
 <GetPkg winget="voidtools.Everything.Lite" choco="everything" />
+
+    reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files\Everything\Everything.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
 
 ## 其他
 

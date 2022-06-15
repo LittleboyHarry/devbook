@@ -35,15 +35,15 @@ import { StoreButton, mslink } from '@theme/links';
 
 ## 基本配置
 
-`$PROFILE` 推荐配置：
+使用推荐配置创建 `$PROFILE`：
 
 ```powershell
 mkdir -p ~\Documents\PowerShell
 
 # Github
-iwr -useb https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/win/profile.ps1 >> $PROFILE
+iwr -useb https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/win/profile.ps1 -o $PROFILE
 # GitCode
-iwr -useb https://gitcode.net/lbh/deployworkenv/-/raw/main/win/profile.ps1 >> $PROFILE
+iwr -useb https://gitcode.net/lbh/deployworkenv/-/raw/main/win/profile.ps1 -o $PROFILE
 
 notepad $profile
 ```
@@ -95,14 +95,22 @@ if ( Test-Path -Path .git -PathType Container ) {
 ```
 
 <details className="let-details-to-gray">
-    <summary>增强的补全菜单</summary>
+    <summary>其它社区开源项目</summary>
 
-来自社区[开源项目 `GuiCompletion`](https://github.com/nightroman/PS-GuiCompletion),
+增强的补全菜单 [`GuiCompletion`](https://github.com/nightroman/PS-GuiCompletion),
 增强 Tab 键弹出菜单
 
 ```powershell
 Install-Module GuiCompletion
 echo 'Install-GuiCompletion -Key Tab' >> $PROFILE
+
+```
+
+winget 补全：
+
+```powershell
+Install-Module kmt.winget.autocomplete
+echo 'Import-Module kmt.winget.autocomplete' >> $PROFILE
 
 ```
 

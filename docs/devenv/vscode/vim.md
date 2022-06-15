@@ -35,15 +35,16 @@ sidebar_position: 4
 
 ## 安装
 
-<GetVscExt id="vscodevim.Vim" noTitle />
+<p> <GetVscExt id="vscodevim.Vim" noTitle /> </p>
 
-## 临时禁用的方法
+:::info 临时禁用的方法
 
 `Ctrl + Shift + P` 输入 `vimt` 回车
 
-## 普通模式内自动切换输入法
+:::
 
-https://github.com/daipeihust/im-select
+:::note [普通模式内自动切换输入法](https://github.com/daipeihust/im-select)
+:::
 
 import { LinkButton } from '@theme/links';
 import GetVscExt from '@theme/GetVscExt';

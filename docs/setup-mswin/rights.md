@@ -16,6 +16,21 @@ sidebar_position: 7
 :::
 
 ```powershell
+# 禁用后台服务
+function Disable-Service {
+    param([String]$name)
+    if ((Get-Service $name -ea si) -and ((Get-Service $name).StartType -ne 'Disabled')) {
+        & sc.exe stop $name > $null
+        & sc.exe config $name start=disabled > $null
+        echo $name
+    }
+}
+
+# 兼容性助手、诊断、跟踪、错误报告
+'PcaSvc', 'DPS', 'DiagTrack', 'WerSvc' | % { Disable-Service $_ }
+# XBox
+'XblAuthManager', 'XblGameSave', 'XboxGipSvc', 'XboxNetApiSvc' | % { Disable-Service $_ }
+
 # 禁用客户体验改善计划
 reg add HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows /v CEIPEnable /t REG_DWORD /d 0 /f
 
@@ -40,12 +55,18 @@ Dism /Online /Remove-Capability /NoRestart /CapabilityName:Microsoft.Windows.Pow
 # 语音助手 Cortana
 Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage
 
+# 隐藏人脉图标
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People /v PeopleBand /t REG_DWORD /d 0 /f
+
 ```
 
 </ForWin10>
 <ForWin11>
 
 ```powershell
+# 禁用小组件
+reg add HKLM\SOFTWARE\Policies\Microsoft\Dsh /v AllowNewsAndInterests /t REG_DWORD /d 0 /f
+
 # 语音助手 Cortana
 Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppxPackage
 
@@ -57,7 +78,12 @@ Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage
 </ForWin11>
 </PreferWinVer>
 
-打开 “安全中心” > “病毒和威胁防护” 关闭自动提交样本
+关闭自动病毒样本提交：
+
+1. 打开 “Windows 安全中心”
+2. 选择 “病毒和威胁防护”
+3. 点击 （ “病毒和威胁防护”设置 ）“管理设置”
+4. 关闭“自动提交样本”，可忽略警号提醒
 
 import FileItem from '@theme/FileItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

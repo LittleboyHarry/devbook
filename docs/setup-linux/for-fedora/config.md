@@ -87,12 +87,6 @@ sudo dnf upgrade -y # 更新系统
 
 </details>
 
-### 作者推荐工具
-
-import Require from '/docs/\_common/deployworkenv.md'
-
-<Require />
-
 ### 自动优化
 
     fedora/optimze

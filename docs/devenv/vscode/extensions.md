@@ -7,15 +7,15 @@ sidebar_position: 3
 
 ## 必装推荐
 
-|              |                |                                                    |
-| ------------ | -------------- | -------------------------------------------------- |
-| [GitLens][GitLens]      | Git 功能强化   | <GetVscExt small id="eamodio.gitlens" />           |
-| [Prettier][Prettier]     | 前端代码格式化 | <GetVscExt small id="esbenp.prettier-vscode" />    |
-| [EditorConfig][EditorConfig] | 格式统一化     | <GetVscExt small id="EditorConfig.EditorConfig" /> |
+|                              |                |                                                    |
+| ---------------------------- | -------------- | -------------------------------------------------- |
+| [GitLens][gitlens]           | Git 功能强化   | <GetVscExt small id="eamodio.gitlens" />           |
+| [Prettier][prettier]         | 前端代码格式化 | <GetVscExt small id="esbenp.prettier-vscode" />    |
+| [EditorConfig][editorconfig] | 格式统一化     | <GetVscExt small id="EditorConfig.EditorConfig" /> |
 
-[GitLens]: https://www.gitkraken.com/gitlens/features
-[Prettier]: https://prettier.io/
-[EditorConfig]: https://editorconfig.org/
+[gitlens]: https://www.gitkraken.com/gitlens/features
+[prettier]: https://prettier.io/
+[editorconfig]: https://editorconfig.org/
 
 ## 编程语言支持
 
@@ -29,6 +29,7 @@ sidebar_position: 3
 | ------------ | -------------- | ------------------------------------------------------- |
 | Git Graph    | 图形化的 `tig` | <GetVscExt small id="mhutchie.git-graph" />             |
 | vscode-icons | 更好看的图标   | <GetVscExt small id="vscode-icons-team.vscode-icons" /> |
+| Open         | 外部打开文件   | <GetVscExt small id="sandcastle.vscode-open" />         |
 | change-case  | 大小写转换     | <GetVscExt small id="wmaurer.change-case" />            |
 
 <br/>

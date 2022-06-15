@@ -87,7 +87,7 @@ sidebar_position: 21
   edge='https://microsoftedge.microsoft.com/addons/detail/replace-google-cdn/cojepngjobmaiajphkijbdcdjnnjhpjc'
   />
 
-### 显示类
+### 样式类
 
 - 护眼模式
 
@@ -95,6 +95,14 @@ sidebar_position: 21
   chrome='https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh'
   edge='https://microsoftedge.microsoft.com/addons/detail/dark-reader/ifoakfbpdcdoeenechcleahebpibofpc'
   firefox='https://addons.mozilla.org/zh-CN/firefox/addon/darkreader/'
+  />
+
+- YouTube 改进插件
+
+  <ExtStoreLink name='Enhancer for YouTube'
+  chrome='https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle'
+  edge='https://microsoftedge.microsoft.com/addons/detail/enhancer-for-youtube%E2%84%A2/dlgfaleeejmphhnemjgiaekdbonkagkd'
+  firefox='https://addons.mozilla.org/addon/enhancer-for-youtube/'
   />
 
 ### 专用类

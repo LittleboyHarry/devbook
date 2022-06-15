@@ -3,11 +3,38 @@ title: 初始化
 sidebar_position: 2
 ---
 
+import {
+PreferWinVer,
+ForWin10,
+ForWin11
+} from '@theme/PreferWinVer'
+
+<PreferWinVer win10 win11 />
+
 ## 第一步：备份还原点
 
-1. 设置 > 系统信息 > 系统保护
-2. 配置 (Alt+O) > 启动系统保护 > 调整最大使用量，确定
-3. 创建 (Alt+C) > 为创建的还原点起名
+打开对话框：
+
+ <PreferWinVer win10 win11 noSelector>
+<ForWin10>
+
+1. 右键“此电脑”，“属性”
+2. 点击侧边栏 “系统保护”
+
+</ForWin10>
+<ForWin11>
+
+1. 打开“设置”
+2. 滚动列表到底部，点“关于”或“系统信息”
+3. 点相关链接的“系统保护”
+
+</ForWin11>
+</PreferWinVer>
+
+配置备份：
+
+1. 配置 (Alt+O) > 启动系统保护 > 调整最大使用量，确定
+2. 创建 (Alt+C) > 为创建的还原点起名
 
 ## 第二步：系统更新
 

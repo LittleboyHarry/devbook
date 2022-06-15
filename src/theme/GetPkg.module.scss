@@ -1,9 +1,10 @@
 @import '/src/css/utils';
 .root {
   &::before {
-    content: '$ 用包管理器安装：';
+    content: '用包管理器安装：';
     display: flex;
     align-items: center;
+    font-weight: normal;
   }
 
   @include for-phone-only {

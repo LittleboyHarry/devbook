@@ -1,3 +1,7 @@
+import Require from '/docs/\_common/deployworkenv.md'
+
+<Require />
+
 :::note 自动部署
 
 使用 `deployworkenv`
