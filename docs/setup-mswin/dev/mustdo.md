@@ -1,7 +1,8 @@
 ---
-title: Windows 开发必做
 sidebar_position: 3
 ---
+
+# Windows 开发必做
 
 为开发用途适配 Windows
 
@@ -91,6 +92,24 @@ import { ConfigIcon } from '@theme/fai';
 <FileItem button name="install-git.bat" path="/scripts/install-git.bat" icon={<ConfigIcon />}/>
 
 :::
+
+import MinttyRc from './_minttyrc.md'
+
+<div className="no-admonition-uppercase-title">
+
+:::note 调整 Mintty 终端
+
+方法一（ 自动调整 ）：运行
+
+    notepad %userprofile%/.minttyrc
+
+输入内容：
+
+<MinttyRc/>
+
+:::
+
+</div>
 
 :::note 配置 SSH 密钥
 

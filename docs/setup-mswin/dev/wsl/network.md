@@ -1,7 +1,8 @@
 ---
-title: WSL 网络问题
 sidebar_position: 16
 ---
+
+# WSL 网络问题
 
 ## DNS 问题
 

@@ -1,7 +1,8 @@
 ---
-title: 目录
 sidebar_position: 0
 ---
+
+# 目录
 
 ## 基础
 

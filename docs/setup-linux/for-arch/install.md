@@ -1,7 +1,8 @@
 ---
-title: archinstall 安装器
 sidebar_position: 2
 ---
+
+# archinstall 安装器
 
 插入 U 盘，进入启动盘
 

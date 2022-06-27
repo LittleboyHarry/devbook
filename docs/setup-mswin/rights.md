@@ -1,22 +1,77 @@
 ---
-title: 个人数字权利
 sidebar_position: 7
 ---
 
+# 个人数字权利
+
 等待所有系统与应用升级完成后，部分功能会与您签订商业契约、收集您的隐私以继续提供服务。
 
-以管理员权限运行执行如下指令，解决问题：
+:::caution
 
-## 微软内置服务
+对于普通人，推荐使用微软中国团队运营的[微软电脑管家](https://aka.ms/GetPCManagerOFL)
 
-:::note 如果读者选择不需要这些服务
-
-以管理员身份运行 PowerShell 执行：
+下列命令，请以管理员身份运行 PowerShell 执行：
 
 :::
 
+## 保留个人数据
+
+参考来源：[O&O ShutUp10++](https://www.oo-software.com/en/shutup10) 图形化免费软件
+
 ```powershell
-# 禁用后台服务
+&{
+# 广告
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo /v Enabled /t REG_DWORD /d 0 /f
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo /v Enabled /t REG_DWORD /d 0 /f
+reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo /v Id /f >NUL
+
+# 广告：蓝牙数据分享
+reg add HKLM\Software\Microsoft\PolicyManager\current\device\Bluetooth /v AllowAdvertising /t REG_DWORD /d 0 /f
+
+# 同步：活动信息
+reg add HKLM\Software\Policies\Microsoft\Windows\System /v UploadUserActivities /t REG_DWORD /d 0 /f
+
+# 同步：剪贴板
+reg add HKLM\Software\Policies\Microsoft\Windows\System /v AllowCrossDeviceClipboard /t REG_DWORD /d 0 /f
+
+# 客户体验改善调查
+reg add HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows /v CEIPEnable /t REG_DWORD /d 0 /f
+
+# 打字输入特征
+reg add HKCU\Software\Microsoft\Input\TIPC /v Enabled /t REG_DWORD /d 0 /f
+
+# 手写输入特征
+reg add HKLM\Software\Policies\Microsoft\Windows\HandwritingErrorReports /v PreventHandwritingErrorReports /t REG_DWORD /d 1 /f
+reg add HKLM\Software\Policies\Microsoft\Windows\TabletPC /v PreventHandwritingDataSharing /t REG_DWORD /d 1 /f
+
+# Windows 安全中心：信息上报
+reg add HKLM\Software\Policies\Microsoft\MRT /v DontReportInfectionInformation /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v SubmitSamplesConsent /t REG_DWORD /d 2 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v SpyNetReporting /t REG_DWORD /d 0 /f
+
+# Office 数据
+reg add HKCU\Software\Policies\Microsoft\Office\Common\ClientTelemetry /v SendTelemetry /t REG_DWORD /d 3 /f
+reg add HKCU\Software\Microsoft\Office\Common\ClientTelemetry /v DisableTelemetry /t REG_DWORD /d 1 /f
+
+# Cortana 语音助手
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Windows Search" /v CortanaConsent /t REG_DWORD /d 0 /f
+
+# 用户数据收集
+reg add HKLM\Software\Policies\Microsoft\Windows\DataCollection /v AllowTelemetry /t REG_DWORD /d 0 /f
+reg add HKLM\Software\Policies\Microsoft\Windows\AppCompat /v AITEnable /t REG_DWORD /d 0 /f
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Privacy /v TailoredExperiencesWithDiagnosticDataEnabled /t REG_DWORD /d 0 /f
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Privacy /v TailoredExperiencesWithDiagnosticDataEnabled /t REG_DWORD /d 0 /f
+reg add HKCU\SOFTWARE\Microsoft\Siuf\Rules /v NumberOfSIUFInPeriod /t REG_DWORD /d 0 /f
+reg add HKCU\SOFTWARE\Microsoft\Siuf\Rules /v PeriodInNanoSeconds /t REG_DWORD /d 0 /f
+
+} >$null
+```
+
+## 屏蔽服务与启动项
+
+没有用处的后台服务会不仅会收集数据，还会拖慢计算机运行速度
+
+```powershell
 function Disable-Service {
     param([String]$name)
     if ((Get-Service $name -ea si) -and ((Get-Service $name).StartType -ne 'Disabled')) {
@@ -26,14 +81,31 @@ function Disable-Service {
     }
 }
 
-# 兼容性助手、诊断、跟踪、错误报告
-'PcaSvc', 'DPS', 'DiagTrack', 'WerSvc' | % { Disable-Service $_ }
-# XBox
+# 个人数据收集
+'dmwappushservice', 'DiagTrack' | % { Disable-Service $_ }
+# 没用的兼容性检测、错误报告服务
+'PcaSvc', 'WerSvc' | % { Disable-Service $_ }
+
+# 禁用任务计划：个人数据收集
+function Disable-DefaultTask {
+    param([String]$name)
+    Get-ScheduledTask -TaskName $name | Disable-ScheduledTask -ErrorAction SilentlyContinue
+}
+
+'Consolidator', 'UsbCeip', 'DmClient', 'DmClientOnScenarioDownload' | ForEach-Object { Disable-DefaultTask $_ }
+
+```
+
+XBox 相关：
+
+```powershell
 'XblAuthManager', 'XblGameSave', 'XboxGipSvc', 'XboxNetApiSvc' | % { Disable-Service $_ }
+Disable-DefaultTask XblGameSaveTask
+```
 
-# 禁用客户体验改善计划
-reg add HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows /v CEIPEnable /t REG_DWORD /d 0 /f
+## 微软内置应用
 
+```powershell
 # OneDrive
 Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
 Stop-Process -Name OneDrive
@@ -89,7 +161,7 @@ import FileItem from '@theme/FileItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 
-## 推荐火狐浏览器
+## 改用火狐浏览器
 
 <p>
 <StoreButton to={mslink`9NZVDKPMR9RD`} text="从商店安装" />
@@ -99,31 +171,10 @@ import { faBox } from '@fortawesome/free-solid-svg-icons';
 
 附：
 
-1. <a href="/docs/goodsoft/browser/firefox" target="_blank">使用说明</a>
-2. <a href="/docs/goodsoft/browser/chromium#windows-安装" target="_blank">Chromium</a>
+1. <a href="/docs/goodsoft/firefox/config" target="_blank">使用说明</a>
+2. <a href="/docs/goodsoft/chromium" target="_blank">Chromium</a>
 
-## 屏蔽启动项与服务
-
-管理员运行：
-
-```powershell
-Stop-Service "DiagTrack"
-Set-Service "DiagTrack" -StartupType Disabled
-```
-
-没有用处的后台服务会不仅会收集数据，还会拖慢计算机运行速度
-
-对于普通人，推荐使用微软中国团队运营的[微软电脑管家](https://aka.ms/GetPCManagerOFL)
-
-:::caution 如果你熟知这些服务的功能，且知晓可能的后果：
-
-打开任务管理器，点击“启动”面板，禁用启动影响高的无用项。
-
-随后，切换到“服务”面板 > “打开服务”，关闭厂商为你附带的没用服务。
-
-[参考脚本](https://github.com/Sycnex/Windows10Debloater/blob/a48b4d8dc501680e0edc31f840791c966d89d309/Windows10Debloater.ps1#L173)
-
-:::
+<!-- [参考脚本](https://github.com/Sycnex/Windows10Debloater/blob/a48b4d8dc501680e0edc31f840791c966d89d309/Windows10Debloater.ps1#L173) -->
 
 import {
 PreferWinVer,

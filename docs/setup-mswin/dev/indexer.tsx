@@ -41,7 +41,7 @@ export default function WinDevIndexer() {
       <LogoCard.Container>
         <LogoCard
           name="Sysinternals"
-          to={link('sysinternals')}
+          to={'advance/sysinternals'}
           noNewTab
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />

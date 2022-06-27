@@ -1,7 +1,8 @@
 ---
-title: Zsh
 sidebar_position: 6
 ---
+
+# Zsh
 
 ## 安装
 
@@ -11,7 +12,7 @@ import GetPkg from '@theme/GetPkg';
 
 ## 调优
 
-import Require from '/docs/_common/deployworkenv.md'
+import Require from '/docs/\_deployworkenv.md'
 
 <Require />
 

@@ -1,6 +1,4 @@
----
-title: 桌面环境问题
----
+# 桌面环境问题
 
 import GetPkg from '@theme/GetPkg';
 

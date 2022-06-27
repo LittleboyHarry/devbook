@@ -1,7 +1,8 @@
 ---
-title: GNOME 调优
 sidebar_position: 2
 ---
+
+# GNOME 调优
 
 注：`&!` 是 zsh 可分离式执行的专属特性
 

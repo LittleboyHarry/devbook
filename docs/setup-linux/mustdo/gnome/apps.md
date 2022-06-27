@@ -1,6 +1,4 @@
----
-title: GNOME 应用推荐
----
+# GNOME 应用推荐
 
 import GetPkg from '@theme/GetPkg';
 

@@ -1,6 +1,4 @@
----
-title: 注册表
----
+# 注册表
 
 :::note 使用 PE 系统修复注册表
 
@@ -13,7 +11,7 @@ title: 注册表
 
 ### 自动跳转
 
-[安装](/docs/setup-mswin/dev/sysinternals) 来自 Sysinternals Suite 的 regjump 工具
+[安装](/docs/setup-mswin/advance/sysinternals) 来自 Sysinternals Suite 的 regjump 工具
 
 ### 变化跟踪
 

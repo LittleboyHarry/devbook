@@ -1,7 +1,8 @@
 ---
-title: 配置 Debian
 sidebar_position: 7
 ---
+
+# 配置 Debian
 
 :::caution 推荐使用 HTTPS 协议
 

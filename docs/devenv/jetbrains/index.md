@@ -1,7 +1,8 @@
 ---
-title: 安装 JetBrains IDEs
 sidebar_position: 0
 ---
+
+# 安装 JetBrains IDEs
 
 ## 轻松管理 IDE
 

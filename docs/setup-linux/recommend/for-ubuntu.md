@@ -1,11 +1,12 @@
 ---
-title: for Ubuntu
 sidebar_position: 8
 ---
 
+# for Ubuntu
+
 ## 国内镜像软件仓
 
- <details className="let-details-to-gray">
+ <details>
 <summary>方法一：图形界面的更新器</summary>
 
 1. 搜索关键词 `sof`，选择 “软件和更新”，更改合适的“下载自”来源
@@ -49,7 +50,7 @@ sudo apt upgrade -y # 更新系统
 
 :::note 完全卸载 Snap 的方法
 
-对于 Snap 版 Firefox，请<a target="_blank" href="/docs/goodsoft/browser/chromium-for-linux">先安装 Edge</a> 或选择其他浏览器代替
+对于 Snap 版 Firefox，请<a target="_blank" href="/docs/goodsoft/chromium/linux">先安装 Edge</a> 或选择其他浏览器代替
 
 ```shell
 sudo apt autoremove --purge snapd

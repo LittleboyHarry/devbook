@@ -22,8 +22,8 @@ export function PreferAppstream({
       storeNamePrefix="preferAppstream"
       storeFlags={[appstream, pkgmgr]}
       storeKeywords={['appstream', 'pkgmgr']}
-      keywords={['是', '否，用原生包管理器']}
-      hint={
+      labels={['是', '否，用原生包管理器']}
+      title={
         <>
           在 &nbsp;
           <a href="https://apps.gnome.org/zh-CN/app/org.gnome.Software/">

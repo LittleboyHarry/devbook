@@ -1,7 +1,8 @@
 ---
-title: 中文输入法
 sidebar_position: 32
 ---
+
+# 中文输入法
 
 :::caution
 
@@ -13,7 +14,7 @@ sidebar_position: 32
 
 iBus 中文输入体验效果并不理想，作者经常遇到卡顿、输入无响应等问题。fcitx5 可能是更好的开源输入法技术。
 
- <details className="let-details-to-gray">
+ <details>
 <summary>仍然使用 iBus 吗？</summary>
 
 https://gitcode.net/lbh/dwe/-/blob/main/cn/ibus/README.md

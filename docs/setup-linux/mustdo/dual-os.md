@@ -1,7 +1,8 @@
 ---
-title: 对于双系统
 sidebar_position: 8
 ---
+
+# 对于双系统
 
 ## 注意事项
 
@@ -53,8 +54,7 @@ sidebar_position: 8
 
 如果还用了 rEFInd 启动器, 请注意修改配置或删除
 
-Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：
-（ 仅管理员身份可操作该分区 ）
+Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：（ 仅管理员身份可操作该分区 ）
 
     mountvol x: /s
 

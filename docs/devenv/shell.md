@@ -1,6 +1,6 @@
 ## 代码格式化
 
-    sudo dnf in -y shfmt
+<GetPkg name='shfmt' pacman />
 
 `-w` 参数把格式化结果写入原文件
 
@@ -10,6 +10,7 @@
 
     shfmt -w -l .
 
-<GetVscExt id="foxundermoon.shell-format"/>
+<PreferVscode oneline children={<GetVscodeExtension id="foxundermoon.shell-format"/>} />
 
-import GetVscExt from '@theme/GetVscExt';
+import GetVscodeExtension, { PreferVscode } from '@theme/GetVscodeExtension';
+import GetPkg from '@theme/GetPkg';

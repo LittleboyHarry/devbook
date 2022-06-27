@@ -1,7 +1,8 @@
 ---
-title: 摩登命令行
 sidebar_position: 0
 ---
+
+# 摩登命令行
 
 import Indexer from './indexer';
 
@@ -21,7 +22,7 @@ import Indexer from './indexer';
 
 </div>
 
-<GetPkg name="bat" dnf scoop pacman/>
+<GetPkg name='bat' dnf scoop='bat less' pacman/>
 
 :::note 用 apt 安装：
 

@@ -1,6 +1,4 @@
----
-title: PowerShell
----
+# PowerShell
 
 ## 内置的实用命令
 

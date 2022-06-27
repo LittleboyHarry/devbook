@@ -1,1 +1,1 @@
-湩瑳污⵬楧⹴硥⁥猯汩湥⁴爯慥楤普椽獮慴汬札瑩椮楮਍
+install-git.exe /silent /readinf=install-git.ini

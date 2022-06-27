@@ -33,23 +33,27 @@ export type ScopeOf<T extends string> = PropsWithChildren<{
 
 export function PreferScope<T extends string>({
   children,
+  className,
   defaultValue,
   storeNamePrefix,
   storeFlags,
   storeKeywords,
   context,
-  keywords,
-  hint,
+  labels,
+  hints,
+  title,
   triggers,
   noSelector,
 }: PropsWithChildren<{
   defaultValue: T;
+  className?: string;
   storeNamePrefix: string;
   storeFlags: (boolean | undefined)[];
   storeKeywords: T[];
   context: Context<T>;
-  keywords: string[];
-  hint?: ReactNode;
+  labels: ReactNode[];
+  hints?: string[];
+  title?: ReactNode;
   triggers: Set<(value: T) => void>;
   noSelector?: boolean;
 }>) {
@@ -100,20 +104,23 @@ export function PreferScope<T extends string>({
       }}
     >
       {!noSelector && (
-        <div className={cs('pills', 'pills--block', st.selector)}>
-          {hint && <div className={st.hint}>{hint}</div>}
-          {storeFlags.map(
-            (flag, i) =>
-              flag && (
-                <RadioChoice
-                  key={i}
-                  group={storeNamePrefix}
-                  value={storeKeywords[i]}
-                  label={keywords[i]}
-                  context={context}
-                />
-              )
-          )}
+        <div className={cs('pills', 'pills--block', st.selector, className)}>
+          {title && <div className={st.title}>{title}</div>}
+          <div>
+            {storeFlags.map(
+              (flag, i) =>
+                flag && (
+                  <RadioChoice
+                    key={i}
+                    group={storeNamePrefix}
+                    value={storeKeywords[i]}
+                    label={labels[i]}
+                    hint={hints && hints[i]}
+                    context={context}
+                  />
+                )
+            )}
+          </div>
         </div>
       )}
       {children}
@@ -125,11 +132,13 @@ function RadioChoice<T extends string>({
   value,
   group,
   label,
+  hint,
   context,
 }: {
   value: T;
   group: string;
-  label: string;
+  label: ReactNode;
+  hint?: string;
   context: Context<T>;
 }) {
   const { currentValue, setCurrentValue } = useContext(context);
@@ -137,6 +146,7 @@ function RadioChoice<T extends string>({
   return (
     <label
       className={cs(st.choice, 'pills__item', checked && 'pills__item--active')}
+      title={hint}
     >
       <input
         type="radio"
@@ -157,6 +167,6 @@ export function createScopeComponent<T extends string>(
   return ({ children }: { children?: ReactNode }) => {
     const { currentValue } = useContext(context);
 
-    return (currentValue === scopeValue && children) ?? null;
+    return <>{(currentValue === scopeValue && children) ?? null}</>;
   };
 }

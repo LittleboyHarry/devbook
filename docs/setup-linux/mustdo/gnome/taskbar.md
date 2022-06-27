@@ -1,7 +1,8 @@
 ---
-title: GNOME 开始菜单
 sidebar_position: 13
 ---
+
+# GNOME 开始菜单
 
 Dash to Panel
 可以同时代替前面的顶栏和程序坞

@@ -22,8 +22,8 @@ export function PreferWinVer({
       storeNamePrefix="preferWinVer"
       storeFlags={[win10, win11]}
       storeKeywords={['win10', 'win11']}
-      keywords={['Win 10', 'Win 11']}
-      hint="系统版本："
+      labels={['Win 10', 'Win 11']}
+      title="系统版本："
       {...{ defaultValue, context, children, triggers, noSelector }}
     />
   );

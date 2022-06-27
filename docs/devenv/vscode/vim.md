@@ -1,7 +1,8 @@
 ---
-title: VSCode vi 编辑模式
 sidebar_position: 4
 ---
+
+# VSCode vi 编辑模式
 
 ## 配置
 
@@ -35,7 +36,7 @@ sidebar_position: 4
 
 ## 安装
 
-<p> <GetVscExt id="vscodevim.Vim" noTitle /> </p>
+<p><PreferVscode oneline children={<GetVscodeExtension id="vscodevim.Vim" />} /></p>
 
 :::info 临时禁用的方法
 
@@ -47,4 +48,4 @@ sidebar_position: 4
 :::
 
 import { LinkButton } from '@theme/links';
-import GetVscExt from '@theme/GetVscExt';
+import GetVscodeExtension, { PreferVscode } from '@theme/GetVscodeExtension';

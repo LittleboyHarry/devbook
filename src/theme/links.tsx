@@ -84,6 +84,7 @@ export function LinkButton({
         'button',
         !small && 'button--lg',
         outline ? 'button--outline button--secondary' : 'button--primary',
+        icon && st.iconButton,
         className
       )}
       title={hint}

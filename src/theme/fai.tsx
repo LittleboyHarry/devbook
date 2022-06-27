@@ -11,6 +11,8 @@ import {
   faDownload,
   faGlobe,
   faGears,
+  faPuzzlePiece,
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 
 type Props = Omit<FontAwesomeIconProps, 'icon'>;
@@ -41,4 +43,12 @@ export function WebIcon(props: Props) {
 
 export function ConfigIcon(props: Props) {
   return <FontAwesomeIcon {...props} icon={faGears} />;
+}
+
+export function AddonIcon(props: Props) {
+  return <FontAwesomeIcon {...props} icon={faPuzzlePiece} />;
+}
+
+export function PlusIcon(props: Props) {
+  return <FontAwesomeIcon {...props} icon={faPlus} />;
 }

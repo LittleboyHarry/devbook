@@ -1,7 +1,8 @@
 ---
-title: 电子邮件
-sidebar_position: 2
+sidebar_position: 8
 ---
+
+# 电子邮件
 
 推荐 Mozilla 出品的通用客户端
 

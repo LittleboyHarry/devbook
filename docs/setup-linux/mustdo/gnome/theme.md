@@ -1,7 +1,8 @@
 ---
-title: GNOME 外观
 sidebar_position: 60
 ---
+
+# GNOME 外观
 
 ## 保存样式
 

@@ -1,7 +1,8 @@
 ---
-title: 商店推荐
 sidebar_position: 16
 ---
+
+# 商店推荐
 
  <div className="no-table-border no-table-header">
 
@@ -18,6 +19,7 @@ sidebar_position: 16
 
 |                                                                 |                          |
 | --------------------------------------------------------------- | ------------------------ |
+| <StoreLink to={mslink`9N8G7TSCL18R`} text='NanoZip' />          | 7zip 改进版，支持 win11  |
 | <StoreLink to={mslink`XP8JK4HZBVF435`} text='Auto Dark Mode' /> | 护眼：自动深色模式       |
 | <StoreLink to={mslink`9PLJWWSV01LK`} text='Twinkle Tray' />     | 护眼：调节外接显示屏亮度 |
 | <StoreLink to={mslink`9NBLGGH516XP`} text='EarTrumpet' />       | 更好的音量调节器         |
@@ -41,7 +43,7 @@ sidebar_position: 16
 
 附：[国内正版代理商索引](https://zhuanlan.zhihu.com/p/93284719)
 
- <details><summary>Win 11 安卓子系统</summary>
+ <details className="rawstyl"><summary>Win 11 安卓子系统</summary>
 
 截至 2022 年，子系统仅在美区可以安装
 

@@ -1,7 +1,8 @@
 ---
-title: 配置 Arch
 sidebar_position: 3
 ---
+
+# 配置 Arch
 
 import {
 PreferXde,
@@ -11,7 +12,7 @@ ForKde
 
 <PreferXde gnome kde />
 
-import SearchMethod from '/docs/setup-linux/\_common/de/search.md'
+import SearchMethod from '/docs/setup-linux/\_desktopenv/search.md'
 
 <SearchMethod />
 
@@ -55,12 +56,12 @@ import SearchMethod from '/docs/setup-linux/\_common/de/search.md'
 
 ### 配置桌面环境
 
-import BaseDeCfg from '/docs/setup-linux/\_common/de/base.md';
+import BaseDeCfg from '/docs/setup-linux/\_desktopenv/base.md';
 
 <BaseDeCfg />
 
-import GnomeCfg from '/docs/setup-linux/\_common/de/gnome.md';
-import KdeCfg from '/docs/setup-linux/\_common/de/kde.md';
+import GnomeCfg from '/docs/setup-linux/\_desktopenv/gnome.md';
+import KdeCfg from '/docs/setup-linux/\_desktopenv/kde.md';
 
 <PreferXde gnome kde noSelector>
     <ForGnome><GnomeCfg /></ForGnome>
@@ -99,7 +100,7 @@ import { StoreButton, mslink } from '@theme/links';
 
 import { LinkButton } from '@theme/links';
 
-<p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/browser/firefox" newTab /></p>
+<p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/firefox/config" newTab /></p>
 
 打开设置，找到语言，选择“简体中文”
 

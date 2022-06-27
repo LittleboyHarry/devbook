@@ -1,6 +1,4 @@
----
-title: GNOME of Ubuntu
----
+# GNOME of Ubuntu
 
 ## 隐藏未挂载的设备
 

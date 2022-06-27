@@ -21,11 +21,11 @@ export function PreferPkgMgr({
   if (!defaultValue) defaultValue = _defaultValue;
   return (
     <PreferScope
-      hint="选择包管理器："
+      title="你的包管理器："
       storeNamePrefix="preferPkgMgr"
       storeFlags={[pacman, apt, dnf]}
       storeKeywords={['pacman', 'apt', 'dnf']}
-      keywords={['pacman', 'apt', 'dnf']}
+      labels={['pacman', 'apt', 'dnf']}
       {...{ defaultValue, context, children, triggers }}
     />
   );

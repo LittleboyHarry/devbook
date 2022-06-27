@@ -1,7 +1,8 @@
 ---
-title: 内核问题
 sidebar_position: 16
 ---
+
+# 内核问题
 
 如果发行版的自带内核对硬件支持有问题，请注意本文，否则略过。毛病不限于：
 
@@ -10,8 +11,7 @@ sidebar_position: 16
 
 :::info 常用链接
 
-长期支持版：
-[https://www.kernel.org/category/releases.html](https://www.kernel.org/category/releases.html#:~:text=Longterm%20release%20kernels)
+长期支持版：[https://www.kernel.org/category/releases.html](https://www.kernel.org/category/releases.html#:~:text=Longterm%20release%20kernels)
 
 Linux 内核源码 by 清华镜像站：https://mirrors.tuna.tsinghua.edu.cn/kernel/
 

@@ -1,6 +1,4 @@
----
-title: 安装 Fedora Linux
----
+# 安装 Fedora Linux
 
 ## 下载获取
 

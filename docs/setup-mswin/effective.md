@@ -1,7 +1,8 @@
 ---
-title: 提高效率
 sidebar_position: 8
 ---
+
+# 提高效率
 
 ## [库机制](https://sspai.com/post/41297)
 
@@ -11,8 +12,7 @@ sidebar_position: 8
 
 :::note 管理开始菜单应用
 
-使用“库”机制，易于管理开始菜单：
-进入库，新建一个名为“开始菜单”的库，编辑其属性。“添加”并“设置保存位置”：
+使用“库”机制，易于管理开始菜单：进入库，新建一个名为“开始菜单”的库，编辑其属性。“添加”并“设置保存位置”：
 
     %APPDATA%\Microsoft\Windows\Start Menu\Programs
 

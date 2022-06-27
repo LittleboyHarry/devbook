@@ -1,7 +1,8 @@
 ---
-title: 初始化
 sidebar_position: 2
 ---
+
+# 初始化
 
 import {
 PreferWinVer,
@@ -109,8 +110,7 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 推荐使用微软登录验证 App，避免重复输入登录密码。
 [配置方法](https://account.live.com/proofs/EnableTfa)
 
-手机客户端：
-[iOS](https://apps.apple.com/cn/app/microsoft-authenticator/id983156458)
+手机客户端：[iOS](https://apps.apple.com/cn/app/microsoft-authenticator/id983156458)
 | Android
 
 :::

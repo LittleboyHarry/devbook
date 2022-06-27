@@ -1,7 +1,8 @@
 ---
-title: 规划硬盘分区
 sidebar_position: 5
 ---
+
+# 规划硬盘分区
 
 对于全空、可完全重置硬盘：Linux 安装器都会提供安装建议，自动完成分区
 
@@ -10,12 +11,12 @@ sidebar_position: 5
 - 分区工具
 
   - WinPE 装机工具提供：
-    - `diskmgmt.msc` Windows 内置
+    - Windows 内置磁盘管理：`diskmgmt.msc`
     - DiskGenius 分区工具
     - 傲梅分区助手
   - Linux LiveCD 提供：
-    - `cgdisk` 字符界面 GPT 分区器
-    - `gparted` 图形化分区器
+    - 字符界面 GPT 分区器：`cgdisk`
+    - 图形化分区器：`gparted`
 
 - 保留 Windows MSR 恢复分区
 

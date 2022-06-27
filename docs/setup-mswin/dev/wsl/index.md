@@ -1,6 +1,4 @@
----
-title: 使用 WSL
----
+# 使用 WSL
 
 import {HtmlA} from '@theme/links';
 
@@ -11,7 +9,8 @@ import {HtmlA} from '@theme/links';
 
 ```powershell
 dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism /online /enable-feature /featurename:VirtualMachinePlatform /all
+dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
 ```
 
 2\. 编辑系统启动菜单

@@ -1,6 +1,4 @@
----
-title: Cockpit
----
+# Cockpit
 
 # Linux 机座舱
 

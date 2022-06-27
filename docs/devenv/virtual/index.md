@@ -1,7 +1,8 @@
 ---
-title: 说明
 sidebar_position: 0
 ---
+
+# 说明
 
 - VirtualBox: 通用性
 - libvirt: Linux 下最佳方案

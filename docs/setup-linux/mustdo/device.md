@@ -1,7 +1,8 @@
 ---
-title: 设备适配
 sidebar_position: 15
 ---
+
+# 设备适配
 
 ## 关机等待时间过长
 
@@ -14,7 +15,7 @@ sidebar_position: 15
     pkginst/tlp
 
 
- <details className="let-details-to-gray" role="alert">
+ <details>
 <summary>外接显示器亮度</summary>
 
     sudo dnf in -y ddcutil

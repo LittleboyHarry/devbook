@@ -1,7 +1,8 @@
 ---
-title: 云镜像与虚拟机
 tags: [cloud-init, libvirt]
 ---
+
+# 云镜像与虚拟机
 
 :::note 请阅读前文
 
@@ -9,8 +10,8 @@ libvirt-QEMU/KVM 虚拟化平台在 Linux 上的[安装方法](/docs/setup-linux
 
 :::
 
-云技术 [cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html) 视频介绍：
-[去 bilibili 观看](https://www.bilibili.com/video/BV1Cf4y1U7pQ?p=3&zw)后续分集
+云技术 [cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html)
+视频介绍：[去 bilibili 观看](https://www.bilibili.com/video/BV1Cf4y1U7pQ?p=3&zw)后续分集
 
 <BPlayer id="BV1Cf4y1U7pQ" page="2" />
 

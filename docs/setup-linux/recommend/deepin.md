@@ -1,7 +1,8 @@
 ---
-title: virtual 深度系统
 sidebar_position: 67
 ---
+
+# virtual 深度系统
 
 :::info 推荐在专用虚拟机内安装国产软件，兼容性好、折腾少！
 
@@ -9,8 +10,9 @@ deepin 深度系统是一款优秀的国产图形化操作系统，本文适用�
 
 :::
 
-清华镜像站下载：https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/
-（[官方来源](https://www.deepin.org/zh/download/)
+官网下载：https://www.deepin.org/zh/download/
+
+清华镜像站：https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/
 
 **依赖前文的 [libvirt 虚拟化基础平台](libvirt)**
 
@@ -28,8 +30,7 @@ deepin 深度系统是一款优秀的国产图形化操作系统，本文适用�
 
 安装后，立即重启以初始化系统配置
 
-登陆系统配置 Spice 图形加速：
-在桌面右键 “在终端中打开” 运行 `sudo -i`，输入（ 按 Tab 自动补充 ）
+登陆系统配置 Spice 图形加速：在桌面右键 “在终端中打开” 运行 `sudo -i`，输入（ 按 Tab 自动补充 ）
 
 ```shell
 apt update
@@ -39,8 +40,7 @@ shutdown now
 
 :::note 使用虚拟系统管理器
 
-virt-manager 管理方法：
-菜单 “文件” > “添加连接” 选择 “QEMU/KVM 用户会话”
+virt-manager 管理方法：菜单 “文件” > “添加连接” 选择 “QEMU/KVM 用户会话”
 
 （ 老版本也可选择 “自定义 URI ...” `qemu:///session` ）
 

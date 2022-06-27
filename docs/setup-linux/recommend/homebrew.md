@@ -1,7 +1,8 @@
 ---
-title: 添加 homebrew
 sidebar_position: 64
 ---
+
+# 添加 homebrew
 
 安装：
 

@@ -1,6 +1,4 @@
----
-title: Node.js
----
+# Node.js
 
 nodejs 偶数版号代表稳定性，我们应该选择偶数版。
 请见[发行时间表](https://nodejs.org/en/about/releases/)

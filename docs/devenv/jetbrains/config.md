@@ -1,9 +1,10 @@
 ---
-title: JetBrains 配置
 sidebar_position: 1
 ---
 
-<details className="let-details-to-gray">
+# JetBrains 配置
+
+<details>
   <summary>高分辨率屏幕，界面太小？</summary>
 
 缩放界面尺寸，编辑后重启应用生效：
@@ -54,7 +55,7 @@ alt="git stage"
 
 以及 HTTP Proxy，如需的话
 
-<details className="let-details-to-gray">
+<details>
   <summary>与 VSCode 集成</summary>
 
 依赖：
@@ -65,7 +66,7 @@ alt="git stage"
 
       scoop install nircmd
 
-- <GetVscExt id="generalov.open-in-editor-vscode" msOnly/>
+- 用于 VSCode: <GetVscodeExtension id="generalov.open-in-editor-vscode"/>
 
 VSCode `settings.json` (Windows):
 
@@ -89,4 +90,4 @@ alt="config entrypoint"
 
 </details>
 
-import GetVscExt from '@theme/GetVscExt';
+import GetVscodeExtension from '@theme/GetVscodeExtension';

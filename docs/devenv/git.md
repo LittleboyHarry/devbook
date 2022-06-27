@@ -1,7 +1,8 @@
 ---
-title: Git
 sidebar_position: 8
 ---
+
+# Git
 
 :::note 推荐的指令缩写表
 
@@ -9,7 +10,7 @@ sidebar_position: 8
 
 :::
 
-import Require from '/docs/_common/deployworkenv.md'
+import Require from '/docs/\_deployworkenv.md'
 
 <Require />
 

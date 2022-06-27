@@ -1,7 +1,8 @@
 ---
-title: libvirt 虚拟化平台
 sidebar_position: 66
 ---
+
+# libvirt 虚拟化平台
 
 # libvirt
 

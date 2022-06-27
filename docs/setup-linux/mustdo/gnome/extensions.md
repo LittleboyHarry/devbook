@@ -1,7 +1,8 @@
 ---
-title: GNOME 推荐扩展
 sidebar_position: 80
 ---
+
+# GNOME 推荐扩展
 
 ## 扩展管理器
 
@@ -57,7 +58,7 @@ sidebar_position: 80
 
 ## 作者偏好的配置
 
- <details className="let-details-to-gray"><summary>仅供参考，点击展开 </summary>
+ <details><summary>仅供参考，点击展开 </summary>
 
 Just Perfection:
 

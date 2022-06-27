@@ -15,13 +15,13 @@ export default function Catalog() {
       <LogoCard.Container>
         <LogoCard
           name="Firefox"
-          to="browser/firefox"
+          to="firefox/config"
           noNewTab
           logo={<img src={useBaseUrl('/img/icons/firefox.svg')} alt="icon" />}
         />
         <LogoCard
           name="Chromium"
-          to="browser/chromium-for-linux"
+          to="chromium"
           noNewTab
           logo={<img src={useBaseUrl('/img/icons/chromium.svg')} alt="icon" />}
         />

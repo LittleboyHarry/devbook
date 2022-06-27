@@ -1,7 +1,8 @@
 ---
-title: Vagrant
 sidebar_position: 9
 ---
+
+# Vagrant
 
 请参见前文，选择 VirtualBox, libvirt 中的任意一款安装并作虚拟化支持技术
 

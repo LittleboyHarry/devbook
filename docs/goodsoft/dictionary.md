@@ -1,6 +1,4 @@
----
-title: 词典
----
+# 词典
 
 import GetPkg from '@theme/GetPkg';
 

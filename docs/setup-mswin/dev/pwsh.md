@@ -1,7 +1,8 @@
 ---
-title: PowerShell
 sidebar_position: 2
 ---
+
+# PowerShell
 
 import { StoreButton, mslink } from '@theme/links';
 
@@ -16,7 +17,7 @@ import { StoreButton, mslink } from '@theme/links';
 &nbsp; ← 支持自动更新
 </p>
 
- <details className="let-details-to-gray" role="alert">
+ <details>
 <summary>其他渠道</summary>
 
 渠道二：从 GitHub 下载
@@ -94,7 +95,7 @@ if ( Test-Path -Path .git -PathType Container ) {
 
 ```
 
-<details className="let-details-to-gray">
+<details>
     <summary>其它社区开源项目</summary>
 
 增强的补全菜单 [`GuiCompletion`](https://github.com/nightroman/PS-GuiCompletion),
@@ -116,7 +117,7 @@ echo 'Import-Module kmt.winget.autocomplete' >> $PROFILE
 
 </details>
 
- <details className="let-details-to-gray">
+ <details>
 <summary>zoxide</summary>
 
 记录切换的工作目录，<a href="/docs/devenv/modern-cli/zoxide" target="_blank" >参见</a>

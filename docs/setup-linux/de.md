@@ -1,7 +1,8 @@
 ---
-title: 选择桌面环境
 sidebar_position: 3
 ---
+
+# 选择桌面环境
 
 仅推荐 GNOME 或 KDE，作者认为其他桌面环境技术不成熟、体验不友好
 

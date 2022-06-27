@@ -1,6 +1,8 @@
 ---
-title: 小技巧
+sidebar_position: 18
 ---
+
+# 小技巧
 
 ## 任务栏
 
@@ -10,18 +12,8 @@ title: 小技巧
 
 `Win + Shift + S` 键
 
-## 机械硬盘擦除遗留数据
+# GIMP
 
-出手机械硬盘前，运行
+开源免费的修图软件
 
-    cipher /w:<盘符>
-
-## 管理员提权需要密码
-
-管理员权限运行
-
-    reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /f /d 1
-
-0 禁用
-5 默认形式
-1 可以设置登录(指纹)验证
+    winget gimp.gimp

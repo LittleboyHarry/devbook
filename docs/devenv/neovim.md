@@ -1,7 +1,8 @@
 ---
-title: Neovim
 sidebar_position: 31
 ---
+
+# Neovim
 
 ## 安装
 

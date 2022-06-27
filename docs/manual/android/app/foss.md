@@ -1,9 +1,10 @@
----
-title: 推荐的开源应用
----
+# 推荐的开源应用
 
-- VLC 播放器
+- 笔记和清单：Notally
+- 待办事项：Tasks.org
 - 扫描生成二维码：Binary Eye
+- VLC 播放器
+- Markdown 编辑器：Markor
 
 ## [Simple Mobile Tools](https://simplemobiletools.com/)
 

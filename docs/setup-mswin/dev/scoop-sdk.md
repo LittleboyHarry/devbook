@@ -1,17 +1,17 @@
 ---
-title: SDK 安装 by scoop
 sidebar_position: 32
 ---
 
-scoop 安装 SDK 可选择多种版本
+# 用 Scoop 安装 SDK
 
-    scoop bucket add versions
+scoop 安装 SDK 可选择多种版本
 
 ## Java
 
 17，11，8 都是 LTS 版本
 
 ```
+scoop bucket add versions
 scoop search jdk
 
 scoop install ?
@@ -26,9 +26,10 @@ scoop install ?
 ## Python
 
 ```
+scoop bucket add versions
 scoop search python
 
-scoop install python?
+scoop install
 ```
 
 :::caution 请不要使用微软商店默认提供的版本！

@@ -22,17 +22,25 @@
 }
 
 %padding {
-  padding: 1rem 0;
+  padding: {
+    top: 1rem;
+    bottom: 1rem;
+  }
 }
 
 .choice {
   @extend %padding;
+  padding: {
+    left: 2rem;
+    right: 2rem;
+  }
+  margin-right: 8px;
   > input[type='radio'] {
     display: none;
   }
 }
 
-.hint {
+.title {
   @extend %padding;
   margin-right: 1rem;
 }

@@ -1,7 +1,8 @@
 ---
-title: KDE 推荐
 sidebar_position: 8
 ---
+
+# KDE 推荐
 
 import GetPkg from '@theme/GetPkg';
 

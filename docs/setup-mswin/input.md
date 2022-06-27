@@ -1,7 +1,8 @@
 ---
-title: 键盘与输入法
 sidebar_position: 6
 ---
+
+# 键盘与输入法
 
 推荐配置
 
@@ -23,10 +24,8 @@ reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v FontStyleTS
 
 </summary>
 
-来自知乎知识分享：
-[双拼的好处](https://www.zhihu.com/question/21449398)
-与
-[练习方法](https://www.zhihu.com/question/311394000)
+来自知乎知识分享：[双拼的好处](https://www.zhihu.com/question/21449398)
+与 [练习方法](https://www.zhihu.com/question/311394000)
 
 ```bat
 reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "EnableExtraDomainType" /t REG_DWORD /f /d 1

@@ -1,7 +1,8 @@
 ---
-title: VSCode 配置
 sidebar_position: 1
 ---
+
+# VSCode 配置
 
 ## 修改默认 Shell
 

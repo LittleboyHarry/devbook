@@ -1,7 +1,8 @@
 ---
-title: Arch on WSL
 sidebar_position: 5
 ---
+
+# Arch on WSL
 
 ## 制作虚拟硬盘
 
@@ -45,6 +46,7 @@ DIR='$env:USERPROFILE\wsl-arch'
 
 powershell.exe -c 'wsl --import '$NAME' $(mkdir -f '$DIR') wsl-arch.tar.gz'
 wsl.exe --setdefault "$NAME"
+
 ```
 
 `Ctrl + D` 退出 Debian WSL, 进入 Arch:
@@ -117,7 +119,7 @@ wsl --export $wslName arch.tar
 
 ## 配置
 
-import Require from '/docs/_common/deployworkenv.md'
+import Require from '/docs/\_deployworkenv.md'
 
 <Require />
 

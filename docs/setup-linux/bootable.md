@@ -1,7 +1,8 @@
 ---
-title: 制作启动盘
 sidebar_position: 4
 ---
+
+# 制作启动盘
 
 :::note [同盘多镜像制作器](https://www.ventoy.net/cn/download.html)
 

@@ -22,8 +22,8 @@ export function PreferXde({
       storeNamePrefix="preferXde"
       storeFlags={[gnome, kde]}
       storeKeywords={['gnome', 'kde']}
-      keywords={['GNOME', 'KDE']}
-      hint="选择 X 桌面环境："
+      labels={['GNOME', 'KDE']}
+      title="X 桌面环境："
       {...{ defaultValue, context, children, triggers, noSelector }}
     />
   );

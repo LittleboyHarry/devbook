@@ -14,11 +14,11 @@ const triggers = new Set<(value: Value) => void>();
 export function PreferCodeSource({ origin, gitee, children }: ScopeOf<Value>) {
   return (
     <PreferScope
-      hint="从代码源："
+      title="从代码源："
       storeNamePrefix="preferCodeSource"
       storeFlags={[origin, gitee]}
       storeKeywords={['origin', 'gitee']}
-      keywords={['原版', 'gitee 镜像']}
+      labels={['原版', 'gitee 镜像']}
       {...{ defaultValue, context, children, triggers }}
     />
   );

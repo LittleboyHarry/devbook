@@ -1,6 +1,4 @@
----
-title: 包管理器速查表
----
+# 包管理器速查表
 
 <!--
 :::info 查看包内容
@@ -17,8 +15,7 @@ title: 包管理器速查表
 :::
  -->
 
-<p>部分摘自：
-<LinkButton icon={<WebIcon />} name="Arch Wiki 文档" href="https://wiki.archlinux.org/title/Pacman/Rosetta" /></p>
+部分摘自：[Arch Wiki 文档](https://wiki.archlinux.org/title/Pacman/Rosetta)
 
 import { WebIcon } from '@theme/fai';
 

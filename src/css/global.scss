@@ -6,11 +6,18 @@
   user-select: all;
 }
 
-.let-details-to-gray {
+details.alert--info {
   --ifm-alert-background-color: var(--ifm-color-secondary-contrast-background);
   --ifm-alert-background-color-highlight: rgba(235, 237, 240, 0.15);
   --ifm-alert-foreground-color: var(--ifm-color-secondary-contrast-foreground);
   --ifm-alert-border-color: var(--ifm-color-secondary-darkest);
+
+  &.rawstyl {
+    --ifm-alert-background-color: var(--ifm-color-info-contrast-background);
+    --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
+    --ifm-alert-foreground-color: var(--ifm-color-info-contrast-foreground);
+    --ifm-alert-border-color: var(--ifm-color-info-dark);
+  }
 
   .admonition-tip & {
     border: none;

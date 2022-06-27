@@ -1,17 +1,20 @@
 ---
-title: VSCode 扩展推荐
 sidebar_position: 3
 ---
 
-<div className={'no-table-header no-table-border full-width-table '+st.root}>
+# VSCode 扩展推荐
+
+ <div className={st.root}><div className='no-table-header no-table-border'>
+ <PreferVscode vscode oss vscodium>
+ <SmallerButtonStyle>
 
 ## 必装推荐
 
-|                              |                |                                                    |
-| ---------------------------- | -------------- | -------------------------------------------------- |
-| [GitLens][gitlens]           | Git 功能强化   | <GetVscExt small id="eamodio.gitlens" />           |
-| [Prettier][prettier]         | 前端代码格式化 | <GetVscExt small id="esbenp.prettier-vscode" />    |
-| [EditorConfig][editorconfig] | 格式统一化     | <GetVscExt small id="EditorConfig.EditorConfig" /> |
+|                              |                |                                                 |
+| ---------------------------- | -------------- | ----------------------------------------------- |
+| [GitLens][gitlens]           | Git 功能强化   | <GetVscodeExtension id="eamodio.gitlens" />           |
+| [Prettier][prettier]         | 前端代码格式化 | <GetVscodeExtension id="esbenp.prettier-vscode" />    |
+| [EditorConfig][editorconfig] | 格式统一化     | <GetVscodeExtension id="EditorConfig.EditorConfig" /> |
 
 [gitlens]: https://www.gitkraken.com/gitlens/features
 [prettier]: https://prettier.io/
@@ -19,28 +22,32 @@ sidebar_position: 3
 
 ## 编程语言支持
 
-|        |                                           |
-| ------ | ----------------------------------------- |
-| Python | <GetVscExt small id="ms-python.python" /> |
+|        |                                        |
+| ------ | -------------------------------------- |
+| Python | <GetVscodeExtension id="ms-python.python" /> |
 
 ## 补充推荐
 
-|              |                |                                                         |
-| ------------ | -------------- | ------------------------------------------------------- |
-| Git Graph    | 图形化的 `tig` | <GetVscExt small id="mhutchie.git-graph" />             |
-| vscode-icons | 更好看的图标   | <GetVscExt small id="vscode-icons-team.vscode-icons" /> |
-| Open         | 外部打开文件   | <GetVscExt small id="sandcastle.vscode-open" />         |
-| change-case  | 大小写转换     | <GetVscExt small id="wmaurer.change-case" />            |
+|              |                |                                                      |
+| ------------ | -------------- | ---------------------------------------------------- |
+| Git Graph    | 图形化的 `tig` | <GetVscodeExtension id="mhutchie.git-graph" />             |
+| vscode-icons | 更好看的图标   | <GetVscodeExtension id="vscode-icons-team.vscode-icons" /> |
+| Open         | 外部打开文件   | <GetVscodeExtension id="sandcastle.vscode-open" />         |
+| change-case  | 大小写转换     | <GetVscodeExtension id="wmaurer.change-case" />            |
+
+</SmallerButtonStyle>
 
 <br/>
+
+ <ForVscode>
 
 **Remote Development**：支持 SSH, WSL, container
 
-<p><GetVscExt id="ms-vscode-remote.vscode-remote-extensionpack" msOnly /></p>
+<p><GetVscodeExtension id="ms-vscode-remote.vscode-remote-extensionpack" msOnly /></p>
+
+</ForVscode>
 
 <!-- vscode-icons 安装后，右下角 Active 按钮激活 -->
-
-<br/>
 
 ## 商业服务
 
@@ -51,14 +58,20 @@ sidebar_position: 3
 - 优点：离线使用、可关闭遥测服务
 - 缺点：内存消耗高、免费版仅供单行使用
 
-<p><GetVscExt id="tabnine.tabnine-vscode"/></p>
+<p><GetVscodeExtension id="tabnine.tabnine-vscode" /></p>
+
+ <ForVscode>
 
 <h3>GitHub Copilot</h3>
 
-<p><GetVscExt id="GitHub.copilot" msOnly /></p>
+<p><GetVscodeExtension id="GitHub.copilot" /></p>
 
-</div>
+</ForVscode>
+
+</PreferVscode>
+
+</div></div>
 
 import st from './extensions.module.scss';
 import { LinkButton } from '@theme/links';
-import GetVscExt from '@theme/GetVscExt';
+import GetVscodeExtension, { PreferVscode, ForVscode, SmallerButtonStyle } from '@theme/GetVscodeExtension';

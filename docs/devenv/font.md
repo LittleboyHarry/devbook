@@ -1,7 +1,8 @@
 ---
-title: 字体
 sidebar_position: 7
 ---
+
+# 字体
 
 本文精选字体来自于：主流技术企业的设计作品、开源社区高认可项目。逼站科普：
 
@@ -26,7 +27,7 @@ sidebar_position: 7
 
 微软出品的 Windows 终端内置默认字体，Linux 安装：
 
- <details className="let-details-to-gray" role="alert">
+ <details>
 <summary>Nerd Font 版</summary>
 
 <GetPkg scoop="CascadiaCode-NF" choco="cascadia-code-nerd-font" />
@@ -91,7 +92,7 @@ pacman="ttf-jetbrains-mono"
 综合设置：
 
 ```json
-"terminal.integrated.fontFamily": "'Cascadia Mono'",
+"terminal.integrated.fontFamily": "'Cascadia Mono','Noto Sans CJK SC'",
 "editor.fontFamily": "'Cascadia Code','Noto Sans CJK SC'",
 "editor.fontLigatures": true,
 ```

@@ -1,7 +1,8 @@
 ---
-title: Debian on WSL
 sidebar_position: 4
 ---
+
+# Debian on WSL
 
 import { StoreLink, mslink } from '@theme/links';
 
@@ -12,8 +13,7 @@ import { StoreLink, mslink } from '@theme/links';
 
 :::info 配置国内加速镜像源
 
-1. 获取缺失的软件包：
-   [可信证书](https://packages.debian.org/stable/all/ca-certificates/download)
+1. 获取缺失的软件包：[可信证书](https://packages.debian.org/stable/all/ca-certificates/download)
    及 [openssl](https://packages.debian.org/stable/amd64/openssl/download)
 2. 执行：
 
@@ -24,6 +24,7 @@ import { StoreLink, mslink } from '@theme/links';
    # 安装
    wsl sudo apt install -y ./ca-certificates_*.deb ./openssl_*.deb
    ```
+
 3. <a href="/docs/setup-linux/for-debian#国内镜像软件仓" target="_blank">
    设置镜像源并更新</a>
 
@@ -46,7 +47,7 @@ sudo apt install -y tree unzip tig
 exec $SHELL
 ```
 
-import Require from '/docs/_common/deployworkenv.md'
+import Require from '/docs/\_deployworkenv.md'
 
 <Require />
 

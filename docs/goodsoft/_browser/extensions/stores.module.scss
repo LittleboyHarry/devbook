@@ -1,0 +1,21 @@
+.selector {
+  > :global(.pills__item) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(4rem - 4px);
+  }
+}
+
+.icon {
+  margin-right: 0.4rem;
+}
+
+.label {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.item > del {
+  color: gray;
+}

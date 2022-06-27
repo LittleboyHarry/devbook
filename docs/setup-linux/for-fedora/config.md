@@ -1,7 +1,8 @@
 ---
-title: 配置 Fedora
 sidebar_position: 2
 ---
+
+# 配置 Fedora
 
 import {
 PreferXde,
@@ -11,7 +12,7 @@ ForKde
 
  <PreferXde gnome kde>
 <ForGnome>
-<details className="let-details-to-gray" role="alert">
+<details>
 <summary>欢迎向导中的 “第三方软件源” 是什么？</summary>
 
 包括：
@@ -35,7 +36,7 @@ ForKde
 [^2]: 若经常发生 Linux 内核故障，请看[内核问题](/docs/setup-linux/kernel#fedora)文档
 -->
 
-import SearchMethod from '/docs/setup-linux/\_common/de/search.md'
+import SearchMethod from '/docs/setup-linux/\_desktopenv/search.md'
 
 <SearchMethod />
 
@@ -101,12 +102,12 @@ sudo dnf upgrade -y # 更新系统
 
 ### 调整桌面环境
 
-import BaseDeCfg from '/docs/setup-linux/\_common/de/base.md';
+import BaseDeCfg from '/docs/setup-linux/\_desktopenv/base.md';
 
 <BaseDeCfg />
 
-import GnomeCfg from '/docs/setup-linux/\_common/de/gnome.md';
-import KdeCfg from '/docs/setup-linux/\_common/de/kde.md';
+import GnomeCfg from '/docs/setup-linux/\_desktopenv/gnome.md';
+import KdeCfg from '/docs/setup-linux/\_desktopenv/kde.md';
 
 <PreferXde gnome kde noSelector>
     <ForGnome><GnomeCfg /></ForGnome>
@@ -114,7 +115,7 @@ import KdeCfg from '/docs/setup-linux/\_common/de/kde.md';
 </PreferXde>
 
 <!--
-<details className="let-details-to-gray">
+<details>
   <summary>
 如果不需要内置的大体积应用，更新过程会更快：
 </summary>
@@ -174,7 +175,7 @@ sudo dnf check-update
 
 import { LinkButton } from '@theme/links';
 
-<p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/browser/firefox" newTab /></p>
+<p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/firefox/config" newTab /></p>
 
 打开设置，找到语言，选择“简体中文”
 

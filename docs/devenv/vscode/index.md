@@ -1,7 +1,8 @@
 ---
-title: 安装 VSCode
 sidebar_position: 0
 ---
+
+# 安装 VSCode
 
 ## 免费商业版
 

@@ -1,7 +1,8 @@
 ---
-title: VirtualBox 使用技巧
 sidebar_position: 32
 ---
+
+# VirtualBox 使用技巧
 
 ## 主界面中
 

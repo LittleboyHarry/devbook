@@ -1,6 +1,4 @@
----
-title: 安装 Arch Linux
----
+# 安装 Arch Linux
 
 :::caution 准备好流畅的网络环境
 

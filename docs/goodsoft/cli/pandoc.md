@@ -1,6 +1,4 @@
----
-title: pandoc
----
+# pandoc
 
 <GetPkg winget choco scoop apt dnf pacman/>
 

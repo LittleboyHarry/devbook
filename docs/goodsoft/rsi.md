@@ -1,7 +1,8 @@
 ---
-title: 休息提醒
-sidebar_position: 3
+sidebar_position: 9
 ---
+
+# 休息提醒
 
 # Workrave
 
@@ -18,7 +19,7 @@ sidebar_position: 3
 
 40 分钟休息，20 分钟暂停一下
 
-<details className="let-details-to-gray">
+<details>
     <summary>Windows 注册表</summary>
 
 ```bat
@@ -43,7 +44,7 @@ reg add HKCU\Software\Workrave\general /v usage-mode /t REG_SZ /d 1 /f
 
 </details>
 
- <details className="let-details-to-gray">
+ <details>
 <summary>Linux 脚本</summary>
 
     conf/workrave

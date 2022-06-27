@@ -1,7 +1,8 @@
 ---
-title: JetBrains IDE 技巧
 sidebar_position: 9
 ---
+
+# JetBrains IDE 技巧
 
 ## 快捷键
 

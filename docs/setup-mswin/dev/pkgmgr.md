@@ -1,7 +1,8 @@
 ---
-title: Windows 包管理器
 sidebar_position: 1
 ---
+
+# Windows 包管理器
 
 ## **winget**
 
@@ -66,31 +67,27 @@ echo "Invoke-Expression (&scoop-search --hook)" >> $PROFILE
 
 全网包索引：https://rasa.github.io/scoop-directory/
 
-<details>
-  <summary>手动装包</summary>
-
-首先，列出包的下载地址：
+ <details className="rawstyl">
+<summary>手动装包</summary>
 
 ```powershell
-icm {
-$app = Read-Host "应用标识名"
-
+& {
+$app = Read-Host '请输入应用标识名'
 $metadata = scoop cat $app | ConvertFrom-Json
-echo ""
-echo "CHECKVER:" $metadata.checkver
-echo ""
-echo "LINKS:" $metadata.url
-}
+$version = $metadata.version
+Write-Output ''
+Write-Output '自行下载的相关链接：'
+(scoop cat $app) -split '\n' |
+Where-Object { $_ -match 'http' -and -not ($_ -match '\$version') } |
+ForEach-Object { $_.trim() -split '"' | Where-Object { $_ -match '://' } }
+Write-Output ''
 
-```
-
-手动下载好包，然后执行：
-
-```powershell
-icm {
+if ($null -eq $version) { $version = Read-Host '请输入版本号' }
+if ($null -eq $target) { $target = Read-Host '（可拖入文件）请输入下载文件的路径' }
+if ($null -eq $url) { $url = Read-Host '请输入原下载链接' }
 . "$(scoop prefix scoop)\lib\core.ps1"
 $null = mkdir $cachedir -f
-cp (Read-Host "下载的文件路径（可拖入）") (cache_path $app $metadata.version (Read-Host "原下载链接"))
+Copy-Item $target (cache_path $app $version $url)
 }
 
 ```
@@ -124,12 +121,12 @@ iwr -useb https://gitcode.net/mirrors/ScoopInstaller/Main/-/archive/master/Main-
 
 ```shell
 scoop bucket rm main
-scoop bucket add main https://gitcode.net/mirrors/ScoopInstaller/Main
+scoop bucket add main https://gitclone.com/github.com/ScoopInstaller/Main
 
 # 其它 scoop 官方镜像源：
-scoop bucket add versions https://gitcode.net/mirrors/ScoopInstaller/Versions
-scoop bucket add java https://gitcode.net/mirrors/ScoopInstaller/Java
-scoop bucket add extras https://gitcode.net/mirrors/ScoopInstaller/Extras
+scoop bucket add versions https://gitclone.com/github.com/ScoopInstaller/Versions
+scoop bucket add java https://gitclone.com/github.com/ScoopInstaller/Java
+scoop bucket add extras https://gitclone.com/github.com/ScoopInstaller/Extras
 
 ```
 

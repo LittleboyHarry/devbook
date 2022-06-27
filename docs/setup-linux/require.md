@@ -1,7 +1,8 @@
 ---
-title: Linux 使用须知
 sidebar_position: 1
 ---
+
+# Linux 使用须知
 
 ## 物理机需求
 

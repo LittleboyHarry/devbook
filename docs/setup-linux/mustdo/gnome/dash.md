@@ -1,7 +1,8 @@
 ---
-title: GNOME 程序坞
 sidebar_position: 12
 ---
+
+# GNOME 程序坞
 
 # dock-to-dash
 

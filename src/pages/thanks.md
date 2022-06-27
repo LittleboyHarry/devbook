@@ -1,6 +1,4 @@
----
-title: 感谢
----
+# 感谢
 
 # Thanks To
 

@@ -1,7 +1,8 @@
 ---
-title: 新机配置
 sidebar_position: 1
 ---
+
+# 新机配置
 
 :::caution 对于各种内置手机云服务，请记住：
 

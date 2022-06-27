@@ -131,7 +131,7 @@ export default function Home(): JSX.Element {
               <Tile
                 title="浏览器"
                 description="查资料"
-                href="docs/goodsoft/browser/firefox"
+                href="docs/goodsoft/firefox/config"
                 img={<HomepageImage filename="../icons/firefox.svg" />}
               />
               <Tile

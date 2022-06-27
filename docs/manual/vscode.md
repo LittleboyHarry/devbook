@@ -1,7 +1,8 @@
 ---
-title: VSCode 技巧
 sidebar_position: 8
 ---
+
+# VSCode 技巧
 
 ## 实用命令缩写
 
@@ -9,16 +10,17 @@ sidebar_position: 8
 
  <div className="no-table-header no-table-border">
 
-|           |                              |
-| --------- | ---------------------------- |
-| jli       | 合并行                       |
-| gssr      | git 提交选中行的修改         |
-| amend     | git amend                    |
-| fref      | 撤销文件修改                 |
-| fcra      | 复制文件相对路径             |
-| tcle      | 清除终端内容                 |
-| tmax      | 底部面板最大化               |
-| coeig     | 关闭其它标签页               |
-| dsr,dsrex | 分析拖慢起动和运行速度的插件 |
+|            |                              |
+| ---------- | ---------------------------- |
+| joinl      | 合并行                       |
+| stages     | git 提交选中行的修改         |
+| amend      | git amend                    |
+| revertfile | 撤销文件修改                 |
+| rpath      | 复制相对文件路径             |
+| cpath      | 复制绝对文件路径             |
+| tclear     | 清除终端内容                 |
+| maxpanel   | 底部面板最大化               |
+| closeoe    | 关闭其它标签页               |
+| dsr,dsrex  | 分析拖慢起动和运行速度的插件 |
 
 </div>

@@ -1,6 +1,4 @@
----
-title: JetBrains 推荐插件
----
+# JetBrains 推荐插件
 
 https://plugins.jetbrains.com/plugin/9615-ideavimextension
 

@@ -1,7 +1,8 @@
 ---
-title: 键位调整
 sidebar_position: 1
 ---
+
+# 键位调整
 
 经过笔者大学期间的实践后，我推荐对 Windows 和 Linux 键盘做如下调整：
 
@@ -35,7 +36,7 @@ kwriteconfig5 --file kxkbrc --group Layout --key Options ctrl:swap_lalt_lctl_lwi
 
 如果有其他需求，可以安装自定义键位映射程序 `sharpkeys` （ by winget or scoop )
 
-<details>
+<details className="rawstyl">
   <summary>恢复方法：</summary>
 
     reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map"

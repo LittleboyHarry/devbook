@@ -1,6 +1,4 @@
----
-title: 万能引导器 refind
----
+# 万能引导器 refind
 
 支持可配置的 Windows, Linux 和 Mac OS X 系统 EFI 引导器。
 

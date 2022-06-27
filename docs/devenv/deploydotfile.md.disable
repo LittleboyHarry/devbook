@@ -73,13 +73,12 @@ yes | sudo pacman -S wl-clipboard
 请考虑是否使用 **powerlevel10k**？
 
 - 优点: 美观清晰、可自定性强
-- 缺点：
-  调整窗口大小会造成排版错乱
+- 缺点：调整窗口大小会造成排版错乱
 
   [解决方法](https://github.com/romkatv/powerlevel10k/blob/master/README.md#the-anatomy-of-the-problem):
   禁止自动重排版。部分终端支持，如 Konsole
 
-<details className="let-details-to-gray" role="alert">
+<details>
 <summary>安装方法</summary>
 
 <!-- todo: ys or zsh 重编译

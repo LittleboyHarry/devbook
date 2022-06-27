@@ -1,7 +1,8 @@
 ---
-title: GNOME 顶栏
 sidebar_position: 11
 ---
+
+# GNOME 顶栏
 
 ## 优化
 
@@ -80,7 +81,7 @@ END
 
 :::
 
- <details className="let-details-to-gray">
+ <details>
 <summary>恢复方法</summary>
 
     gnome/ext/bottompanel-recover
