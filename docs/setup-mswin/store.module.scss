@@ -1,0 +1,11 @@
+.fixedTableColsRatio {
+  tr {
+    display: flex;
+    > td {
+      &:first-child {
+        max-width: 14rem;
+        width: 38%;
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@
 
 ### 变化跟踪
 
-```bat
+```batch
 scoop bucket add nirsoft
 scoop install registrychangesview
 

@@ -1,2 +1,5 @@
 label: Linux 心得经验
 position: 16
+link:
+  type: generated-index
+  slug: /manual/linux

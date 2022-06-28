@@ -1,32 +1,20 @@
 @import '/src/css/utils';
-.root {
-  &::before {
-    content: '用包管理器安装：';
-    display: flex;
-    align-items: center;
-    font-weight: normal;
+
+.choice {
+  $padTop: 0.4rem;
+  $gap: 8px;
+
+  padding: $padTop 1rem;
+  font-weight: normal;
+  margin: {
+    top: $gap;
+    bottom: $gap;
   }
+  &:global(.pills__item--active) {
+    margin-bottom: 0;
+    padding-bottom: calc($padTop + $gap);
 
-  @include for-phone-only {
-    display: block;
-    &::before {
-      margin-bottom: 1rem;
-    }
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
-
-  user-select: none;
-
-  :global(.tabs__item){
-    font-weight: normal;
-  }
-
-  margin-bottom: calc(-1rem + (-3px));
-
-  li:first-child{
-    margin-left:6px;
-  }
-}
-
-.solo {
-  margin-bottom: var(--ifm-leading);
 }

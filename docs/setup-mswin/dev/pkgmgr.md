@@ -11,22 +11,21 @@ Win 11 已内置：仅需在商店中更新可用
 Win 10 安装方法：<StoreButton to={mslink`9NBLGGH4NNS1`} text='从商店获取' />
 or&nbsp;<a href="https://github.com/microsoft/winget-cli/releases/latest#:~:text=.msixbundle">从 Github 获取</a>
 
-## **Chocolatey**
+## **Chocolatey** 包管理器
 
-安装：以管理员权限运行
+import GetChoco from './../\_getchoco.md'
 
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+<GetChoco />
 
-# 信任所有安装程序的脚本
-choco feature enable -n allowGlobalConfirmation
-```
-
-包搜索：https://community.chocolatey.org/packages
+[包搜索](https://community.chocolatey.org/packages)
 
 ## **Scoop**
 
+ <PrefixIcon cmd>
+
 ### 安装
+
+</PrefixIcon>
 
 前置依赖 `git`，从官方渠道：
 
@@ -131,3 +130,4 @@ scoop bucket add extras https://gitclone.com/github.com/ScoopInstaller/Extras
 ```
 
 import { StoreButton, mslink } from '@theme/links';
+import PrefixIcon from '@theme/PrefixIcon'

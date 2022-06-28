@@ -1,8 +1,13 @@
+
 # 制作绿化软件
 
-本文以 Windows 应用沙盒化为例（专业版功能）。安装方法：管理员权限运行
+本文以 Windows 应用沙盒化为例（专业版功能）
+
+<PrefixIcon cmd admin>
 
     Dism /online /Enable-Feature /All /FeatureName:Containers-DisposableClientVM
+
+</PrefixIcon>
 
 内外界交换文件或数据的方法：Ctrl + C / V 复制、粘贴
 
@@ -63,3 +68,5 @@ Set-WinUserLanguageList $LanguageList -Force
 
 - https://docs.microsoft.com/zh-cn/windows/security/threat-protection/windows-sandbox/windows-sandbox-architecture
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-configure-using-wsb-file
+
+import PrefixIcon from '@theme/PrefixIcon'

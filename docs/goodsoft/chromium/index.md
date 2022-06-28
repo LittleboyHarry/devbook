@@ -93,7 +93,7 @@ cd -
 ```shell
 mkdir -p ~/.local/share/applications
 cd ~/.local/share/applications
-cp /usr/share/applications/microsoft-edge.desktop .
+cp -n /usr/share/applications/microsoft-edge.desktop .
 sed -i "/Exec=/ s#/usr/bin/microsoft-edge-stable#msedge#" microsoft-edge.desktop
 mkdir -p ~/.local/bin
 cd -

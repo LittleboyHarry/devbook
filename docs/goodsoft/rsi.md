@@ -10,7 +10,7 @@ sidebar_position: 9
 
 - Windows
 - Linux
-  - 非 Ubuntu 系统需要安装<a href="/docs/setup-linux/mustdo/gnome/panel#扩展推荐" target="_blank" >GNOME 托盘图标依赖</a>
+  - 非 Ubuntu 系统需要安装 <a href="/docs/setup-linux/mustdo/gnome/panel#扩展推荐" target="_blank" >GNOME 托盘图标依赖</a>
   - 除了 KDE Wayland
 
 <GetPkg name="workrave" apt dnf choco winget pacman />
@@ -22,7 +22,7 @@ sidebar_position: 9
 <details>
     <summary>Windows 注册表</summary>
 
-```bat
+```batch
 reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files (x86)\Workrave\lib\Workrave.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
 
 reg add HKCU\Software\Workrave\timers\micro_pause /v auto_reset /t REG_SZ /d 12 /f

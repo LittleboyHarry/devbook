@@ -1,4 +1,4 @@
-# Firefox 推荐扩展
+# Firefox 扩展
 
 import { Recommend } from '../../\_browser/extensions'
 

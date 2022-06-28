@@ -2,17 +2,23 @@
 sidebar_position: 6
 ---
 
+import PrefixIcon from '@theme/PrefixIcon'
+
 # 键盘与输入法
 
 推荐配置
 
 ## 微软拼音输入法
 
+ <PrefixIcon cmd >
+
 ### 外观优化
+
+</PrefixIcon>
 
 放大字号、限制 5 个候选词
 
-```bat
+```batch
 reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v MaxCandidates /t REG_DWORD /d 5 /f
 reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v FontStyleTSF3 /t REG_SZ /d "22.00pt;Regular;;Microsoft YaHei UI" /f
 
@@ -24,10 +30,14 @@ reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v FontStyleTS
 
 </summary>
 
+ <PrefixIcon cmd >
+
 来自知乎知识分享：[双拼的好处](https://www.zhihu.com/question/21449398)
 与 [练习方法](https://www.zhihu.com/question/311394000)
 
-```bat
+</PrefixIcon>
+
+```batch
 reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "EnableExtraDomainType" /t REG_DWORD /f /d 1
 reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "Enable Double Pinyin" /t REG_DWORD /f /d 1
 reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "DoublePinyinScheme" /t REG_DWORD /f /d 10

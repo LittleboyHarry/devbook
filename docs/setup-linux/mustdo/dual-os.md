@@ -6,7 +6,7 @@ sidebar_position: 8
 
 ## 注意事项
 
-- 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/setup-mswin/first-run#双系统" target="_blank" >详情方法</a>
+- 请关闭 Windows 系统的 “快速启动” 功能，<a href="/docs/setup-mswin/firstrun#双系统" target="_blank" >详情方法</a>
 - 对于 VeraCrypt, 打开主界面菜单“设置” > “系统加密 ...” >
   “高级选项” | “自动修复引导配置问题……” 关闭确定
 
@@ -54,9 +54,13 @@ sidebar_position: 8
 
 如果还用了 rEFInd 启动器, 请注意修改配置或删除
 
-Windows 使用 `diskmgmt.msc` 来删除分区，挂载 ESP 分区的管理员指令：（ 仅管理员身份可操作该分区 ）
+Windows 使用 `diskmgmt.msc` 来删除分区，内容编辑：
 
-    mountvol x: /s
+ <PrefixIcon admin>
+
+    mountvol i: /s
+
+</PrefixIcon>
 
 :::note 命令行用法
 
@@ -89,3 +93,4 @@ ForGnome,
 ForKde
 } from '@theme/PreferXde';
 import GetPkg from '@theme/GetPkg';
+import PrefixIcon from '@theme/PrefixIcon'

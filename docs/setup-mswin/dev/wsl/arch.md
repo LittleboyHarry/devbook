@@ -98,10 +98,9 @@ id me
 pacman -S --noconfirm wget unzip tree lsb-release shadow
 
 # 开发工具
-pacman -S --noconfirm zsh base-devel nano vi git tig man-db openssh
+pacman -S --noconfirm zsh base-devel nano vi git tig man-db openssh dos2unix
 
-# 转换 Windows 格式的换行符
-pacman -S --noconfirm dos2unix
+# dos2unix: 转换 Windows 格式的换行符
 ```
 
 退出 Arch，执行 PowerShell 命令备份一下子系统：( 约占 1G 多空间 )

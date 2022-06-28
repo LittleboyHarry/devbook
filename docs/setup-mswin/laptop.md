@@ -17,13 +17,12 @@ import {HtmlA} from '@theme/links';
 
 ### 触摸板
 
-<p><HtmlA href="ms-settings:devices-touchpad">设置“三指手势”点击作为“鼠标中键”</HtmlA> 或使用作者推荐手势：</p>
+import PrefixIcon from '@theme/PrefixIcon'
 
-import { ConfigIcon } from '@theme/fai';
-
-<p>
-    <FileItem button name='gestures.reg' path="/config/win/gestures.reg" icon={<ConfigIcon />}/>
-</p>
+<HtmlA href="ms-settings:devices-touchpad">设置“三指手势”点击作为“鼠标中键”</HtmlA>
+<PrefixIcon reg>
+或使用作者推荐手势：
+</PrefixIcon>
 
 - 三指同时左右滑动：降低/提高音量
 - 三指同时上下滑动：最大/最小化窗口
@@ -31,45 +30,17 @@ import { ConfigIcon } from '@theme/fai';
 - 四指同时向上滑动：任务视图
 - 四指同时左右滑动：切换桌面
 
+import CodeBlock from '@theme/CodeBlock';
+import GestureRegCode from '!!raw-loader!./gestures.reg.ini';
+
+<CodeBlock language="ini">{GestureRegCode}</CodeBlock>
+
 :::caution 重新登陆后生效！
 :::
-
-<!--
-
-## BitLocker
-
-仅专业版可用，防盗加密。veracrypt 是开源替代品
-
-<details>
-    <summary>错误：系统找不到制定的文件</summary>
-
-管理员运行：
-
-    mv C:\Windows\System32\Recovery\ReAgent.xml C:\Windows\System32\Recovery\ReAgent.xml.old
-
-</details>
- -->
 
 ## 硬件问题
 
 入手的机器 BIOS 可能不是最新版，去厂家官网安装最新的 BIOS 固件升级包，也许可以缓解硬件 bug
-
-## 数据防盗
-
-使用 [VeraCrypt](https://www.veracrypt.fr/en/Downloads.html) 加密
-
-<GetPkg name="veracrypt" choco winget />
-
-:::info 若要备份系统，先留步并留到后期加密
-:::
-
-:::note 附：[自动登录器](https://docs.microsoft.com/zh-cn/sysinternals/downloads/autologon)
-
-Autologon 是微软官方提供的非自由软件，可设置免输入密码
-
-<GetPkg choco="autologon" />
-
-:::
 
 ## 调音器
 
@@ -82,4 +53,3 @@ import { ScriptIcon } from '@theme/fai';
 <FileItem name="numpad.ahk" path="/scripts/numpad.ahk" icon={<ScriptIcon />}/>
 
 import FileItem from '@theme/FileItem'
-import GetPkg from '@theme/GetPkg';

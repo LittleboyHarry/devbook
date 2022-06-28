@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: 通用的虚拟机管理器
 ---
 
 # VirtualBox

@@ -42,11 +42,13 @@
 
 .deepin {
   @extend %card;
+  padding: 1rem 2rem;
   background-color: #444;
 }
 
 .fydeos {
   @extend %card;
+  padding: 1rem 2rem;
   background-color: #444;
 }
 

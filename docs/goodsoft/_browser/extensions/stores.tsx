@@ -16,7 +16,6 @@ import st from './stores.module.scss';
 type Value = 'chrome' | 'edge';
 const _defaultValue: Value = 'chrome' as Value;
 const context = createScopeContext(_defaultValue);
-const triggers = new Set<(value: Value) => void>();
 
 const FirefoxContext = createContext(false);
 const ChromiumContext = createContext(false);
@@ -62,7 +61,7 @@ export function StoreProvider({
           <StoreLabel icon={faChrome} name="Chrome Web Store" />,
           <StoreLabel icon={faEdge} name="Microsoft Edge Addons" />,
         ]}
-        {...{ defaultValue, context, children, triggers }}
+        {...{ defaultValue, context, children }}
       />
     );
 

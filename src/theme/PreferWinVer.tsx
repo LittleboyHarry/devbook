@@ -9,7 +9,6 @@ import {
 type Value = 'win10' | 'win11';
 const defaultValue: Value = 'win11';
 const context = createScopeContext<Value>(defaultValue);
-const triggers = new Set<(value: Value) => void>();
 
 export function PreferWinVer({
   win10,
@@ -24,7 +23,8 @@ export function PreferWinVer({
       storeKeywords={['win10', 'win11']}
       labels={['Win 10', 'Win 11']}
       title="系统版本："
-      {...{ defaultValue, context, children, triggers, noSelector }}
+      oneline
+      {...{ defaultValue, context, children, noSelector }}
     />
   );
 }

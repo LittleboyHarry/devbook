@@ -91,7 +91,21 @@ export default function Home(): JSX.Element {
             <h2>涵盖的内容</h2>
             <ul className={st.tileList}>
               <Tile
-                title="下载发行版"
+                title="Windows"
+                description="安装指南"
+                href="docs/setup-mswin/catalog"
+                img={
+                  <img src={useBaseUrl('/img/icons/windows8-original.svg')} />
+                }
+              />
+              <Tile
+                title="WSL"
+                description="开发环境"
+                href="docs/setup-mswin/dev/wsl"
+                img={<FontAwesomeIcon icon={faLinux} />}
+              />
+              <Tile
+                title="选择发行版"
                 description="推荐的 Linux"
                 href="docs/setup-linux/distros"
                 img={<FontAwesomeIcon icon={faDownload} />}
@@ -103,20 +117,6 @@ export default function Home(): JSX.Element {
                 img={<HomepageImage filename="icon_linux.svg" />}
               />
               <Tile
-                title="WSL"
-                description="开发环境"
-                href="docs/setup-mswin/dev/wsl"
-                img={<FontAwesomeIcon icon={faLinux} />}
-              />
-              <Tile
-                title="Windows"
-                description="开发者指南"
-                href="docs/setup-mswin/dev"
-                img={
-                  <img src={useBaseUrl('/img/icons/windows8-original.svg')} />
-                }
-              />
-              <Tile
                 title="开发环境"
                 description="配置"
                 href="docs/devenv/catalog"
@@ -124,7 +124,7 @@ export default function Home(): JSX.Element {
               />
               <Tile
                 title="实用软件"
-                description="倾力推荐"
+                description="开源、免费"
                 href="docs/goodsoft/catalog"
                 img={<FontAwesomeIcon icon={faHammer} />}
               />
@@ -177,6 +177,7 @@ export default function Home(): JSX.Element {
             </div>
           </div>
           <div style={{ height: '1rem' }} />
+          {/*
           <div className={st.buttons}>
             <Link
               className="button button--secondary button--lg"
@@ -185,6 +186,7 @@ export default function Home(): JSX.Element {
               开始&nbsp;🚀
             </Link>
           </div>
+          */}
         </section>
       </main>
     </Layout>

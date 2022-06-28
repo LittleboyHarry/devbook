@@ -1,0 +1,71 @@
+---
+sidebar_position: 6
+---
+
+# Void Linux
+
+文档：https://docs.voidlinux.org
+
+## 下载校验
+
+镜像：https://mirrorz.org/list/voidlinux
+
+选 glibc ( 无 musl 版本 )
+
+路径：live/current/void-x86_64-?.tar.xz
+
+校验：https://repo-default.voidlinux.org/live/current/sha256sum.txt
+
+## 安装
+
+解压为 .tar 文件
+
+    wsl --import void (Read-Host 'Saved Path') (ls .\void-x86_64-*.tar).Name
+
+使用国内镜像：
+
+```shell
+mkdir -p /etc/xbps.d
+cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
+sed -i 's|https://repo-default.voidlinux.org|https://mirrors.tuna.tsinghua.edu.cn/voidlinux|g' /etc/xbps.d/*-repository-*.conf
+sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirrors.tuna.tsinghua.edu.cn/voidlinux|g' /etc/xbps.d/*-repository-*.conf
+xbps-install -S
+xbps-query -L
+```
+
+检查输出
+
+```shell
+# 更新系统
+xbps-install -u xbps -y
+xbps-install -Suy
+# 创建用户
+useradd -m -G wheel me
+sed -i '/NOPASSWD/ s/^# %wheel/%wheel/' /etc/sudoers
+id me
+passwd me
+```
+
+然后在 `regedit` 注册表编辑器中转到：
+
+    HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss
+
+找到对应发行版的 `DefaultUid`，以 **十进制** 基数形式设置。完成设置
+
+安装常用包：
+
+```shell
+# 基础必备
+xbps-install -y curl wget unzip tree
+
+# 开发工具
+xbps-install -y zsh base-devel nano vim git tig man-db dos2unix
+
+# dos2unix: 转换 Windows 格式的换行符
+```
+
+备份方法，先关闭 WSL 子系统
+
+    wsl --shutdown
+
+打开 vhdx 所在目录，复制一份

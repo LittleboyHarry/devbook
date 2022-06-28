@@ -2,28 +2,31 @@
 sidebar_position: 7
 ---
 
+import PrefixIcon from '@theme/PrefixIcon'
+
 # 个人数字权利
 
 等待所有系统与应用升级完成后，部分功能会与您签订商业契约、收集您的隐私以继续提供服务。
 
-:::caution
+:::note 国内非专业人士
 
-对于普通人，推荐使用微软中国团队运营的[微软电脑管家](https://aka.ms/GetPCManagerOFL)
-
-下列命令，请以管理员身份运行 PowerShell 执行：
+推荐使用微软中国团队运营的[微软电脑管家](https://aka.ms/GetPCManagerOFL)
 
 :::
 
+<PrefixIcon admin pwsh >
+
 ## 保留个人数据
+
+</PrefixIcon>
 
 参考来源：[O&O ShutUp10++](https://www.oo-software.com/en/shutup10) 图形化免费软件
 
 ```powershell
-&{
 # 广告
 reg add HKLM\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo /v Enabled /t REG_DWORD /d 0 /f
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo /v Enabled /t REG_DWORD /d 0 /f
-reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo /v Id /f >NUL
+reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo /v Id /f 2>&1 >NUL
 
 # 广告：蓝牙数据分享
 reg add HKLM\Software\Microsoft\PolicyManager\current\device\Bluetooth /v AllowAdvertising /t REG_DWORD /d 0 /f
@@ -64,12 +67,15 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Privacy /v TailoredExperi
 reg add HKCU\SOFTWARE\Microsoft\Siuf\Rules /v NumberOfSIUFInPeriod /t REG_DWORD /d 0 /f
 reg add HKCU\SOFTWARE\Microsoft\Siuf\Rules /v PeriodInNanoSeconds /t REG_DWORD /d 0 /f
 
-} >$null
 ```
+
+<PrefixIcon admin pwsh >
 
 ## 屏蔽服务与启动项
 
-没有用处的后台服务会不仅会收集数据，还会拖慢计算机运行速度
+</PrefixIcon>
+
+这些的后台服务会收集数据，并影响计算机运行速度
 
 ```powershell
 function Disable-Service {
@@ -105,6 +111,12 @@ Disable-DefaultTask XblGameSaveTask
 
 ## 微软内置应用
 
+<PrefixIcon admin pwsh >
+
+一键移除：
+
+</PrefixIcon>
+
 ```powershell
 # OneDrive
 Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage
@@ -120,7 +132,7 @@ Dism /Online /Remove-Capability /NoRestart /CapabilityName:Microsoft.Windows.Pow
 
 ```
 
- <PreferWinVer win10 win11 >
+ <PreferWinVer win10 win11 ><br/>
 <ForWin10>
 
 ```powershell
@@ -161,12 +173,15 @@ import FileItem from '@theme/FileItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 
-## 改用火狐浏览器
+## 其它浏览器
 
 <p>
+Firefox: 下载&emsp;
+<FileItem name="安装包" path="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN" button icon={<FontAwesomeIcon icon={faBox} />}/>
+{/*
+或
 <StoreButton to={mslink`9NZVDKPMR9RD`} text="从商店安装" />
-&emsp;或&emsp;
-<FileItem name="下载安装包" path="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN" button icon={<FontAwesomeIcon icon={faBox} />}/>
+ */}
 </p>
 
 附：

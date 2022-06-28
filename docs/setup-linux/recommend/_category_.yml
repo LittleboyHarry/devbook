@@ -1,2 +1,5 @@
 label: 推荐内容
 position: 32
+link:
+  type: generated-index
+  slug: /setup-linux/recommend

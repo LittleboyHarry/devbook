@@ -1,0 +1,11 @@
+.root {
+  position: relative;
+}
+
+.protected {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform-origin: right bottom;
+  transform: scale(0.75) translate(25%,0);
+}

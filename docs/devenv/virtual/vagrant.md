@@ -1,5 +1,6 @@
 ---
 sidebar_position: 9
+description: 可编程、自动化的虚拟管理平台
 ---
 
 # Vagrant

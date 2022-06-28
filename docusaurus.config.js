@@ -16,19 +16,8 @@ const config = {
   organizationName: 'littleboyharry',
   projectName: 'devbook',
   i18n: {
-    defaultLocale: 'cn',
-    locales: ['cn'],
-    localeConfigs: {
-      cn: {
-        label: '简体中文',
-        direction: 'ltr',
-        htmlLang: 'zh-CN',
-        calendar: 'roc',
-      },
-      en: {
-        label: 'English',
-      },
-    },
+    defaultLocale: 'zh-Hans',
+    locales: ['en', 'zh-Hans'],
   },
   trailingSlash: false,
   presets: [
@@ -101,6 +90,11 @@ const config = {
             label: '知识与经验',
           },
           {
+            href: '/docs/tags',
+            label: '索引',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/littleboyharry/devbook/issues',
             label: '问题反馈',
             position: 'right',
@@ -168,13 +162,14 @@ const config = {
               },
             ],
           },
+          {},
         ],
         copyright: `本站使用谷歌分析，仅供作者了解网站访问情况。读者需遵守“署名-相同方式共享 3.0”协议`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['powershell'],
+        additionalLanguages: ['ini', 'vim', 'batch', 'powershell'],
       },
     }),
   plugins: [

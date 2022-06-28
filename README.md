@@ -29,7 +29,13 @@
 
 开发服务器：
 
-- docker-compose restart
-- podman-compose restart
+    podman-compose restart
+
+构建测试：
+
+```bash
+podman-compose start
+podman-compose exec dev yarn build
+```
 
 作者已启动 GitHub Actions 自动集成

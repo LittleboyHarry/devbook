@@ -1,2 +1,5 @@
 label: Firefox 浏览器
 position: 4
+link:
+  type: generated-index
+  slug: /goodsoft/firefox

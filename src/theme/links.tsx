@@ -72,8 +72,10 @@ export function LinkButton({
   icon?: boolean | React.ReactNode;
   newTab?: boolean;
 }) {
+  const isExternal = /^https?:/.test(href);
+  const openNewWindow = isExternal || newTab;
   if (icon === true) icon = <WebIcon />;
-  if (icon === undefined && newTab)
+  if (icon === undefined && openNewWindow)
     icon = <FontAwesomeIcon icon={faArrowUpRightFromSquare} />;
 
   return (
@@ -88,7 +90,7 @@ export function LinkButton({
         className
       )}
       title={hint}
-      {...(newTab && { target: '_blank' })}
+      {...(openNewWindow && { target: '_blank' })}
       style={{
         cursor: hint ? 'help' : 'pointer',
         verticalAlign: 'baseline',

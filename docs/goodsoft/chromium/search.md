@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# 搜索引擎推荐
+# Chromium 搜索引擎
 
 Chromium 搜索配置网址：
 

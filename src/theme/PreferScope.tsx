@@ -31,9 +31,12 @@ export type ScopeOf<T extends string> = PropsWithChildren<{
   [key in T]?: boolean;
 }>;
 
+const scope: Record<string, Set<(value: any) => void>> = {};
+
 export function PreferScope<T extends string>({
   children,
   className,
+  choiceClassName,
   defaultValue,
   storeNamePrefix,
   storeFlags,
@@ -42,11 +45,12 @@ export function PreferScope<T extends string>({
   labels,
   hints,
   title,
-  triggers,
+  oneline,
   noSelector,
 }: PropsWithChildren<{
   defaultValue: T;
   className?: string;
+  choiceClassName?: string;
   storeNamePrefix: string;
   storeFlags: (boolean | undefined)[];
   storeKeywords: T[];
@@ -54,7 +58,7 @@ export function PreferScope<T extends string>({
   labels: ReactNode[];
   hints?: string[];
   title?: ReactNode;
-  triggers: Set<(value: T) => void>;
+  oneline?: boolean;
   noSelector?: boolean;
 }>) {
   const isBrowser = useIsBrowser();
@@ -79,16 +83,17 @@ export function PreferScope<T extends string>({
   }, [isBrowser, gid]);
 
   useEffect(() => {
-    triggers.add(setCurrentValue);
+    if (!scope[gid]) scope[gid] = new Set();
+    scope[gid].add(setCurrentValue);
     return () => {
-      triggers.delete(setCurrentValue);
+      scope[gid].delete(setCurrentValue);
     };
-  }, []);
+  }, [gid]);
 
   const _setCurrentValue = useCallback(
     (value: T) => {
       window.localStorage.setItem(gid, value);
-      triggers.forEach((trigger) => trigger(value));
+      scope[gid].forEach((setter) => setter(value));
     },
     [gid]
   );
@@ -105,8 +110,10 @@ export function PreferScope<T extends string>({
     >
       {!noSelector && (
         <div className={cs('pills', 'pills--block', st.selector, className)}>
-          {title && <div className={st.title}>{title}</div>}
-          <div>
+          {title && (
+            <div className={cs(st.title, oneline && st.oneline)}>{title}</div>
+          )}
+          <div className={cs(st.choices, oneline && st.oneline)}>
             {storeFlags.map(
               (flag, i) =>
                 flag && (
@@ -117,6 +124,7 @@ export function PreferScope<T extends string>({
                     label={labels[i]}
                     hint={hints && hints[i]}
                     context={context}
+                    className={choiceClassName}
                   />
                 )
             )}
@@ -134,19 +142,27 @@ function RadioChoice<T extends string>({
   label,
   hint,
   context,
+  className,
 }: {
   value: T;
   group: string;
   label: ReactNode;
   hint?: string;
   context: Context<T>;
+  className?: string;
 }) {
   const { currentValue, setCurrentValue } = useContext(context);
   const checked = currentValue === value;
   return (
     <label
-      className={cs(st.choice, 'pills__item', checked && 'pills__item--active')}
+      className={cs(
+        st.choice,
+        'pills__item',
+        checked && 'pills__item--active',
+        className
+      )}
       title={hint}
+      style={hint ? { cursor: 'help' } : {}}
     >
       <input
         type="radio"

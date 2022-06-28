@@ -24,7 +24,7 @@ import { LinkButton } from '@theme/links';
 
 ```bash
 # 备份：
-(cd /etc/pacman.d/;mkdir old;cp mirrorlist.* old)
+(cd /etc/pacman.d/;mkdir old;cp -n mirrorlist.* old)
 # 恢复：
 # (cd /etc/pacman.d/old;cp * ../)
 

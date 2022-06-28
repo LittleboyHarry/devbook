@@ -9,7 +9,6 @@ import {
 type Value = 'gnome' | 'kde';
 const defaultValue: Value = 'gnome';
 const context = createScopeContext<Value>(defaultValue);
-const triggers = new Set<(value: Value) => void>();
 
 export function PreferXde({
   gnome,
@@ -24,7 +23,7 @@ export function PreferXde({
       storeKeywords={['gnome', 'kde']}
       labels={['GNOME', 'KDE']}
       title="X 桌面环境："
-      {...{ defaultValue, context, children, triggers, noSelector }}
+      {...{ defaultValue, context, children, noSelector }}
     />
   );
 }

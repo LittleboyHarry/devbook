@@ -93,14 +93,14 @@ export function DevEnvCatalog({ hidePl }: { hidePl?: boolean }) {
     <>
       <LogoCard.Container>
         <LogoCard
-          name="Podman"
-          to="/docs/devenv/podman"
-          logo={<FontAwesomeIcon icon={faCubes} />}
-        />
-        <LogoCard
           name="虚拟化"
           to="/docs/devenv/virtual"
           logo={<FontAwesomeIcon icon={faServer} />}
+        />
+        <LogoCard
+          name="容器化"
+          to="/docs/devenv/container"
+          logo={<FontAwesomeIcon icon={faCubes} />}
         />
         {/*
       <LogoCard

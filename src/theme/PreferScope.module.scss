@@ -1,8 +1,6 @@
 @import '/src/css/utils';
 
 .selector {
-  margin-bottom: 1rem;
-
   @include for-mobile-screen {
     & {
       flex-direction: row;
@@ -11,6 +9,7 @@
 
   @include for-phone-only {
     display: block;
+
     > label {
       padding: {
         left: 2rem;
@@ -21,18 +20,23 @@
   }
 }
 
-%padding {
-  padding: {
-    top: 1rem;
-    bottom: 1rem;
+.choices {
+  display: flex;
+  overflow-x: auto;
+
+  &.oneline {
+    display: inline;
   }
 }
 
 .choice {
-  @extend %padding;
-  padding: {
-    left: 2rem;
-    right: 2rem;
+  padding: 1rem 2rem;
+
+  @include for-phone-only {
+    padding: {
+      left: 1.5rem;
+      right: 1.5rem;
+    }
   }
   margin-right: 8px;
   > input[type='radio'] {
@@ -41,6 +45,14 @@
 }
 
 .title {
-  @extend %padding;
+  flex-shrink: 0;
   margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  @include for-phone-only {
+    margin-bottom: 1rem;
+    &.oneline{
+      display: inline;
+    }
+  }
 }

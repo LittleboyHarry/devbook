@@ -10,8 +10,8 @@
     }
   },
   "include": [
-    "src/*.d.ts",
-    "docs/*.d.ts",
-    "docs/**/*.tsx",
+    "types.d.ts",
+    "src/**/*",
+    "docs/**/*"
   ]
 }

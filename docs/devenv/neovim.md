@@ -20,24 +20,30 @@ git config --global core.editor nvim
 # echo export SYSTEMD_EDITOR=nvim | tee -a ~/.bashrc ~/.zshrc > /dev/null
 ```
 
-## 推荐配置
+## 推荐的配置文件
 
-Windows 对应所在目录:
+import PrefixIcon from '@theme/PrefixIcon'
 
-```powershell
-explorer (mkdir -f $env:LOCALAPPDATA/nvim)
-```
+<PrefixIcon win cmd>
+
+在 Windows 中编辑配置文件
+
+</PrefixIcon>
+
+    powershell notepad \"$(mkdir -f $env:LOCALAPPDATA\nvim)\init.vim\"
+
+<PrefixIcon cmd>
 
 Linux 对应所在目录：
 
+</PrefixIcon>
+
 ```shell
 mkdir -p ~/.config/nvim
-cd ~/.config/nvim
-
 [ -x "$(command -v xdg-open)" ] && xdg-open . || echo "复制下载链接，使用 wget 下载"
 ```
 
-下载该配置：<FileItem button name="init.vim" path="/config/neovim/init.vim" icon={<ScriptIcon />} />
+import CodeBlock from '@theme/CodeBlock';
+import ConfigCode from '!!raw-loader!./init.vim';
 
-import { ScriptIcon } from '@theme/fai';
-import FileItem from '@theme/FileItem'
+<CodeBlock language="vim" title="nvim/init.vim">{ConfigCode}</CodeBlock>

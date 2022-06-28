@@ -25,8 +25,11 @@ import { StoreLink, mslink } from '@theme/links';
    wsl sudo apt install -y ./ca-certificates_*.deb ./openssl_*.deb
    ```
 
-3. <a href="/docs/setup-linux/for-debian#国内镜像软件仓" target="_blank">
-   设置镜像源并更新</a>
+3. 设置镜像源并更新
+
+import SetMirror from '/docs/\_cmirror/debian.md'
+
+<SetMirror />
 
 :::
 

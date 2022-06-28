@@ -9,7 +9,6 @@ import {
 type Value = 'apt' | 'dnf' | 'pacman';
 const _defaultValue: Value = 'pacman' as Value;
 const context = createScopeContext(_defaultValue);
-const triggers = new Set<(value: Value) => void>();
 
 export function PreferPkgMgr({
   pacman,
@@ -26,7 +25,7 @@ export function PreferPkgMgr({
       storeFlags={[pacman, apt, dnf]}
       storeKeywords={['pacman', 'apt', 'dnf']}
       labels={['pacman', 'apt', 'dnf']}
-      {...{ defaultValue, context, children, triggers }}
+      {...{ defaultValue, context, children }}
     />
   );
 }

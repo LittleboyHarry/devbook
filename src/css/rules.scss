@@ -1,13 +1,114 @@
-#__docusaurus {
-  .slick-prev,
-  .slick-next {
-    $size: 36px;
-    width: $size;
-    height: $size;
-    z-index: 1;
-    &:before {
-      font-size: $size;
-      color: var(--ifm-color-emphasis-700);
+.autoselect-cell-of-table {
+  td {
+    user-select: all;
+  }
+}
+
+.autoselect-item-of-list {
+  li {
+    user-select: all;
+  }
+}
+
+details.alert--info {
+  --ifm-alert-background-color: var(--ifm-color-secondary-contrast-background);
+  --ifm-alert-background-color-highlight: rgba(235, 237, 240, 0.15);
+  --ifm-alert-foreground-color: var(--ifm-color-secondary-contrast-foreground);
+  --ifm-alert-border-color: var(--ifm-color-secondary-darkest);
+
+  &.rawstyl {
+    --ifm-alert-background-color: var(--ifm-color-info-contrast-background);
+    --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
+    --ifm-alert-foreground-color: var(--ifm-color-info-contrast-foreground);
+    --ifm-alert-border-color: var(--ifm-color-info-dark);
+  }
+
+  .admonition-tip & {
+    border: none;
+  }
+}
+
+.no-admonition-uppercase-title {
+  .admonition-heading > h5 {
+    text-transform: none;
+  }
+}
+
+.no-admonition-icon {
+  .admonition-icon {
+    display: none;
+  }
+}
+
+.no-table-border {
+  table {
+    > thead > tr {
+      border: none;
+      > th {
+        border: {
+          top: none;
+          bottom: none;
+          right: none;
+        }
+        &:first-child {
+          border-left: none;
+        }
+      }
     }
+    > tbody {
+      > tr {
+        border: none;
+        > td {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.no-table-header {
+  table {
+    > thead {
+      display: none;
+    }
+    > tbody > tr {
+      background-color: var(--ifm-table-stripe-background);
+      &:nth-child(2n) {
+        background-color: unset;
+      }
+    }
+  }
+}
+
+.full-width-table table {
+  display: table;
+  width: 100%;
+}
+
+.left-float-scope {
+  > * {
+    float: left;
+    margin-right: 3rem;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+.no-link-underline {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.limit-code-height {
+  code {
+    max-height: 12rem;
   }
 }

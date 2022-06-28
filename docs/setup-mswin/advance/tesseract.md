@@ -1,20 +1,22 @@
 # 截图识字技术 tesseract
 
-开源免费，默认仅支持英文
+开源免费
 
 <GetPkg name="tesseract" scoop choco />
 
 <!-- pacman="tesseract tesseract-data-chi_sim" -->
 
+默认仅支持英文。语言文件在 Scoop 版中下载保存到 `%TESSDATA_PREFIX%` 中，在 Choco 版中下载保存到 `C:\Program Files\Tesseract-OCR\tessdata`
+
 import {AddonIcon} from '@theme/fai'
 
 <p>
 <FileItem button icon={<AddonIcon/>} name="简体中文识别模型" path="https://cdn.jsdelivr.net/gh/tesseract-ocr/tessdata_fast@main/chi_sim.traineddata" />
-，
+&emsp;
 <a href="https://github.com/tesseract-ocr/tessdata_fast/">... 其他所有语言</a>
 </p>
 
-对 Scoop 版下载保存到 `%TESSDATA_PREFIX%` 中，对 Choco 版下载保存到 `C:\Program Files\Tesseract-OCR\tessdata`
+
 
 ### 使用
 

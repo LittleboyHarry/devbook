@@ -32,8 +32,8 @@ Debian 默认提供的 nodejs 12 版本太低，很多 npm 依赖包不支持。
 
 在 Debian 中，推荐使用 nvm 安装 LTS 新版：
 
- <PreferCodeSource origin gitee>
-<FromOrigin>
+ <PreferNetShore>
+<OffshoreNet>
 
 ```shell
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -41,8 +41,8 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 exec $SHELL
 ```
 
-</FromOrigin>
-<FromGitee>
+</OffshoreNet>
+<InshoreNet>
 
 ```shell
 cn/nvm
@@ -50,8 +50,8 @@ cn/nvm
 exec $SHELL
 ```
 
-</FromGitee>
-</PreferCodeSource>
+</InshoreNet>
+</PreferNetShore>
 
 </ForApt>
 
@@ -117,9 +117,9 @@ $newpath = [Environment]::GetEnvironmentVariable("PATH", "User") + ";$(yarn glob
     sudo npm install -g pnpm
 
 import {
-    PreferCodeSource,
-    FromOrigin,
-    FromGitee,
-} from '@theme/PreferCodeSource'
+    PreferNetShore,
+    OffshoreNet,
+    InshoreNet,
+} from '@theme/PreferNetShore'
 
 import GetPkg from '@theme/GetPkg';

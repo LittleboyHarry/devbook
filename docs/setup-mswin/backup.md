@@ -1,3 +1,7 @@
+---
+sidebar_position: 999
+---
+
 # 系统备份与恢复
 
 ## 准备
@@ -16,14 +20,19 @@
 1. 系统恢复模式可用或准备 PE U 盘
 2. 重启进入恢复系统
 3. 挂载 C 盘为系统盘，D 盘作为备份存储空间
-4. 执行命令：
+4. 执行命令
 
-&nbsp;
+制作过程需要采用足够大的存储空间作暂存区：
 
-    dism /capture-image /imagefile:D:\backup\system.esd /capturedir:c: /name:my /compress:max /checkintegrity /verify
+    set temp=x:\...\tmpdir & mkdir %temp%
 
-:::note 参数作用
+打包镜像命令：
 
+    start cmd /k dism /capture-image /imagefile:D:\backup\system.esd /capturedir:c: /name:my /compress:max /checkintegrity /verify
+
+:::note 命令解析
+
+- `start cmd /k` 在新窗口运行指令
 - `/imagefile` 是备份镜像的完整路径名，也可用压缩率更低但支持旧版系统的 `.wim` 格式
 - `/capturedir` 填入系统盘符
 - `/name` 名称自定
@@ -36,7 +45,7 @@
 
 以 UEFI + GPT 分区为例，打开 `diskpart` 规划分区:
 
-```bat
+```batch
 REM 命令和子命令可缩写为前三个字母，如：lis dis par 等
 REM 帮助文档请在查询命令前加上前缀 h<空格>
 

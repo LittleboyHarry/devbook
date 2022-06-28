@@ -28,11 +28,19 @@ import { StoreButton, mslink } from '@theme/links';
 
 </details>
 
-:::caution 允许执行本地脚本，管理员权限运行：
+ <div className="no-admonition-icon">
+
+:::caution 允许执行本地脚本：
+
+ <PrefixIcon cmd admin>
 
     Set-ExecutionPolicy RemoteSigned
 
+</PrefixIcon>
+
 :::
+
+</div>
 
 ## 基本配置
 
@@ -126,3 +134,4 @@ echo 'Import-Module kmt.winget.autocomplete' >> $PROFILE
 
 import GetPkg from '@theme/GetPkg';
 import { LinkButton } from '@theme/links';
+import PrefixIcon from '@theme/PrefixIcon'

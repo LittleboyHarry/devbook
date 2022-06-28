@@ -9,7 +9,6 @@ import {
 type Value = 'appstream' | 'pkgmgr';
 const defaultValue = 'pkgmgr';
 const context = createScopeContext<Value>(defaultValue);
-const triggers = new Set<(value: Value) => void>();
 
 export function PreferAppstream({
   appstream,
@@ -22,7 +21,8 @@ export function PreferAppstream({
       storeNamePrefix="preferAppstream"
       storeFlags={[appstream, pkgmgr]}
       storeKeywords={['appstream', 'pkgmgr']}
-      labels={['是', '否，用原生包管理器']}
+      labels={['是', '否']}
+      hints={['', '用原生包管理器']}
       title={
         <>
           在 &nbsp;
@@ -33,7 +33,7 @@ export function PreferAppstream({
           软件中心一键安装：
         </>
       }
-      {...{ defaultValue, context, children, triggers, noSelector }}
+      {...{ defaultValue, context, children, noSelector }}
     />
   );
 }

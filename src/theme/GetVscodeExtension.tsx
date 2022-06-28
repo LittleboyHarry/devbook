@@ -37,7 +37,6 @@ export default function GetVscodeExtension({ id }: { id: string }) {
 type Value = 'vscode' | 'oss' | 'vscodium';
 const defaultValue: Value = 'oss';
 const context = createScopeContext<Value>(defaultValue);
-const triggers = new Set<(value: Value) => void>();
 
 export function PreferVscode({
   vscode,
@@ -58,7 +57,7 @@ export function PreferVscode({
       storeKeywords={['vscode', 'oss', 'vscodium']}
       labels={['VSCode', 'OSS', 'VSCodium']}
       hints={['微软发行版', '源码构建版', '社区维护版']}
-      {...{ defaultValue, context, children, triggers, noSelector }}
+      {...{ defaultValue, context, children, noSelector }}
     />
   );
 }

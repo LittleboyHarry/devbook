@@ -4,6 +4,8 @@ sidebar_position: 5
 
 # deployworkenv
 
+import st from './deployworkenv.module.scss';
+
 <iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=deployworkenv&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="120" height="32" title="GitHub" style={{float:'right',position:'relative',top:-64}}></iframe>
 
 import Require from '/docs/\_deployworkenv.md'
@@ -18,7 +20,7 @@ import Require from '/docs/\_deployworkenv.md'
 
 插件：
 
-<div style={{float:'left',marginRight:'2rem'}}>
+<div className={st.col}>
 
 别名管理：
 
@@ -34,7 +36,7 @@ import Require from '/docs/\_deployworkenv.md'
 - [rsync](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/rsync)
 
 </div>
-<div style={{float:'left',marginRight:'2rem'}}>
+<div className={st.col}>
 
 剪贴板：
 
@@ -54,7 +56,7 @@ import Require from '/docs/\_deployworkenv.md'
 - [.gitignore](https://gitee.com/mirrors/oh-my-zsh/tree/master/plugins/gitignore) 模板
 
 </div>
-<div style={{float:'left',marginRight:'2  rem'}}>
+<div className={st.col}>
 
 操作系统类：
 

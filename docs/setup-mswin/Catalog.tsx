@@ -19,9 +19,16 @@ export default function SetupMswinCatalog() {
           to="https://www.microsoft.com/zh-cn/software-download/windows11"
           logo={<img src={useBaseUrl('/img/icons/windows8-original.svg')} />}
         />
+      </LogoCard.Container>
+      <LogoCard.Container>
         <LogoCard
           name="微 PE 工具箱"
           to="https://www.wepe.com.cn/ubook/start.html"
+          logo={<FontAwesomeIcon icon={faToolbox} />}
+        />
+        <LogoCard
+          name="优启通 EasyU"
+          to="https://www.upe.net/"
           logo={<FontAwesomeIcon icon={faToolbox} />}
         />
       </LogoCard.Container>

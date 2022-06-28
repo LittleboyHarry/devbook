@@ -18,13 +18,11 @@ import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
 
 ## 创建虚拟机
 
-1. 打开“虚拟介质管理器”，注册下载所得
-2. 复制一份虚拟硬盘，格式为 VDI
-3. 创建虚拟机
-
-   > vbox 会根据系统名称猜测发行版
-
-4. 启动前配置虚拟机：CPU 数、虚拟盘加密等
+1. 打开 “虚拟介质管理器”，“注册” 下载所得介质
+2. 复制一份虚拟硬盘，格式为 VDI。选择保存位置并起名如 “archbase”
+3. 类型选择 “不可改变”
+4. 创建虚拟机（ 名字含 "arc" 会被自动识别 ）
+5. 启动前配置虚拟机：CPU 数、虚拟盘加密等
 
 :::note 如何向无图形化界面的虚拟机粘贴代码？
 
@@ -37,7 +35,7 @@ import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
 - 使用前，请先在“全局设定”中关闭“热键”的“自动独占键盘”。
 - 下载后打开脚本执行，右键托盘图标 `suspend` 挂起。
 
-方法二：安装无图形化增强工具
+方法二：稍后安装安装无图形化增强工具
 
     pacman -S --noconfirm virtualbox-guest-utils-nox
 
@@ -51,26 +49,43 @@ import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
 
 ## 配置
 
+### SSH 连接
+
+设置虚拟机 “网络” > “网卡 1” > “端口转发”
+
+添加规则：端口均填 22
+
+    ssh arch@localhost
+
+:::note 忽略指纹检查
+
+PowerShell:
+
+    "Host localhost`nStrictHostKeyChecking no`nUserKnownHostsFile=/dev/null`n" > $env:USERPROFILE/.ssh/config
+
+:::
+
 ### 使用国内镜像站
 
-`sudo -s` 以 root 身份运行：
+`sudo -s` 以 root 身份运行：[镜像列表](https://mirrorz.org/list/archlinux)
 
-   ```shell
-   pushd /etc
-   sed -i '/^#Para/ s/^#//' pacman.conf
-   sed '/^#IgnorePkg/{s/^#//;s/$/linux/}' -i pacman.conf
-   pushd pacman.d
-   echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' | tee mirrorlist
-   yes | pacman -Sy reflector
-   reflector -c cn -p https --sort rate -l 3 --save mirrorlist
-   yes | pacman -Syyu
-   ```
+```shell
+URL='https://mirrors.ustc.edu.cn/archlinux'
+
+pushd /etc
+sed -i '/^#Para/ s/^#//' pacman.conf
+sed '/^#IgnorePkg/{s/^#//;s/$/linux/}' -i pacman.conf
+pushd pacman.d
+[ -v URL ] && echo 'Server = '"$URL"'/$repo/os/$arch' | tee mirrorlist
+yes | pacman -Sy reflector
+reflector -c cn -p https --sort rate -l 3 --save mirrorlist
+yes | pacman -Syyu
+exit
+```
 
 ### 开发环境
 
-```shell
-yes | sudo pacman -S git vim
-```
+    sudo pacman -S --noconfirm lsb-release git wget vim
 
 import Require from '/docs/\_deployworkenv.md'
 

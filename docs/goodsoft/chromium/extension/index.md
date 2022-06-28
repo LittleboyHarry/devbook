@@ -1,4 +1,4 @@
-# Chromium 推荐扩展
+# Chromium 扩展
 
 import { Recommend } from '../../\_browser/extensions'
 
