@@ -17,12 +17,12 @@ import {HtmlA} from '@theme/links';
 
 ### 触摸板
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
 <HtmlA href="ms-settings:devices-touchpad">设置“三指手势”点击作为“鼠标中键”</HtmlA>
-<PrefixIcon reg>
+<CodeType reg>
 或使用作者推荐手势：
-</PrefixIcon>
+</CodeType>
 
 - 三指同时左右滑动：降低/提高音量
 - 三指同时上下滑动：最大/最小化窗口

@@ -14,11 +14,11 @@
 
     cipher /w:<盘符>
 
- <PrefixIcon cmd admin>
+ <CodeType cmd admin>
 
 ## 提权需要密码
 
-</PrefixIcon>
+</CodeType>
 
     reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /f /d 1
 
@@ -26,4 +26,4 @@
 - 5 默认
 - 1 强制登录验证 (指纹)
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'

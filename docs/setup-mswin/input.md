@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
 # 键盘与输入法
 
@@ -10,11 +10,11 @@ import PrefixIcon from '@theme/PrefixIcon'
 
 ## 微软拼音输入法
 
- <PrefixIcon cmd >
+ <CodeType cmd user>
 
 ### 外观优化
 
-</PrefixIcon>
+</CodeType>
 
 放大字号、限制 5 个候选词
 
@@ -30,12 +30,12 @@ reg add HKCU\Software\Microsoft\InputMethod\CandidateWindow\CHS\1 /v FontStyleTS
 
 </summary>
 
- <PrefixIcon cmd >
+ <CodeType cmd user>
 
 来自知乎知识分享：[双拼的好处](https://www.zhihu.com/question/21449398)
 与 [练习方法](https://www.zhihu.com/question/311394000)
 
-</PrefixIcon>
+</CodeType>
 
 ```batch
 reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "EnableExtraDomainType" /t REG_DWORD /f /d 1

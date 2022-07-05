@@ -13,13 +13,21 @@
 
 [安装](/docs/setup-mswin/advance/sysinternals) 来自 Sysinternals Suite 的 regjump 工具
 
+import CodeType from '@theme/CodeType'
+
+<CodeType win cmd>
+
 ### 变化跟踪
+
+</CodeType>
 
 ```batch
 scoop bucket add nirsoft
 scoop install registrychangesview
 
 ```
+
+import GetPkg from '@theme/GetPkg';
 
 <GetPkg choco="registrychangesview" />
 
@@ -30,5 +38,3 @@ scoop install https://cdn.jsdelivr.net/gh/littleboyharry-contrib/scoop-zapps@9f1
 cmd /c reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "%USERPROFILE%\scoop\apps\RegConvert\current\RegConvert.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
 
 ```
-
-import GetPkg from '@theme/GetPkg';

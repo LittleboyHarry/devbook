@@ -1,4 +1,4 @@
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
 import {
     PreferNetShore,
@@ -15,7 +15,7 @@ import {
 
 <br/>
 
-<PrefixIcon cmd> 使用 git 工具克隆：</PrefixIcon>
+<CodeType cmd> 使用 git 工具克隆：</CodeType>
 
  <OffshoreNet>
 

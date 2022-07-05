@@ -32,11 +32,11 @@ import { StoreButton, mslink } from '@theme/links';
 
 :::caution 允许执行本地脚本：
 
- <PrefixIcon cmd admin>
+ <CodeType cmd admin>
 
     Set-ExecutionPolicy RemoteSigned
 
-</PrefixIcon>
+</CodeType>
 
 :::
 
@@ -134,4 +134,4 @@ echo 'Import-Module kmt.winget.autocomplete' >> $PROFILE
 
 import GetPkg from '@theme/GetPkg';
 import { LinkButton } from '@theme/links';
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'

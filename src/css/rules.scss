@@ -112,3 +112,10 @@ details.alert--info {
     max-height: 12rem;
   }
 }
+
+.optimize-comment-code {
+  .theme-code-block-highlighted-line {
+    font-style: normal;
+    color: var(--ifm-font-color-base-inverse);
+  }
+}

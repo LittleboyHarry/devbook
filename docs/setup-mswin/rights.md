@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
 # 个人数字权利
 
@@ -14,11 +14,11 @@ import PrefixIcon from '@theme/PrefixIcon'
 
 :::
 
-<PrefixIcon admin pwsh >
+<CodeType admin pwsh >
 
 ## 保留个人数据
 
-</PrefixIcon>
+</CodeType>
 
 参考来源：[O&O ShutUp10++](https://www.oo-software.com/en/shutup10) 图形化免费软件
 
@@ -69,11 +69,11 @@ reg add HKCU\SOFTWARE\Microsoft\Siuf\Rules /v PeriodInNanoSeconds /t REG_DWORD /
 
 ```
 
-<PrefixIcon admin pwsh >
+<CodeType admin pwsh >
 
 ## 屏蔽服务与启动项
 
-</PrefixIcon>
+</CodeType>
 
 这些的后台服务会收集数据，并影响计算机运行速度
 
@@ -111,11 +111,11 @@ Disable-DefaultTask XblGameSaveTask
 
 ## 微软内置应用
 
-<PrefixIcon admin pwsh >
+<CodeType admin pwsh >
 
 一键移除：
 
-</PrefixIcon>
+</CodeType>
 
 ```powershell
 # OneDrive

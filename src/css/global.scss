@@ -52,10 +52,11 @@
 }
 
 article {
-  overflow-x: auto;
-
-  code {
+  pre {
     max-height: calc(62vh);
+    > code {
+      max-width: 100%;
+    }
   }
 
   p > code {
@@ -66,6 +67,37 @@ article {
   h3 {
     input[type='checkbox'] {
       display: none;
+    }
+  }
+}
+
+.theme-code-block-highlighted-line {
+  .token.comment {
+    font-style: normal !important;
+    color: var(--ifm-font-color-base-inverse) !important;
+    [data-theme='dark'] & {
+      color: var(--ifm-font-color-base) !important;
+    }
+  }
+}
+
+article pre {
+  --ifm-scrollbar-size: 1.38rem;
+
+  @media (pointer: fine) {
+    .thin-scrollbar {
+      scrollbar-width: auto;
+
+      &::-webkit-scrollbar {
+        height: var(--ifm-scrollbar-size);
+        width: var(--ifm-scrollbar-size);
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 0;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: var(--ifm-scrollbar-size);
+      }
     }
   }
 }

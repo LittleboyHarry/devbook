@@ -3,18 +3,18 @@ sidebar_position: 1
 description: ''
 ---
 
-import PrefixIcon from '@theme/PrefixIcon';
+import CodeType from '@theme/CodeType';
 import { PreferWinVer, ForWin10, ForWin11 } from '@theme/PreferWinVer'
 
 # 任务栏与开始菜单
 
 <PreferWinVer win10 win11><br/>
 
-<PrefixIcon pwsh>
+<CodeType pwsh user>
 
 ## 任务栏
 
-</PrefixIcon>
+</CodeType>
 
 1. 优先展示新活动窗口
 2. 大缩略浏览图（ 仅用于大内存、宽屏设备 ）
@@ -36,35 +36,38 @@ kill -n explorer
 
 <ForWin11>
 
+<CodeType reg user>
+
 对 Windows 11:
 
-1. 图标元素左对齐
-2. Alt + Tab 不要切换 Edge 标签页
-3. 移除干扰元素
+</CodeType>
 
-```powershell
-# 1:
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarAl /t REG_DWORD /d 0 /f
-# 2:
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v MultiTaskingAltTabFilter /t REG_DWORD /d 3 /f
-# 3:
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarDa /t REG_DWORD /d 0 /f
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarMn /t REG_DWORD /d 0 /f
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v MMTaskbarMode /t REG_DWORD /d 2 /f
+```ini
+Windows Registry Editor Version 5.00
 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+# highlight-next-line
+; 图标元素左对齐
+"TaskbarAl"=dword:00000000
+
+# highlight-next-line
+; Alt + Tab 不要切换 Edge 标签页
+"MultiTaskingAltTabFilter"=dword:00000003
+
+# highlight-next-line
+; 移除干扰元素
+"TaskbarDa"=dword:00000000
+"TaskbarMn"=dword:00000000
+"MMTaskbarMode"=dword:00000002
 ```
 
 </ForWin11>
 
-<PrefixIcon admin cmd>
-
 ## 开始菜单
-
-</PrefixIcon>
 
 <ForWin10>
 
-不要显示网页搜索结果：
+<CodeType admin cmd user children='不要显示网页搜索结果：' />
 
 ```batch
 reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /f /d 1
@@ -75,7 +78,7 @@ reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSug
 
 <ForWin11>
 
-禁用云搜索：
+<CodeType admin reg user children='禁用云搜索：' />
 
 ```batch
 reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /f /d 1
@@ -99,13 +102,13 @@ GetPkg
 
 <GetPkg winget="voidtools.Everything.Lite" choco="everything" />
 
-<PrefixIcon cmd children='模糊修复：' />
+<CodeType cmd children='模糊修复：' />
 
 ```batch
 reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files\Everything\Everything.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
 ```
 
-<PrefixIcon cmd admin children='禁用原生搜索' />
+<CodeType cmd admin children='禁用原生搜索' />
 
 ```powershell
 sc.exe stop wsearch

@@ -51,7 +51,7 @@
   align-items: center;
   @include for-phone-only {
     margin-bottom: 1rem;
-    &.oneline{
+    &.oneline {
       display: inline;
     }
   }

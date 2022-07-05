@@ -22,21 +22,21 @@ git config --global core.editor nvim
 
 ## 推荐的配置文件
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
-<PrefixIcon win cmd>
+<CodeType win cmd>
 
 在 Windows 中编辑配置文件
 
-</PrefixIcon>
+</CodeType>
 
     powershell notepad \"$(mkdir -f $env:LOCALAPPDATA\nvim)\init.vim\"
 
-<PrefixIcon cmd>
+<CodeType cmd>
 
 Linux 对应所在目录：
 
-</PrefixIcon>
+</CodeType>
 
 ```shell
 mkdir -p ~/.config/nvim

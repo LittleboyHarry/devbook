@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
 # 键位调整
 
@@ -13,11 +13,11 @@ import PrefixIcon from '@theme/PrefixIcon'
 
 这样的键位重映射，有利于提高打字和触发快捷键效率、减少肌肉劳损。
 
- <PrefixIcon cmd admin >
+ <CodeType cmd admin >
 
 ## Windows
 
-</PrefixIcon>
+</CodeType>
 
     reg add "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 00000000000000000600000001003A003A0001001D0038005BE01D0038005BE000000000
 
@@ -32,11 +32,11 @@ import PrefixIcon from '@theme/PrefixIcon'
 
 </details>
 
- <PrefixIcon cmd>
+ <CodeType cmd>
 
 ## GNOME
 
-</PrefixIcon>
+</CodeType>
 
     gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape', 'ctrl:swap_lalt_lctl_lwin']"
 
@@ -44,11 +44,11 @@ import PrefixIcon from '@theme/PrefixIcon'
 
 注意: fcitx5 的 XCB 附加组件可能会与之冲突，需要 `fcitx5-configtool` 配置禁用 “允许重写系统 XKB 设置”
 
- <PrefixIcon cmd>
+ <CodeType cmd>
 
 ## KDE
 
-</PrefixIcon>
+</CodeType>
 
 执行命令，注销回话以生效：
 

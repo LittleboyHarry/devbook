@@ -56,11 +56,11 @@ sidebar_position: 8
 
 Windows 使用 `diskmgmt.msc` 来删除分区，内容编辑：
 
- <PrefixIcon admin>
+ <CodeType admin>
 
     mountvol i: /s
 
-</PrefixIcon>
+</CodeType>
 
 :::note 命令行用法
 
@@ -93,4 +93,4 @@ ForGnome,
 ForKde
 } from '@theme/PreferXde';
 import GetPkg from '@theme/GetPkg';
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'

@@ -13,9 +13,9 @@ ForWin11
 
 <PreferWinVer win10 win11 />
 
-## 第一步：备份还原点
+## 备份还原点
 
-打开对话框：
+首先备份系统。打开对话框：
 
  <PreferWinVer win10 win11 noSelector>
 <ForWin10>
@@ -38,9 +38,11 @@ ForWin11
 1. 配置 (Alt+O) > 启动系统保护 > 调整最大使用量，确定
 2. 创建 (Alt+C) > 为创建的还原点起名
 
-## 第二步：系统更新
+## 系统更新
 
-连接网络，调整<HtmlA href="ms-settings:windowsupdate-options">更新高级选项</HtmlA>：勾选“接收其他 MS 产品更新”
+第二步：连接网络，自动更新系统
+
+调整<HtmlA href="ms-settings:windowsupdate-options">更新高级选项</HtmlA>：勾选“接收其他 MS 产品更新”
 
 <!-- 如果不介意使用 P2P 流量分享技术：进入“传递优化”选择 Internet 下载源以提高速度 -->
 
@@ -49,13 +51,13 @@ ForWin11
 进入旧版 Store 商店 > 菜单 - 软件和更新 > 下载和更新
 （ 新版：库 > 获取更新
 
-## 第三步：更改计算机名
+## 更改计算机名
 
-设置 > 重命名
+第三步：设置 > 重命名
 
-## 第四步：配置 DNS
+## 配置 DNS
 
-如果运行商提供的默认 DNS 服务不满意（ 如部分网站无法访问 ），可强制绑定：
+第四步：如果运行商提供的默认 DNS 服务不满意（ 如部分网站无法访问 ），可强制绑定：
 搜索 `ncpa.cpl` 设置 DNS 服务器地址
 
 <div className="left-float-scope autoselect-item-of-list"><div  style={{marginRight:'4rem'}}>
@@ -72,7 +74,7 @@ ForWin11
 
 </div></div>
 
-<PrefixIcon cmd admin><div className="left-float-scope autoselect-item-of-list">
+<CodeType cmd admin><div className="left-float-scope autoselect-item-of-list">
 
 阿里 DOH：
 
@@ -85,7 +87,7 @@ ForWin11
 
 （ 仅 Win11 可设置应用 ）
 
-</div></PrefixIcon>
+</div></CodeType>
 
 ```batch
 netsh dns add encryption server=223.5.5.5 dohtemplate=https://dns.alidns.com/dns-query autoupgrade=no udpfallback=no
@@ -123,11 +125,11 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 
 或使用 [Office Tool Plus](https://otp.landian.vip/zh-cn/download.html) 部署
 
- <PrefixIcon cmd admin >
+ <CodeType cmd admin >
 
 ## 双系统问题
 
-</PrefixIcon>
+</CodeType>
 
 :::note 关闭快速启动
 
@@ -145,7 +147,7 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 
     SystemPropertiesAdvanced
 
-import PrefixIcon from '@theme/PrefixIcon';
+import CodeType from '@theme/CodeType';
 import { WebIcon } from '@theme/fai';
 import { LinkButton } from '@theme/links';
 import { HtmlA } from '@theme/links';

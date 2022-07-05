@@ -44,8 +44,8 @@ sidebar_position: 4
 
 :::
 
-:::note [普通模式内自动切换输入法](https://github.com/daipeihust/im-select)
-:::
+<p><LinkButton outline href="https://github.com/daipeihust/im-select" name="设置自动切换输入法" /></p>
+
 
 import { LinkButton } from '@theme/links';
 import GetVscodeExtension, { PreferVscode } from '@theme/GetVscodeExtension';

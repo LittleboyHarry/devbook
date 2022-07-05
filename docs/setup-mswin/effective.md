@@ -2,17 +2,17 @@
 sidebar_position: 8
 ---
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
 # 提高效率
 
 ## 库机制
 
- <PrefixIcon cmd>
+ <CodeType cmd user>
 
 添加到新的文件管理器窗口侧边栏：[介绍说明](https://sspai.com/post/41297)
 
-</PrefixIcon>
+</CodeType>
 
     reg add "HKCU\Software\Classes\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}" /v System.IsPinnedToNameSpaceTree /t REG_DWORD /d 1 /f
 
@@ -45,8 +45,8 @@ import {HtmlA} from '@theme/links';
 
 连按 5 次，激活粘滞键功能。1 次激活修饰键，2 次 锁定修饰键，3 次代替原来的单次按修饰键。使用前优化：
 
- <PrefixIcon cmd>
+ <CodeType cmd>
 
     reg add "HKCU\Control Panel\Accessibility\StickyKeys" /v Flags /t REG_SZ /d 190 /f
 
-</PrefixIcon>
+</CodeType>

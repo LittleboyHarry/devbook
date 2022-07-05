@@ -4,13 +4,13 @@ description: ''
 
 # 桌面环境
 
-import PrefixIcon from '@theme/PrefixIcon';
+import CodeType from '@theme/CodeType';
 
-<PrefixIcon cmd>
+<CodeType cmd>
 
 ## 添加桌面图标
 
-</PrefixIcon>
+</CodeType>
 
 1. 右键管理菜单项
 2. 添加常用桌面图标：用户文件夹、库
@@ -41,11 +41,11 @@ reg add "HKCU\Software\Classes\CLSID\{7007ACC7-3202-11D1-AAD2-00805FC1270E}\Defa
 </details>
 
 
-<PrefixIcon cmd>
+<CodeType cmd>
 
 ## 改善右键菜单
 
-</PrefixIcon>
+</CodeType>
 
 import { PreferWinVer, ForWin10, ForWin11 } from '@theme/PreferWinVer'
 
@@ -87,10 +87,10 @@ if ([Environment]::OSVersion.Version.Build -ge 14393) {
 
 :::caution 关闭并重启文件资源管理器生效
 
-<PrefixIcon pwsh>
+<CodeType pwsh>
 
     kill -n explorer
 
-</PrefixIcon>
+</CodeType>
 
 :::

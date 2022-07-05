@@ -8,6 +8,7 @@ export default function RegistryIcon() {
       icon={faGears}
       color="var(--ifm-color-success)"
       transform="shrink-5"
+      flip="horizontal"
     />
   );
 }

@@ -6,7 +6,7 @@ import {
   PreferScope,
   createScopeComponent,
 } from './PreferScope';
-import PrefixIcon from './PrefixIcon';
+import CodeType from './CodeType';
 import st from './GetPkg.module.scss';
 
 type Value =
@@ -91,7 +91,7 @@ export default function GetPkg({
 
   return (
     <PreferScope
-      title={<PrefixIcon cmd>用包管理器安装：</PrefixIcon>}
+      title={<CodeType cmd>用包管理器安装：</CodeType>}
       storeNamePrefix="preferPkgMgr"
       storeFlags={[
         pacman,

@@ -21,11 +21,11 @@ import GetChoco from './../\_getchoco.md'
 
 ## **Scoop**
 
- <PrefixIcon cmd>
+ <CodeType cmd>
 
 ### 安装
 
-</PrefixIcon>
+</CodeType>
 
 前置依赖 `git`，从官方渠道：
 
@@ -130,4 +130,4 @@ scoop bucket add extras https://gitclone.com/github.com/ScoopInstaller/Extras
 ```
 
 import { StoreButton, mslink } from '@theme/links';
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'

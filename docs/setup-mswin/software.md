@@ -6,13 +6,13 @@ sidebar_position: 16
 
 import { HtmlA, StoreLink, mslink } from '@theme/links';
 import GetPkg from '@theme/GetPkg';
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'
 
- <PrefixIcon pwsh admin>
+ <CodeType pwsh admin>
 
 ## 使用 Chocolatey 包管理器<input type='checkbox'/>
 
-</PrefixIcon>
+</CodeType>
 
 import GetChoco from '/docs/setup-mswin/\_getchoco.md'
 

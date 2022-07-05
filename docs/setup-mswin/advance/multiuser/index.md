@@ -2,11 +2,11 @@
 
 隔离用户对数据的访问权限，提高安全性
 
- <PrefixIcon admin>
+ <CodeType admin>
 
 ## 设置权限
 
-</PrefixIcon>
+</CodeType>
 
 仅支持 NTFS 分区，若要限制其它用户对敏感文件(夹)的访问：
 
@@ -18,11 +18,11 @@
 
 \* `C:\Users` 默认权限规则是对普通用户互相隔离的
 
- <PrefixIcon cmd admin>
+ <CodeType cmd admin>
 
 ## 创建用户
 
-</PrefixIcon>
+</CodeType>
 
 创建账号：
 
@@ -100,11 +100,11 @@ $ws.Save()
 
 ```
 
- <PrefixIcon cmd>
+ <CodeType cmd>
 
 ## 获取安装程序
 
-</PrefixIcon>
+</CodeType>
 
 打开桌面上 `PowerShell as <username>` 的快捷方式，执行：
 
@@ -154,17 +154,17 @@ $ws.Save()
 
 ## 备份与恢复
 
- <PrefixIcon admin>
+ <CodeType admin>
 
 以管理员权限打开压缩软件，压缩 `C:\Users` 目录下的整个用户文件夹
 
-</PrefixIcon>
+</CodeType>
 
- <PrefixIcon cmd admin>
+ <CodeType cmd admin>
 
 重建用户文件夹：
 
-</PrefixIcon>
+</CodeType>
 
 ```powershell
 &{
@@ -180,4 +180,4 @@ $ws.Save()
 
 恢复方法：解压压缩备份，覆盖确认全是
 
-import PrefixIcon from '@theme/PrefixIcon'
+import CodeType from '@theme/CodeType'

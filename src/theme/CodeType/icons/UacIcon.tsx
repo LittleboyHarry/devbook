@@ -4,11 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import st from './UacIcon.module.scss';
 import cs from 'clsx';
 
-export default function UacIcon({ slot }: { slot?: ReactNode }) {
+export default function UacIcon({
+  slot,
+  smaller,
+}: {
+  slot?: ReactNode;
+  smaller?: boolean;
+}) {
   return (
     <span className={st.root}>
       {slot}
-      <span className={cs('fa-layers fa-fw', slot && st.protected)}>
+      <span
+        className={cs(
+          'fa-layers fa-fw',
+          slot && st.elevated,
+          smaller && st.smaller
+        )}
+      >
         <Clip v="t" h="l" c="#20a3e6" />
         <Clip v="t" h="r" c="#fed400" />
         <Clip v="b" h="r" c="#0e8bdb" />

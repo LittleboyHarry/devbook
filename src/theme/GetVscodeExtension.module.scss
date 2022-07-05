@@ -1,12 +1,19 @@
 @import '../css/utils';
 
 .oneline {
-  display: inline-block;
+  display: inline;
   > div:first-child {
-    display: inline-block;
+    display: inline;
+    @include for-phone-only {
+      margin-left: 1rem;
+    }
   }
   > div:nth-child(2) {
-    display: inline-block;
+    display: inline;
+    @include for-phone-only {
+      display: block;
+      margin: 8px 0;
+    }
     > label {
       padding: {
         left: 1rem;
