@@ -8,7 +8,7 @@ import {
 PreferXde,
 ForGnome,
 ForKde
-} from '@theme/PreferXde';
+} from '@theme/unique/PreferXde';
 
 <PreferXde gnome kde />
 
@@ -91,14 +91,14 @@ import {
 PreferAppstream,
 WithAppstream,
 WithoutAppstream
-} from '@theme/PreferAppstream';
-import { StoreButton, mslink } from '@theme/links';
+} from '@theme/unique/PreferAppstream';
+import { StoreButton, mslink } from '@theme/unique/links';
 
 <PreferAppstream appstream pkgmgr />
 
 ### Firefox 浏览器
 
-import { LinkButton } from '@theme/links';
+import { LinkButton } from '@theme/unique/links';
 
 <p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/firefox/config" newTab /></p>
 

@@ -91,6 +91,6 @@ import {
 PreferXde,
 ForGnome,
 ForKde
-} from '@theme/PreferXde';
-import GetPkg from '@theme/GetPkg';
-import CodeType from '@theme/CodeType'
+} from '@theme/unique/PreferXde';
+import GetPkg from '@theme/unique/GetPkg';
+import CodeType from '@theme/unique/CodeType'

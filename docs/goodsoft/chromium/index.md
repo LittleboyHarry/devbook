@@ -125,9 +125,9 @@ cd -
 
 :::
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 import {
 PreferPkgMgr,
 ForApt,
 ForDnf,
-} from '@theme/PreferPkgMgr'
+} from '@theme/unique/PreferPkgMgr'

@@ -202,5 +202,5 @@ PreferPkgMgr,
 ForApt,
 ForDnf,
 ForPacman
-} from '@theme/PreferPkgMgr'
-import GetPkg from '@theme/GetPkg';
+} from '@theme/unique/PreferPkgMgr'
+import GetPkg from '@theme/unique/GetPkg';

@@ -47,5 +47,5 @@ sidebar_position: 4
 <p><LinkButton outline href="https://github.com/daipeihust/im-select" name="设置自动切换输入法" /></p>
 
 
-import { LinkButton } from '@theme/links';
-import GetVscodeExtension, { PreferVscode } from '@theme/GetVscodeExtension';
+import { LinkButton } from '@theme/unique/links';
+import GetVscodeExtension, { PreferVscode } from '@theme/unique/GetVscodeExtension';

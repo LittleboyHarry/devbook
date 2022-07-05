@@ -2,7 +2,7 @@
 description: ''
 ---
 
-import CodeType from '@theme/CodeType';
+import CodeType from '@theme/unique/CodeType';
 
 # 其他
 
@@ -122,5 +122,5 @@ import {
 PreferWinVer,
 ForWin10,
 ForWin11
-} from '@theme/PreferWinVer'
-import {HtmlA} from '@theme/links'
+} from '@theme/unique/PreferWinVer'
+import {HtmlA} from '@theme/unique/links'

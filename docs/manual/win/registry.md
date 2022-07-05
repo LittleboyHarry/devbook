@@ -13,7 +13,7 @@
 
 [安装](/docs/setup-mswin/advance/sysinternals) 来自 Sysinternals Suite 的 regjump 工具
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 <CodeType win cmd>
 
@@ -27,7 +27,7 @@ scoop install registrychangesview
 
 ```
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg choco="registrychangesview" />
 

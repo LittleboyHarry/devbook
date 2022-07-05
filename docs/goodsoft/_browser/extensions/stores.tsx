@@ -10,7 +10,7 @@ import {
   createScopeContext,
   PreferScope,
   ScopeOf,
-} from '@theme/PreferScope';
+} from '@theme/unique/PreferScope';
 import st from './stores.module.scss';
 
 type Value = 'chrome' | 'edge';

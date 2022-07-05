@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 # 提高效率
 
@@ -34,7 +34,7 @@ import CodeType from '@theme/CodeType'
 
 ## 访问键
 
-import {HtmlA} from '@theme/links';
+import {HtmlA} from '@theme/unique/links';
 
 通过按 `Alt + 字母` 的组合键，触发按钮或菜单项，以避免移动鼠标、改善效率。
 

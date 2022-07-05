@@ -12,5 +12,5 @@
 
 <PreferVscode oneline children={<GetVscodeExtension id="foxundermoon.shell-format"/>} />
 
-import GetVscodeExtension, { PreferVscode } from '@theme/GetVscodeExtension';
-import GetPkg from '@theme/GetPkg';
+import GetVscodeExtension, { PreferVscode } from '@theme/unique/GetVscodeExtension';
+import GetPkg from '@theme/unique/GetPkg';

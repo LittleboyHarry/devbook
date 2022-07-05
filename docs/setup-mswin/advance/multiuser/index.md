@@ -180,4 +180,4 @@ $ws.Save()
 
 恢复方法：解压压缩备份，覆盖确认全是
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'

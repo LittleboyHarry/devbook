@@ -3,8 +3,8 @@ sidebar_position: 1
 description: ''
 ---
 
-import CodeType from '@theme/CodeType';
-import { PreferWinVer, ForWin10, ForWin11 } from '@theme/PreferWinVer'
+import CodeType from '@theme/unique/CodeType';
+import { PreferWinVer, ForWin10, ForWin11 } from '@theme/unique/PreferWinVer'
 
 # 任务栏与开始菜单
 
@@ -91,7 +91,7 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings /v IsAADCl
 
 </PreferWinVer>
 
-import GetPkg from '@theme/GetPkg'
+import GetPkg from '@theme/unique/GetPkg'
 GetPkg
 
 :::note 不喜欢使用内置搜索服务？

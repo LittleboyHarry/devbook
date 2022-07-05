@@ -38,4 +38,4 @@ sidebar_position: 1
 />
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import LogoCard from '@theme/LogoCard';
+import LogoCard from '@theme/unique/LogoCard';

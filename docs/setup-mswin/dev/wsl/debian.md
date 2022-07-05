@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Debian on WSL
 
-import { StoreLink, mslink } from '@theme/links';
+import { StoreLink, mslink } from '@theme/unique/links';
 
 推荐安装 <StoreLink to={mslink('9MSVKQC78PK6')} text="Debian on WSL" />，
 其他发行版均可在 <a href="https://aka.ms/wslstore">微软商店</a> 下载

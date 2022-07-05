@@ -43,4 +43,4 @@ Linux 指令：
 
 :::
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

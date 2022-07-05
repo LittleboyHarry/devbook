@@ -26,6 +26,6 @@ sidebar_position: 2
 
 类 Windows 注册表编辑器：
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="dconf-editor" apt dnf pacman />

@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # KDE 推荐
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 ## 来自 GNOME 的软件
 

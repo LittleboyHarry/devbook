@@ -6,7 +6,7 @@ sidebar_position: 99
 
 对于 BTRFS 文件系统，我们可用具有图形化界面的自动备份助手：
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="timeshift" apt dnf aur />
 

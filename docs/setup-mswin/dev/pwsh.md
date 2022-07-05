@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # PowerShell
 
-import { StoreButton, mslink } from '@theme/links';
+import { StoreButton, mslink } from '@theme/unique/links';
 
 **PowerShell 是最好的 Windows Shell !!!**
 
@@ -132,6 +132,6 @@ echo 'Import-Module kmt.winget.autocomplete' >> $PROFILE
 
 </details>
 
-import GetPkg from '@theme/GetPkg';
-import { LinkButton } from '@theme/links';
-import CodeType from '@theme/CodeType'
+import GetPkg from '@theme/unique/GetPkg';
+import { LinkButton } from '@theme/unique/links';
+import CodeType from '@theme/unique/CodeType'

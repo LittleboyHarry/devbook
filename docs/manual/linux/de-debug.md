@@ -1,6 +1,6 @@
 # 桌面环境问题
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 ## D-Bus 信号调试
 

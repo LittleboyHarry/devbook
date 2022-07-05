@@ -73,5 +73,5 @@ sidebar_position: 3
 </div></div>
 
 import st from './extensions.module.scss';
-import { LinkButton } from '@theme/links';
-import GetVscodeExtension, { PreferVscode, ForVscode, SmallerButtonStyle } from '@theme/GetVscodeExtension';
+import { LinkButton } from '@theme/unique/links';
+import GetVscodeExtension, { PreferVscode, ForVscode, SmallerButtonStyle } from '@theme/unique/GetVscodeExtension';

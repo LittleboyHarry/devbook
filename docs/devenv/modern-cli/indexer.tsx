@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoCard from '@theme/LogoCard';
+import LogoCard from '@theme/unique/LogoCard';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

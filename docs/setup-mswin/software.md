@@ -4,9 +4,9 @@ sidebar_position: 16
 
 # 推荐软件
 
-import { HtmlA, StoreLink, mslink } from '@theme/links';
-import GetPkg from '@theme/GetPkg';
-import CodeType from '@theme/CodeType'
+import { HtmlA, StoreLink, mslink } from '@theme/unique/links';
+import GetPkg from '@theme/unique/GetPkg';
+import CodeType from '@theme/unique/CodeType'
 
  <CodeType pwsh admin>
 

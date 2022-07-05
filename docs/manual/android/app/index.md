@@ -26,5 +26,5 @@ sidebar_position: 2
 
 :::
 
-import { DownloadIcon } from '@theme/fai'
-import { LinkButton } from '@theme/links';
+import { DownloadIcon } from '@theme/unique/fai'
+import { LinkButton } from '@theme/unique/links';

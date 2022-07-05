@@ -18,7 +18,7 @@ alt="Edit Custom VM Options"
 
 </details>
 
-import ClickToOpenImage from '@theme/ClickToOpenImage';
+import ClickToOpenImage from '@theme/unique/ClickToOpenImage';
 
  <ClickToOpenImage>
 
@@ -90,4 +90,4 @@ alt="config entrypoint"
 
 </details>
 
-import GetVscodeExtension from '@theme/GetVscodeExtension';
+import GetVscodeExtension from '@theme/unique/GetVscodeExtension';

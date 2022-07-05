@@ -48,8 +48,8 @@ sidebar_position: 16
 
 <p><LinkButton name="下载" icon={<DownloadIcon/>} href="https://download.sysinternals.com/files/Desktops.zip" outline /></p>
 
-import { DownloadIcon } from '@theme/fai'
-import { LinkButton } from '@theme/links';
+import { DownloadIcon } from '@theme/unique/fai'
+import { LinkButton } from '@theme/unique/links';
 
 :::note 全量安装
 
@@ -57,4 +57,4 @@ import { LinkButton } from '@theme/links';
 
 :::
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

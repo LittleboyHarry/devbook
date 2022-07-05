@@ -26,4 +26,4 @@ sidebar_position: 18
 
 <GetPkg name='obs-studio' winget='OBSProject.OBSStudio' choco scoop />
 
-import GetPkg from '@theme/GetPkg'
+import GetPkg from '@theme/unique/GetPkg'

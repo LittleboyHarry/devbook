@@ -2,7 +2,7 @@
 
 解决国内开发遇到的网络问题
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="proxychains-ng" dnf apt pacman/>
 

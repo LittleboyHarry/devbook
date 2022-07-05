@@ -4,7 +4,7 @@ description: ''
 
 # 桌面环境
 
-import CodeType from '@theme/CodeType';
+import CodeType from '@theme/unique/CodeType';
 
 <CodeType cmd>
 
@@ -47,7 +47,7 @@ reg add "HKCU\Software\Classes\CLSID\{7007ACC7-3202-11D1-AAD2-00805FC1270E}\Defa
 
 </CodeType>
 
-import { PreferWinVer, ForWin10, ForWin11 } from '@theme/PreferWinVer'
+import { PreferWinVer, ForWin10, ForWin11 } from '@theme/unique/PreferWinVer'
 
 <br/><PreferWinVer win10 win11><br/>
 

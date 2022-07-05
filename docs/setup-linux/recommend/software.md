@@ -25,4 +25,4 @@ GNOME 待办事项
 
     curl https://popcon.debian.org/by_inst | less
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

@@ -6,11 +6,11 @@ sidebar_position: 20
 
 ## 安装
 
-import GetPkg from '@theme/GetPkg'
+import GetPkg from '@theme/unique/GetPkg'
 
 <GetPkg name='msys2' winget />
 
-import { LinkButton } from '@theme/links';
+import { LinkButton } from '@theme/unique/links';
 
 <p>
 <LinkButton icon name="国内镜像站" outline href="https://mirrorz.org/list/msys2" />

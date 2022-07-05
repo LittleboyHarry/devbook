@@ -26,4 +26,4 @@
 - 5 默认
 - 1 强制登录验证 (指纹)
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'

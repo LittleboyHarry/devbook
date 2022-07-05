@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, ReactNode } from 'react';
-import LogoCard from '@theme/LogoCard';
+import LogoCard from '@theme/unique/LogoCard';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export const { Container } = LogoCard;

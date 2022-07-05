@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 # 个人数字权利
 
@@ -169,7 +169,7 @@ Get-AppxPackage -AllUsers *microsoftteams* | Remove-AppxPackage
 3. 点击 （ “病毒和威胁防护”设置 ）“管理设置”
 4. 关闭“自动提交样本”，可忽略警号提醒
 
-import FileItem from '@theme/FileItem'
+import FileItem from '@theme/unique/FileItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 
@@ -195,5 +195,5 @@ import {
 PreferWinVer,
 ForWin10,
 ForWin11
-} from '@theme/PreferWinVer'
-import { StoreButton, mslink } from '@theme/links'
+} from '@theme/unique/PreferWinVer'
+import { StoreButton, mslink } from '@theme/unique/links'

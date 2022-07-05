@@ -46,5 +46,5 @@ sudo dnf install code -y
 
 [... 从国内镜像站下载](https://mirrorz.org/app/VSCodium)
 
-import { LinkButton } from '@theme/links';
-import GetPkg from '@theme/GetPkg';
+import { LinkButton } from '@theme/unique/links';
+import GetPkg from '@theme/unique/GetPkg';

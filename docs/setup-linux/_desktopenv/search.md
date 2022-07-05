@@ -23,4 +23,4 @@ import {
 PreferXde,
 ForGnome,
 ForKde
-} from '@theme/PreferXde';
+} from '@theme/unique/PreferXde';

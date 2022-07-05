@@ -8,7 +8,7 @@
 
 默认仅支持英文。语言文件在 Scoop 版中下载保存到 `%TESSDATA_PREFIX%` 中，在 Choco 版中下载保存到 `C:\Program Files\Tesseract-OCR\tessdata`
 
-import {AddonIcon} from '@theme/fai'
+import {AddonIcon} from '@theme/unique/fai'
 
 <p>
 <FileItem button icon={<AddonIcon/>} name="简体中文识别模型" path="https://cdn.jsdelivr.net/gh/tesseract-ocr/tessdata_fast@main/chi_sim.traineddata" />
@@ -28,5 +28,5 @@ import {AddonIcon} from '@theme/fai'
 
 `Win + Shift + S` 截图后**必须**打开“截图工具”（*仅 Win10 新系统可用*）窗口以便识别，按任意键退出
 
-import FileItem from '@theme/FileItem'
-import GetPkg from '@theme/GetPkg';
+import FileItem from '@theme/unique/FileItem'
+import GetPkg from '@theme/unique/GetPkg';

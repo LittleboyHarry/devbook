@@ -7,7 +7,7 @@
 
 :::
 
-import LogoCard from '@theme/LogoCard';
+import LogoCard from '@theme/unique/LogoCard';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <LogoCard
@@ -18,10 +18,10 @@ logo={<img src={useBaseUrl('/img/icons/arch.svg')} />}
 
 <br/>
 
-import FileItem from '@theme/FileItem'
-import { ChecksumIcon } from '@theme/fai';
-import { LinkButton } from '@theme/links';
-import { WebIcon } from '@theme/fai';
+import FileItem from '@theme/unique/FileItem'
+import { ChecksumIcon } from '@theme/unique/fai';
+import { LinkButton } from '@theme/unique/links';
+import { WebIcon } from '@theme/unique/fai';
 
 <p>
 <FileItem button name="校验信息" path="https://archlinux.org/iso/latest/sha256sums.txt" icon={<ChecksumIcon />}/>
@@ -38,4 +38,4 @@ import { WebIcon } from '@theme/fai';
 
 附：[参考资料](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
 
-import { HtmlA } from '@theme/links';
+import { HtmlA } from '@theme/unique/links';

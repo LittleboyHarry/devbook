@@ -4,7 +4,7 @@
 
 ## 下载
 
-import { LinkButton } from '@theme/links';
+import { LinkButton } from '@theme/unique/links';
 
 <LinkButton outline href="https://sourceforge.net/projects/refind/files/latest/download" name="Windows 格式的安装包" />
 <LinkButton outline href="https://sourceforge.net/projects/refind/files/" name="其他格式的安装包" />

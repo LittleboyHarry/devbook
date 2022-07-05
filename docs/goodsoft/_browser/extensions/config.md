@@ -62,7 +62,7 @@ uBlock Origin:
 
 ### Vimium C
 
-import { ScriptIcon } from '@theme/fai';
+import { ScriptIcon } from '@theme/unique/fai';
 
 <p>可导入：
 <FileItem button name="vimium_c.json" path="/config/vimium_c.json" icon={<ScriptIcon />}/></p>
@@ -92,4 +92,4 @@ import { ScriptIcon } from '@theme/fai';
 
 </div>
 
-import FileItem from '@theme/FileItem'
+import FileItem from '@theme/unique/FileItem'

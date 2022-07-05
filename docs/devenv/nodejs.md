@@ -10,7 +10,7 @@ PreferPkgMgr,
 ForApt,
 ForDnf,
 ForPacman
-} from '@theme/PreferPkgMgr'
+} from '@theme/unique/PreferPkgMgr'
 
  <PreferPkgMgr dnf apt pacman>
 <ForDnf>
@@ -120,6 +120,6 @@ import {
     PreferNetShore,
     OffshoreNet,
     InshoreNet,
-} from '@theme/PreferNetShore'
+} from '@theme/unique/PreferNetShore'
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

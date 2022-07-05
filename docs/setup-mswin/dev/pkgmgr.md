@@ -129,5 +129,5 @@ scoop bucket add extras https://gitclone.com/github.com/ScoopInstaller/Extras
 
 ```
 
-import { StoreButton, mslink } from '@theme/links';
-import CodeType from '@theme/CodeType'
+import { StoreButton, mslink } from '@theme/unique/links';
+import CodeType from '@theme/unique/CodeType'

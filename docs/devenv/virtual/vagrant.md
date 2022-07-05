@@ -9,7 +9,7 @@ description: 可编程、自动化的虚拟管理平台
 
 ## 安装
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="vagrant" dnf winget pacman apt />
 

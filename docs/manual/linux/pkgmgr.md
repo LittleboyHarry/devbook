@@ -21,13 +21,13 @@ description: ...
 
 部分摘自：[Arch Wiki 文档](https://wiki.archlinux.org/title/Pacman/Rosetta)
 
-import { WebIcon } from '@theme/fai';
+import { WebIcon } from '@theme/unique/fai';
 
 import {
   PreferPkgMgr,
   ForApt,
   ForDnf,
-} from '@theme/PreferPkgMgr'
+} from '@theme/unique/PreferPkgMgr'
 
  <PreferPkgMgr dnf apt>
 <ForApt>
@@ -90,4 +90,4 @@ sudo dnf install <package>-<version>
 </ForDnf>
 </PreferPkgMgr>
 
-import { LinkButton } from '@theme/links';
+import { LinkButton } from '@theme/unique/links';

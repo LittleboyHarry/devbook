@@ -64,5 +64,5 @@ podman system migrate
 
 附：[GNOME 扩展](https://extensions.gnome.org/extension/1500/containers/)
 
-import GetPkg from '@theme/GetPkg';
-import { LinkButton } from '@theme/links';
+import GetPkg from '@theme/unique/GetPkg';
+import { LinkButton } from '@theme/unique/links';

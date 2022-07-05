@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 # 键盘与输入法
 

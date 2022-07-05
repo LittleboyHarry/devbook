@@ -70,4 +70,4 @@ sudo apt install -y wl-clipboard
 </details>
  -->
 
-import GetPkg from '@theme/GetPkg'
+import GetPkg from '@theme/unique/GetPkg'

@@ -107,4 +107,4 @@ HTTP 代理：
 echo "http 127.0.0.1 $WIN_HOST_PORT" | sudo tee -a "$CONFIG" > /dev/null
 ```
 
-import GetPkg from '@theme/GetPkg'
+import GetPkg from '@theme/unique/GetPkg'

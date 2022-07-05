@@ -67,4 +67,4 @@ Wayland [Bug](https://github.com/rcaelers/workrave/issues/94) 修复:
 
 :::
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

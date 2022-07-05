@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 # 键位调整
 

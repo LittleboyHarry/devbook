@@ -15,7 +15,7 @@ libvirt-QEMU/KVM 虚拟化平台在 Linux 上的[安装方法](/docs/setup-linux
 
 <BPlayer id="BV1Cf4y1U7pQ" page="2" />
 
-import BPlayer from '@theme/BPlayer';
+import BPlayer from '@theme/unique/BPlayer';
 
 `cloud-init` 受到大多数发行版的支持，
 根据配置文件即可快速生成可 SSH 直连的虚拟机。
@@ -188,5 +188,5 @@ virt-clone --connect=qemu:///session -o "$VM_NAME" --auto-clone -n "$NEW_VMNAME"
 
 见 [ArchWiki](https://wiki.archlinux.org/title/OpenSSH#X11_forwarding)
 
-import GetPkg from '@theme/GetPkg';
-import { LinkButton } from '@theme/links';
+import GetPkg from '@theme/unique/GetPkg';
+import { LinkButton } from '@theme/unique/links';

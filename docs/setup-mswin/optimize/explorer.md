@@ -2,7 +2,7 @@
 description: ''
 ---
 
-import CodeType from '@theme/CodeType';
+import CodeType from '@theme/unique/CodeType';
 import CodeBlock from '@theme/CodeBlock';
 
 # 文件资源管理器

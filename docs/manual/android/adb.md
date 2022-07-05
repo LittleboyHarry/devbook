@@ -52,4 +52,4 @@ remote 是 POSIX 绝对路径名
 
     adb shell
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

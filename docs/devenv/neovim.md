@@ -6,7 +6,7 @@ sidebar_position: 31
 
 ## 安装
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="neovim" dnf apt scoop pacman />
 
@@ -22,7 +22,7 @@ git config --global core.editor nvim
 
 ## 推荐的配置文件
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 <CodeType win cmd>
 

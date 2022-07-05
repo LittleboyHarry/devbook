@@ -59,4 +59,4 @@ foreach ($_ in @("config", "MountImg", "RamDiskUI")) {
 
 :::
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

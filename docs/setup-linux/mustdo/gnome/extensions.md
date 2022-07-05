@@ -134,4 +134,4 @@ mkdir $target
 cp -r * $target
 ```
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

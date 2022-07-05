@@ -1,6 +1,6 @@
 # 推荐软件
 
-import { HtmlA, StoreLink, mslink } from '@theme/links';
+import { HtmlA, StoreLink, mslink } from '@theme/unique/links';
 
 ## 付费软件
 

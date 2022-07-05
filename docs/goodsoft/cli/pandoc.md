@@ -2,7 +2,7 @@
 
 <GetPkg winget choco scoop apt dnf pacman/>
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 ## Word
 

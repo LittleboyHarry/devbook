@@ -81,7 +81,7 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t 
   ```
 
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
-import { ConfigIcon } from '@theme/fai';
+import { ConfigIcon } from '@theme/unique/fai';
 
 :::note 自动安装
 
@@ -204,8 +204,8 @@ Linux 系统内有 libvrit-qemu-KVM 更好的[虚拟化开源方案](/docs/setup
 
 :::
 
-import { LinkButton } from '@theme/links';
-import FileItem from '@theme/FileItem'
+import { LinkButton } from '@theme/unique/links';
+import FileItem from '@theme/unique/FileItem'
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DownloadButton, HtmlA, StoreButton, mslink } from '@theme/links';
+import { DownloadButton, HtmlA, StoreButton, mslink } from '@theme/unique/links';

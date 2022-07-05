@@ -6,10 +6,10 @@ sidebar_position: 17
 
 ## 下载
 
-import { ScriptIcon } from '@theme/fai';
-import FileItem from '@theme/FileItem'
+import { ScriptIcon } from '@theme/unique/fai';
+import FileItem from '@theme/unique/FileItem'
 
-import { DiskImageIcon, ChecksumIcon } from '@theme/fai';
+import { DiskImageIcon, ChecksumIcon } from '@theme/unique/fai';
 
 <p>
 <FileItem name="云镜像" hint="清华镜像站提供" path="https://mirrors.tuna.tsinghua.edu.cn/archlinux/images/latest/Arch-Linux-x86_64-basic.qcow2" icon={<DiskImageIcon />}/>
@@ -111,4 +111,4 @@ pacman -S --noconfirm virtualbox-guest-utils # 增强工具
 :::info 快照备份虚拟机
 :::
 
-import { HtmlA, LinkButton } from '@theme/links';
+import { HtmlA, LinkButton } from '@theme/unique/links';

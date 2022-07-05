@@ -71,9 +71,9 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 
  -->
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 import {
 PreferXde,
 ForGnome,
 ForKde
-} from '@theme/PreferXde';
+} from '@theme/unique/PreferXde';

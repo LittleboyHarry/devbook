@@ -85,7 +85,7 @@ pacstrap . fcitx5-im fcitx5-chinese-addons
 :::
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { HtmlA, LinkButton } from '@theme/links';
+import { HtmlA, LinkButton } from '@theme/unique/links';
 
 ## 中文支持
 

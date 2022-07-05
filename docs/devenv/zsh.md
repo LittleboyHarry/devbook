@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ## 安装
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="zsh" dnf apt pacman/>
 

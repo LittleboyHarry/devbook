@@ -1,10 +1,10 @@
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 import {
     PreferNetShore,
     OffshoreNet,
     InshoreNet,
-} from '@theme/PreferNetShore'
+} from '@theme/unique/PreferNetShore'
 
 :::tip 使用环境自动部署脚本集
 

@@ -10,9 +10,9 @@ import {
 PreferAppstream,
 WithAppstream,
 WithoutAppstream
-} from '@theme/PreferAppstream';
-import { StoreButton } from '@theme/links';
-import GetPkg from '@theme/GetPkg';
+} from '@theme/unique/PreferAppstream';
+import { StoreButton } from '@theme/unique/links';
+import GetPkg from '@theme/unique/GetPkg';
 
 <PreferAppstream appstream pkgmgr>
 

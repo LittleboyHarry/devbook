@@ -1,6 +1,6 @@
 # 使用 WSL
 
-import {HtmlA} from '@theme/links';
+import {HtmlA} from '@theme/unique/links';
 
 :::caution 以下指令需要管理员权限
 :::

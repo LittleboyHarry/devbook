@@ -4,7 +4,7 @@ sidebar_position: 17
 
 # 为笔记本优化
 
-import {HtmlA} from '@theme/links';
+import {HtmlA} from '@theme/unique/links';
 
 ## 设置
 
@@ -17,7 +17,7 @@ import {HtmlA} from '@theme/links';
 
 ### 触摸板
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'
 
 <HtmlA href="ms-settings:devices-touchpad">设置“三指手势”点击作为“鼠标中键”</HtmlA>
 <CodeType reg>
@@ -48,8 +48,8 @@ import GestureRegCode from '!!raw-loader!./gestures.reg.ini';
 
 针对 14 寸一下小电脑键盘，为 `jkluio7890` 映射为 1~9 0 数字键。依赖 AutoHotKey
 
-import { ScriptIcon } from '@theme/fai';
+import { ScriptIcon } from '@theme/unique/fai';
 
 <FileItem name="numpad.ahk" path="/scripts/numpad.ahk" icon={<ScriptIcon />}/>
 
-import FileItem from '@theme/FileItem'
+import FileItem from '@theme/unique/FileItem'

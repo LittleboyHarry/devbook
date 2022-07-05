@@ -69,4 +69,4 @@ Set-WinUserLanguageList $LanguageList -Force
 - https://docs.microsoft.com/zh-cn/windows/security/threat-protection/windows-sandbox/windows-sandbox-architecture
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-configure-using-wsb-file
 
-import CodeType from '@theme/CodeType'
+import CodeType from '@theme/unique/CodeType'

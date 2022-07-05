@@ -10,7 +10,7 @@ sidebar_position: 65
 
 ## 安装
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="flatpak" apt pacman />
 

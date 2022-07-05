@@ -28,5 +28,5 @@ sidebar_position: 1
 
 手动配置：默认搜索引擎
 
-import { ScriptIcon } from '@theme/fai';
-import FileItem from '@theme/FileItem'
+import { ScriptIcon } from '@theme/unique/fai';
+import FileItem from '@theme/unique/FileItem'

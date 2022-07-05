@@ -43,7 +43,7 @@ sudo apt install -t ${VERSION_CODENAME}-backports cockpit
 
 ## 插件
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 ### podman 容器
 

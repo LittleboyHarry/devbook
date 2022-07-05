@@ -87,9 +87,9 @@ Win Mac 默认已经激活优化特性，但 Linux 需要手动开启：
 
 :::
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 import {
 PreferPkgMgr,
 ForApt,
 ForDnf,
-} from '@theme/PreferPkgMgr'
+} from '@theme/unique/PreferPkgMgr'

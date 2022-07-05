@@ -63,4 +63,4 @@ import {
 PreferWinVer,
 ForWin10,
 ForWin11
-} from '@theme/PreferWinVer'
+} from '@theme/unique/PreferWinVer'

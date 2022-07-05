@@ -103,5 +103,5 @@ pacman="ttf-jetbrains-mono"
 "editor.fontFamily": "Sarasa Term SC",
 ```
 
-import GetPkg from '@theme/GetPkg';
-import BPlayer from '@theme/BPlayer';
+import GetPkg from '@theme/unique/GetPkg';
+import BPlayer from '@theme/unique/BPlayer';

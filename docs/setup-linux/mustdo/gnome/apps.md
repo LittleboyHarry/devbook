@@ -1,6 +1,6 @@
 # GNOME 应用推荐
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 ## Fedora 必装
 

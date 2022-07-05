@@ -1,6 +1,6 @@
 pwd 目录切换辅助
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';
 
 <GetPkg name="zoxide" dnf apt scoop pacman />
 

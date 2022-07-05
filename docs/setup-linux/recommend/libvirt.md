@@ -13,7 +13,7 @@ PreferPkgMgr,
 ForApt,
 ForDnf,
 ForPacman
-} from '@theme/PreferPkgMgr'
+} from '@theme/unique/PreferPkgMgr'
 
  <PreferPkgMgr dnf apt pacman>
 <ForDnf>

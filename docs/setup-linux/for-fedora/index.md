@@ -52,6 +52,6 @@
 
     sudo dnf remove -y libreoffice*
 
-import { WebIcon } from '@theme/fai';
+import { WebIcon } from '@theme/unique/fai';
 import { Container, cards } from './oscards';
-import { HtmlA, LinkButton } from '@theme/links';
+import { HtmlA, LinkButton } from '@theme/unique/links';

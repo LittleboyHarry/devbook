@@ -24,4 +24,4 @@ import AltSnapScreenshot from './AltSnapScreenshot';
 
 Win 键失灵、卡住：右键 AltSnap 托盘图标关闭重启
 
-import GetPkg from '@theme/GetPkg';
+import GetPkg from '@theme/unique/GetPkg';

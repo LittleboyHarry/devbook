@@ -7,7 +7,7 @@ import {
 PreferWinVer,
 ForWin10,
 ForWin11
-} from '@theme/PreferWinVer'
+} from '@theme/unique/PreferWinVer'
 
 # 初始化
 
@@ -147,7 +147,7 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 
     SystemPropertiesAdvanced
 
-import CodeType from '@theme/CodeType';
-import { WebIcon } from '@theme/fai';
-import { LinkButton } from '@theme/links';
-import { HtmlA } from '@theme/links';
+import CodeType from '@theme/unique/CodeType';
+import { WebIcon } from '@theme/unique/fai';
+import { LinkButton } from '@theme/unique/links';
+import { HtmlA } from '@theme/unique/links';
