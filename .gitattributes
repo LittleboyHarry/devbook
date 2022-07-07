@@ -2,7 +2,7 @@
 *.cmd text eol=crlf working-tree-encoding=UTF-16LE-BOM
 *.ps1 text eol=crlf working-tree-encoding=UTF-16LE-BOM
 *.psm1 text eol=crlf working-tree-encoding=UTF-16LE-BOM
-*.reg text eol=crlf working-tree-encoding=UTF-16LE-BOM
+/static/**/*.reg text eol=crlf working-tree-encoding=UTF-16LE-BOM
 *.ahk text eol=crlf working-tree-encoding=UTF-16LE-BOM
 
 /static/scripts/install-*.ini text eol=crlf working-tree-encoding=UTF-16LE-BOM

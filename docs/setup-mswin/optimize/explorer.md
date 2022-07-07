@@ -1,5 +1,6 @@
 ---
-description: ''
+sidebar_position: 2
+description: ...
 ---
 
 import CodeType from '@theme/unique/CodeType';
@@ -7,13 +8,13 @@ import CodeBlock from '@theme/CodeBlock';
 
 # 文件资源管理器
 
- <CodeType reg user>
+<CodeType reg user restart='explorer'>
 
 ## 一键优化
 
 </CodeType>
 
-import OptimizeRegCode from '!!raw-loader!./explorer.reg.ini';
+import OptimizeRegCode from '!!raw-loader!./explorer.reg';
 
 <CodeBlock language="ini">{OptimizeRegCode}</CodeBlock>
 
@@ -21,8 +22,6 @@ import OptimizeRegCode from '!!raw-loader!./explorer.reg.ini';
 8. 优化打开方式列表
 9. 低版本优化
 10. 外观调优
-
-\* 关闭并重启文件资源管理器生效
 
 ```powershell
 # in cmd: @doskey #=REM
@@ -51,22 +50,3 @@ if ([Environment]::OSVersion.Version.Build -lt 22621) {
 # *
 kill -n explorer
 ```
-
-<CodeType reg>
-
-## 增强经典右键菜单
-
-</CodeType>
-
-包含：
-
-- 文件：复制内容、哈希、获取权限、编辑隐藏属性
-- 桌面壁纸右键菜单：重启资源管理器、电源计划、图标设置、屏保设置
-- 电脑图标右键菜单：显示系统信息、UAC、编辑 HOSTS、刷新 DNS
-- 特殊：编辑程序的防火墙规则、图片幻灯片播放、分区垃圾删除、分区碎片整理、注册 DLL/OCX
-
-更多设置请下载 [菜单管理器](https://gitee.com/BluePointLilac/ContextMenuManager)
-
-import betterMenuRegCode from '!!raw-loader!./bettermenu.reg.ini';
-
-<CodeBlock language="ini">{betterMenuRegCode}</CodeBlock>

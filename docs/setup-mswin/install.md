@@ -48,17 +48,17 @@ A:
 
 :::
 
-:::note 联网注册时，系统自动把网络账号名作为默认用户名
+:::info 添加用户
 
- <details className='let-details-to-gray'><summary>更改用户的方法</summary>
-
-登陆系统后运行 `netplwiz` 添加新的本地用户，然后设置 “属性” > “组成员” 为 “管理员”。
-如果还要删除老用户，注销切换到新用户进入 `netplwiz` 删除。
-
-</details>
+<p>
+联网注册时，系统自动把网络账号名作为默认用户名。要添加用户，断网并
+<HtmlA href="ms-settings:otherusers">打开设置</HtmlA>，
+“添加用户” 并设置为管理员
+</p>
 
 :::
 
+import {HtmlA} from '@theme/unique/links';
 import {
 PreferWinVer,
 ForWin10,

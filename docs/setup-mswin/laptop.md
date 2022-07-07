@@ -31,7 +31,7 @@ import CodeType from '@theme/unique/CodeType'
 - 四指同时左右滑动：切换桌面
 
 import CodeBlock from '@theme/CodeBlock';
-import GestureRegCode from '!!raw-loader!./gestures.reg.ini';
+import GestureRegCode from '!!raw-loader!./gestures.reg';
 
 <CodeBlock language="ini">{GestureRegCode}</CodeBlock>
 

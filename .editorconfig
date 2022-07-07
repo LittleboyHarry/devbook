@@ -3,13 +3,7 @@ indent_style = space
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{bat,cmd,ps1,psm1,reg,ahk}]
-end_of_line = crlf
-charset = utf-16le
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[static/scripts/install-*.ini]
+[*.{bat,cmd,ps1,psm1,ahk},static/**.reg,static/scripts/install-*.ini]
 end_of_line = crlf
 charset = utf-16le
 trim_trailing_whitespace = true

@@ -4,6 +4,9 @@
   padding-right: 3rem;
   color: var(--ifm-font-color-base);
 
+  width: fit-content;
+  max-width: calc(100vw - 2*var(--ifm-spacing-horizontal));
+
   >p {
     margin-bottom: 8px;
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: ''
+description: ...
 ---
 
 import CodeType from '@theme/unique/CodeType';
@@ -80,11 +80,13 @@ reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSug
 
 <CodeType admin reg user children='禁用云搜索：' />
 
-```batch
-reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /f /d 1
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings /v IsMSACloudSearchEnabled /t REG_DWORD /d 0 /f
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings /v IsAADCloudSearchEnabled /t REG_DWORD /d 0 /f
-
+```ini
+Windows Registry Editor Version 5.00
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
+"DisableSearchBoxSuggestions"=dword:00000001
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings]
+"IsAADCloudSearchEnabled"=dword:00000000
+"IsMSACloudSearchEnabled"=dword:00000000
 ```
 
 </ForWin11>

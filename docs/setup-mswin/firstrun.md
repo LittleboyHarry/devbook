@@ -105,31 +105,35 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
 
 ## 缺少 Office？
 
-如果你的微软账号已绑定或拥有 Office 许可证
+方法一：使用 [Office Tool Plus](https://otp.landian.vip/zh-cn/download.html) 部署
+
+方法二：如果你的账号已绑定或拥有 Office 许可证
 
 <p>
-<LinkButton outline href="https://setup.office.com/" name="登录并获取" />
+<LinkButton outline href="https://setup.office.com/" name="登录微软账号并获取" />
 </p>
 
 :::info 使用验证码登录微软账号
 
-推荐使用微软登录验证 App，避免重复输入登录密码。
-[配置方法](https://account.live.com/proofs/EnableTfa)
-
 手机客户端：[iOS](https://apps.apple.com/cn/app/microsoft-authenticator/id983156458)
 | Android
+
+推荐使用微软登录验证 App，避免重复输入登录密码。
+[进行配置](https://account.live.com/proofs/EnableTfa)
 
 :::
 
 <br/>
-
-或使用 [Office Tool Plus](https://otp.landian.vip/zh-cn/download.html) 部署
 
  <CodeType cmd admin >
 
 ## 双系统问题
 
 </CodeType>
+
+多 Windows 的系统启动：在“启动和故障恢复”中设置的选择时间、默认选项
+
+    SystemPropertiesAdvanced
 
 :::note 关闭快速启动
 
@@ -142,10 +146,6 @@ netsh dns add encryption server=223.6.6.6 dohtemplate=https://dns.alidns.com/dns
     reg add HKLM\System\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 
 :::
-
-多 Windows 的系统启动：在“启动和故障恢复”中设置的选择时间、默认选项
-
-    SystemPropertiesAdvanced
 
 import CodeType from '@theme/unique/CodeType';
 import { WebIcon } from '@theme/unique/fai';

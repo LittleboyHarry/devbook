@@ -6,7 +6,7 @@ export default function RegistryIcon() {
   return (
     <FontAwesomeIcon
       icon={faGears}
-      color="var(--ifm-color-success)"
+      color="var(--ifm-color-success-darkest)"
       transform="shrink-5"
       flip="horizontal"
     />

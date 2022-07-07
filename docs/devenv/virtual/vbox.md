@@ -32,3 +32,5 @@ Linux 环境下，libvirt 虚拟化平台技术体验更佳。详情见后文
 [使用云镜像快速创建虚拟机](/docs/setup-mswin/dev/varch)
 
 :::
+
+Windows 官方虚拟机：https://developer.microsoft.com/zh-cn/microsoft-edge/tools/vms/

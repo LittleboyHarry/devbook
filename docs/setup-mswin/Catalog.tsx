@@ -2,7 +2,7 @@ import React from 'react';
 import LogoCard from '@theme/unique/LogoCard';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faToolbox, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faToolbox, faCode, faRocket } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function SetupMswinCatalog() {
@@ -10,16 +10,19 @@ export default function SetupMswinCatalog() {
     <>
       <LogoCard.Container>
         <LogoCard
-          name="下载 Win10"
-          to="https://www.microsoft.com/zh-cn/software-download/windows10"
-          logo={<img src={useBaseUrl('/img/icons/windows8-original.svg')} />}
+          name="初始化"
+          to="firstrun"
+          noNewTab
+          logo={<FontAwesomeIcon icon={faRocket} />}
         />
         <LogoCard
-          name="下载 Win11"
-          to="https://www.microsoft.com/zh-cn/software-download/windows11"
-          logo={<img src={useBaseUrl('/img/icons/windows8-original.svg')} />}
+          name="开发环境"
+          to="dev"
+          noNewTab
+          logo={<FontAwesomeIcon icon={faCode} />}
         />
       </LogoCard.Container>
+      <h2>WinPE 系统</h2>
       <LogoCard.Container>
         <LogoCard
           name="微 PE 工具箱"
@@ -32,12 +35,17 @@ export default function SetupMswinCatalog() {
           logo={<FontAwesomeIcon icon={faToolbox} />}
         />
       </LogoCard.Container>
+      <h2>系统下载</h2>
       <LogoCard.Container>
         <LogoCard
-          name="开发环境"
-          to="dev"
-          noNewTab
-          logo={<FontAwesomeIcon icon={faCode} />}
+          name="Windows 10"
+          to="https://www.microsoft.com/zh-cn/software-download/windows10"
+          logo={<img src={useBaseUrl('/img/icons/windows8-original.svg')} />}
+        />
+        <LogoCard
+          name="Windows 11"
+          to="https://www.microsoft.com/zh-cn/software-download/windows11"
+          logo={<img src={useBaseUrl('/img/icons/windows8-original.svg')} />}
         />
       </LogoCard.Container>
     </>

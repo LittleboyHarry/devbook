@@ -22,9 +22,11 @@ export default function Popper({
           st.dropdown,
           warning && ['alert alert--warning', st.warning]
         )}
-        style={{
-          width: width || 'fit-content',
-        }}
+        style={
+          width && {
+            width,
+          }
+        }
       >
         {hover}
       </div>

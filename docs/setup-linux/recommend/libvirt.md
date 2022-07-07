@@ -76,3 +76,5 @@ import TabItem from '@theme/TabItem';
 [巧用云镜像机制，快速部署虚拟机！](/docs/manual/linux/cloud-init)
 
 :::
+
+Windows 官方虚拟机：https://developer.microsoft.com/zh-cn/microsoft-edge/tools/vms/

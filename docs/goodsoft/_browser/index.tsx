@@ -1,3 +1,3 @@
-import SearchEngines from './SearchEngines';
+import SearchEngines from './SearchEngines/index';
 
 export { SearchEngines };

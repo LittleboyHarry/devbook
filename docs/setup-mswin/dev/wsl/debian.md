@@ -35,10 +35,7 @@ import SetMirror from '/docs/\_cmirror/debian.md'
 
 ```bash
 # 开发必装
-sudo apt install -y git curl wget python3 man neovim zsh
-
-# 转换 Windows 格式的换行符
-sudo apt install -y dos2unix
+sudo apt install -y git curl wget python3 man neovim zsh moreutils dos2unix
 
 # 命令缺失提示
 sudo apt install -y command-not-found

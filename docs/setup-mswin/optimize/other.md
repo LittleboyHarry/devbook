@@ -74,6 +74,8 @@ start explorer
 </details>
 -->
 
+ <PreferWinVer win10 win11 >
+
  <CodeType cmd admin>
 
 执行：
@@ -87,7 +89,8 @@ reg add HKLM\SOFTWARE\Policies\Microsoft\WindowsMediaPlayer /v GroupPrivacyAccep
 
 ```
 
- <PreferWinVer win10 win11 >
+以上内容部分参考来自 DISM++ 应用程序
+
 <ForWin10>
 
 <h3>自动清理</h3>
@@ -95,28 +98,7 @@ reg add HKLM\SOFTWARE\Policies\Microsoft\WindowsMediaPlayer /v GroupPrivacyAccep
 设置<HtmlA href="ms-settings:storagepolicies">“存储感知”</HtmlA>
 
 </ForWin10>
-<ForWin11>
-
-<h3>右键菜单模式</h3>
-
-```powershell
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu /v MUIVerb /t REG_SZ /d 右键菜单样式 /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu /v SubCommands /t REG_SZ /d '""' /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu /v Icon /t REG_SZ /d "imageres.dll,310" /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu /v Position /t REG_SZ /d bottom /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu\Shell\Item0 /v Icon /t REG_SZ /d "shell32.dll,39" /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu\Shell\Item0 /v MUIVerb /t REG_SZ /d '新版（ 重启文件资源管理器 ）' /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu\Shell\Item0\Command /ve /t REG_SZ /d '"mshta vbscript:createobject(\"shell.application\").shellexecute(\"cmd.exe\",\"/c reg delete HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2} /f & powershell -c kill -n explorer\",\"\",\"open\",0)(close)"' /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu\Shell\Item1 /v MUIVerb /t REG_SZ /d '旧版（ 重启文件资源管理器 ）' /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu\Shell\Item1 /v Icon /t REG_SZ /d "explorer.exe,15" /f
-reg add HKCU\Software\Classes\DesktopBackground\Shell\SwitchWin11ContextMenu\Shell\Item1\Command /ve /t REG_SZ /d '"mshta vbscript:createobject(\"shell.application\").shellexecute(\"cmd.exe\",\"/c reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32 /f /ve & powershell -c kill -n explorer\",\"\",\"open\",0)(close)"' /f
-
-```
-
-</ForWin11>
 </PreferWinVer>
-
-以上内容部分参考来自 DISM++ 应用程序
 
 import {
 PreferWinVer,

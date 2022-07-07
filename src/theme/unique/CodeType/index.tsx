@@ -6,6 +6,7 @@ import {
   UacIcon,
   RegistryIcon,
   UserOnlyIcon,
+  RestartExplorerIcon,
 } from './icons';
 import Popper from './Popper';
 import { useLocation } from '@docusaurus/router';
@@ -20,6 +21,7 @@ export default function CodeType({
   user,
   pwsh,
   reg,
+  restart,
 }: {
   children: ReactNode;
   cmd?: boolean;
@@ -28,13 +30,14 @@ export default function CodeType({
   user?: boolean;
   pwsh?: boolean;
   reg?: boolean;
+  restart?: 'explorer';
 }) {
   const isShellCode = cmd || pwsh;
 
   const { pathname } = useLocation();
   const isWindows: boolean = win || pathname.startsWith('/docs/setup-mswin');
 
-  const iconsP1: ReactNode = (() => {
+  const commandIconMixture: ReactNode = (() => {
     const VariantShellIcon = (() => {
       if (pwsh) return PwshIcon;
       return ShellIcon;
@@ -109,22 +112,33 @@ export default function CodeType({
     }
   })();
 
-  const iconsP2 = (() => {
-    return (
-      <>
-        {user && (
-          <Popper hover="仅作用于当前登录用户" children={<UserOnlyIcon />} />
-        )}
-      </>
-    );
-  })();
-
   return (
     <ForWinContext.Provider value={isWindows}>
       <div className={st.root}>
         <span className={st.icons}>
-          {iconsP1}
-          {iconsP2}
+          {commandIconMixture}
+          {user && (
+            <Popper hover="仅作用于当前登录用户" children={<UserOnlyIcon />} />
+          )}
+          {restart === 'explorer' && (
+            <Popper
+              warning
+              hover={
+                <>
+                  <p>
+                    <strong>重启文件资源管理器生效</strong>
+                  </p>
+                  <p>
+                    等效命令：
+                    <code style={{ padding: '0.5rem 1rem' }}>
+                      powershell kill -n explorer
+                    </code>
+                  </p>
+                </>
+              }
+              children={<RestartExplorerIcon />}
+            />
+          )}
         </span>
         <div className={st.content}>{children}</div>
       </div>

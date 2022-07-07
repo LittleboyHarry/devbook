@@ -19,11 +19,3 @@ sidebar_position: 18
 开源免费的修图软件
 
     winget gimp.gimp
-
-### OBS
-
-录屏、直播推流。[下载](https://obsproject.com/zh-cn/download) | [镜像](https://mirrorz.org/list/obs-studio) | 一键安装：
-
-<GetPkg name='obs-studio' winget='OBSProject.OBSStudio' choco scoop />
-
-import GetPkg from '@theme/unique/GetPkg'

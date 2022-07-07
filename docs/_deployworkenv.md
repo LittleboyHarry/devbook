@@ -32,7 +32,7 @@ cd deployworkenv
 
 ```shell
 cd ~
-git clone https://gitcode.net/lbh/deployworkenv
+git clone https://gitcode.net/lbh/dwe
 
 cd deployworkenv
 ```

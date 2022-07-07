@@ -52,7 +52,7 @@ mkdir -p ~\Documents\PowerShell
 # Github
 iwr -useb https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/win/profile.ps1 -o $PROFILE
 # GitCode
-iwr -useb https://gitcode.net/lbh/deployworkenv/-/raw/main/win/profile.ps1 -o $PROFILE
+iwr -useb https://gitcode.net/lbh/dwe/-/raw/main/win/profile.ps1 -o $PROFILE
 
 notepad $profile
 ```

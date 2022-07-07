@@ -8,9 +8,9 @@ import CodeType from '@theme/unique/CodeType'
 
 等待所有系统与应用升级完成后，部分功能会与您签订商业契约、收集您的隐私以继续提供服务。
 
-:::note 国内非专业人士
+:::note 对非专业人士
 
-推荐使用微软中国团队运营的[微软电脑管家](https://aka.ms/GetPCManagerOFL)
+推荐使用微软中国团队出品的[**微软电脑管家**](https://aka.ms/GetPCManagerOFL)
 
 :::
 

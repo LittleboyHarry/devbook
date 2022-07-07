@@ -1,0 +1,7 @@
+# 字体
+
+## 调整系统字形和字号
+
+从 Windows 10 开始，微软剔除更改系统字形和字号的图形化设置面板。需要安装开源社区的 `noMeiryoUI` 小工具进行修改
+
+官方发行链接：https://github.com/Tatsu-syo/noMeiryoUI/releases/latest

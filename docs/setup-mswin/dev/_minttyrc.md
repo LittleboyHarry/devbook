@@ -1,4 +1,4 @@
-```ini
+```ini title="~/.minttyrc"
 # 字体
 Font=Cascadia Mono
 FontHeight=15

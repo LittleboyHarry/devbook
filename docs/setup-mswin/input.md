@@ -1,12 +1,10 @@
 ---
-sidebar_position: 6
+sidebar_position: 4
 ---
 
 import CodeType from '@theme/unique/CodeType'
 
-# 键盘与输入法
-
-推荐配置
+# 输入法与键盘
 
 ## 微软拼音输入法
 
@@ -47,9 +45,9 @@ reg add "HKCU\SOFTWARE\Microsoft\InputMethod\Settings\CHS" /v "UserDefinedDouble
 
 </details>
 
-:::note 作者推荐的 <a href="/docs/devenv/keymap#windows" target="_blank">新键盘布局</a>
+## 修改键位映射
+
+作者推荐的<a href="/docs/devenv/keymap#windows" target="_blank">新键盘布局</a>
 
 - 仿 Mac 修饰键顺序：Win, Alt, Ctrl
 - 交换 Esc 与 CapsLock
-
-:::
