@@ -11,13 +11,12 @@ ForWin11
 
 # 初始化
 
-<PreferWinVer win10 win11 />
+<PreferWinVer win10 win11>
 
 ## 备份还原点
 
 首先备份系统。打开对话框：
 
- <PreferWinVer win10 win11 noSelector>
 <ForWin10>
 
 1. 右键“此电脑”，“属性”
@@ -31,18 +30,30 @@ ForWin11
 3. 点相关链接的“系统保护”
 
 </ForWin11>
-</PreferWinVer>
 
 配置备份：
 
 1. 配置 (Alt+O) > 启动系统保护 > 调整最大使用量，确定
 2. 创建 (Alt+C) > 为创建的还原点起名
 
+## 界面缩放
+
+如果界面字体太小，与高分辨率显示屏不适：
+
+<ForWin10>
+
+1. 右键桌面菜单，点击 “显示设置” 更改缩放比例
+2. 留意右下角通知，进入 “高级缩放设置” 激活 “修复应用缩放”
+
+</ForWin10>
+
+</PreferWinVer>
+
 ## 系统更新
 
 第二步：连接网络，自动更新系统
 
-调整<HtmlA href="ms-settings:windowsupdate-options">更新高级选项</HtmlA>：勾选“接收其他 MS 产品更新”
+调整<HtmlA href="ms-settings:windowsupdate-options">更新高级选项</HtmlA>：勾选“接收其它 MS 产品更新”
 
 <!-- 如果不介意使用 P2P 流量分享技术：进入“传递优化”选择 Internet 下载源以提高速度 -->
 

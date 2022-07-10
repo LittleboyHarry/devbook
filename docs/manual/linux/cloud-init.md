@@ -136,7 +136,7 @@ virt-install --connect qemu:///session \
   --import --disk "$VM_NAME.qcow2" \
   --import --disk user-data.img,format=raw,readonly=on \
   -w user -w bridge=virbr0
-# 注：其他发行版参数 --graphics none
+# 注：其它发行版参数 --graphics none
 ```
 
 提高性能的控制参数：可后期修改

@@ -52,7 +52,7 @@ export default function WinDevIndexer() {
           logo={<FontAwesomeIcon icon={faLinux} />}
         />
       </LogoCard.Container>
-      <h3>其他推荐：</h3>
+      <h3>其它推荐：</h3>
       <LogoCard.Container>
         <LogoCard
           name="摩登命令行"

@@ -96,13 +96,11 @@ import { StoreButton, mslink } from '@theme/unique/links';
 
 <PreferAppstream appstream pkgmgr />
 
-### Firefox 浏览器
+### 网页浏览器
 
-import { LinkButton } from '@theme/unique/links';
+import { BrowserSelector } from '/docs/goodsoft/Catalog.tsx';
 
-<p><LinkButton outline name="推荐的配置" href="/docs/goodsoft/firefox/config" newTab /></p>
-
-打开设置，找到语言，选择“简体中文”
+<BrowserSelector/>
 
 ### VLC 播放器
 
@@ -127,6 +125,29 @@ import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 <BasicCatalog />
 <DevEnvCatalog hidePl />
 
+### 虚拟化
+
+#### 安装 VirtualBox
+
+对于 linux 最新版内核，依赖模块：
+
+    sudo pacman -S --noconfirm virtualbox-host-modules-arch
+
+其它 linux 内核，依赖模块：如 linux-lts
+
+    sudo pacman -S --noconfirm linux-lts-headers virtualbox-host-dkms
+
+安装：
+
+    sudo pacman -S --noconfirm virtualbox virtualbox-guest-iso
+    sudo modprobe vboxdrv
+
+### 安装 qemu
+
+    sudo pacman -S --noconfirm qemu-desktop virt-manager
+
+[其它 CPU 架构模拟器](https://archlinux.org/packages/extra/x86_64/qemu-emulators-full/)
+
 ### AUR 助手 yay
 
 原版：
@@ -150,15 +171,24 @@ import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
 启用扩展支持：
 
-    arch/aur-gnome-webext
+```shell
+git clone https://aur.archlinux.org/chrome-gnome-shell.git
+cd chrome-gnome-shell
+vim PKGBUILD
+makepkg -si
+```
 
 推荐扩展：
 
     sudo pacman -S gnome-shell-extension-appindicator
 
-Qt 主题修改器：
+Qt 主题修改器：需要重启生效
 
-    arch/qtingnome
+```shell
+sudo pacman -S qt5ct --noconfirm
+mkdir -p ~/.config/environment.d/
+echo 'QT_QPA_PLATFORMTHEME=qt5ct' >~/.config/environment.d/use-qt5ct.conf
+```
 
 :::
 
@@ -191,9 +221,18 @@ sudo systemctl enable v2raya --now
 
 ## 结束配置
 
-推荐安装并使用 timeshift 备份系统：（ [依赖](#开发环境) ）
+推荐安装并使用 timeshift 备份系统：
 
-    arch/aur-timeshift
+```shell
+sudo pacman -S cronie --noconfirm
+sudo systemctl enable --now cronie
+mkdir -p ~/timeshift; pushd ~/timeshift
+git clone https://aur.archlinux.org/timeshift.git .
+vim PKGBUILD
+makepkg -si
+popd
+sudo timeshift
+```
 
 :::caution 可能需要重启以完成更改
 :::

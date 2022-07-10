@@ -4,14 +4,18 @@
   "exclusionRules": [
     {
       "passKeys": "",
-      "pattern": ":https://mail.google.com/"
-    },
-    {
-      "passKeys": "",
       "pattern": ":https://github.dev/"
     },
     {
-      "passKeys": "c j k o ",
+      "passKeys": "t",
+      "pattern": ":https://github.com/"
+    },
+    {
+      "passKeys": "",
+      "pattern": ":https://mail.google.com/"
+    },
+    {
+      "passKeys": "c j k o",
       "pattern": ":https://www.zhihu.com/"
     }
   ],

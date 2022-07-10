@@ -14,7 +14,7 @@ GNOME 待办事项
 
 <GetPkg name='bleachbit' pacman apt dnf winget choco />
 
-摘自其他章节：
+摘自其它章节：
 
 - <a href="/docs/goodsoft/email" target="_blank">thunderbird 电子邮件</a>
 - <a href="/docs/goodsoft/rsi" target="_blank">workrave 休息提醒</a>

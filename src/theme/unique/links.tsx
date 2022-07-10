@@ -1,6 +1,6 @@
 import React, { CSSProperties, PropsWithChildren } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
+import { faBagShopping, faDownload } from '@fortawesome/free-solid-svg-icons';
 import cs from 'clsx';
 import st from './links.module.scss';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
@@ -46,7 +46,13 @@ export function DownloadButton({
   href: string;
   hint?: string;
 }) {
-  return <LinkButton {...{ name, href, hint }} attr={{ download: true }} />;
+  return (
+    <LinkButton
+      icon={<FontAwesomeIcon icon={faDownload} />}
+      {...{ name, href, hint }}
+      attr={{ download: true }}
+    />
+  );
 }
 
 export function LinkButton({
@@ -78,7 +84,7 @@ export function LinkButton({
   if (icon === undefined && openNewWindow)
     icon = <FontAwesomeIcon icon={faArrowUpRightFromSquare} />;
 
-  return (
+  const content = (
     <a
       href={href}
       className={cs(
@@ -89,10 +95,8 @@ export function LinkButton({
         icon && st.iconButton,
         className
       )}
-      title={hint}
       {...(openNewWindow && { target: '_blank' })}
       style={{
-        cursor: hint ? 'help' : 'pointer',
         verticalAlign: 'baseline',
         ...style,
       }}
@@ -101,6 +105,15 @@ export function LinkButton({
       {icon && <span className={st.icon}>{icon}</span>}
       {name}
     </a>
+  );
+
+  return hint ? (
+    <div className="dropdown dropdown--hoverable">
+      {content}
+      <div className={cs('dropdown__menu', st.popper)}>{hint}</div>
+    </div>
+  ) : (
+    content
   );
 }
 

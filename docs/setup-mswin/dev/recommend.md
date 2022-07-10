@@ -53,7 +53,7 @@ foreach ($_ in @("config", "MountImg", "RamDiskUI")) {
 
 <GetPkg name="auto-dark-mode" choco />
 
-其他：
+其它：
 
 - <a href="/docs/goodsoft/rsi" target="_blank">workrave</a>
 

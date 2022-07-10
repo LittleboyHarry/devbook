@@ -7,7 +7,7 @@ description: 通用的虚拟机管理器
 
 ## Linux 安装
 
-:::info 代替品推荐
+:::note 代替品推荐
 
 Linux 环境下，libvirt 虚拟化平台技术体验更佳。详情见后文
 

@@ -120,3 +120,14 @@ details.alert--info {
     border: none;
   }
 }
+
+summary {
+  h2,
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.admonition-content {
+  overflow: auto;
+}

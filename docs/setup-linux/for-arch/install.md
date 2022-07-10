@@ -9,44 +9,63 @@ sidebar_position: 2
 :::note 界面字体太小？
 
 ```shell
-# 展示
+# 展示字体
 ls /usr/share/kbd/consolefonts/ter-v*b*
 showconsolefont
-
 # 设置
 setfont ter-i24b
 ```
 
 :::
 
-:::note 作者推荐脚本
+import {
+PreferNetShore,
+OffshoreNet,
+InshoreNet,
+} from '@theme/unique/PreferNetShore'
+
+:::note 自动安装脚本
+
+ <PreferNetShore>
+
+<br/>
+
+<OffshoreNet>
 
 ```shell
-# 国内镜像：
-curl -fsSL https://s.nxw.so/arc > i
-# cat i
-bash i
-
-# 上游版：
-curl -fsSL https://t.ly/Fud- > i
-# cat i
-bash i
-
-# 代码审查
-find ais -type f -exec less {} \;
+cd `mktemp -d`;curl -fsSL https://raw.githubusercontent.com/LittleboyHarry/archinstall-scripts/main/fetchme | tee a
+# 确定执行：
+source a
 ```
 
+</OffshoreNet>
+<InshoreNet>
+
+```shell
+cd `mktemp -d`;curl -fsSL https://gitcode.net/lbh/ais/-/raw/main/fetchme-c | tee a
+# 确定执行：
+source a
+```
+
+</InshoreNet>
+
+推荐事项：
+
+- 开启并发支持，加速下载
+
+<InshoreNet>
+
+- 自动选择国内最快的镜像源
+
+</InshoreNet>
+
+</PreferNetShore>
+
 :::
 
-:::note 改进国内下载速度
+## 自动分区安装
 
-    ais/cn/preinit
-
-:::
-
-## 向导分区安装
-
-执行，[配置选项](#推荐的选项配置)
+适用于单系统空硬盘自动分区。执行，然后见 [配置选项](#推荐的选项配置)
 
     archinstall
 
@@ -56,72 +75,65 @@ find ais -type f -exec less {} \;
 
 启动分区管理器，参考 <a href="../part" target="_blank" >前文的分区建议</a>
 
-    lsblk && cgdisk
-    # 输入硬盘设备名：/dev/...
-    # 操作确定后，按 w 输入 yes 写入分区表，按 q 退出
+1.  使用分区工具进行分区
 
-格式化分区
+        lsblk -nd -o name;cgdisk
 
-    # boot 与数据分区通用格式
-    mkfs.ext4 /dev/...
+    输入 /dev/ 内的存储设备路径全名，按 w 输入 yes 写入分区表，按 q 退出（ EFI 分区号为 ef00，其它分区默认 8300 即可 ）
 
-重置 EFI 分区并清除所有启动项，请使用 `mkfs.vfat /dev/...`
+2.  格式化分区
 
-:::note 加密分区
+    若要重建 EFI 分区，用 `mkfs.vfat`
 
-自动配置脚本：若不要加密，配置 `export NOENCRYPT=y`
+    若是 boot 分区与数据分区，建议用 `mkfs.ext4` 格式化
 
-    ais/makebtrfs
+    :::note 创建可被加密的 BTRFS 分区
 
-评估各种算法的速度：`cryptsetup benchmark`
+        ./btrfshelper
 
-更多细节和参数请见资料：[Arch Wiki](https://wiki.archlinux.org/title/Dm-crypt/Device_encryption)
+    默认使用带有硬件加速的 AES 加密算法，
 
-:::
+    要评估各种算法速度可执行：`cryptsetup benchmark`
 
-挂载分区
+    更多细节和参数请见资料：[Arch Wiki](https://wiki.archlinux.org/title/Dm-crypt/Device_encryption)
 
-    ais/mount
+    :::
 
-:::caution [检查 GRUB 安装器 BUG](https://github.com/archlinux/archinstall/issues/1189)
+3.  使用检查助手：检查并挂载系统所需分区（ 含 EFI 分区、启动分区、根分区 ）
 
-    ais/fixbug
+        ./mounthelper
 
-:::
+4.  执行安装脚本：
 
-:::info 安装
-
-检查分区挂载点，确保 EFI 分区、启动分区、根分区已挂载
-
-    mount | grep /mnt
-
-开始安装
-
-    ais/start
-
-:::
+        ./archinstall-m
 
 ## 推荐的选项配置
 
+\* 仅适用于自动分区安装
+
 1. **Mirror region**
 
-   软件源：按 `/` 键搜索选择 China
+   软件源：按 **/** 键搜索 `ina` 选择 **China**
 
-2. **Drive(s)**
+2. \* **Drive(s)**
 
    选择目标硬盘
 
-3. **Disk layout** \*
+3. \* **Disk layout**
 
-   （ 仅“向导分区安装”时可见 ）如果不保留硬盘数据，全盘安装 Arch，则可以选择 `wipe all ...`
+   （ 仅“向导分区安装”时可见 ）如果不保留硬盘数据，全盘安装 Arch，则可以选择 **wipe all ...**
 
 4. **Bootloader**
 
    选择 yes 使用 GRUB
 
+5. **Hostname**
+
+   主机标识名
+
 5. **User account**
 
-   录入管理员帐号密码
+   录入帐号密码，设置 sudo 权限
 
 6. **Profile**
 
@@ -129,34 +141,37 @@ find ais -type f -exec less {} \;
 
 7. **Audio**
 
-   选择 `pipewire`, 是后者的改进版
+   选择 **pipewire**, 是后者的改进版
 
 8. **Kernels**
 
-   选择 `linux-lts`, 若新设备不兼容则改用 linux (最新版)
+   选择 **linux-lts**, 若新设备不兼容则改用 linux (最新版)
 
 9. **Network configuration**
 
-   选择 `NetworkManager`，用于图形化系统
+   选择 **NetworkManager**，用于图形化系统
 
 10. **Timezone**
 
-    搜索 `hai` 选择 `Asia/Shanghai`
+    搜索 `hai` 选择 **Asia/Shanghai**
 
-完成配置后，可选择保存配置。随后安装
+其它保持默认，确定安装
 
-## 备份系统
+## 完成安装
 
-安装完成后，退出子系统。执行：
+安装结束后，不要立刻关机、不要 chroot 子系统。执行：
 
-    ais/postinit
-    ais/cn/postinit # 中文支持
+    ./postinstall
+    ./postinstall-c # 中文环境支持
 
-作用：
+最后，注册存储设备，激活并优化 Grub, 写入 EFI 启动项：
 
-- 备份 `/boot` 启动分区到 boot.tgz
-- 为 btrfs 调整以支持 timeshift
+    ./setup-efigrub
 
-对非 btrfs 文件系统，想要备份，只能使用 tar 全量备份根文件系统
+<!-- ## 系统备份与恢复 -->
 
-重启机器后正式进入 Arch 系统
+:::caution 系统恢复的方法
+
+如果需要用 LiveCD 挂载硬盘的系统进行修复，可借助 `./btrfshelper` `./mounthelper` `./setup-efigrub` 三个脚本进行处理
+
+:::

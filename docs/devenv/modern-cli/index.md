@@ -190,7 +190,7 @@ python3 -m pipx ensurepath
 ```shell
 echo 'eval "$(register-python-argcomplete pipx)"' >> ~/.zshrc
 
-# 其他 UNIX 环境：
+# 其它 UNIX 环境：
 # pipx completions | less
 ```
 

@@ -7,7 +7,7 @@ sidebar_position: 4
 import { StoreLink, mslink } from '@theme/unique/links';
 
 推荐安装 <StoreLink to={mslink('9MSVKQC78PK6')} text="Debian on WSL" />，
-其他发行版均可在 <a href="https://aka.ms/wslstore">微软商店</a> 下载
+其它发行版均可在 <a href="https://aka.ms/wslstore">微软商店</a> 下载
 
 初始化时输入用户名密码，如 `me` `'`
 
@@ -27,7 +27,7 @@ import { StoreLink, mslink } from '@theme/unique/links';
 
 3. 设置镜像源并更新
 
-import SetMirror from '/docs/\_cmirror/debian.md'
+import SetMirror from '/docs/\_common/mirror-debian.md'
 
 <SetMirror />
 
@@ -41,13 +41,13 @@ sudo apt install -y git curl wget python3 man neovim zsh moreutils dos2unix
 sudo apt install -y command-not-found
 sudo apt update
 
-# 其他推荐
+# 其它推荐
 sudo apt install -y tree unzip tig
 
 exec $SHELL
 ```
 
-import Require from '/docs/\_deployworkenv.md'
+import Require from '/docs/\_common/deployworkenv.md'
 
 <Require />
 

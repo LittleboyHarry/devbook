@@ -67,6 +67,6 @@ reflector -c cn -p https --sort rate -l 3 --save mirrorlist
 yes | pacman -Syyu
 ```
 
-## 其他
+## 其它
 
 虚拟化 QEMU 见视频

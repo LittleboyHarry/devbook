@@ -2,6 +2,7 @@
   "files.associations": {
     "*.md": "mdx",
     "**/docs/**/*.reg": "ini",
+    "**/docs/**/*.dconf": "ini",
   },
   "search.exclude": {
     "pnpm-lock.yaml": true,

@@ -1,5 +1,18 @@
+@import '/src/css/utils';
+
 .linkButton {
   font-weight: normal;
+
+  + .linkButton {
+    margin-left: 1rem;
+    @include for-phone-only {
+      margin-left: 0;
+    }
+  }
+  @include for-phone-only {
+    margin-top: 8px;
+    margin-right: 8px;
+  }
 
   td & {
     margin-bottom: 0;
@@ -16,4 +29,9 @@
 
 .icon {
   margin-right: calc(1rem + -4px);
+}
+
+.popper {
+  @extend %dropdown-to-popper;
+  white-space: nowrap;
 }

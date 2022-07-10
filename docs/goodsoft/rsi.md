@@ -4,6 +4,11 @@ sidebar_position: 9
 
 # 休息提醒
 
+import CodeType from '@theme/unique/CodeType'
+import CodeBlock from '@theme/CodeBlock';
+import registryCode from '!!raw-loader!./workrave.reg';
+import dbconfigCode from '!!raw-loader!./workrave.dconf';
+
 # Workrave
 
 支持：
@@ -20,40 +25,30 @@ sidebar_position: 9
 40 分钟休息，20 分钟暂停一下
 
 <details>
-    <summary>Windows 注册表</summary>
+    <summary>Windows</summary>
 
-```batch
-reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files (x86)\Workrave\lib\Workrave.exe" /t REG_SZ /f /d "~ HIGHDPIAWARE"
+<CodeType reg>注册表配置：</CodeType>
 
-reg add HKCU\Software\Workrave\timers\micro_pause /v auto_reset /t REG_SZ /d 12 /f
-reg add HKCU\Software\Workrave\timers\micro_pause /v limit /t REG_SZ /d 1200 /f
-reg add HKCU\Software\Workrave\timers\micro_pause /v snooze /t REG_SZ /d 120 /f
-
-reg add HKCU\Software\Workrave\timers\rest_break /v auto_reset /t REG_SZ /d 480 /f
-reg add HKCU\Software\Workrave\timers\rest_break /v limit /t REG_SZ /d 2400 /f
-reg add HKCU\Software\Workrave\timers\rest_break /v snooze /t REG_SZ /d 300 /f
-
-reg add HKCU\Software\Workrave\breaks\daily_limit /v enabled /t REG_SZ /d 0 /f
-reg add HKCU\Software\Workrave\gui\breaks /v block_mode /t REG_SZ /d 0 /f
-reg add HKCU\Software\Workrave\gui\breaks\rest_break /v exercises /t REG_SZ /d 4 /f
-reg add HKCU\Software\Workrave\gui\breaks\rest_break /v auto_natural /t REG_SZ /d 1 /f
-reg add HKCU\Software\Workrave\gui /v closewarn_enabled /t REG_SZ /d 0 /f
-reg add HKCU\Software\Workrave\general /v usage-mode /t REG_SZ /d 1 /f
-
-```
+<CodeBlock language="ini">{registryCode}</CodeBlock>
 
 </details>
 
  <details>
 <summary>Linux 脚本</summary>
 
-    conf/workrave
+<CodeBlock language="shell">{`cat << END | dconf load /
+${dbconfigCode}END`}</CodeBlock>
 
 打开 gnome-tweaks 添加开机启动程序
 
 Wayland [Bug](https://github.com/rcaelers/workrave/issues/94) 修复:
 
-    conf/workrave-wl
+```shell
+mkdir -p ~/.local/share/applications
+cd ~/.local/share/applications
+cp /usr/share/applications/workrave.desktop .
+sed -i "/Exec/ s/$/ --display=:0/" workrave.desktop
+```
 
 </details>
 

@@ -1,11 +1,19 @@
 @mixin for-phone-only {
-    @media screen and (max-width: 576px) {
-        @content;
-    }
+  @media screen and (max-width: 576px) {
+    @content;
+  }
 }
 
 @mixin for-mobile-screen {
-    @media screen and (max-width: 997px) {
-        @content;
-    }
+  @media screen and (max-width: 997px) {
+    @content;
+  }
+}
+
+%dropdown-to-popper {
+  padding: 1.5rem;
+  padding-right: 3rem;
+
+  width: fit-content;
+  max-width: calc(100vw - 2 * var(--ifm-spacing-horizontal));
 }

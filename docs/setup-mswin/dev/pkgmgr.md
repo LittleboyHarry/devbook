@@ -114,7 +114,9 @@ iwr -useb https://gitcode.net/mirrors/ScoopInstaller/Main/-/archive/master/Main-
 
 ```
 
+<!--
 若要使用原版 github 上游仓库源，请<a href="/docs/devenv/git#网络问题" target="_blank">设置 git 代理</a>
+-->
 
 否则使用国内镜像仓库源：( 只镜像元数据、加快升级和检索速度，不含二进制文件镜像 )
 

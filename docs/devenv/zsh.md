@@ -12,7 +12,7 @@ import GetPkg from '@theme/unique/GetPkg';
 
 ## 调优
 
-import Require from '/docs/\_deployworkenv.md'
+import Require from '/docs/\_common/deployworkenv.md'
 
 <Require />
 

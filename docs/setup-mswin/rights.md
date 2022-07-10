@@ -176,18 +176,17 @@ import { faBox } from '@fortawesome/free-solid-svg-icons';
 ## 其它浏览器
 
 <p>
-Firefox: 下载&emsp;
-<FileItem name="安装包" path="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN" button icon={<FontAwesomeIcon icon={faBox} />}/>
+下载：
+<FileItem name="Firefox 安装包" path="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN" button icon={<FontAwesomeIcon icon={faBox} />}/>
 {/*
 或
 <StoreButton to={mslink`9NZVDKPMR9RD`} text="从商店安装" />
  */}
 </p>
 
-附：
+import { BrowserSelector } from '/docs/goodsoft/Catalog.tsx';
 
-1. <a href="/docs/goodsoft/firefox/config" target="_blank">使用说明</a>
-2. <a href="/docs/goodsoft/chromium" target="_blank">Chromium</a>
+<BrowserSelector/>
 
 <!-- [参考脚本](https://github.com/Sycnex/Windows10Debloater/blob/a48b4d8dc501680e0edc31f840791c966d89d309/Windows10Debloater.ps1#L173) -->
 

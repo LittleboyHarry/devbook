@@ -165,13 +165,7 @@ function HowToCopyScript() {
 }
 
 function HowToUseRegFile() {
-  return (
-    <p>
-      在桌面上右键新建文本文件，改后缀名为 .reg
-      <br />
-      用记事本打开编辑。粘贴代码后保存执行
-    </p>
-  );
+  return <p>打开记事本，右键粘贴并保存为 any.reg。双击文件执行</p>;
 }
 
 function SingleLineWindowsCommand({ admin }: { admin?: boolean }) {

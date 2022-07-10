@@ -1,11 +1,16 @@
+@import '/src/css/utils';
+
 .button {
   vertical-align: baseline;
   font-weight: normal;
   padding: 8px 16px;
-  &+& {
-      margin-left: 16px;
-      /* prettier-ignore */
-    }
+  & + & {
+    margin-left: 16px;
+  }
+
+  @include for-phone-only {
+    margin-bottom: 8px;
+  }
 }
 
 .icon {

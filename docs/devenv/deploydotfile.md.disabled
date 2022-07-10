@@ -68,7 +68,7 @@ yes | sudo pacman -S wl-clipboard
 
 ### Zsh 主题
 
-:::note 其他主题推荐
+:::note 其它主题推荐
 
 请考虑是否使用 **powerlevel10k**？
 

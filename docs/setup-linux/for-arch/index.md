@@ -29,12 +29,15 @@ import { WebIcon } from '@theme/unique/fai';
 <LinkButton outline href="https://wiki.archlinux.org/title/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" name="安装 Wiki" icon={<WebIcon />} />
 </p>
 
+<br/>
+
 <HtmlA href="bootable" target="_blank">
-
-:::note 下一步，见制作启动盘
-:::
-
+<div className="alert alert-info">
+下一步，见制作启动盘
+</div>
 </HtmlA>
+
+<br/>
 
 附：[参考资料](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
 

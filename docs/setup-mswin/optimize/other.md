@@ -4,7 +4,7 @@ description: ''
 
 import CodeType from '@theme/unique/CodeType';
 
-# 其他
+# 其它
 
 ## 锁屏界面
 
@@ -57,7 +57,7 @@ reg add HKLM\System\ControlSet001\Control\BootControl /v BootProgressAnimation /
 
 ```
 
-## 其他
+## 其它
 
 <!--
  <details><summary>隐藏图标右上角压缩标记的蓝色双箭头</summary>
@@ -83,7 +83,7 @@ start explorer
 </CodeType>
 
 ```powershell
-# 其他
+# 其它
 reg add HKLM\SOFTWARE\Policies\Microsoft\MicrosoftEdge /v PreventFirstRunPage /t REG_DWORD /d 0 /f
 reg add HKLM\SOFTWARE\Policies\Microsoft\WindowsMediaPlayer /v GroupPrivacyAcceptance /t REG_DWORD /d 1 /f
 

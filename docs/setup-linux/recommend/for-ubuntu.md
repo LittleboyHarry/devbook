@@ -19,7 +19,7 @@ sidebar_position: 8
 
 方法二：命令行
 
-import SetMirror from '/docs/\_cmirror/ubuntu.md'
+import SetMirror from '/docs/\_common/mirror-ubuntu.md'
 
 <SetMirror />
 
@@ -44,7 +44,7 @@ import SetMirror from '/docs/\_cmirror/ubuntu.md'
 
 :::note 完全卸载 Snap 的方法
 
-对于 Snap 版 Firefox，请<a target="_blank" href="/docs/goodsoft/chromium/linux">先安装 Edge</a> 或选择其他浏览器代替
+对于 Snap 版 Firefox，请<a target="_blank" href="/docs/goodsoft/chromium/linux">先安装 Edge</a> 或选择其它浏览器代替
 
 ```shell
 sudo apt autoremove --purge snapd

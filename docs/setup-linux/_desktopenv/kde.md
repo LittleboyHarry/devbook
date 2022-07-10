@@ -22,21 +22,12 @@
 
 :::
 
-import Require from '/docs/\_deployworkenv.md'
+import CodeBlock from '@theme/CodeBlock';
+import optimizeCode from '!!raw-loader!./kde.sh';
 
-<Require />
+:::tip KDE 调优
 
-:::note 自动部署
-
-使用 `deployworkenv`
-
-    kde/optimize
-
-内容：
-
-1. 注销前免二次确认
-2. 最大化时，隐藏窗口标题栏
-3. 桌面总览图 ( 5.24 以上版本可用 )
+<CodeBlock language="shell">{optimizeCode}</CodeBlock>
 
 :::
 

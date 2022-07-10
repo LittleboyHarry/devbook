@@ -13,7 +13,7 @@ import {AddonIcon} from '@theme/unique/fai'
 <p>
 <FileItem button icon={<AddonIcon/>} name="简体中文识别模型" path="https://cdn.jsdelivr.net/gh/tesseract-ocr/tessdata_fast@main/chi_sim.traineddata" />
 &emsp;
-<a href="https://github.com/tesseract-ocr/tessdata_fast/">... 其他所有语言</a>
+<a href="https://github.com/tesseract-ocr/tessdata_fast/">... 其它所有语言</a>
 </p>
 
 

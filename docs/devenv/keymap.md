@@ -30,7 +30,7 @@ import CodeType from '@theme/unique/CodeType'
 
 :::caution 注销并重新登录后生效
 
-如果有其他需求，可以安装自定义键位映射程序 `sharpkeys` （ by winget or scoop )
+如果有其它需求，可以安装自定义键位映射程序 `sharpkeys` （ by winget or scoop )
 
 :::
 

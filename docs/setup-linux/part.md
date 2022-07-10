@@ -29,5 +29,5 @@ sidebar_position: 5
 <!--
 - 使用或挂载 EFI 分区：
 
-  Ubuntu, Calamares 安装器称之为“引导器”，其他安装器挂载到 `/boot/efi`
+  Ubuntu, Calamares 安装器称之为“引导器”，其它安装器挂载到 `/boot/efi`
 -->

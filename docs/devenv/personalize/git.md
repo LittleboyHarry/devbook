@@ -10,21 +10,38 @@ sidebar_position: 8
 
 :::
 
-import Require from '/docs/\_deployworkenv.md'
-
-<Require />
-
 ## 调优
 
-    git/optimze
+```shell
+printf '更改默认分支名为 main (Y/n)? '; read r
+[[ "$r" =~ ^(Y|y|)$ ]] &&
+    git config --global init.defaultBranch main
+
+printf '在 merge 和 rebase 前自动保留当前修改 (Y/n)? '; read r
+if [[ "$r" =~ ^(Y|y|)$ ]]; then
+    git config --global rebase.autostash true
+    git config --global merge.autostash true
+fi
+```
+
+自动保留当前修改的[作用说明](https://stackoverflow.com/questions/30208928)
 
 ## 录入个人提交信息
 
-    git/newuser
+```shell
+printf 'Your Name: '; read git_name
+git config --global user.name "$git_name"
+printf 'Your Email: '; read git_email
+git config --global user.email "$git_email"
+```
 
 ## 配置 SSH 密钥
 
-    git/newkey
+```shell
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
+echo
+cat ~/.ssh/id_ed25519.pub
+```
 
 复制公钥信息，随后上传：
 

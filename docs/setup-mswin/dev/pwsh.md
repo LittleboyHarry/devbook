@@ -18,7 +18,7 @@ import { StoreButton, mslink } from '@theme/unique/links';
 </p>
 
  <details>
-<summary>其他渠道</summary>
+<summary>其它渠道</summary>
 
 渠道二：从 GitHub 下载
 
@@ -44,18 +44,17 @@ import { StoreButton, mslink } from '@theme/unique/links';
 
 ## 基本配置
 
-使用推荐配置创建 `$PROFILE`：
+使用推荐的配置创建 `$PROFILE`：
 
 ```powershell
 mkdir -p ~\Documents\PowerShell
-
-# Github
-iwr -useb https://raw.githubusercontent.com/littleboyharry/deployworkenv/main/win/profile.ps1 -o $PROFILE
-# GitCode
-iwr -useb https://gitcode.net/lbh/dwe/-/raw/main/win/profile.ps1 -o $PROFILE
-
-notepad $profile
+notepad $PROFILE
 ```
+
+import CodeBlock from '@theme/CodeBlock';
+import pwshProfileCode from '!!raw-loader!./profile.ps1';
+
+<CodeBlock language="powershell" title="$env:USERPROFILE\Documents\PowerShell\profile.ps1">{pwshProfileCode}</CodeBlock>
 
 ## psutils
 

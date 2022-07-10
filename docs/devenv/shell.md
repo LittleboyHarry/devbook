@@ -1,3 +1,7 @@
+---
+sidebar_position: 514
+---
+
 ## 代码格式化
 
 <GetPkg name='shfmt' pacman />

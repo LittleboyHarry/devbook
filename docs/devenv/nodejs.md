@@ -1,3 +1,7 @@
+---
+sidebar_position: 512
+---
+
 # Node.js
 
 nodejs 偶数版号代表稳定性，我们应该选择偶数版。

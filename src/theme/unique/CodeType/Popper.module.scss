@@ -1,11 +1,10 @@
-.dropdown {
-  font-size: medium;
-  padding: 1.5rem;
-  padding-right: 3rem;
-  color: var(--ifm-font-color-base);
+@import '/src/css/utils';
 
-  width: fit-content;
-  max-width: calc(100vw - 2*var(--ifm-spacing-horizontal));
+.dropdown {
+  @extend %dropdown-to-popper;
+
+  font-size: medium;
+  color: var(--ifm-font-color-base);
 
   >p {
     margin-bottom: 8px;

@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # VSCode 配置
 
+import { LinkButton } from '@theme/unique/links';
+
 ## 修改默认 Shell
 
 `Ctrl + Shift + P` 输入关键词 `terspro` 选择
@@ -37,20 +39,60 @@ sidebar_position: 1
 "terminal.integrated.fontSize": 16,
 ```
 
-<a href="../font" target="_blank" >
 
-:::note 推荐字体
+### Vi 编辑模式
+
+需要安装支持扩展
+
+```json
+"vim.startInInsertMode": true,
+"vim.useSystemClipboard": true,
+// 组合键冲突：https://github.com/VSCodeVim/Vim/issues/1437
+"vim.handleKeys": {
+  "<C-e>": false,
+  "<C-a>": false,
+  "<C-d>": false,
+  "<C-x>": false,
+  "<C-f>": false,
+  "<C-g>": false,
+  "<C-h>": false,
+  "<C-c>": false,
+  "<C-v>": false,
+  "<C-l>": false,
+  "<C-k>": false
+},
+```
+
+:::note 与 neovim 集成
+
+```json
+"vim.enableNeovim": true,
+"vim.neovimPath": "nvim",
+```
+
 :::
 
-</a>
+import GetVscodeExtension, { PreferVscode } from '@theme/unique/GetVscodeExtension';
 
-:::note 终端主题配色
+<p><PreferVscode oneline children={<GetVscodeExtension id="vscodevim.Vim" />} /></p>
 
-挑选一款喜欢的固定终端配色，不会随编辑器主题切换而变化：
+:::info 临时禁用的方法
 
-https://glitchbone.github.io/vscode-base16-term/
+`Ctrl + Shift + P` 输入 `vimt` 回车
 
 :::
+
+<p><LinkButton outline href="https://github.com/daipeihust/im-select" name="设置自动切换输入法" /></p>
+
+### 推荐字体
+
+<LinkButton newTab href="../font" name="见前文" />
+
+### 终端配色
+
+<LinkButton hint='选择一款喜欢的固定终端配色，不会随编辑器主题切换而变化' href="https://glitchbone.github.io/vscode-base16-term/" name="挑选主题" />
+
+### 其它
 
 :::note 如果你在 Linux 中修改过键盘映射
 
@@ -73,7 +115,11 @@ Windows 环境下，命令行 Ctrl + C 自动应答。
 
 ## 推荐快捷键
 
-编辑方法：`Ctrl + K` `Ctrl + S` 点击右上角图标跳转到 JSON 文件
+:::info 编辑方法：
+
+`Ctrl + K` `Ctrl + S` 点击右上角图标跳转到 JSON 文件
+
+:::
 
 仿 JetBrains IDE，绑定 `Ctrl + W` 键的选择词块
 

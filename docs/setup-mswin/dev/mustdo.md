@@ -34,7 +34,7 @@ reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Key Modifiers" /
 reg add "HKCU\Control Panel\Input Method\Hot Keys\00000070" /v "Virtual Key" /t REG_BINARY /d ff000000 /f
  -->
 
-自行解除其他输入法的快捷键占用，如果还有的话。
+自行解除其它输入法的快捷键占用，如果还有的话。
 
 系统捆绑软件，也可能绑定了一些引起冲突的快捷键：
 
@@ -111,11 +111,13 @@ import MinttyRc from './_minttyrc.md'
 
 </div>
 
+<!--
 :::note 配置 SSH 密钥
 
 参考<a href="/docs/devenv/git" target="_blank" >其它章节</a>
 
 :::
+-->
 
 :::note 能长期记住口令的 `ssh-agent` 服务
 
@@ -173,7 +175,7 @@ import { faCircleNodes } from '@fortawesome/free-solid-svg-icons';
 
 从镜像站下载：<FileItem name="清华镜像站" path="https://mirrors.tuna.tsinghua.edu.cn/virtualbox/virtualbox-Win-latest.exe" button icon={<FontAwesomeIcon icon={faCircleNodes} />}/>
 或
-&nbsp;<HtmlA href="https://mirrorz.org/list/virtualbox">其他</HtmlA>
+&nbsp;<HtmlA href="https://mirrorz.org/list/virtualbox">其它</HtmlA>
 
 :::note 自动化管理 vbox
 
@@ -208,4 +210,4 @@ import { LinkButton } from '@theme/unique/links';
 import FileItem from '@theme/unique/FileItem'
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DownloadButton, HtmlA, StoreButton, mslink } from '@theme/unique/links';
+import { HtmlA, StoreButton, mslink } from '@theme/unique/links';

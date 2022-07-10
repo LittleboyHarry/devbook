@@ -14,13 +14,13 @@ https://www.microsoft.com/store/productId/9PDXGNCFSCZV
 
 如腾讯镜像站
 
-import SetMirror from '/docs/\_cmirror/ubuntu.md'
+import SetMirror from '/docs/\_common/mirror-ubuntu.md'
 
 <SetMirror />
 
 ## 自动配置
 
-import Require from '/docs/\_deployworkenv.md'
+import Require from '/docs/\_common/deployworkenv.md'
 
 <Require />
 

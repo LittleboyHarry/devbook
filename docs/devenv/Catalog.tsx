@@ -44,11 +44,13 @@ export function BasicCatalog() {
           to="/docs/devenv/modern-cli"
           logo={<FontAwesomeIcon icon={faScrewdriverWrench} />}
         />
+        {/*
         <LogoCard
           name="Git"
           to="/docs/devenv/git"
           logo={<img src={useBaseUrl('/img/icons/git.svg')} />}
         />
+        */}
       </LogoCard.Container>
     </>
   );

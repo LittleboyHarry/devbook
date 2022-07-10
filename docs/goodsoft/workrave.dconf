@@ -1,0 +1,17 @@
+[/org/workrave/timers/micro-pause]
+auto-reset=12
+limit=1200
+snooze=120
+[/org/workrave/timers/rest-break]
+auto-reset=480
+limit=2400
+snooze=300
+[/org/workrave/gui/breaks/rest-break]
+auto-natural=true
+exercises=4
+[/org/workrave/breaks/daily-limit]
+enabled=false
+[/org/workrave/gui/breaks]
+block-mode=0
+[/org/workrave/general]
+usage-mode=1

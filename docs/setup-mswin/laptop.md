@@ -19,7 +19,10 @@ import {HtmlA} from '@theme/unique/links';
 
 import CodeType from '@theme/unique/CodeType'
 
+<p>
 <HtmlA href="ms-settings:devices-touchpad">设置“三指手势”点击作为“鼠标中键”</HtmlA>
+</p>
+
 <CodeType reg>
 或使用作者推荐手势：
 </CodeType>
@@ -31,9 +34,9 @@ import CodeType from '@theme/unique/CodeType'
 - 四指同时左右滑动：切换桌面
 
 import CodeBlock from '@theme/CodeBlock';
-import GestureRegCode from '!!raw-loader!./gestures.reg';
+import gestureRegCode from '!!raw-loader!./gestures.reg';
 
-<CodeBlock language="ini">{GestureRegCode}</CodeBlock>
+<CodeBlock language="ini">{gestureRegCode}</CodeBlock>
 
 :::caution 重新登陆后生效！
 :::

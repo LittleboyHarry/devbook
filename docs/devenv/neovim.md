@@ -44,6 +44,6 @@ mkdir -p ~/.config/nvim
 ```
 
 import CodeBlock from '@theme/CodeBlock';
-import ConfigCode from '!!raw-loader!./init.vim';
+import configCode from '!!raw-loader!./init.vim';
 
-<CodeBlock language="vim" title="nvim/init.vim">{ConfigCode}</CodeBlock>
+<CodeBlock language="vim" title="nvim/init.vim">{configCode}</CodeBlock>

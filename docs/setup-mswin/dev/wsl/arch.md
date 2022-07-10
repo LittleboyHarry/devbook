@@ -118,7 +118,7 @@ wsl --export $wslName arch.tar
 
 ## 配置
 
-import Require from '/docs/\_deployworkenv.md'
+import Require from '/docs/\_common/deployworkenv.md'
 
 <Require />
 

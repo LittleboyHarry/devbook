@@ -45,7 +45,7 @@ pacman -Syyu --noconfirm
 
     pacman -S --noconfirm base-devel git man-db
 
-import Require from '/docs/\_deployworkenv.md'
+import Require from '/docs/\_common/deployworkenv.md'
 
 <Require />
 

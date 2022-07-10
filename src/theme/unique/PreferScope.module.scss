@@ -18,6 +18,10 @@
       margin-left: 0.5rem;
     }
   }
+
+  +:global(.admonition),+:global(.theme-code-block){
+   margin-top: 1rem;
+  }
 }
 
 .choices {

@@ -13,7 +13,15 @@ description: ...
 
 ## tlp 笔记本节电
 
-    pkginst/tlp
+```shell
+if lsb_release -si | grep -qi "^Arch"; then IS_ARCHLINUX=1; fi
+
+pkcon install tlp -y
+[ -v IS_ARCHLINUX ] && sudo pacman -S tlp-rdw --noconfirm
+sudo systemctl enable tlp.service --now
+sudo systemctl mask systemd-rfkill.{service,socket} --now
+sudo tlp start
+```
 
 
  <details>
@@ -24,6 +32,12 @@ description: ...
 技术原理：DDC/CI 协议。市面多数显示器均支持该协议，其中部分显示器需要打开 OSD 调节菜单激活该协议。
 
 配置免 root 权限：https://github.com/daitj/gnome-display-brightness-ddcutil#setup-ddcutil
+
+```shell
+echo i2c-dev | sudo tee /etc/modules-load.d/i2c-dev.conf | sudo xargs modprobe
+sudo usermod -G i2c -a `whoami`
+sudo su `whoami`
+```
 
 GNOME 扩展：https://extensions.gnome.org/extension/2645/brightness-control-using-ddcutil/
 

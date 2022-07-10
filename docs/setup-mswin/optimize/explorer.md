@@ -14,9 +14,9 @@ import CodeBlock from '@theme/CodeBlock';
 
 </CodeType>
 
-import OptimizeRegCode from '!!raw-loader!./explorer.reg';
+import optimizeRegCode from '!!raw-loader!./explorer.reg';
 
-<CodeBlock language="ini">{OptimizeRegCode}</CodeBlock>
+<CodeBlock language="ini">{optimizeRegCode}</CodeBlock>
 
 7. 右键菜单优化
 8. 优化打开方式列表

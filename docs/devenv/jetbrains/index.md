@@ -23,14 +23,9 @@ Ubuntu 运行依赖：
 
 ## 配置
 
-执行
+安装后，打开面板按 `Ctrl + ,` 设置：
 
-    mkdir -p ~/.local/bin
-
-安装完成后，`Ctrl + ,` 设置：
-
-- `Launch Toolbox App at system startup` 可关闭
-- `Tools` > `Generate shell scripts` 激活
+关闭在系统启动时启动 Toolbox App
 
 <!--
 ## 基础介绍

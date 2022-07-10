@@ -12,14 +12,14 @@
 <p><LinkButton outline icon={<WebIcon />} name="镜像站下载汇表" href="https://mirrorz.org/os/fedora"/>
 &nbsp;含有:</p>
 
-- [其他桌面环境](https://spins.fedoraproject.org/zh_Hans_CN/)
+- [其它桌面环境](https://spins.fedoraproject.org/zh_Hans_CN/)
 - [服务器、非主流 CPU 版](https://getfedora.org/zh_Hans_CN/server/download/)
 
 :::caution 下载后，务必校验文件完整性
 
 指纹校验：
 [Workstation 版信息](https://getfedora.org/zh_Hans_CN/security/) 与
-[其他版本信息](https://pagure.io/fedora-web/websites/blob/master/f/sites/getfedora.org/static/checksums)
+[其它版本信息](https://pagure.io/fedora-web/websites/blob/master/f/sites/getfedora.org/static/checksums)
 
 :::
 

@@ -67,7 +67,7 @@ sudo dnf upgrade -y # 更新系统
 
 :::caution
 
-- 安装过程中应避免其他操作、安装后尽快重启
+- 安装过程中应避免其它操作、安装后尽快重启
 - 若镜像站发生故障，导致下载中断。
   可修改 `/etc/hosts` 将相关域名映射为 `127.0.0.1` 以屏蔽
 
@@ -90,15 +90,17 @@ sudo dnf upgrade -y # 更新系统
 
 ### 自动优化
 
-    fedora/optimze
+:::note 锁定内核版本？
 
-1. 锁定内核版本？
+使用一段时间的 Fedora 后，如果显示、声音、键鼠、待机等硬件不出问题，
+可以锁定 Linux 内核版本，避免不必要的升级。
 
-   使用一段时间的 Fedora 后，如果显示、声音、键鼠、待机等硬件不出问题，
-   可以锁定 Linux 内核版本，避免不必要的升级。
+:::
 
-2. Grub 调整：记住上次选择的启动项、降低等待时间
-3. 让系统寻找访问速度最快的镜像源
+import CodeBlock from '@theme/CodeBlock';
+import optimizeCode from '!!raw-loader!./optimize.sh';
+
+<CodeBlock language="shell">{optimizeCode}</CodeBlock>
 
 ### 调整桌面环境
 
