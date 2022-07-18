@@ -2,11 +2,14 @@
 sidebar_position: 60
 ---
 
-# GNOME 外观
+# GNOME 主题
 
-## 保存样式
+安装或激活依赖扩展
 
-    gnome/ext/themesupport
+```shell
+UUID=user-theme@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable $UUID || gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell --method org.gnome.Shell.Extensions.InstallRemoteExtension $UUID
+```
 
 激活后可以保存样式到用户的 `~/.themes` 目录下
 

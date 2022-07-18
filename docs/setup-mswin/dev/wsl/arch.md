@@ -118,20 +118,15 @@ wsl --export $wslName arch.tar
 
 ## 配置
 
-import Require from '/docs/\_common/deployworkenv.md'
+import GetYay from '/docs/\_common/get-yay.md'
 
-<Require />
-
-例如：安装 AUR 助手 yay
-
-    arch/getyay
-    cn/arch-yay # 使用国内 goproxy 镜像
+<GetYay />
 
 systemd 模拟器：https://github.com/arkane-systems/genie/releases/tag/v2.2
 
-import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
-
 ### 开发环境
+
+import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
 <BasicCatalog />
 

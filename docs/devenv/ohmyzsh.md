@@ -1,18 +1,52 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
-# deployworkenv
+# Oh My Zsh
 
-import st from './deployworkenv.module.scss';
+import {
+    PreferNetShore,
+    OffshoreNet,
+    InshoreNet,
+} from '@theme/unique/PreferNetShore'
 
-<iframe src="https://ghbtns.com/github-btn.html?user=littleboyharry&repo=deployworkenv&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="120" height="32" title="GitHub" style={{float:'right',position:'relative',top:-64}}></iframe>
+由作者编写的[自动安装脚本](https://github.com/LittleboyHarry/setup-omz)
 
-import Require from '/docs/\_common/deployworkenv.md'
+<PreferNetShore>
 
-<Require />
+  <OffshoreNet>
+
+```shell
+git clone https://github.com/LittleboyHarry/setup-omz
+cd setup-omz
+
+./go
+```
+
+  </OffshoreNet>
+  <InshoreNet>
+
+```shell
+git clone https://gitcode.net/lbh/izsh setup-omz
+cd setup-omz
+
+./go-c
+```
+
+  </InshoreNet>
+
+</PreferNetShore>
+
+其他事项：
+
+- 更改 GNOME/KDE 终端默认命令为 `/bin/zsh`，
+  并选择自己喜欢的背景透明度、主题色调
+
+-     echo "set-option -g default-shell /bin/zsh" >> ~/.tmux.conf
 
 ## 推荐的 ohmyzsh 说明
+
+import st from './ohmyzsh.module.scss';
 
 必知：
 

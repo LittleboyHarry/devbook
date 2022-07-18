@@ -28,8 +28,9 @@ export function PreferAppstream({
           在 &nbsp;
           <a href="https://apps.gnome.org/zh-CN/app/org.gnome.Software/">
             GNOME
-          </a>{' '}
-          或 <a href="https://apps.kde.org/zh-cn/discover/">KDE</a>&nbsp;
+          </a>
+          &nbsp; 或&nbsp;
+          <a href="https://apps.kde.org/zh-cn/discover/">KDE</a>&nbsp;
           软件中心一键安装：
         </>
       }

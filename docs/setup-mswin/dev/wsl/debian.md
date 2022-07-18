@@ -47,10 +47,6 @@ sudo apt install -y tree unzip tig
 exec $SHELL
 ```
 
-import Require from '/docs/\_common/deployworkenv.md'
-
-<Require />
-
 import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
 配置开发环境：

@@ -28,7 +28,7 @@ export function BasicCatalog() {
         />
         <LogoCard
           name="Zsh"
-          to="/docs/devenv/zsh"
+          to="/docs/devenv/ohmyzsh"
           logo={<FontAwesomeIcon icon={faTerminal} style={{ width: '75%' }} />}
         />
         <LogoCard

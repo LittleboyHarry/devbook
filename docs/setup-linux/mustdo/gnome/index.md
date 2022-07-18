@@ -2,19 +2,45 @@
 sidebar_position: 2
 ---
 
+import {
+    PreferNetShore,
+    OffshoreNet,
+    InshoreNet,
+} from '@theme/unique/PreferNetShore'
+
 # GNOME 调优
 
-注：`&!` 是 zsh 可分离式执行的专属特性
+:::note 已设全盘加密的用户
 
-## 调优
+推荐设置自动登陆，免输密码：
 
-:::note 自动登陆，免输密码
-
-已设全盘加密的用户推荐：
-
-    gnome-control-center user-accounts &!
+    gnome-control-center user-accounts
 
 :::
+
+<PreferNetShore>
+
+下载优化脚本
+
+ <OffshoreNet>
+
+```shell
+git clone https://github.com/LittleboyHarry/setup-gnome
+cd setup-gnome
+```
+
+</OffshoreNet>
+
+ <InshoreNet>
+
+```shell
+git clone https://gitcode.net/lbh/ignome setup-gnome
+cd setup-gnome
+```
+
+</InshoreNet>
+
+</PreferNetShore>
 
 ## 其它
 

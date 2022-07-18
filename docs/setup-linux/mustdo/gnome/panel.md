@@ -4,21 +4,6 @@ sidebar_position: 11
 
 # GNOME 顶栏
 
-## 优化
-
-显示电量百分比、星期几、周数：
-
-```shell
-cat << END | dconf load /org/gnome/desktop/
-[interface]
-show-battery-percentage=true
-clock-show-weekday=true
-
-[calendar]
-show-weekdate=true
-END
-```
-
 ## 活动热区
 
 鼠标左上角悬停会触发“概览视图” Hot Corners，按需使用：
@@ -27,66 +12,65 @@ END
 
 ## 扩展推荐
 
-:::note 非 Ubuntu 系统需要显示的[托盘图标](https://extensions.gnome.org/extension/615/appindicator-support/)
+### 显示后台托盘图标
 
-    gnome/ext/apptray
+非 Ubuntu 系统缺少 [应用后台托盘图标](https://extensions.gnome.org/extension/615/appindicator-support/)?
 
-:::
+    ./extension/add-appindicator
 
-:::note 调整电源菜单按钮
+### 显示[常用文件夹菜单](https://extensions.gnome.org/extension/8/places-status-indicator/)
 
-从二级菜单中移出的扩展：
-[Bring Out Submenu Of Power Off Logout Button](https://extensions.gnome.org/extension/2917/bring-out-submenu-of-power-offlogout-button/)
+```shell
+UUID=places-menu@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable $UUID ||
+gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell --method org.gnome.Shell.Extensions.InstallRemoteExtension $UUID
+```
 
-    gnome/ext/showsysbtn
+### 优化系统菜单
 
-:::
+[展开二级菜单](https://extensions.gnome.org/extension/2917/bring-out-submenu-of-power-offlogout-button/):
 
-:::note 常用文件夹菜单
+    gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell --method org.gnome.Shell.Extensions.InstallRemoteExtension 'BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm'
 
-[Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
+## 调整
 
-    gnome/ext/showplaces
+**前置依赖扩展： [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)**
 
-:::
+### 优化细节
 
-:::note 调整细节用
+- 降低顶栏对屏幕空间的占用
+- 不保留应用菜单
+- 新消息出现在右上侧
 
-[Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
-可调各种细节，推荐配置：
+&nbsp;
 
-    cn/gnome-justopti
+    ./extension/add-just-perfection
 
-:::
+### [显示窗口列表](https://extensions.gnome.org/extension/4000/babar/)
 
-:::info 转顶栏为任务栏
+    ./extension/add-babar
 
-实际上，我用了 [dash-to-panel](https://extensions.gnome.org/extension/1160/dash-to-panel/) 提供的任务栏后，
-后面的很多程序坞相关的扩展和配置就不需要了
+### 顶栏置于底部
 
-:::
-
-## 置于屏幕底部
-
-依赖扩展：
-
-- [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)，
-- （可选）热区强化 [Custom Hot Corners Extended](https://extensions.gnome.org/extension/4167/custom-hot-corners-extended/)
-
-      gnome/ext/bottompanel
-
-:::note 置于底部的缺点
+:::note 置于底部的 bug
 
 可能导致使用 Vitals 扩展这种具有“超长菜单栏” 无法显示的 bug
 
 :::
 
- <details>
-<summary>恢复方法</summary>
+```shell
+./extension/panel-to-bottom
+# 恢复
+# ./extension/panel-to-up
+```
 
-    gnome/ext/bottompanel-recover
+:::info 或[改顶栏为任务栏](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 
-</details>
+自动整合程序坞到任务栏中，更像 Windows 风格。一键安装并显示左侧任务栏：
+
+    ./extension/add-dash-to-panel
+
+:::
 
 <!--
 ### 隐藏标题栏

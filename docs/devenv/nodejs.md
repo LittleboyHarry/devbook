@@ -49,7 +49,8 @@ exec $SHELL
 <InshoreNet>
 
 ```shell
-cn/nvm
+wget -qO- https://gitee.com/mirrors/nvm/raw/v0.39.1/install.sh | sed '/NVM_SOURCE_URL=/{s#raw.githubusercontent.com/${NVM_GITHUB_REPO}#gitee.com/mirrors/nvm/raw#;s#github.com/${NVM_GITHUB_REPO}#gitee.com/mirrors/nvm#}' | bash
+
 ( source ~/.nvm/nvm.sh && nvm install --lts )
 exec $SHELL
 ```

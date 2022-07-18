@@ -4,32 +4,24 @@ sidebar_position: 12
 
 # GNOME 程序坞
 
-# dock-to-dash
+**除 Ubuntu 已内置，需要添加 [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) 扩展**
 
-Ubuntu 已内置的 GNOME 自定义调节扩展：[Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+Ubuntu 风格
 
-`deployworkenv` 推荐配置：
+    ./extension/dash-to-dock/likeubuntu
 
-## Ubuntu 风格
+固定在左侧
 
-    gnome/ext/dockstyl/likeubuntu
+    ./extension/dash-to-dock/fixedleft
 
-## 作者偏好
+固定在右侧
 
-    gnome/ext/dockstyl/recommend
+    ./extension/dash-to-dock/fixedright
 
-## 固定在左侧
+MacOS 程序坞风格
 
-    gnome/ext/dockstyl/fixedleft
+    ./extension/dash-to-dock/likemac
 
-## 固定在右侧
+仅总览视图中显示
 
-    gnome/ext/dockstyl/fixedright
-
-## MacOS 程序坞风格
-
-    gnome/ext/dockstyl/likemac
-
-## 仅总览视图中显示
-
-    gnome/ext/dockstyl/hide
+    ./extension/dash-to-dock/overviewonly

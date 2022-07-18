@@ -39,27 +39,15 @@ sed -i '/mirrors.ustc.edu.cn/!d' /etc/pacman.d/mirrorlist.*
 pacman -Syyu --noconfirm
 ```
 
-## 自动部署工具
+## 安装开发工具
 
 开发必装：
 
     pacman -S --noconfirm base-devel git man-db
 
-import Require from '/docs/\_common/deployworkenv.md'
+安装 <a href='/docs/devenv/ohmyzsh' target='_blank'>ohmyzsh</a> 并更换默认 Shell 为 Zsh
 
-<Require />
-
-安装：zsh
-
-```powershell
-zsh/setup
-
-# gitee 镜像安装：
-cn/setup-zsh
-
-# 更换默认 Shell
-sed -i '/LOGINSHELL=/ s/bash/zsh/' /msys2_shell.cmd
-```
+    sed -i '/LOGINSHELL=/ s/bash/zsh/' /msys2_shell.cmd
 
 ## 调整终端
 

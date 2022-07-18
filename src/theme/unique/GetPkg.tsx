@@ -28,29 +28,31 @@ const context = createScopeContext<Value>(defaultValue);
 type Scope = {
   value: Value;
   prefix: string;
+  desc: string;
   Component: (props: { children: ReactNode }) => JSX.Element;
 };
 
-function pkgmgr(value: Value, prefix: string): Scope {
+function pkgmgr(value: Value, prefix: string, desc: string = ''): Scope {
   return {
     value,
     prefix,
+    desc,
     Component: createScopeComponent(context, value),
   };
 }
 
 const scopes: Scope[] = [
   pkgmgr('pacman', 'sudo pacman -S --noconfirm'),
-  pkgmgr('choco', 'gsudo choco install'),
-  pkgmgr('scoop', 'scoop install'),
-  pkgmgr('winget', 'winget install'),
-  pkgmgr('flatpak', 'flatpak install flathub '),
-  pkgmgr('apt', 'sudo apt install -y'),
+  pkgmgr('choco', 'gsudo choco install', 'Windows 商服包管理器'),
+  pkgmgr('scoop', 'scoop install', 'Windows 社区包管理器'),
+  pkgmgr('winget', 'winget install', 'Windows 微软包管理器'),
+  pkgmgr('flatpak', 'flatpak install flathub ', 'Linux 开放应用分发技术'),
+  pkgmgr('apt', 'sudo apt install -y', 'debian 包管理器'),
   pkgmgr('pkcon', 'pkcon install -y'),
   pkgmgr('aur', 'yay'),
-  pkgmgr('dnf', 'sudo dnf install -y'),
-  pkgmgr('pipx', 'pipx install'),
-  pkgmgr('yarn', 'yarn global add'),
+  pkgmgr('dnf', 'sudo dnf install -y', 'RPM 包管理器'),
+  pkgmgr('pipx', 'pipx install', '改进的 pip'),
+  pkgmgr('yarn', 'yarn global add', 'Node.js 包管理器'),
 ];
 
 type PkgMgrSet<T extends string> = {
@@ -59,7 +61,6 @@ type PkgMgrSet<T extends string> = {
 
 export default function GetPkg({
   name,
-  longBanner,
   choco,
   scoop,
   winget,
@@ -73,9 +74,25 @@ export default function GetPkg({
   yarn,
 }: PkgMgrSet<Value> & {
   name?: string;
-  longBanner?: boolean;
 }) {
-  const propsMap: Partial<Record<Value, string | boolean | undefined>> = {
+  const sortedFlags = [
+    pacman,
+    choco,
+    scoop,
+    winget,
+    flatpak,
+    apt,
+    pkcon,
+    aur,
+    dnf,
+    pipx,
+    yarn,
+  ];
+
+  const values = scopes.map(({ value }) => value);
+
+  const propsMap: Record<Value, string | boolean> = {
+    none: false,
     pacman,
     choco,
     scoop,
@@ -93,58 +110,11 @@ export default function GetPkg({
     <PreferScope
       title={<CodeType cmd>用包管理器安装：</CodeType>}
       storeNamePrefix="preferPkgMgr"
-      storeFlags={[
-        pacman,
-        choco,
-        scoop,
-        winget,
-        flatpak,
-        apt,
-        pkcon,
-        aur,
-        dnf,
-        pipx,
-        yarn,
-      ].map((p) => !!p)}
-      storeKeywords={[
-        'pacman',
-        'choco',
-        'scoop',
-        'winget',
-        'flatpak',
-        'apt',
-        'pkcon',
-        'aur',
-        'dnf',
-        'pipx',
-        'yarn',
-      ]}
-      labels={[
-        'pacman',
-        'choco',
-        'scoop',
-        'winget',
-        'flatpak',
-        'apt',
-        'pkcon',
-        'aur',
-        'dnf',
-        'pipx',
-        'yarn',
-      ]}
-      hints={[
-        '',
-        'Windows 商服包管理器',
-        'Windows 社区包管理器',
-        'Windows 微软包管理器',
-        'Linux 开放应用分发技术',
-        'debian 包管理器',
-        '',
-        '',
-        'RPM 包管理器',
-        '改进的 pip',
-        'Node.js 包管理器',
-      ]}
+      storeFlags={sortedFlags.map((p) => !!p)}
+      storeKeywords={values}
+      labels={values}
+      hints={scopes.map(({ desc }) => desc)}
+      className={st.root}
       choiceClassName={st.choice}
       {...{ defaultValue, context }}
     >

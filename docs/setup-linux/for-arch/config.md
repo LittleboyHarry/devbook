@@ -116,10 +116,6 @@ import { BrowserSelector } from '/docs/goodsoft/Catalog.tsx';
 
 ### 开发环境
 
-安装 ohmyzsh:
-
-    cn/setup-zsh
-
 import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
 <BasicCatalog />
@@ -148,21 +144,11 @@ import {BasicCatalog,DevEnvCatalog} from '/docs/devenv/Catalog'
 
 [其它 CPU 架构模拟器](https://archlinux.org/packages/extra/x86_64/qemu-emulators-full/)
 
-### AUR 助手 yay
+### AUR 助手
 
-原版：
+import GetYay from '/docs/\_common/get-yay.md'
 
-    arch/getyay
-
-:::note 国服加速安装：
-
-由 https://goproxy.cn 提供代理
-
-    cn/arch-yay
-
-为下载构建源码，[fastgit](https://doc.fastgit.org/zh-cn/guide.html) 提供 GitHub 镜像服务
-
-:::
+<GetYay />
 
  <PreferXde gnome kde noSelector>
 <ForGnome>
@@ -197,10 +183,7 @@ echo 'QT_QPA_PLATFORMTHEME=qt5ct' >~/.config/environment.d/use-qt5ct.conf
 
 ### AUR 软件
 
-:::note 离线安装
-
-在网络通常的 VPS 内构建，其产物安装包是可迁移的
-
+:::info 依赖吻合的 AUR 构建产物是可以迁移安装的
 :::
 
 #### VSCode 微软版

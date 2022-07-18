@@ -19,8 +19,11 @@
     }
   }
 
-  +:global(.admonition),+:global(.theme-code-block){
-   margin-top: 1rem;
+  + :global(.admonition),
+  + :global(.theme-code-block),
+  + :global(.alert),
+  + p {
+    margin-top: 1rem;
   }
 }
 

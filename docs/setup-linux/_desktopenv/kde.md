@@ -4,7 +4,7 @@
 
 1. 菜单 “设置” > “管理配置方案…” 新建
 2. 勾选 “默认配置方案”
-3. 命令可改为 <a href='/docs/devenv/zsh' target='_blank'>/bin/zsh</a>
+3. 命令可改为 <a href='/docs/devenv/ohmyzsh' target='_blank'>/bin/ohmyzsh</a>
 4. \* 点击“外观”，选择“黑底白字”，编辑：可设置“背景色透明度” 推荐 19% 附近
 
 :::

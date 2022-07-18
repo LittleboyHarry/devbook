@@ -1,5 +1,11 @@
 @import '/src/css/utils';
 
+.root{
+  +:global(.theme-code-block){
+    margin-top: 0;
+  }
+}
+
 .choice {
   $padTop: 0.4rem;
   $gap: 8px;
