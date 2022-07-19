@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 import cs from 'clsx';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import st from './index.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +10,7 @@ import {
   faHammer,
   faPalette,
   faScrewdriverWrench,
-  faPersonWalkingLuggage,
+  faTerminal,
 } from '@fortawesome/free-solid-svg-icons';
 import { faLinux } from '@fortawesome/free-brands-svg-icons';
 
@@ -146,14 +145,11 @@ export default function Home(): JSX.Element {
                 img={<FontAwesomeIcon icon={faScrewdriverWrench} />}
               />
               <Tile
-                title="自动工具集"
-                description="deployworkenv"
-                href="docs/devenv/deployworkenv"
+                title="Oh My Zsh"
+                description="一键安装"
+                href="docs/devenv/ohmyzsh"
                 img={
-                  <FontAwesomeIcon
-                    style={{ transform: 'scale(0.99)' }}
-                    icon={faPersonWalkingLuggage}
-                  />
+                  <FontAwesomeIcon icon={faTerminal} style={{ width: '75%' }} />
                 }
               />
             </ul>

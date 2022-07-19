@@ -100,7 +100,7 @@ https://extensions.gnome.org/extension/3733/tiling-assistant/
 ```shell
 uuid=$(grep '"uuid"' metadata.json | sed 's@^[ ]*"uuid":[ ]*"\(.\+\)",[ ]*@\1@')
 target=~/.local/share/gnome-shell/extensions/$uuid/
-mkdir $target
+mkdir -p $target
 cp -r * $target
 ```
 

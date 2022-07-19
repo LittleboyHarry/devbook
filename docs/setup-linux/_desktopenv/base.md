@@ -54,7 +54,7 @@ sudo dnf in -y libreoffice-langpack-zh-Hans
 
 :::
 
-:::info 提高操作效率的键位调整
+:::tip 提高操作效率的键位调整
 
 作者推荐改变 <a target="_blank" href="/docs/devenv/keymap">键位映射</a> ，需要适应一段时间
 

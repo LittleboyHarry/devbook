@@ -18,9 +18,10 @@ import {
 
 :::
 
+:::note 下载优化脚本
+
 <PreferNetShore>
 
-下载优化脚本
 
  <OffshoreNet>
 
@@ -41,6 +42,8 @@ cd setup-gnome
 </InshoreNet>
 
 </PreferNetShore>
+
+:::
 
 ## 其它
 
